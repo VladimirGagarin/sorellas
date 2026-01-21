@@ -1,0 +1,14 @@
+import React from "react";
+import { FaBars , faHome} from "react-icons/fa";
+
+export default function Header() { 
+    return (
+        <header>
+            <nav>
+                <ul><li><a href="/home"><faHome /></a></li></ul>
+                <ul><li><a href="/"><faBars /></a></li></ul>
+            </nav>
+        </header>
+
+    )
+}
