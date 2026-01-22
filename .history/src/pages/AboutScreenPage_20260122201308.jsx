@@ -9,9 +9,7 @@ import {
   FaGooglePlay,
   FaQuoteLeft,
   FaCross,
-    FaPray,
-  FaTiktok,
-  FaDonate,
+  FaPray,
 } from "react-icons/fa";
 import "./AboutScreenPage.css";
 
@@ -26,13 +24,13 @@ export default function AboutScreenPage() {
         it: "Informazioni su Fiori di Preghiera",
       },
       articleContent: {
-        en: "Fiori di Preghiera (Flowers  of Prayers) is a spiritual garden where flowers meet faith and prayers bloom like flowers. Our mission is to provide daily spiritual nourishment through carefully curated prayers paired with the symbolic beauty of flowers. Each flower in our collection represents a unique prayer intention, carefully selected to inspire, comfort, and elevate your soul throughout the day. We believe that just as flowers bring beauty to our world, prayers bring grace to our souls.",
-        it: "Fiori di Preghiera è un giardino spirituale dove i fiori incontrano la fede e le preghiere sbocciano come fiori. La nostra missione è fornire nutrimento spirituale quotidiano attraverso preghiere accuratamente selezionate abbinate alla bellezza simbolica dei fiori. Ogni fiore nella nostra collezione rappresenta un'intenzione di preghiera unica, selezionata con cura per ispirare, confortare ed elevare la tua anima durante la giornata. Crediamo che così come i fiori portano bellezza nel nostro mondo, le preghiere portano grazia nelle nostre anime.",
+        en: "Fiori di Preghiera is a spiritual garden where flowers meet faith. Our mission is to provide daily spiritual nourishment through carefully curated prayers paired with the symbolic beauty of flowers. Each flower in our collection represents a unique prayer intention, carefully selected to inspire, comfort, and elevate your soul throughout the day. We believe that just as flowers bring beauty to our world, prayers bring grace to our souls.",
+        it: "Fiori di Preghiera è un giardino spirituale dove i fiori incontrano la fede. La nostra missione è fornire nutrimento spirituale quotidiano attraverso preghiere accuratamente selezionate abbinate alla bellezza simbolica dei fiori. Ogni fiore nella nostra collezione rappresenta un'intenzione di preghiera unica, selezionata con cura per ispirare, confortare ed elevare la tua anima durante la giornata. Crediamo che così come i fiori portano bellezza nel nostro mondo, le preghiere portano grazia nelle nostre anime.",
       },
       icon: "🌺",
       links: [
         {
-          name: { en: "Website", it: "Sito Web" },
+          name: "Website",
           url: "https://vladimirgagarin.github.io/fiori/",
           icon: <FaGlobe />,
         },
@@ -61,31 +59,29 @@ export default function AboutScreenPage() {
       icon: "🎬",
       links: [
         {
-          name: { en: "YouTube", it: "YouTube" },
+          name: "YouTube",
           url: "https://www.youtube.com/@rosesofrome",
           icon: <FaYoutube />,
         },
         {
-          name: { en: "Instagram", it: "Instagram" },
+          name: "Instagram",
           url: "https://www.instagram.com/rosesofrome",
           icon: <FaInstagram />,
-          },
-        {
-            name: { en: "Tiktok", it: "Tiktok" },
-            url: "https://www.tiktok.com/@roses_of_rome",
-            icon: <FaTiktok />,
         },
         {
-          name: { en: "Website", it: "Sito Web" },
+          name: "Website",
           url: "https://vladimirgagarin.github.io/roses-of-rome/",
           icon: <FaGlobe />,
         },
         {
-          name: { en: "Support Us", it: "Sostieni Ci" },
+          name: "Support/Auidarte",
           url: "https://vladimirgagarin.github.io/roses-of-rome/Support.html",
-          icon: <FaDonate />,
+          icon: <FaGlobe />,
         },
-        
+        {
+            name: "Tiktok",
+            url: ""
+        }
       ],
       stats: [
         {
@@ -108,7 +104,7 @@ export default function AboutScreenPage() {
       icon: "📱",
       links: [
         {
-          name: { en: "Download App", it: "Scarica l'App" },
+          name: "Download App",
           url: "https://github.com/VladimirGagarin/flowers/releases/download/v2.0.0/application-da5577c1-2f71-4814-a715-de861b103ae8.apk",
           icon: <FaGooglePlay />,
         },
@@ -217,11 +213,9 @@ export default function AboutScreenPage() {
   ];
 
   const missionStatement = {
-    en: "Where prayers are sown like seeds, blossom as flowers of faith, and fragrance the world with divine grace. A sanctuary where the soul's deepest longings find expression through nature's most beautiful vocabulary.",
-    it: "Dove le preghiere sono seminate come semi, sbocciano come fiori di fede, e profumano il mondo con la grazia divina. Un santuario dove i desideri più profondi dell'anima trovano espressione attraverso il vocabolario più bello della natura.",
+    en: "To create a digital sanctuary where technology meets spirituality, offering daily moments of prayer, reflection, and beauty through the symbolic language of flowers.",
+    it: "Creare un santuario digitale dove la tecnologia incontra la spiritualità, offrendo momenti quotidiani di preghiera, riflessione e bellezza attraverso il linguaggio simbolico dei fiori.",
   };
-
-    
 
   return (
     <div className="about-screen">
@@ -232,13 +226,13 @@ export default function AboutScreenPage() {
         <div className="about-hero">
           <h1 className="about-main-title">
             {language === "en"
-              ? `${('Fiori Di Preghiera').toUpperCase()}.`
-              : `${('Fiori di Preghiera').toUpperCase()}`}
+              ? "About Fiori Di Preghiera"
+              : "Informazioni su Fiori di Preghiera"}
           </h1>
           <p className="about-subtitle">
             {language === "en"
-              ? "Where flowers meet faith, and prayers bloom like flowers"
-              : "Dove i fiori incontrano la fede, e preghiere sbocciano come fiori"}
+              ? "Where flowers meet faith, and technology serves spirituality"
+              : "Dove i fiori incontrano la fede, e la tecnologia serve la spiritualità"}
           </p>
           <div className="mission-statement">
             <FaQuoteLeft className="quote-icon" />
@@ -320,7 +314,7 @@ export default function AboutScreenPage() {
                           className="link-btn"
                         >
                           {link.icon}
-                          <span>{link.name[language]}</span>
+                          <span>{link.name}</span>
                           <FaExternalLinkAlt className="external-icon" />
                         </a>
                       ))}

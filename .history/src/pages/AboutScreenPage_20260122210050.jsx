@@ -217,9 +217,9 @@ export default function AboutScreenPage() {
   ];
 
   const missionStatement = {
-    en: "Where prayers are sown like seeds, blossom as flowers of faith, and fragrance the world with divine grace. A sanctuary where the soul's deepest longings find expression through nature's most beautiful vocabulary.",
-    it: "Dove le preghiere sono seminate come semi, sbocciano come fiori di fede, e profumano il mondo con la grazia divina. Un santuario dove i desideri più profondi dell'anima trovano espressione attraverso il vocabolario più bello della natura.",
-  };
+  en: "Where prayers are sown like seeds, blossom as flowers of faith, and fragrance the world with divine grace. A sanctuary where the soul's deepest longings find expression through nature's most beautiful vocabulary.",
+  it: "Dove le preghiere sono seminate come semi, sbocciano come fiori di fede, e profumano il mondo con la grazia divina. Un santuario dove i desideri più profondi dell'anima trovano espressione attraverso il vocabolario più bello della natura.",
+};
 
     
 
@@ -232,8 +232,8 @@ export default function AboutScreenPage() {
         <div className="about-hero">
           <h1 className="about-main-title">
             {language === "en"
-              ? `${('Fiori Di Preghiera').toUpperCase()}.`
-              : `${('Fiori di Preghiera').toUpperCase()}`}
+              ? "Fiori Di Preghiera"
+              : "Fiori di Preghiera"}
           </h1>
           <p className="about-subtitle">
             {language === "en"

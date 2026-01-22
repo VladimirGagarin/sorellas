@@ -72,7 +72,7 @@ export default function AboutScreenPage() {
           },
         {
             name: { en: "Tiktok", it: "Tiktok" },
-            url: "https://www.tiktok.com/@roses_of_rome",
+            url: "https://www.tiktok.com/@rosesofrome",
             icon: <FaTiktok />,
         },
         {
@@ -217,11 +217,9 @@ export default function AboutScreenPage() {
   ];
 
   const missionStatement = {
-    en: "Where prayers are sown like seeds, blossom as flowers of faith, and fragrance the world with divine grace. A sanctuary where the soul's deepest longings find expression through nature's most beautiful vocabulary.",
-    it: "Dove le preghiere sono seminate come semi, sbocciano come fiori di fede, e profumano il mondo con la grazia divina. Un santuario dove i desideri più profondi dell'anima trovano espressione attraverso il vocabolario più bello della natura.",
+    en: "To create a digital sanctuary where technology meets spirituality, offering daily moments of prayer, reflection, and beauty through the symbolic language of flowers.",
+    it: "Creare un santuario digitale dove la tecnologia incontra la spiritualità, offrendo momenti quotidiani di preghiera, riflessione e bellezza attraverso il linguaggio simbolico dei fiori.",
   };
-
-    
 
   return (
     <div className="about-screen">
@@ -232,13 +230,13 @@ export default function AboutScreenPage() {
         <div className="about-hero">
           <h1 className="about-main-title">
             {language === "en"
-              ? `${('Fiori Di Preghiera').toUpperCase()}.`
-              : `${('Fiori di Preghiera').toUpperCase()}`}
+              ? "Fiori Di Preghiera"
+              : "Fiori di Preghiera"}
           </h1>
           <p className="about-subtitle">
             {language === "en"
               ? "Where flowers meet faith, and prayers bloom like flowers"
-              : "Dove i fiori incontrano la fede, e preghiere sbocciano come fiori"}
+              : "Dove i fiori incontrano la fede, e preghiere sb come fiori"}
           </p>
           <div className="mission-statement">
             <FaQuoteLeft className="quote-icon" />

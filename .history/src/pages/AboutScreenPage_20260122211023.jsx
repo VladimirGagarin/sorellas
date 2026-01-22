@@ -232,8 +232,8 @@ export default function AboutScreenPage() {
         <div className="about-hero">
           <h1 className="about-main-title">
             {language === "en"
-              ? `${('Fiori Di Preghiera').toUpperCase()}.`
-              : `${('Fiori di Preghiera').toUpperCase()}`}
+              ? "(Fiori Di Preghiera)"
+              : "Fiori di Preghiera"}
           </h1>
           <p className="about-subtitle">
             {language === "en"
