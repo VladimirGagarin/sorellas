@@ -10,7 +10,7 @@ import {
   FaSun,
   FaPray,
   FaInfoCircle,
-  
+  FaRegHeart,
   FaCross,
   FaHammer,
   FaQuestionCircle,
@@ -54,9 +54,9 @@ export default function Header() {
     en: {
       appName: "Fiori Di Preghiera",
       subtitle: isDarkMode ? "Mystical Garden" : "Spiritual Garden",
-      home: "Your Garden",
+      home: "Garden Gate",
       prayers: "Prayer Journal",
-      about: "Why Here?",
+      about: "About the Garden",
       litanyOfMary: "Litany of the Blessed Virgin Mary",
       litanyOfJesus: "Litany of Jesus",
       litanyOfSaintJoseph: "Litany of Saint Joseph",
@@ -69,7 +69,9 @@ export default function Header() {
       favouriteWords: "Favourite Words",
       justBecause: "Just Because",
       currentLanguage: "Language",
-      welcome:  "Welcome to FLowers of Prayer Garden",
+      welcome: isDarkMode
+        ? "Welcome to the Mystical Garden"
+        : "Welcome to the Spiritual Garden",
       menu: "Garden Paths",
       themeToggle: isDarkMode ? "Light Garden" : "Mystical Garden",
       themeLabel: isDarkMode ? "Switch to Light Theme" : "Switch to Dark Theme",
@@ -82,9 +84,9 @@ export default function Header() {
     it: {
       appName: "Fiori Di Preghiera",
       subtitle: isDarkMode ? "Giardino Mistico" : "Giardino Spirituale",
-      home: "Il Tuo Giardino",
-      prayers: "Diario di Preghiera",
-      about: "Perché Qui?",
+      home: "Porta del Giardino",
+      prayerJournal: "Diario di Preghiera",
+      about: "Sul Giardino",
       litanyOfMary: "Litanie della Beata Vergine Maria",
       litanyOfJesus: "Litanie del Santissimo Nome di Gesù",
       litanyOfSaintJoseph: "Litanie di San Giuseppe",
@@ -97,7 +99,9 @@ export default function Header() {
       logout: "Ritorno alla Terra",
       rosesOfRome: "Rose di Roma",
       currentLanguage: "Lingua",
-      welcome: "Benvenuto nel Giardino dei Fiori di Preghiera",
+      welcome: isDarkMode
+        ? "Benvenuto nel Giardino Mistico"
+        : "Benvenuto nel Giardino Spirituale",
       menu: "Sentieri del Giardino",
       themeToggle: isDarkMode ? "Giardino Luminoso" : "Giardino Mistico",
       themeLabel: isDarkMode ? "Passa al tema chiaro" : "Passa al tema scuro",
@@ -346,7 +350,7 @@ export default function Header() {
                   <div className="theme-switch-content">
                     {isDarkMode ? <FaSun /> : <FaMoon />}
                     <span>
-                      {isDarkMode ? (language === "en" ? "Light Mode" : "Modalità Chiara") : (language === "en" ? "Dark Mode" : "Modalità Scura")}
+                      {isDarkMode ?  language =="Light Mode", it:"Modalità Chiara"} : {en:"Dark Mode", it:"Modalità Scura"}}
                     </span>
                   </div>
                 </button>

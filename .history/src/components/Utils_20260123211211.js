@@ -8239,6 +8239,7 @@ export function getQuotes() {
     {
         author: "Sr. Winnie Lopez",
         category: "Gratitude",
+        category: "Gratitude",
         quote: "Gratitude is the foundation upon which peace and joy are built.",
         italianQuote: "La gratitudine è la base su cui si costruiscono pace e gioia.",
         photo: '../assets/sr_winnie.jpg',

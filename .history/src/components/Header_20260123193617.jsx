@@ -10,7 +10,7 @@ import {
   FaSun,
   FaPray,
   FaInfoCircle,
-  
+  FaRegHeart,
   FaCross,
   FaHammer,
   FaQuestionCircle,
@@ -84,7 +84,7 @@ export default function Header() {
       subtitle: isDarkMode ? "Giardino Mistico" : "Giardino Spirituale",
       home: "Il Tuo Giardino",
       prayers: "Diario di Preghiera",
-      about: "Perché Qui?",
+      about: "Sul Giardino",
       litanyOfMary: "Litanie della Beata Vergine Maria",
       litanyOfJesus: "Litanie del Santissimo Nome di Gesù",
       litanyOfSaintJoseph: "Litanie di San Giuseppe",

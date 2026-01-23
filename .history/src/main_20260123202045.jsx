@@ -26,7 +26,7 @@ const router = createHashRouter([
     path: "about",
     element: <AboutScreenPage />,
 
-  },
+  }
   {
     path: "deepseek",
     element: <DeepSeekPage/>

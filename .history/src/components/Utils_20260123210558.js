@@ -3027,7 +3027,7 @@ export function getQuotes() {
         {
         author: "Sr. Winnie Lopez",
         category: "Goodness",
-        
+        category: "Goodness",
         quote: "Goodness is the light that never fails to find a way.",
         italianQuote: "La bontà è la luce che non smette mai di trovare una strada.",
         photo: '../assets/sr_winnie.jpg',
@@ -4121,7 +4121,7 @@ export function getQuotes() {
                 {
                 author: "Sr. Nancy",
                 category: "Understanding",
-                
+                category: "Understanding",
                 quote: "True understanding is a gift from God, to be cherished and shared.",
                 italianQuote: "Il vero intelletto è un dono di Dio, da custodire e condividere.",
                 photo: '../assets/sr_nancy.jpg',
@@ -4779,6 +4779,7 @@ export function getQuotes() {
         {
         author: "Sr. Joyce",
         category: "Fortitude (Courage)",
+        category: "Fortitude (Courage)",
         quote: "Courage grows deeper when rooted in faith and love.",
         italianQuote: "Il coraggio cresce più profondo quando è radicato nella fede e nell’amore.",
         photo: '../assets/sr_joyce.jpg',
@@ -5056,7 +5057,7 @@ export function getQuotes() {
         {
         author: "Sr. Ann",
         category: "Piety (Reverence)",
-        
+        category: "Piety (Reverence)",
         quote: "Reverence is the seed from which faith and love grow.",
         italianQuote: "La riverenza è il seme da cui crescono la fede e l’amore.",
         photo: '../assets/sr_ann.jpg',
@@ -8238,6 +8239,7 @@ export function getQuotes() {
     },
     {
         author: "Sr. Winnie Lopez",
+        category: "Gratitude",
         category: "Gratitude",
         quote: "Gratitude is the foundation upon which peace and joy are built.",
         italianQuote: "La gratitudine è la base su cui si costruiscono pace e gioia.",

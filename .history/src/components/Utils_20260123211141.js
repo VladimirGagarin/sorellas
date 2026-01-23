@@ -5056,7 +5056,7 @@ export function getQuotes() {
         {
         author: "Sr. Ann",
         category: "Piety (Reverence)",
-        
+        category: "Piety (Reverence)",
         quote: "Reverence is the seed from which faith and love grow.",
         italianQuote: "La riverenza è il seme da cui crescono la fede e l’amore.",
         photo: '../assets/sr_ann.jpg',
@@ -8238,6 +8238,7 @@ export function getQuotes() {
     },
     {
         author: "Sr. Winnie Lopez",
+        category: "Gratitude",
         category: "Gratitude",
         quote: "Gratitude is the foundation upon which peace and joy are built.",
         italianQuote: "La gratitudine è la base su cui si costruiscono pace e gioia.",

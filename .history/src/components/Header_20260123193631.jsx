@@ -10,7 +10,7 @@ import {
   FaSun,
   FaPray,
   FaInfoCircle,
-  
+  FaRegHeart,
   FaCross,
   FaHammer,
   FaQuestionCircle,

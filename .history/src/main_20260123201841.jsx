@@ -5,7 +5,7 @@ import HomeScreenPage from "./pages/HomeScreenPage.jsx";
 import { LanguageProvider } from './contexts/language.jsx';
 import { ThemeProvider } from './contexts/theme.jsx';
 import AboutScreenPage from './pages/AboutScreenPage.jsx';
-import DeepSeekPage from './pages/DeepSeekPage.jsx';
+import DeepSeek
 import './index.css'
 import App from './App.jsx'
 
@@ -26,10 +26,6 @@ const router = createHashRouter([
     path: "about",
     element: <AboutScreenPage />,
 
-  },
-  {
-    path: "deepseek",
-    element: <DeepSeekPage/>
   }
 ]);
 
