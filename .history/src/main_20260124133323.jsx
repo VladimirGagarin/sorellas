@@ -34,7 +34,7 @@ const router = createHashRouter([
   },
   {
     path: "litany-mary",
-    element: <LitanyMaryPage/>  
+    element: <LitanyMaryPage/>
   }
 ]);
 

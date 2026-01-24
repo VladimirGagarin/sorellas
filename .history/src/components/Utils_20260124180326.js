@@ -52,7 +52,7 @@ import GraciouslyHearUs from "../assets/litany/graciously_hear_us.jpg";
 import HaveMercyOnUs from "../assets/litany/have_mercy_on_us.jpg";
 import PrayForUs from "../assets/litany/pray_for_us.jpg";
 import MadeWorthy from "../assets/litany/made_worthy.jpg";
-import JesusImage from "../assets/sacred_heart_card.jpg"
+import JesusImage from "../assets/jesus.jpg"
 
 // Famous prayers by saints and spiritual figures
 export function getFamousPrayers() {

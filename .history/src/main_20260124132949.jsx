@@ -6,7 +6,6 @@ import { LanguageProvider } from './contexts/language.jsx';
 import { ThemeProvider } from './contexts/theme.jsx';
 import AboutScreenPage from './pages/AboutScreenPage.jsx';
 import DeepSeekPage from './pages/DeepSeekPage.jsx';
-import LitanyMaryPage from './pages/LitanyMaryPage.jsx';
 import './index.css'
 import App from './App.jsx'
 
@@ -34,7 +33,6 @@ const router = createHashRouter([
   },
   {
     path: "litany-mary",
-    element: <LitanyMaryPage/>  
   }
 ]);
 

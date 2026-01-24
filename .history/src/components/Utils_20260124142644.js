@@ -52,7 +52,6 @@ import GraciouslyHearUs from "../assets/litany/graciously_hear_us.jpg";
 import HaveMercyOnUs from "../assets/litany/have_mercy_on_us.jpg";
 import PrayForUs from "../assets/litany/pray_for_us.jpg";
 import MadeWorthy from "../assets/litany/made_worthy.jpg";
-import JesusImage from "../assets/sacred_heart_card.jpg"
 
 // Famous prayers by saints and spiritual figures
 export function getFamousPrayers() {
@@ -1236,399 +1235,282 @@ export function getFamousPrayers() {
 export function getLitany() {
   return [
     {
-      id: "holy-mary",
       title_en: "Holy Mary",
       title_it: "Santa Maria",
       image: HolyMaryImage,
-      alt: "Holy Mary",
     },
     {
-      id: "holy-mother-of-god",
       title_en: "Holy Mother of God",
       title_it: "Santa Madre di Dio",
       image: MotherOfGodImage,
-      alt: "Holy Mother of God",
     },
     {
-      id: "holy-virgin-of-virgins",
       title_en: "Holy virgin of virgins",
       title_it: "Santa Vergine delle vergini",
       image: VirginOfVirgins,
-      alt: "Holy virgin of virgins",
     },
     {
-      id: "mother-of-christ",
       title_en: "Mother of Christ",
       title_it: "Madre di Cristo",
       image: MotherOfChrist,
-      alt: "Mother of Christ",
     },
     {
-      id: "mother-of-divine-grace",
       title_en: "Mother of divine grace",
       title_it: "Madre della grazia divina",
       image: DivineGrace,
-      alt: "Mother of divine grace",
     },
-
     {
-      id: "mother-most-pure",
       title_en: "Mother most pure",
       title_it: "Madre più pura",
-      image: MotherMostPure,
-      alt: "Mother most pure",
+      image: "../assets/litany/mother_most_pure.jpg",
     },
     {
-      id: "mother-most-chaste",
       title_en: "Mother most chaste",
       title_it: "Madre più casta",
-      image: MotherMostChaste,
-      alt: "Mother most chaste",
+      image: "../assets/litany/mother_most_chaste.jpg",
     },
     {
-      id: "mother-inviolate",
       title_en: "Mother inviolate",
       title_it: "Madre inviolata",
-      image: MotherInviolate,
-      alt: "Mother inviolate",
+      image: "../assets/litany/mother_inviolate.jpg",
     },
     {
-      id: "mother-undefiled",
       title_en: "Mother undefiled",
       title_it: "Madre senza macchia",
-      image: MotherUndefiled,
-      alt: "Mother undefiled",
+      image: "../assets/litany/mother_undefiled.jpg",
     },
     {
-      id: "mother-most-amiable",
       title_en: "Mother most amiable",
       title_it: "Madre più amabile",
-      image: MotherMostAmiable,
-      alt: "Mother most amiable",
+      image: "../assets/litany/mother_most_amiable.jpg",
     },
     {
-      id: "mother-most-admirable",
       title_en: "Mother most admirable",
       title_it: "Madre più ammirabile",
-      image: MotherMostAdmirable,
-      alt: "Mother most admirable",
+      image: "../assets/litany/mother_most_admirable.jpg",
     },
     {
-      id: "mother-of-good-counsel",
       title_en: "Mother of good counsel",
       title_it: "Madre del buon consiglio",
-      image: MotherOfGoodCounsel,
-      alt: "Mother of good counsel",
+      image: "../assets/litany/mother_of_good_counsel.jpg",
     },
     {
-      id: "mother-of-our-creator",
       title_en: "Mother of our Creator",
       title_it: "Madre del nostro Creatore",
-      image: MotherOfOurCreator,
-      alt: "Mother of our Creator",
+      image: "../assets/litany/mother_of_our_creator.jpg",
     },
     {
-      id: "mother-of-our-savior",
       title_en: "Mother of our Savior",
       title_it: "Madre del nostro Salvatore",
-      image: MotherOfOurSavior,
-      alt: "Mother of our Savior",
+      image: "../assets/litany/mother_of_our_savior.jpg",
     },
-
     {
-      id: "virgin-most-prudent",
       title_en: "Virgin most prudent",
       title_it: "Vergine più prudente",
-      image: VirginMostPrudent,
-      alt: "Virgin most prudent",
+      image: "../assets/litany/virgin_most_prudent.jpg",
     },
     {
-      id: "virgin-most-venerable",
       title_en: "Virgin most venerable",
       title_it: "Vergine più venerabile",
-      image: VirginMostVenerable,
-      alt: "Virgin most venerable",
+      image: "../assets/litany/virgin_most_venerable.jpg",
     },
     {
-      id: "virgin-most-renowned",
       title_en: "Virgin most renowned",
       title_it: "Vergine più rinomata",
-      image: VirginMostRenowned,
-      alt: "Virgin most renowned",
+      image: "../assets/litany/virgin_most_renowned.jpg",
     },
     {
-      id: "virgin-most-powerful",
       title_en: "Virgin most powerful",
       title_it: "Vergine più potente",
-      image: VirginMostPowerful,
-      alt: "Virgin most powerful",
+      image: "../assets/litany/virgin_most_powerful.jpg",
     },
     {
-      id: "virgin-most-merciful",
       title_en: "Virgin most merciful",
       title_it: "Vergine più misericordiosa",
-      image: VirginMostMerciful,
-      alt: "Virgin most merciful",
+      image: "../assets/litany/virgin_most_merciful.jpg",
     },
     {
-      id: "virgin-most-faithful",
       title_en: "Virgin most faithful",
       title_it: "Vergine più fedele",
-      image: VirginMostFaithful,
-      alt: "Virgin most faithful",
+      image: "../assets/litany/virgin_most_faithful.jpg",
     },
-
     {
-      id: "mirror-of-justice",
       title_en: "Mirror of justice",
       title_it: "Specchio di giustizia",
-      image: MirrorOfJustice,
-      alt: "Mirror of justice",
+      image: "../assets/litany/mirror_of_justice.jpg",
     },
     {
-      id: "seat-of-wisdom",
       title_en: "Seat of wisdom",
       title_it: "Sede della saggezza",
-      image: SeatOfWisdom,
-      alt: "Seat of wisdom",
+      image: "../assets/litany/seat_of_wisdom.jpg",
     },
     {
-      id: "cause-of-our-joy",
       title_en: "Cause of our joy",
       title_it: "Causa della nostra gioia",
-      image: CauseOfOurJoy,
-      alt: "Cause of our joy",
+      image: "../assets/litany/cause_of_our_joy.jpg",
     },
     {
-      id: "spiritual-vessel",
       title_en: "Spiritual vessel",
       title_it: "Vaso spirituale",
-      image: SpiritualVessel,
-      alt: "Spiritual vessel",
+      image: "../assets/litany/spiritual_vessel.jpg",
     },
     {
-      id: "vessel-of-honor",
       title_en: "Vessel of honor",
-      title_it: "Vaso d'onore",
-      image: VesselOfHonor,
-      alt: "Vessel of honor",
+      title_it: "Vaso d’onore",
+      image: "../assets/litany/vessel_of_honor.jpg",
     },
     {
-      id: "singular-vessel-of-devotion",
       title_en: "Singular vessel of devotion",
       title_it: "Singolare vaso di devozione",
-      image: SingularVesselOfDevotion,
-      alt: "Singular vessel of devotion",
+      image: "../assets/litany/singular_vessel_of_devotion.jpg",
     },
     {
-      id: "mystical-rose",
       title_en: "Mystical rose",
       title_it: "Rosa mistica",
-      image: MysticalRose,
-      alt: "Mystical rose",
+      image: "../assets/litany/mystical_rose.jpg",
     },
-
     {
-      id: "tower-of-david",
       title_en: "Tower of David",
       title_it: "Torre di Davide",
-      image: TowerOfDavid,
-      alt: "Tower of David",
+      image: "../assets/litany/tower_of_david.jpg",
     },
     {
-      id: "tower-of-ivory",
       title_en: "Tower of ivory",
-      title_it: "Torre d'avorio",
-      image: TowerOfIvory,
-      alt: "Tower of ivory",
+      title_it: "Torre d’avorio",
+      image: "../assets/litany/tower_of_ivory.jpg",
     },
     {
-      id: "house-of-gold",
       title_en: "House of gold",
-      title_it: "Casa d'oro",
-      image: HouseOfGold,
-      alt: "House of gold",
+      title_it: "Casa d’oro",
+      image: "../assets/litany/house_of_gold.jpg",
     },
     {
-      id: "ark-of-the-covenant",
       title_en: "Ark of the covenant",
-      title_it: "Arca dell'alleanza",
-      image: ArkOfTheCovenant,
-      alt: "Ark of the covenant",
+      title_it: "Arca dell’alleanza",
+      image: "../assets/litany/ark_of_the_covenant.jpg",
     },
     {
-      id: "gate-of-heaven",
       title_en: "Gate of heaven",
       title_it: "Porta del cielo",
-      image: GateOfHeaven,
-      alt: "Gate of heaven",
+      image: "../assets/litany/gate_of_heaven.jpg",
     },
     {
-      id: "morning-star",
       title_en: "Morning star",
       title_it: "Stella del mattino",
-      image: MorningStar,
-      alt: "Morning star",
+      image: "../assets/litany/morning_star.jpg",
     },
     {
-      id: "health-of-the-sick",
       title_en: "Health of the sick",
       title_it: "Salute degli infermi",
-      image: HealthOfTheSick,
-      alt: "Health of the sick",
+      image: "../assets/litany/health_of_the_sick.jpg",
     },
     {
-      id: "refuge-of-sinners",
       title_en: "Refuge of sinners",
       title_it: "Rifugio dei peccatori",
-      image: RefugeOfSinners,
-      alt: "Refuge of sinners",
+      image: "../assets/litany/refuge_of_sinners.jpg",
     },
     {
-      id: "comforter-of-the-afflicted",
       title_en: "Comforter of the afflicted",
       title_it: "Consolatrice degli afflitti",
-      image: ComforterOfTheAfflicted,
-      alt: "Comforter of the afflicted",
+      image: "../assets/litany/comforter_of_the_afflicted.jpg",
     },
-
     {
-      id: "help-of-christians",
       title_en: "Help of Christians",
       title_it: "Aiuto dei cristiani",
-      image: HelpOfChristians,
-      alt: "Help of Christians",
+      image: "../assets/litany/help_of_christians.jpg",
     },
     {
-      id: "queen-of-angels",
       title_en: "Queen of angels",
       title_it: "Regina degli angeli",
-      image: QueenOfAngels,
-      alt: "Queen of angels",
+      image: "../assets/litany/queen_of_angels.jpg",
     },
     {
-      id: "queen-of-patriarchs",
       title_en: "Queen of patriarchs",
       title_it: "Regina dei patriarchi",
-      image: QueenOfPatriarchs,
-      alt: "Queen of patriarchs",
+      image: "../assets/litany/queen_of_patriarchs.jpg",
     },
     {
-      id: "queen-of-prophets",
       title_en: "Queen of prophets",
       title_it: "Regina dei profeti",
-      image: QueenOfProphets,
-      alt: "Queen of prophets",
+      image: "../assets/litany/queen_of_prophets.jpg",
     },
     {
-      id: "queen-of-apostles",
       title_en: "Queen of apostles",
       title_it: "Regina degli apostoli",
-      image: QueenOfApostles,
-      alt: "Queen of apostles",
+      image: "../assets/litany/queen_of_apostles.jpg",
     },
     {
-      id: "queen-of-martyrs",
       title_en: "Queen of martyrs",
       title_it: "Regina dei martiri",
-      image: QueenOfMartyrs,
-      alt: "Queen of martyrs",
+      image: "../assets/litany/queen_of_martyrs.jpg",
     },
     {
-      id: "queen-of-confessors",
       title_en: "Queen of confessors",
       title_it: "Regina dei confessori",
-      image: QueenOfConfessors,
-      alt: "Queen of confessors",
+      image: "../assets/litany/queen_of_confessors.jpg",
     },
     {
-      id: "queen-of-virgins",
       title_en: "Queen of virgins",
       title_it: "Regina delle vergini",
-      image: QueenOfVirgins,
-      alt: "Queen of virgins",
+      image: "../assets/litany/queen_of_virgins.jpg",
     },
     {
-      id: "queen-of-all-saints",
       title_en: "Queen of all saints",
       title_it: "Regina di tutti i santi",
-      image: QueenOfAllSaints,
-      alt: "Queen of all saints",
+      image: "../assets/litany/queen_of_all_saints.jpg",
     },
-
     {
-      id: "queen-conceived-without-original-sin",
       title_en: "Queen conceived without original sin",
       title_it: "Regina concepita senza peccato originale",
-      image: QueenConceivedWithoutOriginalSin,
-      alt: "Queen conceived without original sin",
+      image: "../assets/litany/queen_conceived_without_original_sin.jpg",
     },
     {
-      id: "queen-assumed-into-heaven",
       title_en: "Queen assumed into heaven",
       title_it: "Regina assunta in cielo",
-      image: QueenAssumedIntoHeaven,
-      alt: "Queen assumed into heaven",
+      image: "../assets/litany/queen_assumed_into_heaven.jpg",
     },
     {
-      id: "queen-of-the-most-holy-rosary",
       title_en: "Queen of the most holy rosary",
       title_it: "Regina del santissimo rosario",
-      image: QueenOfTheMostHolyRosary,
-      alt: "Queen of the most holy rosary",
+      image: "../assets/litany/queen_of_the_most_holy_rosary.jpg",
     },
     {
-      id: "queen-of-peace",
       title_en: "Queen of peace",
       title_it: "Regina della pace",
-      image: QueenOfPeace,
-      alt: "Queen of peace",
+      image: "../assets/litany/queen_of_peace.jpg",
     },
-
     {
-      id: "lamb-of-god-1",
       title_en:
         "Lamb of God, who takest away the sins of the world, spare us, O Lord.",
       title_it:
         "Agnello di Dio, che togli i peccati del mondo, risparmiaci, o Signore.",
-      image: LambOfGodImage,
-      alt: "Lamb of God - spare us",
+      image: "../assets/litany/lamb_of_god.jpg",
     },
     {
-      id: "lamb-of-god-2",
       title_en:
         "Lamb of God who takest away the sins of the world, graciously hear us, O Lord.",
       title_it:
         "Agnello di Dio che togli i peccati del mondo, ascoltaci, o Signore.",
-      image: GraciouslyHearUs,
-      alt: "Lamb of God - graciously hear us",
+      image: "../assets/litany/graciously_hear_us.jpg",
     },
     {
-      id: "lamb-of-god-3",
       title_en:
         "Lamb of God, who takest away the sins of the world, have mercy on us.",
       title_it:
         "Agnello di Dio, che togli i peccati del mondo, abbi pietà di noi.",
-      image: HaveMercyOnUs,
-      alt: "Lamb of God - have mercy on us",
+      image: "../assets/litany/have_mercy_on_us.jpg",
     },
-
     {
-      id: "pray-for-us",
       title_en: "Pray for us, O Holy Mother of God.",
       title_it: "Prega per noi, o Santa Madre di Dio.",
-      image: PrayForUs,
-      alt: "Pray for us",
+      image: "../assets/litany/pray_for_us.jpg",
     },
     {
-      id: "made-worthy",
       title_en: "That we may be made worthy of the promises of Christ.",
       title_it: "Affinché siamo resi degni delle promesse di Cristo.",
-      image: MadeWorthy,
-      alt: "That we may be made worthy",
+      image: "../assets/litany/made_worthy.jpg",
     },
   ];
-
 }
 
 export function getQuotes() {
@@ -12477,274 +12359,174 @@ export function getCatholicPrayers() {
 
 export function getJesusLitany() {
   const litany = [
+    { en: "Lord, have mercy.", it: "Signore, pietà." },
+    { en: "Christ, have mercy.", it: "Cristo, pietà." },
+    { en: "Lord, have mercy.", it: "Signore, pietà." },
+    { en: "Christ, hear us.", it: "Cristo, ascoltaci." },
+    { en: "Christ, graciously hear us.", it: "Cristo, esaudiscici." },
     {
-      title_en: "Lord, have mercy.",
-      title_it: "Signore, pietà.",
-      image: JesusImage,
+      en: "God the Father of Heaven, have mercy on us.",
+      it: "Dio, Padre celeste, abbi pietà di noi.",
     },
     {
-      title_en: "Christ, have mercy.",
-      title_it: "Cristo, pietà.",
-      image: JesusImage,
+      en: "God the Son, Redeemer of the world, have mercy on us.",
+      it: "Dio, Figlio Redentore del mondo, abbi pietà di noi.",
     },
     {
-      title_en: "Lord, have mercy.",
-      title_it: "Signore, pietà.",
-      image: JesusImage,
+      en: "God the Holy Spirit, have mercy on us.",
+      it: "Dio, Spirito Santo, abbi pietà di noi.",
     },
     {
-      title_en: "Christ, hear us.",
-      title_it: "Cristo, ascoltaci.",
-      image: JesusImage,
+      en: "Holy Trinity, One God, have mercy on us.",
+      it: "Santa Trinità, unico Dio, abbi pietà di noi.",
     },
     {
-      title_en: "Christ, graciously hear us.",
-      title_it: "Cristo, esaudiscici.",
-      image: JesusImage,
+      en: "Heart of Jesus, Son of the Eternal Father, have mercy on us.",
+      it: "Cuore di Gesù, Figlio dell’Eterno Padre, abbi pietà di noi.",
     },
     {
-      title_en: "God the Father of Heaven, have mercy on us.",
-      title_it: "Dio, Padre celeste, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, formed by the Holy Spirit in the womb of the Virgin Mother, have mercy on us.",
+      it: "Cuore di Gesù, formato dallo Spirito Santo nel seno della Vergine Madre, abbi pietà di noi.",
     },
     {
-      title_en: "God the Son, Redeemer of the world, have mercy on us.",
-      title_it: "Dio, Figlio Redentore del mondo, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, substantially united to the Word of God, have mercy on us.",
+      it: "Cuore di Gesù, sostanzialmente unito al Verbo di Dio, abbi pietà di noi.",
     },
     {
-      title_en: "God the Holy Spirit, have mercy on us.",
-      title_it: "Dio, Spirito Santo, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, of infinite majesty, have mercy on us.",
+      it: "Cuore di Gesù, di maestà infinita, abbi pietà di noi.",
     },
     {
-      title_en: "Holy Trinity, One God, have mercy on us.",
-      title_it: "Santa Trinità, unico Dio, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, holy temple of God, have mercy on us.",
+      it: "Cuore di Gesù, tempio santo di Dio, abbi pietà di noi.",
     },
     {
-      title_en: "Heart of Jesus, Son of the Eternal Father, have mercy on us.",
-      title_it: "Cuore di Gesù, Figlio dell’Eterno Padre, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, tabernacle of the Most High, have mercy on us.",
+      it: "Cuore di Gesù, tabernacolo dell’Altissimo, abbi pietà di noi.",
     },
     {
-      title_en:
-        "Heart of Jesus, formed by the Holy Spirit in the womb of the Virgin Mother, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, formato dallo Spirito Santo nel seno della Vergine Madre, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, house of God and gate of heaven, have mercy on us.",
+      it: "Cuore di Gesù, casa di Dio e porta del cielo, abbi pietà di noi.",
     },
     {
-      title_en:
-        "Heart of Jesus, substantially united to the Word of God, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, sostanzialmente unito al Verbo di Dio, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, burning furnace of charity, have mercy on us.",
+      it: "Cuore di Gesù, fornace ardente di carità, abbi pietà di noi.",
     },
     {
-      title_en: "Heart of Jesus, of infinite majesty, have mercy on us.",
-      title_it: "Cuore di Gesù, di maestà infinita, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, abode of justice and love, have mercy on us.",
+      it: "Cuore di Gesù, sede della giustizia e della carità, abbi pietà di noi.",
     },
     {
-      title_en: "Heart of Jesus, holy temple of God, have mercy on us.",
-      title_it: "Cuore di Gesù, tempio santo di Dio, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, full of goodness and love, have mercy on us.",
+      it: "Cuore di Gesù, pieno di bontà e di amore, abbi pietà di noi.",
     },
     {
-      title_en:
-        "Heart of Jesus, tabernacle of the Most High, have mercy on us.",
-      title_it: "Cuore di Gesù, tabernacolo dell’Altissimo, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, abyss of all virtues, have mercy on us.",
+      it: "Cuore di Gesù, abisso di tutte le virtù, abbi pietà di noi.",
     },
     {
-      title_en:
-        "Heart of Jesus, house of God and gate of heaven, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, casa di Dio e porta del cielo, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, most worthy of all praise, have mercy on us.",
+      it: "Cuore di Gesù, degnissimo di ogni lode, abbi pietà di noi.",
     },
     {
-      title_en: "Heart of Jesus, burning furnace of charity, have mercy on us.",
-      title_it: "Cuore di Gesù, fornace ardente di carità, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, king and center of all hearts, have mercy on us.",
+      it: "Cuore di Gesù, re e centro di tutti i cuori, abbi pietà di noi.",
     },
     {
-      title_en: "Heart of Jesus, abode of justice and love, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, sede della giustizia e della carità, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, in whom are all the treasures of wisdom and knowledge, have mercy on us.",
+      it: "Cuore di Gesù, in cui sono tutti i tesori della sapienza e della scienza, abbi pietà di noi.",
     },
     {
-      title_en: "Heart of Jesus, full of goodness and love, have mercy on us.",
-      title_it: "Cuore di Gesù, pieno di bontà e di amore, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, in whom dwells the fullness of divinity, have mercy on us.",
+      it: "Cuore di Gesù, in cui abita tutta la pienezza della divinità, abbi pietà di noi.",
     },
     {
-      title_en: "Heart of Jesus, abyss of all virtues, have mercy on us.",
-      title_it: "Cuore di Gesù, abisso di tutte le virtù, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, in whom the Father was well pleased, have mercy on us.",
+      it: "Cuore di Gesù, in cui il Padre si compiacque, abbi pietà di noi.",
     },
     {
-      title_en: "Heart of Jesus, most worthy of all praise, have mercy on us.",
-      title_it: "Cuore di Gesù, degnissimo di ogni lode, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, of whose fullness we have all received, have mercy on us.",
+      it: "Cuore di Gesù, della cui pienezza noi tutti abbiamo ricevuto, abbi pietà di noi.",
     },
     {
-      title_en:
-        "Heart of Jesus, king and center of all hearts, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, re e centro di tutti i cuori, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, desire of the everlasting hills, have mercy on us.",
+      it: "Cuore di Gesù, desiderio dei colli eterni, abbi pietà di noi.",
     },
     {
-      title_en:
-        "Heart of Jesus, in whom are all the treasures of wisdom and knowledge, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, in cui sono tutti i tesori della sapienza e della scienza, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, patient and most merciful, have mercy on us.",
+      it: "Cuore di Gesù, paziente e misericordioso, abbi pietà di noi.",
     },
     {
-      title_en:
-        "Heart of Jesus, in whom dwells the fullness of divinity, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, in cui abita tutta la pienezza della divinità, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, enriching all who invoke Thee, have mercy on us.",
+      it: "Cuore di Gesù, generoso verso quanti Ti invocano, abbi pietà di noi.",
     },
     {
-      title_en:
-        "Heart of Jesus, in whom the Father was well pleased, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, in cui il Padre si compiacque, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, fountain of life and holiness, have mercy on us.",
+      it: "Cuore di Gesù, fonte di vita e di santità, abbi pietà di noi.",
     },
     {
-      title_en:
-        "Heart of Jesus, of whose fullness we have all received, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, della cui pienezza noi tutti abbiamo ricevuto, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, propitiation for our sins, have mercy on us.",
+      it: "Cuore di Gesù, propiziazione per i nostri peccati, abbi pietà di noi.",
     },
     {
-      title_en:
-        "Heart of Jesus, desire of the everlasting hills, have mercy on us.",
-      title_it: "Cuore di Gesù, desiderio dei colli eterni, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, loaded down with opprobrium, have mercy on us.",
+      it: "Cuore di Gesù, colmato di obbrobri, abbi pietà di noi.",
     },
     {
-      title_en: "Heart of Jesus, patient and most merciful, have mercy on us.",
-      title_it: "Cuore di Gesù, paziente e misericordioso, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, bruised for our offenses, have mercy on us.",
+      it: "Cuore di Gesù, trafitto per i nostri delitti, abbi pietà di noi.",
     },
     {
-      title_en:
-        "Heart of Jesus, enriching all who invoke Thee, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, generoso verso quanti Ti invocano, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, obedient unto death, have mercy on us.",
+      it: "Cuore di Gesù, obbediente fino alla morte, abbi pietà di noi.",
     },
     {
-      title_en:
-        "Heart of Jesus, fountain of life and holiness, have mercy on us.",
-      title_it: "Cuore di Gesù, fonte di vita e di santità, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, pierced with a lance, have mercy on us.",
+      it: "Cuore di Gesù, trafitto dalla lancia, abbi pietà di noi.",
     },
     {
-      title_en: "Heart of Jesus, propitiation for our sins, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, propiziazione per i nostri peccati, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, source of all consolation, have mercy on us.",
+      it: "Cuore di Gesù, fonte di ogni consolazione, abbi pietà di noi.",
     },
     {
-      title_en:
-        "Heart of Jesus, loaded down with opprobrium, have mercy on us.",
-      title_it: "Cuore di Gesù, colmato di obbrobri, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, our life and resurrection, have mercy on us.",
+      it: "Cuore di Gesù, nostra vita e risurrezione, abbi pietà di noi.",
     },
     {
-      title_en: "Heart of Jesus, bruised for our offenses, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, trafitto per i nostri delitti, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, our peace and reconciliation, have mercy on us.",
+      it: "Cuore di Gesù, nostra pace e riconciliazione, abbi pietà di noi.",
     },
     {
-      title_en: "Heart of Jesus, obedient unto death, have mercy on us.",
-      title_it: "Cuore di Gesù, obbediente fino alla morte, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, victim for sins, have mercy on us.",
+      it: "Cuore di Gesù, vittima dei peccatori, abbi pietà di noi.",
     },
     {
-      title_en: "Heart of Jesus, pierced with a lance, have mercy on us.",
-      title_it: "Cuore di Gesù, trafitto dalla lancia, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, salvation of those who hope in Thee, have mercy on us.",
+      it: "Cuore di Gesù, salvezza di chi spera in Te, abbi pietà di noi.",
     },
     {
-      title_en: "Heart of Jesus, source of all consolation, have mercy on us.",
-      title_it: "Cuore di Gesù, fonte di ogni consolazione, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, hope of those who die in Thee, have mercy on us.",
+      it: "Cuore di Gesù, speranza di chi muore in Te, abbi pietà di noi.",
     },
     {
-      title_en: "Heart of Jesus, our life and resurrection, have mercy on us.",
-      title_it: "Cuore di Gesù, nostra vita e risurrezione, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Heart of Jesus, delight of all the Saints, have mercy on us.",
+      it: "Cuore di Gesù, delizia di tutti i Santi, abbi pietà di noi.",
     },
     {
-      title_en:
-        "Heart of Jesus, our peace and reconciliation, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, nostra pace e riconciliazione, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Lamb of God, who takest away the sins of the world, spare us, O Lord.",
+      it: "Agnello di Dio, che togli i peccati del mondo, perdonaci, o Signore.",
     },
     {
-      title_en: "Heart of Jesus, victim for sins, have mercy on us.",
-      title_it: "Cuore di Gesù, vittima dei peccatori, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Lamb of God, who takest away the sins of the world, graciously hear us, O Lord.",
+      it: "Agnello di Dio, che togli i peccati del mondo, ascoltaci, o Signore.",
     },
     {
-      title_en:
-        "Heart of Jesus, salvation of those who hope in Thee, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, salvezza di chi spera in Te, abbi pietà di noi.",
-      image: JesusImage,
+      en: "Lamb of God, who takest away the sins of the world, have mercy on us.",
+      it: "Agnello di Dio, che togli i peccati del mondo, abbi pietà di noi.",
     },
     {
-      title_en:
-        "Heart of Jesus, hope of those who die in Thee, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, speranza di chi muore in Te, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en: "Heart of Jesus, delight of all the Saints, have mercy on us.",
-      title_it: "Cuore di Gesù, delizia di tutti i Santi, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en:
-        "Lamb of God, who takest away the sins of the world, spare us, O Lord.",
-      title_it:
-        "Agnello di Dio, che togli i peccati del mondo, perdonaci, o Signore.",
-      image: JesusImage,
-    },
-    {
-      title_en:
-        "Lamb of God, who takest away the sins of the world, graciously hear us, O Lord.",
-      title_it:
-        "Agnello di Dio, che togli i peccati del mondo, ascoltaci, o Signore.",
-      image: JesusImage,
-    },
-    {
-      title_en:
-        "Lamb of God, who takest away the sins of the world, have mercy on us.",
-      title_it:
-        "Agnello di Dio, che togli i peccati del mondo, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en:
-        "Jesus, meek and humble of heart, make our hearts like unto Thine.",
-      title_it:
-        "Gesù, mite ed umile di cuore, rendi il nostro cuore simile al Tuo.",
-      image: JesusImage,
+      en: "Jesus, meek and humble of heart, make our hearts like unto Thine.",
+      it: "Gesù, mite ed umile di cuore, rendi il nostro cuore simile al Tuo.",
     },
   ];
 

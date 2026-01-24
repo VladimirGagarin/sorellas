@@ -52,7 +52,6 @@ import GraciouslyHearUs from "../assets/litany/graciously_hear_us.jpg";
 import HaveMercyOnUs from "../assets/litany/have_mercy_on_us.jpg";
 import PrayForUs from "../assets/litany/pray_for_us.jpg";
 import MadeWorthy from "../assets/litany/made_worthy.jpg";
-import JesusImage from "../assets/sacred_heart_card.jpg"
 
 // Famous prayers by saints and spiritual figures
 export function getFamousPrayers() {
@@ -12477,276 +12476,53 @@ export function getCatholicPrayers() {
 
 export function getJesusLitany() {
   const litany = [
-    {
-      title_en: "Lord, have mercy.",
-      title_it: "Signore, pietà.",
-      image: JesusImage,
-    },
-    {
-      title_en: "Christ, have mercy.",
-      title_it: "Cristo, pietà.",
-      image: JesusImage,
-    },
-    {
-      title_en: "Lord, have mercy.",
-      title_it: "Signore, pietà.",
-      image: JesusImage,
-    },
-    {
-      title_en: "Christ, hear us.",
-      title_it: "Cristo, ascoltaci.",
-      image: JesusImage,
-    },
-    {
-      title_en: "Christ, graciously hear us.",
-      title_it: "Cristo, esaudiscici.",
-      image: JesusImage,
-    },
-    {
-      title_en: "God the Father of Heaven, have mercy on us.",
-      title_it: "Dio, Padre celeste, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en: "God the Son, Redeemer of the world, have mercy on us.",
-      title_it: "Dio, Figlio Redentore del mondo, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en: "God the Holy Spirit, have mercy on us.",
-      title_it: "Dio, Spirito Santo, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en: "Holy Trinity, One God, have mercy on us.",
-      title_it: "Santa Trinità, unico Dio, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en: "Heart of Jesus, Son of the Eternal Father, have mercy on us.",
-      title_it: "Cuore di Gesù, Figlio dell’Eterno Padre, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en:
-        "Heart of Jesus, formed by the Holy Spirit in the womb of the Virgin Mother, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, formato dallo Spirito Santo nel seno della Vergine Madre, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en:
-        "Heart of Jesus, substantially united to the Word of God, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, sostanzialmente unito al Verbo di Dio, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en: "Heart of Jesus, of infinite majesty, have mercy on us.",
-      title_it: "Cuore di Gesù, di maestà infinita, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en: "Heart of Jesus, holy temple of God, have mercy on us.",
-      title_it: "Cuore di Gesù, tempio santo di Dio, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en:
-        "Heart of Jesus, tabernacle of the Most High, have mercy on us.",
-      title_it: "Cuore di Gesù, tabernacolo dell’Altissimo, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en:
-        "Heart of Jesus, house of God and gate of heaven, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, casa di Dio e porta del cielo, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en: "Heart of Jesus, burning furnace of charity, have mercy on us.",
-      title_it: "Cuore di Gesù, fornace ardente di carità, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en: "Heart of Jesus, abode of justice and love, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, sede della giustizia e della carità, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en: "Heart of Jesus, full of goodness and love, have mercy on us.",
-      title_it: "Cuore di Gesù, pieno di bontà e di amore, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en: "Heart of Jesus, abyss of all virtues, have mercy on us.",
-      title_it: "Cuore di Gesù, abisso di tutte le virtù, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en: "Heart of Jesus, most worthy of all praise, have mercy on us.",
-      title_it: "Cuore di Gesù, degnissimo di ogni lode, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en:
-        "Heart of Jesus, king and center of all hearts, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, re e centro di tutti i cuori, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en:
-        "Heart of Jesus, in whom are all the treasures of wisdom and knowledge, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, in cui sono tutti i tesori della sapienza e della scienza, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en:
-        "Heart of Jesus, in whom dwells the fullness of divinity, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, in cui abita tutta la pienezza della divinità, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en:
-        "Heart of Jesus, in whom the Father was well pleased, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, in cui il Padre si compiacque, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en:
-        "Heart of Jesus, of whose fullness we have all received, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, della cui pienezza noi tutti abbiamo ricevuto, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en:
-        "Heart of Jesus, desire of the everlasting hills, have mercy on us.",
-      title_it: "Cuore di Gesù, desiderio dei colli eterni, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en: "Heart of Jesus, patient and most merciful, have mercy on us.",
-      title_it: "Cuore di Gesù, paziente e misericordioso, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en:
-        "Heart of Jesus, enriching all who invoke Thee, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, generoso verso quanti Ti invocano, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en:
-        "Heart of Jesus, fountain of life and holiness, have mercy on us.",
-      title_it: "Cuore di Gesù, fonte di vita e di santità, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en: "Heart of Jesus, propitiation for our sins, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, propiziazione per i nostri peccati, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en:
-        "Heart of Jesus, loaded down with opprobrium, have mercy on us.",
-      title_it: "Cuore di Gesù, colmato di obbrobri, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en: "Heart of Jesus, bruised for our offenses, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, trafitto per i nostri delitti, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en: "Heart of Jesus, obedient unto death, have mercy on us.",
-      title_it: "Cuore di Gesù, obbediente fino alla morte, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en: "Heart of Jesus, pierced with a lance, have mercy on us.",
-      title_it: "Cuore di Gesù, trafitto dalla lancia, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en: "Heart of Jesus, source of all consolation, have mercy on us.",
-      title_it: "Cuore di Gesù, fonte di ogni consolazione, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en: "Heart of Jesus, our life and resurrection, have mercy on us.",
-      title_it: "Cuore di Gesù, nostra vita e risurrezione, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en:
-        "Heart of Jesus, our peace and reconciliation, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, nostra pace e riconciliazione, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en: "Heart of Jesus, victim for sins, have mercy on us.",
-      title_it: "Cuore di Gesù, vittima dei peccatori, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en:
-        "Heart of Jesus, salvation of those who hope in Thee, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, salvezza di chi spera in Te, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en:
-        "Heart of Jesus, hope of those who die in Thee, have mercy on us.",
-      title_it:
-        "Cuore di Gesù, speranza di chi muore in Te, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en: "Heart of Jesus, delight of all the Saints, have mercy on us.",
-      title_it: "Cuore di Gesù, delizia di tutti i Santi, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en:
-        "Lamb of God, who takest away the sins of the world, spare us, O Lord.",
-      title_it:
-        "Agnello di Dio, che togli i peccati del mondo, perdonaci, o Signore.",
-      image: JesusImage,
-    },
-    {
-      title_en:
-        "Lamb of God, who takest away the sins of the world, graciously hear us, O Lord.",
-      title_it:
-        "Agnello di Dio, che togli i peccati del mondo, ascoltaci, o Signore.",
-      image: JesusImage,
-    },
-    {
-      title_en:
-        "Lamb of God, who takest away the sins of the world, have mercy on us.",
-      title_it:
-        "Agnello di Dio, che togli i peccati del mondo, abbi pietà di noi.",
-      image: JesusImage,
-    },
-    {
-      title_en:
-        "Jesus, meek and humble of heart, make our hearts like unto Thine.",
-      title_it:
-        "Gesù, mite ed umile di cuore, rendi il nostro cuore simile al Tuo.",
-      image: JesusImage,
-    },
-  ];
+  { title_en: "Lord, have mercy.", title_it: "Signore, pietà.", image: JesusImage },
+  { title_en: "Christ, have mercy.", title_it: "Cristo, pietà.", image: JesusImage },
+  { title_en: "Lord, have mercy.", title_it: "Signore, pietà.", image: JesusImage },
+  { title_en: "Christ, hear us.", title_it: "Cristo, ascoltaci.", image: JesusImage },
+  { title_en: "Christ, graciously hear us.", title_it: "Cristo, esaudiscici.", image: JesusImage },
+  { title_en: "God the Father of Heaven, have mercy on us.", title_it: "Dio, Padre celeste, abbi pietà di noi.", image: JesusImage },
+  { title_en: "God the Son, Redeemer of the world, have mercy on us.", title_it: "Dio, Figlio Redentore del mondo, abbi pietà di noi.", image: JesusImage },
+  { title_en: "God the Holy Spirit, have mercy on us.", title_it: "Dio, Spirito Santo, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Holy Trinity, One God, have mercy on us.", title_it: "Santa Trinità, unico Dio, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, Son of the Eternal Father, have mercy on us.", title_it: "Cuore di Gesù, Figlio dell’Eterno Padre, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, formed by the Holy Spirit in the womb of the Virgin Mother, have mercy on us.", title_it: "Cuore di Gesù, formato dallo Spirito Santo nel seno della Vergine Madre, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, substantially united to the Word of God, have mercy on us.", title_it: "Cuore di Gesù, sostanzialmente unito al Verbo di Dio, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, of infinite majesty, have mercy on us.", title_it: "Cuore di Gesù, di maestà infinita, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, holy temple of God, have mercy on us.", title_it: "Cuore di Gesù, tempio santo di Dio, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, tabernacle of the Most High, have mercy on us.", title_it: "Cuore di Gesù, tabernacolo dell’Altissimo, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, house of God and gate of heaven, have mercy on us.", title_it: "Cuore di Gesù, casa di Dio e porta del cielo, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, burning furnace of charity, have mercy on us.", title_it: "Cuore di Gesù, fornace ardente di carità, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, abode of justice and love, have mercy on us.", title_it: "Cuore di Gesù, sede della giustizia e della carità, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, full of goodness and love, have mercy on us.", title_it: "Cuore di Gesù, pieno di bontà e di amore, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, abyss of all virtues, have mercy on us.", title_it: "Cuore di Gesù, abisso di tutte le virtù, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, most worthy of all praise, have mercy on us.", title_it: "Cuore di Gesù, degnissimo di ogni lode, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, king and center of all hearts, have mercy on us.", title_it: "Cuore di Gesù, re e centro di tutti i cuori, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, in whom are all the treasures of wisdom and knowledge, have mercy on us.", title_it: "Cuore di Gesù, in cui sono tutti i tesori della sapienza e della scienza, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, in whom dwells the fullness of divinity, have mercy on us.", title_it: "Cuore di Gesù, in cui abita tutta la pienezza della divinità, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, in whom the Father was well pleased, have mercy on us.", title_it: "Cuore di Gesù, in cui il Padre si compiacque, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, of whose fullness we have all received, have mercy on us.", title_it: "Cuore di Gesù, della cui pienezza noi tutti abbiamo ricevuto, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, desire of the everlasting hills, have mercy on us.", title_it: "Cuore di Gesù, desiderio dei colli eterni, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, patient and most merciful, have mercy on us.", title_it: "Cuore di Gesù, paziente e misericordioso, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, enriching all who invoke Thee, have mercy on us.", title_it: "Cuore di Gesù, generoso verso quanti Ti invocano, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, fountain of life and holiness, have mercy on us.", title_it: "Cuore di Gesù, fonte di vita e di santità, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, propitiation for our sins, have mercy on us.", title_it: "Cuore di Gesù, propiziazione per i nostri peccati, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, loaded down with opprobrium, have mercy on us.", title_it: "Cuore di Gesù, colmato di obbrobri, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, bruised for our offenses, have mercy on us.", title_it: "Cuore di Gesù, trafitto per i nostri delitti, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, obedient unto death, have mercy on us.", title_it: "Cuore di Gesù, obbediente fino alla morte, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, pierced with a lance, have mercy on us.", title_it: "Cuore di Gesù, trafitto dalla lancia, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, source of all consolation, have mercy on us.", title_it: "Cuore di Gesù, fonte di ogni consolazione, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, our life and resurrection, have mercy on us.", title_it: "Cuore di Gesù, nostra vita e risurrezione, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, our peace and reconciliation, have mercy on us.", title_it: "Cuore di Gesù, nostra pace e riconciliazione, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, victim for sins, have mercy on us.", title_it: "Cuore di Gesù, vittima dei peccatori, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, salvation of those who hope in Thee, have mercy on us.", title_it: "Cuore di Gesù, salvezza di chi spera in Te, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, hope of those who die in Thee, have mercy on us.", title_it: "Cuore di Gesù, speranza di chi muore in Te, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Heart of Jesus, delight of all the Saints, have mercy on us.", title_it: "Cuore di Gesù, delizia di tutti i Santi, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Lamb of God, who takest away the sins of the world, spare us, O Lord.", title_it: "Agnello di Dio, che togli i peccati del mondo, perdonaci, o Signore.", image: JesusImage },
+  { title_en: "Lamb of God, who takest away the sins of the world, graciously hear us, O Lord.", title_it: "Agnello di Dio, che togli i peccati del mondo, ascoltaci, o Signore.", image: JesusImage },
+  { title_en: "Lamb of God, who takest away the sins of the world, have mercy on us.", title_it: "Agnello di Dio, che togli i peccati del mondo, abbi pietà di noi.", image: JesusImage },
+  { title_en: "Jesus, meek and humble of heart, make our hearts like unto Thine.", title_it: "Gesù, mite ed umile di cuore, rendi il nostro cuore simile al Tuo.", image: JesusImage },
+];
 
   return litany;
 }
