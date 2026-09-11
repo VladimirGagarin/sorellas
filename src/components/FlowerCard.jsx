@@ -56,24 +56,24 @@ export default function FlowerCard({
   const getDayTimeColor = (dayTime) => {
     const dayTimeLower = dayTime.toLowerCase();
     if (dayTimeLower.includes("morning") || dayTimeLower.includes("mattina")) {
-      return "#FBBF24"; // Golden
+      return "#C99700"; // Candle gold
     } else if (
       dayTimeLower.includes("midday") ||
       dayTimeLower.includes("mezzogiorno")
     ) {
-      return "#F59E0B"; // Orange
+      return "#D0782E"; // Ember amber
     } else if (
       dayTimeLower.includes("evening") ||
       dayTimeLower.includes("sera")
     ) {
-      return "#8B5CF6"; // Purple
+      return "#A85E1E"; // Warm bronze
     } else if (
       dayTimeLower.includes("night") ||
       dayTimeLower.includes("notte")
     ) {
-      return "#1E40AF"; // Dark Blue
+      return "#4A3B1A"; // Walnut
     }
-    return "#6B7280"; // Gray
+    return "#6E5A3E"; // Taupe
   };
 
   // Get flower symbol based on name

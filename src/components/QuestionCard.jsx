@@ -76,26 +76,26 @@ export default function QuestionCard({
   const getCategoryColor = (cat) => {
     const lowerCat = cat.toLowerCase();
     if (lowerCat.includes("life") || lowerCat.includes("vita"))
-      return "#10B981"; // Emerald
+      return "#4A5D36"; // Liturgical olive
     if (lowerCat.includes("growth") || lowerCat.includes("crescita"))
-      return "#8B5CF6"; // Purple
+      return "#8C6D1F"; // Antique gold
     if (lowerCat.includes("prayer") || lowerCat.includes("preghiera"))
-      return "#EC4899"; // Pink
+      return "#A84B2A"; // Rosewood
     if (lowerCat.includes("faith") || lowerCat.includes("fede"))
-      return "#3B82F6"; // Blue
+      return "#5D4037"; // Cathedral oak
     if (lowerCat.includes("joy") || lowerCat.includes("gioia"))
-      return "#F59E0B"; // Amber
+      return "#D4A94C"; // Candle gold
     if (lowerCat.includes("purpose") || lowerCat.includes("scopo"))
-      return "#EF4444"; // Red
+      return "#A85E1E"; // Ember amber
     if (lowerCat.includes("forgiveness") || lowerCat.includes("perdono"))
-      return "#6366F1"; // Indigo
+      return "#8C7355"; // Taupe
     if (lowerCat.includes("service") || lowerCat.includes("servizio"))
-      return "#14B8A6"; // Teal
+      return "#7A5C10"; // Deep bronze
     if (lowerCat.includes("community") || lowerCat.includes("comunità"))
-      return "#F97316"; // Orange
+      return "#C8A45C"; // Warm sand
     if (lowerCat.includes("morality") || lowerCat.includes("moralità"))
-      return "#8B5CF6"; // Purple
-    return "#10B981"; // Default green
+      return "#B98F35"; // Burnished gold
+    return "#8C6D1F"; // Antique gold
   };
 
   const categoryColor = getCategoryColor(category);

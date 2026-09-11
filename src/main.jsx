@@ -7,6 +7,8 @@ import { ThemeProvider } from './contexts/theme.jsx';
 import AboutScreenPage from './pages/AboutScreenPage.jsx';
 import DeepSeekPage from './pages/DeepSeekPage.jsx';
 import LitanyMaryPage from './pages/LitanyMaryPage.jsx';
+import PrayersPage from './pages/PrayersPage.jsx';
+import PrayerPage from './pages/PrayerPage.jsx';
 import './index.css'
 import App from './App.jsx'
 
@@ -32,11 +34,19 @@ const router = createHashRouter([
     path: "deepseek",
     element: <DeepSeekPage/>
   },
-  {
-    path: "litany-mary",
-    element: <LitanyMaryPage/>  
-  }
-]);
+{
+      path: "litany-mary",
+      element: <LitanyMaryPage/>  
+    },
+    {
+      path: "prayers",
+      element: <PrayersPage />
+    },
+    {
+      path: "prayer/:prayerId",
+      element: <PrayerPage />
+    }
+  ]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

@@ -40,7 +40,7 @@
   max-height: min(90vh, 100% - 32px);
   display: flex;
   flex-direction: column;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(var(--primary-green-rgb), 0.25);
   border: 1px solid var(--border-color);
   animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
@@ -248,6 +248,16 @@
   hyphens: auto;
 }
 
+/* Illuminated drop cap for the opened prayer */
+.prayer-modal .prayer-text::first-letter {
+  font-family: var(--font-display);
+  font-size: 3em;
+  line-height: 0.85;
+  float: left;
+  padding-right: 0.12em;
+  color: var(--primary-green);
+}
+
 @media (min-width: 480px) {
   .prayer-text-body {
     line-height: 1.8;
@@ -449,7 +459,7 @@
 }
 
 .btn-save-prayer:hover {
-  background: #0da271;
+  background: var(--primary-green);
   transform: translateY(-2px);
   box-shadow: 0 4px 20px rgba(var(--primary-green-rgb), 0.3);
 }

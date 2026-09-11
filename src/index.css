@@ -1,6 +1,134 @@
-/* index.css */
+/* index.css - Candle-light / Warm Monastic design system */
 
-/* 1. RESET & BOX-SIZING */
+/* ============================================================
+   1. DESIGN TOKENS  (centralized — single source of truth)
+   ============================================================ */
+:root {
+  /* Typography */
+  --font-display: 'Cinzel', Georgia, 'Times New Roman', serif;
+  --font-body: 'EB Garamond', Georgia, 'Times New Roman', serif;
+
+  /* Light theme — candle-lit parchment */
+  --primary-green: #8C6D1F;      /* Antique gold (primary accent) */
+  --primary-green-rgb: 140, 109, 31;
+  --secondary-green: #7A5C10;    /* Deep bronze */
+  --accent-purple: #A85E1E;      /* Ember amber */
+  --rose-pink: #A84B2A;          /* Rosewood */
+  --lily-purple: #8C6D1F;        /* Gold */
+  --oak-brown: #5D4037;          /* Cathedral oak */
+  --leaf-emerald: #4A5D36;       /* Liturgical olive */
+
+  /* Text */
+  --text-primary: #3B2A1A;       /* Deep walnut ink */
+  --text-secondary: #5B4632;     /* Umber */
+  --text-muted: #8C7355;         /* Taupe */
+
+  /* Backgrounds */
+  --bg-color: #F5EEDC;           /* Parchment */
+  --bg-secondary: #EDE0C8;       /* Aged parchment */
+  --bg-card: #FBF6EA;            /* Ivory */
+  --card-bg: #FBF6EA;            /* Ivory */
+
+  /* UI */
+  --border-color: #DCC9A4;       /* Parchment border */
+  --shadow-color: rgba(96, 66, 24, 0.14);
+  --overlay-color: rgba(40, 26, 12, 0.55);
+
+  /* Header & Drawer */
+  --header-bg: rgba(251, 246, 234, 0.92);
+  --drawer-bg: rgba(251, 246, 234, 0.97);
+  --hover-bg: rgba(168, 116, 30, 0.08);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #A8842F, #6E5214);
+  --gradient-secondary: linear-gradient(135deg, #B0411B, #7A2E12);
+  --gradient-accent: linear-gradient(135deg, #C9A24B, #7A5C10);
+  --gradient-header: linear-gradient(135deg, #FFFDF6, #EDE0C8);
+  --gradient-drawer: linear-gradient(135deg, #FFFDF6, #E9D9B8);
+  --gradient-bg: linear-gradient(135deg, #F3EAD6, #F5EEDC);
+
+  /* Glass morphism (warm lens) */
+  --glass-bg: rgba(255, 252, 242, 0.4);
+  --glass-border: rgba(146, 106, 42, 0.14);
+  --glass-shadow: 0 8px 32px rgba(74, 48, 16, 0.12);
+  --glass-blur: blur(12px);
+  --glass-gradient: linear-gradient(135deg, rgba(255, 251, 238, 0.55), rgba(255, 251, 238, 0.18));
+  --glass-highlight: rgba(255, 238, 196, 0.55);
+
+  /* Identity accents */
+  --soft-blue: #6E7384;
+  --warm-orange: #A85E22;
+  --soft-pink: #B0705A;
+  --deep-purple: #6E5224;
+}
+
+[data-theme="dark"] {
+  /* Dark theme — midnight chapel by candlelight */
+  --primary-green: #D4A94C;      /* Candle gold (primary accent) */
+  --primary-green-rgb: 212, 169, 76;
+  --secondary-green: #B98F35;
+  --accent-purple: #C87D2C;      /* Warm amber */
+  --rose-pink: #D9734A;          /* Candle rose */
+  --lily-purple: #D4A94C;
+  --oak-brown: #B98F35;
+  --leaf-emerald: #9CA86A;       /* Muted sage */
+
+  /* Aliased liturgical-violet names now resolve to warm golds */
+  --primary-purple: #D4A94C;
+  --secondary-purple: #C0871F;
+  --accent-lavender: #E8C87A;
+  --mystic-indigo: #2A1B10;
+  --midnight-blue: #170F09;
+  --lily-lavender: #D4A94C;
+  --oak-amber: #E0BE6A;
+
+  /* Text */
+  --text-primary: #F3E9D2;       /* Warm candle cream */
+  --text-secondary: #D3C3A5;
+  --text-muted: #A08A63;
+
+  /* Backgrounds */
+  --bg-color: #1C140E;           /* Deep umber-black */
+  --bg-secondary: #251B11;
+  --bg-card: #2A2118;
+  --card-bg: #2A2118;
+
+  /* UI */
+  --border-color: #40301E;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --overlay-color: rgba(0, 0, 0, 0.72);
+
+  /* Header & Drawer */
+  --header-bg: rgba(26, 18, 12, 0.9);
+  --drawer-bg: rgba(30, 21, 14, 0.98);
+  --hover-bg: rgba(212, 169, 76, 0.12);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #B98F35, #7A5610);
+  --gradient-secondary: linear-gradient(135deg, #B94A1B, #6E2E10);
+  --gradient-accent: linear-gradient(135deg, #E0BE6A, #8A5C10);
+  --gradient-header: linear-gradient(135deg, #241909, #170F09);
+  --gradient-drawer: linear-gradient(135deg, #2A1B0C, #1C140E);
+  --gradient-bg: linear-gradient(135deg, #171006, #1C140E);
+
+  /* Glass morphism (candle lens) */
+  --glass-bg: rgba(42, 32, 24, 0.42);
+  --glass-border: rgba(224, 190, 106, 0.14);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --glass-blur: blur(14px);
+  --glass-gradient: linear-gradient(135deg, rgba(224, 190, 106, 0.08), rgba(224, 190, 106, 0.03));
+  --glass-highlight: rgba(224, 190, 106, 0.2);
+
+  /* Identity accents */
+  --soft-blue: #8C93A8;
+  --warm-orange: #D0782E;
+  --soft-pink: #D08A6E;
+  --deep-purple: #C9A24B;
+}
+
+/* ============================================================
+   2. RESET & BASE
+   ============================================================ */
 * {
   margin: 0;
   padding: 0;
@@ -11,127 +139,115 @@ html {
   scroll-behavior: smooth;
 }
 
-/* 2. BASE BODY STYLES */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f8f9fa;
+  line-height: 1.7;
+  color: var(--text-primary);
+  background-color: var(--bg-color);
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-/* 3. TYPOGRAPHY */
+/* ============================================================
+   3. TYPOGRAPHY  (monastic manuscript type)
+   ============================================================ */
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.25;
   margin-bottom: 1rem;
+  letter-spacing: 0.02em;
 }
 
-h1 { font-size: 2.5rem; }
+h1 { font-size: 2.6rem; }
 h2 { font-size: 2rem; }
-h3 { font-size: 1.75rem; }
-h4 { font-size: 1.5rem; }
-h5 { font-size: 1.25rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.2rem; }
+h5 { font-size: 1.05rem; }
 h6 { font-size: 1rem; }
 
-p {
-  margin-bottom: 1rem;
-}
+p { margin-bottom: 1rem; }
 
-/* 4. LINKS */
+/* ============================================================
+   4. LINKS
+   ============================================================ */
 a {
-  color: #007bff;
+  color: var(--primary-green);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:hover {
-  color: #0056b3;
+  color: var(--secondary-green);
   text-decoration: underline;
 }
 
-/* 5. LISTS */
+/* ============================================================
+   5. LISTS
+   ============================================================ */
 ul, ol {
   margin-left: 1.5rem;
   margin-bottom: 1rem;
 }
 
-li {
-  margin-bottom: 0.5rem;
-}
+li { margin-bottom: 0.5rem; }
 
-/* 6. MEDIA */
+/* ============================================================
+   6. MEDIA
+   ============================================================ */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* 7. CODE */
+/* ============================================================
+   7. CODE
+   ============================================================ */
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-  background-color: #f4f4f4;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  background-color: var(--bg-secondary);
   padding: 0.2rem 0.4rem;
   border-radius: 3px;
   font-size: 0.9em;
+  color: var(--text-secondary);
 }
 
 pre {
-  background-color: #f4f4f4;
+  background-color: var(--bg-secondary);
   padding: 1rem;
   border-radius: 5px;
   overflow-x: auto;
   margin-bottom: 1rem;
 }
 
-/* 8. FORMS */
+/* ============================================================
+   8. FORMS
+   ============================================================ */
 input,
 button,
 textarea,
 select {
-  font-family: inherit;
+  font-family: var(--font-body);
   font-size: inherit;
 }
 
-button {
-  cursor: pointer;
-}
+button { cursor: pointer; }
 
-/* 9. UTILITY CLASSES */
+/* ============================================================
+   9. UTILITY CLASSES
+   ============================================================ */
+.flex { display: flex; }
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.flex-between { display: flex; align-items: center; justify-content: space-between; }
+.flex-column { display: flex; flex-direction: column; }
 
-/* Flexbox utilities */
-.flex {
-  display: flex;
-}
-
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.flex-between {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Spacing utilities */
 .m-0 { margin: 0 !important; }
 .mt-1 { margin-top: 0.5rem; }
 .mt-2 { margin-top: 1rem; }
 .mt-3 { margin-top: 1.5rem; }
 .mt-4 { margin-top: 2rem; }
-
 .mb-1 { margin-bottom: 0.5rem; }
 .mb-2 { margin-bottom: 1rem; }
 .mb-3 { margin-bottom: 1.5rem; }
@@ -142,22 +258,20 @@ button {
 .p-3 { padding: 1.5rem; }
 .p-4 { padding: 2rem; }
 
-/* Text utilities */
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 .text-right { text-align: right; }
 
-.text-primary { color: #007bff; }
-.text-success { color: #28a745; }
-.text-danger { color: #dc3545; }
-.text-warning { color: #ffc107; }
-.text-muted { color: #6c757d; }
+.text-primary { color: var(--primary-green); }
+.text-success { color: #2D6A2E; }
+.text-danger { color: #A8362A; }
+.text-warning { color: #B98F35; }
+.text-muted { color: var(--text-muted); }
 
 .font-bold { font-weight: 700; }
 .font-normal { font-weight: 400; }
 .font-light { font-weight: 300; }
 
-/* Container */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -165,90 +279,106 @@ button {
   padding: 0 1rem;
 }
 
-/* 10. CUSTOM SCROLLBAR (Optional) */
-::-webkit-scrollbar {
-  width: 8px;
-}
+/* ============================================================
+   10. CUSTOM SCROLLBAR (candle gold)
+   ============================================================ */
+::-webkit-scrollbar { width: 9px; }
+::-webkit-scrollbar-track { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb { background: #B98F35; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #8A6D1F; }
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-/* 11. SELECTION */
+/* ============================================================
+   11. SELECTION
+   ============================================================ */
 ::selection {
-  background-color: rgba(0, 123, 255, 0.2);
+  background-color: rgba(var(--primary-green-rgb), 0.25);
   color: inherit;
 }
 
-/* 12. FOCUS OUTLINE (Accessibility) */
+/* ============================================================
+   12. FOCUS OUTLINE (Accessibility)
+   ============================================================ */
 :focus {
-  outline: 2px solid rgba(0, 123, 255, 0.5);
+  outline: 2px solid rgba(var(--primary-green-rgb), 0.5);
   outline-offset: 2px;
 }
 
-:focus:not(:focus-visible) {
-  outline: none;
-}
+:focus:not(:focus-visible) { outline: none; }
 
-/* Button base styles */
+/* ============================================================
+   13. BASE BUTTON STYLES
+   ============================================================ */
 .btn {
   display: inline-block;
   padding: 0.5rem 1.5rem;
   border: none;
   border-radius: 4px;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .btn-primary {
-  background-color: #007bff;
+  background-color: #8C6D1F;
   color: white;
 }
 
-.btn-primary:hover {
-  background-color: #0056b3;
-}
+.btn-primary:hover { background-color: #6E5214; }
 
 .btn-secondary {
-  background-color: #6c757d;
+  background-color: #5D4037;
   color: white;
 }
 
 .btn-outline {
   background-color: transparent;
-  border: 1px solid #007bff;
-  color: #007bff;
+  border: 1px solid #8C6D1F;
+  color: #8C6D1F;
 }
 
 .btn-outline:hover {
-  background-color: #007bff;
+  background-color: #8C6D1F;
   color: white;
 }
 
-/* 13. RESPONSIVE HELPERS */
+/* ============================================================
+   14. RESPONSIVE HELPERS
+   ============================================================ */
 @media (max-width: 768px) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.75rem; }
-  h3 { font-size: 1.5rem; }
-  
-  .container {
-    padding: 0 0.75rem;
-  }
+  h1 { font-size: 2.1rem; }
+  h2 { font-size: 1.6rem; }
+  h3 { font-size: 1.3rem; }
+
+  .container { padding: 0 0.75rem; }
 }
 
 @media (max-width: 480px) {
-  h1 { font-size: 1.75rem; }
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: 1.25rem; }
+  h1 { font-size: 1.85rem; }
+  h2 { font-size: 1.4rem; }
+  h3 { font-size: 1.15rem; }
+}
+
+/* ============================================================
+   15. MONASTIC MANUSCRIPT UTILITIES
+   ============================================================ */
+
+/* Illuminated drop cap for prayer text */
+.drop-cap::first-letter {
+  font-family: var(--font-display);
+  font-size: 3.2em;
+  line-height: 0.85;
+  float: left;
+  padding-right: 0.12em;
+  color: var(--primary-green);
+}
+
+/* Ornamental gold rule (like a manuscript flourish) */
+.gold-rule {
+  height: 1px;
+  border: none;
+  background: linear-gradient(90deg, transparent, rgba(var(--primary-green-rgb), 0.7), transparent);
+  margin: 1.5rem auto;
+  width: 100%;
+  max-width: 640px;
 }

@@ -18157,3 +18157,15 @@ export function getFavWords() {
   ];
   return list;
 }
+
+// ---------------------------------------------------------------------------
+// Resolve prayer/author photo paths to bundled asset URLs (Vite import.meta.glob)
+// ---------------------------------------------------------------------------
+const prayerPhotoModules = import.meta.glob("../assets/*.{jpg,jpeg,png}");
+
+// Returns a dynamic import loader for the photo, or null if it cannot be resolved.
+export function resolvePrayerPhoto(photoPath) {
+  if (!photoPath) return null;
+  const loader = prayerPhotoModules[photoPath];
+  return loader || null;
+}

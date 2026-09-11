@@ -116,28 +116,28 @@ export default function Header() {
     if (isDarkMode) {
       switch (flowerType) {
         case "rose":
-          return "#F472B6"; // Blush pink
+          return "#D9734A"; // Candle rose
         case "lily":
-          return "#D8B4FE"; // Lavender
+          return "#D4A94C"; // Candle gold
         case "oak":
-          return "#FBBF24"; // Golden
+          return "#E0BE6A"; // Amber gold
         case "leaf":
-          return "#10B981"; // Emerald
+          return "#9CA86A"; // Muted sage
         default:
-          return "#C4B5FD"; // Lavender
+          return "#C8A45C"; // Warm sand
       }
     } else {
       switch (flowerType) {
         case "rose":
-          return "#E91E63"; // Pink
+          return "#A84B2A"; // Rosewood
         case "lily":
-          return "#9C27B0"; // Purple
+          return "#8C6D1F"; // Antique gold
         case "oak":
-          return "#5D4037"; // Brown
+          return "#5D4037"; // Cathedral oak
         case "leaf":
-          return "#2E7D32"; // Green
+          return "#4A5D36"; // Liturgical olive
         default:
-          return "#7B1FA2"; // Purple
+          return "#8C6D1F"; // Antique gold
       }
     }
   };
@@ -159,13 +159,13 @@ export default function Header() {
       icon: <FaInfoCircle />,
       label: t.about,
       link: "/about",
-      color: isDarkMode ? "#93C5FD" : "#1E88E5", // Sky clarity
+      color: getFlowerColor("default"), // Warm sand
     },
     {
       icon: <FaChurch />,
       label: t.litanyOfMary,
       link: "/litany-mary",
-      color: getFlowerColor("lily"), // Marian purity
+      color: getFlowerColor("lily"), // Marian gold
     },
     {
       icon: <FaCross />,
@@ -183,31 +183,31 @@ export default function Header() {
       icon: <FaPrayingHands />,
       label: t.litanyOfCottolengo,
       link: "/litany-cottolengo",
-      color: isDarkMode ? "#4ADE80" : "#2E7D32", // Charity / service
+      color: getFlowerColor("leaf"), // Charity / service
     },
     {
       icon: <FaQuestionCircle />,
       label: t.deepseekQuestions,
       link: "/deepseek",
-      color: isDarkMode ? "#38BDF8" : "#0277BD", // Thought / inquiry
+      color: isDarkMode ? "#E0BE6A" : "#A85E1E", // Thought / inquiry
     },
     {
       icon: <FaStar />,
       label: t.favouriteWords,
       link: "/favourite-words",
-      color: isDarkMode ? "#C4B5FD" : "#6A1B9A", // Reflection / beauty
+      color: getFlowerColor("lily"), // Reflection / beauty
     },
     {
       icon: <FaQuoteRight />,
       label: t.quotes,
       link: "/quotes",
-      color: isDarkMode ? "#34D399" : "#2E7D32", // Wisdom / growth
+      color: getFlowerColor("leaf"), // Wisdom / growth
     },
     {
       icon: <FaFeatherAlt />,
       label: t.justBecause,
       link: "/just-because",
-      color: isDarkMode ? "#F9A8D4" : "#AD1457", // Grace / poetry
+      color: getFlowerColor("rose"), // Grace / poetry
     },
   ];
 

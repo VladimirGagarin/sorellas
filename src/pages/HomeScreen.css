@@ -1,60 +1,4 @@
-/* HomeScreen.css - Modern Glass Morphism Design with Full Page Coverage */
-
-/* ===== CSS Variables for Glass Effect & Themes ===== */
-:root {
-  /* Light Theme Colors */
-  --bg-color: #f8fafc;
-  --text-primary: #1e293b;
-  --text-secondary: #475569;
-  --text-muted: #64748b;
-  --primary-green: #10b981;
-  --primary-green-rgb: 16, 185, 129;
-  --accent-purple: #8b5cf6;
-  --rose-pink: #ec4899;
-  --border-color: #e2e8f0;
-  --card-bg: #ffffff;
-  --hover-bg: #f1f5f9;
-  
-  /* Glass Effects - Light */
-  --glass-bg: rgba(255, 255, 255, 0.12);
-  --glass-border: rgba(255, 255, 255, 0.18);
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-  --glass-blur: blur(12px);
-  --glass-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
-  --glass-highlight: rgba(255, 255, 255, 0.2);
-  
-  /* Gradients */
-  --gradient-primary: linear-gradient(135deg, var(--primary-green), var(--accent-purple));
-  --gradient-secondary: linear-gradient(135deg, #3b82f6, var(--accent-purple));
-  --gradient-accent: linear-gradient(135deg, var(--rose-pink), var(--accent-purple));
-  --gradient-bg: linear-gradient(135deg, #f0f9ff, #f8fafc);
-}
-
-[data-theme="dark"] {
-  /* Dark Theme Colors */
-  --bg-color: #0f172a;
-  --text-primary: #f1f5f9;
-  --text-secondary: #cbd5e1;
-  --text-muted: #94a3b8;
-  --primary-green: #10b981;
-  --primary-green-rgb: 16, 185, 129;
-  --accent-purple: #a78bfa;
-  --rose-pink: #f472b6;
-  --border-color: #334155;
-  --card-bg: #1e293b;
-  --hover-bg: #2d3748;
-  
-  /* Glass Effects - Dark */
-  --glass-bg: rgba(30, 41, 59, 0.25);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
-  --glass-blur: blur(16px);
-  --glass-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
-  --glass-highlight: rgba(255, 255, 255, 0.1);
-  
-  /* Gradients - Dark */
-  --gradient-bg: linear-gradient(135deg, #0c1a2d, #0f172a);
-}
+/* HomeScreen.css - Warm monastic / candle-light home */
 
 /* ===== Base Styles - Full Page Coverage ===== */
 .home-screen {
@@ -66,6 +10,57 @@
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+}
+
+/* Candle-light background glow layers (was: parallax placeholder) */
+.background-layers {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.layer {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.5;
+}
+
+.layer-1 {
+  width: 60vw;
+  height: 60vw;
+  top: -15%;
+  left: -10%;
+  background: radial-gradient(circle, rgba(var(--primary-green-rgb), 0.45), transparent 70%);
+  animation: candleFloat 18s ease-in-out infinite;
+}
+
+.layer-2 {
+  width: 50vw;
+  height: 50vw;
+  bottom: -12%;
+  right: -8%;
+  background: radial-gradient(circle, rgba(184, 90, 25, 0.32), transparent 70%);
+  animation: candleFloat 22s ease-in-out infinite reverse;
+}
+
+.layer-3 {
+  width: 34vw;
+  height: 34vw;
+  top: 42%;
+  left: 55%;
+  background: radial-gradient(circle, rgba(170, 120, 40, 0.28), transparent 70%);
+  animation: candleFloat 26s ease-in-out infinite;
+}
+
+@keyframes candleFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(4vw, -3vw) scale(1.15); }
 }
 
 /* Animated Background Particles */
@@ -172,6 +167,20 @@
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Warm monastic panels (replaces broken `composes` for section cards) */
+.hero-glass,
+.featured-glass,
+.filter-glass,
+.cta-glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  box-shadow: var(--glass-shadow);
+  position: relative;
+}
+
 .glass-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
@@ -223,22 +232,32 @@
 
 .title-gradient {
   font-size: clamp(3rem, 6vw, 4.5rem);
-  font-weight: 800;
-  background: var(--gradient-primary);
+  font-weight: 700;
+  font-family: var(--font-display);
+  letter-spacing: 0.03em;
+  background: linear-gradient(135deg, #B98F35, #7A5C10);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  line-height: 1.1;
+  line-height: 1.15;
   margin-bottom: 24px;
-  letter-spacing: -0.5px;
+  filter: drop-shadow(0 2px 14px rgba(170, 116, 30, 0.35));
+}
+
+[data-theme="dark"] .title-gradient {
+  background: linear-gradient(135deg, #E8C87A, #B98F35);
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(0 2px 16px rgba(212, 169, 76, 0.45));
 }
 
 .hero-subtitle {
-  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-style: italic;
   color: var(--text-secondary);
   margin-bottom: 40px;
-  max-width: 600px;
-  line-height: 1.6;
+  max-width: 620px;
+  line-height: 1.7;
   font-weight: 400;
 }
 
@@ -670,7 +689,7 @@
 }
 
 .time-section-glass.evening {
-  border-left: 6px solid #8b5cf6;
+  border-left: 6px solid var(--accent-gold);
 }
 
 .time-section-header {

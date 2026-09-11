@@ -1,22 +1,27 @@
-/* FlowerCard.css - Masonry/Pinterest Style */
+/* FlowerCard.css - Illuminated manuscript / parchment cards */
 
 /* Base Card */
 .flower-card {
-  background: var(--bg-secondary);
-  border-radius: 20px;
+  background: var(--card-bg);
+  border-radius: 18px;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 2px solid var(--border-color);
+  border: 1px solid rgba(var(--primary-green-rgb), 0.35);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 252, 240, 0.35),
+    var(--glass-shadow);
   position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
-  box-shadow: 0 6px 20px var(--shadow-color);
 }
 
 .flower-card:hover {
-  box-shadow: 0 15px 40px var(--shadow-color);
+  box-shadow:
+    inset 0 0 0 1px rgba(var(--primary-green-rgb), 0.55),
+    0 18px 45px var(--shadow-color);
   border-color: var(--primary-green);
+  transform: translateY(-6px);
 }
 
 [data-theme="dark"] .flower-card:hover {
@@ -95,12 +100,14 @@
 }
 
 .flower-name {
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
   color: var(--text-primary);
   margin: 0;
   line-height: 1.3;
   flex: 1;
+  letter-spacing: 0.02em;
 }
 
 .flower-time {
@@ -130,10 +137,11 @@
 
 /* Prayer Preview */
 .prayer-preview {
-  background: var(--card-bg);
+  background: var(--glass-bg);
   border-radius: 12px;
   padding: 12px;
   margin-top: 10px;
+  border: 1px solid var(--glass-border);
   border-left: 3px solid var(--primary-green);
 }
 
@@ -142,24 +150,35 @@
 }
 
 .prayer-preview h4 {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: var(--text-muted);
   margin: 0 0 8px 0;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+  font-family: var(--font-display);
 }
 
 .prayer-text {
-  font-size: 0.85rem;
+  font-size: 0.92rem;
   color: var(--text-secondary);
-  line-height: 1.4;
+  line-height: 1.5;
   margin: 0;
   font-style: italic;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* Illuminated drop cap on the very first prayer card (featured) */
+.featured-flower-container .prayer-text::first-letter {
+  font-family: var(--font-display);
+  font-size: 3em;
+  line-height: 0.85;
+  float: left;
+  padding-right: 0.12em;
+  color: var(--primary-green);
 }
 
 /* Action Buttons */
