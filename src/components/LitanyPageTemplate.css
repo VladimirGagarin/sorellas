@@ -156,11 +156,12 @@
 .litany-card {
   background: var(--card-bg);
   border-radius: 24px;
-  overflow: hidden;
+  overflow: visible;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
   border: 1px solid var(--border-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 
 .litany-card:hover {
@@ -178,10 +179,166 @@
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 }
 
+/* ------------------------------------------------------------
+   Invocations menu (top-right trigger + sliding tooltip/modal)
+   ------------------------------------------------------------ */
+.invocation-menu-wrap {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 50;
+}
+
+.invocation-menu-toggle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+.invocation-menu-toggle:hover {
+  color: var(--primary-green);
+  border-color: var(--primary-green);
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(var(--primary-green-rgb), 0.3);
+}
+
+[data-theme="dark"] .invocation-menu-toggle:hover {
+  color: var(--accent-lavender);
+  border-color: var(--accent-lavender);
+}
+
+.invocation-menu {
+  position: absolute;
+  top: 56px;
+  right: 0;
+  width: min(320px, 78vw);
+  max-height: min(480px, 60vh);
+  overflow-y: auto;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  animation: menuSlideIn 0.28s ease forwards;
+  padding: 14px;
+}
+
+.invocation-menu-title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  margin: 0 0 12px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.invocation-menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.invocation-menu-list li {
+  margin: 0 0 6px 0;
+}
+
+.invocation-menu-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: var(--glass-bg);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: var(--font-body);
+}
+
+.invocation-menu-item:hover {
+  background: rgba(var(--primary-green-rgb), 0.1);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+  transform: translateX(4px);
+}
+
+.invocation-menu-item.active {
+  background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+  color: white;
+  border-color: var(--primary-green);
+  box-shadow: 0 4px 14px rgba(var(--primary-green-rgb), 0.3);
+}
+
+[data-theme="dark"] .invocation-menu-item.active {
+  background: linear-gradient(135deg, var(--accent-lavender), var(--primary-green));
+}
+
+.invocation-menu-index {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: var(--bg-secondary);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+}
+
+.invocation-menu-item.active .invocation-menu-index {
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.invocation-menu-name {
+  flex: 1;
+  line-height: 1.3;
+}
+
+.invocation-menu-heart {
+  color: var(--rose-pink);
+  flex-shrink: 0;
+}
+
+@keyframes menuSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 .litany-image-section {
   position: relative;
-  height: 600px;
+  height: 320px;
   overflow: hidden;
+  border-radius: 24px 24px 0 0;
 }
 
 .image-container {
@@ -511,80 +668,6 @@
   font-size: 1.2rem;
 }
 
-.quick-nav {
-  background: var(--glass-bg);
-  border-radius: 18px;
-  padding: 30px;
-  border: 1px solid var(--border-color);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  margin-bottom: 30px;
-}
-
-.quick-nav-title {
-  font-size: 1.2rem;
-  color: var(--text-primary);
-  margin: 0 0 25px 0;
-  text-align: center;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.quick-nav-title::before {
-  content: '⋯';
-  font-size: 1.5rem;
-}
-
-.nav-dots {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.nav-dot {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  border: 2px solid var(--border-color);
-  background: var(--glass-bg);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 0;
-  position: relative;
-}
-
-.nav-dot:hover {
-  transform: scale(1.4);
-  border-color: var(--primary-green);
-  box-shadow: 0 0 10px rgba(var(--primary-green-rgb), 0.3);
-}
-
-.nav-dot.active {
-  background: var(--primary-green);
-  border-color: var(--primary-green);
-  transform: scale(1.4);
-  box-shadow: 0 0 15px rgba(var(--primary-green-rgb), 0.5);
-}
-
-[data-theme="dark"] .nav-dot.active {
-  background: var(--accent-lavender);
-  border-color: var(--accent-lavender);
-  box-shadow: 0 0 15px rgba(var(--primary-green-rgb), 0.8);
-}
-
-.nav-dot.favorite::after {
-  content: '♥';
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  font-size: 0.7rem;
-  color: var(--rose-pink);
-}
-
 .litany-footer {
   margin-top: 40px;
   padding: 25px;
@@ -670,7 +753,7 @@
   }
   
   .litany-image-section {
-    height: 300px;
+    height: 220px;
   }
   
   .litany-text-section {
@@ -707,14 +790,6 @@
     width: 100%;
     justify-content: center;
   }
-  
-  .quick-nav {
-    padding: 20px;
-  }
-  
-  .nav-dots {
-    gap: 10px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -727,11 +802,7 @@
   }
   
   .litany-image-section {
-    height: 250px;
-  }
-  
-  .image-overlay {
-    padding: 20px;
+    height: 180px;
   }
   
   .litany-text-section {
@@ -754,11 +825,6 @@
   .nav-btn {
     padding: 14px;
     font-size: 0.95rem;
-  }
-  
-  .nav-dot {
-    width: 12px;
-    height: 12px;
   }
   
   .footer-content {
@@ -786,7 +852,6 @@
 .litany-header,
 .litany-card,
 .litany-navigation,
-.quick-nav,
 .litany-footer {
   animation: fadeIn 0.6s ease forwards;
 }
@@ -799,12 +864,8 @@
   animation-delay: 0.2s;
 }
 
-.quick-nav {
-  animation-delay: 0.3s;
-}
-
 .litany-footer {
-  animation-delay: 0.4s;
+  animation-delay: 0.3s;
 }
 
 /* Gradient text fix for Safari */

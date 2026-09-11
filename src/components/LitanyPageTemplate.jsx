@@ -5,6 +5,7 @@ import {
   FaPray,
   FaChurch,
   FaHeart,
+  FaList,
   FaArrowLeft,
   FaArrowRight,
   FaShareAlt,
@@ -15,12 +16,13 @@ import {
 import { useLanguage } from "../contexts/useLanguage";
 import "./LitanyPageTemplate.css";
 
-export default function LitanyPageTemplate({ title, litany, theme = "dark" }) {
+export default function LitanyPageTemplate({ title, litany, theme = "dark", className = "", icon }) {
   const { language } = useLanguage();
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
   const [favorites, setFavorites] = useState(new Set());
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Get current item ID from URL or default to first
   const itemIdFromUrl = searchParams.get("item");
@@ -56,6 +58,7 @@ export default function LitanyPageTemplate({ title, litany, theme = "dark" }) {
 
   const goToItem = (index) => {
     setCurrentIndex(index);
+    setIsMenuOpen(false);
   };
 
   const toggleFavorite = (index) => {
@@ -107,11 +110,11 @@ export default function LitanyPageTemplate({ title, litany, theme = "dark" }) {
   };
 
   return (
-    <div className={`litany-page ${theme}`}>
+    <div className={`litany-page ${theme} ${className}`}>
       {/* Header */}
       <div className="litany-header">
         <div className="header-content">
-          <FaChurch className="header-icon" />
+          {icon || <FaChurch className="header-icon" />}
           <div className="header-text">
             <h1 className="litany-title">{title}</h1>
             <p className="litany-subtitle">
@@ -169,6 +172,52 @@ export default function LitanyPageTemplate({ title, litany, theme = "dark" }) {
       {/* Main Content */}
       <div className="litany-content">
         <div className="litany-card" key={currentItem.id}>
+          {/* Invocations menu (top-right) */}
+          <div
+            className="invocation-menu-wrap"
+            onMouseEnter={() => setIsMenuOpen(true)}
+            onMouseLeave={() => setIsMenuOpen(false)}
+          >
+            <button
+              className="invocation-menu-toggle"
+              onClick={() => setIsMenuOpen((open) => !open)}
+              aria-label={
+                language === "en"
+                  ? "Show all invocations"
+                  : "Mostra tutte le invocazioni"
+              }
+              aria-expanded={isMenuOpen}
+            >
+              <FaList />
+            </button>
+            {isMenuOpen && (
+              <div className="invocation-menu">
+                <h3 className="invocation-menu-title">
+                  {language === "en"
+                    ? "All Invocations"
+                    : "Tutte le Invocazioni"}
+                </h3>
+                <ul className="invocation-menu-list">
+                  {litany.map((item, index) => (
+                    <li key={item.id}>
+                      <button
+                        className={`invocation-menu-item ${index === currentIndex ? "active" : ""} ${favorites.has(index) ? "favorite" : ""}`}
+                        onClick={() => goToItem(index)}
+                      >
+                        <span className="invocation-menu-index">{index + 1}</span>
+                        <span className="invocation-menu-name">
+                          {item[`title_${language}`]}
+                        </span>
+                        {favorites.has(index) && (
+                          <FaHeart className="invocation-menu-heart" />
+                        )}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
           {/* Image Section */}
           <div className="litany-image-section">
             <div className="image-container">
@@ -180,14 +229,6 @@ export default function LitanyPageTemplate({ title, litany, theme = "dark" }) {
                   e.target.src = `https://via.placeholder.com/400x300?text=${encodeURIComponent(currentItem[`title_${language}`])}`;
                 }}
               />
-            </div>
-            <div className="image-overlay">
-              <div className="overlay-text">
-                <FaPray className="pray-icon" />
-                <span className="overlay-title">
-                  {language === "en" ? "Invocation" : "Invocazione"}
-                </span>
-              </div>
             </div>
           </div>
 
@@ -306,39 +347,6 @@ export default function LitanyPageTemplate({ title, litany, theme = "dark" }) {
             <span>{language === "en" ? "Next" : "Successivo"}</span>
             <FaArrowRight />
           </button>
-        </div>
-
-        {/* Quick Navigation */}
-        <div className="quick-nav">
-          <h3 className="quick-nav-title">
-            {language === "en" ? "Quick Navigation" : "Navigazione Rapida"}
-          </h3>
-          <div className="nav-dots">
-            {litany.map((item, index) => (
-              <button
-                key={item.id}
-                className={`nav-dot ${index === currentIndex ? "active" : ""} ${favorites.has(index) ? "favorite" : ""}`}
-                onClick={() => goToItem(index)}
-                aria-label={`Go to ${item[`title_${language}`]}`}
-                title={`${item[`title_${language}`]} (${language === "en" ? "Click to view" : "Clicca per vedere"})`}
-              />
-            ))}
-          </div>
-          <div className="item-links">
-            {litany.map((item, index) => (
-              <a
-                key={item.id}
-                href={`?item=${item.id}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  goToItem(index);
-                }}
-                className={`item-link ${index === currentIndex ? "active" : ""}`}
-              >
-                {item[`title_${language}`]}
-              </a>
-            ))}
-          </div>
         </div>
       </div>
 

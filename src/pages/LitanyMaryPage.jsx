@@ -1,4 +1,5 @@
 // LitanyMaryPage.jsx
+import { FaCrown } from "react-icons/fa";
 import { getLitany } from "../components/Utils";
 import { useLanguage } from "../contexts/useLanguage";
 import { useTheme } from "../contexts/theme";
@@ -23,6 +24,8 @@ export default function LitanyMaryPage() {
         }
         litany={litanyData}
         theme={isDarkMode ? "light" : "dark"}
+        className="litany-mary"
+        icon={<FaCrown className="header-icon" />}
       />
     </div>
   );

@@ -1,558 +1,522 @@
-/* LitanyMaryPage.css */
+/* LitanyMaryPage.css — Marian "adorable" overrides.
+   Scoped under .litany-mary (injected via LitanyPageTemplate className prop). */
 
-/* Page container */
+/* ------------------------------------------------------------
+   Page shell — warm rose-tinted parchment with delicate florals
+   ------------------------------------------------------------ */
 .litany-mary-page {
-    min-height: 100vh;
-    background: linear-gradient(135deg, var(--bg-color) 0%, var(--bg-secondary) 100%);
-    padding-top: 70px; /* Space for fixed header */
-    padding-bottom: 40px;
-    position: relative;
-    overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  padding-top: 70px;
+  padding-bottom: 40px;
+  overflow-x: hidden;
+  background: linear-gradient(
+    175deg,
+    var(--bg-color) 0%,
+    var(--bg-secondary) 55%,
+    #F3E7D6 100%
+  );
 }
 
-/* Marian-themed background pattern */
 .litany-mary-page::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23C9A24B' fill-opacity='0.06' fill-rule='evenodd'/%3E%3C/svg%3E");
-    opacity: 0.3;
-    pointer-events: none;
-    z-index: 0;
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 40 40'%3E%3Cg fill='%23C9A24B' fill-opacity='0.16'%3E%3Ccircle cx='20' cy='12' r='4.5'/%3E%3Ccircle cx='28' cy='20' r='4.5'/%3E%3Ccircle cx='20' cy='28' r='4.5'/%3E%3Ccircle cx='12' cy='20' r='4.5'/%3E%3C/g%3E%3Ccircle cx='20' cy='20' r='2.6' fill='%238C6D1F' fill-opacity='0.4'/%3E%3C/svg%3E");
+  opacity: 0.5;
 }
 
-/* Overlay pattern for light theme */
-[data-theme="light"] .litany-mary-page::before {
-    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%238C6D1F' fill-opacity='0.06' fill-rule='evenodd'/%3E%3C/svg%3E");
+/* The shared template wrapper sits above the floral ground */
+.litany-page.litany-mary {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(
+    175deg,
+    transparent 0%,
+    rgba(245, 238, 220, 0) 60%,
+    rgba(255, 255, 255, 0.35) 100%
+  );
 }
 
-/* Marian-themed decorative elements */
-.marian-decoration {
-    position: fixed;
-    z-index: 1;
-    opacity: 0.1;
-    pointer-events: none;
+/* ------------------------------------------------------------
+   Header — rose-and-gold banner, Queen of Heaven
+   ------------------------------------------------------------ */
+.litany-mary .litany-header {
+  background: linear-gradient(
+    135deg,
+    #C97A52 0%,
+    #A85B33 38%,
+    #8C4A26 62%,
+    #7A5C10 100%
+  );
+  border: 1px solid rgba(255, 236, 196, 0.35);
+  box-shadow:
+    0 12px 40px rgba(120, 55, 25, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  border-radius: 28px;
 }
 
-.decoration-rose-1 {
-    top: 10%;
-    left: 5%;
-    font-size: 8rem;
-    color: var(--rose-pink);
-    transform: rotate(15deg);
+/* faint gilded floral sheen across the banner */
+.litany-mary .litany-header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 40 40'%3E%3Cg fill='%23FFE3B8' fill-opacity='0.12'%3E%3Ccircle cx='20' cy='12' r='4.5'/%3E%3Ccircle cx='28' cy='20' r='4.5'/%3E%3Ccircle cx='20' cy='28' r='4.5'/%3E%3Ccircle cx='12' cy='20' r='4.5'/%3E%3C/g%3E%3Ccircle cx='20' cy='20' r='2.6' fill='%23FFE3B8' fill-opacity='0.35'/%3E%3C/svg%3E");
 }
 
-.decoration-rose-2 {
-    bottom: 10%;
-    right: 5%;
-    font-size: 6rem;
-    color: var(--accent-purple);
-    transform: rotate(-15deg);
+.litany-mary .header-icon {
+  color: #FFEFCF;
+  background: rgba(255, 239, 207, 0.18);
+  border: 2px solid rgba(255, 239, 207, 0.5);
+  box-shadow:
+    0 0 0 6px rgba(255, 239, 207, 0.08),
+    0 4px 16px rgba(80, 30, 10, 0.35);
+  border-radius: 50%;
+  font-size: 2.6rem;
+  padding: 14px;
 }
 
-.decoration-lily {
-    top: 50%;
-    left: 3%;
-    font-size: 5rem;
-    color: var(--primary-green);
-    transform: rotate(30deg);
+.litany-mary .litany-title {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background: linear-gradient(135deg, #FFF6DC 0%, #FFE3A8 55%, #FFD98A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
 }
 
-/* Main content container */
-.litany-content-container {
-    position: relative;
-    z-index: 2;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+.litany-mary .litany-subtitle {
+  font-style: italic;
+  color: rgba(255, 241, 216, 0.92);
 }
 
-/* Marian banner */
-.marian-banner {
-    text-align: center;
-    margin-bottom: 30px;
-    padding: 20px;
-    background: var(--glass-bg);
-    backdrop-filter: var(--glass-blur);
-    -webkit-backdrop-filter: var(--glass-blur);
-    border-radius: 20px;
-    border: 1px solid var(--border-color);
-    box-shadow: var(--glass-shadow);
+/* direct-link in header */
+.litany-mary .direct-link {
+  color: #FFE9BC;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
 }
 
-.banner-icon {
-    font-size: 2.5rem;
-    color: var(--accent-purple);
-    margin-bottom: 15px;
-    animation: gentleFloat 6s ease-in-out infinite;
+/* Stats — warm glass gems */
+.litany-mary .litany-stats {
+  background: rgba(255, 247, 226, 0.16);
+  border: 1px solid rgba(255, 236, 196, 0.4);
+  border-radius: 18px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
-@keyframes gentleFloat {
-    0%, 100% { transform: translateY(0) rotate(0); }
-    50% { transform: translateY(-10px) rotate(5deg); }
+.litany-mary .stat-value {
+  font-family: var(--font-display);
+  background: linear-gradient(135deg, #FFEFCF, #FFD98A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
 }
 
-.banner-title {
-    font-size: 1.8rem;
-    color: var(--text-primary);
-    margin-bottom: 10px;
-    font-weight: 700;
-    font-family: var(--font-display);
-    letter-spacing: 0.03em;
+.litany-mary .stat-label {
+  letter-spacing: 1.5px;
+  font-size: 0.82rem;
 }
 
-.banner-subtitle {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
+/* ------------------------------------------------------------
+   Invocation card — soft ivory, rosy gilt
+   ------------------------------------------------------------ */
+.litany-mary .litany-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 28px;
+  box-shadow:
+    0 18px 45px var(--shadow-color),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  overflow: visible;
 }
 
-/* Litany info card */
-.litany-info-card {
-    background: var(--card-bg);
-    border-radius: 20px;
-    padding: 25px;
-    margin-bottom: 30px;
-    box-shadow: var(--glass-shadow);
-    border: 1px solid var(--border-color);
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    transition: transform 0.3s ease;
+.litany-mary .litany-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 26px 55px var(--shadow-color),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
-.litany-info-card:hover {
-    transform: translateY(-5px);
+.litany-mary .litany-image-section {
+  height: 340px;
+  border-radius: 28px 28px 0 0;
 }
 
-.info-icon {
-    font-size: 3rem;
-    color: var(--accent-purple);
-    flex-shrink: 0;
+.litany-mary .litany-image {
+  filter: brightness(0.96) saturate(1.05);
 }
 
-.info-content {
-    flex: 1;
+.litany-mary .litany-card:hover .litany-image {
+  transform: scale(1.04);
 }
 
-.info-title {
-    font-size: 1.3rem;
-    color: var(--text-primary);
-    margin-bottom: 10px;
-    font-weight: 600;
+/* ------------------------------------------------------------
+   Invocation menu — Marian rose-gold tooltip
+   ------------------------------------------------------------ */
+.litany-mary .invocation-menu-toggle {
+  background: rgba(255, 245, 224, 0.92);
+  border: 1px solid rgba(201, 162, 75, 0.45);
+  color: #8C4A26;
+  box-shadow: 0 4px 14px rgba(120, 55, 25, 0.28);
 }
 
-.info-description {
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin-bottom: 15px;
+.litany-mary .invocation-menu-toggle:hover {
+  color: #6E2A10;
+  border-color: var(--rose-pink);
+  background: rgba(168, 75, 42, 0.12);
+  box-shadow: 0 6px 20px rgba(168, 75, 42, 0.35);
 }
 
-.info-stats {
-    display: flex;
-    gap: 25px;
+.litany-mary .invocation-menu {
+  background: rgba(251, 246, 234, 0.97);
+  border: 1px solid rgba(201, 162, 75, 0.5);
+  border-radius: 22px;
+  box-shadow: 0 24px 55px rgba(100, 50, 20, 0.3);
 }
 
-.info-stat {
-    text-align: center;
+.litany-mary .invocation-menu-title {
+  color: #A07040;
 }
 
-.stat-label {
-    display: block;
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
+.litany-mary .invocation-menu-item {
+  border-radius: 14px;
 }
 
-.stat-value {
-    display: block;
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--primary-green);
+.litany-mary .invocation-menu-item:hover {
+  background: rgba(168, 75, 42, 0.08);
+  color: var(--text-primary);
 }
 
-/* Marian prayer cards grid */
-.prayer-cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
-    margin-bottom: 40px;
+.litany-mary .invocation-menu-item.active {
+  background: linear-gradient(135deg, #C97A52, #8C4A26);
+  color: #FFF3DC;
+  border-color: #8C4A26;
+  box-shadow: 0 5px 16px rgba(168, 75, 42, 0.38);
 }
 
-.prayer-card {
-    background: var(--card-bg);
-    border-radius: 18px;
-    padding: 25px;
-    box-shadow: var(--glass-shadow);
-    border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
+.litany-mary .invocation-menu-index {
+  background: #F5EBD4;
+  color: #8C4A26;
+  border-color: rgba(201, 162, 75, 0.45);
 }
 
-.prayer-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--accent-purple), var(--rose-pink));
-    opacity: 0;
-    transition: opacity 0.3s ease;
+.litany-mary .invocation-menu-item.active .invocation-menu-index {
+  background: rgba(255, 239, 207, 0.25);
+  color: #FFF3DC;
+  border-color: rgba(255, 239, 207, 0.45);
 }
 
-.prayer-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+.litany-mary .invocation-menu-heart {
+  color: var(--rose-pink);
 }
 
-.prayer-card:hover::before {
-    opacity: 1;
+[data-theme="dark"] .litany-mary .invocation-menu-toggle {
+  background: rgba(255, 239, 207, 0.12);
+  border-color: rgba(224, 190, 106, 0.45);
+  color: var(--accent-lavender);
 }
 
-.prayer-card-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
+[data-theme="dark"] .litany-mary .invocation-menu-toggle:hover {
+  background: rgba(224, 190, 106, 0.15);
+  border-color: var(--accent-lavender);
 }
 
-.prayer-icon {
-    font-size: 1.8rem;
-    color: var(--accent-purple);
-    background: rgba(var(--primary-green-rgb), 0.1);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+[data-theme="dark"] .litany-mary .invocation-menu {
+  background: rgba(42, 33, 24, 0.97);
+  border-color: rgba(224, 190, 106, 0.4);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.55);
 }
 
-.prayer-title {
-    font-size: 1.2rem;
-    color: var(--text-primary);
-    margin: 0;
-    font-weight: 600;
+[data-theme="dark"] .litany-mary .invocation-menu-title {
+  color: var(--text-muted);
 }
 
-.prayer-text {
-    color: var(--text-secondary);
-    line-height: 1.7;
-    margin-bottom: 20px;
-    font-style: italic;
-    padding: 0 10px;
+[data-theme="dark"] .litany-mary .invocation-menu-item:hover {
+  background: rgba(224, 190, 106, 0.1);
+  color: var(--text-primary);
 }
 
-.prayer-response {
-    background: var(--glass-bg);
-    border-radius: 12px;
-    padding: 15px;
-    text-align: center;
-    border: 1px solid var(--border-color);
+[data-theme="dark"] .litany-mary .invocation-menu-item.active {
+  background: linear-gradient(135deg, #E0BE6A, #8A5C10);
+  color: #1C140E;
+  border-color: #E0BE6A;
 }
 
-.response-label {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
+[data-theme="dark"] .litany-mary .invocation-menu-index {
+  background: #33291B;
+  color: var(--text-muted);
+  border-color: #40301E;
 }
 
-.response-text {
-    font-size: 1.3rem;
-    color: var(--text-primary);
-    font-weight: 700;
-    font-style: italic;
+/* Text section */
+.litany-mary .litany-text-section {
+  padding: 38px;
+  background: linear-gradient(180deg, var(--card-bg) 0%, #FBF3E2 100%);
 }
 
-/* Special Marian prayers section */
-.special-prayers {
-    background: var(--gradient-primary);
-    border-radius: 24px;
-    padding: 40px 30px;
-    margin-bottom: 40px;
-    color: white;
-    position: relative;
-    overflow: hidden;
+.litany-mary .invocation-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.35;
+  background: linear-gradient(135deg, #8C4A26 0%, #A85B33 45%, #8C6D1F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.special-prayers::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+[data-theme="dark"] .litany-mary .invocation-title {
+  background: linear-gradient(135deg, #F0B48A 0%, #D9734A 50%, #E0BE6A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.special-header {
-    text-align: center;
-    margin-bottom: 30px;
-    position: relative;
-    z-index: 1;
+/* Favorite (rose) + share pill buttons */
+.litany-mary .favorite-btn,
+.litany-mary .share-link-btn {
+  background: var(--glass-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  color: var(--text-muted);
+  transition: all 0.3s ease;
 }
 
-.special-icon {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    opacity: 0.9;
+.litany-mary .favorite-btn:hover {
+  color: var(--rose-pink);
+  border-color: var(--rose-pink);
+  transform: scale(1.12);
+  box-shadow: 0 6px 18px rgba(168, 75, 42, 0.35);
 }
 
-.special-header h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    font-weight: 800;
+.litany-mary .favorite-btn:hover .filled {
+  color: var(--rose-pink);
 }
 
-.special-header p {
-    font-size: 1.1rem;
-    opacity: 0.9;
-    max-width: 600px;
-    margin: 0 auto;
+.litany-mary .share-link-btn:hover {
+  color: var(--primary-green);
+  border-color: var(--primary-green);
+  transform: scale(1.12);
+  box-shadow: 0 6px 18px rgba(var(--primary-green-rgb), 0.3);
 }
 
-.prayer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    position: relative;
-    z-index: 1;
+/* ------------------------------------------------------------
+   Response — parchment panel, rose-gilt italic response
+   ------------------------------------------------------------ */
+.litany-mary .response-section {
+  background: linear-gradient(180deg, #FDF6E8 0%, #F7EBD2 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
-.prayer-item {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 16px;
-    padding: 25px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease;
+.litany-mary .response-label {
+  font-family: var(--font-display);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: #A07040;
 }
 
-.prayer-item:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.15);
+[data-theme="dark"] .litany-mary .response-label {
+  color: var(--text-muted);
 }
 
-.prayer-item-title {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.litany-mary .response-text {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-weight: 500;
+  background: linear-gradient(135deg, var(--rose-pink) 0%, var(--primary-green) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.prayer-item-text {
-    font-size: 1rem;
-    opacity: 0.9;
-    line-height: 1.6;
-    margin-bottom: 0;
+[data-theme="dark"] .litany-mary .response-text {
+  background: linear-gradient(135deg, #F0A678 0%, #E0BE6A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-/* Footer */
-.litany-footer {
-    text-align: center;
-    padding: 30px;
-    background: var(--glass-bg);
-    backdrop-filter: var(--glass-blur);
-    -webkit-backdrop-filter: var(--glass-blur);
-    border-radius: 20px;
-    border: 1px solid var(--border-color);
-    margin-top: 40px;
+/* ------------------------------------------------------------
+   Action buttons — soft rose & gold pills
+   ------------------------------------------------------------ */
+.litany-mary .action-btn {
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: var(--glass-bg);
+  color: var(--text-secondary);
+  font-weight: 600;
+  padding: 15px 20px;
+  transition: all 0.3s ease;
 }
 
-.footer-icon {
-    font-size: 2rem;
-    color: var(--accent-purple);
-    margin-bottom: 15px;
+.litany-mary .audio-btn:hover {
+  border-color: var(--rose-pink);
+  color: var(--rose-pink);
+  background: rgba(168, 75, 42, 0.08);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(168, 75, 42, 0.22);
 }
 
-.footer-text {
-    font-size: 1.1rem;
-    color: var(--text-primary);
-    margin-bottom: 15px;
-    font-style: italic;
+.litany-mary .share-btn:hover {
+  border-color: var(--primary-green);
+  color: var(--primary-green);
+  background: rgba(var(--primary-green-rgb), 0.08);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(var(--primary-green-rgb), 0.22);
 }
 
-.footer-quote {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    font-style: italic;
-    max-width: 500px;
-    margin: 0 auto;
-    line-height: 1.6;
+/* ------------------------------------------------------------
+   Navigation bar + progress (rosary-bead feel)
+   ------------------------------------------------------------ */
+.litany-mary .litany-navigation {
+  border-radius: 999px;
+  background: var(--glass-bg);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 14px 20px;
 }
 
-/* Dark theme adjustments */
-[data-theme="dark"] .litany-mary-page {
-    background: linear-gradient(135deg, var(--bg-color) 0%, #17100A 100%);
+.litany-mary .nav-btn {
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: linear-gradient(180deg, var(--card-bg) 0%, #F5EBD4 100%);
+  color: var(--text-primary);
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
-[data-theme="dark"] .prayer-card,
-[data-theme="dark"] .litany-info-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
+[data-theme="dark"] .litany-mary .nav-btn {
+  background: linear-gradient(180deg, var(--card-bg) 0%, #33291B 100%);
 }
 
-[data-theme="dark"] .prayer-card:hover {
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+.litany-mary .nav-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--rose-pink);
+  color: var(--rose-pink);
+  box-shadow: 0 8px 22px rgba(168, 75, 42, 0.22);
 }
 
-[data-theme="dark"] .special-prayers {
-    background: linear-gradient(135deg, var(--primary-purple), var(--mystic-indigo));
+.litany-mary .progress-bar {
+  height: 10px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
 }
 
-/* Responsive Design */
+.litany-mary .progress-fill {
+  background: linear-gradient(90deg, #C97A52 0%, #A85B33 50%, #8C6D1F 100%);
+  border-radius: 999px;
+  box-shadow: 0 0 12px rgba(200, 122, 82, 0.45);
+}
+
+[data-theme="dark"] .litany-mary .progress-fill {
+  box-shadow: 0 0 14px rgba(224, 190, 106, 0.5);
+}
+
+.litany-mary .progress-text {
+  font-size: 0.95rem;
+}
+
+/* ------------------------------------------------------------
+   Footer — rose send-off
+   ------------------------------------------------------------ */
+.litany-mary .litany-footer {
+  background: linear-gradient(180deg, #F9EFDD 0%, #F2E4C8 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+[data-theme="dark"] .litany-mary .litany-footer {
+  background: linear-gradient(180deg, var(--card-bg) 0%, #2A2118 100%);
+}
+
+.litany-mary .footer-icon {
+  color: var(--rose-pink);
+  background: rgba(168, 75, 42, 0.1);
+  border: 1px solid rgba(168, 75, 42, 0.3);
+  border-radius: 50%;
+  padding: 14px;
+  font-size: 2.4rem;
+  box-shadow: 0 6px 18px rgba(168, 75, 42, 0.18);
+}
+
+[data-theme="dark"] .litany-mary .footer-icon {
+  color: var(--accent-lavender);
+  background: rgba(224, 190, 106, 0.08);
+  border: 1px solid rgba(224, 190, 106, 0.3);
+}
+
+.litany-mary .footer-text {
+  font-style: italic;
+  color: var(--text-primary);
+}
+
+.litany-mary .share-instruction {
+  color: var(--text-muted);
+  margin-top: 14px;
+}
+
+/* ------------------------------------------------------------
+   Gentle sparkle near the title (adorable touch)
+   ------------------------------------------------------------ */
+.litany-mary .litany-header::before {
+  background: radial-gradient(120% 120% at 50% 0%, rgba(255, 239, 207, 0.22) 0%, transparent 60%);
+}
+
+/* ------------------------------------------------------------
+   Responsive
+   ------------------------------------------------------------ */
 @media (max-width: 768px) {
-    .litany-mary-page {
-        padding-top: 65px;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-    
-    .litany-info-card {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
-    
-    .info-icon {
-        margin-bottom: 15px;
-    }
-    
-    .info-stats {
-        justify-content: center;
-        gap: 20px;
-    }
-    
-    .prayer-cards-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .prayer-card {
-        padding: 20px;
-    }
-    
-    .special-prayers {
-        padding: 30px 20px;
-    }
-    
-    .special-header h2 {
-        font-size: 1.7rem;
-    }
-    
-    .prayer-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .banner-title {
-        font-size: 1.5rem;
-    }
-    
-    .banner-icon {
-        font-size: 2rem;
-    }
+  .litany-mary-page {
+    padding-top: 64px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .litany-mary .litany-image-section {
+    height: 260px;
+  }
+
+  .litany-mary .litany-text-section {
+    padding: 26px 22px;
+  }
+
+  .litany-mary .litany-navigation {
+    border-radius: 24px;
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px;
+  }
 }
 
 @media (max-width: 480px) {
-    .litany-mary-page {
-        padding-top: 60px;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    
-    .litany-info-card {
-        padding: 15px;
-    }
-    
-    .info-title {
-        font-size: 1.1rem;
-    }
-    
-    .info-description {
-        font-size: 0.95rem;
-    }
-    
-    .info-stats {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .prayer-card-header {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-    
-    .special-header h2 {
-        font-size: 1.5rem;
-    }
-    
-    .special-header p {
-        font-size: 1rem;
-    }
-    
-    .footer-text {
-        font-size: 1rem;
-    }
-}
+  .litany-mary-page {
+    padding-top: 58px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 
-/* Animation for cards */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+  .litany-mary .litany-image-section {
+    height: 200px;
+  }
 
-.litany-info-card,
-.prayer-card,
-.special-prayers {
-    animation: fadeInUp 0.6s ease forwards;
-}
+  .litany-mary .litany-text-section {
+    padding: 22px 16px;
+  }
 
-/* Staggered animations */
-.prayer-card:nth-child(1) { animation-delay: 0.1s; }
-.prayer-card:nth-child(2) { animation-delay: 0.2s; }
-.prayer-card:nth-child(3) { animation-delay: 0.3s; }
-.prayer-card:nth-child(4) { animation-delay: 0.4s; }
-.prayer-card:nth-child(5) { animation-delay: 0.5s; }
-.prayer-card:nth-child(6) { animation-delay: 0.6s; }
-
-/* Marian-themed decorative elements animation */
-@keyframes gentleSway {
-    0%, 100% { transform: rotate(0deg); }
-    25% { transform: rotate(5deg); }
-    75% { transform: rotate(-5deg); }
-}
-
-.decoration-rose-1,
-.decoration-rose-2,
-.decoration-lily {
-    animation: gentleSway 20s ease-in-out infinite;
-}
-
-.decoration-rose-2 {
-    animation-delay: 5s;
-}
-
-.decoration-lily {
-    animation-delay: 10s;
+  .litany-mary .header-icon {
+    font-size: 2rem;
+    padding: 12px;
+  }
 }
