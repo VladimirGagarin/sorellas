@@ -1,21 +1,45 @@
 // pages/QuotesPage.jsx
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import Header from "../components/Header.jsx";
 import { useLanguage } from "../contexts/useLanguage.js";
 import { getQuotes, resolvePrayerPhoto } from "../components/Utils.js";
 import {
+  FaAnchor,
   FaArrowLeft,
   FaArrowRight,
+  FaBookOpen,
+  FaChurch,
+  FaCompass,
+  FaCross,
+  FaDonate,
+  FaDove,
   FaFeatherAlt,
-  FaList,
+  FaFire,
+  FaGem,
+  FaHandHoldingHeart,
+  FaHandshake,
+  FaHandsHelping,
+  FaHeart,
+  FaHeartbeat,
+  FaHourglassHalf,
+  FaLeaf,
   FaLink,
+  FaList,
+  FaMountain,
+  FaPray,
+  FaPrayingHands,
   FaQuoteLeft,
   FaQuoteRight,
   FaRandom,
+  FaSeedling,
+  FaSmile,
+  FaSpa,
+  FaStar,
+  FaSun,
+  FaTimes,
   FaUserAlt,
   FaVolumeUp,
-  FaTimes,
 } from "react-icons/fa";
 import "./QuotesPage.css";
 
@@ -38,9 +62,15 @@ const CATEGORY_LABELS = {
     it: "Timor di Dio",
   },
   Trust: { en: "Trust", it: "Fiducia" },
-  "Prayer and Meditation": { en: "Prayer & Meditation", it: "Preghiera e Meditazione" },
+  "Prayer and Meditation": {
+    en: "Prayer & Meditation",
+    it: "Preghiera e Meditazione",
+  },
   Compassion: { en: "Compassion", it: "Compassione" },
-  "Hope and Perseverance": { en: "Hope & Perseverance", it: "Speranza e Perseveranza" },
+  "Hope and Perseverance": {
+    en: "Hope & Perseverance",
+    it: "Speranza e Perseveranza",
+  },
   Charity: { en: "Charity", it: "Carità" },
   Forgiveness: { en: "Forgiveness", it: "Perdono" },
   Wisdom: { en: "Wisdom", it: "Saggezza" },
@@ -49,6 +79,38 @@ const CATEGORY_LABELS = {
   Gratitude: { en: "Gratitude", it: "Gratitudine" },
   Gratittude: { en: "Gratitude", it: "Gratitudine" },
   Latin: { en: "Latin", it: "Latino" },
+};
+
+// Normalize the mis-spelled "Gratittude" category into "Gratitude".
+const normalizeCategory = (cat) => (cat === "Gratittude" ? "Gratitude" : cat);
+
+const THEME_ICONS = {
+  Love: FaHeart,
+  Joy: FaSun,
+  Peace: FaDove,
+  Patience: FaHourglassHalf,
+  Kindness: FaHandHoldingHeart,
+  Goodness: FaStar,
+  Faithfulness: FaAnchor,
+  Gentleness: FaFeatherAlt,
+  "Self-control": FaGem,
+  Understanding: FaBookOpen,
+  "Counsel (Right Judgment)": FaCompass,
+  "Fortitude (Courage)": FaFire,
+  "Piety (Reverence)": FaPrayingHands,
+  "Fear of the Lord (Wonder and Awe)": FaCross,
+  Trust: FaHandshake,
+  "Prayer and Meditation": FaPray,
+  Compassion: FaHandsHelping,
+  "Hope and Perseverance": FaMountain,
+  Charity: FaDonate,
+  Forgiveness: FaHeartbeat,
+  Wisdom: FaSeedling,
+  "Spiritual Growth": FaSpa,
+  Humility: FaLeaf,
+  Gratitude: FaSmile,
+  Gratittude: FaSmile,
+  Latin: FaChurch,
 };
 
 function getInitials(name) {
@@ -61,66 +123,107 @@ function getInitials(name) {
 export default function QuotesPage() {
   const { language } = useLanguage();
   const [searchParams, setSearchParams] = useSearchParams();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
+  const [photoUrl, setPhotoUrl] = useState(undefined);
+  const activeItemRef = useRef(null);
 
   const quotes = useMemo(
     () => getQuotes().map((q, i) => ({ ...q, _id: i })),
     []
   );
 
-  const categories = useMemo(() => {
-    const seen = new Set();
-    return quotes
-      .map((q) => q.category)
-      .filter((c) => {
-        if (seen.has(c)) return false;
-        seen.add(c);
-        return true;
-      });
-  }, [quotes]);
-
-  const groupedQuotes = useMemo(() => {
+  // Group quotes by normalized category, preserving first-seen order.
+  const themes = useMemo(() => {
+    const order = [];
     const groups = {};
+    const labels = {};
     quotes.forEach((q) => {
-      (groups[q.category] = groups[q.category] || []).push(q);
+      const key = normalizeCategory(q.category);
+      if (!groups[key]) {
+        groups[key] = [];
+        order.push(key);
+        labels[key] = CATEGORY_LABELS[q.category] || CATEGORY_LABELS[key] || {
+          en: key,
+          it: key,
+        };
+      }
+      groups[key].push(q);
     });
-    return groups;
+    return order.map((key) => ({
+      key,
+      label: labels[key],
+      count: groups[key].length,
+      quotes: groups[key],
+    }));
   }, [quotes]);
 
-  const itemIdFromUrl = searchParams.get("item");
-  const initialIndex = itemIdFromUrl
-    ? quotes.findIndex((q) => q._id === Number(itemIdFromUrl))
-    : Math.floor(Math.random() * quotes.length);
+  const themeParam = searchParams.get("theme");
+  const itemParam = Number(searchParams.get("item"));
 
-  const [currentIndex, setCurrentIndex] = useState(
-    initialIndex >= 0 ? initialIndex : 0
-  );
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [copied, setCopied] = useState(false);
-  const [photoUrl, setPhotoUrl] = useState(undefined);
-  const activeItemRef = useRef(null);
+  const activeTheme = themeParam
+    ? themes.find((t) => t.key === themeParam)
+    : null;
+  const themeQuotes = activeTheme ? activeTheme.quotes : [];
 
-  const currentQuote = quotes[currentIndex];
+  let currentIndex = -1;
+  if (activeTheme && themeQuotes.length) {
+    const idx = themeQuotes.findIndex((q) => q._id === itemParam);
+    currentIndex = idx >= 0 ? idx : 0;
+  }
+  const currentQuote = activeTheme ? themeQuotes[currentIndex] : null;
 
-  const nextQuote = () => setCurrentIndex((prev) => (prev + 1) % quotes.length);
-  const prevQuote = () =>
-    setCurrentIndex((prev) => (prev - 1 + quotes.length) % quotes.length);
-  const goToQuote = (idx) => {
-    setCurrentIndex(idx);
-    setIsMenuOpen(false);
+  const t = {
+    eyebrow: language === "en" ? "Sacred Words" : "Parole Sacre",
+    title: language === "en" ? "Garden of Quotes" : "Giardino delle Citazioni",
+    subtitle:
+      language === "en"
+        ? "Choose a theme, then wander its blossoms one by one."
+        : "Scegli un tema, poi vagabonda tra i suoi fiori uno a uno.",
+    themesTitle: language === "en" ? "Themes of the Garden" : "Temi del Giardino",
+    themesHint: language === "en" ? "Choose a theme" : "Scegli un tema",
+    backToThemes:
+      language === "en" ? "All Themes" : "Tutti i Temi",
+    allQuotes: language === "en" ? "Quotes in this theme" : "Citazioni in questo tema",
+    current: language === "en" ? "Current" : "Corrente",
+    total: language === "en" ? "Total" : "Totale",
+    themesCount: language === "en" ? "themes" : "temi",
+    copyLink: language === "en" ? "Copy Link" : "Copia Link",
+    copied: language === "en" ? "Link Copied" : "Link Copiato",
+    listen: language === "en" ? "Listen" : "Ascolta",
+    surprise: language === "en" ? "Surprise Me" : "Sorpresa",
+    quoteBy: language === "en" ? "From the garden of" : "Dal giardino di",
+    shareText:
+      language === "en"
+        ? "Share this quote by copying the link"
+        : "Condividi questa citazione copiando il link",
   };
 
-  // Keep URL shareable per quote
+  // Legacy deep links: `?item=X` without theme → derive the theme.
   useEffect(() => {
-    if (currentQuote) {
+    if (!themeParam && Number.isInteger(itemParam) && itemParam >= 0) {
+      const q = quotes.find((quote) => quote._id === itemParam);
+      if (q) {
+        setSearchParams({ theme: normalizeCategory(q.category), item: String(itemParam) }, { replace: true });
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [themeParam, itemParam]);
+
+  // Keep URL shareable per quote within the theme.
+  useEffect(() => {
+    if (themeParam && currentQuote) {
       const next = new URLSearchParams(searchParams);
+      next.set("theme", activeTheme.key);
       next.set("item", String(currentQuote._id));
       setSearchParams(next, { replace: true });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentIndex, currentQuote?._id]);
+  }, [currentIndex, themeParam, currentQuote?._id]);
 
-  // Keyboard navigation
+  // Keyboard navigation (only in quote view).
   useEffect(() => {
+    if (!activeTheme || !themeQuotes.length) return;
     const onKey = (e) => {
       if (e.key === "ArrowLeft") prevQuote();
       if (e.key === "ArrowRight") nextQuote();
@@ -128,12 +231,13 @@ export default function QuotesPage() {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentIndex, quotes.length]);
+  }, [currentIndex, themeParam]);
 
-  // Load author photo
+  // Load author photo.
   useEffect(() => {
     let active = true;
     setPhotoUrl(undefined);
+    if (!currentQuote) return undefined;
     const loader = resolvePrayerPhoto(currentQuote.photo);
     if (loader) {
       loader()
@@ -151,7 +255,7 @@ export default function QuotesPage() {
     };
   }, [currentQuote]);
 
-  // Scroll active row into view when menu opens
+  // Scroll active row into view when the mini-menu opens.
   useEffect(() => {
     if (isMenuOpen && activeItemRef.current) {
       activeItemRef.current.scrollIntoView({
@@ -161,7 +265,52 @@ export default function QuotesPage() {
     }
   }, [isMenuOpen, currentIndex]);
 
-  const shareUrl = () => `${window.location.origin}${window.location.pathname}?item=${currentQuote._id}`;
+  const goToTheme = (themeKey) => {
+    const next = new URLSearchParams(searchParams);
+    next.set("theme", themeKey);
+    next.delete("item");
+    setSearchParams(next);
+    setCopied(false);
+  };
+
+  const backToThemes = () => {
+    setSearchParams({});
+    setIsMenuOpen(false);
+    setCopied(false);
+  };
+
+  const goToQuote = (idx) => {
+    if (!themeQuotes[idx]) return;
+    const next = new URLSearchParams(searchParams);
+    next.set("theme", activeTheme.key);
+    next.set("item", String(themeQuotes[idx]._id));
+    setSearchParams(next);
+    setIsMenuOpen(false);
+  };
+
+  const nextQuote = () => {
+    if (!themeQuotes.length) return;
+    const nextIdx = (currentIndex + 1 + themeQuotes.length) % themeQuotes.length;
+    goToQuote(nextIdx);
+  };
+
+  const prevQuote = () => {
+    if (!themeQuotes.length) return;
+    const nextIdx = (currentIndex - 1 + themeQuotes.length) % themeQuotes.length;
+    goToQuote(nextIdx);
+  };
+
+  const surprise = () => {
+    const theme = themes[Math.floor(Math.random() * themes.length)];
+    const q = theme.quotes[Math.floor(Math.random() * theme.quotes.length)];
+    setSearchParams({ theme: theme.key, item: String(q._id) });
+    setCopied(false);
+  };
+
+  const shareUrl = () => {
+    if (!currentQuote || !activeTheme) return "";
+    return `${window.location.origin}${window.location.pathname}?theme=${encodeURIComponent(activeTheme.key)}&item=${currentQuote._id}`;
+  };
 
   const handleShare = async () => {
     try {
@@ -174,73 +323,83 @@ export default function QuotesPage() {
   };
 
   const handleListen = () => {
-    if ("speechSynthesis" in window) {
-      const text =
-        language === "en" ? currentQuote.quote : currentQuote.italianQuote;
-      const u = new SpeechSynthesisUtterance(text);
-      u.lang = language === "en" ? "en-US" : "it-IT";
-      u.rate = 0.9;
-      speechSynthesis.speak(u);
-    }
+    if (!currentQuote || !("speechSynthesis" in window)) return;
+    const text = language === "en" ? currentQuote.quote : currentQuote.italianQuote;
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = language === "en" ? "en-US" : "it-IT";
+    u.rate = 0.9;
+    speechSynthesis.speak(u);
   };
 
-  const catLabel = CATEGORY_LABELS[currentQuote.category] || {
-    en: currentQuote.category,
-    it: currentQuote.category,
-  };
-  const quoteText = language === "en" ? currentQuote.quote : currentQuote.italianQuote;
-  const otherText = language === "en" ? currentQuote.italianQuote : currentQuote.quote;
+  /* ---------- Theme grid view ---------- */
+  if (!activeTheme) {
+    return (
+      <div className="quotes-page">
+        <Header />
+        <div className="quotes-hero">
+          <span className="quotes-eyebrow">{t.eyebrow}</span>
+          <h1 className="quotes-title">{t.title}</h1>
+          <p className="quotes-subtitle">{t.subtitle}</p>
+          <div className="quotes-hero-meta">
+            <span>
+              <FaQuoteLeft /> {quotes.length} {t.total}
+            </span>
+            <span>
+              <FaFeatherAlt /> {themes.length} {t.themesCount}
+            </span>
+          </div>
+        </div>
 
-  const t = {
-    eyebrow: language === "en" ? "Sacred Words" : "Parole Sacre",
-    title: language === "en" ? "Garden of Quotes" : "Giardino delle Citazioni",
-    subtitle:
-      language === "en"
-        ? "Fragrant blossoms of wisdom from the souls of the garden."
-        : "Fiori profumati di saggezza dalle anime del giardino.",
-    back: language === "en" ? "Back to Home" : "Torna alla Home",
-    allQuotes: language === "en" ? "All Quotes" : "Tutte le Citazioni",
-    current: language === "en" ? "Current" : "Corrente",
-    total: language === "en" ? "Total" : "Totale",
-    categories: language === "en" ? "Themes" : "Temi",
-    copyLink: language === "en" ? "Copy Link" : "Copia Link",
-    copied: language === "en" ? "Link Copied" : "Link Copiato",
-    listen: language === "en" ? "Listen" : "Ascolta",
-    surprise: language === "en" ? "Surprise Me" : "Sorpresa",
-    shareText:
-      language === "en"
-        ? "Share this quote by copying the link"
-        : "Condividi questa citazione copiando il link",
-  };
+        <div className="quotes-themes-container">
+          <h2 className="quotes-themes-title">{t.themesTitle}</h2>
+          <p className="quotes-themes-hint">{t.themesHint}</p>
+          <div className="quotes-themes-grid">
+            {themes.map((theme) => {
+              const Icon = THEME_ICONS[theme.key] || FaFeatherAlt;
+              return (
+                <button
+                  key={theme.key}
+                  className="quotes-theme-card"
+                  onClick={() => goToTheme(theme.key)}
+                >
+                  <span className="quotes-theme-icon">
+                    <Icon />
+                  </span>
+                  <span className="quotes-theme-name">
+                    {language === "en" ? theme.label.en : theme.label.it}
+                  </span>
+                  <span className="quotes-theme-count">
+                    {theme.count}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  /* ---------- Quote view (single theme) ---------- */
+  const catLabel = activeTheme.label;
+  const quoteText =
+    language === "en" ? currentQuote.quote : currentQuote.italianQuote;
+  const otherText =
+    language === "en" ? currentQuote.italianQuote : currentQuote.quote;
 
   return (
     <div className="quotes-page">
       <Header />
 
-      {/* Hero */}
-      <div className="quotes-hero">
-        <span className="quotes-eyebrow">{t.eyebrow}</span>
-        <h1 className="quotes-title">{t.title}</h1>
-        <p className="quotes-subtitle">{t.subtitle}</p>
-        <div className="quotes-hero-meta">
-          <span>
-            <FaQuoteLeft /> {quotes.length} {t.total}
-          </span>
-          <span>
-            <FaFeatherAlt /> {categories.length} {t.categories}
-          </span>
-        </div>
-      </div>
-
       <div className="quotes-container">
         <div className="quotes-topbar">
-          <Link to="/" className="quotes-back-link">
-            <FaArrowLeft /> {t.back}
-          </Link>
+          <button onClick={backToThemes} className="quotes-back-link">
+            <FaArrowLeft /> {t.backToThemes}
+          </button>
           <div className="quotes-top-actions">
             <button
               className="quotes-shuffle"
-              onClick={() => goToQuote(Math.floor(Math.random() * quotes.length))}
+              onClick={surprise}
               aria-label={t.surprise}
             >
               <FaRandom /> <span>{t.surprise}</span>
@@ -256,7 +415,7 @@ export default function QuotesPage() {
           </div>
         </div>
 
-        {/* Mini menu — list of all quotes, grouped by theme */}
+        {/* Mini menu — list of quotes within this theme */}
         <div
           className="quotes-menu-wrap"
           onMouseEnter={() => setIsMenuOpen(true)}
@@ -275,33 +434,18 @@ export default function QuotesPage() {
             <div className="quotes-menu">
               <h3 className="quotes-menu-title">{t.allQuotes}</h3>
               <ul className="quotes-menu-list">
-                {categories.map((cat) => {
-                  const label = CATEGORY_LABELS[cat] || { en: cat, it: cat };
-                  return (
-                    <li key={cat} className="quotes-menu-group">
-                      <span className="quotes-menu-category">
-                        {language === "en" ? label.en : label.it}
-                        <small>{groupedQuotes[cat].length}</small>
-                      </span>
-                      <ul className="quotes-menu-sublist">
-                        {groupedQuotes[cat].map((q) => (
-                          <li key={q._id}>
-                            <button
-                              ref={q._id === currentIndex ? activeItemRef : null}
-                              className={`quotes-menu-item ${
-                                q._id === currentIndex ? "active" : ""
-                              }`}
-                              onClick={() => goToQuote(q._id)}
-                            >
-                              <span className="quotes-menu-index">{q._id + 1}</span>
-                              <span className="quotes-menu-text">“{q.quote}”</span>
-                            </button>
-                          </li>
-                        ))}
-                      </ul>
-                    </li>
-                  );
-                })}
+                {themeQuotes.map((q, idx) => (
+                  <li key={q._id}>
+                    <button
+                      ref={idx === currentIndex ? activeItemRef : null}
+                      className={`quotes-menu-item ${idx === currentIndex ? "active" : ""}`}
+                      onClick={() => goToQuote(idx)}
+                    >
+                      <span className="quotes-menu-index">{idx + 1}</span>
+                      <span className="quotes-menu-text">“{q.quote}”</span>
+                    </button>
+                  </li>
+                ))}
               </ul>
             </div>
           )}
@@ -309,7 +453,30 @@ export default function QuotesPage() {
 
         {/* Quote card */}
         <article className="quotes-card" key={currentQuote._id}>
-          <span className="quotes-category-badge">{catLabel.en} · {catLabel.it}</span>
+          <div className="quotes-card-header">
+            {photoUrl ? (
+              <img
+                src={photoUrl}
+                alt={currentQuote.author}
+                className="quotes-photo"
+              />
+            ) : (
+              <div className="quotes-photo quotes-monogram">
+                {getInitials(currentQuote.author)}
+              </div>
+            )}
+            <div className="quotes-card-meta">
+              <span className="quotes-category-badge">
+                {catLabel.en} · {catLabel.it}
+              </span>
+              <cite className="quotes-author">
+                {currentQuote.author}
+              </cite>
+              <span className="quotes-author-hint">
+                {t.quoteBy} {quotes.length}
+              </span>
+            </div>
+          </div>
 
           <div className="quotes-quote-body">
             <FaQuoteLeft className="quotes-open-mark" />
@@ -322,19 +489,6 @@ export default function QuotesPage() {
           )}
 
           <div className="gold-rule" />
-
-          <div className="quotes-attribution">
-            {photoUrl ? (
-              <img src={photoUrl} alt={currentQuote.author} className="quotes-photo" />
-            ) : (
-              <div className="quotes-photo quotes-monogram">
-                {getInitials(currentQuote.author)}
-              </div>
-            )}
-            <cite className="quotes-author">
-              <FaUserAlt /> {currentQuote.author}
-            </cite>
-          </div>
 
           <div className="quotes-actions">
             <button className="quotes-action listen" onClick={handleListen}>
@@ -352,11 +506,11 @@ export default function QuotesPage() {
           <div className="quotes-progress-bar">
             <div
               className="quotes-progress-fill"
-              style={{ width: `${((currentIndex + 1) / quotes.length) * 100}%` }}
+              style={{ width: `${((currentIndex + 1) / themeQuotes.length) * 100}%` }}
             />
           </div>
           <div className="quotes-progress-text">
-            {currentIndex + 1} / {quotes.length}
+            {currentIndex + 1} / {themeQuotes.length}
           </div>
           <p className="quotes-share-hint">{t.shareText}</p>
         </div>
