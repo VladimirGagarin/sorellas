@@ -193,7 +193,7 @@ export default function QuotesPage() {
     listen: language === "en" ? "Listen" : "Ascolta",
     surprise: language === "en" ? "Surprise Me" : "Sorpresa",
     quoteBy: language === "en" ? "From the garden of" : "Dal giardino di",
-    shareText:
+shareText:
       language === "en"
         ? "Share this quote by copying the link"
         : "Condividi questa citazione copiando il link",
@@ -466,14 +466,11 @@ export default function QuotesPage() {
               </div>
             )}
             <div className="quotes-card-meta">
-              <span className="quotes-category-badge">
-                {catLabel.en} · {catLabel.it}
-              </span>
               <cite className="quotes-author">
                 {currentQuote.author}
               </cite>
-              <span className="quotes-author-hint">
-                {t.quoteBy} {quotes.length}
+              <span className="quotes-category-badge">
+                {catLabel.en} · {catLabel.it}
               </span>
             </div>
           </div>

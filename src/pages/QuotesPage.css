@@ -252,14 +252,14 @@
 /* ============ Mini menu (list of quotes) ============ */
 .quotes-menu-wrap {
   position: absolute;
-  top: 210px;
+  top: 104px;
   right: max(16px, calc((100vw - 720px) / 2));
   z-index: 60;
 }
 
 @media (max-width: 760px) {
   .quotes-menu-wrap {
-    top: 190px;
+    top: 90px;
     right: 14px;
   }
 }
