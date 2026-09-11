@@ -16,7 +16,7 @@ import {
 import { useLanguage } from "../contexts/useLanguage";
 import "./LitanyPageTemplate.css";
 
-export default function LitanyPageTemplate({ title, litany, theme = "dark", className = "", icon }) {
+export default function LitanyPageTemplate({ title, litany, theme = "dark", className = "", icon, subtitle, footerText, responseText }) {
   const { language } = useLanguage();
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
@@ -118,9 +118,10 @@ export default function LitanyPageTemplate({ title, litany, theme = "dark", clas
           <div className="header-text">
             <h1 className="litany-title">{title}</h1>
             <p className="litany-subtitle">
-              {language === "en"
-                ? "A prayerful devotion to the Blessed Virgin Mary"
-                : "Una devozione orante alla Beata Vergine Maria"}
+              {subtitle ||
+                (language === "en"
+                  ? "A prayerful devotion to the Blessed Virgin Mary"
+                  : "Una devozione orante alla Beata Vergine Maria")}
             </p>
             {itemIdFromUrl && (
               <div className="url-indicator">
@@ -288,6 +289,7 @@ export default function LitanyPageTemplate({ title, litany, theme = "dark", clas
               </div>
               <div className="response-text">
                 {currentItem[`response_${language}`] ||
+                  responseText ||
                   (language === "en" ? "Pray for us" : "Prega per noi")}
               </div>
             </div>
@@ -355,9 +357,10 @@ export default function LitanyPageTemplate({ title, litany, theme = "dark", clas
         <div className="footer-content">
           <FaPray className="footer-icon" />
           <p className="footer-text">
-            {language === "en"
-              ? "May the Blessed Virgin Mary intercede for us"
-              : "Che la Beata Vergine Maria interceda per noi"}
+            {footerText ||
+              (language === "en"
+                ? "May the Blessed Virgin Mary intercede for us"
+                : "Che la Beata Vergine Maria interceda per noi")}
           </p>
         </div>
         <div className="share-instruction">

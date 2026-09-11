@@ -7,6 +7,8 @@ import { ThemeProvider } from './contexts/theme.jsx';
 import AboutScreenPage from './pages/AboutScreenPage.jsx';
 import DeepSeekPage from './pages/DeepSeekPage.jsx';
 import LitanyMaryPage from './pages/LitanyMaryPage.jsx';
+import LitanyJesusPage from './pages/LitanyJesusPage.jsx';
+import LitanyJosephPage from './pages/LitanyJosephPage.jsx';
 import PrayersPage from './pages/PrayersPage.jsx';
 import PrayerPage from './pages/PrayerPage.jsx';
 import './index.css'
@@ -37,6 +39,14 @@ const router = createHashRouter([
 {
       path: "litany-mary",
       element: <LitanyMaryPage/>  
+    },
+    {
+      path: "litany-jesus",
+      element: <LitanyJesusPage/>  
+    },
+    {
+      path: "litany-joseph",
+      element: <LitanyJosephPage/>  
     },
     {
       path: "prayers",
