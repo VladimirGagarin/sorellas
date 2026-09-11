@@ -11,7 +11,7 @@
 .quotes-hero {
   max-width: 720px;
   margin: 0 auto;
-  padding: 3.5rem 1rem 1rem;
+  padding: 5rem 1rem 1rem;
   text-align: center;
 }
 
@@ -187,7 +187,7 @@
 .quotes-container {
   max-width: 720px;
   margin: 0 auto;
-  padding: 0.5rem 1rem 4rem;
+  padding: 5.5rem 1rem 4rem;
 }
 
 /* ============ Top bar ============ */
@@ -204,20 +204,34 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-weight: 600;
+  padding: 0.55rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
   color: var(--leaf-emerald);
-  transition: color 0.2s ease, transform 0.2s ease;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .quotes-back-link:hover {
-  color: var(--primary-green);
+  border-color: var(--leaf-emerald);
+  color: var(--leaf-emerald);
   transform: translateX(-2px);
+  box-shadow: 0 4px 14px rgba(var(--primary-green-rgb), 0.2);
 }
 
 .quotes-top-actions {
   display: flex;
   align-items: center;
   gap: 0.6rem;
+}
+
+.quotes-menu-wrap {
+  position: relative;
+  display: inline-flex;
+  z-index: 60;
 }
 
 .quotes-shuffle,
@@ -250,36 +264,25 @@
 }
 
 /* ============ Mini menu (list of quotes) ============ */
-.quotes-menu-wrap {
-  position: absolute;
-  top: 104px;
-  right: max(16px, calc((100vw - 720px) / 2));
-  z-index: 60;
-}
-
-@media (max-width: 760px) {
-  .quotes-menu-wrap {
-    top: 90px;
-    right: 14px;
-  }
-}
-
 .quotes-menu-toggle {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
   border: 1px solid var(--border-color);
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
+  background: var(--card-bg);
   color: var(--leaf-emerald);
-  font-size: 1.1rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  transition: all 0.25s ease;
+}
+
+.quotes-menu-toggle:hover {
+  color: var(--primary-green);
+  border-color: var(--leaf-emerald);
+  transform: translateY(-1px);
 }
 
 .quotes-menu-toggle:hover {
@@ -295,14 +298,14 @@
 
 .quotes-menu {
   position: absolute;
-  top: 56px;
+  top: 50px;
   right: 0;
   width: min(360px, 82vw);
   max-height: min(70vh, 560px);
   overflow-y: auto;
   background: var(--card-bg);
   border: 1px solid var(--border-color);
-  border-radius: 18px;
+  border-radius: 14px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);

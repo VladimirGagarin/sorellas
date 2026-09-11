@@ -395,9 +395,45 @@ shareText:
       <div className="quotes-container">
         <div className="quotes-topbar">
           <button onClick={backToThemes} className="quotes-back-link">
-            <FaArrowLeft /> {t.backToThemes}
+            <FaList /> {t.backToThemes}
           </button>
           <div className="quotes-top-actions">
+            {/* Mini menu — list of quotes within this theme */}
+            <div
+              className="quotes-menu-wrap"
+              onMouseEnter={() => setIsMenuOpen(true)}
+              onMouseLeave={() => setIsMenuOpen(false)}
+            >
+              <button
+                className="quotes-menu-toggle"
+                onClick={() => setIsMenuOpen((open) => !open)}
+                aria-label={t.allQuotes}
+                aria-expanded={isMenuOpen}
+                title={t.allQuotes}
+              >
+                <FaList />
+              </button>
+
+              {isMenuOpen && (
+                <div className="quotes-menu">
+                  <h3 className="quotes-menu-title">{t.allQuotes}</h3>
+                  <ul className="quotes-menu-list">
+                    {themeQuotes.map((q, idx) => (
+                      <li key={q._id}>
+                        <button
+                          ref={idx === currentIndex ? activeItemRef : null}
+                          className={`quotes-menu-item ${idx === currentIndex ? "active" : ""}`}
+                          onClick={() => goToQuote(idx)}
+                        >
+                          <span className="quotes-menu-index">{idx + 1}</span>
+                          <span className="quotes-menu-text">“{q.quote}”</span>
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
             <button
               className="quotes-shuffle"
               onClick={surprise}
@@ -414,42 +450,6 @@ shareText:
               {copied ? t.copied : t.copyLink}
             </button>
           </div>
-        </div>
-
-        {/* Mini menu — list of quotes within this theme */}
-        <div
-          className="quotes-menu-wrap"
-          onMouseEnter={() => setIsMenuOpen(true)}
-          onMouseLeave={() => setIsMenuOpen(false)}
-        >
-          <button
-            className="quotes-menu-toggle"
-            onClick={() => setIsMenuOpen((open) => !open)}
-            aria-label={t.allQuotes}
-            aria-expanded={isMenuOpen}
-          >
-            <FaList />
-          </button>
-
-          {isMenuOpen && (
-            <div className="quotes-menu">
-              <h3 className="quotes-menu-title">{t.allQuotes}</h3>
-              <ul className="quotes-menu-list">
-                {themeQuotes.map((q, idx) => (
-                  <li key={q._id}>
-                    <button
-                      ref={idx === currentIndex ? activeItemRef : null}
-                      className={`quotes-menu-item ${idx === currentIndex ? "active" : ""}`}
-                      onClick={() => goToQuote(idx)}
-                    >
-                      <span className="quotes-menu-index">{idx + 1}</span>
-                      <span className="quotes-menu-text">“{q.quote}”</span>
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
         </div>
 
         {/* Quote card */}
