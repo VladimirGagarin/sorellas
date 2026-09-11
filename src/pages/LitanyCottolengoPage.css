@@ -1,0 +1,495 @@
+/* LitanyCottolengoPage.css — Providence "leaf" green overrides.
+   Scoped under .litany-cottolengo (injected via LitanyPageTemplate className prop). */
+
+/* ------------------------------------------------------------
+   Page shell — warm parchment with soft green stipple
+   ------------------------------------------------------------ */
+.litany-cottolengo-page {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 70px;
+  padding-bottom: 40px;
+  overflow-x: hidden;
+  background: linear-gradient(
+    175deg,
+    var(--bg-color) 0%,
+    var(--bg-secondary) 55%,
+    #EAF0DC 100%
+  );
+}
+
+.litany-cottolengo-page::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 40 40'%3E%3Cg fill='%234A5D36' fill-opacity='0.12'%3E%3Ccircle cx='20' cy='14' r='4.5'/%3E%3Ccircle cx='27' cy='22' r='4.5'/%3E%3Ccircle cx='20' cy='30' r='4.5'/%3E%3Ccircle cx='13' cy='22' r='4.5'/%3E%3Ccircle cx='20' cy='22' r='2.4' fill='%238C9E5C' fill-opacity='0.5'/%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.5;
+}
+
+.litany-page.litany-cottolengo {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(
+    175deg,
+    transparent 0%,
+    rgba(240, 245, 225, 0) 60%,
+    rgba(255, 255, 255, 0.35) 100%
+  );
+}
+
+/* ------------------------------------------------------------
+   Header — providence green banner
+   ------------------------------------------------------------ */
+.litany-cottolengo .litany-header {
+  background: linear-gradient(
+    135deg,
+    #4A5D36 0%,
+    #3D4F2B 38%,
+    #2F3D22 62%,
+    #5A6B3C 100%
+  );
+  border: 1px solid rgba(230, 240, 205, 0.35);
+  box-shadow:
+    0 12px 40px rgba(38, 52, 24, 0.3),
+    inset 0 1px 0 rgba(238, 244, 222, 0.25);
+  border-radius: 28px;
+}
+
+.litany-cottolengo .header-icon {
+  color: #EFF2D8;
+  background: rgba(239, 242, 216, 0.14);
+  border: 2px solid rgba(239, 242, 216, 0.5);
+  box-shadow:
+    0 0 0 6px rgba(239, 242, 216, 0.08),
+    0 4px 16px rgba(30, 42, 18, 0.4);
+  border-radius: 50%;
+  font-size: 2.3rem;
+  padding: 15px;
+}
+
+.litany-cottolengo .litany-title {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background: linear-gradient(135deg, #F3F5DE 0%, #E1E7B8 55%, #C4CD8A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+}
+
+.litany-cottolengo .litany-subtitle {
+  font-style: italic;
+  color: rgba(241, 245, 222, 0.92);
+}
+
+.litany-cottolengo .direct-link {
+  color: #E3E9BE;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
+}
+
+/* Stats — green glass */
+.litany-cottolengo .litany-stats {
+  background: rgba(239, 244, 215, 0.14);
+  border: 1px solid rgba(228, 238, 202, 0.4);
+  border-radius: 18px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.litany-cottolengo .stat-value {
+  font-family: var(--font-display);
+  background: linear-gradient(135deg, #F3F5DE, #C4CD8A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+}
+
+.litany-cottolengo .stat-label {
+  letter-spacing: 1.5px;
+  font-size: 0.82rem;
+}
+
+/* ------------------------------------------------------------
+   Invocation card — ivory with olive gilt
+   ------------------------------------------------------------ */
+.litany-cottolengo .litany-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 28px;
+  box-shadow:
+    0 18px 45px var(--shadow-color),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  overflow: visible;
+}
+
+.litany-cottolengo .litany-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 26px 55px var(--shadow-color),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.litany-cottolengo .litany-image-section {
+  height: 340px;
+  border-radius: 28px 28px 0 0;
+}
+
+.litany-cottolengo .litany-image {
+  filter: brightness(0.96) saturate(1.04);
+}
+
+.litany-cottolengo .litany-card:hover .litany-image {
+  transform: scale(1.04);
+}
+
+/* Text section */
+.litany-cottolengo .litany-text-section {
+  padding: 38px;
+  background: linear-gradient(180deg, var(--card-bg) 0%, #F2F5E2 100%);
+}
+
+.litany-cottolengo .invocation-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.35;
+  background: linear-gradient(135deg, #3D4F2B 0%, #4A5D36 45%, #6B7D42 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="dark"] .litany-cottolengo .invocation-title {
+  background: linear-gradient(135deg, #CFD6A0 0%, #B3BE7E 50%, #A6B270 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Favorite + share pill buttons */
+.litany-cottolengo .favorite-btn,
+.litany-cottolengo .share-link-btn {
+  background: var(--glass-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+}
+
+.litany-cottolengo .favorite-btn:hover {
+  color: #4A5D36;
+  border-color: #4A5D36;
+  transform: scale(1.12);
+  box-shadow: 0 6px 18px rgba(74, 93, 54, 0.35);
+}
+
+.litany-cottolengo .share-link-btn:hover {
+  color: var(--primary-green);
+  border-color: var(--primary-green);
+  transform: scale(1.12);
+  box-shadow: 0 6px 18px rgba(var(--primary-green-rgb), 0.3);
+}
+
+/* ------------------------------------------------------------
+   Response — parchment, olive-gilt italic
+   ------------------------------------------------------------ */
+.litany-cottolengo .response-section {
+  background: linear-gradient(180deg, #F5F7E8 0%, #E8EDD0 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.litany-cottolengo .response-label {
+  font-family: var(--font-display);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: #6A7B46;
+}
+
+[data-theme="dark"] .litany-cottolengo .response-label {
+  color: var(--text-muted);
+}
+
+.litany-cottolengo .response-text {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-weight: 500;
+  background: linear-gradient(135deg, #4A5D36 0%, #6B7D42 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="dark"] .litany-cottolengo .response-text {
+  background: linear-gradient(135deg, #CFD6A0 0%, #B3BE7E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ------------------------------------------------------------
+   Action buttons — olive pills
+   ------------------------------------------------------------ */
+.litany-cottolengo .action-btn {
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: var(--glass-bg);
+  color: var(--text-secondary);
+  font-weight: 600;
+  padding: 15px 20px;
+  transition: all 0.3s ease;
+}
+
+.litany-cottolengo .audio-btn:hover {
+  border-color: #4A5D36;
+  color: #4A5D36;
+  background: rgba(74, 93, 54, 0.08);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(74, 93, 54, 0.22);
+}
+
+.litany-cottolengo .share-btn:hover {
+  border-color: var(--primary-green);
+  color: var(--primary-green);
+  background: rgba(var(--primary-green-rgb), 0.08);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(var(--primary-green-rgb), 0.22);
+}
+
+/* ------------------------------------------------------------
+   Navigation — olive bar + glowing progress
+   ------------------------------------------------------------ */
+.litany-cottolengo .litany-navigation {
+  border-radius: 999px;
+  background: var(--glass-bg);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 14px 20px;
+}
+
+.litany-cottolengo .litany-navigation .progress-bar {
+  height: 10px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+}
+
+.litany-cottolengo .litany-navigation .progress-fill {
+  background: linear-gradient(90deg, #6B7D42 0%, #4A5D36 50%, #5A6B3C 100%);
+  border-radius: 999px;
+  box-shadow: 0 0 12px rgba(74, 93, 54, 0.45);
+}
+
+[data-theme="dark"] .litany-cottolengo .litany-navigation .progress-fill {
+  box-shadow: 0 0 14px rgba(179, 190, 126, 0.5);
+}
+
+/* Fixed side nav buttons */
+.litany-cottolengo .nav-btn.nav-fixed {
+  background: var(--glass-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.litany-cottolengo .nav-btn.nav-fixed:hover {
+  border-color: #4A5D36;
+  color: #4A5D36;
+  box-shadow: 0 8px 22px rgba(74, 93, 54, 0.22);
+}
+
+[data-theme="dark"] .litany-cottolengo .nav-btn.nav-fixed:hover {
+  border-color: #B3BE7E;
+  color: #B3BE7E;
+}
+
+/* ------------------------------------------------------------
+   Invocation menu — olive tooltip
+   ------------------------------------------------------------ */
+.litany-cottolengo .invocation-menu-toggle {
+  background: rgba(243, 245, 225, 0.92);
+  border: 1px solid rgba(74, 93, 54, 0.5);
+  color: #2F3D22;
+  box-shadow: 0 4px 14px rgba(38, 52, 24, 0.28);
+}
+
+.litany-cottolengo .invocation-menu-toggle:hover {
+  color: #4A5D36;
+  border-color: #4A5D36;
+  background: rgba(74, 93, 54, 0.12);
+  box-shadow: 0 6px 20px rgba(74, 93, 54, 0.35);
+}
+
+.litany-cottolengo .invocation-menu {
+  background: rgba(246, 248, 232, 0.97);
+  border: 1px solid rgba(74, 93, 54, 0.5);
+  border-radius: 22px;
+  box-shadow: 0 24px 55px rgba(38, 52, 24, 0.3);
+}
+
+.litany-cottolengo .invocation-menu-title {
+  color: #6A7B46;
+}
+
+.litany-cottolengo .invocation-menu-item {
+  border-radius: 14px;
+}
+
+.litany-cottolengo .invocation-menu-item:hover {
+  background: rgba(74, 93, 54, 0.08);
+  color: var(--text-primary);
+}
+
+.litany-cottolengo .invocation-menu-item.active {
+  background: linear-gradient(135deg, #4A5D36, #2F3D22);
+  color: #F1F4DA;
+  border-color: #2F3D22;
+  box-shadow: 0 5px 16px rgba(74, 93, 54, 0.38);
+}
+
+.litany-cottolengo .invocation-menu-index {
+  background: #EDF0DA;
+  color: #2F3D22;
+  border-color: rgba(74, 93, 54, 0.45);
+}
+
+.litany-cottolengo .invocation-menu-item.active .invocation-menu-index {
+  background: rgba(241, 244, 218, 0.25);
+  color: #F1F4DA;
+  border-color: rgba(241, 244, 218, 0.45);
+}
+
+.litany-cottolengo .invocation-menu-heart {
+  color: #4A5D36;
+}
+
+[data-theme="dark"] .litany-cottolengo .invocation-menu-toggle {
+  background: rgba(231, 237, 200, 0.12);
+  border-color: rgba(179, 190, 126, 0.45);
+  color: var(--accent-lavender);
+}
+
+[data-theme="dark"] .litany-cottolengo .invocation-menu-toggle:hover {
+  background: rgba(179, 190, 126, 0.15);
+  border-color: var(--accent-lavender);
+}
+
+[data-theme="dark"] .litany-cottolengo .invocation-menu {
+  background: rgba(28, 34, 20, 0.97);
+  border-color: rgba(179, 190, 126, 0.4);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.55);
+}
+
+[data-theme="dark"] .litany-cottolengo .invocation-menu-title {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .litany-cottolengo .invocation-menu-item:hover {
+  background: rgba(179, 190, 126, 0.1);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .litany-cottolengo .invocation-menu-item.active {
+  background: linear-gradient(135deg, #A6B270, #55663A);
+  color: #1C140E;
+  border-color: #A6B270;
+}
+
+[data-theme="dark"] .litany-cottolengo .invocation-menu-index {
+  background: #2A3220;
+  color: var(--text-muted);
+  border-color: #3A442A;
+}
+
+/* ------------------------------------------------------------
+   Footer — providence green send-off
+   ------------------------------------------------------------ */
+.litany-cottolengo .litany-footer {
+  background: linear-gradient(180deg, #EDF1DC 0%, #E2E8CB 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+[data-theme="dark"] .litany-cottolengo .litany-footer {
+  background: linear-gradient(180deg, var(--card-bg) 0%, #232B18 100%);
+}
+
+.litany-cottolengo .footer-icon {
+  color: #4A5D36;
+  background: rgba(74, 93, 54, 0.1);
+  border: 1px solid rgba(74, 93, 54, 0.3);
+  border-radius: 50%;
+  padding: 14px;
+  font-size: 2.4rem;
+  box-shadow: 0 6px 18px rgba(74, 93, 54, 0.18);
+}
+
+[data-theme="dark"] .litany-cottolengo .footer-icon {
+  color: var(--accent-lavender);
+  background: rgba(179, 190, 126, 0.08);
+  border: 1px solid rgba(179, 190, 126, 0.3);
+}
+
+.litany-cottolengo .footer-text {
+  font-style: italic;
+  color: var(--text-primary);
+}
+
+.litany-cottolengo .share-instruction {
+  color: var(--text-muted);
+  margin-top: 14px;
+}
+
+/* ------------------------------------------------------------
+   Glow near the title
+   ------------------------------------------------------------ */
+.litany-cottolengo .litany-header::before {
+  background: radial-gradient(120% 120% at 50% 0%, rgba(239, 244, 215, 0.22) 0%, transparent 60%);
+}
+
+/* ------------------------------------------------------------
+   Responsive
+   ------------------------------------------------------------ */
+@media (max-width: 768px) {
+  .litany-cottolengo-page {
+    padding-top: 64px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .litany-cottolengo .litany-image-section {
+    height: 260px;
+  }
+
+  .litany-cottolengo .litany-text-section {
+    padding: 26px 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .litany-cottolengo-page {
+    padding-top: 58px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .litany-cottolengo .litany-image-section {
+    height: 200px;
+  }
+
+  .litany-cottolengo .litany-text-section {
+    padding: 22px 16px;
+  }
+
+  .litany-cottolengo .header-icon {
+    font-size: 2rem;
+    padding: 12px;
+  }
+}

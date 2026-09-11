@@ -569,6 +569,7 @@
 .litany-navigation {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 25px;
   margin-bottom: 35px;
   padding: 20px;
@@ -577,6 +578,55 @@
   border: 1px solid var(--border-color);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ------------------------------------------------------------
+   Fixed side navigation (prev/next floating buttons)
+   ------------------------------------------------------------ */
+.nav-btn.nav-fixed.nav-fixed-left,
+.nav-btn.nav-fixed.nav-fixed-right {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+}
+
+.nav-btn.nav-fixed.nav-fixed-left:hover,
+.nav-btn.nav-fixed.nav-fixed-right:hover {
+  transform: translateY(-50%) scale(1.06);
+  box-shadow: 0 12px 38px rgba(0, 0, 0, 0.28);
+}
+
+.nav-btn.nav-fixed.nav-fixed-left:active,
+.nav-btn.nav-fixed.nav-fixed-right:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+.nav-fixed-left {
+  left: 16px;
+}
+
+.nav-fixed-right {
+  right: 16px;
 }
 
 .nav-btn {
@@ -781,14 +831,32 @@
   }
   
   .litany-navigation {
-    flex-direction: column;
+    flex-direction: row;
     gap: 15px;
     padding: 15px;
   }
-  
-  .nav-btn {
-    width: 100%;
-    justify-content: center;
+
+  .nav-btn.nav-fixed.nav-fixed-left,
+  .nav-btn.nav-fixed.nav-fixed-right {
+    padding: 13px;
+    font-size: 1.05rem;
+  }
+
+  .nav-btn.nav-fixed.nav-fixed-left .nav-btn-label,
+  .nav-btn.nav-fixed.nav-fixed-right .nav-btn-label {
+    display: none;
+  }
+
+  .nav-fixed-left {
+    left: 8px;
+  }
+
+  .nav-fixed-right {
+    right: 8px;
+  }
+
+  .litany-content {
+    max-width: 100%;
   }
 }
 

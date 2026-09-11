@@ -9,6 +9,7 @@ import DeepSeekPage from './pages/DeepSeekPage.jsx';
 import LitanyMaryPage from './pages/LitanyMaryPage.jsx';
 import LitanyJesusPage from './pages/LitanyJesusPage.jsx';
 import LitanyJosephPage from './pages/LitanyJosephPage.jsx';
+import LitanyCottolengoPage from './pages/LitanyCottolengoPage.jsx';
 import PrayersPage from './pages/PrayersPage.jsx';
 import PrayerPage from './pages/PrayerPage.jsx';
 import './index.css'
@@ -47,6 +48,10 @@ const router = createHashRouter([
     {
       path: "litany-joseph",
       element: <LitanyJosephPage/>  
+    },
+    {
+      path: "litany-cottolengo",
+      element: <LitanyCottolengoPage/>  
     },
     {
       path: "prayers",

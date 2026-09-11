@@ -36,6 +36,25 @@ export default function LitanyPageTemplate({ title, litany, theme = "dark", clas
 
   const currentItem = litany[currentIndex];
 
+  const nextItem = () => {
+    setCurrentIndex((prev) => (prev + 1) % litany.length);
+  };
+
+  const prevItem = () => {
+    setCurrentIndex((prev) => (prev - 1 + litany.length) % litany.length);
+  };
+
+  // Keyboard navigation: left/right arrow keys
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "ArrowLeft") prevItem();
+      if (e.key === "ArrowRight") nextItem();
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentIndex, litany.length]);
+
   // Update URL when index changes
   useEffect(() => {
     if (currentItem?.id) {
@@ -47,14 +66,6 @@ export default function LitanyPageTemplate({ title, litany, theme = "dark", clas
       navigate(`?${newParams.toString()}`, { replace: true });
     }
   }, [currentIndex, currentItem?.id, setSearchParams, navigate, searchParams]);
-
-  const nextItem = () => {
-    setCurrentIndex((prev) => (prev + 1) % litany.length);
-  };
-
-  const prevItem = () => {
-    setCurrentIndex((prev) => (prev - 1 + litany.length) % litany.length);
-  };
 
   const goToItem = (index) => {
     setCurrentIndex(index);
@@ -318,15 +329,7 @@ export default function LitanyPageTemplate({ title, litany, theme = "dark", clas
 
         {/* Navigation */}
         <div className="litany-navigation">
-          <button
-            className="nav-btn prev-btn"
-            onClick={prevItem}
-            aria-label={language === "en" ? "Previous" : "Precedente"}
-          >
-            <FaArrowLeft />
-            <span>{language === "en" ? "Previous" : "Precedente"}</span>
-          </button>
-
+          {/* Progress bar */}
           <div className="nav-progress">
             <div className="progress-bar">
               <div
@@ -340,17 +343,33 @@ export default function LitanyPageTemplate({ title, litany, theme = "dark", clas
               {currentIndex + 1} / {litany.length}
             </div>
           </div>
-
-          <button
-            className="nav-btn next-btn"
-            onClick={nextItem}
-            aria-label={language === "en" ? "Next" : "Successivo"}
-          >
-            <span>{language === "en" ? "Next" : "Successivo"}</span>
-            <FaArrowRight />
-          </button>
         </div>
       </div>
+
+      {/* Fixed side navigation: prev (left) / next (right), vertically centered */}
+      <button
+        className="nav-btn prev-btn nav-fixed nav-fixed-left"
+        onClick={prevItem}
+        aria-label={language === "en" ? "Previous" : "Precedente"}
+        title={language === "en" ? "Previous (←)" : "Precedente (←)"}
+      >
+        <FaArrowLeft />
+        <span className="nav-btn-label">
+          {language === "en" ? "Previous" : "Precedente"}
+        </span>
+      </button>
+
+      <button
+        className="nav-btn next-btn nav-fixed nav-fixed-right"
+        onClick={nextItem}
+        aria-label={language === "en" ? "Next" : "Successivo"}
+        title={language === "en" ? "Next (→)" : "Successivo (→)"}
+      >
+        <span className="nav-btn-label">
+          {language === "en" ? "Next" : "Successivo"}
+        </span>
+        <FaArrowRight />
+      </button>
 
       {/* Footer */}
       <div className="litany-footer">

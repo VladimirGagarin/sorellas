@@ -12897,6 +12897,162 @@ export function getJosephLitany() {
   return litany;
 }
 
+export function getCottolengoLitany() {
+  return [
+    { en: "Lord, have mercy.", it: "Signore, pietà.", response_en: "Christ, have mercy.", response_it: "Cristo, pietà." },
+    { en: "Christ, have mercy.", it: "Cristo, pietà.", response_en: "Lord, have mercy.", response_it: "Signore, pietà." },
+    { en: "Christ, hear us.", it: "Cristo, ascoltaci.", response_en: "Christ, graciously hear us.", response_it: "Cristo, esaudiscici." },
+    { en: "Christ, graciously hear us.", it: "Cristo, esaudiscici.", response_en: "Have mercy on us.", response_it: "Abbi pietà di noi." },
+    {
+      en: "God, the Father of Heaven, have mercy on us.",
+      it: "Dio, Padre del cielo, abbi pietà di noi.",
+      response_en: "Have mercy on us.",
+      response_it: "Abbi pietà di noi.",
+    },
+    {
+      en: "God the Son, Redeemer of the world, have mercy on us.",
+      it: "Dio Figlio, Redentore del mondo, abbi pietà di noi.",
+      response_en: "Have mercy on us.",
+      response_it: "Abbi pietà di noi.",
+    },
+    {
+      en: "God the Holy Spirit, have mercy on us.",
+      it: "Dio Spirito Santo, abbi pietà di noi.",
+      response_en: "Have mercy on us.",
+      response_it: "Abbi pietà di noi.",
+    },
+    {
+      en: "Holy Trinity, one God, have mercy on us.",
+      it: "Santa Trinità, unico Dio, abbi pietà di noi.",
+      response_en: "Have mercy on us.",
+      response_it: "Abbi pietà di noi.",
+    },
+    { en: "Holy Mary, pray for us.", it: "Santa Maria, prega per noi." },
+    {
+      en: "Saint Joseph Benedict Cottolengo, pray for us.",
+      it: "San Giuseppe Benedetto Cottolengo, prega per noi.",
+    },
+    {
+      en: "Humble priest of Divine Providence, pray for us.",
+      it: "Umile sacerdote della Divina Provvidenza, prega per noi.",
+    },
+    {
+      en: "Son of poverty, trusting in God alone, pray for us.",
+      it: "Figlio della povertà, fiducioso in Dio solo, prega per noi.",
+    },
+    {
+      en: "Founder of the Little House of Divine Providence, pray for us.",
+      it: "Fondatore della Piccola Casa della Divina Provvidenza, prega per noi.",
+    },
+    {
+      en: "Welcoming father to the poor and abandoned, pray for us.",
+      it: "Padre accogliente dei poveri e degli abbandonati, prega per noi.",
+    },
+    {
+      en: "Loving servant of the sick and suffering, pray for us.",
+      it: "Servo amorevole dei malati e dei sofferenti, prega per noi.",
+    },
+    {
+      en: "Consoler of the dying, pray for us.",
+      it: "Consolatore dei moribondi, prega per noi.",
+    },
+    {
+      en: "Shelter for orphans, pray for us.",
+      it: "Rifugio degli orfani, prega per noi.",
+    },
+    {
+      en: "Companion of the outcast and forgotten, pray for us.",
+      it: "Compagno degli esclusi e dei dimenticati, prega per noi.",
+    },
+    {
+      en: "Artisan of compassion, pray for us.",
+      it: "Artigiano della compassione, prega per noi.",
+    },
+    {
+      en: "Zealous for the salvation of souls, pray for us.",
+      it: "Zelante per la salvezza delle anime, prega per noi.",
+    },
+    {
+      en: "Herald of brotherly charity, pray for us.",
+      it: "Araldo della carità fraterna, prega per noi.",
+    },
+    {
+      en: "Model of priestly humility, pray for us.",
+      it: "Modello di umiltà sacerdotale, prega per noi.",
+    },
+    {
+      en: "Faithful to prayer before the Blessed Sacrament, pray for us.",
+      it: "Fedele alla preghiera davanti al Santissimo Sacramento, prega per noi.",
+    },
+    {
+      en: "Teacher of trust in divine Providence, pray for us.",
+      it: "Maestro di fiducia nella divina Provvidenza, prega per noi.",
+    },
+    {
+      en: "Serene in the storms of life, pray for us.",
+      it: "Sereno nelle tempeste della vita, prega per noi.",
+    },
+    {
+      en: "Convinced that God provides, pray for us.",
+      it: "Convinto che Dio provvede, prega per noi.",
+    },
+    {
+      en: "Generous giver to the least of Christ's little ones, pray for us.",
+      it: "Generoso donatore agli ultimi dei piccoli di Cristo, prega per noi.",
+    },
+    {
+      en: "Patient bearer of trials for the good of others, pray for us.",
+      it: "Paziente portatore di prove per il bene degli altri, prega per noi.",
+    },
+    {
+      en: "Defender of the dignity of every human life, pray for us.",
+      it: "Difensore della dignità di ogni vita umana, prega per noi.",
+    },
+    {
+      en: "Light to physicians and caregivers, pray for us.",
+      it: "Luce per i medici e per chi cura, prega per noi.",
+    },
+    {
+      en: "Patron of charitable works, pray for us.",
+      it: "Patrono delle opere di carità, prega per noi.",
+    },
+    {
+      en: "Trusting in the prayers of the faithful, pray for us.",
+      it: "Fiducioso nelle preghiere dei fedeli, prega per noi.",
+    },
+    {
+      en: "Initiator of the Cottolengo Family, pray for us.",
+      it: "Iniziatore della Famiglia Cottolengo, prega per noi.",
+    },
+    {
+      en: "Model for consecrated souls, pray for us.",
+      it: "Modello per le anime consacrate, prega per noi.",
+    },
+    {
+      en: "Joyful witness of the Gospel, pray for us.",
+      it: "Testimone gioioso del Vangelo, prega per noi.",
+    },
+    {
+      en: "Lamb of God, you take away the sins of the world, spare us, O Lord.",
+      it: "Agnello di Dio, che togli i peccati del mondo, perdonaci, o Signore.",
+      response_en: "Spare us, O Lord.",
+      response_it: "Perdonaci, o Signore.",
+    },
+    {
+      en: "Lamb of God, you take away the sins of the world, graciously hear us, O Lord.",
+      it: "Agnello di Dio, che togli i peccati del mondo, esaudiscici, o Signore.",
+      response_en: "Graciously hear us, O Lord.",
+      response_it: "Esaudiscici, o Signore.",
+    },
+    {
+      en: "Lamb of God, you take away the sins of the world, have mercy on us.",
+      it: "Agnello di Dio, che togli i peccati del mondo, abbi pietà di noi.",
+      response_en: "Have mercy on us.",
+      response_it: "Abbi pietà di noi.",
+    },
+  ];
+}
+
 export function getSaintsLitany() {
   return [
     {
