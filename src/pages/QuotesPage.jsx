@@ -159,11 +159,12 @@ export default function QuotesPage() {
   }, [quotes]);
 
   const themeParam = searchParams.get("theme");
-  const itemParam = Number(searchParams.get("item"));
+  const itemParam = searchParams.has("item") ? Number(searchParams.get("item")) : NaN;
 
-  const activeTheme = themeParam
-    ? themes.find((t) => t.key === themeParam)
-    : null;
+  const activeTheme =
+    themeParam && themeParam !== "0"
+      ? themes.find((t) => t.key === themeParam)
+      : null;
   const themeQuotes = activeTheme ? activeTheme.quotes : [];
 
   let currentIndex = -1;
@@ -274,7 +275,7 @@ shareText:
   };
 
   const backToThemes = () => {
-    setSearchParams({});
+    setSearchParams({ theme: "0" });
     setIsMenuOpen(false);
     setCopied(false);
   };
