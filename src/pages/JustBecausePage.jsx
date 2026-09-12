@@ -1,10 +1,16 @@
 // pages/JustBecausePage.jsx
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Header from "../components/Header.jsx";
 import { useLanguage } from "../contexts/useLanguage.js";
 import { justBecauseArray, AUTHOR_PHOTOS, resolvePrayerPhoto } from "../components/Utils.js";
 import { FaShareAlt, FaTimes, FaHeart } from "react-icons/fa";
 import "./JustBecausePage.css";
+
+const TOPIC_LABELS = {
+  Jesus: { en: "Jesus", it: "Gesù" },
+  "Virgin Mary": { en: "Virgin Mary", it: "Vergine Maria" },
+  Cottolengo: { en: "Cottolengo", it: "Cottolengo" },
+};
 
 function getInitials(name) {
   const words = String(name || "")
@@ -47,6 +53,23 @@ export default function JustBecausePage() {
   const { language } = useLanguage();
   const entries = justBecauseArray();
   const [copiedId, setCopiedId] = useState(null);
+  const [filter, setFilter] = useState("all");
+
+  const topics = useMemo(() => {
+    const seen = [];
+    entries.forEach((entry) => {
+      const key = entry.topic?.en;
+      if (key && !seen.some((t) => t.key === key)) seen.push({ key });
+    });
+    return seen.map(({ key }) => ({
+      key,
+      label: TOPIC_LABELS[key] || { en: key, it: key },
+      count: entries.filter((e) => e.topic?.en === key).length,
+    }));
+  }, [entries]);
+
+  const filtered =
+    filter === "all" ? entries : entries.filter((e) => e.topic?.en === filter);
 
   const t = {
     eyebrow: language === "en" ? "Small Graces" : "Piccole Grazie",
@@ -56,6 +79,7 @@ export default function JustBecausePage() {
         ? "Love that asks for no reason — whispered by the voices of our garden."
         : "Amore che non chiede perché — sussurrato dalle voci del nostro giardino.",
     count: language === "en" ? "gifts" : "ricordi",
+    all: language === "en" ? "All" : "Tutti",
     share: language === "en" ? "Share this gift" : "Condividi questo dono",
     copied: language === "en" ? "Copied" : "Copiato",
   };
@@ -94,9 +118,29 @@ export default function JustBecausePage() {
       </div>
 
       <div className="jb-container">
+        <div className="jb-filters" role="group" aria-label={language === "en" ? "Filter by topic" : "Filtra per tema"}>
+          <button
+            className={`jb-filter ${filter === "all" ? "active" : ""}`}
+            onClick={() => setFilter("all")}
+          >
+            {t.all}
+            <span className="jb-filter-count">{entries.length}</span>
+          </button>
+          {topics.map((topic) => (
+            <button
+              key={topic.key}
+              className={`jb-filter ${filter === topic.key ? "active" : ""}`}
+              onClick={() => setFilter(topic.key)}
+            >
+              {language === "en" ? topic.label.en : topic.label.it}
+              <span className="jb-filter-count">{topic.count}</span>
+            </button>
+          ))}
+        </div>
+
         <div className="jb-grid">
-          {entries.map((entry, index) => (
-            <article className="jb-card glass" key={index}>
+          {filtered.map((entry, index) => (
+            <article className="jb-card glass" key={entry.author + index}>
               <span className="jb-card-mark" aria-hidden="true">
                 ❤
               </span>

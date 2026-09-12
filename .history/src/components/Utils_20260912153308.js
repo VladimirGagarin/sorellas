@@ -18372,10 +18372,9 @@ export function getPoems() {
   const allPoems = [
     {
       author: "Sr. Mary Japheth",
-      title: {en:"Praying is Wonderful", it:""},
-      poem: {verse: [], verse:[], verse:[]} // 4 lines each verse
-    },
-
+      title: "Praying is Wonderful",
+      poem: {verse: [], verse:[], verse:[]}
+    }
   ]
   return allPoems
 }

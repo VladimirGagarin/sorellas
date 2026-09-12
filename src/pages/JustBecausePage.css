@@ -79,6 +79,66 @@
   color: var(--leaf-emerald);
 }
 
+/* ===== Filters ===== */
+.jb-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.jb-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.15rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: var(--glass-bg);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.jb-filter:hover {
+  border-color: var(--leaf-emerald);
+  color: var(--leaf-emerald);
+  transform: translateY(-1px);
+}
+
+.jb-filter.active {
+  background: var(--leaf-emerald);
+  border-color: transparent;
+  color: #FFFDF6;
+  box-shadow: 0 8px 22px rgba(var(--primary-green-rgb), 0.3);
+}
+
+[data-theme="dark"] .jb-filter.active {
+  background: var(--accent-lavender);
+}
+
+.jb-filter-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  padding: 0 0.35rem;
+  border-radius: 999px;
+  background: rgba(var(--primary-green-rgb), 0.14);
+  color: var(--leaf-emerald);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.jb-filter.active .jb-filter-count {
+  background: rgba(255, 255, 255, 0.28);
+  color: inherit;
+}
+
 /* ===== Grid ===== */
 .jb-container {
   max-width: 1100px;

@@ -18369,15 +18369,7 @@ export function getFavWords() {
 }
 
 export function getPoems() {
-  const allPoems = [
-    {
-      author: "Sr. Mary Japheth",
-      title: {en:"Praying is Wonderful", it:""},
-      poem: {verse: [], verse:[], verse:[]} // 4 lines each verse
-    },
-
-  ]
-  return allPoems
+  
 }
 
 // ---------------------------------------------------------------------------
