@@ -15,6 +15,7 @@ import QuotesPage from './pages/QuotesPage.jsx';
 import PrayersPage from './pages/PrayersPage.jsx';
 import PrayerPage from './pages/PrayerPage.jsx';
 import FavoriteWordsPage from './pages/FavoriteWordsPage.jsx';
+import JustBecausePage from './pages/JustBecausePage.jsx';
 import './index.css'
 import App from './App.jsx'
 
@@ -75,6 +76,10 @@ const router = createHashRouter([
     {
       path: "favourite-words",
       element: <FavoriteWordsPage />
+    },
+    {
+      path: "just-because",
+      element: <JustBecausePage />
     }
   ]);
 

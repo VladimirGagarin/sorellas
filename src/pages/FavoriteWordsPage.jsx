@@ -2,59 +2,9 @@
 import { useEffect, useState } from "react";
 import Header from "../components/Header.jsx";
 import { useLanguage } from "../contexts/useLanguage.js";
-import { getFavWords, resolvePrayerPhoto } from "../components/Utils.js";
+import { getFavWords, AUTHOR_PHOTOS, resolvePrayerPhoto } from "../components/Utils.js";
 import { FaQuoteLeft, FaShareAlt, FaTimes } from "react-icons/fa";
 import "./FavoriteWordsPage.css";
-
-const AUTHOR_PHOTOS = {
-  "Sr. Virginia Mwakiuna": "../assets/sr_virginia_mwakiuna.jpg",
-  "Sr. Agatha Mkunda": "../assets/sr_agatha_mkunda.jpg",
-  "Sr. Felicity Makena": "../assets/sr_felicity_makena.jpg",
-  "Sr. Mercy Kathure": "../assets/sr_mercy_kathure.jpg",
-  "Sr. Margaret N. Kaleli": "../assets/sr_margaret_n_kaleli.jpg",
-  "Sr. Hellen Murungi": "../assets/sr_hellen_murungi.jpg",
-  "Sr. Purity Nkatha": "../assets/sr_purity.jpg",
-  "Sr. Mary Japheth": "../assets/sr_mary_japheth.jpg",
-  "Sr. Christine Musoga": "../assets/sr_christine_musoga.jpg",
-  "Sr. Priscilla Kanini": "../assets/sr_priscilla_kanini.jpg",
-  "Sr. Aniceta": "../assets/sr_aniceta.jpg",
-  "Sr. Anastasia Nkubitu": "../assets/sr_anastasia_nkubitu.jpg",
-  "Sr. Pauline": "../assets/sr_pauline.jpg",
-  "Sr. Beth": "../assets/sr_beth.jpg",
-  "Sr. Frida Mburugu": "../assets/sr_fridah.jpg",
-  "Sr. Maureen": "../assets/sr_maureen.jpg",
-  "Sr. Dorothy": "../assets/sr_dorothy.jpg",
-  "Sr. Sofia": "../assets/sr_sofia.jpg",
-  "Sr. Agnes Muthoni": "../assets/sr_agnes.jpg",
-  "Sr. Mary Mwikali Matheka": "../assets/sr_mary_mwikali.jpg",
-  "Sr. Jane Makanda": "../assets/jane_makanda.jpg",
-  "Sr. Rose Kanathi": "../assets/rose_kanathi.jpg",
-  "Sr. Andreina Stradiotto": "../assets/andreina_stradiotto.jpg",
-  "Sr. Giovanna": "../assets/giovanna.jpg",
-  "Sr. Jiunisia Kaburi": "../assets/sr_junisia.jpg",
-  "Sr. Consolata": "../assets/sr_consolata.jpg",
-  "Sr. Adriana": "../assets/sr_adriana.jpg",
-  "Sr. Sabina Murwana": "../assets/sr_sabina_murwana.jpg",
-  "Sr. Susan Chokera": "../assets/sr_susan_chokera.jpg",
-  "Sr. Susan Kanini": "../assets/sr_susan_kanini.jpg",
-  "Sr. Cecilia": "../assets/sr_cecilia.jpg",
-  "Sr. Lucy Wegoki": "../assets/sr_lucy_wegoki.jpg",
-  "Sr. Angelica Kinya": "../assets/sr_angelica_kinya.jpg",
-  "Sr. Julian": "../assets/sr_julian.jpg",
-  "Sr. Maria Carrolla": "../assets/sr_maria_carrolla.jpg",
-  "Sr. Nancy": "../assets/sr_nancy.jpg",
-  "Sr. Loredana": "../assets/sr_loredana.jpg",
-  "Sr. Jerusha": "../assets/sr_jerusha.jpg",
-  "Sr. Benedicta": "../assets/sr_benedicta.jpg",
-  "Sr. Regina": "../assets/sr_regina.jpg",
-  "Sr. Dorcas": "../assets/sr_dorcas.jpg",
-  "Sr. Salome": "../assets/sr_salome.jpg",
-  "Sr. Immaculate": "../assets/sr_immaculate.jpg",
-  "Sr. Ann": "../assets/sr_ann.jpg",
-  "Sr. Joyce": "../assets/sr_joyce.jpg",
-  "Sr. Winnie Lopez": "../assets/sr_winnie.jpg",
-  "Sr. Joan": "../assets/sr_joan.jpg",
-};
 
 function getInitials(name) {
   const words = String(name || "")
