@@ -98,12 +98,6 @@
   }
 }
 
-@media (min-width: 1000px) {
-  .fw-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 .fw-card {
   display: flex;
   flex-direction: column;
@@ -144,22 +138,22 @@
 .fw-identity {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   min-width: 0;
 }
 
 .fw-avatar {
   flex-shrink: 0;
-  width: 46px;
-  height: 46px;
+  width: 92px;
+  height: 92px;
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid var(--leaf-emerald);
+  border: 3px solid var(--leaf-emerald);
   background: var(--glass-bg);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(var(--primary-green-rgb), 0.25);
+  box-shadow: 0 6px 18px rgba(var(--primary-green-rgb), 0.3);
 }
 
 .fw-avatar-img {
@@ -176,7 +170,7 @@
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1.8rem;
   color: var(--leaf-emerald);
   background: linear-gradient(
     135deg,
@@ -186,7 +180,7 @@
 }
 
 .fw-author {
-  font-size: 0.78rem;
+  font-size: 0.95rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -231,9 +225,9 @@
 
 .fw-word {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 2.3rem;
   font-weight: 700;
-  margin: 0.2rem 0 0;
+  margin: 0.4rem 0 0;
   line-height: 1.1;
   position: relative;
   z-index: 1;
@@ -244,17 +238,17 @@
   content: '';
   display: block;
   margin-top: 0.7rem;
-  width: 40px;
+  width: 44px;
   height: 3px;
   border-radius: 2px;
   background: var(--gradient-primary);
 }
 
 .fw-message {
-  font-size: 0.98rem;
+  font-size: 1.06rem;
   font-style: italic;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.65;
   margin: 0;
   position: relative;
   z-index: 1;
