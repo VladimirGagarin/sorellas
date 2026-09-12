@@ -127,6 +127,7 @@ export default function QuotesPage() {
   const [copied, setCopied] = useState(false);
   const [photoUrl, setPhotoUrl] = useState(undefined);
   const activeItemRef = useRef(null);
+  const quotesMenu = useRef(null);
 
   const quotes = useMemo(
     () => getQuotes().map((q, i) => ({ ...q, _id: i })),
@@ -189,6 +190,7 @@ export default function QuotesPage() {
     current: language === "en" ? "Current" : "Corrente",
     total: language === "en" ? "Total" : "Totale",
     themesCount: language === "en" ? "themes" : "temi",
+    themesMenu: language === "en" ? "Jump to a Theme" : "Vai a un Tema",
     copyLink: language === "en" ? "Copy Link" : "Copia Link",
     copied: language === "en" ? "Link Copied" : "Link Copiato",
     listen: language === "en" ? "Listen" : "Ascolta",
@@ -256,6 +258,17 @@ shareText:
     };
   }, [currentQuote]);
 
+  // Close the mini-menu when clicking outside it.
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (quotesMenu.current && !quotesMenu.current.contains(e.target)) {
+        setIsMenuOpen(false);
+      }
+    };
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, []);
+
   // Scroll active row into view when the mini-menu opens.
   useEffect(() => {
     if (isMenuOpen && activeItemRef.current) {
@@ -310,7 +323,7 @@ shareText:
 
   const shareUrl = () => {
     if (!currentQuote || !activeTheme) return "";
-    return `${window.location.origin}${window.location.pathname}?theme=${encodeURIComponent(activeTheme.key)}&item=${currentQuote._id}`;
+    return `${window.location.origin}${window.location.pathname}#/quotes?theme=${encodeURIComponent(activeTheme.key)}&item=${currentQuote._id}`;
   };
 
   const handleShare = async () => {
@@ -398,38 +411,56 @@ shareText:
             <FaList /> {t.backToThemes}
           </button>
           <div className="quotes-top-actions">
-            {/* Mini menu — list of quotes within this theme */}
-            <div
-              className="quotes-menu-wrap"
-              onMouseEnter={() => setIsMenuOpen(true)}
-              onMouseLeave={() => setIsMenuOpen(false)}
-            >
+            {/* Mini menu — one quote per theme, scrollable */}
+            <div className="quotes-menu-wrap">
               <button
                 className="quotes-menu-toggle"
-                onClick={() => setIsMenuOpen((open) => !open)}
-                aria-label={t.allQuotes}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsMenuOpen((open) => !open);
+                }}
+                aria-label={t.themesMenu}
                 aria-expanded={isMenuOpen}
-                title={t.allQuotes}
+                title={t.themesMenu}
               >
-                <FaList />
+                {isMenuOpen ? <FaTimes/> : <FaList />}
               </button>
 
               {isMenuOpen && (
-                <div className="quotes-menu">
-                  <h3 className="quotes-menu-title">{t.allQuotes}</h3>
+                <div className="quotes-menu" ref={quotesMenu}>
+                  <h3 className="quotes-menu-title">{t.themesMenu}</h3>
                   <ul className="quotes-menu-list">
-                    {themeQuotes.map((q, idx) => (
-                      <li key={q._id}>
-                        <button
-                          ref={idx === currentIndex ? activeItemRef : null}
-                          className={`quotes-menu-item ${idx === currentIndex ? "active" : ""}`}
-                          onClick={() => goToQuote(idx)}
-                        >
-                          <span className="quotes-menu-index">{idx + 1}</span>
-                          <span className="quotes-menu-text">“{q.quote}”</span>
-                        </button>
-                      </li>
-                    ))}
+                    {themes.map((theme) => {
+                      const Icon = THEME_ICONS[theme.key] || FaFeatherAlt;
+                      const first = theme.quotes[0];
+                      const snippet =
+                        language === "en" ? first.quote : first.italianQuote;
+                      const isActive = theme.key === activeTheme.key;
+                      return (
+                        <li key={theme.key}>
+                          <button
+                            ref={isActive ? activeItemRef : null}
+                            className={`quotes-menu-item ${isActive ? "active" : ""}`}
+                            onClick={() => goToTheme(theme.key)}
+                          >
+                            <span className="quotes-menu-icon">
+                              <Icon />
+                            </span>
+                            <span className="quotes-menu-meta">
+                              <span className="quotes-menu-name">
+                                {language === "en" ? theme.label.en : theme.label.it}
+                              </span>
+                              <span className="quotes-menu-snippet">
+                                “{snippet}”
+                              </span>
+                            </span>
+                            <span className="quotes-menu-count">
+                              {theme.count}
+                            </span>
+                          </button>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               )}

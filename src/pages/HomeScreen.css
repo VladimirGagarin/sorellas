@@ -155,6 +155,7 @@
   background: radial-gradient(circle at center, var(--glass-highlight) 0%, transparent 70%);
   opacity: 0.3;
   animation: rotateShine 20s linear infinite;
+  pointer-events: none;
 }
 
 @keyframes rotateShine {
@@ -1148,5 +1149,610 @@
   .scroll-top-btn,
   .refresh-random-btn {
     display: none !important;
+  }
+}
+
+/* ===== Landing page (new home) ===== */
+.landing {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.landing-hero-content {
+  grid-template-columns: 1fr 420px;
+}
+
+.landing-hero-illustration .floating-flowers {
+  position: relative;
+  width: 380px;
+  height: 380px;
+  margin: 0 auto;
+}
+
+.landing-eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--leaf-emerald);
+  margin-bottom: 14px;
+  display: block;
+}
+
+.landing-hero .title-gradient {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  margin-bottom: 18px;
+}
+
+.floating-flowers .flower {
+  position: absolute;
+  font-size: 3rem;
+  filter: drop-shadow(0 6px 18px rgba(170, 116, 30, 0.35));
+  animation: flowerFloat 7s ease-in-out infinite;
+}
+
+.floating-flowers .float-1 {
+  top: 6%;
+  left: 12%;
+  font-size: 3.6rem;
+}
+
+.floating-flowers .float-2 {
+  top: 58%;
+  right: 6%;
+  animation-delay: 1.4s;
+}
+
+.floating-flowers .float-3 {
+  bottom: 4%;
+  left: 20%;
+  font-size: 3.4rem;
+  animation-delay: 2.6s;
+}
+
+.floating-flowers .float-4 {
+  top: 38%;
+  left: 0;
+  font-size: 2.6rem;
+  animation-delay: 3.4s;
+}
+
+@keyframes flowerFloat {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(14px, -18px) rotate(12deg); }
+}
+
+/* Sections */
+.landing-section {
+  width: 100%;
+  padding: 0 5%;
+}
+
+.landing-section-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.landing-section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  color: var(--text-primary);
+  margin: 0 0 8px;
+  position: relative;
+}
+
+.landing-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 3px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+}
+
+.landing-section-hint {
+  margin: 18px auto 0;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.landing-section .section-icon {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  color: var(--leaf-emerald);
+}
+
+/* Quote of the day */
+.landing-quote {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.landing-section-cta {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.landing-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  background: var(--glass-bg);
+  border: 1px solid var(--border-color);
+  color: var(--leaf-emerald);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.landing-link-btn:hover {
+  border-color: var(--leaf-emerald);
+  color: var(--leaf-emerald);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(var(--primary-green-rgb), 0.25);
+}
+
+/* Prayer of the day */
+.landing-prayer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2.25rem 2.75rem;
+  text-align: center;
+}
+
+.landing-prayer-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  color: var(--text-primary);
+  margin-bottom: 1.1rem;
+}
+
+.landing-prayer-text {
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0 auto 1.4rem;
+  max-width: 560px;
+}
+
+.landing-prayer-foot {
+  text-align: center;
+}
+
+.landing-prayer-origin {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.landing-prayer-new {
+  margin-top: 1.4rem;
+}
+
+/* CTA cards */
+.cta-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.cta-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 2rem 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: all 0.28s ease;
+  box-shadow: 0 8px 26px var(--shadow-color);
+}
+
+.cta-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--leaf-emerald);
+  box-shadow: 0 16px 40px rgba(var(--primary-green-rgb), 0.28);
+}
+
+.cta-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #FFFDF6;
+  background: linear-gradient(135deg, var(--leaf-emerald), var(--primary-green));
+  box-shadow: 0 6px 18px rgba(var(--primary-green-rgb), 0.35);
+}
+
+.cta-card-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.cta-card-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.cta-card-arrow {
+  color: var(--leaf-emerald);
+  font-size: 1rem;
+  transition: transform 0.25s ease;
+}
+
+.cta-card:hover .cta-card-arrow {
+  transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .landing-hero-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .landing-hero-illustration {
+    order: -1;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .landing-hero-illustration .floating-flowers {
+    width: 300px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-prayer,
+  .landing-quote .quotes-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .cta-cards {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-hero-illustration .floating-flowers {
+    width: 240px;
+    height: 180px;
+  }
+
+  .floating-flowers .flower {
+    font-size: 2.2rem;
+  }
+
+  .floating-flowers .float-1 {
+    font-size: 2.8rem;
+    left: 6%;
+  }
+
+  .floating-flowers .float-3 {
+    font-size: 2.5rem;
+  }
+}
+
+/* ===== Landing "wow" polish ===== */
+
+/* Scroll-reveal entrances */
+.landing-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--d, 0ms),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--d, 0ms);
+  will-change: opacity, transform;
+}
+
+.landing-reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Shimmering gradient title */
+.landing-hero .title-gradient {
+  background-size: 200% auto;
+  animation: titleShimmer 6s linear infinite;
+}
+
+@keyframes titleShimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Hero CTA buttons */
+.landing-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 34px;
+}
+
+.landing-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.7rem;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.98rem;
+  text-decoration: none;
+  transition: all 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.landing-cta-btn.primary {
+  color: #FFFDF6;
+  background: linear-gradient(135deg, var(--leaf-emerald), var(--primary-green));
+  box-shadow: 0 10px 30px rgba(var(--primary-green-rgb), 0.4);
+}
+
+.landing-cta-btn.primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -60%;
+  width: 40%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.55s ease;
+}
+
+.landing-cta-btn.primary:hover::before {
+  left: 130%;
+}
+
+.landing-cta-btn.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(var(--primary-green-rgb), 0.55);
+}
+
+.landing-cta-btn.ghost {
+  color: var(--leaf-emerald);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-color);
+}
+
+.landing-cta-btn.ghost:hover {
+  border-color: var(--leaf-emerald);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(var(--primary-green-rgb), 0.25);
+}
+
+/* Scroll-to-explore chip */
+.landing-scroll-wrap {
+  text-align: center;
+  margin-top: 2.2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.landing-scroll-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem 1.25rem;
+  border-radius: 999px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.landing-scroll-chip svg {
+  color: var(--accent-gold);
+  animation: chevronBob 1.6s ease-in-out infinite;
+}
+
+@keyframes chevronBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+/* Hero illustration glow + sparkles */
+.landing-illustration {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-orb-glow {
+  position: absolute;
+  inset: 12% 0;
+  background: radial-gradient(
+    circle,
+    rgba(var(--primary-green-rgb), 0.5),
+    rgba(184, 90, 25, 0.18) 55%,
+    transparent 72%
+  );
+  filter: blur(36px);
+  border-radius: 50%;
+  animation: orbPulse 5.5s ease-in-out infinite;
+}
+
+@keyframes orbPulse {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.12); opacity: 1; }
+}
+
+.sparkle {
+  position: absolute;
+  color: var(--accent-gold);
+  font-size: 1.1rem;
+  line-height: 1;
+  opacity: 0;
+  animation: twinkle 3.4s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px rgba(212, 169, 76, 0.8));
+}
+
+.sparkle-1 {
+  top: 4%;
+  right: 10%;
+  font-size: 1.3rem;
+}
+
+.sparkle-2 {
+  bottom: 12%;
+  left: 4%;
+  font-size: 0.95rem;
+  animation-delay: 1.1s;
+}
+
+.sparkle-3 {
+  top: 46%;
+  right: -2%;
+  font-size: 0.85rem;
+  animation-delay: 2.2s;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.6) rotate(0deg);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1) rotate(20deg);
+  }
+}
+
+/* Section ornaments */
+.landing-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 0.9rem;
+  color: var(--accent-gold);
+}
+
+.landing-ornament .ornament-line {
+  width: 54px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-gold));
+}
+
+.landing-ornament .ornament-line:last-child {
+  background: linear-gradient(90deg, var(--accent-gold), transparent);
+}
+
+.landing-ornament .ornament-fleur {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* CTA card number badge + hover ring */
+.cta-card-num {
+  position: absolute;
+  top: 1rem;
+  right: 1.1rem;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  color: var(--text-muted);
+  opacity: 0.65;
+}
+
+.cta-card:hover {
+  box-shadow:
+    0 16px 40px rgba(var(--primary-green-rgb), 0.28),
+    0 0 0 1px var(--leaf-emerald);
+}
+
+.cta-card:hover .cta-card-icon {
+  animation: iconWiggle 0.5s ease;
+}
+
+@keyframes iconWiggle {
+  0%, 100% { transform: rotate(0); }
+  30% { transform: rotate(-9deg); }
+  70% { transform: rotate(7deg); }
+}
+
+/* Footer flourish */
+.landing-footer {
+  text-align: center;
+  padding: 1rem 1rem 3rem;
+  color: var(--text-muted);
+}
+
+.landing-footer .landing-ornament {
+  margin-bottom: 0.8rem;
+}
+
+.landing-footer p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .landing-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .landing-hero .title-gradient,
+  .floating-flowers .flower,
+  .landing-scroll-chip svg,
+  .sparkle,
+  .landing-orb-glow {
+    animation: none !important;
+  }
+}
+
+/* Responsive tweaks for polish */
+@media (max-width: 480px) {
+  .landing-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .landing-cta-btn {
+    justify-content: center;
+  }
+
+  .landing-scroll-wrap {
+    margin-top: 1.4rem;
+  }
+
+  .sparkle-3 {
+    right: 0;
   }
 }

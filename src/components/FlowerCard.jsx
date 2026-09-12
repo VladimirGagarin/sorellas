@@ -44,7 +44,6 @@ export default function FlowerCard({
   isDaily = false,
   compact = false,
   isFavorite: initialFavorite = false,
-  currentFlowerId = null,
 }) {
   const [isFavorite, setIsFavorite] = useState(initialFavorite);
   const [imageRef, isImageVisible] = useLazyLoad();

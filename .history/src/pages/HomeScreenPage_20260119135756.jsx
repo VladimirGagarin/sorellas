@@ -1,1 +1,0 @@
-export defult  function HomeS
