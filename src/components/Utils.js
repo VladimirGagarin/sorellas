@@ -1228,6 +1228,201 @@ export function getFamousPrayers() {
         "La pace è opera della giustizia indirettamente, effetto della carità direttamente.",
       photo: "../assets/pope_leo_the_great.jpg",
     },
+
+    // -----------------------------------------------------------------
+    // Prayers quoted in Sacred Scripture (no photos - monogram avatars)
+    // -----------------------------------------------------------------
+    {
+      author: "The Lord's Prayer (Matthew 6)",
+      prayer:
+        "Our Father who art in heaven, hallowed be thy name. Thy kingdom come. Thy will be done on earth as it is in heaven. Give us this day our daily bread. And forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation, but deliver us from evil. Amen.",
+      italianPrayer:
+        "Padre nostro che sei nei cieli, sia santificato il tuo nome. Venga il tuo regno. Sia fatta la tua volontà, come in cielo così in terra. Dacci oggi il nostro pane quotidiano. E rimetti a noi i nostri debiti, come anche noi li rimettiamo ai nostri debitori. E non ci indurre in tentazione, ma liberaci dal male. Amen.",
+      quote: "“Give us this day our daily bread, and forgive us our trespasses.”",
+      italianQuote:
+        "“Dacci oggi il nostro pane quotidiano, e rimetti a noi i nostri debiti.”",
+    },
+    {
+      author: "The Magnificat – Luke 1 (Mary)",
+      prayer:
+        "My soul proclaims the greatness of the Lord; my spirit rejoices in God my Savior, for He has looked upon His lowly servant. From this day all generations will call me blessed: the Almighty has done great things for me, and holy is His name. He has mercy on those who fear Him in every generation. He has shown the strength of His arm, and has scattered the proud in their conceit. He has cast down the mighty from their thrones, and has lifted up the humble. He has filled the hungry with good things, and the rich He has sent away empty. He has come to the help of His servant Israel, for He has remembered His promise of mercy, the promise He made to our fathers, to Abraham and his children forever. Amen.",
+      italianPrayer:
+        "L'anima mia magnifica il Signore e il mio spirito esulta in Dio, mio salvatore, perché ha guardato l'umiltà della sua serva. D'ora in poi tutte le generazioni mi chiameranno beata. Grandi cose ha fatto per me l'Onnipotente e Santo è il suo nome: di generazione in generazione la sua misericordia si stende su quelli che lo temono. Ha spiegato la potenza del suo braccio, ha disperso i superbi nei pensieri del loro cuore; ha rovesciato i potenti dai troni, ha innalzato gli umili; ha ricolmato di beni gli affamati, ha rimandato a mani vuote i ricchi. Ha soccorso Israele, suo servo, ricordandosi della sua misericordia, come aveva promesso ai nostri padri, ad Abramo e alla sua discendenza, per sempre. Amen.",
+      quote:
+        "“My soul proclaims the greatness of the Lord; my spirit rejoices in God my Savior.”",
+      italianQuote:
+        "“L'anima mia magnifica il Signore e il mio spirito esulta in Dio, mio salvatore.”",
+    },
+    {
+      author: "The Benedictus – Luke 1 (Zechariah)",
+      prayer:
+        "Blessed be the Lord, the God of Israel, for He has visited and brought redemption to His people. He has raised up for us a mighty savior, born of the house of His servant David. Through His holy prophets He promised of old that He would save us from our enemies, from the hands of all who hate us, and show mercy to our fathers, remembering His holy covenant and the oath He swore to our father Abraham: to set us free from the hands of our enemies, free to worship Him without fear, holy and righteous in His sight all the days of our life. And you, child, shall be called the prophet of the Most High, for you will go before the Lord to prepare His ways, to give His people knowledge of salvation through the forgiveness of their sins. In the tender compassion of our God the dawn from on high shall break upon us, to shine on those who dwell in darkness and the shadow of death, and to guide our feet into the way of peace.",
+      italianPrayer:
+        "Benedetto il Signore, Dio d'Israele, perché ha visitato e redento il suo popolo, e ha suscitato per noi una salvezza potente nella casa di Davide, suo servo, come aveva promesso per bocca dei suoi santi profeti d'un tempo: salvezza dai nostri nemici e dalle mani di quanti ci odiano. Così Egli ha concesso misericordia ai nostri padri e si è ricordato della sua santa alleanza, del giuramento fatto ad Abramo, nostro padre, di concederci, liberati dalle mani dei nemici, di servirlo senza timore, in santità e giustizia al suo cospetto, per tutti i nostri giorni. E tu, bambino, sarai chiamato profeta dell'Altissimo, perché andrai innanzi al Signore a preparargli le strade, per dare al suo popolo la conoscenza della salvezza nella remissione dei suoi peccati. Grazie alla bontà misericordiosa del nostro Dio, ci visiterà un sole che sorge dall'alto, per risplendere su quelli che stanno nelle tenebre e nell'ombra di morte, e dirigere i nostri passi sulla via della pace.",
+      quote:
+        "“The dawn from on high shall break upon us to guide our feet into the way of peace.”",
+      italianQuote:
+        "“Un sole che sorge dall'alto verrà a dirigere i nostri passi sulla via della pace.”",
+    },
+    {
+      author: "The Nunc Dimittis – Luke 2 (Simeon)",
+      prayer:
+        "Now, Master, you may let your servant go in peace, according to your word, for my eyes have seen your salvation, which you prepared in the sight of all peoples: a light for revelation to the Gentiles, and glory for your people Israel.",
+      italianPrayer:
+        "Ora lascia, o Signore, che il tuo servo vada in pace, secondo la tua parola, perché i miei occhi hanno visto la tua salvezza, preparata da te davanti a tutti i popoli: luce per rivelarti alle genti e gloria del tuo popolo Israele.",
+      quote:
+        "“My eyes have seen your salvation: a light for revelation to the Gentiles.”",
+      italianQuote:
+        "“I miei occhi hanno visto la tua salvezza: luce per rivelarti alle genti.”",
+    },
+    {
+      author: "Psalm 23 – The Good Shepherd",
+      prayer:
+        "The Lord is my shepherd; I shall not want. He makes me lie down in green pastures. He leads me beside still waters. He restores my soul. He leads me in paths of righteousness for his name's sake. Even though I walk through the valley of the shadow of death, I will fear no evil, for you are with me; your rod and your staff, they comfort me. You prepare a table before me in the presence of my enemies. You anoint my head with oil; my cup overflows. Surely goodness and mercy shall follow me all the days of my life, and I shall dwell in the house of the Lord forever.",
+      italianPrayer:
+        "Il Signore è il mio pastore: non manco di nulla. Su pascoli erbosi mi fa riposare, ad acque tranquille mi conduce. Rinfranca l'anima mia, mi guida per il giusto cammino per amore del suo nome. Anche se vado per una valle oscura, non temo alcun male, perché tu sei con me. Il tuo bastone e il tuo vincastro mi danno sicurezza. Davanti a me tu prepari una mensa sotto gli occhi dei miei nemici. Ungi di olio il mio capo; il mio calice trabocca. Sì, bontà e fedeltà mi saranno compagne tutti i giorni della mia vita, e abiterò nella casa del Signore per lunghissimi anni.",
+      quote:
+        "“Even though I walk through the valley of the shadow of death, I will fear no evil, for you are with me.”",
+      italianQuote:
+        "“Anche se vado per una valle oscura, non temo alcun male, perché tu sei con me.”",
+    },
+    {
+      author: "Psalm 51 – Have Mercy on Me, O God",
+      prayer:
+        "Have mercy on me, O God, in your goodness; in the greatness of your compassion wipe out my offense. Thoroughly wash me from my guilt and of my sin cleanse me. For I acknowledge my offense, and my sin is before me always. Cleanse me with hyssop, that I may be pure; wash me, and I shall be whiter than snow. Let me hear the sounds of joy and gladness; let the bones you have crushed rejoice. A clean heart create in me, O God, and a steadfast spirit renew within me. Cast me not out from your presence, and your holy spirit take not from me. Give me back the joy of your salvation, and a willing spirit sustain in me. O Lord, open my lips, and my mouth shall proclaim your praise.",
+      italianPrayer:
+        "Pietà di me, o Dio, nel tuo amore; nella tua grande misericordia cancella il mio peccato. Lavami tutto dalla mia colpa, mondami dal mio errore. Riconosco la mia colpa, il mio peccato mi sta sempre dinanzi. Purificami con l'issopo e sarò mondo, lavami e sarò più bianco della neve. Fammi sentire gioia e letizia, esulteranno le ossa che hai spezzato. Crea in me, o Dio, un cuore puro, e rinnova dentro di me uno spirito saldo. Non scacciarmi dalla tua presenza e non privarmi del tuo santo spirito. Rendimi la gioia della tua salvezza e sostienimi con spirito generoso. Signore, apri le mie labbra e la mia bocca proclami la tua lode.",
+      quote:
+        "“A clean heart create in me, O God, and a steadfast spirit renew within me.”",
+      italianQuote:
+        "“Crea in me, o Dio, un cuore puro, e rinnova dentro di me uno spirito saldo.”",
+    },
+    {
+      author: "Psalm 91 – The Shelter of the Most High",
+      prayer:
+        "You who dwell in the shelter of the Most High, who abide in the shadow of the Almighty, say to the Lord, My refuge and my fortress, my God, in whom I trust. He will rescue you from the snare of the fowler, from the destroying pestilence. With his pinions he will cover you, and under his wings you shall take refuge; his faithfulness is a buckler and a shield. You shall not fear the terror of the night, nor the arrow that flies by day; nor the pestilence that roams in darkness, nor the devastation that ravages at noon. Because he clings to me, I will deliver him; because he knows my name, I will set him on high. When he calls to me, I will answer him; I will be with him in distress, I will rescue him and glorify him.",
+      italianPrayer:
+        "Tu che abiti al riparo dell'Altissimo e dimori all'ombra dell'Onnipotente, di' al Signore: «Mio rifugio e mia fortezza, mio Dio, in te confido». Egli ti libererà dal laccio del cacciatore, dalla peste che distrugge. Ti coprirà con le sue penne e sotto le sue ali troverai rifugio; la sua fedeltà è scudo e corazza. Non temerai i terrori della notte, né la freccia che vola di giorno, né la peste che vaga nelle tenebre, né lo sterminio che devasta a mezzogiorno. Poiché mi sei dedicato, io ti libererò; ti renderò glorioso, perché conosci il mio nome. Mi invocherà e io gli risponderò; sarò con lui nella sventura, lo salverò e lo renderò glorioso.",
+      quote:
+        "“With his pinions he will cover you, and under his wings you shall take refuge.”",
+      italianQuote:
+        "“Ti coprirà con le sue penne e sotto le sue ali troverai rifugio.”",
+    },
+    {
+      author: "Psalm 121 – I Lift Up My Eyes to the Hills",
+      prayer:
+        "I lift up my eyes to the hills – from where shall come my help? My help comes from the Lord, who made heaven and earth. May he not suffer your foot to slip; may he slumber not who guards you: behold he neither slumbers nor sleeps, the guardian of Israel. The Lord is your guardian; the Lord is your shade at your right hand. By day the sun shall not smite you, nor the moon by night. The Lord will guard you from all evil; he will guard your life. The Lord will guard your coming and your going, both now and forever.",
+      italianPrayer:
+        "Alzo gli occhi verso i monti: da dove mi verrà l'aiuto? Il mio aiuto viene dal Signore, che ha fatto cielo e terra. Non lascerà vacillare il tuo piede, non si addormenterà il tuo custode. Ecco, non si addormenta né prende sonno il custode d'Israele. Il Signore è il tuo custode, il Signore è come ombra che ti copre, alla tua destra. Di giorno non ti colpirà il sole, né di notte la luna. Il Signore ti proteggerà da ogni male, egli proteggerà la tua vita. Il Signore proteggerà la tua entrata e la tua uscita, ora e sempre.",
+      quote:
+        "“I lift up my eyes to the hills – from where shall come my help? My help comes from the Lord.”",
+      italianQuote:
+        "“Alzo gli occhi verso i monti: da dove mi verrà l'aiuto? Il mio aiuto viene dal Signore.”",
+    },
+    {
+      author: "Psalm 139 – Search Me, O God",
+      prayer:
+        "Lord, you have probed me and you know me; you know when I sit and when I stand. You understand my thoughts from afar. Where can I go from your spirit? Where can I flee from your presence? If I go up to the heavens, you are there; if I sink to the netherworld, you are present there. If I take the wings of the dawn and dwell beyond the sea, even there your hand guides me and your right hand holds me fast. Truly you have formed my inmost being; you knit me in my mother's womb. I give you thanks that I am fearfully, wonderfully made; wonderful are your works. Probe me, God, know my heart; try me, know my thoughts; see if there is a hurtful way in me, and lead me on the way of eternity.",
+      italianPrayer:
+        "Signore, tu mi scruti e mi conosci: tu conosci quando mi siedo e quando mi alzo, intendi da lontano i miei pensieri. Dove andare lontano dal tuo spirito? Dove fuggire dalla tua presenza? Se salgo in cielo, là tu sei; se scendo negli inferi, eccoti. Se prendo le ali dell'aurora per abitare all'estremità del mare, anche là mi guida la tua mano e mi afferra la tua destra. Sei tu che hai formato i miei reni e mi hai tessuto nel seno di mia madre. Io ti ringrazio: mi hai fatto come un prodigio; stupende sono le tue opere. Scrutami, o Dio, e conosci il mio cuore; provami e conosci i miei pensieri; vedi se percorro una via di menzogna e guidami sulla via della vita eterna.",
+      quote:
+        "“I give you thanks that I am fearfully, wonderfully made; wonderful are your works.”",
+      italianQuote:
+        "“Io ti ringrazio: mi hai fatto come un prodigio; stupende sono le tue opere.”",
+    },
+    {
+      author: "Psalm 100 – A Call to Praise",
+      prayer:
+        "Make a joyful noise to the Lord, all the lands! Serve the Lord with gladness; come into his presence with singing! Know that the Lord, he is God! It is he who made us, and we are his; we are his people, and the sheep of his pasture. Enter his gates with thanksgiving, and his courts with praise! Give thanks to him, bless his name! For the Lord is good; his steadfast love endures forever, and his faithfulness to all generations.",
+      italianPrayer:
+        "Acclamate il Signore, voi tutti della terra, servite il Signore nella gioia, presentatevi a lui con esultanza. Riconoscete che il Signore è Dio: egli ci ha fatti e noi siamo suoi, suo popolo e gregge del suo pascolo. Varcate le sue porte con inni di grazie, i suoi atri con canti di lode, lodatelo e benedite il suo nome. Perché il Signore è buono, il suo amore è per sempre, la sua fedeltà di generazione in generazione.",
+      quote:
+        "“The Lord is good; his steadfast love endures forever, and his faithfulness to all generations.”",
+      italianQuote:
+        "“Il Signore è buono, il suo amore è per sempre, la sua fedeltà di generazione in generazione.”",
+    },
+    {
+      author: "Psalm 46 – Be Still and Know",
+      prayer:
+        "God is our refuge and our strength, an ever-present help in distress. Therefore we fear not, though the earth be shaken and mountains plunge into the depths of the sea; though its waters rage and foam and mountains quake at its surging. There is a stream whose runlets gladden the city of God, the holy dwelling of the Most High. God is in its midst; it shall not be disturbed; God will help it at the break of dawn. The Lord of hosts is with us; our stronghold is the God of Jacob. Come! behold the deeds of the Lord, the astounding things he has wrought on earth: he stops wars to the ends of the earth, the bow he breaks and the spear he snaps. Be still, and know that I am God, exalted among the nations, exalted upon the earth.",
+      italianPrayer:
+        "Dio è per noi rifugio e forza, aiuto sempre vicino nelle angosce. Perciò non temiamo se trema la terra, se i monti sprofondano nel mare; se fremono e si gonfiano le sue acque, se i monti sussultano per i suoi flutti. Un fiume con i suoi canali rallegra la città di Dio, la più santa delle dimore dell'Altissimo. Dio è in mezzo ad essa: non potrà vacillare. Dio la soccorre allo spuntare dell'alba. Il Signore degli eserciti è con noi, nostro baluardo è il Dio di Giacobbe. Venite, contemplate le opere del Signore, egli ha fatto portenti sulla terra: farà cessare le guerre fino ai confini della terra, spezzerà gli archi e le lance. Fermatevi e sappiate che io sono Dio: eccelso tra le genti, eccelso sulla terra.",
+      quote: "“Be still, and know that I am God!”",
+      italianQuote: "“Fermatevi e sappiate che io sono Dio!”",
+    },
+    {
+      author: "Psalm 27 – The Lord Is My Light",
+      prayer:
+        "The Lord is my light and my salvation; whom should I fear? The Lord is the refuge of my life; of whom should I be afraid? One thing I ask of the Lord; this I seek: to dwell in the house of the Lord all the days of my life, to gaze on the loveliness of the Lord and to visit his temple. For he will hide me in his shelter in time of trouble; he will conceal me under the cover of his tent; he will set me high upon a rock. I believe that I shall see the bounty of the Lord in the land of the living. Wait for the Lord with courage; be stouthearted, and wait for the Lord.",
+      italianPrayer:
+        "Il Signore è mia luce e mia salvezza: di chi avrò timore? Il Signore è difesa della mia vita: di chi avrò paura? Una cosa ho chiesto al Signore, questa sola io cerco: abitare nella casa del Signore tutti i giorni della mia vita, per contemplare la bellezza del Signore e meditare nel suo tempio. Egli mi offre un luogo di rifugio nel giorno della sventura, mi nasconde nel segreto della sua dimora, mi solleva sulla roccia. Sono certo di contemplare la bontà del Signore nella terra dei viventi. Spera nel Signore, sii forte, si rinfranchi il tuo cuore e spera nel Signore.",
+      quote:
+        "“I believe that I shall see the bounty of the Lord in the land of the living.”",
+      italianQuote:
+        "“Sono certo di contemplare la bontà del Signore nella terra dei viventi.”",
+    },
+    {
+      author: "Numbers 6:24–26 – The Priestly Blessing",
+      prayer:
+        "The Lord bless you and keep you. The Lord make his face shine upon you and be gracious to you. The Lord look upon you kindly and give you peace.",
+      italianPrayer:
+        "Il Signore ti benedica e ti protegga. Il Signore faccia risplendere su di te il suo volto e ti sia propizio. Il Signore volga su di te il suo volto e ti conceda pace.",
+      quote: "“The Lord look upon you kindly and give you peace.”",
+      italianQuote: "“Il Signore volga su di te il suo volto e ti conceda pace.”",
+    },
+    {
+      author: "Philippians 4:6–7 – A Prayer of Peace",
+      prayer:
+        "Have no anxiety at all, but in everything, by prayer and petition, with thanksgiving, make your requests known to God. Then the peace of God that surpasses all understanding will guard your hearts and minds in Christ Jesus.",
+      italianPrayer:
+        "Non angustiatevi per nulla, ma in ogni circostanza fate conoscere a Dio le vostre richieste con preghiere, suppliche e ringraziamenti. E la pace di Dio, che supera ogni intelligenza, custodirà i vostri cuori e i vostri pensieri in Cristo Gesù.",
+      quote:
+        "“The peace of God that surpasses all understanding will guard your hearts and minds in Christ Jesus.”",
+      italianQuote:
+        "“La pace di Dio, che supera ogni intelligenza, custodirà i vostri cuori e i vostri pensieri in Cristo Gesù.”",
+    },
+    {
+      author: "Micah 6:8 – To Act Justly",
+      prayer:
+        "This is what the Lord asks of you: only this, to act justly, to love tenderly, and to walk humbly with your God.",
+      italianPrayer:
+        "Questo è ciò che il Signore ti chiede: praticare la giustizia, amare con tenerezza e camminare umilmente con il tuo Dio.",
+      quote: "“To act justly, to love tenderly, and to walk humbly with your God.”",
+      italianQuote:
+        "“Praticare la giustizia, amare con tenerezza e camminare umilmente con il tuo Dio.”",
+    },
+    {
+      author: "Ephesians 3:16–19 – Strengthened in Inner Being",
+      prayer:
+        "I bow my knees before the Father, that he may grant you in accord with the riches of his glory to be strengthened with power through his Spirit in the inner self, and that Christ may dwell in your hearts through faith; that you, rooted and grounded in love, may have strength to comprehend with all the holy ones what is the breadth and length and height and depth, and to know the love of Christ that surpasses knowledge, so that you may be filled with all the fullness of God.",
+      italianPrayer:
+        "Piego le ginocchia davanti al Padre, perché vi conceda, secondo la ricchezza della sua gloria, di essere potentemente rafforzati dal suo Spirito nell'uomo interiore, e che Cristo abiti per la fede nei vostri cuori, perché, radicati e fondati nell'amore, possiate comprendere con tutti i santi quale sia la larghezza, la lunghezza, l'altezza e la profondità, e conoscere l'amore di Cristo che sorpassa ogni conoscenza, perché siate ricolmi di tutta la pienezza di Dio.",
+      quote:
+        "“Rooted and grounded in love, may you be filled with all the fullness of God.”",
+      italianQuote:
+        "“Radicati e fondati nell'amore, siate ricolmi di tutta la pienezza di Dio.”",
+    },
+    {
+      author: "Psalm 19:14 – Words of My Mouth",
+      prayer:
+        "Let the words of my mouth and the meditation of my heart be acceptable in your sight, O Lord, my rock and my redeemer.",
+      italianPrayer:
+        "Ti siano gradite le parole della mia bocca e i pensieri del mio cuore davanti a te, Signore, mia roccia e mio redentore.",
+      quote:
+        "“Let the words of my mouth and the meditation of my heart be acceptable in your sight, O Lord.”",
+      italianQuote:
+        "“Ti siano gradite le parole della mia bocca e i pensieri del mio cuore davanti a te, Signore.”",
+    },
+    {
+      author: "1 Thessalonians 5:16–18 – Rejoice Always",
+      prayer:
+        "Rejoice always. Pray without ceasing. In all circumstances give thanks, for this is the will of God for you in Christ Jesus.",
+      italianPrayer:
+        "Siate sempre lieti, pregate ininterrottamente, in ogni cosa rendete grazie: questa è infatti la volontà di Dio in Cristo Gesù verso di voi.",
+      quote: "“Rejoice always; pray without ceasing; in all circumstances give thanks.”",
+      italianQuote:
+        "“Siate sempre lieti, pregate ininterrottamente, in ogni cosa rendete grazie.”",
+    },
   ];
 
   return prayersList;
