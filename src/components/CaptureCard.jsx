@@ -103,24 +103,22 @@ export default function CaptureCard({
       </button>
 
       {snapShotCaptured && (
-        <div className="image-preview-overlay">
-          <div className="image-overlay-content">
-            <div className="header-content">
+        <div className="capture-overlay">
+          <div className="capture-content">
+            <div className="capture-header">
               <div className="title">
                 <h2>{title}</h2>
                 {subtitle && <p>{subtitle}</p>}
               </div>
-              <div className="close-overlay" onClick={close}>
-                <span>
-                  <FaTimes />
-                </span>
-              </div>
+              <button className="capture-close" onClick={close} aria-label={t.close}>
+                <FaTimes />
+              </button>
             </div>
-            <div className="image-preiview-main">
+            <div className="capture-img-wrap">
               <img src={snapShotCaptured} alt={title} />
             </div>
 
-            <div className="image-preview-footer">
+            <div className="capture-footer">
               <button className="quotes-action share" onClick={download}>
                 <FaDownload /> {t.savePhoto}
               </button>
