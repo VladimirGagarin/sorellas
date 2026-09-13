@@ -20,6 +20,7 @@ import {
   FaSeedling,
   FaPrayingHands,
   FaChurch,
+  FaHandSparkles,
 } from "react-icons/fa";
 import { useLanguage } from "../contexts/useLanguage";
 import { useTheme } from "../contexts/theme.jsx";
@@ -69,6 +70,7 @@ export default function Header() {
       deepseekQuestions: "Deepseek Questions",
       favouriteWords: "Favourite Words",
       justBecause: "Just Because",
+      tenderPresence: "Tender Presence",
       currentLanguage: "Language",
       welcome:  "Welcome to FLowers of Prayer Garden",
       menu: "Garden Paths",
@@ -95,6 +97,7 @@ export default function Header() {
       deepseekQuestions: "Domande Deepseek",
       favouriteWords: "Parole Preferite",
       justBecause: "Solo Perché",
+      tenderPresence: "Presenza Tenera",
       settings: "Attrezzi da Giardino",
       logout: "Ritorno alla Terra",
       rosesOfRome: "Rose di Roma",
@@ -216,6 +219,12 @@ export default function Header() {
       label: t.justBecause,
       link: "/just-because",
       color: getFlowerColor("rose"), // Grace / poetry
+    },
+    {
+      icon: <FaHandSparkles />,
+      label: t.tenderPresence,
+      link: "/tender-presence",
+      color: isDarkMode ? "#E8C87A" : "#8C6D1F", // Warm gold
     },
   ];
 
