@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header.jsx";
 import { useLanguage } from "../contexts/useLanguage.js";
@@ -91,6 +91,7 @@ export default function PrayersPage() {
   const [randomKey, setRandomKey] = useState(0);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [expanded, setExpanded] = useState(() => new Set());
+  const sentinelRef = useRef(null);
 
   const t = useMemo(() => {
     const en = {
@@ -200,6 +201,25 @@ export default function PrayersPage() {
   const handleShuffle = () => {
     setRandomKey((k) => k + 1);
   };
+
+  // Infinite scroll: reveal 2 more prayers when the sentinel comes within
+  // 200px of the viewport bottom.
+  useEffect(() => {
+    const sentinel = sentinelRef.current;
+    if (!sentinel) return undefined;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && shown.length < filtered.length) {
+            setVisibleCount((c) => Math.min(c + 2, filtered.length));
+          }
+        });
+      },
+      { rootMargin: "0px 0px 200px 0px" }
+    );
+    observer.observe(sentinel);
+    return () => observer.disconnect();
+  }, [shown.length, filtered.length]);
 
   const handleReset = () => {
     setAuthorQuery("");
@@ -404,19 +424,9 @@ export default function PrayersPage() {
           </div>
         )}
 
-        {/* Load more */}
+        {/* Infinite scroll sentinel */}
         {hasFilters && shown.length < filtered.length && (
-          <div className="load-more-bar">
-            <button
-              className="load-more-btn"
-              onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
-            >
-              {t.showing(
-                Math.min(shown.length + PAGE_SIZE, filtered.length),
-                filtered.length
-              )}
-            </button>
-          </div>
+          <div ref={sentinelRef} className="scroll-sentinel" aria-hidden="true" />
         )}
       </div>
     </div>
