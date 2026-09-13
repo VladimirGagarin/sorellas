@@ -383,15 +383,20 @@
   margin: 0 0 1rem;
   padding: 0.85rem 1rem;
   border-left: 3px solid var(--primary-green);
-  background: var(--bg-secondary);
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 12px 12px 0;
+  background: linear-gradient(
+    135deg,
+    rgba(var(--primary-green-rgb), 0.12),
+    rgba(255, 253, 246, 0.02)
+  );
 }
 
 .quote-mark {
   flex-shrink: 0;
   color: var(--primary-green);
-  opacity: 0.55;
+  opacity: 0.6;
   margin-top: 0.15rem;
+  font-size: 1.05rem;
 }
 
 .prayer-quote p {
@@ -419,10 +424,10 @@
 }
 
 .prayer-text.collapsed {
-  max-height: 18em;
+  max-height: 6.5em;
   overflow: hidden;
-  mask-image: linear-gradient(to bottom, black 72%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 72%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
 }
 
 .read-more-btn {

@@ -4,6 +4,7 @@ import Header from "../components/Header.jsx";
 import { useLanguage } from "../contexts/useLanguage.js";
 import { getFamousPrayers, resolvePrayerPhoto } from "../components/Utils.js";
 import {
+  FaList,
   FaQuoteLeft,
   FaRandom,
   FaPrayingHands,
@@ -89,6 +90,7 @@ export default function PrayersPage() {
   const [authorQuery, setAuthorQuery] = useState("");
   const [lengthFilter, setLengthFilter] = useState("all");
   const [randomKey, setRandomKey] = useState(0);
+  const [mode, setMode] = useState("all");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [expanded, setExpanded] = useState(() => new Set());
   const sentinelRef = useRef(null);
@@ -110,6 +112,7 @@ export default function PrayersPage() {
       mediumHint: "40–90 words",
       longHint: "over 90 words",
       random: "Surprise Me",
+      showAll: "All Prayers",
       reset: "Reset",
       clearAuthor: "Clear",
       showing: (n, total) => `Showing ${n} of ${total} prayers`,
@@ -137,6 +140,7 @@ export default function PrayersPage() {
       mediumHint: "40–90 parole",
       longHint: "oltre 90 parole",
       random: "Sorpresa",
+      showAll: "Tutte le Preghiere",
       reset: "Azzera",
       clearAuthor: "Cancella",
       showing: (n, total) => `Mostrando ${n} di ${total} preghiere`,
@@ -186,8 +190,10 @@ export default function PrayersPage() {
     [allPrayers, randomKey]
   );
 
-  const displayed = hasFilters ? filtered : randomPrayers;
-  const shown = hasFilters ? displayed.slice(0, visibleCount) : displayed;
+  const isAll = !hasFilters && mode === "all";
+  const source = hasFilters ? filtered : isAll ? allPrayers : randomPrayers;
+  const sourceTotal = source.length;
+  const shown = isAll || hasFilters ? source.slice(0, visibleCount) : source;
 
   const toggleExpanded = (id) => {
     setExpanded((prev) => {
@@ -199,7 +205,13 @@ export default function PrayersPage() {
   };
 
   const handleShuffle = () => {
+    setMode("random");
     setRandomKey((k) => k + 1);
+  };
+
+  const handleShowAll = () => {
+    setMode("all");
+    setVisibleCount(PAGE_SIZE);
   };
 
   // Infinite scroll: reveal 2 more prayers when the sentinel comes within
@@ -210,8 +222,8 @@ export default function PrayersPage() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && shown.length < filtered.length) {
-            setVisibleCount((c) => Math.min(c + 2, filtered.length));
+          if (entry.isIntersecting && shown.length < sourceTotal) {
+            setVisibleCount((c) => Math.min(c + 2, sourceTotal));
           }
         });
       },
@@ -219,7 +231,7 @@ export default function PrayersPage() {
     );
     observer.observe(sentinel);
     return () => observer.disconnect();
-  }, [shown.length, filtered.length]);
+  }, [shown.length, sourceTotal]);
 
   const handleReset = () => {
     setAuthorQuery("");
@@ -327,9 +339,16 @@ export default function PrayersPage() {
                   <FaTimes /> {t.reset}
                 </button>
               ) : (
-                <button className="shuffle-btn" onClick={handleShuffle}>
-                  <FaRandom /> {t.random}
-                </button>
+                <>
+                  {mode === "random" && (
+                    <button className="shuffle-btn reset" onClick={handleShowAll}>
+                      <FaList /> {t.showAll}
+                    </button>
+                  )}
+                  <button className="shuffle-btn" onClick={handleShuffle}>
+                    <FaRandom /> {t.random}
+                  </button>
+                </>
               )}
             </div>
           </div>
@@ -337,7 +356,9 @@ export default function PrayersPage() {
           <p className="prayers-summary">
             {hasFilters
               ? t.showing(Math.min(shown.length, filtered.length), filtered.length)
-              : `${t.showing(shown.length, allPrayers.length)} — ${t.randomNote}`}
+              : isAll
+                ? t.showing(shown.length, allPrayers.length)
+                : `${t.showing(shown.length, allPrayers.length)} — ${t.randomNote}`}
           </p>
         </div>
 
@@ -425,7 +446,7 @@ export default function PrayersPage() {
         )}
 
         {/* Infinite scroll sentinel */}
-        {hasFilters && shown.length < filtered.length && (
+        {(hasFilters || isAll) && shown.length < sourceTotal && (
           <div ref={sentinelRef} className="scroll-sentinel" aria-hidden="true" />
         )}
       </div>
