@@ -171,14 +171,9 @@ export default function QuoteCard() {
           <QuotePhoto key={quote._id} quote={quote} />
           <div className="quotes-card-meta">
             <cite className="quotes-author">{quote.author}</cite>
-            <Link
-              to={`/quotes?theme=${encodeURIComponent(quote.category)}&item=${quote._id}`}
-              className="quotes-action explore"
-              data-html2canvas-ignore
-            >
+            <span className="quotes-category-badge">
               {language === "en" ? category.en : category.it}
-              <FaArrowRight />
-            </Link>
+            </span>
           </div>
         </div>
 
@@ -193,25 +188,32 @@ export default function QuoteCard() {
         <div className="gold-rule" />
 
         <span className="card-watermark">Aeternum Floreamus</span>
-
-        <div className="quotes-actions" data-html2canvas-ignore>
-          <CaptureCard
-            cardRef={QuoteCardRef}
-            title={quote.author}
-            subtitle={language === "en" ? category.en : category.it}
-            fileName={`quote-${quote.author}`}
-            shareUrl={shareUrl()}
-            shareText={`“${quoteText}” — ${quote.author}`}
-            buttonLabel={t.snapshot}
-          />
-          <button className="quotes-action share" onClick={handleShare}>
-            <FaLink /> {copied ? t.copied : t.copyLink}
-          </button>
-          <button className="quotes-action share" onClick={shuffleQuote}>
-            <FaRandom /> {t.newQuote}
-          </button>
-        </div>
       </article>
+
+      <div className="quotes-actions">
+        <Link
+          to={`/quotes?theme=${encodeURIComponent(quote.category)}&item=${quote._id}`}
+          className="quotes-action explore"
+        >
+          {language === "en" ? category.en : category.it}
+          <FaArrowRight />
+        </Link>
+        <CaptureCard
+          cardRef={QuoteCardRef}
+          title={quote.author}
+          subtitle={language === "en" ? category.en : category.it}
+          fileName={`quote-${quote.author}`}
+          shareUrl={shareUrl()}
+          shareText={`“${quoteText}” — ${quote.author}`}
+          buttonLabel={t.snapshot}
+        />
+        <button className="quotes-action share" onClick={handleShare}>
+          <FaLink /> {copied ? t.copied : t.copyLink}
+        </button>
+        <button className="quotes-action share" onClick={shuffleQuote}>
+          <FaRandom /> {t.newQuote}
+        </button>
+      </div>
     </>
   );
 }

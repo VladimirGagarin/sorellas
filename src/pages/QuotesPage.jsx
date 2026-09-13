@@ -561,22 +561,22 @@ shareText:
           <div className="gold-rule" />
 
           <span className="card-watermark">Aeternum Floreamus</span>
-
-          <div className="quotes-actions" data-html2canvas-ignore>
-            <CaptureCard
-              cardRef={quoteCardRef}
-              title={currentQuote.author}
-              subtitle={language === "en" ? catLabel.en : catLabel.it}
-              fileName={`quote-${currentQuote.author}`}
-              shareUrl={shareUrl()}
-              shareText={`“${quoteText}” — ${currentQuote.author}`}
-              buttonLabel={t.listen}
-            />
-            <button className="quotes-action share" onClick={handleShare}>
-              <FaLink /> {copied ? t.copied : t.copyLink}
-            </button>
-          </div>
         </article>
+
+        <div className="quotes-actions">
+          <CaptureCard
+            cardRef={quoteCardRef}
+            title={currentQuote.author}
+            subtitle={language === "en" ? catLabel.en : catLabel.it}
+            fileName={`quote-${currentQuote.author}`}
+            shareUrl={shareUrl()}
+            shareText={`“${quoteText}” — ${currentQuote.author}`}
+            buttonLabel={t.listen}
+          />
+          <button className="quotes-action share" onClick={handleShare}>
+            <FaLink /> {copied ? t.copied : t.copyLink}
+          </button>
+        </div>
 
         {/* Progress + hint */}
         <div className="quotes-progress-row">
