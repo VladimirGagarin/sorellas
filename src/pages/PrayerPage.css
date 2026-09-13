@@ -59,6 +59,13 @@
   color: #FFFDF6;
 }
 
+.prayer-top-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
 /* ============ Prev / Next ============ */
 .prayer-nav-row {
   display: flex;

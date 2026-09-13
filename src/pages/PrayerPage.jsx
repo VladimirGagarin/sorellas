@@ -1,6 +1,7 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Header from "../components/Header.jsx";
+import CaptureCard from "../components/CaptureCard.jsx";
 import { useLanguage } from "../contexts/useLanguage.js";
 import {
   getFamousPrayers,
@@ -40,6 +41,7 @@ function getInitials(name) {
 function PrayerDetail({ prayer, totalCount, navigate, language, t }) {
   const [photoUrl, setPhotoUrl] = useState(undefined);
   const [copied, setCopied] = useState(false);
+  const cardRef = useRef(null);
 
   useEffect(() => {
     let active = true;
@@ -90,14 +92,26 @@ function PrayerDetail({ prayer, totalCount, navigate, language, t }) {
         <Link to="/prayers" className="prayer-back-link">
           <FaArrowLeft /> {t.back}
         </Link>
-        <button
-          className={`share-btn ${copied ? "copied" : ""}`}
-          onClick={handleShare}
-          aria-label={t.shareLink}
-        >
-          {copied ? <FaTimes /> : <FaLink />}
-          {copied ? t.copied : t.shareLink}
-        </button>
+        <div className="prayer-top-actions">
+          <CaptureCard
+            cardRef={cardRef}
+            title={prayer.author}
+            subtitle={language === "en" ? "Prayer Card" : "Cartolina di Preghiera"}
+            fileName={`prayer-${prayer.author}`}
+            shareUrl={window.location.href}
+            shareText={authorQuote || prayerText}
+            buttonLabel={t.savePrayer}
+            buttonClassName="share-btn"
+          />
+          <button
+            className={`share-btn ${copied ? "copied" : ""}`}
+            onClick={handleShare}
+            aria-label={t.shareLink}
+          >
+            {copied ? <FaTimes /> : <FaLink />}
+            {copied ? t.copied : t.shareLink}
+          </button>
+        </div>
       </div>
 
       <div className="prayer-nav-row">
@@ -122,7 +136,7 @@ function PrayerDetail({ prayer, totalCount, navigate, language, t }) {
         </button>
       </div>
 
-      <article className="prayer-article">
+      <article className="prayer-article" ref={cardRef}>
         <header className="prayer-author">
           {photoUrl ? (
             <img
@@ -190,6 +204,7 @@ export default function PrayerPage() {
       readAnother: "Wander the Garden",
       shareLink: "Copy Link",
       copied: "Link Copied",
+      savePrayer: "Save Prayer",
       wordCount: "words",
       previousPrayer: "Previous prayer",
       nextPrayer: "Next prayer",
@@ -206,6 +221,7 @@ export default function PrayerPage() {
       readAnother: "Vagare nel Giardino",
       shareLink: "Copia Link",
       copied: "Link Copiato",
+      savePrayer: "Salva Preghiera",
       wordCount: "parole",
       previousPrayer: "Preghiera precedente",
       nextPrayer: "Preghiera successiva",

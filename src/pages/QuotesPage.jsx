@@ -23,7 +23,6 @@ import {
   FaHeart,
   FaHeartbeat,
   FaHourglassHalf,
-  FaImage,
   FaLeaf,
   FaLink,
   FaList,
@@ -40,10 +39,8 @@ import {
   FaSun,
   FaTimes,
   FaUserAlt,
-  FaDownload,
-  FaShare,
 } from "react-icons/fa";
-import { toPng } from "html-to-image";
+import CaptureCard from "../components/CaptureCard.jsx";
 import "./QuotesPage.css";
 
 const CATEGORY_LABELS = {
@@ -133,7 +130,6 @@ export default function QuotesPage() {
   const quotesMenu = useRef(null);
   const barRef = useRef(null);
   const quoteCardRef = useRef(null);
-  const [snapShotCaptured, setSnapShotCaptured] = useState(null);
 
   const quotes = useMemo(
     () => getQuotes().map((q, i) => ({ ...q, _id: i })),
@@ -200,11 +196,6 @@ export default function QuotesPage() {
     copyLink: language === "en" ? "Share Quote" : "Condividi",
     copied: language === "en" ? "Link Copied" : "Link Copiato",
     listen: language === "en" ? "Save Photo" : "Salva Foto",
-    previewTitle:
-      language === "en" ? "Quote Preview" : "Anteprima Citazione",
-    savePhoto: language === "en" ? "Save Photo" : "Salva Foto",
-    sharePhoto: language === "en" ? "Share Photo" : "Condividi Foto",
-    close: language === "en" ? "Close" : "Chiudi",
     surprise: language === "en" ? "Surprise Me" : "Sorpresa",
     quoteBy: language === "en" ? "From the garden of" : "Dal giardino di",
 shareText:
@@ -346,61 +337,6 @@ shareText:
     try {
       if (navigator.share) {
         await navigator.share(shareData);
-        return;
-      }
-    } catch {
-      /* fall through to clipboard */
-    }
-    try {
-      await navigator.clipboard.writeText(shareUrl());
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      /* clipboard unavailable */
-    }
-  };
-
-  const takeQuoteSnapShot = async () => {
-    if (!quoteCardRef.current) return;
-    const isDark =
-      document.documentElement.getAttribute("data-theme") === "dark";
-    try {
-      const dataUrl = await toPng(quoteCardRef.current, {
-        cacheBust: true,
-        backgroundColor: isDark ? "#141a26" : "#fffdf6",
-        pixelRatio: 2,
-      });
-      setSnapShotCaptured(dataUrl);
-    } catch {
-      /* image capture unavailable */
-    }
-  };
-
-  const downloadSnapShot = () => {
-    if (!snapShotCaptured) return;
-    const anchor = document.createElement("a");
-    anchor.href = snapShotCaptured;
-    anchor.download = `quote-${currentQuote.author
-      .replace(/\s+/g, "-")
-      .toLowerCase()}.png`;
-    anchor.click();
-  };
-
-  const shareSnapShot = async () => {
-    if (!snapShotCaptured) return;
-    try {
-      const blob = await (await fetch(snapShotCaptured)).blob();
-      const file = new File(
-        [blob],
-        `quote-${currentQuote.author.replace(/\s+/g, "-").toLowerCase()}.png`,
-        { type: "image/png" }
-      );
-      if (navigator.share && navigator.canShare?.({ files: [file] })) {
-        await navigator.share({
-          files: [file],
-          title: t.previewTitle,
-          text: quoteText,
-        });
         return;
       }
     } catch {
@@ -596,55 +532,20 @@ shareText:
           <div className="gold-rule" />
 
           <div className="quotes-actions" data-html2canvas-ignore>
-            <button className="quotes-action share" onClick={takeQuoteSnapShot}>
-              <FaImage />
-              {t.listen}
-            </button>
+            <CaptureCard
+              cardRef={quoteCardRef}
+              title={currentQuote.author}
+              subtitle={language === "en" ? catLabel.en : catLabel.it}
+              fileName={`quote-${currentQuote.author}`}
+              shareUrl={shareUrl()}
+              shareText={`“${quoteText}” — ${currentQuote.author}`}
+              buttonLabel={t.listen}
+            />
             <button className="quotes-action share" onClick={handleShare}>
               <FaLink /> {copied ? t.copied : t.copyLink}
             </button>
           </div>
         </article>
-
-        {/* Image preview overlay */}
-        {snapShotCaptured && (
-          <div className="image-preview-overlay">
-            <div className="image-overlay-content">
-              <div className="header-content">
-                <div className="title">
-                  <h2>{currentQuote.author}</h2>
-                  <p>{language === "en" ? catLabel.en : catLabel.it}</p>
-                </div>
-                <div
-                  className="close-overlay"
-                  onClick={() => setSnapShotCaptured(null)}
-                >
-                  <span>
-                    <FaTimes />
-                  </span>
-                </div>
-              </div>
-              <div className="image-preiview-main">
-                <img src={snapShotCaptured} alt={currentQuote.author} />
-              </div>
-
-              <div className="image-preview-footer">
-                <button className="quotes-action share" onClick={downloadSnapShot}>
-                  <FaDownload /> {t.savePhoto}
-                </button>
-                <button className="quotes-action share" onClick={shareSnapShot}>
-                  <FaShare /> {t.sharePhoto}
-                </button>
-                <button
-                  className="quotes-action share"
-                  onClick={() => setSnapShotCaptured(null)}
-                >
-                  <FaTimes /> {t.close}
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
 
         {/* Progress + hint */}
         <div className="quotes-progress-row">
