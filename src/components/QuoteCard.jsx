@@ -192,6 +192,8 @@ export default function QuoteCard() {
 
         <div className="gold-rule" />
 
+        <span className="card-watermark">Aeternum Floreamus</span>
+
         <div className="quotes-actions" data-html2canvas-ignore>
           <CaptureCard
             cardRef={QuoteCardRef}

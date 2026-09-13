@@ -246,6 +246,37 @@
   color: var(--text-primary);
 }
 
+/* ============ Watermark motto ============ */
+.card-watermark {
+  display: block;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.72rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #B98F35;
+  opacity: 0.5;
+  margin: 1.5rem auto 0;
+  user-select: none;
+}
+
+[data-theme="dark"] .card-watermark {
+  color: var(--accent-lavender, #B89AD9);
+}
+
+.card-watermark::before,
+.card-watermark::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 22px;
+  height: 1px;
+  margin: 0 10px;
+  background: currentColor;
+  opacity: 0.4;
+}
+
 /* ============ Footer ============ */
 .prayer-footer {
   display: flex;

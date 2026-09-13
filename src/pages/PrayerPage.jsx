@@ -181,6 +181,8 @@ function PrayerDetail({ prayer, totalCount, navigate, language, t }) {
           <p className="prayer-text drop-cap">{prayerText}</p>
         </div>
 
+        <span className="card-watermark">Aeternum Floreamus</span>
+
         <footer className="prayer-footer">
           <FaPrayingHands className="prayer-footer-icon" />
           <span className="prayer-footer-plain">{prayer.author}</span>
