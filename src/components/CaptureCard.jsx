@@ -125,9 +125,6 @@ export default function CaptureCard({
               <button className="quotes-action share" onClick={share}>
                 <FaShare /> {t.sharePhoto}
               </button>
-              <button className="quotes-action share" onClick={close}>
-                <FaTimes /> {t.close}
-              </button>
             </div>
           </div>
         </div>
