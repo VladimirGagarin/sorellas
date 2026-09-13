@@ -335,6 +335,10 @@
   border: 2px solid rgba(255, 253, 246, 0.35);
 }
 
+.monogram.card-photo {
+  object-fit: cover;
+}
+
 .author-info {
   min-width: 0;
 }

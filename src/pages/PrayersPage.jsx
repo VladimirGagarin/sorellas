@@ -1,8 +1,8 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header.jsx";
 import { useLanguage } from "../contexts/useLanguage.js";
-import { getFamousPrayers } from "../components/Utils.js";
+import { getFamousPrayers, resolvePrayerPhoto } from "../components/Utils.js";
 import {
   FaQuoteLeft,
   FaRandom,
@@ -43,6 +43,45 @@ function getInitials(name) {
   return (
     words[0][0] + words[1][0]
   ).toUpperCase();
+}
+
+function CardPhoto({ photo, name }) {
+  const [url, setUrl] = useState(undefined);
+
+  useEffect(() => {
+    let active = true;
+    const update = (v) => {
+      if (active) setUrl(v);
+    };
+    const loader = resolvePrayerPhoto(photo);
+    if (loader) {
+      loader()
+        .then((mod) => update(mod.default || mod))
+        .catch(() => update(null));
+    } else {
+      Promise.resolve().then(() => update(null));
+    }
+    return () => {
+      active = false;
+    };
+  }, [photo]);
+
+  if (url) {
+    return (
+      <img
+        src={url}
+        alt=""
+        className="monogram card-photo"
+        loading="lazy"
+        aria-hidden="true"
+      />
+    );
+  }
+  return (
+    <div className="monogram" aria-hidden="true">
+      {getInitials(name)}
+    </div>
+  );
 }
 
 export default function PrayersPage() {
@@ -308,9 +347,7 @@ export default function PrayersPage() {
                   aria-label={p.author}
                 >
                   <header className="prayer-card-head">
-                    <div className="monogram" aria-hidden="true">
-                      {getInitials(p.author)}
-                    </div>
+                    <CardPhoto photo={p.photo} name={p.author} />
                     <div className="author-info">
                       <h3 className="author-name">{p.author}</h3>
                       <div className="card-badges">

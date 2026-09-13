@@ -10,12 +10,12 @@ import {
 } from "../components/Utils.js";
 import {
   FaArrowLeft,
+  FaCheck,
   FaChevronLeft,
   FaChevronRight,
-  FaLink,
-  FaQuoteLeft,
   FaPrayingHands,
-  FaTimes,
+  FaQuoteLeft,
+  FaShareAlt,
 } from "react-icons/fa";
 import "./PrayerPage.css";
 
@@ -62,8 +62,25 @@ function PrayerDetail({ prayer, totalCount, navigate, language, t }) {
   }, [prayer]);
 
   const handleShare = async () => {
+    const url = window.location.href;
+    const preview =
+      (authorQuote && authorQuote.trim()) || prayerText.trim();
+    const shareText = `${preview}
+${language === "en" ? "— shared from Fiori Di Preghiera" : "— condiviso da Fiori Di Preghiera"}`;
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: `${prayer.author} – Prayer`,
+          text: shareText,
+          url,
+        });
+        return;
+      } catch (err) {
+        if (err && err.name === "AbortError") return;
+      }
+    }
     try {
-      await navigator.clipboard.writeText(window.location.href);
+      await navigator.clipboard.writeText(url);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
@@ -107,10 +124,10 @@ function PrayerDetail({ prayer, totalCount, navigate, language, t }) {
           <button
             className={`share-btn ${copied ? "copied" : ""}`}
             onClick={handleShare}
-            aria-label={t.shareLink}
+            aria-label={t.sharePrayer}
           >
-            {copied ? <FaTimes /> : <FaLink />}
-            {copied ? t.copied : t.shareLink}
+            {copied ? <FaCheck /> : <FaShareAlt />}
+            {copied ? t.copied : t.sharePrayer}
           </button>
         </div>
       </div>
@@ -205,7 +222,7 @@ export default function PrayerPage() {
       notFoundText:
         "The prayer you are looking for does not exist in the garden.",
       readAnother: "Wander the Garden",
-      shareLink: "Copy Link",
+      sharePrayer: "Share Prayer",
       copied: "Link Copied",
       savePrayer: "Save Prayer",
       wordCount: "words",
@@ -222,7 +239,7 @@ export default function PrayerPage() {
       notFoundText:
         "La preghiera che stai cercando non esiste nel giardino.",
       readAnother: "Vagare nel Giardino",
-      shareLink: "Copia Link",
+      sharePrayer: "Condividi Preghiera",
       copied: "Link Copiato",
       savePrayer: "Salva Preghiera",
       wordCount: "parole",
