@@ -16,6 +16,15 @@ import {
   FaBrain,
 } from "react-icons/fa";
 
+function shuffleArray(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
 export default function DeepSeekPage() {
   const { isDarkMode } = useTheme();
   const { language } = useLanguage();
@@ -26,6 +35,13 @@ export default function DeepSeekPage() {
 
   const categories = useMemo(() => deepSeekCategories(), []);
   const allQuestions = useMemo(() => deepSeekQuestions(), []);
+
+  // Fresh random order for the "All Questions" view on every visit.
+  const [shuffledGroups] = useState(() =>
+    shuffleArray(
+      allQuestions.map((g) => ({ ...g, questions: shuffleArray(g.questions) }))
+    )
+  );
 
   const categoryCounts = useMemo(() => {
     const counts = {};
@@ -89,7 +105,11 @@ export default function DeepSeekPage() {
     return groups;
   }, [favoriteQuestions, language]);
 
-  const displayedGroups = showFavorites ? favoriteGroups : filteredQuestions;
+  const displayedGroups = showFavorites
+    ? favoriteGroups
+    : !selectedCategory && !searchTerm
+      ? shuffledGroups
+      : filteredQuestions;
   const displayedCount = displayedGroups.reduce(
     (sum, g) => sum + g.questions.length,
     0
