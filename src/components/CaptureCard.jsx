@@ -48,6 +48,9 @@ export default function CaptureCard({
         cacheBust: true,
         backgroundColor: isDark ? "#141a26" : "#fffdf6",
         pixelRatio: 2,
+        filter: (node) =>
+          typeof node.getAttribute === "function" &&
+          node.getAttribute("data-html2canvas-ignore") === null,
       });
       setSnapShotCaptured(dataUrl);
     } catch {
