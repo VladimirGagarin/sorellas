@@ -1,13 +1,14 @@
 import { deepSeekCategories } from "../components/Utils.js";
 import { deepSeekQuestions } from "../components/Utils.js";
-import React, { useState } from "react";
-import QuestionCard from "../components/QuestionCard";
-import Header from "../components/Header";
+import React, { useMemo, useState } from "react";
+import QuestionCard from "../components/QuestionCard.jsx";
+import Header from "../components/Header.jsx";
 import "./DeepSeekPage.css";
-import { useLanguage } from "../contexts/useLanguage";
+import { useLanguage } from "../contexts/useLanguage.js";
 import { useTheme } from "../contexts/theme.jsx";
 import {
   FaSearch,
+  FaTimes,
   FaFilter,
   FaQuestionCircle,
   FaSeedling,
@@ -20,283 +21,303 @@ export default function DeepSeekPage() {
   const { language } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
-  const [favorites, setFavorites] = useState(new Set());
+  const [favorites, setFavorites] = useState(() => new Set());
+  const [showFavorites, setShowFavorites] = useState(false);
 
-  const categories = deepSeekCategories();
-  const allQuestions = deepSeekQuestions();
+  const categories = useMemo(() => deepSeekCategories(), []);
+  const allQuestions = useMemo(() => deepSeekQuestions(), []);
 
-  // Filter questions based on selected category and search term
+  const categoryCounts = useMemo(
+    () =>
+      categories.map((category) => ({
+        label: category[language],
+        count: category.questions.length,
+      })),
+    [categories, language]
+  );
+
   const filteredQuestions = allQuestions.filter((q) => {
-    // If category is selected, filter by category
     if (selectedCategory && q.topic[language] !== selectedCategory) {
       return false;
     }
-
-    // If search term exists, filter by search
     if (searchTerm) {
       const searchLower = searchTerm.toLowerCase();
       const questionText = q.questions.some((question) =>
-        question[language].toLowerCase().includes(searchLower),
+        question[language].toLowerCase().includes(searchLower)
       );
       const topicText = q.topic[language].toLowerCase().includes(searchLower);
       return questionText || topicText;
     }
-
     return true;
   });
 
-  // Toggle favorite question
   const toggleFavorite = (category, questionIndex) => {
     const key = `${category}-${questionIndex}`;
-    const newFavorites = new Set(favorites);
-    if (newFavorites.has(key)) {
-      newFavorites.delete(key);
-    } else {
-      newFavorites.add(key);
-    }
-    setFavorites(newFavorites);
+    setFavorites((prev) => {
+      const next = new Set(prev);
+      if (next.has(key)) next.delete(key);
+      else next.add(key);
+      return next;
+    });
   };
 
-  // Get favorite questions
   const favoriteQuestions = allQuestions.flatMap((category, categoryIndex) =>
     category.questions
       .map((question, questionIndex) => ({
         ...question,
         topic: category.topic,
-        isFavorite: favorites.has(
-          `${category.topic[language]}-${questionIndex}`,
-        ),
         categoryIndex,
         questionIndex,
       }))
-      .filter((q) => q.isFavorite),
+      .filter((q) => favorites.has(`${q.topic[language]}-${q.questionIndex}`))
   );
 
-  // Clear filters
+  const favoriteGroups = useMemo(() => {
+    const groups = [];
+    const map = {};
+    favoriteQuestions.forEach((q) => {
+      const key = q.topic[language];
+      if (!map[key]) {
+        map[key] = { topic: q.topic, questions: [] };
+        groups.push(map[key]);
+      }
+      map[key].questions.push(q);
+    });
+    return groups;
+  }, [favoriteQuestions, language]);
+
+  const displayedGroups = showFavorites ? favoriteGroups : filteredQuestions;
+  const displayedCount = displayedGroups.reduce(
+    (sum, g) => sum + g.questions.length,
+    0
+  );
+
   const clearFilters = () => {
     setSelectedCategory(null);
     setSearchTerm("");
+    setShowFavorites(false);
   };
+
+  const selectCategory = (value) => {
+    setShowFavorites(false);
+    setSelectedCategory(value);
+  };
+
+  const changeSearch = (value) => {
+    setShowFavorites(false);
+    setSearchTerm(value);
+  };
+
+  const en = {
+    title: "DeepSeek Questions",
+    subtitle:
+      "Explore profound questions about faith, life, and spirituality",
+    all: "All Questions",
+    searchPlaceholder: "Search questions...",
+    favoriteLabel: "Favorites",
+    statsQuestions: "Questions",
+    statsCategories: "Categories",
+    statsFavorites: "Favorites",
+    noResultsTitle: "No questions found",
+    noResultsText: "Try adjusting your search or filter criteria",
+    clearFilters: "Clear All Filters",
+    noFavoritesTitle: "No favorites yet",
+    noFavoritesText:
+      "Tap the heart on a question to keep it here for later.",
+    activeFilters: "Active filters",
+  };
+  const it = {
+    title: "Domande DeepSeek",
+    subtitle: "Esplora domande profonde su fede, vita e spiritualità",
+    all: "Tutte le Domande",
+    searchPlaceholder: "Cerca domande...",
+    favoriteLabel: "Preferiti",
+    statsQuestions: "Domande",
+    statsCategories: "Categorie",
+    statsFavorites: "Preferiti",
+    noResultsTitle: "Nessuna domanda trovata",
+    noResultsText: "Prova a modificare i criteri di ricerca o filtro",
+    clearFilters: "Pulisci Filtri",
+    noFavoritesTitle: "Nessun preferito",
+    noFavoritesText:
+      "Tocca il cuore su una domanda per conservarla qui per dopo.",
+    activeFilters: "Filtri attivi",
+  };
+  const t = language === "en" ? en : it;
 
   return (
     <div className={`deep-seek-page ${isDarkMode ? "dark" : "light"}`}>
       <Header />
 
       <div className="deep-seek-container">
-        {/* Hero Section */}
-        <div className="deep-seek-hero">
-          <div className="hero-content">
-            <div className="hero-icon">
-              <FaBrain />
-            </div>
-            <h1 className="hero-title">
-              {language === "en" ? "DeepSeek Questions" : "Domande DeepSeek"}
-            </h1>
-            <p className="hero-subtitle">
-              {language === "en"
-                ? "Explore profound questions about faith, life, and spirituality"
-                : "Esplora domande profonde su fede, vita e spiritualità"}
-            </p>
+        {/* Hero */}
+        <section className="ds-hero">
+          <span className="ds-hero-blob blob-a" aria-hidden="true" />
+          <span className="ds-hero-blob blob-b" aria-hidden="true" />
+          <div className="ds-hero-icon">
+            <FaBrain />
           </div>
-        </div>
+          <h1 className="ds-hero-title">{t.title}</h1>
+          <p className="ds-hero-subtitle">{t.subtitle}</p>
+          <div className="ds-hero-scribbles" aria-hidden="true" />
+        </section>
 
-        {/* Main Content */}
-        <div className="deep-seek-content">
-          {/* Sidebar - Categories & Filters */}
-          <div className="deep-seek-sidebar">
-            {/* Search Box */}
-            <div className="search-section">
-              <div className="search-box">
-                <FaSearch className="search-icon" />
-                <input
-                  type="text"
-                  placeholder={
-                    language === "en"
-                      ? "Search questions..."
-                      : "Cerca domande..."
-                  }
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="search-input"
-                />
-              </div>
-            </div>
-
-            {/* Categories */}
-            <div className="categories-section">
-              <div className="section-header">
-                <FaFilter />
-                <h3>{language === "en" ? "Categories" : "Categorie"}</h3>
-              </div>
-              <div className="categories-list">
-                <button
-                  className={`category-item ${!selectedCategory ? "active" : ""}`}
-                  onClick={() => setSelectedCategory(null)}
-                >
-                  <FaSeedling />
-                  <span>
-                    {language === "en" ? "All Questions" : "Tutte le Domande"}
-                  </span>
-                </button>
-
-                {categories.map((category, index) => (
-                  <button
-                    key={index}
-                    className={`category-item ${selectedCategory === category[language] ? "active" : ""}`}
-                    onClick={() => setSelectedCategory(category[language])}
-                  >
-                    <FaQuestionCircle />
-                    <span>{category[language]}</span>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Favorites */}
-            <div className="favorites-section">
-              <div className="section-header">
-                <FaHeart />
-                <h3>{language === "en" ? "Favorites" : "Preferiti"}</h3>
-              </div>
-              <div className="favorites-count">
-                <span className="count">{favoriteQuestions.length}</span>
-                <span className="label">
-                  {language === "en"
-                    ? "favorite questions"
-                    : "domande preferite"}
-                </span>
-              </div>
-              {favoriteQuestions.length > 0 && (
-                <button
-                  className="view-favorites-btn"
-                  onClick={() => {
-                    // Logic to scroll to favorites or show only favorites
-                  }}
-                >
-                  {language === "en" ? "View Favorites" : "Vedi Preferiti"}
-                </button>
-              )}
-            </div>
-
-            {/* Filter Status */}
-            {(selectedCategory || searchTerm) && (
-              <div className="active-filters">
-                <div className="section-header">
-                  <FaFilter />
-                  <h3>
-                    {language === "en" ? "Active Filters" : "Filtri Attivi"}
-                  </h3>
-                </div>
-                <div className="filters-list">
-                  {selectedCategory && (
-                    <div className="filter-tag">
-                      <span>{selectedCategory}</span>
-                      <button
-                        onClick={() => setSelectedCategory(null)}
-                        className="remove-filter"
-                      >
-                        ×
-                      </button>
-                    </div>
-                  )}
-                  {searchTerm && (
-                    <div className="filter-tag">
-                      <span>"{searchTerm}"</span>
-                      <button
-                        onClick={() => setSearchTerm("")}
-                        className="remove-filter"
-                      >
-                        ×
-                      </button>
-                    </div>
-                  )}
-                </div>
-                <button className="clear-filters-btn" onClick={clearFilters}>
-                  {language === "en" ? "Clear All Filters" : "Pulisci Filtri"}
-                </button>
-              </div>
+        {/* Toolbar */}
+        <section className="ds-toolbar">
+          <div className="ds-search-box">
+            <FaSearch className="ds-search-icon" />
+            <input
+              type="text"
+              placeholder={t.searchPlaceholder}
+              value={searchTerm}
+              onChange={(e) => changeSearch(e.target.value)}
+              className="ds-search-input"
+              aria-label={t.searchPlaceholder}
+            />
+            {searchTerm && (
+              <button
+                className="ds-search-clear"
+                onClick={() => changeSearch("")}
+                aria-label="Clear search"
+              >
+                <FaTimes />
+              </button>
             )}
           </div>
 
-          {/* Main Content - Questions */}
-          <div className="deep-seek-main">
-            {/* Stats Header */}
-            <div className="questions-header">
-              <div className="stats">
-                <div className="stat-item">
-                  <span className="stat-value">{filteredQuestions.length}</span>
-                  <span className="stat-label">
-                    {language === "en" ? "Questions" : "Domande"}
+          <div className="ds-chips">
+            <button
+              className={`ds-chip ${!selectedCategory && !searchTerm && !showFavorites ? "active" : ""}`}
+              onClick={() => {
+                setSelectedCategory(null);
+                setSearchTerm("");
+                setShowFavorites(false);
+              }}
+            >
+              <FaSeedling />
+              <span>{t.all}</span>
+            </button>
+
+            {categoryCounts.map((cat) => (
+              <button
+                key={cat.label}
+                className={`ds-chip ${selectedCategory === cat.label ? "active" : ""}`}
+                onClick={() => selectCategory(cat.label)}
+              >
+                <FaQuestionCircle />
+                <span>{cat.label}</span>
+                <span className="ds-chip-count">{cat.count}</span>
+              </button>
+            ))}
+
+            <button
+              className={`ds-chip ds-chip-fav ${showFavorites ? "active" : ""}`}
+              onClick={() => setShowFavorites((v) => !v)}
+            >
+              <FaHeart />
+              <span>{t.favoriteLabel}</span>
+              <span className="ds-chip-count">{favoriteQuestions.length}</span>
+            </button>
+          </div>
+
+          {/* Active filters */}
+          {(selectedCategory || searchTerm) && (
+            <div className="ds-active-filters">
+              {selectedCategory && (
+                <span className="ds-filter-tag">
+                  {selectedCategory}
+                  <button
+                    onClick={() => setSelectedCategory(null)}
+                    aria-label="Remove category"
+                  >
+                    <FaTimes />
+                  </button>
+                </span>
+              )}
+              {searchTerm && (
+                <span className="ds-filter-tag">
+                  “{searchTerm}”
+                  <button
+                    onClick={() => changeSearch("")}
+                    aria-label="Remove search"
+                  >
+                    <FaTimes />
+                  </button>
+                </span>
+              )}
+              <button className="ds-clear-all" onClick={clearFilters}>
+                <FaFilter /> {t.clearFilters}
+              </button>
+            </div>
+          )}
+        </section>
+
+        {/* Stats */}
+        <section className="ds-stats">
+          <div className="ds-stat">
+            <span className="ds-stat-value">{displayedCount}</span>
+            <span className="ds-stat-label">{t.statsQuestions}</span>
+          </div>
+          <div className="ds-stat">
+            <span className="ds-stat-value">{categories.length}</span>
+            <span className="ds-stat-label">{t.statsCategories}</span>
+          </div>
+          <div className="ds-stat">
+            <span className="ds-stat-value">{favorites.size}</span>
+            <span className="ds-stat-label">{t.statsFavorites}</span>
+          </div>
+        </section>
+
+        {/* Questions */}
+        {showFavorites && favoriteQuestions.length === 0 ? (
+          <div className="ds-empty">
+            <FaHeart className="ds-empty-icon" />
+            <h3>{t.noFavoritesTitle}</h3>
+            <p>{t.noFavoritesText}</p>
+          </div>
+        ) : displayedGroups.length > 0 ? (
+          <div className="ds-groups">
+            {displayedGroups.map((group, groupIndex) => (
+              <div key={groupIndex} className="ds-group">
+                <h2 className="ds-group-title">
+                  {showFavorites ? <FaHeart /> : <FaQuestionCircle />}
+                  <span>{group.topic[language]}</span>
+                  <span className="ds-group-count">
+                    {group.questions.length}
                   </span>
-                </div>
-                <div className="stat-item">
-                  <span className="stat-value">{categories.length}</span>
-                  <span className="stat-label">
-                    {language === "en" ? "Categories" : "Categorie"}
-                  </span>
-                </div>
-                <div className="stat-item">
-                  <span className="stat-value">{favorites.size}</span>
-                  <span className="stat-label">
-                    {language === "en" ? "Favorites" : "Preferiti"}
-                  </span>
+                </h2>
+                <div className="ds-grid">
+                  {group.questions.map((question, questionIndex) => (
+                    <QuestionCard
+                      key={`${group.topic[language]}-${questionIndex}`}
+                      question={question[language]}
+                      category={group.topic[language]}
+                      isFavorite={favorites.has(
+                        `${group.topic[language]}-${questionIndex}`
+                      )}
+                      onToggleFavorite={() =>
+                        toggleFavorite(
+                          group.topic[language],
+                          questionIndex
+                        )
+                      }
+                      language={language}
+                    />
+                  ))}
                 </div>
               </div>
-            </div>
-
-            {/* Questions Grid */}
-            <div className="questions-grid">
-              {filteredQuestions.length > 0 ? (
-                filteredQuestions.map((category, categoryIndex) => (
-                  <div key={categoryIndex} className="category-group">
-                    <h2 className="category-title">
-                      {category.topic[language]}
-                      <span className="question-count">
-                        ({category.questions.length})
-                      </span>
-                    </h2>
-                    <div className="questions-list">
-                      {category.questions.map((question, questionIndex) => (
-                        <QuestionCard
-                          key={questionIndex}
-                          question={question[language]}
-                          category={category.topic[language]}
-                          isFavorite={favorites.has(
-                            `${category.topic[language]}-${questionIndex}`,
-                          )}
-                          onToggleFavorite={() =>
-                            toggleFavorite(
-                              category.topic[language],
-                              questionIndex,
-                            )
-                          }
-                          language={language}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                ))
-              ) : (
-                <div className="no-results">
-                  <FaSearch className="no-results-icon" />
-                  <h3>
-                    {language === "en"
-                      ? "No questions found"
-                      : "Nessuna domanda trovata"}
-                  </h3>
-                  <p>
-                    {language === "en"
-                      ? "Try adjusting your search or filter criteria"
-                      : "Prova a modificare i criteri di ricerca o filtro"}
-                  </p>
-                  <button className="clear-all-btn" onClick={clearFilters}>
-                    {language === "en" ? "Clear All Filters" : "Pulisci Filtri"}
-                  </button>
-                </div>
-              )}
-            </div>
+            ))}
           </div>
-        </div>
+        ) : (
+          <div className="ds-empty">
+            <FaSearch className="ds-empty-icon" />
+            <h3>{t.noResultsTitle}</h3>
+            <p>{t.noResultsText}</p>
+            <button className="ds-clear-all big" onClick={clearFilters}>
+              {t.clearFilters}
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
