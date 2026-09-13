@@ -27,14 +27,17 @@ export default function DeepSeekPage() {
   const categories = useMemo(() => deepSeekCategories(), []);
   const allQuestions = useMemo(() => deepSeekQuestions(), []);
 
-  const categoryCounts = useMemo(
-    () =>
-      categories.map((category) => ({
-        label: category[language],
-        count: category.questions.length,
-      })),
-    [categories, language]
-  );
+  const categoryCounts = useMemo(() => {
+    const counts = {};
+    allQuestions.forEach((q) => {
+      const key = q.topic[language];
+      counts[key] = (counts[key] || 0) + q.questions.length;
+    });
+    return categories.map((c) => ({
+      label: c[language],
+      count: counts[c[language]] || 0,
+    }));
+  }, [allQuestions, categories, language]);
 
   const filteredQuestions = allQuestions.filter((q) => {
     if (selectedCategory && q.topic[language] !== selectedCategory) {
