@@ -18373,11 +18373,19 @@ export function getPoems() {
     {
       author: "Sr. Mary Japheth",
       title: {en:"Praying is Wonderful", it:""},
-      poem: {verse: [], verse:[], verse:[]} // 4 lines each verse
+      poem: {verse1: [], verse2:[], verse3:[]} // 4 lines each verse
     },
 
   ]
   return allPoems
+}
+
+export function sisterhood() {
+  const wordsFromSisters = [
+    {message:{en:"", it:""}, advice: {en:"", it:""}, sister:"Sr. Mary Japheth"}
+  ]
+
+  return wordsFromSisters
 }
 
 // ---------------------------------------------------------------------------
