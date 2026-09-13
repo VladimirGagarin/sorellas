@@ -161,6 +161,9 @@ export default function PrayersPage() {
     []
   );
 
+  // Fresh random order on every visit so new prayers surface at the top.
+  const [shuffledAll, setShuffledAll] = useState(() => shuffleArray(allPrayers));
+
   const totalAuthors = useMemo(
     () => new Set(allPrayers.map((p) => p.author)).size,
     [allPrayers]
@@ -191,7 +194,7 @@ export default function PrayersPage() {
   );
 
   const isAll = !hasFilters && mode === "all";
-  const source = hasFilters ? filtered : isAll ? allPrayers : randomPrayers;
+  const source = hasFilters ? filtered : isAll ? shuffledAll : randomPrayers;
   const sourceTotal = source.length;
   const shown = isAll || hasFilters ? source.slice(0, visibleCount) : source;
 
@@ -237,6 +240,7 @@ export default function PrayersPage() {
     setAuthorQuery("");
     setLengthFilter("all");
     setVisibleCount(PAGE_SIZE);
+    setShuffledAll(shuffleArray(allPrayers));
   };
 
   const changeLength = (value) => {
