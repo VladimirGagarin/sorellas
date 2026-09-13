@@ -1423,6 +1423,15 @@ export function getFamousPrayers() {
       italianQuote:
         "“Siate sempre lieti, pregate ininterrottamente, in ogni cosa rendete grazie.”",
     },
+    {
+      author: "The Love of Christ Urges Us – 2 Corinthians 5:14–15 (KJV)",
+      prayer:
+        "For the love of Christ constraineth us; because we thus judge, that if one died for all, then were all dead: And that he died for all, that they which live should not henceforth live unto themselves, but unto him which died for them, and rose again.",
+      italianPrayer:
+        "Infatti l'amore del Cristo ci spinge, perché siamo convinti che uno è morto per tutti, e quindi tutti sono morti. Ed egli è morto per tutti, perché quelli che vivono non vivano più per se stessi, ma per colui che è morto e risorto per loro.",
+      quote: "“For the love of Christ constraineth us...” – Caritas Christi urget nos",
+      italianQuote: "“L'amore del Cristo ci spinge...” – Caritas Christi urget nos",
+    },
   ];
 
   return prayersList;
