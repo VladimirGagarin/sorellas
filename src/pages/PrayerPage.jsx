@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import Header from "../components/Header.jsx";
 import CaptureCard from "../components/CaptureCard.jsx";
 import { useLanguage } from "../contexts/useLanguage.js";
+import { DEFAULT_SEO, SITE_IMAGE_URL, SITE_NAME, useSeo } from "../utils/seo.js";
 import {
   getFamousPrayers,
   resolvePrayerPhoto,
@@ -248,6 +249,29 @@ export default function PrayerPage() {
     () => (prayer ? getFamousPrayers().length : 0),
     [prayer]
   );
+
+  // SEO: expose the prayer and author as soon as a deep link opens.
+  const seo = useMemo(() => {
+    if (!prayer) {
+      return {
+        ...DEFAULT_SEO,
+        title: `Prayers ✦ ${SITE_NAME}`,
+        description: "Prayers shared by the Sisters of Saint Joseph Cottolengo.",
+        url: window.location.href,
+      };
+    }
+    const prayerText =
+      language === "en" ? prayer.prayer : prayer.italianPrayer || prayer.prayer;
+    const clean = String(prayerText || "").replace(/\s+/g, " ").trim();
+    const preview = clean.length > 160 ? `${clean.slice(0, 157)}…` : clean;
+    return {
+      title: `${prayer.author} – Prayer ✦ ${SITE_NAME}`,
+      description: `${preview} ✦ ${prayer.author}`,
+      url: window.location.href,
+      image: SITE_IMAGE_URL,
+    };
+  }, [prayer, language]);
+  useSeo(seo);
 
   return (
     <div className="prayer-page">

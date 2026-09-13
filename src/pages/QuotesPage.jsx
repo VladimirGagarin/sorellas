@@ -41,6 +41,7 @@ import {
   FaUserAlt,
 } from "react-icons/fa";
 import CaptureCard from "../components/CaptureCard.jsx";
+import { DEFAULT_SEO, SITE_IMAGE_URL, SITE_NAME, useSeo } from "../utils/seo.js";
 import "./QuotesPage.css";
 
 const CATEGORY_LABELS = {
@@ -176,6 +177,34 @@ export default function QuotesPage() {
     currentIndex = idx >= 0 ? idx : 0;
   }
   const currentQuote = activeTheme ? themeQuotes[currentIndex] : null;
+
+  // SEO: keep document meta aligned with the open quote/theme deep link.
+  const seo = useMemo(() => {
+    if (themeParam && currentQuote) {
+      const themeKey = normalizeCategory(currentQuote.category || themeParam);
+      const themeSel = (activeTheme && (activeTheme.label.en || activeTheme.label.it)) || themeKey;
+      const clean = String(currentQuote.quote || "").replace(/\s+/g, " ").trim();
+      const preview = clean.length > 150 ? `${clean.slice(0, 147)}…` : clean;
+      return {
+        title: `“${preview.slice(0, 55)}${preview.length > 55 ? "…" : ""}” — ${currentQuote.author} ✦ ${SITE_NAME}`,
+        description: `${preview} — ${currentQuote.author}. ${themeSel} quote from the Sisters of Saint Joseph Cottolengo.`,
+        url: window.location.href,
+        image: SITE_IMAGE_URL,
+      };
+    }
+    if (themeParam) {
+      const themeKey = normalizeCategory(themeParam);
+      const themeSel = (activeTheme && (activeTheme.label.en || activeTheme.label.it)) || themeKey;
+      return {
+        title: `${themeSel} – Quotes ✦ ${SITE_NAME}`,
+        description: `Quotes on ${themeSel} shared by the Sisters of Saint Joseph Cottolengo – a garden of faith.`,
+        url: window.location.href,
+        image: SITE_IMAGE_URL,
+      };
+    }
+    return DEFAULT_SEO;
+  }, [themeParam, currentQuote, activeTheme]);
+  useSeo(seo);
 
   const t = {
     eyebrow: language === "en" ? "Sacred Words" : "Parole Sacre",
