@@ -1432,6 +1432,18 @@ export function getFamousPrayers() {
       quote: "“For the love of Christ constraineth us...” – Caritas Christi urget nos",
       italianQuote: "“L'amore del Cristo ci spinge...” – Caritas Christi urget nos",
     },
+    {
+      author: "Sr. Gladys",
+      prayer:
+        "Heavenly Father, let my hands be gentle and my heart open, that I may serve Your little ones with joy and never tire of loving. Teach me to find You in every face and to give as freely as I have received.",
+      italianPrayer:
+        "Padre Celeste, rendi le mie mani gentili e il mio cuore aperto, perché possa servire i Tuoi piccoli con gioia e non stancarmi mai di amare. Insegnami a trovarti in ogni volto e a donare con la stessa libertà con cui ho ricevuto.",
+      quote:
+        "A life of quiet service becomes a prayer that never ends.",
+      italianQuote:
+        "Una vita di servizio silenzioso diventa una preghiera che non finisce mai.",
+      photo: "../assets/sr_gladys.png",
+    },
   ];
 
   return prayersList;
@@ -10920,6 +10932,188 @@ export function getQuotes() {
       photo: "../assets/sr_hellen_murungi.jpg",
     },
     {
+      author: "Sr. Gladys",
+      category: "Love",
+      quote: "Love is the quiet way we reflect the heart of God in every everyday kindness.",
+      italianQuote: "L'amore è il modo silenzioso in cui riflettiamo il cuore di Dio nella bontà di ogni giorno.",
+      photo: "../assets/sr_gladys.png",
+    },
+    {
+      author: "Sr. Gladys",
+      category: "Joy",
+      quote: "Joy blooms in a grateful heart that has learned to count blessings instead of burdens.",
+      italianQuote: "La gioia sboccia in un cuore grato che ha imparato a contare le benedizioni invece dei pesi.",
+      photo: "../assets/sr_gladys.png",
+    },
+    {
+      author: "Sr. Gladys",
+      category: "Peace",
+      quote: "Peace grows where we place our worries into hands wiser than our own.",
+      italianQuote: "La pace cresce dove affidiamo le nostre preoccupazioni a mani più sagge delle nostre.",
+      photo: "../assets/sr_gladys.png",
+    },
+    {
+      author: "Sr. Gladys",
+      category: "Patience",
+      quote: "Patience waits with an open heart, trusting that God's timing is always loving.",
+      italianQuote: "La pazienza attende con cuore aperto, fidandosi che il tempo di Dio è sempre amore.",
+      photo: "../assets/sr_gladys.png",
+    },
+    {
+      author: "Sr. Gladys",
+      category: "Kindness",
+      quote: "Kindness is a small seed that grows forests of hope in unlikely soil.",
+      italianQuote: "La gentilezza è un piccolo seme che fa crescere foreste di speranza in un terreno impensabile.",
+      photo: "../assets/sr_gladys.png",
+    },
+    {
+      author: "Sr. Gladys",
+      category: "Goodness",
+      quote: "Goodness becomes visible when we let God's love shine through ordinary actions.",
+      italianQuote: "La bontà si fa visibile quando lasciamo che l'amore di Dio brilli attraverso le azioni di ogni giorno.",
+      photo: "../assets/sr_gladys.png",
+    },
+    {
+      author: "Sr. Gladys",
+      category: "Faithfulness",
+      quote: "Faithfulness is keeping our promises steady, even when the road grows weary.",
+      italianQuote: "La fedeltà è mantenere le promesse con costanza, anche quando la strada si fa stanca.",
+      photo: "../assets/sr_gladys.png",
+    },
+    {
+      author: "Sr. Gladys",
+      category: "Gentleness",
+      quote: "Gentleness softens every word and makes space for wounded hearts to heal.",
+      italianQuote: "La mitezza addolcisce ogni parola e crea spazio perché i cuori feriti guariscano.",
+      photo: "../assets/sr_gladys.png",
+    },
+    {
+      author: "Sr. Gladys",
+      category: "Self-control",
+      quote: "Self-control is the quiet strength that lets grace lead instead of impulse.",
+      italianQuote: "Il controllo di sé è la forza silenziosa che lascia guidare la grazia invece dell'impulso.",
+      photo: "../assets/sr_gladys.png",
+    },
+    {
+      author: "Sr. Gladys",
+      category: "Understanding",
+      quote: "Understanding begins when we listen with the heart as much as the ears.",
+      italianQuote: "La comprensione inizia quando ascoltiamo con il cuore quanto con le orecchie.",
+      photo: "../assets/sr_gladys.png",
+    },
+    {
+      author: "Sr. Gladys",
+      category: "Counsel (Right Judgment)",
+      quote: "Counsel is the gift of seeing clearly what the heart truly needs.",
+      italianQuote: "Il consiglio è il dono di vedere con chiarezza ciò di cui il cuore ha davvero bisogno.",
+      photo: "../assets/sr_gladys.png",
+    },
+    {
+      author: "Sr. Gladys",
+      category: "Fortitude (Courage)",
+      quote: "Fortitude finds its courage not in our own strength but in God's promises.",
+      italianQuote: "La fortezza trova il suo coraggio non nella nostra forza, ma nelle promesse di Dio.",
+      photo: "../assets/sr_gladys.png",
+    },
+    {
+      author: "Sr. Gladys",
+      category: "Piety (Reverence)",
+      quote: "Piety keeps our gaze fixed on the sacred, even in the busiest of days.",
+      italianQuote: "La pietà tiene il nostro sguardo fisso sul sacro, anche nei giorni più pieni.",
+      photo: "../assets/sr_gladys.png",
+    },
+    {
+      author: "Sr. Gladys",
+      category: "Fear of the Lord (Wonder and Awe)",
+      quote: "Wonder and awe make our hearts small enough to let God be great.",
+      italianQuote: "Lo stupore e il timore rendono il nostro cuore abbastanza piccolo da lasciare che Dio sia grande.",
+      photo: "../assets/sr_gladys.png",
+    },
+    {
+      author: "Sr. Gladys",
+      category: "Trust",
+      quote: "Trust is letting God write the story while we simply walk with Him.",
+      italianQuote: "La fiducia è lasciare che Dio scriva la storia mentre noi semplicemente camminiamo con Lui.",
+      photo: "../assets/sr_gladys.png",
+    },
+    {
+      author: "Sr. Gladys",
+      category: "Prayer and Meditation",
+      quote: "In prayer we speak; in meditation we listen and find our way home.",
+      italianQuote: "Nella preghiera parliamo; nella meditazione ascoltiamo e troviamo la strada di casa.",
+      photo: "../assets/sr_gladys.png",
+    },
+    {
+      author: "Sr. Gladys",
+      category: "Compassion",
+      quote: "Compassion is love that lowers itself to walk beside another's pain.",
+      italianQuote: "La compassione è amore che si abbassa per camminare accanto al dolore altrui.",
+      photo: "../assets/sr_gladys.png",
+    },
+    {
+      author: "Sr. Gladys",
+      category: "Hope and Perseverance",
+      quote: "Hope perseveres when it remembers that dawn always follows the longest night.",
+      italianQuote: "La speranza persevera quando ricorda che l'alba segue sempre la notte più lunga.",
+      photo: "../assets/sr_gladys.png",
+    },
+    {
+      author: "Sr. Gladys",
+      category: "Charity",
+      quote: "Charity gives without counting and receives back more than it gave.",
+      italianQuote: "La carità dona senza contare e riceve più di quanto abbia dato.",
+      photo: "../assets/sr_gladys.png",
+    },
+    {
+      author: "Sr. Gladys",
+      category: "Forgiveness",
+      quote: "Forgiveness loosens the chains of the past and sets the future free.",
+      italianQuote: "Il perdono allenta le catene del passato e libera il futuro.",
+      photo: "../assets/sr_gladys.png",
+    },
+    {
+      author: "Sr. Gladys",
+      category: "Wisdom",
+      quote: "Wisdom is knowing that the deepest truths are often the simplest.",
+      italianQuote: "La saggezza è sapere che le verità più profonde sono spesso le più semplici.",
+      photo: "../assets/sr_gladys.png",
+    },
+    {
+      author: "Sr. Gladys",
+      category: "Spiritual Growth",
+      quote: "Spiritual growth is becoming more like the love that made us.",
+      italianQuote: "La crescita spirituale è diventare sempre più simili all'amore che ci ha creati.",
+      photo: "../assets/sr_gladys.png",
+    },
+    {
+      author: "Sr. Gladys",
+      category: "Humility",
+      quote: "Humility makes room for grace to enter where pride would close the door.",
+      italianQuote: "L'umiltà apre spazio alla grazia dove l'orgoglio chiuderebbe la porta.",
+      photo: "../assets/sr_gladys.png",
+    },
+    {
+      author: "Sr. Gladys",
+      category: "Gratitude",
+      quote: "Gratitude turns what we have into enough, and enough into abundance.",
+      italianQuote: "La gratitudine trasforma ciò che abbiamo in abbastanza, e l'abbastanza in abbondanza.",
+      photo: "../assets/sr_gladys.png",
+    },
+    {
+      author: "Sr. Gladys",
+      category: "Latin",
+      quote: "Caritas Christi urget nos — the love of Christ urges us onward, and we respond with open hands.",
+      italianQuote: "Caritas Christi urget nos — l'amore di Cristo ci spinge avanti, e noi rispondiamo a mani aperte.",
+      photo: "../assets/sr_gladys.png",
+    },
+    {
+      author: "Sr. Gladys",
+      category: "Gratittude",
+      quote: "Gratitude is the song the soul sings when it remembers every blessing.",
+      italianQuote: "La gratitudine è il canto che l'anima innalza quando ricorda ogni benedizione.",
+      photo: "../assets/sr_gladys.png",
+    },
+    {
       author: "Sr. Mercy Kathure",
       category: "Love",
       quote:
@@ -17924,6 +18118,14 @@ export function justBecauseArray() {
       topic: { en: "Virgin Mary", it: "Vergine Maria" },
     },
     {
+      author: "Sr. Gladys",
+      sentiment: {
+        en: "His gentleness walks beside me in every ordinary moment—my heart rests in His care, just because.",
+        it: "La Sua dolcezza cammina accanto a me in ogni momento ordinario—il mio cuore riposa nella Sua cura, solo perché.",
+      },
+      topic: { en: "Jesus", it: "Gesù" },
+    },
+    {
       author: "Sr. Joan",
       sentiment: {
         en: "He lights my way through the unknown—every step is faith, just because.",
@@ -17988,6 +18190,7 @@ export const AUTHOR_PHOTOS = {
   "Sr. Joyce": "../assets/sr_joyce.jpg",
   "Sr. Winnie Lopez": "../assets/sr_winnie.jpg",
   "Sr. Joan": "../assets/sr_joan.jpg",
+  "Sr. Gladys": "../assets/sr_gladys.png",
 };
 
 export function getFavWords() {
@@ -18554,6 +18757,18 @@ export function getFavWords() {
       quote: {
         en: "Warmth is the gentle kindness that revives forgotten hearts.",
         it: "Il calore è la dolcezza che ridà vita ai cuori dimenticati.",
+      },
+    },
+    {
+      author: "Sr. Gladys",
+      favWord: { en: "Gentleness", it: "Dolcezza" },
+      reason: {
+        en: "Gentleness opens hearts and makes God's nearness felt.",
+        it: "La dolcezza apre i cuori e rende vicina la presenza di Dio.",
+      },
+      quote: {
+        en: "Gentleness is the touch that makes the heaviest burdens feel light.",
+        it: "La dolcezza è il tocco che rende leggeri i pesi più grandi.",
       },
     },
     {
