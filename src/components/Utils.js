@@ -1444,6 +1444,18 @@ export function getFamousPrayers() {
         "Una vita di servizio silenzioso diventa una preghiera che non finisce mai.",
       photo: "../assets/sr_gladys.png",
     },
+    {
+      author: "Sr. Theresa",
+      prayer:
+        "Lord Jesus, You walked among the poor and the forgotten with tenderness and strength. Help me to do the same — to see You in every face I meet, to carry Your light into the shadows, and to love without counting the cost. Amen.",
+      italianPrayer:
+        "Signore Gesù, hai camminato tra i poveri e i dimenticati con tenerezza e forza. Aiutami a fare lo stesso — a vederti in ogni volto che incontro, a portare la Tua luce nelle ombre e ad amare senza contare il prezzo. Amen.",
+      quote:
+        "Faith lived in kindness becomes a light for the whole world.",
+      italianQuote:
+        "La fede vissuta nella gentilezza diventa luce per tutto il mondo.",
+      photo: "../assets/sr_theresa.jpg",
+    },
   ];
 
   return prayersList;
@@ -10932,6 +10944,188 @@ export function getQuotes() {
       photo: "../assets/sr_hellen_murungi.jpg",
     },
     {
+      author: "Sr. Theresa",
+      category: "Love",
+      quote: "Love carries us beyond what we see, to a place only faith can reach.",
+      italianQuote: "L'amore ci porta oltre ciò che vediamo, in un luogo solo la fede può raggiungere.",
+      photo: "../assets/sr_theresa.jpg",
+    },
+    {
+      author: "Sr. Theresa",
+      category: "Joy",
+      quote: "Joy is a quiet grace that fills the spaces where gratitude lives.",
+      italianQuote: "La gioia è una grazia silenziosa che riempie gli spazi dove vive la gratitudine.",
+      photo: "../assets/sr_theresa.jpg",
+    },
+    {
+      author: "Sr. Theresa",
+      category: "Peace",
+      quote: "Peace is born when we stop striving and let God's mercy hold us.",
+      italianQuote: "La pace nasce quando smettiamo di lottare e lasciamo che la misericordia di Dio ci sostenga.",
+      photo: "../assets/sr_theresa.jpg",
+    },
+    {
+      author: "Sr. Theresa",
+      category: "Patience",
+      quote: "Patience is the soul's way of trusting in a harvest not yet seen.",
+      italianQuote: "La pazienza è il modo dell'anima di fidarsi di un raccolto non ancora visto.",
+      photo: "../assets/sr_theresa.jpg",
+    },
+    {
+      author: "Sr. Theresa",
+      category: "Kindness",
+      quote: "Kindness sees beyond appearances and finds the image of God in every face.",
+      italianQuote: "La gentilezza vede oltre le apparenze e trova l'immagine di Dio in ogni volto.",
+      photo: "../assets/sr_theresa.jpg",
+    },
+    {
+      author: "Sr. Theresa",
+      category: "Goodness",
+      quote: "Goodness grows quietly in hearts that choose mercy every day.",
+      italianQuote: "La bontà cresce silenziosamente nei cuori che scelgono la misericordia ogni giorno.",
+      photo: "../assets/sr_theresa.jpg",
+    },
+    {
+      author: "Sr. Theresa",
+      category: "Faithfulness",
+      quote: "Faithfulness means showing up again and again, as God shows up for us.",
+      italianQuote: "La fedeltà significa presentarsi ancora e ancora, come Dio si presenta per noi.",
+      photo: "../assets/sr_theresa.jpg",
+    },
+    {
+      author: "Sr. Theresa",
+      category: "Gentleness",
+      quote: "Gentleness does not break what is already bruised.",
+      italianQuote: "La mitezza non rompe ciò che è già ferito.",
+      photo: "../assets/sr_theresa.jpg",
+    },
+    {
+      author: "Sr. Theresa",
+      category: "Self-control",
+      quote: "Self-control gives the Spirit room to guide our hands and tongues.",
+      italianQuote: "Il controllo di sé dà spazio allo Spirito per guidare le nostre mani e la nostra lingua.",
+      photo: "../assets/sr_theresa.jpg",
+    },
+    {
+      author: "Sr. Theresa",
+      category: "Understanding",
+      quote: "Understanding comes when we see with compassion instead of judgment.",
+      italianQuote: "La comprensione arriva quando vediamo con compassione invece che con giudizio.",
+      photo: "../assets/sr_theresa.jpg",
+    },
+    {
+      author: "Sr. Theresa",
+      category: "Counsel (Right Judgment)",
+      quote: "Right judgment asks for wisdom before words, and prayer before plans.",
+      italianQuote: "Il retto giudizio chiede saggezza prima delle parole e preghiera prima dei piani.",
+      photo: "../assets/sr_theresa.jpg",
+    },
+    {
+      author: "Sr. Theresa",
+      category: "Fortitude (Courage)",
+      quote: "Courage is walking forward with God when every step feels uncertain.",
+      italianQuote: "Il coraggio è camminare avanti con Dio quando ogni passo sembra incerto.",
+      photo: "../assets/sr_theresa.jpg",
+    },
+    {
+      author: "Sr. Theresa",
+      category: "Piety (Reverence)",
+      quote: "Reverence holds the world gently, knowing it belongs to God alone.",
+      italianQuote: "La riverenza tiene il mondo con delicatezza, sapendo che appartiene solo a Dio.",
+      photo: "../assets/sr_theresa.jpg",
+    },
+    {
+      author: "Sr. Theresa",
+      category: "Fear of the Lord (Wonder and Awe)",
+      quote: "Awe reminds us that God is always greater than we can imagine.",
+      italianQuote: "Lo stupore ci ricorda che Dio è sempre più grande di quanto possiamo immaginare.",
+      photo: "../assets/sr_theresa.jpg",
+    },
+    {
+      author: "Sr. Theresa",
+      category: "Trust",
+      quote: "Trust places the weight of tomorrow into the hands that made today.",
+      italianQuote: "La fiducia affida il peso di domani nelle mani che hanno fatto oggi.",
+      photo: "../assets/sr_theresa.jpg",
+    },
+    {
+      author: "Sr. Theresa",
+      category: "Prayer and Meditation",
+      quote: "Prayer is the doorway through which God enters the ordinary.",
+      italianQuote: "La preghiera è la porta attraverso cui Dio entra nell'ordinario.",
+      photo: "../assets/sr_theresa.jpg",
+    },
+    {
+      author: "Sr. Theresa",
+      category: "Compassion",
+      quote: "Compassion kneels beside the broken and refuses to leave.",
+      italianQuote: "La compassione si inginocchia accanto ai fratturati e si rifiuta di andarsene.",
+      photo: "../assets/sr_theresa.jpg",
+    },
+    {
+      author: "Sr. Theresa",
+      category: "Hope and Perseverance",
+      quote: "Hope carries us when our legs grow weak and the road stretches on.",
+      italianQuote: "La speranza ci porta quando le nostre gambe si indeboliscono e la strada si allunga.",
+      photo: "../assets/sr_theresa.jpg",
+    },
+    {
+      author: "Sr. Theresa",
+      category: "Charity",
+      quote: "Charity multiplies what it gives and never counts the cost.",
+      italianQuote: "La carità moltiplica ciò che dona e non conta mai il prezzo.",
+      photo: "../assets/sr_theresa.jpg",
+    },
+    {
+      author: "Sr. Theresa",
+      category: "Forgiveness",
+      quote: "Forgiveness unlocks the heart and lets mercy rush in.",
+      italianQuote: "Il perdono sblocca il cuore e lascia che la misericordia vi entri.",
+      photo: "../assets/sr_theresa.jpg",
+    },
+    {
+      author: "Sr. Theresa",
+      category: "Wisdom",
+      quote: "Wisdom listens before it speaks and prays before it acts.",
+      italianQuote: "La saggezza ascolta prima di parlare e prega prima di agire.",
+      photo: "../assets/sr_theresa.jpg",
+    },
+    {
+      author: "Sr. Theresa",
+      category: "Spiritual Growth",
+      quote: "Spiritual growth happens in the small, hidden moments of daily love.",
+      italianQuote: "La crescita spirituale avviene nei piccoli momenti nascosti dell'amore quotidiano.",
+      photo: "../assets/sr_theresa.jpg",
+    },
+    {
+      author: "Sr. Theresa",
+      category: "Humility",
+      quote: "Humility kneels low enough to wash the feet of those who least expect it.",
+      italianQuote: "L'umiltà si inginocchia abbastanza da lavare i piedi di coloro che meno se lo aspettano.",
+      photo: "../assets/sr_theresa.jpg",
+    },
+    {
+      author: "Sr. Theresa",
+      category: "Gratitude",
+      quote: "Gratitude turns every small mercy into a window of God's presence.",
+      italianQuote: "La gratitudine trasforma ogni piccola misericordia in una finestra della presenza di Dio.",
+      photo: "../assets/sr_theresa.jpg",
+    },
+    {
+      author: "Sr. Theresa",
+      category: "Latin",
+      quote: "In hoc signo vinces — in faith we conquer, not by force but by love.",
+      italianQuote: "In hoc signo vinces — nella fede vinceremo, non con la forza ma con l'amore.",
+      photo: "../assets/sr_theresa.jpg",
+    },
+    {
+      author: "Sr. Theresa",
+      category: "Gratittude",
+      quote: "A grateful heart is a heart that has found its home in God.",
+      italianQuote: "Un cuore grato è un cuore che ha trovato la sua casa in Dio.",
+      photo: "../assets/sr_theresa.jpg",
+    },
+    {
       author: "Sr. Gladys",
       category: "Love",
       quote: "Love is the quiet way we reflect the heart of God in every everyday kindness.",
@@ -18118,6 +18312,14 @@ export function justBecauseArray() {
       topic: { en: "Virgin Mary", it: "Vergine Maria" },
     },
     {
+      author: "Sr. Theresa",
+      sentiment: {
+        en: "Her tenderness watches over me when I feel unseen — I rest in her intercession, just because.",
+        it: "La Sua tenerezza veglia su di me quando mi sento invisibile — riposo nella Sua intercessione, solo perché.",
+      },
+      topic: { en: "Mary", it: "Maria" },
+    },
+    {
       author: "Sr. Gladys",
       sentiment: {
         en: "His gentleness walks beside me in every ordinary moment—my heart rests in His care, just because.",
@@ -18191,6 +18393,7 @@ export const AUTHOR_PHOTOS = {
   "Sr. Winnie Lopez": "../assets/sr_winnie.jpg",
   "Sr. Joan": "../assets/sr_joan.jpg",
   "Sr. Gladys": "../assets/sr_gladys.png",
+  "Sr. Theresa": "../assets/sr_theresa.jpg",
 };
 
 export function getFavWords() {
@@ -18757,6 +18960,18 @@ export function getFavWords() {
       quote: {
         en: "Warmth is the gentle kindness that revives forgotten hearts.",
         it: "Il calore è la dolcezza che ridà vita ai cuori dimenticati.",
+      },
+    },
+    {
+      author: "Sr. Theresa",
+      favWord: { en: "Compassion", it: "Compassione" },
+      reason: {
+        en: "Compassion brings us close to the heart of God.",
+        it: "La compassione ci avvicina al cuore di Dio.",
+      },
+      quote: {
+        en: "Compassion bends down to lift the forgotten and calls them beloved.",
+        it: "La compassione si china per sollevare i dimenticati e li chiama amati.",
       },
     },
     {
