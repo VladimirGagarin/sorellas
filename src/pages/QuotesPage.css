@@ -656,12 +656,19 @@
 }
 
 /* ============ Progress ============ */
-.quotes-progress-row {
+.quotes-progress {
   margin-top: 1.5rem;
   text-align: center;
 }
 
+.quotes-progress-row {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
 .quotes-progress-bar {
+  flex: 1;
   height: 8px;
   background: var(--glass-bg);
   border: 1px solid var(--border-color);
@@ -692,46 +699,35 @@
   color: var(--text-muted);
 }
 
-/* ============ Fixed side nav ============ */
+/* ============ Inline nav arrows ============ */
 .quotes-fixed-nav {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 200;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 54px;
-  height: 54px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   border: 1px solid var(--border-color);
   background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   color: var(--text-primary);
-  font-size: 1.15rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 .quotes-fixed-nav:hover {
-  transform: translateY(-50%) scale(1.08);
+  transform: scale(1.08);
   border-color: var(--leaf-emerald);
   color: var(--leaf-emerald);
   box-shadow: 0 12px 38px rgba(0, 0, 0, 0.28);
 }
 
 .quotes-fixed-nav:active {
-  transform: translateY(-50%) scale(0.95);
-}
-
-.quotes-fixed-left {
-  left: 16px;
-}
-
-.quotes-fixed-right {
-  right: 16px;
+  transform: scale(0.95);
 }
 
 @keyframes quotesFadeIn {
@@ -773,17 +769,9 @@
   }
 
   .quotes-fixed-nav {
-    width: 46px;
-    height: 46px;
-    font-size: 1rem;
-  }
-
-  .quotes-fixed-left {
-    left: 8px;
-  }
-
-  .quotes-fixed-right {
-    right: 8px;
+    width: 38px;
+    height: 38px;
+    font-size: 0.9rem;
   }
 }
 

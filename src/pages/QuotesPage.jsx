@@ -578,21 +578,42 @@ shareText:
           </button>
         </div>
 
-        {/* Progress + hint */}
-        <div className="quotes-progress-row">
-          <div
-            className="quotes-progress-bar" ref={barRef}
-            onPointerDown={(e) =>
-              UpdateCards(e)
-            }
-          >
+        {/* Progress + nav + hint */}
+        <div className="quotes-progress">
+          <div className="quotes-progress-row">
+            <button
+              className="quotes-fixed-nav quotes-fixed-left"
+              onClick={prevQuote}
+              aria-label={
+                language === "en" ? "Previous quote" : "Citazione precedente"
+              }
+              title={language === "en" ? "Previous (←)" : "Precedente (←)"}
+            >
+              <FaArrowLeft />
+            </button>
             <div
-              className="quotes-progress-fill"
-              style={{
-                width: `${((currentIndex + 1) / themeQuotes.length) * 100}%`,
-              }}
-              title={`${Math.floor(((currentIndex + 1) / themeQuotes.length) * 100)}%`}
-            />
+              className="quotes-progress-bar"
+              ref={barRef}
+              onPointerDown={(e) => UpdateCards(e)}
+            >
+              <div
+                className="quotes-progress-fill"
+                style={{
+                  width: `${((currentIndex + 1) / themeQuotes.length) * 100}%`,
+                }}
+                title={`${Math.floor(((currentIndex + 1) / themeQuotes.length) * 100)}%`}
+              />
+            </div>
+            <button
+              className="quotes-fixed-nav quotes-fixed-right"
+              onClick={nextQuote}
+              aria-label={
+                language === "en" ? "Next quote" : "Citazione successiva"
+              }
+              title={language === "en" ? "Next (→)" : "Successivo (→)"}
+            >
+              <FaArrowRight />
+            </button>
           </div>
           <div className="quotes-progress-text">
             {currentIndex + 1} / {themeQuotes.length}
@@ -600,26 +621,6 @@ shareText:
           <p className="quotes-share-hint">{t.shareText}</p>
         </div>
       </div>
-
-      {/* Fixed side navigation */}
-      <button
-        className="quotes-fixed-nav quotes-fixed-left"
-        onClick={prevQuote}
-        aria-label={
-          language === "en" ? "Previous quote" : "Citazione precedente"
-        }
-        title={language === "en" ? "Previous (←)" : "Precedente (←)"}
-      >
-        <FaArrowLeft />
-      </button>
-      <button
-        className="quotes-fixed-nav quotes-fixed-right"
-        onClick={nextQuote}
-        aria-label={language === "en" ? "Next quote" : "Citazione successiva"}
-        title={language === "en" ? "Next (→)" : "Successivo (→)"}
-      >
-        <FaArrowRight />
-      </button>
     </div>
   );
 }
