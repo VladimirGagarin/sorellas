@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vladimirgagarin.github.io/sorellas/sitemap.xml
