@@ -68,6 +68,7 @@ export default function Header() {
       litanyOfSaintJoseph: "Litany of Saint Joseph",
       litanyOfCottolengo: "Litany of Cottolengo",
       quotes: "Garden Quotes",
+      poems: "Poems",
       settings: "Garden Tools",
       logout: "Return to Earth",
       rosesOfRome: "Roses of Rome",
@@ -101,6 +102,7 @@ export default function Header() {
       litanyOfSaintJoseph: "Litanie di San Giuseppe",
       litanyOfCottolengo: "Litanie di Cottolengo",
       quotes: "Citazioni del Giardino",
+      poems: "Poesie",
       deepseekQuestions: "Domande Deepseek",
       favouriteWords: "Parole Preferite",
       justBecause: "Solo Perché",
@@ -228,6 +230,12 @@ export default function Header() {
       label: t.quotes,
       link: "/quotes",
       color: getFlowerColor("leaf"), // Wisdom / growth
+    },
+    {
+      icon: <FaFeatherAlt />,
+      label: t.poems,
+      link: "/poems",
+      color: getFlowerColor("rose"), // Poetry / grace
     },
     {
       icon: <FaFeatherAlt />,

@@ -13,6 +13,8 @@ import LitanyJesusPage from './pages/LitanyJesusPage.jsx';
 import LitanyJosephPage from './pages/LitanyJosephPage.jsx';
 import LitanyCottolengoPage from './pages/LitanyCottolengoPage.jsx';
 import QuotesPage from './pages/QuotesPage.jsx';
+import PoemsPage from './pages/PoemsPage.jsx';
+import ReadPoemPage from './pages/ReadPoemPage.jsx';
 import PrayersPage from './pages/PrayersPage.jsx';
 import PrayerPage from './pages/PrayerPage.jsx';
 import FavoriteWordsPage from './pages/FavoriteWordsPage.jsx';
@@ -83,6 +85,14 @@ const router = createHashRouter([
     {
       path: "quotes",
       element: <QuotesPage />
+    },
+    {
+      path: "poems",
+      element: <PoemsPage />
+    },
+    {
+      path: "readpoem",
+      element: <ReadPoemPage />
     },
     {
       path: "favourite-words",

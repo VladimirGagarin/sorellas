@@ -19116,13 +19116,64 @@ export function getFavWords() {
 export function getPoems() {
   const allPoems = [
     {
+      title: {
+        en: "Prayer Is a Wonderful Flower",
+        it: "La Preghiera è un Fiore Meraviglioso",
+      },
       author: "Sr. Mary Japheth",
-      title: {en:"Praying is Wonderful", it:""},
-      poem: {verse1: [], verse2:[], verse3:[]} // 4 lines each verse
+      photo: "../assets/sr_mary_japheth.jpg",
+      verses: {
+        verse1: {
+          en: [
+            "When the day is heavy and the road is long,",
+            "I close my eyes and hum a little song,",
+            "the heart grows still, the words come slow,",
+            "and in that quiet, my worries let go.",
+          ],
+          it: [
+            "Quando il giorno è pesante e lunga è la via,",
+            "chiudo gli occhi e dico una dolce Ave Maria,",
+            "il cuore si calma, le parole sono lente,",
+            "e nel silenzio volano via le paure della mente.",
+          ],
+        },
+        verse2: {
+          en: [
+            "Praying is wonderful, simple and true,",
+            "a whisper that only the heavens can view,",
+            "no need for grand words, no need for art,",
+            "just a soul opening its weary heart.",
+          ],
+          it: [
+            "Pregare è meraviglioso, semplice e vero,",
+            "un sussurro che sale diritto al cielo,",
+            "non servono grandi parole, né arte,",
+            "basta un'anima che schiude il suo cuore e parte.",
+          ],
+        },
+        verse3: {
+          en: [
+            "And when I rise, my spirit made new,",
+            "I carry the peace the whole day through,",
+            "for prayer is the garden where graces bloom,",
+            "and I am the flower that follows You.",
+          ],
+          it: [
+            "E quando mi alzo, con l'anima rinnovata,",
+            "porto quella pace per tutta la giornata,",
+            "la preghiera è il giardino dove la grazia fiorisce,",
+            "e io sono il fiore che per Te risplende.",
+          ],
+        },
+      },
+      closer: { en: "DEO GRATIAS", it: "DEO GRATIAS" },
     },
+  ];
+  return allPoems;
+}
 
-  ]
-  return allPoems
+export function getAllPoems() {
+  return getPoems();
 }
 
 export function sisterhood() {

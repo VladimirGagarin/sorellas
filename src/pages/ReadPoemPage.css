@@ -1,0 +1,330 @@
+/* ReadPoemPage.css — Full poem card */
+
+.readpoem-page {
+  min-height: 100vh;
+  background: var(--gradient-bg);
+  color: var(--text-primary);
+  position: relative;
+}
+
+.readpoem-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 5.5rem 1rem 4rem;
+}
+
+/* ============ Top bar ============ */
+.readpoem-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.readpoem-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  color: var(--leaf-emerald);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.readpoem-back-link:hover {
+  border-color: var(--leaf-emerald);
+  color: var(--leaf-emerald);
+  transform: translateX(-2px);
+  box-shadow: 0 4px 14px rgba(var(--primary-green-rgb), 0.2);
+}
+
+.readpoem-top-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.readpoem-share {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.readpoem-share:hover {
+  border-color: var(--leaf-emerald);
+  color: var(--leaf-emerald);
+  transform: translateY(-1px);
+}
+
+.readpoem-share.copied {
+  background: var(--leaf-emerald);
+  border-color: transparent;
+  color: #FFFDF6;
+}
+
+/* ============ Card ============ */
+.readpoem-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 2.25rem 2.75rem;
+  box-shadow: 0 16px 44px var(--shadow-color);
+  position: relative;
+  animation: readpoemFadeIn 0.45s ease forwards;
+}
+
+.readpoem-card-header {
+  border-bottom: 1px dashed var(--border-color);
+  padding-bottom: 1.4rem;
+  margin-bottom: 1.6rem;
+}
+
+/* Header row: author photo top-left, author beside it */
+.readpoem-author-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.readpoem-photo {
+  flex-shrink: 0;
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(var(--primary-green-rgb), 0.55);
+  box-shadow: 0 10px 26px var(--shadow-color);
+  background: var(--gradient-bg);
+}
+
+.readpoem-photo.readpoem-monogram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #FFFDF6;
+  background: linear-gradient(135deg, var(--leaf-emerald), var(--primary-green));
+  border-color: rgba(255, 253, 246, 0.35);
+}
+
+.readpoem-author-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.readpoem-author-hint {
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.readpoem-author {
+  font-style: normal;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+  color: var(--text-primary);
+}
+
+/* Poem title centered below the author row */
+.readpoem-poem-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 1.3rem 0 0;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.35;
+  color: var(--text-primary);
+  background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="dark"] .readpoem-poem-title {
+  background: linear-gradient(135deg, var(--text-primary), var(--accent-lavender));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.readpoem-title-mark {
+  color: var(--leaf-emerald);
+  font-size: 0.9rem;
+  opacity: 0.65;
+  flex-shrink: 0;
+}
+
+/* ============ Content ============ */
+.readpoem-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.readpoem-verse {
+  text-align: justify;
+}
+
+.readpoem-verse-label {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--leaf-emerald);
+  margin-bottom: 0.6rem;
+  text-align: left;
+}
+
+[data-theme="dark"] .readpoem-verse-label {
+  color: var(--accent-lavender);
+}
+
+.readpoem-line {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.7;
+  color: var(--text-primary);
+}
+
+/* ============ Footer: closer left-aligned ============ */
+.readpoem-card-footer {
+  margin-top: 1.8rem;
+  padding-top: 1.1rem;
+  border-top: 1px dashed var(--border-color);
+  text-align: left;
+}
+
+.readpoem-closer {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--leaf-emerald);
+  opacity: 0.9;
+}
+
+[data-theme="dark"] .readpoem-closer {
+  color: var(--accent-lavender);
+}
+
+.readpoem-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1.5rem 0 0;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.readpoem-note svg {
+  color: var(--leaf-emerald);
+}
+
+.readpoem-empty {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 8rem 1rem;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.readpoem-empty a {
+  color: var(--leaf-emerald);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@keyframes readpoemFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============ Responsive ============ */
+@media (max-width: 768px) {
+  .readpoem-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .readpoem-poem-title {
+    font-size: 1.4rem;
+  }
+
+  .readpoem-line {
+    font-size: 1.15rem;
+  }
+
+  .readpoem-photo {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .readpoem-container {
+    padding-top: 2.5rem;
+  }
+
+  .readpoem-topbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .readpoem-top-actions {
+    justify-content: center;
+  }
+
+  .readpoem-card {
+    padding: 1.6rem 1.2rem;
+  }
+
+  .readpoem-verse {
+    text-align: left;
+  }
+
+  .readpoem-line {
+    font-size: 1.05rem;
+  }
+}
