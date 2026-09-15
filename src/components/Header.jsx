@@ -26,6 +26,7 @@ import {
 } from "react-icons/fa";
 import { useLanguage } from "../contexts/useLanguage";
 import { useTheme } from "../contexts/theme.jsx";
+import InstallBanner from "./InstallBanner.jsx";
 import "./Header.css";
 
 export default function Header() {
@@ -427,6 +428,8 @@ export default function Header() {
           </div>
         </div>
       </div>
+
+      <InstallBanner />
     </>
   );
 }

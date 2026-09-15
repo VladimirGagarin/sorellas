@@ -1,0 +1,120 @@
+/* InstallBanner.css — floating "save this site" helper */
+.save-banner {
+  position: fixed;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  margin: 0 auto;
+  max-width: 430px;
+  z-index: 1150;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 42px 14px 16px;
+  border: 1px solid rgba(var(--primary-green-rgb), 0.35);
+  border-radius: 16px;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.3);
+  animation: saveBannerIn 0.35s ease;
+}
+
+.save-banner-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(var(--primary-green-rgb), 0.12);
+  color: var(--primary-green);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all 0.2s ease;
+}
+
+.save-banner-close:hover {
+  background: var(--primary-green);
+  color: var(--bg-card);
+}
+
+.save-banner-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+  color: #fff;
+  background: var(--gradient-primary);
+  box-shadow: 0 6px 14px rgba(var(--primary-green-rgb), 0.4);
+}
+
+.save-banner-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.save-banner-title {
+  margin: 0;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--text-main, var(--primary-green));
+}
+
+.save-banner-text {
+  margin: 3px 0 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+.save-banner-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(var(--primary-green-rgb), 0.5);
+  background: var(--bg-card);
+  color: var(--primary-green);
+  font-weight: 800;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.save-banner-btn:hover {
+  background: var(--gradient-primary);
+  color: #fff;
+  border-color: transparent;
+}
+
+@keyframes saveBannerIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .save-banner {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px 36px 12px 14px;
+  }
+  .save-banner-body {
+    flex: 1 1 100%;
+  }
+  .save-banner-btn {
+    flex: 1;
+    justify-content: center;
+  }
+}
