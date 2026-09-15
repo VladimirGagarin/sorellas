@@ -18,23 +18,27 @@ import FavoriteWordsPage from './pages/FavoriteWordsPage.jsx';
 import JustBecausePage from './pages/JustBecausePage.jsx';
 import TenderPresencePage from './pages/TenderPresencePage.jsx';
 import DisclaimerPage from './pages/DisclaimerPage.jsx';
+import DisclaimerModal from './components/DisclaimerModal.jsx';
 import './index.css'
 import App from './App.jsx'
 
 const router = createHashRouter([
   {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "*",
-    element: <App />,
-  },
-  {
-    path: "home",
-    element: <HomeScreenPage />,
-  },
-  {
+    element: <DisclaimerModal />,
+    children: [
+      {
+        index: true,
+        element: <App />,
+      },
+      {
+        path: "*",
+        element: <App />,
+      },
+      {
+        path: "home",
+        element: <HomeScreenPage />,
+      },
+      {
     path: "about",
     element: <AboutScreenPage />,
 
@@ -90,8 +94,10 @@ const router = createHashRouter([
     {
       path: "disclaimer",
       element: <DisclaimerPage />
-    }
-  ]);
+    },
+    ],
+  },
+]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

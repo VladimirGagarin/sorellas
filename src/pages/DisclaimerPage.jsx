@@ -12,9 +12,9 @@ import { useLanguage } from "../contexts/useLanguage.js";
 import { SITE_IMAGE_URL, SITE_NAME, useSeo } from "../utils/seo.js";
 import "./DisclaimerPage.css";
 
-const ACK_KEY = "disclaimer-ack";
+export const ACK_KEY = "disclaimer-ack";
 
-const POINTS = [
+export const POINTS = [
   {
     en: "This page is shared for inspiration and reflection — not for entertainment.",
     it: "Questa pagina è condivisa per ispirazione e riflessione — non per intrattenimento.",

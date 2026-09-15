@@ -1,0 +1,53 @@
+/* components/DisclaimerModal.css — centered confirmation overlay */
+
+.disclaimer-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(10, 14, 10, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  animation: disclaimerOverlay 0.3s ease forwards;
+}
+
+.disclaimer-modal-card {
+  width: min(560px, 100%);
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  animation: disclaimerModalIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.disclaimer-modal-card .disclaimer-btn.primary.red {
+  color: #fff;
+  background: linear-gradient(135deg, #c0392b, #8e2b1c);
+  box-shadow: 0 10px 26px rgba(192, 57, 43, 0.45);
+}
+
+.disclaimer-modal-card .disclaimer-btn.primary.red:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(192, 57, 43, 0.55);
+}
+
+@keyframes disclaimerOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes disclaimerModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
