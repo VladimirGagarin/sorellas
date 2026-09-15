@@ -186,6 +186,20 @@
 .length-badge.medium { background: var(--primary-green); }
 .length-badge.long { background: var(--accent-purple); }
 
+.tag-badge {
+  display: inline-block;
+  padding: 0.25rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #FFFDF6;
+}
+.tag-badge.catholic { background: var(--oak-brown); }
+.tag-badge.bible    { background: var(--leaf-emerald); }
+.tag-badge.personal { background: var(--rose-pink); }
+
 .word-count {
   font-size: 0.85rem;
   color: var(--text-muted);

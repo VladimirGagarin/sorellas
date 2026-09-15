@@ -22,6 +22,7 @@ import {
   FaChurch,
   FaHandSparkles,
   FaBookOpen,
+  FaCalendarDay,
 } from "react-icons/fa";
 import { useLanguage } from "../contexts/useLanguage";
 import { useTheme } from "../contexts/theme.jsx";
@@ -59,6 +60,7 @@ export default function Header() {
       home: "Welcome",
       garden: "Garden",
       prayers: "Prayer Journal",
+      feastDays: "Feast Days",
       about: "Why Here?",
       litanyOfMary: "Litany of the Blessed Virgin Mary",
       litanyOfJesus: "Litany of Jesus",
@@ -91,6 +93,7 @@ export default function Header() {
       home: "Benvenutti",
       garden: "Giardino",
       prayers: "Diario di Preghiera",
+      feastDays: "Giorni di Festa",
       about: "Perché Qui?",
       litanyOfMary: "Litanie della Beata Vergine Maria",
       litanyOfJesus: "Litanie del Santissimo Nome di Gesù",
@@ -164,6 +167,12 @@ export default function Header() {
       label: t.garden,
       link: "/garden",
       color: getFlowerColor("oak"), // garden
+    },
+    {
+      icon: <FaCalendarDay />,
+      label: t.feastDays,
+      link: "/feasts",
+      color: getFlowerColor("lily"), // liturgical gold
     },
     {
       icon: <FaPray />,

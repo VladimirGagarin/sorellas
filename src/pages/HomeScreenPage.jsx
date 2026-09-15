@@ -3,7 +3,13 @@ import { Link } from "react-router-dom";
 import Header from "../components/Header.jsx";
 import QuoteCard from "../components/QuoteCard.jsx";
 import { useLanguage } from "../contexts/useLanguage.js";
-import { getQuotes, getCatholicPrayers } from "../components/Utils.js";
+import {
+  getQuotes,
+  getAllPrayers,
+  getFeastsOnDate,
+  getWikipediaUrl,
+} from "../components/Utils.js";
+import confetti from "canvas-confetti";
 import {
   FaSeedling,
   FaBookOpen,
@@ -12,6 +18,10 @@ import {
   FaArrowRight,
   FaPrayingHands,
   FaChevronDown,
+  FaChurch,
+  FaWikipediaW,
+  FaExternalLinkAlt,
+  FaCalendarDay,
 } from "react-icons/fa";
 import "./HomeScreen.css";
 
@@ -52,13 +62,35 @@ export default function HomeScreenPage() {
   const { language } = useLanguage();
 
   const quotes = useMemo(() => getQuotes(), []);
-  const prayers = useMemo(() => getCatholicPrayers(), []);
+  const prayers = useMemo(() => getAllPrayers(), []);
 
   // random prayer of the day
   const [prayerOfDay] = useState(() => {
     const idx = Math.floor(Math.random() * prayers.length);
     return prayers[idx];
   });
+
+  // feasts celebrated today (MM-DD match across present year)
+  const feastsToday = useMemo(() => getFeastsOnDate(new Date()), []);
+
+  useEffect(() => {
+    if (feastsToday.length === 0) return () => {};
+    const colors = ["#8C6D1F", "#A84B2A", "#4A5D36", "#D4A94C", "#C8A45C"];
+    confetti({ particleCount: 120, spread: 90, origin: { y: 0.6 }, colors });
+    const end = Date.now() + 1800;
+    const interval = setInterval(() => {
+      confetti({
+        particleCount: 50,
+        spread: 70,
+        origin: { x: Math.random(), y: 0.6 },
+        colors,
+      });
+      if (Date.now() > end) {
+        clearInterval(interval);
+      }
+    }, 260);
+    return () => clearInterval(interval);
+  }, [feastsToday.length]);
 
   const t = {
     eyebrow: language === "en" ? "Fiori Di Preghiera" : "Fiori Di Preghiera",
@@ -90,6 +122,18 @@ export default function HomeScreenPage() {
       language === "en"
         ? "A sacred prayer for your reflection"
         : "Una preghiera sacra per la tua riflessione",
+    feastEyebrow:
+      language === "en" ? "Celebrated Today" : "Celebrato Oggi",
+    buonaFesta:
+      language === "en" ? "Happy Feast Day!" : "Buona Festa!",
+    feastHonours:
+      language === "en"
+        ? "The Church honours today:"
+        : "La Chiesa onora oggi:",
+    viewCalendar:
+      language === "en" ? "View Feast Calendar" : "Vedi Calendario delle Feste",
+    wikiInfo:
+      language === "en" ? "Wikipedia" : "Wikipedia",
     newPrayer:
       language === "en" ? "Another Prayer" : "Un'Altra Preghiera",
     explorePrayers:
@@ -253,6 +297,54 @@ export default function HomeScreenPage() {
           </div>
         </section>
 
+        {/* Feast of the day */}
+        {feastsToday.length > 0 && (
+          <section className="landing-section">
+            <Reveal>
+              <div className="feast-today-hero glass">
+                <div className="feast-today-brand">
+                  <FaChurch />
+                </div>
+                <div className="feast-today-body">
+                  <span className="feast-today-eyebrow">
+                    ✦ {t.feastEyebrow} ✦
+                  </span>
+                  <h2 className="feast-today-title">{t.buonaFesta}</h2>
+                  <p className="feast-today-honours">{t.feastHonours}</p>
+                  <div className="feast-today-names">
+                    {feastsToday.map((feast, i) => (
+                      <span
+                        key={`${feast.en}-${i}`}
+                        className="feast-today-name"
+                      >
+                        {language === "en" ? feast.en : feast.it}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="feast-today-actions">
+                    {feastsToday.map((feast, i) => (
+                      <a
+                        key={`wiki-${feast.en}-${i}`}
+                        href={getWikipediaUrl(feast.en, language)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="feast-today-btn ghost"
+                      >
+                        <FaWikipediaW />
+                        {t.wikiInfo}
+                        <FaExternalLinkAlt />
+                      </a>
+                    ))}
+                    <Link to="/feasts" className="feast-today-btn primary">
+                      <FaCalendarDay /> {t.viewCalendar} <FaArrowRight />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          </section>
+        )}
+
         {/* Quote of the day */}
         <section className="landing-section">
           <Reveal>
@@ -286,16 +378,18 @@ export default function HomeScreenPage() {
             </div>
           </Reveal>
           <Reveal delay={140}>
-            <div className="landing-prayer glass" key={prayerOfDay.prayerTitle.en}>
+            <div className="landing-prayer glass" key={prayerOfDay.author}>
               <div className="landing-prayer-title">
-                {prayerOfDay.prayerTitle[language]}
+                {language === "it" && prayerOfDay.italianAuthor
+                  ? prayerOfDay.italianAuthor
+                  : prayerOfDay.author}
               </div>
               <p className="landing-prayer-text">
-                {prayerOfDay.prayer[language]}
+                {language === "en" ? prayerOfDay.prayer : prayerOfDay.italianPrayer}
               </p>
               <div className="landing-prayer-foot">
                 <span className="landing-prayer-origin">
-                  {prayerOfDay.origin[language]}
+                  {language === "en" ? prayerOfDay.quote : prayerOfDay.italianQuote}
                 </span>
               </div>
               <Link

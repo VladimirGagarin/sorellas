@@ -1456,6 +1456,30 @@ export function getFamousPrayers() {
         "La fede vissuta nella gentilezza diventa luce per tutto il mondo.",
       photo: "../assets/sr_theresa.jpg",
     },
+    {
+      author: "Regina Caeli",
+      prayer:
+        "Queen of heaven, rejoice, alleluia. The Son whom you merited to bear, alleluia, has risen as he said, alleluia. Pray for us to God, alleluia.\nV. Rejoice and be glad, O Virgin Mary, alleluia.\nR. For the Lord has truly risen, alleluia.\nLet us pray:\nO God, who through the resurrection of your Son, our Lord Jesus Christ, did vouchsafe to give joy to the world; grant, we beseech you, that through his Mother, the Virgin Mary, we may obtain the joys of everlasting life. Through the same Christ our Lord. Amen.",
+      italianPrayer:
+        "Regina del cielo, rallegrati, alleluia. Perché Colui che hai meritato di portare, alleluia, è risorto come aveva detto, alleluia. Prega per noi Dio, alleluia.\nV. Rallegrati ed esulta, o Vergine Maria, alleluia.\nR. Perché il Signore è davvero risorto, alleluia.\nPreghiamo:\nO Dio, che per la risurrezione del tuo Figlio, nostro Signore Gesù Cristo, ti sei degnato di donare la gioia al mondo, concedici, te ne preghiamo, che per mezzo di sua Madre, la Vergine Maria, possiamo ottenere le gioie della vita eterna. Per lo stesso Cristo nostro Signore. Amen.",
+      quote:
+        "Queen of heaven, rejoice, alleluia. The Son whom you merited to bear has risen as he said.",
+      italianQuote:
+        "Regina del cielo, rallegrati, alleluia. Perché Colui che hai meritato di portare è risorto come aveva detto.",
+      photo: "../assets/mary.jpg",
+    },
+    {
+      author: "Hail, Holy Queen",
+      prayer:
+        "Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope. To you do we cry, poor banished children of Eve. To you do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious advocate, your eyes of mercy toward us, and after this our exile, show unto us the blessed fruit of your womb, Jesus. O clement, O loving, O sweet Virgin Mary.\nV. Pray for us, O holy Mother of God.\nR. That we may be made worthy of the promises of Christ.\nLet us pray:\nO God, whose only begotten Son, by His life, death, and resurrection, has purchased for us the rewards of eternal life, grant, we beseech Thee, that meditating upon these mysteries of the Most Holy Rosary of the Blessed Virgin Mary, we may imitate what they contain and obtain what they promise, through the same Christ our Lord. Amen.",
+      italianPrayer:
+        "Salve, Regina, Madre di misericordia, vita, dolcezza e speranza nostra. Salve. A te ricorriamo, esuli figli di Eva; a te sospiriamo, gementi e piangenti in questa valle di lacrime. Orsù dunque, avvocata nostra, rivolgi a noi gli occhi tuoi misericordiosi. E mostraci, dopo questo esilio, Gesù, il frutto benedetto del tuo seno. O clemente, o pia, o dolce Vergine Maria.\nV. Prega per noi, santa Madre di Dio.\nR. Affinché siamo resi degni delle promesse di Cristo.\nPreghiamo:\nO Dio, il cui Figlio unigenito con la sua vita, morte e risurrezione ci ha acquistato i premi della vita eterna, concedi, te ne preghiamo, che meditando questi misteri del Santissimo Rosario della Beata Vergine Maria, possiamo imitare ciò che contengono e ottenere ciò che promettono, per lo stesso Cristo nostro Signore. Amen.",
+      quote:
+        "Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope.",
+      italianQuote:
+        "Salve, Regina, Madre di misericordia, vita, dolcezza e speranza nostra.",
+      photo: "../assets/mary.jpg",
+    },
   ];
 
   return prayersList;
@@ -13067,6 +13091,56 @@ export function getCatholicPrayers() {
   return prayers;
 }
 
+const SCRIPTURE_AUTHOR_RE =
+  /^(Psalm|Numbers|Philippians|Micah|Ephesians|1 Thessalonians|2 Corinthians) \d+/i;
+const SCRIPTURE_REF_RE = /\b(Luke|Matthew|John|Mark|Corinthians|Thessalonians) \d+/i;
+
+function getPrayerTagForAuthor(author) {
+  const a = (author || "").toLowerCase();
+  if (a.startsWith("sr") || a.includes("sister")) return "personal";
+  if (a.includes("pope")) return "personal";
+  if (SCRIPTURE_AUTHOR_RE.test(a) || SCRIPTURE_REF_RE.test(a)) return "bible";
+  return "catholic";
+}
+
+function getPrayerTagForOrigin(origin) {
+  const o = (origin || "").toLowerCase();
+  if (o.includes("gospel") || o.includes("scripture") || o.includes("bible"))
+    return "bible";
+  if (
+    o.includes("personal") ||
+    o.includes("devotion") ||
+    o.includes("spirituality") ||
+    o.includes("charles de foucauld")
+  )
+    return "personal";
+  return "catholic";
+}
+
+// Unified list of every prayer in the app — famous (saints, popes, sisters,
+// Sacred Scripture) plus the core Catholic prayers — each tagged by origin:
+// "catholic" (tradition / liturgy / Catechism), "bible" (Sacred Scripture),
+// or "personal" (authored by popes, Sisters, or personal devotions).
+export function getAllPrayers() {
+  const famous = getFamousPrayers().map((p) => ({
+    ...p,
+    tag: getPrayerTagForAuthor(p.author),
+  }));
+
+  const catholic = getCatholicPrayers().map((p) => ({
+    author: p.prayerTitle?.en || "Catholic Prayer",
+    italianAuthor: p.prayerTitle?.it,
+    prayer: p.prayer?.en || "",
+    italianPrayer: p.prayer?.it || "",
+    quote: p.prescription?.en || "",
+    italianQuote: p.prescription?.it || "",
+    photo: null,
+    tag: getPrayerTagForOrigin(p.origin?.en),
+  }));
+
+  return [...famous, ...catholic];
+}
+
 export function getJesusLitany() {
   const litany = [
     {
@@ -15373,6 +15447,43 @@ export function findFeastsByDate(date, feasts, exact = false) {
       return feastMonthDay === monthDay;
     });
   }
+}
+
+export function getAllFeastsForYear(year = new Date().getFullYear()) {
+  // Normalize the hardcoded 2025 feast dates to the requested year and
+  // de-duplicate entries that repeat across the list.
+  const seen = new Set();
+  const feasts = [];
+  for (const feast of saintFeastDays) {
+    const monthDay = feast.date.slice(5);
+    const key = `${feast.en}::${monthDay}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    feasts.push({
+      en: feast.en,
+      it: feast.it,
+      date: `${year}-${monthDay}`,
+    });
+  }
+  return feasts.sort((a, b) => a.date.localeCompare(b.date));
+}
+
+export function getFeastsOnDate(date) {
+  const mmdd = formatDate(date).slice(5);
+  return getAllFeastsForYear(date.getFullYear()).filter(
+    (feast) => feast.date.slice(5) === mmdd
+  );
+}
+
+export function getFeastsForMonth(year, month) {
+  // month: 0-11
+  const mm = String(month + 1).padStart(2, "0");
+  return getAllFeastsForYear(year).filter((feast) => feast.date.slice(5, 7) === mm);
+}
+
+export function getWikipediaUrl(name, language = "en") {
+  const clean = name.replace(/["'`]/g, "").trim();
+  return `https://${language}.wikipedia.org/wiki/${clean.replace(/\s+/g, "_")}`;
 }
 
 export function deepSeekCategories() {

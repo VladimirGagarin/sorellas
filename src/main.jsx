@@ -6,6 +6,7 @@ import { LanguageProvider } from './contexts/language.jsx';
 import { ThemeProvider } from './contexts/theme.jsx';
 import AboutScreenPage from './pages/AboutScreenPage.jsx';
 import GardenPage from "./pages/GardenPage.jsx";
+import FeastDaysPage from "./pages/FeastDaysPage.jsx";
 import DeepSeekPage from './pages/DeepSeekPage.jsx';
 import LitanyMaryPage from './pages/LitanyMaryPage.jsx';
 import LitanyJesusPage from './pages/LitanyJesusPage.jsx';
@@ -50,6 +51,10 @@ const router = createHashRouter([
   {
     path: "deepseek",
     element: <DeepSeekPage />
+  },
+  {
+    path: "feasts",
+    element: <FeastDaysPage />
   },
 {
       path: "litany-mary",

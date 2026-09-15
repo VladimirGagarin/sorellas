@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header.jsx";
 import { useLanguage } from "../contexts/useLanguage.js";
-import { getFamousPrayers, resolvePrayerPhoto } from "../components/Utils.js";
+import { getAllPrayers, resolvePrayerPhoto } from "../components/Utils.js";
 import {
   FaList,
   FaQuoteLeft,
@@ -89,6 +89,7 @@ export default function PrayersPage() {
   const { language } = useLanguage();
   const [authorQuery, setAuthorQuery] = useState("");
   const [lengthFilter, setLengthFilter] = useState("all");
+  const [tagFilter, setTagFilter] = useState("all");
   const [randomKey, setRandomKey] = useState(0);
   const [mode, setMode] = useState("all");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
@@ -103,6 +104,10 @@ export default function PrayersPage() {
         "Prayers gathered from saints, shepherds of the Church, and humble servants of God.",
       author: "By Author",
       authorPlaceholder: "Search an author...",
+      origin: "By Origin",
+      tagCatholic: "Catholic",
+      tagBible: "Bible",
+      tagPersonal: "Personal",
       length: "By Length",
       all: "All",
       short: "Short",
@@ -131,6 +136,10 @@ export default function PrayersPage() {
         "Preghiere raccolte dai santi, dai pastori della Chiesa e dagli umili servi di Dio.",
       author: "Per Autore",
       authorPlaceholder: "Cerca un autore...",
+      origin: "Per Origine",
+      tagCatholic: "Cattolica",
+      tagBible: "Biblica",
+      tagPersonal: "Personale",
       length: "Per Lunghezza",
       all: "Tutte",
       short: "Brevi",
@@ -157,7 +166,7 @@ export default function PrayersPage() {
   }, [language]);
 
   const allPrayers = useMemo(
-    () => getFamousPrayers().map((p, i) => ({ ...p, _id: i })),
+    () => getAllPrayers().map((p, i) => ({ ...p, _id: i })),
     []
   );
 
@@ -174,7 +183,7 @@ export default function PrayersPage() {
     [allPrayers]
   );
 
-  const hasFilters = authorQuery.trim() !== "" || lengthFilter !== "all";
+  const hasFilters = authorQuery.trim() !== "" || lengthFilter !== "all" || tagFilter !== "all";
 
   const filtered = useMemo(() => {
     const q = authorQuery.trim().toLowerCase();
@@ -183,9 +192,10 @@ export default function PrayersPage() {
       const lengthMatch =
         lengthFilter === "all" ||
         getLengthCategory(wordCount(p.prayer)) === lengthFilter;
-      return authorMatch && lengthMatch;
+      const tagMatch = tagFilter === "all" || p.tag === tagFilter;
+      return authorMatch && lengthMatch && tagMatch;
     });
-  }, [allPrayers, authorQuery, lengthFilter]);
+  }, [allPrayers, authorQuery, lengthFilter, tagFilter]);
 
   const randomPrayers = useMemo(
     () => shuffleArray(allPrayers).slice(0, RANDOM_COUNT),
@@ -239,12 +249,18 @@ export default function PrayersPage() {
   const handleReset = () => {
     setAuthorQuery("");
     setLengthFilter("all");
+    setTagFilter("all");
     setVisibleCount(PAGE_SIZE);
     setShuffledAll(shuffleArray(allPrayers));
   };
 
   const changeLength = (value) => {
     setLengthFilter(value);
+    setVisibleCount(PAGE_SIZE);
+  };
+
+  const changeTag = (value) => {
+    setTagFilter(value);
     setVisibleCount(PAGE_SIZE);
   };
 
@@ -261,6 +277,15 @@ export default function PrayersPage() {
   const getLengthHint = (category) => {
     const hints = { short: t.shortHint, medium: t.mediumHint, long: t.longHint };
     return hints[category];
+  };
+
+  const getTagLabel = (tag) => {
+    const labels = {
+      catholic: t.tagCatholic,
+      bible: t.tagBible,
+      personal: t.tagPersonal,
+    };
+    return labels[tag] || tag;
   };
 
   return (
@@ -337,6 +362,29 @@ export default function PrayersPage() {
               </div>
             </div>
 
+            <div className="control-group">
+              <span className="control-label">{t.origin}</span>
+              <div className="length-pills">
+                {["all", "catholic", "bible", "personal"].map((value) => (
+                  <button
+                    key={value}
+                    className={`length-pill tag-pill ${
+                      tagFilter === value ? "active" : ""
+                    } ${value}`}
+                    onClick={() => changeTag(value)}
+                  >
+                    {value === "all"
+                      ? t.all
+                      : value === "catholic"
+                        ? t.tagCatholic
+                        : value === "bible"
+                          ? t.tagBible
+                          : t.tagPersonal}
+                  </button>
+                ))}
+              </div>
+            </div>
+
             <div className="controls-actions">
               {hasFilters ? (
                 <button className="shuffle-btn reset" onClick={handleReset}>
@@ -396,6 +444,9 @@ export default function PrayersPage() {
                     <div className="author-info">
                       <h3 className="author-name">{p.author}</h3>
                       <div className="card-badges">
+                        <span className={`tag-badge ${p.tag}`}>
+                          {getTagLabel(p.tag)}
+                        </span>
                         <span className={`length-badge ${category}`}>
                           {getLengthLabel(category)}
                         </span>

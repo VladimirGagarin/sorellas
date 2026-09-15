@@ -5,7 +5,7 @@ import CaptureCard from "../components/CaptureCard.jsx";
 import { useLanguage } from "../contexts/useLanguage.js";
 import { DEFAULT_SEO, SITE_IMAGE_URL, SITE_NAME, useSeo } from "../utils/seo.js";
 import {
-  getFamousPrayers,
+  getAllPrayers,
   resolvePrayerPhoto,
 } from "../components/Utils.js";
 import {
@@ -171,6 +171,12 @@ ${language === "en" ? "— shared from Fiori Di Preghiera" : "— condiviso da F
             <span className="prayer-eyebrow">{t.readingTime(wc)}</span>
             <h1 className="prayer-author-name">{prayer.author}</h1>
             <div className="prayer-badges">
+              <span className={`tag-badge ${prayer.tag}`}>
+                {{
+                  en: { catholic: "Catholic", bible: "Bible", personal: "Personal" },
+                  it: { catholic: "Cattolica", bible: "Biblica", personal: "Personale" },
+                }[language][prayer.tag] || prayer.tag}
+              </span>
               <span className={`length-badge ${category}`}>
                 {lengthLabel}
               </span>
@@ -254,7 +260,7 @@ export default function PrayerPage() {
   }, [language]);
 
   const prayer = useMemo(() => {
-    const list = getFamousPrayers();
+    const list = getAllPrayers();
     const idx = parseInt(prayerId, 10);
     if (Number.isInteger(idx) && idx >= 0 && idx < list.length) {
       return { ...list[idx], _id: idx };
@@ -263,7 +269,7 @@ export default function PrayerPage() {
   }, [prayerId]);
 
   const totalCount = useMemo(
-    () => (prayer ? getFamousPrayers().length : 0),
+    () => (prayer ? getAllPrayers().length : 0),
     [prayer]
   );
 

@@ -1756,3 +1756,159 @@
     right: 0;
   }
 }
+
+/* Feast of the day hero */
+.feast-today-hero {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  padding: 30px 34px;
+  border: 1px solid rgba(var(--primary-green-rgb), 0.45);
+  background: linear-gradient(
+    135deg,
+    rgba(var(--primary-green-rgb), 0.16),
+    rgba(var(--primary-green-rgb), 0.04)
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.feast-today-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 12% 20%,
+    rgba(var(--primary-green-rgb), 0.2),
+    transparent 55%
+  );
+  pointer-events: none;
+}
+
+.feast-today-brand {
+  flex-shrink: 0;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  color: var(--bg-card);
+  background: var(--gradient-primary);
+  box-shadow: 0 10px 26px rgba(var(--primary-green-rgb), 0.4);
+  animation: feastPulse 2.6s ease-in-out infinite;
+}
+
+.feast-today-body {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+
+.feast-today-eyebrow {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--primary-green);
+  margin-bottom: 6px;
+}
+
+.feast-today-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 4px;
+}
+
+.feast-today-honours {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0 0 10px;
+}
+
+.feast-today-names {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.feast-today-name {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-main, var(--primary-green));
+  background: var(--bg-card);
+  border: 1px solid rgba(var(--primary-green-rgb), 0.45);
+  border-radius: 999px;
+  padding: 6px 14px;
+}
+
+.feast-today-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.feast-today-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 20px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: all 0.22s ease;
+}
+
+.feast-today-btn.primary {
+  background: var(--gradient-primary);
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(var(--primary-green-rgb), 0.35);
+}
+
+.feast-today-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(var(--primary-green-rgb), 0.45);
+}
+
+.feast-today-btn.ghost {
+  border: 1px solid rgba(var(--primary-green-rgb), 0.5);
+  color: var(--primary-green);
+  background: var(--bg-card);
+}
+
+.feast-today-btn.ghost:hover {
+  background: var(--gradient-primary);
+  color: #fff;
+  border-color: transparent;
+}
+
+@keyframes feastPulse {
+  0%, 100% {
+    box-shadow: 0 10px 26px rgba(var(--primary-green-rgb), 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 10px 34px rgba(var(--primary-green-rgb), 0.6);
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 640px) {
+  .feast-today-hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 26px 20px;
+  }
+
+  .feast-today-actions,
+  .feast-today-names {
+    justify-content: center;
+  }
+}
