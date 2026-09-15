@@ -21,6 +21,20 @@
   animation: disclaimerModalIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
+.disclaimer-confirm-card {
+  width: min(440px, 100%);
+  animation: disclaimerModalIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.disclaimer-confirm-text {
+  margin: 0 auto 28px;
+  max-width: 340px;
+  font-size: 1.22rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
 .disclaimer-modal-card .disclaimer-btn.primary.red {
   color: #fff;
   background: linear-gradient(135deg, #c0392b, #8e2b1c);

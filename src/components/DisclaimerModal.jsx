@@ -1,5 +1,10 @@
-// components/DisclaimerModal.jsx — a confirmation modal shown to first-time
-// visitors; finishing it acks the disclaimer and returns them home.
+// components/DisclaimerModal.jsx — first-visit note flow.
+// - Landing on "/": show the disclaimer modal directly; acks are saved to
+//   sessionStorage, so reloads navigate home instead of re-showing.
+// - Landing on a deep link (e.g. a shared quote): show a confirmation overlay
+//   first ("Would you like to read our note?"). Yes → disclaimer modal,
+//   No → close the overlay and continue on the landed page.
+// - The dedicated /disclaimer page (header link) never gets the overlays.
 import { useState } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import {
@@ -16,18 +21,19 @@ export default function DisclaimerModal() {
   const { language } = useLanguage();
   const location = useLocation();
   const navigate = useNavigate();
-  const [show, setShow] = useState(() => {
+  const [mode, setMode] = useState(() => {
+    let acked = false;
     try {
-      return sessionStorage.getItem(ACK_KEY) !== "true";
+      acked = sessionStorage.getItem(ACK_KEY) === "true";
     } catch {
-      return true;
+      /* storage unavailable — treat as new visitor */
     }
+    if (acked) return "none";
+    if (location.pathname === "/disclaimer") return "none";
+    if (location.pathname === "/") return "note";
+    return "confirm";
   });
   const [index, setIndex] = useState(0);
-
-  if (!show || location.pathname === "/disclaimer") {
-    return <Outlet />;
-  }
 
   const total = POINTS.length;
   const isLast = index === total - 1;
@@ -38,6 +44,16 @@ export default function DisclaimerModal() {
       language === "en"
         ? "A gentle word before you enter"
         : "Una parola gentile prima di entrare",
+    confirmEyebrow:
+      language === "en"
+        ? "Before you continue"
+        : "Prima di continuare",
+    confirmText:
+      language === "en"
+        ? "Would you like to read our gentle note to visitors before you enter the garden?"
+        : "Vuoi leggere la nostra breve nota ai visitatori prima di entrare nel giardino?",
+    confirmYes: language === "en" ? "Yes, read it" : "Sì, leggila",
+    confirmNo: language === "en" ? "No, continue" : "No, continua",
     back: language === "en" ? "Back" : "Indietro",
     understand: language === "en" ? "I understand" : "Ho capito",
     enter: language === "en" ? "Enter the Garden" : "Entra nel Giardino",
@@ -53,7 +69,7 @@ export default function DisclaimerModal() {
     } catch {
       /* storage unavailable — just proceed */
     }
-    setShow(false);
+    setMode("none");
     navigate("/home");
   };
 
@@ -61,72 +77,117 @@ export default function DisclaimerModal() {
     if (index > 0) setIndex((i) => i - 1);
   };
 
+  if (mode === "none" || location.pathname === "/disclaimer") {
+    return <Outlet />;
+  }
+
   return (
     <>
       <Outlet />
-      <div
-        className="disclaimer-modal-overlay"
-        role="dialog"
-        aria-modal="true"
-        aria-label={t.eyebrow}
-      >
-        <div className="disclaimer-card disclaimer-modal-card">
-          <div className="disclaimer-seal">
-            <FaSeedling />
-          </div>
+      {mode === "confirm" ? (
+        <div
+          className="disclaimer-modal-overlay"
+          role="dialog"
+          aria-modal="true"
+          aria-label={t.confirmEyebrow}
+        >
+          <div className="disclaimer-card disclaimer-confirm-card">
+            <div className="disclaimer-seal">
+              <FaSeedling />
+            </div>
 
-          <p className="disclaimer-eyebrow">{t.eyebrow}</p>
+            <p className="disclaimer-eyebrow">{t.confirmEyebrow}</p>
 
-          <span className="disclaimer-numeral">
-            {String(index + 1).padStart(2, "0")}
-          </span>
+            <p className="disclaimer-confirm-text">{t.confirmText}</p>
 
-          <p className="disclaimer-text" key={index}>
-            {language === "en" ? point.en : point.it}
-          </p>
-
-          <div className="disclaimer-dots" aria-hidden="true">
-            {POINTS.map((_, i) => (
-              <span
-                key={i}
-                className={`disclaimer-dot ${
-                  i === index ? "active" : i < index ? "done" : ""
-                }`}
-              />
-            ))}
-          </div>
-
-          <div className="disclaimer-actions">
-            {index > 0 && (
+            <div className="disclaimer-actions">
               <button
                 className="disclaimer-btn ghost"
-                onClick={handlePrev}
-                aria-label={t.back}
+                onClick={() => setMode("none")}
               >
-                <FaArrowLeft />
-                {t.back}
+                {t.confirmNo}
               </button>
-            )}
-            <button className="disclaimer-btn primary red" onClick={handleNext}>
-              {isLast ? (
-                <>
-                  <FaHeart />
-                  {t.enter}
-                </>
-              ) : (
-                <>
-                  <FaBookOpen />
-                  {t.understand}
-                </>
-              )}
-            </button>
+              <button
+                className="disclaimer-btn primary red"
+                onClick={() => {
+                  setIndex(0);
+                  setMode("note");
+                }}
+              >
+                <FaBookOpen />
+                {t.confirmYes}
+              </button>
+            </div>
           </div>
-
-          <p className="disclaimer-count">
-            {index + 1} / {total}
-          </p>
         </div>
-      </div>
+      ) : (
+        <div
+          className="disclaimer-modal-overlay"
+          role="dialog"
+          aria-modal="true"
+          aria-label={t.eyebrow}
+        >
+          <div className="disclaimer-card disclaimer-modal-card">
+            <div className="disclaimer-seal">
+              <FaSeedling />
+            </div>
+
+            <p className="disclaimer-eyebrow">{t.eyebrow}</p>
+
+            <span className="disclaimer-numeral">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+
+            <p className="disclaimer-text" key={index}>
+              {language === "en" ? point.en : point.it}
+            </p>
+
+            <div className="disclaimer-dots" aria-hidden="true">
+              {POINTS.map((_, i) => (
+                <span
+                  key={i}
+                  className={`disclaimer-dot ${
+                    i === index ? "active" : i < index ? "done" : ""
+                  }`}
+                />
+              ))}
+            </div>
+
+            <div className="disclaimer-actions">
+              {index > 0 && (
+                <button
+                  className="disclaimer-btn ghost"
+                  onClick={handlePrev}
+                  aria-label={t.back}
+                >
+                  <FaArrowLeft />
+                  {t.back}
+                </button>
+              )}
+              <button
+                className="disclaimer-btn primary red"
+                onClick={handleNext}
+              >
+                {isLast ? (
+                  <>
+                    <FaHeart />
+                    {t.enter}
+                  </>
+                ) : (
+                  <>
+                    <FaBookOpen />
+                    {t.understand}
+                  </>
+                )}
+              </button>
+            </div>
+
+            <p className="disclaimer-count">
+              {index + 1} / {total}
+            </p>
+          </div>
+        </div>
+      )}
     </>
   );
 }
