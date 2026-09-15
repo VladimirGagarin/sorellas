@@ -329,7 +329,18 @@ export default function LitanyPageTemplate({ title, litany, theme = "dark", clas
 
         {/* Navigation */}
         <div className="litany-navigation">
-          {/* Progress bar */}
+          <button
+            className="nav-btn prev-btn"
+            onClick={prevItem}
+            aria-label={language === "en" ? "Previous" : "Precedente"}
+            title={language === "en" ? "Previous (←)" : "Precedente (←)"}
+          >
+            <FaArrowLeft />
+            <span className="nav-btn-label">
+              {language === "en" ? "Previous" : "Precedente"}
+            </span>
+          </button>
+
           <div className="nav-progress">
             <div className="progress-bar">
               <div
@@ -343,33 +354,20 @@ export default function LitanyPageTemplate({ title, litany, theme = "dark", clas
               {currentIndex + 1} / {litany.length}
             </div>
           </div>
+
+          <button
+            className="nav-btn next-btn"
+            onClick={nextItem}
+            aria-label={language === "en" ? "Next" : "Successivo"}
+            title={language === "en" ? "Next (→)" : "Successivo (→)"}
+          >
+            <span className="nav-btn-label">
+              {language === "en" ? "Next" : "Successivo"}
+            </span>
+            <FaArrowRight />
+          </button>
         </div>
       </div>
-
-      {/* Fixed side navigation: prev (left) / next (right), vertically centered */}
-      <button
-        className="nav-btn prev-btn nav-fixed nav-fixed-left"
-        onClick={prevItem}
-        aria-label={language === "en" ? "Previous" : "Precedente"}
-        title={language === "en" ? "Previous (←)" : "Precedente (←)"}
-      >
-        <FaArrowLeft />
-        <span className="nav-btn-label">
-          {language === "en" ? "Previous" : "Precedente"}
-        </span>
-      </button>
-
-      <button
-        className="nav-btn next-btn nav-fixed nav-fixed-right"
-        onClick={nextItem}
-        aria-label={language === "en" ? "Next" : "Successivo"}
-        title={language === "en" ? "Next (→)" : "Successivo (→)"}
-      >
-        <span className="nav-btn-label">
-          {language === "en" ? "Next" : "Successivo"}
-        </span>
-        <FaArrowRight />
-      </button>
 
       {/* Footer */}
       <div className="litany-footer">
