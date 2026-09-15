@@ -21,7 +21,13 @@ function App() {
   }, []);
 
   useEffect(() => {
-    navigate("/home");
+    let acknowledged = false;
+    try {
+      acknowledged = sessionStorage.getItem("disclaimer-ack") === "true";
+    } catch {
+      /* storage unavailable — show the note */
+    }
+    navigate(acknowledged ? "/home" : "/disclaimer");
   }, []);
 
   return (

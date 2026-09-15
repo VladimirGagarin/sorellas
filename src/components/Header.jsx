@@ -21,6 +21,7 @@ import {
   FaPrayingHands,
   FaChurch,
   FaHandSparkles,
+  FaBookOpen,
 } from "react-icons/fa";
 import { useLanguage } from "../contexts/useLanguage";
 import { useTheme } from "../contexts/theme.jsx";
@@ -71,6 +72,8 @@ export default function Header() {
       favouriteWords: "Favourite Words",
       justBecause: "Just Because",
       tenderPresence: "Tender Presence",
+      disclaimer: "A Gentle Note",
+      disclaimerDesc: "For visitors, before you enter",
       currentLanguage: "Language",
       welcome:  "Welcome to FLowers of Prayer Garden",
       menu: "Garden Paths",
@@ -98,6 +101,8 @@ export default function Header() {
       favouriteWords: "Parole Preferite",
       justBecause: "Solo Perché",
       tenderPresence: "Presenza Tenera",
+      disclaimer: "Una Breve Nota",
+      disclaimerDesc: "Per i visitatori, prima di entrare",
       settings: "Attrezzi da Giardino",
       logout: "Ritorno alla Terra",
       rosesOfRome: "Rose di Roma",
@@ -226,6 +231,13 @@ export default function Header() {
       link: "/tender-presence",
       color: isDarkMode ? "#E8C87A" : "#8C6D1F", // Warm gold
     },
+    {
+      icon: <FaBookOpen />,
+      label: t.disclaimer,
+      link: "/disclaimer",
+      color: getFlowerColor("rose"),
+      special: true,
+    },
   ];
 
   return (
@@ -321,13 +333,16 @@ export default function Header() {
             <Link
               key={index}
               to={item.link}
-              className="drawer-item"
+              className={item.special ? "drawer-item special" : "drawer-item"}
               onClick={closeDrawer}
               style={{ "--item-color": item.color }}
             >
               <span className="drawer-icon">{item.icon}</span>
               <div className="drawer-item-content">
                 <span className="drawer-label">{item.label}</span>
+                {item.special && (
+                  <span className="drawer-item-desc">{t.disclaimerDesc}</span>
+                )}
               </div>
             </Link>
           ))}

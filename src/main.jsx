@@ -17,6 +17,7 @@ import PrayerPage from './pages/PrayerPage.jsx';
 import FavoriteWordsPage from './pages/FavoriteWordsPage.jsx';
 import JustBecausePage from './pages/JustBecausePage.jsx';
 import TenderPresencePage from './pages/TenderPresencePage.jsx';
+import DisclaimerPage from './pages/DisclaimerPage.jsx';
 import './index.css'
 import App from './App.jsx'
 
@@ -85,6 +86,10 @@ const router = createHashRouter([
     {
       path: "tender-presence",
       element: <TenderPresencePage />
+    },
+    {
+      path: "disclaimer",
+      element: <DisclaimerPage />
     }
   ]);
 
