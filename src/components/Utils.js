@@ -1457,6 +1457,29 @@ export function getFamousPrayers() {
       photo: "../assets/sr_theresa.jpg",
     },
     {
+      author: "Sr. Martha",
+      prayer:
+        "Lord, teach me the joy of giving myself away — to pause, to listen, to be present to the one before me. May my small acts of love become prayers, and my ordinary days become offerings of faithfulness to You. Amen.",
+      italianPrayer:
+        "Signore, insegnami la gioia di donare me stessa — fermarmi, ascoltare, essere presente a chi mi sta davanti. Possano i miei piccoli atti d'amore diventare preghiere e i miei giorni ordinari diventare offerte di fedeltà a Te. Amen.",
+      quote: "A heart that serves with joy makes every room feel like home.",
+      italianQuote:
+        "Un cuore che serve con gioia rende ogni stanza come una casa.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      prayer:
+        "Good Shepherd, You know each of Your sheep by name and never grow weary of seeking the lost. Keep my heart watchful and my hands ready to guide others safely home to You. Amen.",
+      italianPrayer:
+        "Buon Pastore, conosci per nome ciascuna delle Tue pecore e non ti stanchi mai di cercare le smarrite. Custodisci il mio cuore vigilante e le mie mani pronte a guidare gli altri al sicuro verso Te. Amen.",
+      quote:
+        "A shepherd's heart counts every soul and never abandons one.",
+      italianQuote:
+        "Un cuore di pastore conta ogni anima e non ne abbandona nessuna.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
       author: "Regina Caeli",
       prayer:
         "Queen of heaven, rejoice, alleluia. The Son whom you merited to bear, alleluia, has risen as he said, alleluia. Pray for us to God, alleluia.\nV. Rejoice and be glad, O Virgin Mary, alleluia.\nR. For the Lord has truly risen, alleluia.\nLet us pray:\nO God, who through the resurrection of your Son, our Lord Jesus Christ, did vouchsafe to give joy to the world; grant, we beseech you, that through his Mother, the Virgin Mary, we may obtain the joys of everlasting life. Through the same Christ our Lord. Amen.",
@@ -11332,6 +11355,370 @@ export function getQuotes() {
       photo: "../assets/sr_gladys.png",
     },
     {
+      author: "Sr. Martha",
+      category: "Love",
+      quote: "Love finds its voice in the quietest acts of service.",
+      italianQuote: "L'amore trova la sua voce negli atti di servizio più silenziosi.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Martha",
+      category: "Joy",
+      quote: "Joy multiplies when it is shared with others.",
+      italianQuote: "La gioia si moltiplica quando è condivisa con gli altri.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Martha",
+      category: "Peace",
+      quote: "Peace settles like a blessing when we welcome one another as family.",
+      italianQuote: "La pace si posa come una benedizione quando ci accogliamo gli uni gli altri come famiglia.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Martha",
+      category: "Patience",
+      quote: "Patience waits with open hands for God's own timing.",
+      italianQuote: "La pazienza attende a mani aperte i tempi di Dio.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Martha",
+      category: "Kindness",
+      quote: "Kindness makes the unfamiliar feel like home.",
+      italianQuote: "La gentilezza fa sentire come a casa ciò che è sconosciuto.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Martha",
+      category: "Goodness",
+      quote: "Goodness grows in the soil of daily faithfulness.",
+      italianQuote: "La bontà cresce nel terreno della fedeltà quotidiana.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Martha",
+      category: "Faithfulness",
+      quote: "Faithfulness keeps love alive long after excitement fades.",
+      italianQuote: "La fedeltà mantiene vivo l'amore molto tempo dopo che l'entusiasmo svanisce.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Martha",
+      category: "Gentleness",
+      quote: "Gentleness steadies the hands that hold another's burden.",
+      italianQuote: "La mitezza rende ferme le mani che reggono il peso di un altro.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Martha",
+      category: "Self-control",
+      quote: "Self-control keeps the door of the heart open to the Spirit.",
+      italianQuote: "Il controllo di sé tiene aperta la porta del cuore allo Spirito.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Martha",
+      category: "Understanding",
+      quote: "Understanding listens without rushing to speak.",
+      italianQuote: "La comprensione ascolta senza affrettarsi a parlare.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Martha",
+      category: "Counsel (Right Judgment)",
+      quote: "Right judgment is wisdom seasoned by compassion.",
+      italianQuote: "Il retto giudizio è saggezza stagionata dalla compassione.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Martha",
+      category: "Fortitude (Courage)",
+      quote: "Courage begins when we step forward for another's sake.",
+      italianQuote: "Il coraggio comincia quando facciamo un passo avanti per amore di un altro.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Martha",
+      category: "Piety (Reverence)",
+      quote: "Reverence bows low before the sacredness of every life.",
+      italianQuote: "La riverenza si inchina davanti alla sacralità di ogni vita.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Martha",
+      category: "Fear of the Lord (Wonder and Awe)",
+      quote: "Awe keeps our hearts small enough for God to fill.",
+      italianQuote: "Lo stupore mantiene i nostri cuori abbastanza piccoli perché Dio li possa riempire.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Martha",
+      category: "Trust",
+      quote: "Trust hands tomorrow to the One who already holds it.",
+      italianQuote: "La fiducia consegna il domani a Colui che già lo tiene.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Martha",
+      category: "Prayer and Meditation",
+      quote: "Prayer anchors the soul when the day grows busy.",
+      italianQuote: "La preghiera ancora l'anima quando la giornata si fa frenetica.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Martha",
+      category: "Compassion",
+      quote: "Compassion is love that sits beside another's pain.",
+      italianQuote: "La compassione è l'amore che siede accanto al dolore di un altro.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Martha",
+      category: "Hope and Perseverance",
+      quote: "Hope rises again each morning, carrying us forward.",
+      italianQuote: "La speranza risorge ogni mattina, portandoci avanti.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Martha",
+      category: "Charity",
+      quote: "Charity gives without keeping records.",
+      italianQuote: "La carità dona senza tenere registri.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Martha",
+      category: "Forgiveness",
+      quote: "Forgiveness clears the path back to one another.",
+      italianQuote: "Il perdono riapre il cammino verso l'altro.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Martha",
+      category: "Wisdom",
+      quote: "Wisdom is learned at the feet of daily life, not in comfort.",
+      italianQuote: "La saggezza si impara ai piedi della vita quotidiana, non nel comfort.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Martha",
+      category: "Spiritual Growth",
+      quote: "Spiritual growth asks for small steps of love, repeated faithfully.",
+      italianQuote: "La crescita spirituale chiede piccoli passi d'amore, ripetuti fedelmente.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Martha",
+      category: "Humility",
+      quote: "Humility serves without needing to be noticed.",
+      italianQuote: "L'umiltà serve senza bisogno di essere notata.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Martha",
+      category: "Gratitude",
+      quote: "Gratitude turns a simple table into a feast.",
+      italianQuote: "La gratitudine trasforma una tavola semplice in una festa.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Martha",
+      category: "Latin",
+      quote: "Servite Domino cum laetitia — serve the Lord with gladness.",
+      italianQuote: "Servite Domino cum laetitia — servite il Signore con gioia.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Martha",
+      category: "Gratittude",
+      quote: "A thankful heart never goes hungry.",
+      italianQuote: "Un cuore grato non ha mai fame.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      category: "Love",
+      quote: "Love keeps watch through the long night until morning comes.",
+      italianQuote: "L'amore veglia per tutta la lunga notte finché arriva il mattino.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      category: "Joy",
+      quote: "Joy is the reward of a faithful heart.",
+      italianQuote: "La gioia è la ricompensa di un cuore fedele.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      category: "Peace",
+      quote: "Peace shelters those who trust in God's protection.",
+      italianQuote: "La pace protegge coloro che confidano nella protezione di Dio.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      category: "Patience",
+      quote: "Patience is the guard that never leaves the post.",
+      italianQuote: "La pazienza è la sentinella che non abbandona mai il suo posto.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      category: "Kindness",
+      quote: "Kindness leads the lost back onto the right path.",
+      italianQuote: "La gentilezza riporta i perduti sulla strada giusta.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      category: "Goodness",
+      quote: "Goodness makes a name worth remembering.",
+      italianQuote: "La bontà rende un nome degno di essere ricordato.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      category: "Faithfulness",
+      quote: "Faithfulness keeps its promise when no one is watching.",
+      italianQuote: "La fedeltà mantiene la sua promessa quando nessuno guarda.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      category: "Gentleness",
+      quote: "Gentleness protects what is fragile without breaking it.",
+      italianQuote: "La mitezza protegge ciò che è fragile senza spezzarlo.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      category: "Self-control",
+      quote: "Self-control steadies the will against every storm.",
+      italianQuote: "Il controllo di sé rende salda la volontà contro ogni tempesta.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      category: "Understanding",
+      quote: "Understanding gives others the benefit of the doubt.",
+      italianQuote: "La comprensione dà agli altri il beneficio del dubbio.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      category: "Counsel (Right Judgment)",
+      quote: "Right judgment weighs the heart behind the words.",
+      italianQuote: "Il retto giudizio valuta il cuore dietro le parole.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      category: "Fortitude (Courage)",
+      quote: "Fortitude stands firm when everything tempts us to flee.",
+      italianQuote: "La fortezza rimane salda quando tutto ci tenta di fuggire.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      category: "Piety (Reverence)",
+      quote: "Reverence treats every soul as carried by God.",
+      italianQuote: "La riverenza tratta ogni anima come portata da Dio.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      category: "Fear of the Lord (Wonder and Awe)",
+      quote: "Wonder keeps us small enough to be amazed.",
+      italianQuote: "Lo stupore ci mantiene abbastanza piccoli da rimanere stupiti.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      category: "Trust",
+      quote: "Trust knows the Shepherd never loses one of His own.",
+      italianQuote: "La fiducia sa che il Pastore non perde mai nessuna delle Sue pecore.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      category: "Prayer and Meditation",
+      quote: "Prayer is the watchman's lamp that never goes out.",
+      italianQuote: "La preghiera è la lampada della sentinella che non si spegne mai.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      category: "Compassion",
+      quote: "Compassion reaches down to lift those who have fallen.",
+      italianQuote: "La compassione si abbassa per sollevare coloro che sono caduti.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      category: "Hope and Perseverance",
+      quote: "Perseverance walks the whole road, not just its beginning.",
+      italianQuote: "La perseveranza percorre tutta la strada, non solo il suo inizio.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      category: "Charity",
+      quote: "Charity spends itself until nothing is left to hold onto.",
+      italianQuote: "La carità si spende finché non resta nulla da trattenere.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      category: "Forgiveness",
+      quote: "Forgiveness restores what fear has torn apart.",
+      italianQuote: "Il perdono ricostruisce ciò che la paura ha lacerato.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      category: "Wisdom",
+      quote: "Wisdom looks ahead and chooses the way of peace.",
+      italianQuote: "La saggezza guarda avanti e sceglie la via della pace.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      category: "Spiritual Growth",
+      quote: "Spiritual growth is the slow unfolding of a soul in God's sun.",
+      italianQuote: "La crescita spirituale è il lento dispiegarsi di un'anima al sole di Dio.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      category: "Humility",
+      quote: "Humility bows so that others may rise.",
+      italianQuote: "L'umiltà si inchina perché gli altri possano rialzarsi.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      category: "Gratitude",
+      quote: "Gratitude counts the gifts already received.",
+      italianQuote: "La gratitudine conta i doni già ricevuti.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      category: "Latin",
+      quote: "Dominus pascit me, nihil mihi deerit — The Lord is my shepherd, I shall not want.",
+      italianQuote: "Dominus pascit me, nihil mihi deerit — Il Signore è il mio pastore, non manco di nulla.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      category: "Gratittude",
+      quote: "A grateful heart walks safely in the dark, for it knows the way.",
+      italianQuote: "Un cuore grato cammina al sicuro nel buio, perché conosce la via.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
       author: "Sr. Mercy Kathure",
       category: "Love",
       quote:
@@ -18439,6 +18826,22 @@ export function justBecauseArray() {
       topic: { en: "Jesus", it: "Gesù" },
     },
     {
+      author: "Sr. Martha",
+      sentiment: {
+        en: "Her welcome is a prayer in itself — every visitor finds a home in her smile, just because.",
+        it: "Il suo benvenuto è in sé una preghiera — ogni ospite trova casa nel suo sorriso, solo perché.",
+      },
+      topic: { en: "Holy Spirit", it: "Spirito Santo" },
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      sentiment: {
+        en: "She guards my steps like a shepherd — I am never truly alone, just because.",
+        it: "Custodisce i miei passi come un pastore — non sono mai davvero sola, solo perché.",
+      },
+      topic: { en: "Jesus", it: "Gesù" },
+    },
+    {
       author: "Sr. Joan",
       sentiment: {
         en: "He lights my way through the unknown—every step is faith, just because.",
@@ -18505,6 +18908,8 @@ export const AUTHOR_PHOTOS = {
   "Sr. Joan": "../assets/sr_joan.jpg",
   "Sr. Gladys": "../assets/sr_gladys.png",
   "Sr. Teresia Gathoni": "../assets/sr_theresa.jpg",
+  "Sr. Martha": "../assets/sr_martha_k.jpg",
+  "Sr. Beatrice Kinoti": "../assets/sr_beatrice_kinoti.jpg",
 };
 
 export function getFavWords() {
@@ -19098,6 +19503,30 @@ export function getFavWords() {
       },
     },
     {
+      author: "Sr. Martha",
+      favWord: { en: "Welcome", it: "Benvenuto" },
+      reason: {
+        en: "Welcoming others is how we mirror God's open heart.",
+        it: "Accogliere gli altri è il modo in cui rispecchiamo il cuore aperto di Dio.",
+      },
+      quote: {
+        en: "A welcome is the first prayer a heart receives.",
+        it: "Un benvenuto è la prima preghiera che riceve un cuore.",
+      },
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      favWord: { en: "Protection", it: "Protezione" },
+      reason: {
+        en: "God's protection never sleeps, even when we do.",
+        it: "La protezione di Dio non dorme mai, nemmeno quando noi dormiamo.",
+      },
+      quote: {
+        en: "Protection is God's hand resting over ours through the night.",
+        it: "La protezione è la mano di Dio posata sulla nostra attraverso la notte.",
+      },
+    },
+    {
       author: "Sr. Joan",
       favWord: { en: "Faith", it: "Fede" },
       reason: {
@@ -19545,6 +19974,194 @@ export function getPoems() {
             "il suo profumo può restare giorno e notte,",
             "perché l'amore lascia tracce che gli occhi non vedono,",
             "e ciò che è donato con amore vive per sempre.",
+          ],
+        },
+      },
+
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+    // 8. SR. PURITY NKATHA
+    {
+      title: {
+        en: "The Water That Makes Flowers Grow",
+        it: "L'Acqua che Fa Crescere i Fiori",
+      },
+
+      author: "Sr. Purity Nkatha",
+      photo: "../assets/sr_purity.jpg",
+
+      verses: {
+        verse1: {
+          en: [
+            "A flower cannot live without the rain,",
+            "nor can a dry heart grow through pain,",
+            "but when God's water touches the ground,",
+            "new life begins without a sound.",
+          ],
+          it: [
+            "Un fiore non può vivere senza la pioggia,",
+            "né un cuore arido può crescere nel dolore,",
+            "ma quando l'acqua di Dio tocca la terra,",
+            "una nuova vita nasce nel silenzio.",
+          ],
+        },
+
+        verse2: {
+          en: [
+            "His grace comes softly, day by day,",
+            "and gives the thirsty soul a way,",
+            "to open again, to trust once more,",
+            "*Gratia Dei* — God's grace is the door.",
+          ],
+          it: [
+            "La Sua grazia viene dolcemente, giorno dopo giorno,",
+            "e dona all'anima assetata una nuova via,",
+            "per aprirsi ancora e confidare di nuovo,",
+            "*Gratia Dei* — la grazia di Dio è la porta.",
+          ],
+        },
+
+        verse3: {
+          en: [
+            "So let the living water flow,",
+            "wherever tired hearts need to grow,",
+            "for what God's grace begins today,",
+            "His loving hands will not let fade away.",
+          ],
+          it: [
+            "Lascia dunque scorrere l'acqua viva,",
+            "ovunque i cuori stanchi abbiano bisogno di crescere,",
+            "perché ciò che la grazia di Dio inizia oggi,",
+            "le Sue mani d'amore non lasceranno appassire.",
+          ],
+        },
+      },
+
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    // 9. SR. CHRISTINE MUSOGA
+    {
+      title: {
+        en: "A Heart That Says Yes",
+        it: "Un Cuore che Dice Sì",
+      },
+
+      author: "Sr. Christine Musoga",
+      photo: "../assets/sr_christine_musoga.jpg",
+
+      verses: {
+        verse1: {
+          en: [
+            "Sometimes God asks for just one word,",
+            "a quiet yes that may not be heard,",
+            "a heart that trusts though it cannot see,",
+            "a simple yes: Lord, let it be.",
+          ],
+          it: [
+            "A volte Dio chiede una sola parola,",
+            "un sì silenzioso che nessuno può sentire,",
+            "un cuore che confida anche senza vedere,",
+            "un semplice sì: Signore, sia fatta la Tua volontà.",
+          ],
+        },
+
+        verse2: {
+          en: [
+            "The road may turn, the path may bend,",
+            "yet faith says, Lord, I will still follow You to the end,",
+            "for love does not always know the way,",
+            "*Fiat voluntas Tua* — Thy will be done each day.",
+          ],
+          it: [
+            "La strada può cambiare, il cammino può curvare,",
+            "ma la fede dice: Signore, Ti seguirò fino alla fine,",
+            "perché l'amore non conosce sempre la via,",
+            "*Fiat voluntas Tua* — sia fatta la Tua volontà ogni giorno.",
+          ],
+        },
+
+        verse3: {
+          en: [
+            "And every yes becomes a seed,",
+            "that grows into the life God sees,",
+            "until the heart can truly say,",
+            "I trusted You, and found Your way.",
+          ],
+          it: [
+            "E ogni sì diventa un seme,",
+            "che cresce nella vita che Dio vede,",
+            "finché il cuore può dire davvero,",
+            "Mi sono fidata di Te, e ho trovato la Tua via.",
+          ],
+        },
+      },
+
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    // 10. SR. PRISCILLA KANINI
+    {
+      title: {
+        en: "The Quiet Hands of Love",
+        it: "Le Mani Silenziose dell'Amore",
+      },
+
+      author: "Sr. Priscilla Kanini",
+      photo: "../assets/sr_priscilla_kanini.jpg",
+
+      verses: {
+        verse1: {
+          en: [
+            "Some of the greatest things are small,",
+            "a gentle touch, a smile, a call,",
+            "a helping hand when someone is tired,",
+            "a little love when hope is required.",
+          ],
+          it: [
+            "Alcune delle cose più grandi sono piccole,",
+            "un gesto gentile, un sorriso, una parola,",
+            "una mano che aiuta quando qualcuno è stanco,",
+            "un po' d'amore quando serve speranza.",
+          ],
+        },
+
+        verse2: {
+          en: [
+            "No trumpet sounds when kindness is done,",
+            "no crowd may see what love has begun,",
+            "but God sees every hidden deed,",
+            "*Deus caritas est* — God is love indeed.",
+          ],
+          it: [
+            "Nessuna tromba suona quando si compie il bene,",
+            "nessuna folla vede ciò che l'amore ha iniziato,",
+            "ma Dio vede ogni gesto nascosto,",
+            "*Deus caritas est* — Dio è davvero amore.",
+          ],
+        },
+
+        verse3: {
+          en: [
+            "The quiet hands may never be known,",
+            "yet through their kindness seeds are sown,",
+            "and what was done with love each day,",
+            "will bloom where earthly things fade away.",
+          ],
+          it: [
+            "Le mani silenziose possono non essere conosciute,",
+            "eppure attraverso la loro bontà i semi vengono piantati,",
+            "e ciò che è fatto con amore ogni giorno,",
+            "fiorirà dove le cose terrene svaniscono.",
           ],
         },
       },
