@@ -1,7 +1,7 @@
 // components/LoadingOverlay.jsx — brief loading veil on every page change:
 // cycles FIORI DI PREGHIERA → WELCOME/BENVENUTI → AETERNUM FLOREAMUS →
 // DEO GRATIAS with a right-to-left wipe, over five blinking boxes.
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useLanguage } from "../contexts/useLanguage.js";
 import "./LoadingOverlay.css";
@@ -15,26 +15,14 @@ export default function LoadingOverlay() {
   const { language } = useLanguage();
   const [show, setShow] = useState(true);
   const [phase, setPhase] = useState(0);
-  const playingRef = useRef(false);
-  const timerRef = useRef(null);
 
-  const stop = () => {
-    playingRef.current = false;
-    setShow(false);
-  };
-
-  const play = () => {
-    if (playingRef.current) return;
-    playingRef.current = true;
-    clearTimeout(timerRef.current);
+  // Every navigation (or first mount) plays the full cycle; any previous
+  // cycle is cancelled so a single timer always hides the overlay.
+  useEffect(() => {
     setPhase(0);
     setShow(true);
-    timerRef.current = setTimeout(stop, TOTAL_MS);
-  };
-
-  useEffect(() => {
-    play();
-    return () => clearTimeout(timerRef.current);
+    const timer = setTimeout(() => setShow(false), TOTAL_MS);
+    return () => clearTimeout(timer);
   }, [location.key]);
 
   useEffect(() => {
