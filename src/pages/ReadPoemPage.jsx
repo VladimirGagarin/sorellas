@@ -185,7 +185,12 @@ export default function ReadPoemPage() {
                   </span>
                 )}
                 {lines.map((line, lineIndex) => (
-                  <p key={lineIndex} className="readpoem-line">
+                  <p
+                    key={lineIndex}
+                    className={`readpoem-line ${
+                      index === 0 && lineIndex === 0 ? "first" : ""
+                    }`}
+                  >
                     {line}
                   </p>
                 ))}
