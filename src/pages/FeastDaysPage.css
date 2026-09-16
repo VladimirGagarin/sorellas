@@ -668,8 +668,9 @@
 }
 
 .fun-fact-card {
+  position: relative;
   border: 1px solid rgba(var(--primary-green-rgb), 0.35);
-  padding: 28px 32px;
+  padding: 28px 32px 46px;
   max-width: 75%;
   margin: 0 auto;
   background: linear-gradient(
@@ -677,6 +678,23 @@
     rgba(var(--primary-green-rgb), 0.12),
     rgba(var(--primary-green-rgb), 0.03)
   );
+}
+
+.fun-fact-watermark {
+  position: absolute;
+  right: 18px;
+  bottom: 14px;
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-purple);
+  opacity: 0.75;
+  white-space: nowrap;
+  user-select: none;
+  pointer-events: none;
 }
 
 .fun-fact-slide {

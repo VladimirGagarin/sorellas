@@ -1,7 +1,8 @@
 // FeastDaysPage.jsx
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header.jsx";
+import CaptureCard from "../components/CaptureCard.jsx";
 import {
   FaChevronLeft,
   FaChevronRight,
@@ -15,8 +16,6 @@ import {
   FaExternalLinkAlt,
   FaGift,
   FaLightbulb,
-  FaCopy,
-  FaCheck,
 } from "react-icons/fa";
 import { useLanguage } from "../contexts/useLanguage.js";
 import {
@@ -498,7 +497,7 @@ export default function FeastDaysPage() {
   const [overlay, setOverlay] = useState(null);
   const [factIndex, setFactIndex] = useState(0);
   const [factDir, setFactDir] = useState(1);
-  const [copied, setCopied] = useState(false);
+  const factCardRef = useRef(null);
 
   const todayFeasts = getFeastsOnDate(today);
   const tomorrowFeasts = getFeastsOnDate(tomorrow);
@@ -551,8 +550,7 @@ export default function FeastDaysPage() {
       language === "en"
         ? "Little secrets of the Catholic calendar, one card at a time"
         : "Piccoli segreti del calendario cattolico, una carta alla volta",
-    funFactCopy: language === "en" ? "Copy" : "Copia",
-    funFactCopied: language === "en" ? "Copied!" : "Copiato!",
+    funFactSave: language === "en" ? "Save Card" : "Salva Carta",
     funFactCount: (n, total) =>
       language === "en"
         ? `Did You Know ${n} / ${total}`
@@ -565,17 +563,6 @@ export default function FeastDaysPage() {
   const gotoFact = (dir) => {
     setFactDir(dir);
     setFactIndex((i) => (i + dir + FUN_FACTS.length) % FUN_FACTS.length);
-    setCopied(false);
-  };
-
-  const copyFact = (fact) => {
-    const text = `${fact.en}\n\n${fact.it}`;
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(() => {
-        setCopied(true);
-        setTimeout(() => setCopied(false), 1800);
-      });
-    }
   };
 
   const openOverlay = (dateStr, feasts) => {
@@ -793,7 +780,7 @@ export default function FeastDaysPage() {
               <p className="fun-fact-subtitle">{t.funFactSubtitle}</p>
             </div>
           </div>
-          <div className="fun-fact-card glass">
+          <div className="fun-fact-card glass" ref={factCardRef}>
             <div className="fun-fact-head">
               <FaLightbulb className="fun-fact-bulb" />
               <span className="fun-fact-counter">
@@ -812,29 +799,39 @@ export default function FeastDaysPage() {
                   : FUN_FACTS[factIndex].it}
               </p>
             </div>
-            <div className="fun-fact-controls">
-              <button
-                className="fun-fact-nav-btn"
-                onClick={() => gotoFact(-1)}
-                aria-label="Previous fact"
-              >
-                <FaChevronLeft />
-              </button>
-              <button
-                className="fun-fact-nav-btn"
-                onClick={() => gotoFact(1)}
-                aria-label="Next fact"
-              >
-                <FaChevronRight />
-              </button>
-              <button
-                className={`fun-fact-copy ${copied ? "copied" : ""}`}
-                onClick={() => copyFact(FUN_FACTS[factIndex])}
-              >
-                {copied ? <FaCheck /> : <FaCopy />}
-                {copied ? t.funFactCopied : t.funFactCopy}
-              </button>
-            </div>
+            <span className="fun-fact-watermark" aria-hidden="true">
+              Aeternum Floreamus
+            </span>
+          </div>
+          <div className="fun-fact-controls">
+            <button
+              className="fun-fact-nav-btn"
+              onClick={() => gotoFact(-1)}
+              aria-label="Previous fact"
+            >
+              <FaChevronLeft />
+            </button>
+            <button
+              className="fun-fact-nav-btn"
+              onClick={() => gotoFact(1)}
+              aria-label="Next fact"
+            >
+              <FaChevronRight />
+            </button>
+            <CaptureCard
+              cardRef={factCardRef}
+              title={t.funFactTitle}
+              subtitle={t.funFactCount(factIndex + 1, FUN_FACTS.length)}
+              fileName={`did-you-know-${factIndex + 1}`}
+              shareUrl={() => window.location.href}
+              shareText={
+                language === "en"
+                  ? FUN_FACTS[factIndex].en
+                  : FUN_FACTS[factIndex].it
+              }
+              buttonLabel={t.funFactSave}
+              buttonClassName="fun-fact-copy"
+            />
           </div>
         </section>
 
