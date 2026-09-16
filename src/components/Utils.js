@@ -545,7 +545,7 @@ export function getFamousPrayers() {
       photo: "../assets/sr_priscilla_kanini.jpg",
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       prayer: `O Lord, in the quiet soul You plant great strength.  
         Teach the heart to rise daily with grace, to lift others with humility, and to carry crosses with love. Let strength be not loud, but lasting; not proud, but full of faith. In the little, may endurance grow. In the unseen, may truth shine.`,
 
@@ -912,7 +912,7 @@ export function getFamousPrayers() {
       photo: "../assets/sr_loredana.jpg",
     },
     {
-      author: "Sr. Jerusha",
+      author: "Sr. Jerusha Nkatha",
       prayer:
         "Gracious Father, fill my soul with Your peace that surpasses all understanding. May I surrender my worries and fears to You, trusting that Your mercy renews me each day. Let my life be a testament to Your unfailing love.",
       italianPrayer:
@@ -952,7 +952,7 @@ export function getFamousPrayers() {
       photo: "../assets/sr_dorcas.jpg",
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       prayer:
         "Lord Jesus, grant me the grace to trust Your timing even when I cannot see the way. Help me to rest in Your promises and walk humbly in Your light. May my faith be steadfast, and my heart ever thankful for Your endless love.",
       italianPrayer:
@@ -1445,7 +1445,7 @@ export function getFamousPrayers() {
       photo: "../assets/sr_gladys.png",
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       prayer:
         "Lord Jesus, You walked among the poor and the forgotten with tenderness and strength. Help me to do the same — to see You in every face I meet, to carry Your light into the shadows, and to love without counting the cost. Amen.",
       italianPrayer:
@@ -1916,7 +1916,7 @@ export function getQuotes() {
       photo: "../assets/sr_priscilla_kanini.jpg",
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       category: "Love",
       quote: "Let love guide your every action and word.",
       italianQuote: "Lascia che l'amore guidi ogni tua azione e parola.",
@@ -2110,7 +2110,7 @@ export function getQuotes() {
       photo: "../assets/sr_loredana.jpg",
     },
     {
-      author: "Sr. Jerusha",
+      author: "Sr. Jerusha Nkatha",
       category: "Love",
       quote: "Love is the grace that makes every heart a home.",
       italianQuote: "L'amore è la grazia che rende ogni cuore una casa.",
@@ -2139,7 +2139,7 @@ export function getQuotes() {
       photo: "../assets/sr_dorcas.jpg",
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       category: "Love",
       quote: "Love is the gentle touch that heals all wounds.",
       italianQuote: "L'amore è il tocco gentile che guarisce tutte le ferite.",
@@ -2220,7 +2220,7 @@ export function getQuotes() {
       photo: "../assets/sr_priscilla_kanini.jpg",
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       category: "Joy",
       quote: "Joy is the laughter that bubbles up from a grateful heart.",
       italianQuote: "La gioia è la risata che sgorga da un cuore grato.",
@@ -2424,7 +2424,7 @@ export function getQuotes() {
       photo: "../assets/sr_loredana.jpg",
     },
     {
-      author: "Sr. Jerusha",
+      author: "Sr. Jerusha Nkatha",
       category: "Joy",
       quote: "Joy is the wind that carries our prayers to Heaven.",
       italianQuote:
@@ -2454,7 +2454,7 @@ export function getQuotes() {
       photo: "../assets/sr_dorcas.jpg",
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       category: "Joy",
       quote: "Joy is the spark that ignites the flame of hope.",
       italianQuote:
@@ -2540,7 +2540,7 @@ export function getQuotes() {
       photo: "../assets/sr_priscilla_kanini.jpg",
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       category: "Peace",
       quote: "Peace is the song the heart sings when it rests in God.",
       italianQuote:
@@ -2587,7 +2587,7 @@ export function getQuotes() {
       photo: "../assets/sr_priscilla_kanini.jpg",
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       category: "Peace",
       quote: "Peace is the song the heart sings when it rests in God.",
       italianQuote:
@@ -2790,7 +2790,7 @@ export function getQuotes() {
       photo: "../assets/sr_loredana.jpg",
     },
     {
-      author: "Sr. Jerusha",
+      author: "Sr. Jerusha Nkatha",
       category: "Peace",
       quote: "Seek peace in every breath, for it is the melody of the soul.",
       italianQuote:
@@ -2821,7 +2821,7 @@ export function getQuotes() {
       photo: "../assets/sr_dorcas.jpg",
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       category: "Peace",
       quote: "A heart at peace creates a world of harmony.",
       italianQuote: "Un cuore in pace crea un mondo di armonia.",
@@ -2909,7 +2909,7 @@ export function getQuotes() {
       photo: "../assets/sr_priscilla_kanini.jpg",
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       category: "Patience",
       quote:
         "Through patience, our hearts are refined and our faith strengthened.",
@@ -3131,7 +3131,7 @@ export function getQuotes() {
       photo: "../assets/sr_loredana.jpg",
     },
     {
-      author: "Sr. Jerusha",
+      author: "Sr. Jerusha Nkatha",
       category: "Patience",
       quote:
         "Let patience water the roots of your faith, so it may grow strong and unshakable.",
@@ -3164,7 +3164,7 @@ export function getQuotes() {
       photo: "../assets/sr_dorcas.jpg",
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       category: "Patience",
       quote: "The patient soul finds treasures hidden in the waiting.",
       italianQuote: "L'anima paziente trova tesori nascosti nell'attesa.",
@@ -3257,7 +3257,7 @@ export function getQuotes() {
       photo: "../assets/sr_priscilla_kanini.jpg",
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       category: "Kindness",
       quote: "Kindness is the soil where compassion grows.",
       italianQuote: "La gentilezza è il terreno in cui cresce la compassione.",
@@ -3415,7 +3415,7 @@ export function getQuotes() {
       photo: "../assets/sr_dorcas.jpg",
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       category: "Kindness",
       quote:
         "Every kind word carries the fragrance of God’s love into the world.",
@@ -3567,7 +3567,7 @@ export function getQuotes() {
       photo: "../assets/sr_loredana.jpg",
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       category: "Kindness",
       quote:
         "Through kindness, may your footsteps leave trails of joy and healing for all to follow.",
@@ -3609,7 +3609,7 @@ export function getQuotes() {
       photo: "../assets/sr_priscilla_kanini.jpg",
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       category: "Goodness",
       quote: "Goodness is the gentle whisper of God’s presence within us.",
       italianQuote:
@@ -3813,7 +3813,7 @@ export function getQuotes() {
       photo: "../assets/sr_loredana.jpg",
     },
     {
-      author: "Sr. Jerusha",
+      author: "Sr. Jerusha Nkatha",
       category: "Goodness",
       quote: "Goodness shines brightest when no one is watching.",
       italianQuote: "La bontà brilla di più quando nessuno ti guarda.",
@@ -3841,7 +3841,7 @@ export function getQuotes() {
       photo: "../assets/sr_dorcas.jpg",
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       category: "Goodness",
       quote: "Goodness is the language that all hearts understand.",
       italianQuote: "La bontà è la lingua che tutti i cuori comprendono.",
@@ -3936,7 +3936,7 @@ export function getQuotes() {
       photo: "../assets/sr_priscilla_kanini.jpg",
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       category: "Faithfulness",
       quote:
         "Faithfulness is the promise whispered in the heart that never fades.",
@@ -4155,7 +4155,7 @@ export function getQuotes() {
       photo: "../assets/sr_loredana.jpg",
     },
     {
-      author: "Sr. Jerusha",
+      author: "Sr. Jerusha Nkatha",
       category: "Faithfulness",
       quote: "Faithfulness is the steadfast anchor in the storms of life.",
       italianQuote: "La fedeltà è l’ancora stabile nelle tempeste della vita.",
@@ -4187,7 +4187,7 @@ export function getQuotes() {
       photo: "../assets/sr_dorcas.jpg",
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       category: "Faithfulness",
       quote:
         "Faithfulness grows stronger when tested by trials and temptations.",
@@ -4280,7 +4280,7 @@ export function getQuotes() {
       photo: "../assets/sr_priscilla_kanini.jpg",
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       category: "Gentleness",
       quote: "Gentleness is the fruit of a heart at peace with itself.",
       italianQuote: "La mitezza è il frutto di un cuore in pace con sé stesso.",
@@ -4489,7 +4489,7 @@ export function getQuotes() {
     },
 
     {
-      author: "Sr. Jerusha",
+      author: "Sr. Jerusha Nkatha",
       category: "Gentleness",
       quote: "Gentleness is the language that every heart understands.",
       italianQuote: "La mitezza è la lingua che ogni cuore comprende.",
@@ -4519,7 +4519,7 @@ export function getQuotes() {
       photo: "../assets/sr_dorcas.jpg",
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       category: "Gentleness",
       quote:
         "Let your words be gentle, like a soothing rain upon a parched soul.",
@@ -4605,7 +4605,7 @@ export function getQuotes() {
       photo: "../assets/sr_priscilla_kanini.jpg",
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       category: "Self-control",
       quote:
         "Self-control is a fruit of the Spirit that blossoms through grace.",
@@ -4817,7 +4817,7 @@ export function getQuotes() {
     },
 
     {
-      author: "Sr. Jerusha",
+      author: "Sr. Jerusha Nkatha",
       category: "Self-control",
       quote:
         "Self-control is the anchor that steadies our souls in the storms of life.",
@@ -4850,7 +4850,7 @@ export function getQuotes() {
       photo: "../assets/sr_dorcas.jpg",
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       category: "Self-control",
       quote: "Through self-control, our hearts become vessels of grace.",
       italianQuote:
@@ -4939,7 +4939,7 @@ export function getQuotes() {
       photo: "../assets/sr_priscilla_kanini.jpg",
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       category: "Understanding",
       quote: "Understanding is the light that guides us through confusion.",
       italianQuote:
@@ -5142,7 +5142,7 @@ export function getQuotes() {
     },
 
     {
-      author: "Sr. Jerusha",
+      author: "Sr. Jerusha Nkatha",
       category: "Understanding",
       quote: "Understanding nurtures the soul and strengthens the spirit.",
       italianQuote: "L'intelletto nutre l'anima e rafforza lo spirito.",
@@ -5171,7 +5171,7 @@ export function getQuotes() {
       photo: "../assets/sr_dorcas.jpg",
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       category: "Understanding",
       quote: "Understanding allows us to see the world through God’s eyes.",
       italianQuote:
@@ -5260,7 +5260,7 @@ export function getQuotes() {
       photo: "../assets/sr_priscilla_kanini.jpg",
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       category: "Counsel (Right Judgment)",
       quote:
         "In right judgment, we find the strength to say yes to God’s will.",
@@ -5475,7 +5475,7 @@ export function getQuotes() {
     },
 
     {
-      author: "Sr. Jerusha",
+      author: "Sr. Jerusha Nkatha",
       category: "Counsel (Right Judgment)",
       quote: "God’s counsel is the quiet voice that steers us right.",
       italianQuote:
@@ -5507,7 +5507,7 @@ export function getQuotes() {
       photo: "../assets/sr_dorcas.jpg",
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       category: "Counsel (Right Judgment)",
       quote: "In every decision, God’s counsel lights the way.",
       italianQuote: "In ogni decisione, il consiglio di Dio illumina la via.",
@@ -5599,7 +5599,7 @@ export function getQuotes() {
       photo: "../assets/sr_priscilla_kanini.jpg",
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       category: "Fortitude (Courage)",
       quote: "To walk boldly in faith is to summon fortitude beyond measure.",
       italianQuote:
@@ -5830,7 +5830,7 @@ export function getQuotes() {
     },
 
     {
-      author: "Sr. Jerusha",
+      author: "Sr. Jerusha Nkatha",
       category: "Fortitude (Courage)",
       quote: "With God’s hand guiding us, fortitude turns fear into faith.",
       italianQuote:
@@ -5860,7 +5860,7 @@ export function getQuotes() {
       photo: "../assets/sr_dorcas.jpg",
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       category: "Fortitude (Courage)",
       quote:
         "Let fortitude be the pillar that supports your spiritual journey.",
@@ -5956,7 +5956,7 @@ export function getQuotes() {
       photo: "../assets/sr_priscilla_kanini.jpg",
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       category: "Piety (Reverence)",
       quote:
         "Piety calls us to worship with purity and devotion in heart and mind.",
@@ -6167,7 +6167,7 @@ export function getQuotes() {
       photo: "../assets/sr_loredana.jpg",
     },
     {
-      author: "Sr. Jerusha",
+      author: "Sr. Jerusha Nkatha",
       category: "Piety (Reverence)",
       quote: "In reverence, we find the strength to walk faithfully with God.",
       italianQuote:
@@ -6199,7 +6199,7 @@ export function getQuotes() {
       photo: "../assets/sr_dorcas.jpg",
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       category: "Piety (Reverence)",
       quote: "Reverence draws us closer to the heart of God each day.",
       italianQuote: "La riverenza ci avvicina ogni giorno al cuore di Dio.",
@@ -6291,7 +6291,7 @@ export function getQuotes() {
       photo: "../assets/sr_priscilla_kanini.jpg",
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       category: "Fear of the Lord (Wonder and Awe)",
       quote: "The Lord’s wonder fills my soul with humble gratitude every day.",
       italianQuote:
@@ -6498,7 +6498,7 @@ export function getQuotes() {
       photo: "../assets/sr_loredana.jpg",
     },
     {
-      author: "Sr. Jerusha",
+      author: "Sr. Jerusha Nkatha",
       category: "Fear of the Lord (Wonder and Awe)",
       quote:
         "In fear and awe, I find the courage to live according to God’s will.",
@@ -6532,7 +6532,7 @@ export function getQuotes() {
       photo: "../assets/sr_dorcas.jpg",
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       category: "Fear of the Lord (Wonder and Awe)",
       quote: "Fear of the Lord guides my steps and guards my heart.",
       italianQuote:
@@ -6623,7 +6623,7 @@ export function getQuotes() {
       photo: "../assets/sr_priscilla_kanini.jpg",
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       category: "Trust",
       quote:
         "Trust is the foundation of my relationship with God’s endless mercy.",
@@ -6827,7 +6827,7 @@ export function getQuotes() {
       photo: "../assets/sr_loredana.jpg",
     },
     {
-      author: "Sr. Jerusha",
+      author: "Sr. Jerusha Nkatha",
       category: "Trust",
       quote: "Trust is the light that guides me through darkness.",
       italianQuote: "La fiducia è la luce che mi guida attraverso l’oscurità.",
@@ -6857,7 +6857,7 @@ export function getQuotes() {
       photo: "../assets/sr_dorcas.jpg",
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       category: "Trust",
       quote: "God’s trustworthiness is my rock and refuge.",
       italianQuote: "L’affidabilità di Dio è la mia roccia e rifugio.",
@@ -6945,7 +6945,7 @@ export function getQuotes() {
       photo: "../assets/sr_priscilla_kanini.jpg",
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       category: "Prayer and Meditation",
       quote: "Prayer is the lamp that lights my path in the darkest times.",
       italianQuote:
@@ -7155,7 +7155,7 @@ export function getQuotes() {
       photo: "../assets/sr_loredana.jpg",
     },
     {
-      author: "Sr. Jerusha",
+      author: "Sr. Jerusha Nkatha",
       category: "Prayer and Meditation",
       quote: "In prayer, I find the courage to face each new day with hope.",
       italianQuote:
@@ -7187,7 +7187,7 @@ export function getQuotes() {
       photo: "../assets/sr_dorcas.jpg",
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       category: "Prayer and Meditation",
       quote: "Through prayer, I am lifted beyond my worries to God’s peace.",
       italianQuote:
@@ -7277,7 +7277,7 @@ export function getQuotes() {
       photo: "../assets/sr_priscilla_kanini.jpg",
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       category: "Compassion",
       quote: "Compassion guides my hands to help the suffering and the poor.",
       italianQuote:
@@ -7487,7 +7487,7 @@ export function getQuotes() {
       photo: "../assets/sr_loredana.jpg",
     },
     {
-      author: "Sr. Jerusha",
+      author: "Sr. Jerusha Nkatha",
       category: "Compassion",
       quote:
         "Compassion teaches me that love grows strongest in times of pain.",
@@ -7520,7 +7520,7 @@ export function getQuotes() {
       photo: "../assets/sr_dorcas.jpg",
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       category: "Compassion",
       quote: "Compassion inspires me to act, even when it’s difficult.",
       italianQuote:
@@ -7614,7 +7614,7 @@ export function getQuotes() {
       photo: "../assets/sr_priscilla_kanini.jpg",
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       category: "Hope and Perseverance",
       quote: "Perseverance gives me strength to keep loving despite hardships.",
       italianQuote:
@@ -7817,7 +7817,7 @@ export function getQuotes() {
       photo: "../assets/sr_loredana.jpg",
     },
     {
-      author: "Sr. Jerusha",
+      author: "Sr. Jerusha Nkatha",
       category: "Hope and Perseverance",
       quote:
         "Perseverance teaches me that no journey is in vain when God is with me.",
@@ -7850,7 +7850,7 @@ export function getQuotes() {
       photo: "../assets/sr_dorcas.jpg",
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       category: "Hope and Perseverance",
       quote: "Perseverance makes me steadfast in prayer and service.",
       italianQuote:
@@ -7943,7 +7943,7 @@ export function getQuotes() {
       photo: "../assets/sr_priscilla_kanini.jpg",
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       category: "Charity",
       quote: "Charity is love in action, touching lives with compassion.",
       italianQuote:
@@ -8146,7 +8146,7 @@ export function getQuotes() {
       photo: "../assets/sr_loredana.jpg",
     },
     {
-      author: "Sr. Jerusha",
+      author: "Sr. Jerusha Nkatha",
       category: "Charity",
       quote: "Charity is the prayer of love that never ends.",
       italianQuote: "La carità è la preghiera dell'amore che non finisce mai.",
@@ -8178,7 +8178,7 @@ export function getQuotes() {
       photo: "../assets/sr_dorcas.jpg",
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       category: "Charity",
       quote: "Charity is the river of God’s love flowing through our lives.",
       italianQuote:
@@ -8268,7 +8268,7 @@ export function getQuotes() {
       photo: "../assets/sr_priscilla_kanini.jpg",
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       category: "Forgiveness",
       quote: "Forgiveness is the courage to let go of pain and embrace peace.",
       italianQuote:
@@ -8465,7 +8465,7 @@ export function getQuotes() {
       photo: "../assets/sr_loredana.jpg",
     },
     {
-      author: "Sr. Jerusha",
+      author: "Sr. Jerusha Nkatha",
       category: "Forgiveness",
       quote: "Forgiveness teaches us humility and opens the heart to grace.",
       italianQuote:
@@ -8497,7 +8497,7 @@ export function getQuotes() {
       photo: "../assets/sr_dorcas.jpg",
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       category: "Forgiveness",
       quote: "Forgiveness is the strength that renews broken relationships.",
       italianQuote: "Il perdono è la forza che rinnova relazioni spezzate.",
@@ -8589,7 +8589,7 @@ export function getQuotes() {
       photo: "../assets/sr_priscilla_kanini.jpg",
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       category: "Wisdom",
       quote:
         "Wisdom is the companion of patience and the fruit of discernment.",
@@ -8814,7 +8814,7 @@ export function getQuotes() {
       photo: "../assets/sr_loredana.jpg",
     },
     {
-      author: "Sr. Jerusha",
+      author: "Sr. Jerusha Nkatha",
       category: "Wisdom",
       quote:
         "Wisdom flows from a heart that chooses love over fear and faith over doubt.",
@@ -8850,7 +8850,7 @@ export function getQuotes() {
       photo: "../assets/sr_dorcas.jpg",
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       category: "Wisdom",
       quote:
         "Wisdom teaches us to trust God’s timing, even when we do not understand.",
@@ -9078,7 +9078,7 @@ export function getQuotes() {
       photo: "../assets/sr_loredana.jpg",
     },
     {
-      author: "Sr. Jerusha",
+      author: "Sr. Jerusha Nkatha",
       category: "Spiritual Growth",
       quote:
         "May our spiritual growth lead us to become beacons of God’s love and mercy.",
@@ -9115,7 +9115,7 @@ export function getQuotes() {
       photo: "../assets/sr_dorcas.jpg",
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       category: "Spiritual Growth",
       quote:
         "In spiritual growth, we discover that love is the highest form of wisdom.",
@@ -9205,7 +9205,7 @@ export function getQuotes() {
       photo: "../assets/sr_priscilla_kanini.jpg",
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       category: "Spiritual Growth",
       quote:
         "Spiritual growth is God’s invitation to become the best version of ourselves in Him.",
@@ -9394,7 +9394,7 @@ export function getQuotes() {
       photo: "../assets/sr_priscilla_kanini.jpg",
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       category: "Humility",
       quote:
         "In humble service, we find the joy of sharing God’s love with the world.",
@@ -9497,7 +9497,7 @@ export function getQuotes() {
       photo: "../assets/sr_loredana.jpg",
     },
     {
-      author: "Sr. Jerusha",
+      author: "Sr. Jerusha Nkatha",
       category: "Humility",
       quote:
         "In humility we discover the true strength to serve with joy and compassion.",
@@ -9531,7 +9531,7 @@ export function getQuotes() {
       photo: "../assets/sr_dorcas.jpg",
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       category: "Humility",
       quote:
         "A humble heart in service is a powerful witness to God’s presence.",
@@ -9746,7 +9746,7 @@ export function getQuotes() {
       photo: "../assets/sr_pauline.jpg",
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       category: "Gratitude",
       quote:
         "Gratitude helps us see the divine fingerprints on every page of our story.",
@@ -9892,7 +9892,7 @@ export function getQuotes() {
       photo: "../assets/sr_agnes.jpg",
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       category: "Gratitude",
       quote: "With grateful hearts, we embrace each blessing as a divine gift.",
       italianQuote:
@@ -10068,7 +10068,7 @@ export function getQuotes() {
       photo: "../assets/sr_priscilla_kanini.jpg",
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       category: "Latin",
       quote: "Sapientia lumen vitae est.",
       italianQuote: "La saggezza è la luce della vita.",
@@ -10253,7 +10253,7 @@ export function getQuotes() {
     },
 
     {
-      author: "Sr. Jerusha",
+      author: "Sr. Jerusha Nkatha",
       category: "Latin",
       quote: "Spe vivimus.",
       italianQuote: "Viviamo nella speranza.",
@@ -10281,7 +10281,7 @@ export function getQuotes() {
       photo: "../assets/sr_dorcas.jpg",
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       category: "Latin",
       quote: "Spero lucem post tenebras.",
       italianQuote: "Spero la luce dopo le tenebre.",
@@ -10968,182 +10968,182 @@ export function getQuotes() {
       photo: "../assets/sr_hellen_murungi.jpg",
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       category: "Love",
       quote: "Love carries us beyond what we see, to a place only faith can reach.",
       italianQuote: "L'amore ci porta oltre ciò che vediamo, in un luogo solo la fede può raggiungere.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       category: "Joy",
       quote: "Joy is a quiet grace that fills the spaces where gratitude lives.",
       italianQuote: "La gioia è una grazia silenziosa che riempie gli spazi dove vive la gratitudine.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       category: "Peace",
       quote: "Peace is born when we stop striving and let God's mercy hold us.",
       italianQuote: "La pace nasce quando smettiamo di lottare e lasciamo che la misericordia di Dio ci sostenga.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       category: "Patience",
       quote: "Patience is the soul's way of trusting in a harvest not yet seen.",
       italianQuote: "La pazienza è il modo dell'anima di fidarsi di un raccolto non ancora visto.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       category: "Kindness",
       quote: "Kindness sees beyond appearances and finds the image of God in every face.",
       italianQuote: "La gentilezza vede oltre le apparenze e trova l'immagine di Dio in ogni volto.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       category: "Goodness",
       quote: "Goodness grows quietly in hearts that choose mercy every day.",
       italianQuote: "La bontà cresce silenziosamente nei cuori che scelgono la misericordia ogni giorno.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       category: "Faithfulness",
       quote: "Faithfulness means showing up again and again, as God shows up for us.",
       italianQuote: "La fedeltà significa presentarsi ancora e ancora, come Dio si presenta per noi.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       category: "Gentleness",
       quote: "Gentleness does not break what is already bruised.",
       italianQuote: "La mitezza non rompe ciò che è già ferito.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       category: "Self-control",
       quote: "Self-control gives the Spirit room to guide our hands and tongues.",
       italianQuote: "Il controllo di sé dà spazio allo Spirito per guidare le nostre mani e la nostra lingua.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       category: "Understanding",
       quote: "Understanding comes when we see with compassion instead of judgment.",
       italianQuote: "La comprensione arriva quando vediamo con compassione invece che con giudizio.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       category: "Counsel (Right Judgment)",
       quote: "Right judgment asks for wisdom before words, and prayer before plans.",
       italianQuote: "Il retto giudizio chiede saggezza prima delle parole e preghiera prima dei piani.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       category: "Fortitude (Courage)",
       quote: "Courage is walking forward with God when every step feels uncertain.",
       italianQuote: "Il coraggio è camminare avanti con Dio quando ogni passo sembra incerto.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       category: "Piety (Reverence)",
       quote: "Reverence holds the world gently, knowing it belongs to God alone.",
       italianQuote: "La riverenza tiene il mondo con delicatezza, sapendo che appartiene solo a Dio.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       category: "Fear of the Lord (Wonder and Awe)",
       quote: "Awe reminds us that God is always greater than we can imagine.",
       italianQuote: "Lo stupore ci ricorda che Dio è sempre più grande di quanto possiamo immaginare.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       category: "Trust",
       quote: "Trust places the weight of tomorrow into the hands that made today.",
       italianQuote: "La fiducia affida il peso di domani nelle mani che hanno fatto oggi.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       category: "Prayer and Meditation",
       quote: "Prayer is the doorway through which God enters the ordinary.",
       italianQuote: "La preghiera è la porta attraverso cui Dio entra nell'ordinario.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       category: "Compassion",
       quote: "Compassion kneels beside the broken and refuses to leave.",
       italianQuote: "La compassione si inginocchia accanto ai fratturati e si rifiuta di andarsene.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       category: "Hope and Perseverance",
       quote: "Hope carries us when our legs grow weak and the road stretches on.",
       italianQuote: "La speranza ci porta quando le nostre gambe si indeboliscono e la strada si allunga.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       category: "Charity",
       quote: "Charity multiplies what it gives and never counts the cost.",
       italianQuote: "La carità moltiplica ciò che dona e non conta mai il prezzo.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       category: "Forgiveness",
       quote: "Forgiveness unlocks the heart and lets mercy rush in.",
       italianQuote: "Il perdono sblocca il cuore e lascia che la misericordia vi entri.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       category: "Wisdom",
       quote: "Wisdom listens before it speaks and prays before it acts.",
       italianQuote: "La saggezza ascolta prima di parlare e prega prima di agire.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       category: "Spiritual Growth",
       quote: "Spiritual growth happens in the small, hidden moments of daily love.",
       italianQuote: "La crescita spirituale avviene nei piccoli momenti nascosti dell'amore quotidiano.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       category: "Humility",
       quote: "Humility kneels low enough to wash the feet of those who least expect it.",
       italianQuote: "L'umiltà si inginocchia abbastanza da lavare i piedi di coloro che meno se lo aspettano.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       category: "Gratitude",
       quote: "Gratitude turns every small mercy into a window of God's presence.",
       italianQuote: "La gratitudine trasforma ogni piccola misericordia in una finestra della presenza di Dio.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       category: "Latin",
       quote: "In hoc signo vinces — in faith we conquer, not by force but by love.",
       italianQuote: "In hoc signo vinces — nella fede vinceremo, non con la forza ma con l'amore.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       category: "Gratittude",
       quote: "A grateful heart is a heart that has found its home in God.",
       italianQuote: "Un cuore grato è un cuore che ha trovato la sua casa in Dio.",
@@ -18079,7 +18079,7 @@ export function justBecauseArray() {
       topic: { en: "Jesus", it: "Gesù" },
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       sentiment: {
         en: "She walks with us in sacred silence, knowing every sorrow and prayer—just because.",
         it: "Cammina con noi nel silenzio sacro, conoscendo ogni dolore e preghiera—solo perché.",
@@ -18287,7 +18287,7 @@ export function justBecauseArray() {
       topic: { en: "Jesus", it: "Gesù" },
     },
     {
-      author: "Sr. Jerusha",
+      author: "Sr. Jerusha Nkatha",
       sentiment: {
         en: "She shares my tears, and my heart finds its true home—just because.",
         it: "Condivide le mie lacrime, e il mio cuore trova la sua vera casa—solo perché.",
@@ -18375,7 +18375,7 @@ export function justBecauseArray() {
       topic: { en: "Virgin Mary", it: "Vergine Maria" },
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       sentiment: {
         en: "He welcomes the wanderer, and in his embrace I am home, just because.",
         it: "Accoglie il pellegrino, e nel suo abbraccio sono a casa, solo perché.",
@@ -18423,7 +18423,7 @@ export function justBecauseArray() {
       topic: { en: "Virgin Mary", it: "Vergine Maria" },
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       sentiment: {
         en: "Her tenderness watches over me when I feel unseen — I rest in her intercession, just because.",
         it: "La Sua tenerezza veglia su di me quando mi sento invisibile — riposo nella Sua intercessione, solo perché.",
@@ -18465,7 +18465,7 @@ export const AUTHOR_PHOTOS = {
   "Sr. Mary Japheth": "../assets/sr_mary_japheth.jpg",
   "Sr. Christine Musoga": "../assets/sr_christine_musoga.jpg",
   "Sr. Priscilla Kanini": "../assets/sr_priscilla_kanini.jpg",
-  "Sr. Aniceta": "../assets/sr_aniceta.jpg",
+  "Sr. Aniceta Kaare": "../assets/sr_aniceta.jpg",
   "Sr. Anastasia Nkubitu": "../assets/sr_anastasia_nkubitu.jpg",
   "Sr. Pauline": "../assets/sr_pauline.jpg",
   "Sr. Beth": "../assets/sr_beth.jpg",
@@ -18493,18 +18493,18 @@ export const AUTHOR_PHOTOS = {
   "Sr. Maria Carrolla": "../assets/sr_maria_carrolla.jpg",
   "Sr. Nancy": "../assets/sr_nancy.jpg",
   "Sr. Loredana": "../assets/sr_loredana.jpg",
-  "Sr. Jerusha": "../assets/sr_jerusha.jpg",
+  "Sr. Jerusha Nkatha": "../assets/sr_jerusha.jpg",
   "Sr. Benedicta": "../assets/sr_benedicta.jpg",
   "Sr. Regina": "../assets/sr_regina.jpg",
   "Sr. Dorcas": "../assets/sr_dorcas.jpg",
-  "Sr. Salome": "../assets/sr_salome.jpg",
+  "Sr. Salome Wavinya": "../assets/sr_salome.jpg",
   "Sr. Immaculate": "../assets/sr_immaculate.jpg",
   "Sr. Ann": "../assets/sr_ann.jpg",
   "Sr. Joyce": "../assets/sr_joyce.jpg",
   "Sr. Winnie Lopez": "../assets/sr_winnie.jpg",
   "Sr. Joan": "../assets/sr_joan.jpg",
   "Sr. Gladys": "../assets/sr_gladys.png",
-  "Sr. Theresa": "../assets/sr_theresa.jpg",
+  "Sr. Teresia Gathoni": "../assets/sr_theresa.jpg",
 };
 
 export function getFavWords() {
@@ -18630,7 +18630,7 @@ export function getFavWords() {
       },
     },
     {
-      author: "Sr. Aniceta",
+      author: "Sr. Aniceta Kaare",
       favWord: { en: "Silence", it: "Silenzio" },
       reason: {
         en: "In silence, we meet God and hear His gentle whisper.",
@@ -18954,7 +18954,7 @@ export function getFavWords() {
       },
     },
     {
-      author: "Sr. Jerusha",
+      author: "Sr. Jerusha Nkatha",
       favWord: { en: "Home", it: "Casa" },
       reason: {
         en: "Shared tears make the heart find home.",
@@ -19002,7 +19002,7 @@ export function getFavWords() {
       },
     },
     {
-      author: "Sr. Salome",
+      author: "Sr. Salome Wavinya",
       favWord: { en: "Welcome", it: "Accoglienza" },
       reason: {
         en: "Welcoming the wanderer brings us home.",
@@ -19074,7 +19074,7 @@ export function getFavWords() {
       },
     },
     {
-      author: "Sr. Theresa",
+      author: "Sr. Teresia Gathoni",
       favWord: { en: "Compassion", it: "Compassione" },
       reason: {
         en: "Compassion brings us close to the heart of God.",
@@ -19357,6 +19357,194 @@ export function getPoems() {
             "il giardino brillerà come il sole del mattino,",
             "*Deus novit* — Dio conosce ogni nome,",
             "e ogni fiore fedele sboccerà ancora.",
+          ],
+        },
+      },
+
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+    // 5. SR. MERCY KATHURE
+    {
+      title: {
+        en: "The Hands That Carry Love",
+        it: "Le Mani che Portano l'Amore",
+      },
+
+      author: "Sr. Mercy Kathure",
+      photo: "../assets/sr_mercy_kathure.jpg",
+
+      verses: {
+        verse1: {
+          en: [
+            "Love does not always speak or sing,",
+            "sometimes it is a simple thing,",
+            "a hand that helps, a hand that cares,",
+            "a heart that quietly shares.",
+          ],
+          it: [
+            "L'amore non sempre parla o canta,",
+            "a volte è una cosa semplice,",
+            "una mano che aiuta, una mano che si prende cura,",
+            "un cuore che dona in silenzio.",
+          ],
+        },
+
+        verse2: {
+          en: [
+            "The hands that serve may seem so small,",
+            "yet through them God's love reaches all,",
+            "each little kindness, each gentle deed,",
+            "*Caritas in action* becomes a seed.",
+          ],
+          it: [
+            "Le mani che servono possono sembrare piccole,",
+            "eppure attraverso loro l'amore di Dio raggiunge tutti,",
+            "ogni piccola bontà, ogni gesto gentile,",
+            "*Caritas in action* diventa un seme.",
+          ],
+        },
+
+        verse3: {
+          en: [
+            "And every seed that love has sown,",
+            "God will make it His very own,",
+            "for hands that serve with love and care,",
+            "have already brought Heaven near.",
+          ],
+          it: [
+            "E ogni seme che l'amore ha piantato,",
+            "Dio lo farà Suo,",
+            "perché le mani che servono con amore e cura,",
+            "hanno già portato il Cielo vicino.",
+          ],
+        },
+      },
+
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    // 6. SR. MARGARET N. KALELI
+    {
+      title: {
+        en: "The Seed That Waits in Silence",
+        it: "Il Seme che Attende nel Silenzio",
+      },
+
+      author: "Sr. Margaret N. Kaleli",
+      photo: "../assets/sr_margaret_n_kaleli.jpg",
+
+      verses: {
+        verse1: {
+          en: [
+            "A little seed sleeps under the ground,",
+            "where no bright flower can yet be found,",
+            "the earth is quiet, the night is still,",
+            "but deep below, it waits for God's will.",
+          ],
+          it: [
+            "Un piccolo seme dorme sotto la terra,",
+            "dove ancora non si vede alcun fiore,",
+            "la terra è silenziosa, la notte è quieta,",
+            "ma nel profondo attende la volontà di Dio.",
+          ],
+        },
+
+        verse2: {
+          en: [
+            "So too a prayer may seem unseen,",
+            "with no answer yet and nothing between,",
+            "but faith keeps waiting, calm and true,",
+            "*In manus Tuas* — I trust in You.",
+          ],
+          it: [
+            "Così anche una preghiera può sembrare nascosta,",
+            "senza ancora una risposta, senza nulla in vista,",
+            "ma la fede continua ad attendere, calma e sincera,",
+            "*In manus Tuas* — nelle Tue mani confido.",
+          ],
+        },
+
+        verse3: {
+          en: [
+            "Then comes the rain, then comes the sun,",
+            "and suddenly the waiting is done,",
+            "the little seed breaks through the earth,",
+            "and Heaven reveals what patience was worth.",
+          ],
+          it: [
+            "Poi arriva la pioggia, poi arriva il sole,",
+            "e improvvisamente l'attesa finisce,",
+            "il piccolo seme rompe la terra,",
+            "e il Cielo mostra il valore della pazienza.",
+          ],
+        },
+      },
+
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    // 7. SR. HELLEN MURUNGI
+    {
+      title: {
+        en: "The Fragrance No One Can See",
+        it: "Il Profumo che Nessuno Può Vedere",
+      },
+
+      author: "Sr. Hellen Murungi",
+      photo: "../assets/sr_hellen_murungi.jpg",
+
+      verses: {
+        verse1: {
+          en: [
+            "A flower does not need to say its name,",
+            "its gentle fragrance tells the same,",
+            "it gives its perfume to the passing air,",
+            "and asks for nothing in return there.",
+          ],
+          it: [
+            "Un fiore non ha bisogno di dire il suo nome,",
+            "il suo dolce profumo parla per lui,",
+            "dona la sua fragranza all'aria che passa,",
+            "e non chiede nulla in cambio.",
+          ],
+        },
+
+        verse2: {
+          en: [
+            "So kindness may quietly fill a place,",
+            "without a loud word or a show of grace,",
+            "one gentle heart can change the air,",
+            "*Bonum diffusivum sui* — goodness gives itself.",
+          ],
+          it: [
+            "Così la bontà può riempire un luogo in silenzio,",
+            "senza parole forti né bisogno di mostrarsi,",
+            "un cuore gentile può cambiare l'aria intorno,",
+            "*Bonum diffusivum sui* — il bene si dona.",
+          ],
+        },
+
+        verse3: {
+          en: [
+            "And though the flower may fade from sight,",
+            "its fragrance can remain through day and night,",
+            "for love leaves traces hearts can never see,",
+            "and what is given in love lives eternally.",
+          ],
+          it: [
+            "E anche quando il fiore scompare alla vista,",
+            "il suo profumo può restare giorno e notte,",
+            "perché l'amore lascia tracce che gli occhi non vedono,",
+            "e ciò che è donato con amore vive per sempre.",
           ],
         },
       },
