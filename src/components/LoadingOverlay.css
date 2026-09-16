@@ -34,8 +34,11 @@
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--primary-green);
-  white-space: nowrap;
-  animation: loadingWordDrop 3000ms ease forwards;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.25;
+  max-width: min(90vw, 760px);
+  animation: loadingWordDrop 1600ms ease forwards;
 }
 
 .loading-boxes {

@@ -44,7 +44,7 @@ import CaptureCard from "../components/CaptureCard.jsx";
 import { DEFAULT_SEO, SITE_IMAGE_URL, SITE_NAME, useSeo } from "../utils/seo.js";
 import "./QuotesPage.css";
 
-const CATEGORY_LABELS = {
+export const CATEGORY_LABELS = {
   Love: { en: "Love", it: "Amore" },
   Joy: { en: "Joy", it: "Gioia" },
   Peace: { en: "Peace", it: "Pace" },
