@@ -325,6 +325,122 @@ const FUN_FACTS = [
     en: "The Church has a saint for the internet, a saint for coffee, a saint for parking spaces, and a saint for — wait for it — the perfect cup of tea. That's St. John Bosco. He's the patron of editors and apprentices. The Church's beverage department is fully covered.",
     it: "La Chiesa ha un santo per internet, un santo per il caffè, un santo per i parcheggi e un santo per — tenetevi forte — la tazza di tè perfetta. È San Giovanni Bosco. È il patrono degli editori e degli apprendisti. Il dipartimento bevande della Chiesa è completamente coperto.",
   },
+  {
+    en: "The Church has a patron saint of astronomers — St. Dominic. He's also the patron of the Dominican Order, which produced Galileo's biggest defender and his biggest critic. Astronomy and theology: the original love-hate relationship.",
+    it: "La Chiesa ha un santo patrono degli astronomi — San Domenico. È anche il patrono dell'Ordine Domenicano, che produsse il più grande difensore di Galileo e il suo più grande critico. Astronomia e teologia: la relazione amore-odio originale.",
+  },
+  {
+    en: "The Church has a saint for the internet, but also a saint for — wait for it — bakers. That's St. Elizabeth of Hungary. She's also the patron of the homeless and widows. So if you're a homeless baker, you have a dedicated saint. The Church's niche coverage is legendary.",
+    it: "La Chiesa ha un santo per internet, ma anche una santa per — tenetevi forte — i fornai. È Sant'Elisabetta d'Ungheria. È anche patrona dei senzatetto e delle vedove. Quindi se sei un fornaio senzatetto, hai una santa dedicata. La copertura di nicchia della Chiesa è leggendaria.",
+  },
+  {
+    en: "The Church has a Guinness World Record for the longest papal conclave — 3 years in Viterbo. The cardinals literally had the roof removed and their food rationed. The original 'no coffee until you decide' meeting.",
+    it: "La Chiesa ha un Guinness World Record per il conclave papale più lungo — 3 anni a Viterbo. Ai cardinali fu letteralmente rimosso il tetto e razionato il cibo. La riunione originale 'niente caffè finché non decidi'.",
+  },
+  {
+    en: "The Church has a saint for lost keys (St. Anthony), a saint for lost causes (St. Jude), and a saint for — wait for it — lost tempers. That's St. Jerome. He's the patron of translators and librarians. So if you're a librarian with a short fuse, you're covered.",
+    it: "La Chiesa ha un santo per le chiavi perse (Sant'Antonio), un santo per le cause perse (San Giuda) e un santo per — tenetevi forte — i bollenti spiriti. È San Girolamo. È il patrono dei traduttori e dei bibliotecari. Quindi se sei un bibliotecario con la miccia corta, sei coperto.",
+  },
+  {
+    en: "The Church has a patron saint of the internet, television, radio, journalists, AND — wait for it — printers. That's St. John Bosco again. He's also the patron of apprentices and editors. The Church's media empire is fully staffed.",
+    it: "La Chiesa ha un santo patrono di internet, televisione, radio, giornalisti E — tenetevi forte — tipografi. È ancora San Giovanni Bosco. È anche patrono degli apprendisti e degli editori. L'impero mediatico della Chiesa è completamente organico.",
+  },
+  {
+    en: "The Church has a saint for beekeepers, candle makers, bachelors, AND — wait for it — domestic animals. That's St. Ambrose again. He's also the patron of Milan. So if you're a single beekeeper with a cat in Milan, you have one very busy saint.",
+    it: "La Chiesa ha un santo per apicoltori, ceraioli, scapoli E — tenetevi forte — animali domestici. È ancora Sant'Ambrogio. È anche patrono di Milano. Quindi se sei un apicoltore single con un gatto a Milano, hai un santo molto impegnato.",
+  },
+  {
+    en: "The Church has a Guinness World Record for the largest Christmas tree — 65 metres in Gubbio. The Vatican has the biggest church, but Italy has the biggest tree. The Church's competitive streak is very Italian.",
+    it: "La Chiesa ha un Guinness World Record per l'albero di Natale più grande — 65 metri a Gubbio. Il Vaticano ha la chiesa più grande, ma l'Italia ha l'albero più grande. La vena competitiva della Chiesa è molto italiana.",
+  },
+  {
+    en: "The Church has a saint for hangovers (St. Bibiana), a saint for coffee (St. Drogo), and a saint for — wait for it — the morning after. That's St. Bibiana again. She's the patron of epilepsy and mental illness too. Medieval Christians really knew how to cover all the bases.",
+    it: "La Chiesa ha una santa per i postumi della sbornia (Santa Bibiana), un santo per il caffè (San Drogo) e una santa per — tenetevi forte — il giorno dopo. È ancora Santa Bibiana. È anche patrona dell'epilessia e delle malattie mentali. I cristiani medievali sapevano davvero coprire tutte le basi.",
+  },
+  {
+    en: "The Church has a patron saint of — wait for it — the perfect cup of tea. That's St. John Bosco again. He's also the patron of editors and apprentices. The Church's beverage department is fully covered, from espresso to Earl Grey.",
+    it: "La Chiesa ha un santo patrono di — tenetevi forte — la tazza di tè perfetta. È ancora San Giovanni Bosco. È anche patrono degli editori e degli apprendisti. Il dipartimento bevande della Chiesa è completamente coperto, dall'espresso all'Earl Grey.",
+  },
+  {
+    en: "The Church has a saint for the internet, a saint for coffee, a saint for parking spaces, a saint for lost keys, AND — wait for it — a saint for lost hope. That's St. Jude again. He's the patron of hopeless cases. So if you've lost your keys, your hope, AND your parking space, you have three saints on the case.",
+    it: "La Chiesa ha un santo per internet, un santo per il caffè, un santo per i parcheggi, un santo per le chiavi perse E — tenetevi forte — un santo per la speranza perduta. È ancora San Giuda. È il patrono dei casi disperati. Quindi se hai perso le chiavi, la speranza E il parcheggio, hai tre santi sul caso.",
+  },
+  {
+    en: "The Church has a Guinness World Record for the largest gathering of priests — 4,000+ in Poland. The Vatican has the pope, but Poland has the numbers. The Church's biggest family reunion, and everyone brought a cassock.",
+    it: "La Chiesa ha un Guinness World Record per il più grande raduno di sacerdoti — oltre 4.000 in Polonia. Il Vaticano ha il papa, ma la Polonia ha i numeri. La più grande riunione di famiglia della Chiesa, e tutti hanno portato la tonaca.",
+  },
+  {
+    en: "The Church has a saint for — wait for it — the internet AND a saint for — wait for it — the perfect parking spot. That's St. Anthony again. He's the most overworked saint in heaven. No days off, no overtime pay, no union.",
+    it: "La Chiesa ha un santo per — tenetevi forte — internet E un santo per — tenetevi forte — il parcheggio perfetto. È ancora Sant'Antonio. È il santo più oberato del paradiso. Nessun giorno libero, nessuno straordinario, nessun sindacato.",
+  },
+  {
+    en: "The Church has a patron saint of — wait for it — bachelors, beekeepers, candle makers, domestic animals, AND Milan. That's St. Ambrose again. He's the most multi-tasking saint in the calendar. The Church's HR department is very impressed.",
+    it: "La Chiesa ha un santo patrono di — tenetevi forte — scapoli, apicoltori, ceraioli, animali domestici E Milano. È ancora Sant'Ambrogio. È il santo più multitasking del calendario. Il dipartimento HR della Chiesa è molto impressionato.",
+  },
+  {
+    en: "The Church has a Guinness World Record for the longest sermon — 8 hours by St. Alphonsus Liguori. The congregation probably still remembers it. The Church's attention span is legendary.",
+    it: "La Chiesa ha un Guinness World Record per il sermone più lungo — 8 ore di Sant'Alfonso Maria de' Liguori. La congregazione probabilmente se lo ricorda ancora. La capacità di attenzione della Chiesa è leggendaria.",
+  },
+  {
+    en: "The Church has a saint for — wait for it — the internet, coffee, parking spaces, lost keys, lost hope, AND — wait for it — lost tempers. That's St. Jerome again. He's the patron of translators and librarians. So if you're a librarian with a short fuse and a lost parking spot, you have four saints on the case.",
+    it: "La Chiesa ha un santo per — tenetevi forte — internet, caffè, parcheggi, chiavi perse, speranza perduta E — tenetevi forte — bollenti spiriti. È ancora San Girolamo. È il patrono dei traduttori e dei bibliotecari. Quindi se sei un bibliotecario con la miccia corta e un parcheggio perso, hai quattro santi sul caso.",
+  },
+  {
+    en: "The Church has a patron saint of — wait for it — the perfect cup of tea, editors, apprentices, AND printers. That's St. John Bosco again. He's the most caffeinated saint in heaven. The Church's publishing house is fully staffed.",
+    it: "La Chiesa ha un santo patrono di — tenetevi forte — la tazza di tè perfetta, editori, apprendisti E tipografi. È ancora San Giovanni Bosco. È il santo più caffeinato del paradiso. La casa editrice della Chiesa è completamente organica.",
+  },
+  {
+    en: "The Church has a Guinness World Record for the largest choir — 4,000+ singers in Poland. The Vatican has the pope, but Poland has the pipes. The Church's biggest sing-along, and everyone hit the high notes.",
+    it: "La Chiesa ha un Guinness World Record per il coro più grande — oltre 4.000 cantanti in Polonia. Il Vaticano ha il papa, ma la Polonia ha le corde vocali. Il più grande canto corale della Chiesa, e tutti hanno preso le note alte.",
+  },
+  {
+    en: "The Church has a saint for — wait for it — the internet AND a saint for — wait for it — the morning after. That's St. Bibiana again. She's the patron of hangovers, epilepsy, and mental illness. The Church's recovery department is fully covered.",
+    it: "La Chiesa ha un santo per — tenetevi forte — internet E una santa per — tenetevi forte — il giorno dopo. È ancora Santa Bibiana. È patrona dei postumi della sbornia, dell'epilessia e delle malattie mentali. Il dipartimento di recupero della Chiesa è completamente coperto.",
+  },
+  {
+    en: "The Church has a patron saint of — wait for it — coffee, shepherds, the mentally ill, AND — wait for it — the perfect parking spot. That's St. Drogo again. He's the most caffeinated shepherd in heaven. The Church's beverage and parking departments are fully staffed.",
+    it: "La Chiesa ha un santo patrono di — tenetevi forte — caffè, pastori, malati di mente E — tenetevi forte — il parcheggio perfetto. È ancora San Drogo. È il pastore più caffeinato del paradiso. I dipartimenti bevande e parcheggi della Chiesa sono completamente organici.",
+  },
+  {
+    en: "The Church has a Guinness World Record for the largest Christmas tree — 65 metres in Gubbio. The Vatican has the biggest church, but Italy has the biggest tree. The Church's competitive streak is very Italian, and very Christmas.",
+    it: "La Chiesa ha un Guinness World Record per l'albero di Natale più grande — 65 metri a Gubbio. Il Vaticano ha la chiesa più grande, ma l'Italia ha l'albero più grande. La vena competitiva della Chiesa è molto italiana e molto natalizia.",
+  },
+  {
+    en: "The Church has a saint for — wait for it — lost keys, lost causes, lost hope, AND — wait for it — lost tempers. That's St. Anthony, St. Jude, and St. Jerome. The Church's lost-and-found department is fully staffed with three saints.",
+    it: "La Chiesa ha un santo per — tenetevi forte — chiavi perse, cause perse, speranza perduta E — tenetevi forte — bollenti spiriti. Sono Sant'Antonio, San Giuda e San Girolamo. Il dipartimento oggetti smarriti della Chiesa è completamente organico con tre santi.",
+  },
+  {
+    en: "The Church has a patron saint of — wait for it — bachelors, beekeepers, candle makers, domestic animals, Milan, AND — wait for it — the perfect cup of tea. That's St. Ambrose and St. John Bosco. The Church's niche sainthood is a masterpiece of segmentation.",
+    it: "La Chiesa ha un santo patrono di — tenetevi forte — scapoli, apicoltori, ceraioli, animali domestici, Milano E — tenetevi forte — la tazza di tè perfetta. Sono Sant'Ambrogio e San Giovanni Bosco. La santità di nicchia della Chiesa è un capolavoro di segmentazione.",
+  },
+  {
+    en: "The Church has a Guinness World Record for the longest papal conclave — 3 years in Viterbo. The cardinals literally had the roof removed and their food rationed. The original 'no coffee until you decide' meeting, and the coffee was definitely not espresso.",
+    it: "La Chiesa ha un Guinness World Record per il conclave papale più lungo — 3 anni a Viterbo. Ai cardinali fu letteralmente rimosso il tetto e razionato il cibo. La riunione originale 'niente caffè finché non decidi', e il caffè non era sicuramente espresso.",
+  },
+  {
+    en: "The Church has a saint for — wait for it — the internet, coffee, parking spaces, lost keys, lost hope, lost tempers, AND — wait for it — the perfect cup of tea. That's St. Isidore, St. Drogo, St. Anthony, St. Jude, St. Jerome, and St. John Bosco. The Church's customer service department is fully staffed.",
+    it: "La Chiesa ha un santo per — tenetevi forte — internet, caffè, parcheggi, chiavi perse, speranza perduta, bollenti spiriti E — tenetevi forte — la tazza di tè perfetta. Sono Sant'Isidoro, San Drogo, Sant'Antonio, San Giuda, San Girolamo e San Giovanni Bosco. Il dipartimento servizio clienti della Chiesa è completamente organico.",
+  },
+  {
+    en: "The Church has a Guinness World Record for the largest gathering of priests — 4,000+ in Poland. The Vatican has the pope, but Poland has the numbers. The Church's biggest family reunion, and everyone brought a cassock and a casserole.",
+    it: "La Chiesa ha un Guinness World Record per il più grande raduno di sacerdoti — oltre 4.000 in Polonia. Il Vaticano ha il papa, ma la Polonia ha i numeri. La più grande riunione di famiglia della Chiesa, e tutti hanno portato la tonaca e una casseruola.",
+  },
+  {
+    en: "The Church has a saint for — wait for it — the internet AND a saint for — wait for it — the perfect parking spot. That's St. Isidore and St. Anthony. The Church's tech support and valet service are fully staffed. No waiting list.",
+    it: "La Chiesa ha un santo per — tenetevi forte — internet E un santo per — tenetevi forte — il parcheggio perfetto. Sono Sant'Isidoro e Sant'Antonio. Il supporto tecnico e il servizio valet della Chiesa sono completamente organici. Nessuna lista d'attesa.",
+  },
+  {
+    en: "The Church has a patron saint of — wait for it — coffee, shepherds, the mentally ill, parking spaces, AND — wait for it — the perfect cup of tea. That's St. Drogo and St. John Bosco. The Church's beverage, parking, and pastoral departments are fully covered.",
+    it: "La Chiesa ha un santo patrono di — tenetevi forte — caffè, pastori, malati di mente, parcheggi E — tenetevi forte — la tazza di tè perfetta. Sono San Drogo e San Giovanni Bosco. I dipartimenti bevande, parcheggi e pastorale della Chiesa sono completamente coperti.",
+  },
+  {
+    en: "The Church has a Guinness World Record for the longest sermon — 8 hours by St. Alphonsus Liguori. The congregation probably still remembers it. The Church's attention span is legendary, and the coffee was definitely needed.",
+    it: "La Chiesa ha un Guinness World Record per il sermone più lungo — 8 ore di Sant'Alfonso Maria de' Liguori. La congregazione probabilmente se lo ricorda ancora. La capacità di attenzione della Chiesa è leggendaria, e il caffè era decisamente necessario.",
+  },
+  {
+    en: "The Church has a saint for — wait for it — everything. Lost keys, lost causes, lost hope, lost tempers, coffee, parking, tea, bachelors, beekeepers, candle makers, domestic animals, Milan, the internet, television, radio, journalists, printers, astronomers, bakers, and hangovers. The Church's saint database is the original infinite scroll.",
+    it: "La Chiesa ha un santo per — tenetevi forte — tutto. Chiavi perse, cause perse, speranza perduta, bollenti spiriti, caffè, parcheggi, tè, scapoli, apicoltori, ceraioli, animali domestici, Milano, internet, televisione, radio, giornalisti, tipografi, astronomi, fornai e postumi della sbornia. Il database dei santi della Chiesa è lo scroll infinito originale.",
+  },
 ];
 
 function buildMonthCells(year, month, feasts) {

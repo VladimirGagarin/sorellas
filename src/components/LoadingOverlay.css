@@ -35,7 +35,7 @@
   text-transform: uppercase;
   color: var(--primary-green);
   white-space: nowrap;
-  animation: loadingWordWipe 700ms ease forwards;
+  animation: loadingWordDrop 3000ms ease forwards;
 }
 
 .loading-boxes {
@@ -71,24 +71,22 @@
   animation-delay: 0.48s;
 }
 
-@keyframes loadingWordWipe {
+@keyframes loadingWordDrop {
   0% {
     opacity: 0;
-    clip-path: inset(0 0 0 0);
-    transform: translateX(26px);
+    transform: translateY(-34px);
   }
-  18% {
+  16% {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
-  72% {
+  82% {
     opacity: 1;
-    clip-path: inset(0 0 0 0);
+    transform: translateY(0);
   }
   100% {
     opacity: 0;
-    clip-path: inset(0 100% 0 0);
-    transform: translateX(-18px);
+    transform: translateY(30px);
   }
 }
 

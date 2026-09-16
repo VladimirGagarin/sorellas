@@ -6,9 +6,9 @@ import { useLocation } from "react-router-dom";
 import { useLanguage } from "../contexts/useLanguage.js";
 import "./LoadingOverlay.css";
 
-const WORD_DURATION = 700;
+const WORD_DURATION = 3000;
 const TOTAL_WORDS = 4;
-const TOTAL_MS = WORD_DURATION * TOTAL_WORDS + 450;
+const TOTAL_MS = WORD_DURATION * TOTAL_WORDS + 600;
 
 export default function LoadingOverlay() {
   const location = useLocation();
