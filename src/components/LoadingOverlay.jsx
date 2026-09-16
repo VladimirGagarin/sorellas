@@ -6,7 +6,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useLanguage } from "../contexts/useLanguage.js";
-import { getAllPrayers } from "./Utils.js";
+import { getAllPrayers, getQuotes } from "./Utils.js";
 import { CATEGORY_LABELS } from "../pages/QuotesPage.jsx";
 import flowers from "./Flower";
 import "./LoadingOverlay.css";
@@ -82,13 +82,24 @@ function getRouteWelcome(location, language) {
     return en ? `Litany of ${nm.en}` : `Litanie di ${nm.it}`;
   }
 
-  // /quotes?theme=Kindness&item=170 → the theme's name in the current language
+  // /quotes?theme=Joy&item=43 → "Author - Theme" (or "Theme | Author")
   if (path === "/quotes") {
     const theme = normalizeCategory(params.get("theme"));
-    if (theme && CATEGORY_LABELS[theme]) {
-      return CATEGORY_LABELS[theme][language];
+    const themeLabel =
+      theme && CATEGORY_LABELS[theme]
+        ? CATEGORY_LABELS[theme][language]
+        : en
+        ? "Quotes"
+        : "Citazioni";
+    const itemRaw = params.get("item");
+    const itemIdx = Number.parseInt(itemRaw, 10);
+    if (Number.isInteger(itemIdx) && itemIdx >= 0) {
+      const quote = getQuotes().find((q) => q._id === itemIdx);
+      if (quote && quote.author) {
+        return theme ? `${quote.author} - ${themeLabel}` : quote.author;
+      }
     }
-    return en ? "Quotes" : "Citazioni";
+    return themeLabel;
   }
 
   const page = PAGE_LABELS[path];
