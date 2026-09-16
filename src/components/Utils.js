@@ -21015,6 +21015,605 @@ export function getPoems() {
         it: "DEO GRATIAS",
       },
     },
+
+    // 21. SR. MARY MWIKALI MATHEKA
+    {
+      title: {
+        en: "The Flower That Turns to the Sun",
+        it: "Il Fiore che si Volge verso il Sole",
+      },
+
+      author: "Sr. Mary Mwikali Matheka",
+      photo: "../assets/sr_mary_mwikali.jpg",
+
+      verses: {
+        verse1: {
+          en: [
+            "A flower knows where the sunlight lies,",
+            "and turns its face towards the skies;",
+            "through every cloud, through every day,",
+            "it follows light along the way.",
+          ],
+          it: [
+            "Un fiore sa dove si trova la luce,",
+            "e volge il suo volto verso il cielo;",
+            "attraverso ogni nuvola, attraverso ogni giorno,",
+            "segue la luce lungo il cammino.",
+          ],
+        },
+
+        verse2: {
+          en: [
+            "So may thy heart turn towards the Lord,",
+            "and trust each promise in His word;",
+            "when shadows come and daylight ends,",
+            "*Ad lucem* — towards the light again.",
+          ],
+          it: [
+            "Così possa il tuo cuore volgersi verso il Signore,",
+            "e confidare in ogni promessa della Sua parola;",
+            "quando arrivano le ombre e la luce finisce,",
+            "*Ad lucem* — ancora verso la luce.",
+          ],
+        },
+
+        verse3: {
+          en: [
+            "For flowers do not fear the night,",
+            "they simply wait again for light;",
+            "and hearts that trust through every hour,",
+            "shall bloom again with greater power.",
+          ],
+          it: [
+            "Perché i fiori non temono la notte,",
+            "semplicemente attendono di nuovo la luce;",
+            "e i cuori che confidano in ogni ora,",
+            "sbocceranno ancora con nuova forza.",
+          ],
+        },
+      },
+
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    // 22. SR. JANE MAKANDA
+    {
+      title: {
+        en: "The Path Made by Many Small Steps",
+        it: "Il Cammino Fatto di Tanti Piccoli Passi",
+      },
+
+      author: "Sr. Jane Makanda",
+      photo: "../assets/jane_makanda.jpg",
+
+      verses: {
+        verse1: {
+          en: [
+            "A long road starts with one small step,",
+            "then one more step, and one more yet;",
+            "we need not see the whole way through,",
+            "we only need to trust and do.",
+          ],
+          it: [
+            "Una lunga strada comincia con un piccolo passo,",
+            "poi un altro passo, e ancora uno;",
+            "non dobbiamo vedere tutto il cammino,",
+            "dobbiamo solo confidare e andare.",
+          ],
+        },
+
+        verse2: {
+          en: [
+            "Some days are bright, some days are hard,",
+            "but every step is still a part;",
+            "with faith to guide each passing day,",
+            "*Gradatim* — step by step, we find the way.",
+          ],
+          it: [
+            "Alcuni giorni sono luminosi, altri difficili,",
+            "ma ogni passo è comunque una parte del cammino;",
+            "con la fede a guidare ogni giorno,",
+            "*Gradatim* — passo dopo passo, troviamo la via.",
+          ],
+        },
+
+        verse3: {
+          en: [
+            "And when we look behind one day,",
+            "we shall see how far we came;",
+            "the little steps that seemed so small",
+            "were leading us to God through all.",
+          ],
+          it: [
+            "E un giorno, guardando indietro,",
+            "vedremo quanto lontano siamo arrivati;",
+            "i piccoli passi che sembravano così brevi",
+            "ci stavano conducendo sempre verso Dio.",
+          ],
+        },
+      },
+
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    // 23. SR. ROSE KANATHI
+    {
+      title: {
+        en: "The Rose That Gives Its Fragrance",
+        it: "La Rosa che Dona il Suo Profumo",
+      },
+
+      author: "Sr. Rose Kanathi",
+      photo: "../assets/rose_kanathi.jpg",
+
+      verses: {
+        verse1: {
+          en: [
+            "A rose does not keep its scent inside,",
+            "it gives its fragrance far and wide;",
+            "though no one asks and no one knows,",
+            "it simply blooms as a rose.",
+          ],
+          it: [
+            "Una rosa non tiene il suo profumo per sé,",
+            "lo dona tutto intorno a sé;",
+            "anche se nessuno lo chiede o lo nota,",
+            "semplicemente fiorisce come una rosa.",
+          ],
+        },
+
+        verse2: {
+          en: [
+            "So may thy life give love away,",
+            "in little acts from day to day;",
+            "a kind word spoken, a burden shared,",
+            "*Amor vincit omnia* — love conquers all.",
+          ],
+          it: [
+            "Così possa la tua vita donare amore,",
+            "attraverso piccoli gesti ogni giorno;",
+            "una parola gentile, un peso condiviso,",
+            "*Amor vincit omnia* — l'amore vince ogni cosa.",
+          ],
+        },
+
+        verse3: {
+          en: [
+            "And when the rose has left the tree,",
+            "its fragrance still may wander free;",
+            "so let the love thou gavest remain,",
+            "like roses blooming after rain.",
+          ],
+          it: [
+            "E quando la rosa non sarà più sul ramo,",
+            "il suo profumo potrà ancora viaggiare libero;",
+            "così rimanga l'amore che hai donato,",
+            "come rose che fioriscono dopo la pioggia.",
+          ],
+        },
+      },
+
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    // 24. SR. ANDREINA STRADIOTTO
+    {
+      title: {
+        en: "The Hands That Plant for Tomorrow",
+        it: "Le Mani che Piantano per il Domani",
+      },
+
+      author: "Sr. Andreina Stradiotto",
+      photo: "../assets/andreina_stradiotto.jpg",
+
+      verses: {
+        verse1: {
+          en: [
+            "A gardener plants what she may not see,",
+            "the flower that comes in a year or three;",
+            "she trusts the soil, she trusts the rain,",
+            "and plants with hope through sun and rain.",
+          ],
+          it: [
+            "Una giardiniera pianta ciò che forse non vedrà,",
+            "il fiore che arriverà tra un anno o tre;",
+            "si fida della terra, si fida della pioggia,",
+            "e pianta con speranza nel sole e nella pioggia.",
+          ],
+        },
+
+        verse2: {
+          en: [
+            "So many good things begin this way,",
+            "with little seeds we plant today;",
+            "a word of faith, a work of care,",
+            "*Semper spera* — hope is always there.",
+          ],
+          it: [
+            "Così tante cose buone cominciano,",
+            "con piccoli semi che piantiamo oggi;",
+            "una parola di fede, un gesto di cura,",
+            "*Semper spera* — la speranza è sempre là.",
+          ],
+        },
+
+        verse3: {
+          en: [
+            "And others may enjoy the bloom,",
+            "though they knew not who gave it room;",
+            "but God remembers every seed,",
+            "and every hand that served in need.",
+          ],
+          it: [
+            "E altri potranno godere del fiore,",
+            "anche senza sapere chi gli diede spazio;",
+            "ma Dio ricorda ogni seme,",
+            "e ogni mano che ha servito nel bisogno.",
+          ],
+        },
+      },
+
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    // 25. SR. GIOVANNA
+    {
+      title: {
+        en: "The Garden Where Love Never Tires",
+        it: "Il Giardino dove l'Amore non si Stanca Mai",
+      },
+
+      author: "Sr. Giovanna",
+      photo: "../assets/giovanna.jpg",
+
+      verses: {
+        verse1: {
+          en: [
+            "A gardener may grow tired at night,",
+            "yet morning comes with gentle light;",
+            "she sees the flowers, one by one,",
+            "and tends them underneath the sun.",
+          ],
+          it: [
+            "Una giardiniera può stancarsi nella notte,",
+            "ma il mattino arriva con una luce gentile;",
+            "vede i fiori, uno dopo l'altro,",
+            "e se ne prende cura sotto il sole.",
+          ],
+        },
+
+        verse2: {
+          en: [
+            "For love will serve when strength is small,",
+            "and still make room for one more soul;",
+            "it does not ask how much it gave,",
+            "*Servire Deo* — to serve the Lord.",
+          ],
+          it: [
+            "Perché l'amore serve anche quando la forza è poca,",
+            "e trova ancora spazio per un'altra anima;",
+            "non chiede quanto ha donato,",
+            "*Servire Deo* — servire il Signore.",
+          ],
+        },
+
+        verse3: {
+          en: [
+            "And years may pass, yet flowers remain,",
+            "remembering sunshine, love, and rain;",
+            "the garden tells what love has done,",
+            "long after the gardener has gone.",
+          ],
+          it: [
+            "E gli anni possono passare, ma i fiori rimangono,",
+            "ricordando il sole, l'amore e la pioggia;",
+            "il giardino racconta ciò che l'amore ha fatto,",
+            "anche molto tempo dopo che la giardiniera è partita.",
+          ],
+        },
+      },
+
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+    {
+      title: {
+        en: "The Bell That Calls the Heart Home",
+        it: "La Campana che Richiama il Cuore a Casa",
+      },
+      author: "Sr. Jiunisia Kaburi",
+      photo: AUTHOR_PHOTOS["Sr. Jiunisia Kaburi"],
+      verses: {
+        verse1: {
+          en: [
+            "When morning wakes the quiet air,",
+            "A gentle bell is heard in prayer;",
+            "It calls the wandering heart to stay,",
+            "And turn its steps toward God that day.",
+          ],
+          it: [
+            "Quando il mattino desta l'aria quieta,",
+            "Una dolce campana chiama alla preghiera;",
+            "Richiama il cuore che vagava lontano,",
+            "E volge i suoi passi a Dio quel giorno.",
+          ],
+        },
+        verse2: {
+          en: [
+            "Thy life became a ringing sound,",
+            "A call where weary souls were found;",
+            "Not loud with pride, nor seeking fame,",
+            "But soft as one who speaks God's name.",
+          ],
+          it: [
+            "La tua vita divenne un suono di campana,",
+            "Un richiamo per anime stanche e smarrite;",
+            "Non forte d'orgoglio, né in cerca di fama,",
+            "Ma dolce come chi pronuncia il nome di Dio.",
+          ],
+        },
+        verse3: {
+          en: [
+            "And when the evening shadows fall,",
+            "That gentle summons still may call;",
+            "Ora et confide, let the heart be still,",
+            "For love hath answered God's own will.",
+          ],
+          it: [
+            "E quando scendono le ombre della sera,",
+            "Quel dolce richiamo ancora può chiamare;",
+            "Ora et confide, lascia quieto il cuore,",
+            "Poiché l'amore ha risposto alla volontà di Dio.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    {
+      title: {
+        en: "The Table Where No One Is Forgotten",
+        it: "La Tavola dove Nessuno è Dimenticato",
+      },
+      author: "Sr. Consolata",
+      photo: AUTHOR_PHOTOS["Sr. Consolata"],
+      verses: {
+        verse1: {
+          en: [
+            "There is a table set with grace,",
+            "Where every soul may find a place;",
+            "The hungry heart, the tired and small,",
+            "May sit beneath love's roof for all.",
+          ],
+          it: [
+            "C'è una tavola imbandita di grazia,",
+            "Dove ogni anima può trovare posto;",
+            "Il cuore affamato, il piccolo stanco,",
+            "Può sedersi sotto il tetto dell'amore.",
+          ],
+        },
+        verse2: {
+          en: [
+            "Thy kindness laid another plate,",
+            "And taught the lonely not to wait;",
+            "A little bread, a listening ear,",
+            "Can make a distant heaven near.",
+          ],
+          it: [
+            "La tua bontà posava un altro piatto,",
+            "E insegnava al solo a non aspettare;",
+            "Un poco di pane, un orecchio che ascolta,",
+            "Può rendere vicino un cielo lontano.",
+          ],
+        },
+        verse3: {
+          en: [
+            "No guest was merely passing through,",
+            "For every face was known to you;",
+            "Ubi caritas, there God stays,",
+            "And love turns meals to holy praise.",
+          ],
+          it: [
+            "Nessun ospite passava soltanto,",
+            "Perché ogni volto era conosciuto da te;",
+            "Ubi caritas, là Dio rimane,",
+            "E l'amore trasforma il pasto in lode santa.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    {
+      title: {
+        en: "The Window Open to the Morning",
+        it: "La Finestra Aperta al Mattino",
+      },
+      author: "Sr. Adriana",
+      photo: AUTHOR_PHOTOS["Sr. Adriana"],
+      verses: {
+        verse1: {
+          en: [
+            "A window opened to the dawn,",
+            "And night discovered it was gone;",
+            "The first light entered without fear,",
+            "And whispered, hope is still here.",
+          ],
+          it: [
+            "Una finestra aperta all'aurora,",
+            "E la notte scoprì di essere passata;",
+            "La prima luce entrò senza paura,",
+            "E sussurrò: la speranza è ancora qui.",
+          ],
+        },
+        verse2: {
+          en: [
+            "So did thy heart remain ajar,",
+            "To welcome light from near and far;",
+            "When sorrow covered every view,",
+            "Thy quiet faith let daylight through.",
+          ],
+          it: [
+            "Così il tuo cuore rimase socchiuso,",
+            "Per accogliere la luce da vicino e da lontano;",
+            "Quando il dolore copriva ogni veduta,",
+            "La tua fede silenziosa lasciava entrare il giorno.",
+          ],
+        },
+        verse3: {
+          en: [
+            "O heart that waits for dawn to rise,",
+            "Lift up thy gaze unto the skies;",
+            "Fiat lux, let darkness flee,",
+            "For God's own morning shall yet be.",
+          ],
+          it: [
+            "O cuore che attende il sorgere dell'alba,",
+            "Alza lo sguardo verso il cielo;",
+            "Fiat lux, lascia fuggire le tenebre,",
+            "Perché il mattino di Dio verrà ancora.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    {
+      title: {
+        en: "The River That Remembers the Sea",
+        it: "Il Fiume che Ricorda il Mare",
+      },
+      author: "Sr. Sabina Murwana",
+      photo: AUTHOR_PHOTOS["Sr. Sabina Murwana"],
+      verses: {
+        verse1: {
+          en: [
+            "A river knows not where it ends,",
+            "Yet onward still its water bends;",
+            "Through stone and valley, field and plain,",
+            "It journeys onward without complaint.",
+          ],
+          it: [
+            "Un fiume non sa dove finirà,",
+            "Eppure continua il suo cammino;",
+            "Tra pietre e valli, campi e pianure,",
+            "Avanza senza lamentarsi.",
+          ],
+        },
+        verse2: {
+          en: [
+            "Thy days were rivers, one by one,",
+            "Each flowing toward the Father's sun;",
+            "Some carried joy, some carried pain,",
+            "Yet none were poured away in vain.",
+          ],
+          it: [
+            "I tuoi giorni furono fiumi, uno dopo l'altro,",
+            "Tutti rivolti verso il sole del Padre;",
+            "Alcuni portavano gioia, altri dolore,",
+            "Ma nessuno scorreva invano.",
+          ],
+        },
+        verse3: {
+          en: [
+            "The sea was hidden from thy sight,",
+            "Yet faith kept shining through the night;",
+            "Spera in Deo, the waters know,",
+            "That every faithful river finds its home.",
+          ],
+          it: [
+            "Il mare era nascosto ai tuoi occhi,",
+            "Eppure la fede brillava nella notte;",
+            "Spera in Deo, le acque lo sanno,",
+            "Ogni fiume fedele trova la sua casa.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    {
+      title: {
+        en: "The Thread That Holds the Cloth Together",
+        it: "Il Filo che Tiene Insieme la Stoffa",
+      },
+      author: "Sr. Susan Chokera",
+      photo: AUTHOR_PHOTOS["Sr. Susan Chokera"],
+      verses: {
+        verse1: {
+          en: [
+            "A single thread may seem so small,",
+            "Yet many threads can make a wall;",
+            "They cross unseen from side to side,",
+            "And hold the woven beauty wide.",
+          ],
+          it: [
+            "Un filo solo può sembrare così piccolo,",
+            "Eppure molti fili formano una tela;",
+            "Si incrociano, spesso senza essere visti,",
+            "E sostengono insieme la sua bellezza.",
+          ],
+        },
+        verse2: {
+          en: [
+            "Thy kindness was a hidden thread,",
+            "That joined the living and the dead;",
+            "A word of peace, a hand held near,",
+            "Could stitch together hope and fear.",
+          ],
+          it: [
+            "La tua bontà era un filo nascosto,",
+            "Che univa i vivi e chi ci ha lasciati;",
+            "Una parola di pace, una mano vicina,",
+            "Potevano ricucire speranza e paura.",
+          ],
+        },
+        verse3: {
+          en: [
+            "The cloth of love is never done,",
+            "For every heart may add its own;",
+            "Deus caritas est, the pattern stays,",
+            "And mercy weaves through all our days.",
+          ],
+          it: [
+            "La tela dell'amore non è mai finita,",
+            "Perché ogni cuore può aggiungere il suo filo;",
+            "Deus caritas est, il disegno rimane,",
+            "E la misericordia attraversa tutti i nostri giorni.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
   ];
 
   return allPoems;
