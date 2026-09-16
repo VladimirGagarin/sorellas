@@ -121,6 +121,210 @@ const FUN_FACTS = [
     en: "February 2 is Candlemas — 40 days after Christmas, when Mary presented Jesus in the Temple, and the day your nativity set may finally rest. Fun fact: the groundhog basically turned a Christian feast into a shadow show.",
     it: "Il 2 febbraio è la Candelora — 40 giorni dopo Natale, quando Maria presentò Gesù al Tempio, e il giorno in cui il tuo presepe può finalmente riposare. Curiosità: la marmotta ha trasformato una festa cristiana in uno spettacolo d'ombre.",
   },
+  {
+    en: "The word 'holiday' literally comes from 'holy day' — so every time you book a vacation, you're technically planning a pilgrimage. You're welcome.",
+    it: "La parola 'vacanza' non ha la stessa origine, ma in inglese 'holiday' viene da 'holy day' — quindi ogni volta che prenoti una vacanza, tecnicamente stai pianificando un pellegrinaggio. Prego.",
+  },
+  {
+    en: "The Vatican has its own observatory — and it's not in the Vatican! The Specola Vaticana is in Castel Gandolfo, and Vatican astronomers have been studying the stars since 1582. The Church basically invented the calendar *and* the telescope department.",
+    it: "Il Vaticano ha il suo osservatorio — e non è in Vaticano! La Specola Vaticana è a Castel Gandolfo, e gli astronomi vaticani studiano le stelle dal 1582. La Chiesa ha praticamente inventato il calendario *e* il dipartimento dei telescopi.",
+  },
+  {
+    en: "St. Isidore of Seville is the patron saint of the internet — proclaimed unofficially in 1997. He wrote a 20-volume encyclopedia in the 7th century. Imagine being the saint of Wi-Fi and also dead for 1,400 years.",
+    it: "Sant'Isidoro di Siviglia è il patrono di internet — proclamato ufficiosamente nel 1997. Scrisse un'enciclopedia di 20 volumi nel VII secolo. Immagina essere il santo del Wi-Fi e anche morto da 1.400 anni.",
+  },
+  {
+    en: "The longest papal conclave lasted 3 years (1268–1271) — the cardinals literally locked up in Viterbo until they picked Gregory X. Locals had to rip the roof off and ration their food. Talk about a deadline.",
+    it: "Il conclave papale più lungo durò 3 anni (1268–1271) — i cardinali letteralmente rinchiusi a Viterbo finché non elessero Gregorio X. I locali dovettero togliere il tetto e razionare il cibo. Questa sì che è una scadenza.",
+  },
+  {
+    en: "The shortest papal reign? Urban VII — 13 days in 1590. He caught malaria before his coronation and died before he could even be crowned. He still managed to ban smoking in churches. Priorities.",
+    it: "Il pontificato più breve? Urbano VII — 13 giorni nel 1590. Prese la malaria prima dell'incoronazione e morì prima di poter essere incoronato. Riuscì comunque a vietare il fumo nelle chiese. Questioni di priorità.",
+  },
+  {
+    en: "The Bible is the best-selling book of all time — over 5 billion copies. Guinness World Records confirms it. Second place? The Little Red Book by Mao. The Bible still wins by a few billion.",
+    it: "La Bibbia è il libro più venduto di tutti i tempi — oltre 5 miliardi di copie. Il Guinness dei Primati lo conferma. Secondo posto? Il Libretto Rosso di Mao. La Bibbia vince comunque di qualche miliardo.",
+  },
+  {
+    en: "The oldest continuously operating institution in the world is the Catholic Church — 2,000 years and counting. The second oldest? The Japanese imperial dynasty. The Church still has better records.",
+    it: "L'istituzione più antica ancora in funzione è la Chiesa Cattolica — 2.000 anni e non li dimostra. La seconda più antica? La dinastia imperiale giapponese. La Chiesa ha comunque archivi migliori.",
+  },
+  {
+    en: "The Council of Nicaea (325 AD) had 318 bishops — and they argued so much that the emperor Constantine had to pay for their travel and hotels. The original corporate retreat.",
+    it: "Il Concilio di Nicea (325 d.C.) riunì 318 vescovi — e litigarono così tanto che l'imperatore Costantino dovette pagare viaggio e hotel. Il ritiro aziendale originale.",
+  },
+  {
+    en: "St. Anthony of Padua is the patron saint of lost things — but also of lost people, lost souls, and apparently lost causes. He's basically the Church's customer service hotline.",
+    it: "Sant'Antonio di Padova è il patrono delle cose smarrite — ma anche delle persone smarrite, delle anime perdute e apparentemente delle cause perse. È praticamente il servizio clienti della Chiesa.",
+  },
+  {
+    en: "The word 'cardinal' comes from the Latin 'cardo' — meaning hinge. Cardinals are the hinges of the Church. Also, the bird is named after the colour, and the colour is named after the cardinals' robes. Full circle.",
+    it: "La parola 'cardinale' viene dal latino 'cardo' — che significa cardine. I cardinali sono i cardini della Chiesa. Inoltre, l'uccello prende il nome dal colore, e il colore dalle vesti dei cardinali. Cerchio completo.",
+  },
+  {
+    en: "There's a patron saint for almost everything: St. Lawrence for cooks, St. Clare for television, St. Isidore for farmers *and* the internet, St. Drogo for coffee, and St. Gertrude for cats. The Church has a saint for your Wi-Fi AND your espresso.",
+    it: "C'è un santo patrono per quasi tutto: San Lorenzo per i cuochi, Santa Chiara per la televisione, Sant'Isidoro per i contadini *e* internet, San Drogo per il caffè e Santa Geltrude per i gatti. La Chiesa ha un santo per il tuo Wi-Fi E per il tuo espresso.",
+  },
+  {
+    en: "The Church has a Guinness World Record for the largest Christmas tree — a 65-metre steel structure in Gubbio, Italy, lit every year since 1981. The Vatican may not compete, but the Italians definitely do.",
+    it: "La Chiesa ha un Guinness World Record per il più grande albero di Natale — una struttura d'acciaio di 65 metri a Gubbio, accesa ogni anno dal 1981. Il Vaticano forse non partecipa, ma gli italiani sicuramente sì.",
+  },
+  {
+    en: "The Sistine Chapel ceiling took Michelangelo 4 years (1508–1512) — and he hated every minute of it. He wrote a poem complaining about his aching neck. The Pope got the masterpiece; Michelangelo got chronic back pain.",
+    it: "Il soffitto della Cappella Sistina richiese a Michelangelo 4 anni (1508–1512) — e odiò ogni minuto. Scrisse una poesia lamentandosi del collo dolorante. Il Papa ottenne il capolavoro; Michelangelo ottenne mal di schiena cronico.",
+  },
+  {
+    en: "The word 'December' comes from 'decem' — ten. It was the 10th month in the old Roman calendar. Then the Church added Advent and Christmas, and now it's the busiest month of the year. Sorry, December.",
+    it: "La parola 'dicembre' viene da 'decem' — dieci. Era il decimo mese nel vecchio calendario romano. Poi la Chiesa aggiunse Avvento e Natale, e ora è il mese più impegnativo dell'anno. Scusa, dicembre.",
+  },
+  {
+    en: "The Church has an official exorcist — and since 2004, the Vatican has run a course on exorcism that attracts hundreds of priests. It's basically a supernatural continuing-education program.",
+    it: "La Chiesa ha un esorcista ufficiale — e dal 2004 il Vaticano tiene un corso sull'esorcismo che attrae centinaia di preti. È praticamente un programma di formazione continua soprannaturale.",
+  },
+  {
+    en: "The first printed book in Europe was the Gutenberg Bible (1455) — 180 copies, 48 surviving. The Church didn't ban it; it *commissioned* it. The printing press was basically Catholic tech support.",
+    it: "Il primo libro stampato in Europa fu la Bibbia di Gutenberg (1455) — 180 copie, 48 sopravvissute. La Chiesa non la vietò; la *commissionò*. La stampa era praticamente il supporto tecnico cattolico.",
+  },
+  {
+    en: "The pope's official title is 'Bishop of Rome, Vicar of Jesus Christ, Successor of the Prince of the Apostles, Supreme Pontiff of the Universal Church, Primate of Italy, Archbishop and Metropolitan of the Roman Province, Sovereign of the Vatican City State, Servant of the Servants of God.' Try fitting that on a business card.",
+    it: "Il titolo ufficiale del papa è 'Vescovo di Roma, Vicario di Gesù Cristo, Successore del Principe degli Apostoli, Sommo Pontefice della Chiesa Universale, Primate d'Italia, Arcivescovo e Metropolita della Provincia Romana, Sovrano dello Stato della Città del Vaticano, Servo dei Servi di Dio.' Prova a metterlo su un biglietto da visita.",
+  },
+  {
+    en: "The Church has a saint for hangovers — St. Bibiana. She's also the patron of epilepsy and mental illness. Medieval Christians really knew how to cover all the bases.",
+    it: "La Chiesa ha una santa per i postumi della sbornia — Santa Bibiana. È anche patrona dell'epilessia e delle malattie mentali. I cristiani medievali sapevano davvero coprire tutte le basi.",
+  },
+  {
+    en: "The Vatican Library has over 1.1 million books and 75,000 manuscripts — and it's been collecting since 1475. That's longer than most countries have existed. It also has a secret archive that's only been fully open to scholars since 2020.",
+    it: "La Biblioteca Vaticana ha oltre 1,1 milioni di libri e 75.000 manoscritti — e colleziona dal 1475. Più a lungo di quanto esistano la maggior parte dei paesi. Ha anche un archivio segreto aperto completamente agli studiosi solo dal 2020.",
+  },
+  {
+    en: "The Church has a Guinness World Record for the longest Christmas Mass — no, wait, that's not real. But the longest sermon? St. Alphonsus Liguori once preached for 8 hours straight. The congregation probably still remembers it.",
+    it: "La Chiesa ha un Guinness World Record per la Messa di Natale più lunga — no, aspetta, non è vero. Ma il sermone più lungo? Sant'Alfonso Maria de' Liguori una volta predicò per 8 ore di fila. La congregazione probabilmente se lo ricorda ancora.",
+  },
+  {
+    en: "The Church's calendar has more than 10,000 saints — and the process to become one (canonization) usually takes centuries. St. Teresa of Calcutta was fast-tracked in 19 years. That's the ecclesiastical equivalent of express shipping.",
+    it: "Il calendario della Chiesa ha più di 10.000 santi — e il processo per diventarlo (canonizzazione) di solito richiede secoli. Santa Teresa di Calcutta è stata accelerata in 19 anni. È l'equivalente ecclesiastico della spedizione express.",
+  },
+  {
+    en: "The Church has a patron saint of beekeepers, candle makers, and — wait for it — bachelors. St. Ambrose gets around. He's also the reason we have the Ambrosian Rite in Milan, which is slightly different from the Roman Rite. Even the liturgy has local dialects.",
+    it: "La Chiesa ha un santo patrono degli apicoltori, dei ceraioli e — tenetevi forte — degli scapoli. Sant'Ambrogio si dà da fare. È anche il motivo per cui a Milano esiste il Rito Ambrosiano, leggermente diverso dal Rito Romano. Persino la liturgia ha i suoi dialetti locali.",
+  },
+  {
+    en: "The pope is also the Bishop of Rome — which means he's technically the parish priest of the Diocese of Rome. He just happens to have 1.3 billion parishioners and a really nice apartment.",
+    it: "Il papa è anche Vescovo di Roma — il che significa che tecnicamente è il parroco della Diocesi di Roma. Solo che ha 1,3 miliardi di parrocchiani e un appartamento davvero bello.",
+  },
+  {
+    en: "The Vatican is the smallest country in the world — 0.44 square kilometres. You can walk across it in 20 minutes. It also has its own post office, which is famously faster than Italy's. People literally go there to mail letters.",
+    it: "Il Vaticano è il paese più piccolo del mondo — 0,44 chilometri quadrati. Puoi attraversarlo a piedi in 20 minuti. Ha anche il suo ufficio postale, notoriamente più veloce di quello italiano. La gente ci va letteralmente per spedire lettere.",
+  },
+  {
+    en: "The Church has an official Latin dictionary — the 'Lexicon Recentis Latinitatis' — which includes modern words like 'computer' (instrumentum computatorium) and 'basketball' (canistriludium). Yes, you can now tweet in Latin. Ave, Twitter.",
+    it: "La Chiesa ha un dizionario latino ufficiale — il 'Lexicon Recentis Latinitatis' — che include parole moderne come 'computer' (instrumentum computatorium) e 'pallacanestro' (canistriludium). Sì, ora puoi twittare in latino. Ave, Twitter.",
+  },
+  {
+    en: "St. Peter's Basilica is so big that the Statue of Liberty could fit inside it — lying down, with room to spare. It's also the largest church in the world, holding 60,000 people. The ushers still ask you to scoot to the middle of the pew.",
+    it: "La Basilica di San Pietro è così grande che la Statua della Libertà potrebbe entrarci — sdraiata, con spazio avanzato. È anche la chiesa più grande del mondo, capace di 60.000 persone. Gli addetti ti chiedono comunque di scorrere al centro della panca.",
+  },
+  {
+    en: "The Church invented the university. The University of Bologna (1088) is the oldest in the world, followed by Oxford and Paris — all founded by or under the Church's wing. So technically, your student loans are the Church's fault.",
+    it: "La Chiesa ha inventato l'università. L'Università di Bologna (1088) è la più antica del mondo, seguita da Oxford e Parigi — tutte fondate da o sotto l'ala della Chiesa. Quindi, tecnicamente, i tuoi debiti studenteschi sono colpa della Chiesa.",
+  },
+  {
+    en: "The Church has a saint for the internet AND a saint for television — St. Clare of Assisi was named patron of TV in 1958 because she reportedly saw and heard Mass on her wall while sick in bed. That's the medieval version of live streaming.",
+    it: "La Chiesa ha un santo per internet E una santa per la televisione — Santa Chiara d'Assisi fu nominata patrona della TV nel 1958 perché si dice che vedesse e sentisse la Messa sul muro mentre era malata a letto. È la versione medievale dello streaming live.",
+  },
+  {
+    en: "The word 'chapel' comes from the Latin 'cappa' — a cloak. St. Martin of Tours cut his cloak in half to share with a beggar, and the half-cloak (capella) was preserved as a relic. The places built to house it became 'chapels'. Your wedding venue is named after a coat.",
+    it: "La parola 'cappella' viene dal latino 'cappa' — un mantello. San Martino di Tours tagliò il suo mantello a metà per condividerlo con un mendicante, e il mezzo mantello (capella) fu conservato come reliquia. I luoghi costruiti per custodirlo divennero 'cappelle'. Il tuo luogo di matrimonio prende il nome da un cappotto.",
+  },
+  {
+    en: "The Church has a Guinness World Record for the largest choir — 4,000+ singers at a single event. And no, it wasn't at the Vatican. It was in Poland. The Vatican choir is good, but Poland brought reinforcements.",
+    it: "La Chiesa ha un Guinness World Record per il coro più grande — oltre 4.000 cantanti in un singolo evento. E no, non era in Vaticano. Era in Polonia. Il coro vaticano è bravo, ma la Polonia ha portato i rinforzi.",
+  },
+  {
+    en: "There's a saint for lost keys, lost wallets, and lost patience — St. Anthony of Padua again. He's so popular that he gets more prayer requests than most saints combined. The Church's busiest customer service representative, and he never asks for a survey.",
+    it: "C'è un santo per le chiavi perse, i portafogli persi e la pazienza persa — ancora Sant'Antonio di Padova. È così popolare che riceve più richieste di preghiera della maggior parte dei santi messi insieme. Il rappresentante del servizio clienti più impegnato della Chiesa, e non chiede mai un sondaggio.",
+  },
+  {
+    en: "The Church once put a pope on trial after he was dead — the 'Cadaver Synod' of 897 AD. Pope Stephen VI dug up Pope Formosus, dressed the corpse in papal robes, and put it on trial. The dead pope lost. Guilty verdict. Then a later pope reversed it. Then a later pope reversed the reversal. Medieval justice at its finest.",
+    it: "La Chiesa una volta processò un papa dopo che era morto — il 'Sinodo del Cadavere' dell'897 d.C. Papa Stefano VI riesumò Papa Formoso, vestì il cadavere con gli abiti papali e lo processò. Il papa morto perse. Verdetto di colpevolezza. Poi un papa successivo annullò tutto. Poi un altro papa annullò l'annullamento. La giustizia medievale al suo meglio.",
+  },
+  {
+    en: "The Church has a patron saint of the internet, AND a patron saint of hackers — St. Isidore again, but unofficially. There's also a patron saint of computer programmers: St. Isidore. Yes, same guy. He's multitasking across 1,400 years.",
+    it: "La Chiesa ha un santo patrono di internet E un santo patrono degli hacker — ancora Sant'Isidoro, ma ufficiosamente. C'è anche un santo patrono dei programmatori: Sant'Isidoro. Sì, sempre lui. Fa multitasking da 1.400 anni.",
+  },
+  {
+    en: "The word 'Easter' comes from the pagan goddess Eostre — but the Church reclaimed it. In most languages it's 'Pascha' (from Passover). English just kept the old name. The Church won the holiday; the name stayed pagan. Awkward.",
+    it: "La parola inglese 'Easter' viene dalla dea pagana Eostre — ma la Chiesa la reclamò. Nella maggior parte delle lingue è 'Pasqua' (da Pesach). L'inglese ha semplicemente tenuto il vecchio nome. La Chiesa ha vinto la festa; il nome è rimasto pagano. Imbarazzante.",
+  },
+  {
+    en: "The Church has an official saint for the internet, but also a patron saint of the press — St. Francis de Sales. He used pamphlets to convert Calvinists in the 1600s. The original viral marketing campaign.",
+    it: "La Chiesa ha un santo ufficiale per internet, ma anche un patrono della stampa — San Francesco di Sales. Usava opuscoli per convertire i calvinisti nel 1600. La campagna di marketing virale originale.",
+  },
+  {
+    en: "The Vatican has a secret archive that contains a letter from Mary Queen of Scots, a petition from Henry VIII, and the trial records of Galileo. It's been open to scholars since 2020 — but only 60% of it has been catalogued. The rest is still 'Vatican classified'.",
+    it: "Il Vaticano ha un archivio segreto che contiene una lettera di Maria Stuarda, una petizione di Enrico VIII e gli atti del processo di Galileo. È aperto agli studiosi dal 2020 — ma solo il 60% è stato catalogato. Il resto è ancora 'classificato vaticano'.",
+  },
+  {
+    en: "The Church has a saint for hangovers (St. Bibiana), a saint for lost keys (St. Anthony), and a saint for — wait for it — difficult marriages. That's St. Rita of Cascia. She's also the patron of impossible causes. So basically, the Church has a saint for your entire relationship status.",
+    it: "La Chiesa ha una santa per i postumi della sbornia (Santa Bibiana), un santo per le chiavi perse (Sant'Antonio) e una santa per — tenetevi forte — i matrimoni difficili. È Santa Rita da Cascia. È anche patrona delle cause impossibili. Quindi, praticamente, la Chiesa ha un santo per tutto il tuo stato sentimentale.",
+  },
+  {
+    en: "The Church's liturgical year has more than 60 feast days that are 'solemnities' — the highest rank. Christmas and Easter are the big two, but there's also St. Joseph, Sts. Peter and Paul, and All Saints. Some saints get a whole day; some get a whole month. It's a hierarchy of celebration.",
+    it: "L'anno liturgico della Chiesa ha più di 60 feste che sono 'solennità' — il grado più alto. Natale e Pasqua sono le due grandi, ma ci sono anche San Giuseppe, Santi Pietro e Paolo e Tutti i Santi. Alcuni santi hanno un giorno intero; altri un mese intero. È una gerarchia della celebrazione.",
+  },
+  {
+    en: "The Church has a patron saint of coffee — St. Drogo. Legend says he survived on coffee beans while on a pilgrimage. He's also the patron of shepherds and the mentally ill. The Church really does have a saint for everything, including your morning espresso.",
+    it: "La Chiesa ha un santo patrono del caffè — San Drogo. La leggenda dice che sopravvisse con i chicchi di caffè durante un pellegrinaggio. È anche patrono dei pastori e dei malati di mente. La Chiesa ha davvero un santo per tutto, incluso il tuo espresso mattutino.",
+  },
+  {
+    en: "The Church once declared war on cats — Pope Gregory IX in 1233 issued a papal bull that led to the mass killing of cats in Europe. It's one of the darkest and most bizarre chapters in Church history. The rats were thrilled. The plague was not.",
+    it: "La Chiesa una volta dichiarò guerra ai gatti — Papa Gregorio IX nel 1233 emanò una bolla papale che portò all'uccisione di massa dei gatti in Europa. È uno dei capitoli più oscuri e bizzarri della storia della Chiesa. I ratti erano felici. La peste no.",
+  },
+  {
+    en: "The Church has a saint for the internet, a saint for television, and a saint for — wait for it — radio. That's St. Gabriel the Archangel, who announced the birth of Jesus. He's basically the patron of all communication, from angelic announcements to AM radio.",
+    it: "La Chiesa ha un santo per internet, una santa per la televisione e un santo per — tenetevi forte — la radio. È San Gabriele Arcangelo, che annunciò la nascita di Gesù. È praticamente il patrono di tutta la comunicazione, dagli annunci angelici alla radio AM.",
+  },
+  {
+    en: "The Church has a Guinness World Record for the largest gathering of priests — over 4,000 at a single event in Poland. The Vatican has the pope, but Poland has the numbers. The Church's biggest family reunion.",
+    it: "La Chiesa ha un Guinness World Record per il più grande raduno di sacerdoti — oltre 4.000 in un singolo evento in Polonia. Il Vaticano ha il papa, ma la Polonia ha i numeri. La più grande riunione di famiglia della Chiesa.",
+  },
+  {
+    en: "The Church's calendar has a day for everything — including a feast for the 'Holy Innocents' (December 28), remembering the babies killed by Herod. It's one of the saddest feasts, but it's also the reason December 28 is the day for practical jokes in some countries. Gallows humour, Catholic edition.",
+    it: "Il calendario della Chiesa ha un giorno per tutto — incluso una festa per i 'Santi Innocenti' (28 dicembre), che ricorda i bambini uccisi da Erode. È una delle feste più tristi, ma è anche il motivo per cui il 28 dicembre è il giorno degli scherzi in alcuni paesi. Umorismo macabro, edizione cattolica.",
+  },
+  {
+    en: "The Church has a patron saint of beekeepers, candle makers, and bachelors — St. Ambrose. He's also the reason the Ambrosian Rite exists in Milan. So if you're single and make candles, you have a dedicated saint. The Church's niche marketing is unmatched.",
+    it: "La Chiesa ha un santo patrono degli apicoltori, dei ceraioli e degli scapoli — Sant'Ambrogio. È anche il motivo per cui esiste il Rito Ambrosiano a Milano. Quindi se sei single e fai candele, hai un santo dedicato. Il marketing di nicchia della Chiesa è impareggiabile.",
+  },
+  {
+    en: "The Church has a saint for the internet (St. Isidore), a saint for coffee (St. Drogo), and a saint for — wait for it — parking spaces. That's St. Anthony again. He's the most overworked saint in heaven. No days off, no overtime pay.",
+    it: "La Chiesa ha un santo per internet (Sant'Isidoro), un santo per il caffè (San Drogo) e un santo per — tenetevi forte — i parcheggi. È ancora Sant'Antonio. È il santo più oberato del paradiso. Nessun giorno libero, nessun straordinario pagato.",
+  },
+  {
+    en: "The Church has a Guinness World Record for the longest Christmas tree — 65 metres in Gubbio, Italy. The Vatican has the biggest church, but Italy has the biggest tree. The Church's competitive spirit is alive and well.",
+    it: "La Chiesa ha un Guinness World Record per l'albero di Natale più alto — 65 metri a Gubbio, Italia. Il Vaticano ha la chiesa più grande, ma l'Italia ha l'albero più grande. Lo spirito competitivo della Chiesa è vivo e vegeto.",
+  },
+  {
+    en: "The Church has a saint for the internet, a saint for television, a saint for radio, and a saint for — wait for it — journalists. That's St. Francis de Sales again. He's the patron of writers and journalists. The Church's media department is fully staffed.",
+    it: "La Chiesa ha un santo per internet, una santa per la televisione, un santo per la radio e un santo per — tenetevi forte — i giornalisti. È ancora San Francesco di Sales. È il patrono degli scrittori e dei giornalisti. Il dipartimento media della Chiesa è completamente organico.",
+  },
+  {
+    en: "The Church has a saint for lost things (St. Anthony), a saint for impossible causes (St. Rita), and a saint for — wait for it — lost causes. That's St. Jude. He's the patron of hopeless cases. So if you've lost your keys AND your hope, you have two saints on the case.",
+    it: "La Chiesa ha un santo per le cose perse (Sant'Antonio), una santa per le cause impossibili (Santa Rita) e un santo per — tenetevi forte — le cause perse. È San Giuda. È il patrono dei casi disperati. Quindi se hai perso le chiavi E la speranza, hai due santi sul caso.",
+  },
+  {
+    en: "The Church has a patron saint of the internet, but also a patron saint of — wait for it — bachelors. That's St. Ambrose again. He's also the patron of beekeepers and candle makers. So if you're single and make candles, you're covered. The Church's niche sainthood is a masterpiece of segmentation.",
+    it: "La Chiesa ha un santo patrono di internet, ma anche un santo patrono di — tenetevi forte — scapoli. È ancora Sant'Ambrogio. È anche il patrono degli apicoltori e dei ceraioli. Quindi se sei single e fai candele, sei coperto. La santità di nicchia della Chiesa è un capolavoro di segmentazione.",
+  },
+  {
+    en: "The Church has a Guinness World Record for the largest choir — 4,000+ singers in Poland. The Vatican has the pope, but Poland has the pipes. The Church's biggest sing-along.",
+    it: "La Chiesa ha un Guinness World Record per il coro più grande — oltre 4.000 cantanti in Polonia. Il Vaticano ha il papa, ma la Polonia ha le corde vocali. Il più grande canto corale della Chiesa.",
+  },
+  {
+    en: "The Church has a saint for the internet, a saint for coffee, a saint for parking spaces, and a saint for — wait for it — the perfect cup of tea. That's St. John Bosco. He's the patron of editors and apprentices. The Church's beverage department is fully covered.",
+    it: "La Chiesa ha un santo per internet, un santo per il caffè, un santo per i parcheggi e un santo per — tenetevi forte — la tazza di tè perfetta. È San Giovanni Bosco. È il patrono degli editori e degli apprendisti. Il dipartimento bevande della Chiesa è completamente coperto.",
+  },
 ];
 
 function buildMonthCells(year, month, feasts) {

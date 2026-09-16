@@ -15,6 +15,7 @@ import {
 } from "react-icons/fa";
 import { useLanguage } from "../contexts/useLanguage.js";
 import { ACK_KEY, POINTS } from "../pages/DisclaimerPage.jsx";
+import LoadingOverlay from "./LoadingOverlay.jsx";
 import "./DisclaimerModal.css";
 
 export default function DisclaimerModal() {
@@ -78,12 +79,18 @@ export default function DisclaimerModal() {
   };
 
   if (mode === "none" || location.pathname === "/disclaimer") {
-    return <Outlet />;
+    return (
+      <>
+        <Outlet />
+        <LoadingOverlay />
+      </>
+    );
   }
 
   return (
     <>
       <Outlet />
+      <LoadingOverlay />
       {mode === "confirm" ? (
         <div
           className="disclaimer-modal-overlay"
