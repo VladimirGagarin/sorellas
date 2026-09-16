@@ -191,7 +191,7 @@ export default function ReadPoemPage() {
                       lineIndex === 0 ? "first" : ""
                     }`}
                   >
-                    {line}
+                    {line.toLowerCase()}
                   </p>
                 ))}
               </div>
@@ -200,6 +200,9 @@ export default function ReadPoemPage() {
 
           <div className="readpoem-card-footer">
             <span className="readpoem-closer">{closer}</span>
+            <span className="readpoem-watermark" aria-hidden="true">
+              Aeternum Floreamus
+            </span>
           </div>
         </article>
 
