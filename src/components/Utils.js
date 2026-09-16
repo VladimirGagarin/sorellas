@@ -1480,6 +1480,18 @@ export function getFamousPrayers() {
       photo: "../assets/sr_beatrice_kinoti.jpg",
     },
     {
+      author: "Madre Nasi",
+      prayer:
+        "Heart of Jesus, victim of charity, make me a pure, holy host, acceptable to God.",
+      italianPrayer:
+        "Cuore di Gesù, vittima di carità, rendimi un'ostia pura, santa, gradita a Dio.",
+      quote:
+        "To love, to love everyone, to love with God, like God, in God, for God...",
+      italianQuote:
+        "Amare, amare tutti, amare con Dio, come Dio, in Dio, per Dio...",
+      photo: "../assets/madre_nasi.jpg",
+    },
+    {
       author: "Regina Caeli",
       prayer:
         "Queen of heaven, rejoice, alleluia. The Son whom you merited to bear, alleluia, has risen as he said, alleluia. Pray for us to God, alleluia.\nV. Rejoice and be glad, O Virgin Mary, alleluia.\nR. For the Lord has truly risen, alleluia.\nLet us pray:\nO God, who through the resurrection of your Son, our Lord Jesus Christ, did vouchsafe to give joy to the world; grant, we beseech you, that through his Mother, the Virgin Mary, we may obtain the joys of everlasting life. Through the same Christ our Lord. Amen.",
@@ -11719,6 +11731,188 @@ export function getQuotes() {
       photo: "../assets/sr_beatrice_kinoti.jpg",
     },
     {
+      author: "Madre Nasi",
+      category: "Love",
+      quote: "To love everyone, to love as God loves — this is the whole of the Christian life.",
+      italianQuote: "Amare tutti, amare come ama Dio — questa è tutta la vita cristiana.",
+      photo: "../assets/madre_nasi.jpg",
+    },
+    {
+      author: "Madre Nasi",
+      category: "Joy",
+      quote: "Joy is giving the Good News to those who have never heard it.",
+      italianQuote: "La gioia è portare la Buona Notizia a chi non l'ha mai ascoltata.",
+      photo: "../assets/madre_nasi.jpg",
+    },
+    {
+      author: "Madre Nasi",
+      category: "Peace",
+      quote: "Mercy is the peace that God plants in the heart of the world.",
+      italianQuote: "La misericordia è la pace che Dio pianta nel cuore del mondo.",
+      photo: "../assets/madre_nasi.jpg",
+    },
+    {
+      author: "Madre Nasi",
+      category: "Patience",
+      quote: "Patience endures every hardship for the sake of one soul.",
+      italianQuote: "La pazienza sopporta ogni fatica per amore di un'anima.",
+      photo: "../assets/madre_nasi.jpg",
+    },
+    {
+      author: "Madre Nasi",
+      category: "Kindness",
+      quote: "A gentle word can open a heart that years of preaching could not reach.",
+      italianQuote: "Una parola gentile può aprire un cuore che anni di predicazione non avevano raggiunto.",
+      photo: "../assets/madre_nasi.jpg",
+    },
+    {
+      author: "Madre Nasi",
+      category: "Goodness",
+      quote: "Goodness is the missionary's walking staff.",
+      italianQuote: "La bontà è il bastone da cammino del missionario.",
+      photo: "../assets/madre_nasi.jpg",
+    },
+    {
+      author: "Madre Nasi",
+      category: "Faithfulness",
+      quote: "Faithfulness loves in the same place again and again, until love becomes home.",
+      italianQuote: "La fedeltà ama nello stesso luogo ancora e ancora, finché l'amore diventa casa.",
+      photo: "../assets/madre_nasi.jpg",
+    },
+    {
+      author: "Madre Nasi",
+      category: "Gentleness",
+      quote: "Gentleness carries the sick without bruising them.",
+      italianQuote: "La mitezza porta i malati senza ferirli.",
+      photo: "../assets/madre_nasi.jpg",
+    },
+    {
+      author: "Madre Nasi",
+      category: "Self-control",
+      quote: "Self-control keeps the heart free to follow only Christ.",
+      italianQuote: "Il controllo di sé tiene libero il cuore per seguire solo Cristo.",
+      photo: "../assets/madre_nasi.jpg",
+    },
+    {
+      author: "Madre Nasi",
+      category: "Understanding",
+      quote: "Understanding nurses the soul before it even asks for help.",
+      italianQuote: "La comprensione cura l'anima prima ancora che chieda aiuto.",
+      photo: "../assets/madre_nasi.jpg",
+    },
+    {
+      author: "Madre Nasi",
+      category: "Counsel (Right Judgment)",
+      quote: "Right judgment is mercy that has learned how to act.",
+      italianQuote: "Il retto giudizio è misericordia che ha imparato ad agire.",
+      photo: "../assets/madre_nasi.jpg",
+    },
+    {
+      author: "Madre Nasi",
+      category: "Fortitude (Courage)",
+      quote: "Courage kneels beside the dying and speaks of heaven.",
+      italianQuote: "Il coraggio si inginocchia accanto ai moribondi e parla del cielo.",
+      photo: "../assets/madre_nasi.jpg",
+    },
+    {
+      author: "Madre Nasi",
+      category: "Piety (Reverence)",
+      quote: "Reverence touches every sick body as if it were the Body of Christ.",
+      italianQuote: "La riverenza tocca ogni corpo malato come se fosse il Corpo di Cristo.",
+      photo: "../assets/madre_nasi.jpg",
+    },
+    {
+      author: "Madre Nasi",
+      category: "Fear of the Lord (Wonder and Awe)",
+      quote: "Awe is the soul remembering how great God's mercy is.",
+      italianQuote: "Lo stupore è l'anima che ricorda quanto è grande la misericordia di Dio.",
+      photo: "../assets/madre_nasi.jpg",
+    },
+    {
+      author: "Madre Nasi",
+      category: "Trust",
+      quote: "Trust abandons itself entirely, because mercy never fails.",
+      italianQuote: "La fiducia si abbandona completamente, perché la misericordia non viene mai meno.",
+      photo: "../assets/madre_nasi.jpg",
+    },
+    {
+      author: "Madre Nasi",
+      category: "Prayer and Meditation",
+      quote: "The missionary prays for those who do not yet know they are loved.",
+      italianQuote: "Il missionario prega per coloro che non sanno ancora di essere amati.",
+      photo: "../assets/madre_nasi.jpg",
+    },
+    {
+      author: "Madre Nasi",
+      category: "Compassion",
+      quote: "Compassion is mercy on its knees beside a hospital bed.",
+      italianQuote: "La compassione è la misericordia in ginocchio accanto a un letto d'ospedale.",
+      photo: "../assets/madre_nasi.jpg",
+    },
+    {
+      author: "Madre Nasi",
+      category: "Hope and Perseverance",
+      quote: "Perseverance sings at midnight and waits for the dawn.",
+      italianQuote: "La perseveranza canta a mezzanotte e attende l'alba.",
+      photo: "../assets/madre_nasi.jpg",
+    },
+    {
+      author: "Madre Nasi",
+      category: "Charity",
+      quote: "Charity is a heart consumed with love, offering itself as a living host.",
+      italianQuote: "La carità è un cuore consumato dall'amore, che si offre come ostia viva.",
+      photo: "../assets/madre_nasi.jpg",
+    },
+    {
+      author: "Madre Nasi",
+      category: "Forgiveness",
+      quote: "Forgiveness is the mercy we extend because we were first forgiven.",
+      italianQuote: "Il perdono è la misericordia che doniamo perché per primi siamo stati perdonati.",
+      photo: "../assets/madre_nasi.jpg",
+    },
+    {
+      author: "Madre Nasi",
+      category: "Wisdom",
+      quote: "Wisdom knows that loving the one before you is loving God.",
+      italianQuote: "La saggezza sa che amare chi ti sta davanti è amare Dio.",
+      photo: "../assets/madre_nasi.jpg",
+    },
+    {
+      author: "Madre Nasi",
+      category: "Spiritual Growth",
+      quote: "Spiritual growth unfolds in the quiet service of the sick and the forgotten.",
+      italianQuote: "La crescita spirituale si dispiega nel servizio silenzioso di malati e dimenticati.",
+      photo: "../assets/madre_nasi.jpg",
+    },
+    {
+      author: "Madre Nasi",
+      category: "Humility",
+      quote: "Humility does the greatest works and asks nothing in return.",
+      italianQuote: "L'umiltà compie le opere più grandi e non chiede nulla in cambio.",
+      photo: "../assets/madre_nasi.jpg",
+    },
+    {
+      author: "Madre Nasi",
+      category: "Gratitude",
+      quote: "Gratitude makes every wound a place where God enters.",
+      italianQuote: "La gratitudine rende ogni ferita un luogo dove Dio entra.",
+      photo: "../assets/madre_nasi.jpg",
+    },
+    {
+      author: "Madre Nasi",
+      category: "Latin",
+      quote: "Nyaatha — mater misericordiae — ora pro nobis.",
+      italianQuote: "Nyaatha — madre di misericordia — prega per noi.",
+      photo: "../assets/madre_nasi.jpg",
+    },
+    {
+      author: "Madre Nasi",
+      category: "Gratittude",
+      quote: "A grateful heart nurses joy back to health.",
+      italianQuote: "Un cuore grato può guarire la gioia.",
+      photo: "../assets/madre_nasi.jpg",
+    },
+    {
       author: "Sr. Mercy Kathure",
       category: "Love",
       quote:
@@ -18842,6 +19036,14 @@ export function justBecauseArray() {
       topic: { en: "Jesus", it: "Gesù" },
     },
     {
+      author: "Madre Nasi",
+      sentiment: {
+        en: "With eyes that never tire of mercy, she stands among the poor and calls us beloved — just because.",
+        it: "Con occhi che non si stancano mai di misericordia, sta tra i poveri e ci chiama amati — solo perché.",
+      },
+      topic: { en: "Jesus", it: "Gesù" },
+    },
+    {
       author: "Sr. Joan",
       sentiment: {
         en: "He lights my way through the unknown—every step is faith, just because.",
@@ -18910,6 +19112,7 @@ export const AUTHOR_PHOTOS = {
   "Sr. Teresia Gathoni": "../assets/sr_theresa.jpg",
   "Sr. Martha": "../assets/sr_martha_k.jpg",
   "Sr. Beatrice Kinoti": "../assets/sr_beatrice_kinoti.jpg",
+  "Madre Nasi": "../assets/madre_nasi.jpg",
 };
 
 export function getFavWords() {
@@ -19524,6 +19727,18 @@ export function getFavWords() {
       quote: {
         en: "Protection is God's hand resting over ours through the night.",
         it: "La protezione è la mano di Dio posata sulla nostra attraverso la notte.",
+      },
+    },
+    {
+      author: "Madre Nasi",
+      favWord: { en: "Mercy", it: "Misericordia" },
+      reason: {
+        en: "Mercy is the name her people gave her — Nyaatha, Mother of Mercy.",
+        it: "La misericordia è il nome che il suo popolo le ha dato — Nyaatha, Madre di Misericordia.",
+      },
+      quote: {
+        en: "To love, to love everyone, to love with God, like God, in God, for God.",
+        it: "Amare, amare tutti, amare con Dio, come Dio, in Dio, per Dio.",
       },
     },
     {
