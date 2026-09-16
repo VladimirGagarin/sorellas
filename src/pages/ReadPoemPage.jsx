@@ -188,7 +188,7 @@ export default function ReadPoemPage() {
                   <p
                     key={lineIndex}
                     className={`readpoem-line ${
-                      index === 0 && lineIndex === 0 ? "first" : ""
+                      lineIndex === 0 ? "first" : ""
                     }`}
                   >
                     {line}

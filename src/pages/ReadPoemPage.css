@@ -222,17 +222,7 @@
 }
 
 .readpoem-line.first::first-letter {
-  font-size: 2em;
-  line-height: 0.9;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--primary-green);
-  float: left;
-  margin: 0.1em 0.08em 0 0;
-}
-
-[data-theme="dark"] .readpoem-line.first::first-letter {
-  color: var(--accent-lavender);
+  text-transform: uppercase !important;
 }
 
 /* ============ Footer: closer left-aligned ============ */
