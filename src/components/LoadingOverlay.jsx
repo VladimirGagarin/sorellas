@@ -93,7 +93,9 @@ function getRouteWelcome(location, language) {
     const itemRaw = params.get("item");
     const itemIdx = Number.parseInt(itemRaw, 10);
     if (Number.isInteger(itemIdx) && itemIdx >= 0) {
-      const quote = getQuotes().find((q) => q._id === itemIdx);
+      const quote = getQuotes()
+        .map((q, i) => ({ ...q, _id: i }))
+        .find((q) => q._id === itemIdx);
       if (quote && quote.author) {
         return theme ? `${quote.author} - ${themeLabel}` : quote.author;
       }
