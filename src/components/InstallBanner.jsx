@@ -155,7 +155,17 @@ export default function InstallBanner() {
   const text = mode === "ios" ? t.iosText : mode === "install" ? t.installText : t.bookmarkText;
 
   return (
-    <aside className="save-banner glass" role="complementary" aria-label={title}>
+    <div
+      className="save-banner-overlay"
+      role="presentation"
+      onClick={dismiss}
+    >
+      <aside
+        className="save-banner glass"
+        role="complementary"
+        aria-label={title}
+        onClick={(event) => event.stopPropagation()}
+      >
       <button
         className="save-banner-close"
         onClick={dismiss}
@@ -179,6 +189,7 @@ export default function InstallBanner() {
           {copied ? t.copied : t.copyBtn}
         </button>
       ) : null}
-    </aside>
+      </aside>
+    </div>
   );
 }

@@ -19115,13 +19115,16 @@ export function getFavWords() {
 
 export function getPoems() {
   const allPoems = [
+    // 1. SR. MARY JAPHETH
     {
       title: {
         en: "Prayer Is a Wonderful Flower",
         it: "La Preghiera è un Fiore Meraviglioso",
       },
+
       author: "Sr. Mary Japheth",
       photo: "../assets/sr_mary_japheth.jpg",
+
       verses: {
         verse1: {
           en: [
@@ -19137,6 +19140,7 @@ export function getPoems() {
             "e nel silenzio volano via le paure della mente.",
           ],
         },
+
         verse2: {
           en: [
             "Praying is wonderful, simple and true,",
@@ -19151,6 +19155,7 @@ export function getPoems() {
             "basta un'anima che schiude il suo cuore e parte.",
           ],
         },
+
         verse3: {
           en: [
             "And when I rise, my spirit made new,",
@@ -19166,9 +19171,203 @@ export function getPoems() {
           ],
         },
       },
-      closer: { en: "DEO GRATIAS", it: "DEO GRATIAS" },
+
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    // 2. SR. VIRGINIA MWAKIUNA
+    {
+      title: {
+        en: "The Little Light That Never Goes Out",
+        it: "La Piccola Luce che Non si Spegne Mai",
+      },
+
+      author: "Sr. Virginia Mwakiuna",
+      photo: "../assets/sr_virginia_mwakiuna.jpg",
+
+      verses: {
+        verse1: {
+          en: [
+            "A little light can brighten a room,",
+            "a little prayer can make hope bloom,",
+            "even when the night is deep and long,",
+            "one little flame can still burn strong.",
+          ],
+          it: [
+            "Una piccola luce può illuminare una stanza,",
+            "una piccola preghiera può far nascere la speranza,",
+            "anche quando la notte è lunga e profonda,",
+            "una piccola fiamma continua a brillare.",
+          ],
+        },
+
+        verse2: {
+          en: [
+            "So keep the little flame within your heart,",
+            "and let no fear tear its light apart,",
+            "say your prayer and trust the way,",
+            "*Fiat lux* — let there be light each day.",
+          ],
+          it: [
+            "Conserva dunque la piccola fiamma nel tuo cuore,",
+            "e non lasciare che la paura ne spenga il chiarore,",
+            "prega e confida nel cammino ogni giorno,",
+            "*Fiat lux* — sia fatta luce intorno a te.",
+          ],
+        },
+
+        verse3: {
+          en: [
+            "For God can see the smallest light,",
+            "and guide it gently through the night,",
+            "until the morning opens wide,",
+            "and His eternal dawn becomes our guide.",
+          ],
+          it: [
+            "Perché Dio vede anche la più piccola luce,",
+            "e la guida dolcemente attraverso la notte,",
+            "finché il mattino apre le sue porte,",
+            "e la Sua alba eterna diventa la nostra guida.",
+          ],
+        },
+      },
+
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    // 3. SR. AGATHA MKUNDA
+    {
+      title: {
+        en: "Where Love Becomes a Prayer",
+        it: "Dove l'Amore Diventa Preghiera",
+      },
+
+      author: "Sr. Agatha Mkunda",
+      photo: "../assets/sr_agatha_mkunda.jpg",
+
+      verses: {
+        verse1: {
+          en: [
+            "A prayer is more than words we say,",
+            "it can be love we give each day,",
+            "a gentle hand, a listening ear,",
+            "a little kindness when someone is near.",
+          ],
+          it: [
+            "Una preghiera è più delle parole che diciamo,",
+            "può essere l'amore che ogni giorno doniamo,",
+            "una mano gentile, un orecchio che sa ascoltare,",
+            "una piccola bontà per chi ci viene incontro.",
+          ],
+        },
+
+        verse2: {
+          en: [
+            "When love is given without a price,",
+            "even a small act can become sacrifice,",
+            "the heart need not speak for God to hear,",
+            "for love itself can draw Heaven near.",
+          ],
+          it: [
+            "Quando l'amore è donato senza chiedere nulla,",
+            "anche un piccolo gesto diventa offerta,",
+            "il cuore non deve parlare perché Dio lo ascolti,",
+            "perché l'amore stesso avvicina il Cielo.",
+          ],
+        },
+
+        verse3: {
+          en: [
+            "So let each kindness rise like a prayer,",
+            "and leave a little Heaven everywhere,",
+            "*Ubi caritas* — where love is found,",
+            "there God's quiet blessing surrounds.",
+          ],
+          it: [
+            "Fa' che ogni gesto gentile salga come una preghiera,",
+            "e lasci un piccolo Cielo ovunque tu vada,",
+            "*Ubi caritas* — dove c'è amore,",
+            "lì la benedizione di Dio ci avvolge.",
+          ],
+        },
+      },
+
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    // 4. SR. FELICITY MAKENA
+    {
+      title: {
+        en: "The Garden Knows Her Name",
+        it: "Il Giardino Conosce il Suo Nome",
+      },
+
+      author: "Sr. Felicity Makena",
+      photo: "../assets/sr_felicity_makena.jpg",
+
+      verses: {
+        verse1: {
+          en: [
+            "There is a garden God alone can see,",
+            "where every prayer grows quietly,",
+            "some flowers rise and some lie low,",
+            "yet God knows every seed that grows.",
+          ],
+          it: [
+            "C'è un giardino che solo Dio può vedere,",
+            "dove ogni preghiera cresce in silenzio,",
+            "alcuni fiori si alzano, altri restano bassi,",
+            "e Dio conosce ogni seme che cresce.",
+          ],
+        },
+
+        verse2: {
+          en: [
+            "Some prayers are spoken, some are still,",
+            "some climb the mountains, some cross the hills,",
+            "but none are lost beneath the sky,",
+            "for God keeps watch on every cry.",
+          ],
+          it: [
+            "Alcune preghiere sono dette, altre restano in silenzio,",
+            "alcune salgono sulle montagne, altre attraversano le colline,",
+            "ma nessuna si perde sotto il cielo,",
+            "perché Dio veglia su ogni grido.",
+          ],
+        },
+
+        verse3: {
+          en: [
+            "And when the final season comes,",
+            "the garden will shine like morning suns,",
+            "*Deus novit* — God knows each name,",
+            "and every faithful flower shall bloom again.",
+          ],
+          it: [
+            "E quando arriverà l'ultima stagione,",
+            "il giardino brillerà come il sole del mattino,",
+            "*Deus novit* — Dio conosce ogni nome,",
+            "e ogni fiore fedele sboccerà ancora.",
+          ],
+        },
+      },
+
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
     },
   ];
+
   return allPoems;
 }
 

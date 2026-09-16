@@ -1,19 +1,30 @@
 /* InstallBanner.css — floating "save this site" helper */
-.save-banner {
+.save-banner-overlay {
   position: fixed;
-  left: 18px;
-  right: 18px;
-  bottom: 18px;
-  margin: 0 auto;
-  max-width: 430px;
-  z-index: 1150;
+  inset: 0;
+  z-index: 1300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(12, 16, 12, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  animation: saveOverlayIn 0.3s ease;
+}
+
+.save-banner {
+  position: relative;
+  width: min(430px, 100%);
+  margin: 0;
   display: flex;
   align-items: center;
   gap: 14px;
   padding: 14px 42px 14px 16px;
   border: 1px solid rgba(var(--primary-green-rgb), 0.35);
   border-radius: 16px;
-  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.3);
+  background: var(--bg-card);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.35);
   animation: saveBannerIn 0.35s ease;
 }
 
@@ -93,14 +104,23 @@
   border-color: transparent;
 }
 
-@keyframes saveBannerIn {
+@keyframes saveOverlayIn {
   from {
     opacity: 0;
-    transform: translateY(18px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+  }
+}
+
+@keyframes saveBannerIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 
