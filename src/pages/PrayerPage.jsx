@@ -26,11 +26,7 @@ function wordCount(text) {
   return (text || "").trim().split(/\s+/).filter(Boolean).length;
 }
 
-function getLengthCategory(count) {
-  if (count < SHORT_MAX) return "short";
-  if (count <= MEDIUM_MAX) return "medium";
-  return "long";
-}
+
 
 function getInitials(name) {
   const words = name.trim().split(/\s+/).filter(Boolean);
@@ -93,16 +89,13 @@ ${language === "en" ? "— shared from Fiori Di Preghiera" : "— condiviso da F
   };
 
   const wc = wordCount(prayer.prayer);
-  const category = getLengthCategory(wc);
+  
   const prayerText = language === "en" ? prayer.prayer : prayer.italianPrayer;
   const authorQuote =
     language === "en" ? prayer.quote : prayer.italianQuote;
   const hasQuote = Boolean(authorQuote && authorQuote.trim());
 
-  const lengthLabel = {
-    en: { short: "Short", medium: "Medium", long: "Long" },
-    it: { short: "Breve", medium: "Media", long: "Lunga" },
-  }[language][category];
+  
 
   return (
     <div className="prayer-container">
@@ -171,20 +164,7 @@ ${language === "en" ? "— shared from Fiori Di Preghiera" : "— condiviso da F
           <div className="prayer-author-info">
             <span className="prayer-eyebrow">{t.readingTime(wc)}</span>
             <h1 className="prayer-author-name">{prayer.author}</h1>
-            <div className="prayer-badges">
-              <span className={`tag-badge ${prayer.tag}`}>
-                {{
-                  en: { catholic: "Catholic", bible: "Bible", personal: "Personal" },
-                  it: { catholic: "Cattolica", bible: "Biblica", personal: "Personale" },
-                }[language][prayer.tag] || prayer.tag}
-              </span>
-              <span className={`length-badge ${category}`}>
-                {lengthLabel}
-              </span>
-              <span className="word-count">
-                {wc} {t.wordCount}
-              </span>
-            </div>
+            
           </div>
         </header>
 

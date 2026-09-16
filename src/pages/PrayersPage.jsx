@@ -10,6 +10,7 @@ import {
   FaPrayingHands,
   FaTimes,
   FaUserAlt,
+  FaArrowRight,
 } from "react-icons/fa";
 import "./PrayersPage.css";
 
@@ -122,8 +123,7 @@ export default function PrayersPage() {
       clearAuthor: "Clear",
       showing: (n, total) => `Showing ${n} of ${total} prayers`,
       randomNote: "A handful of prayers chosen at random.",
-      readMore: "Read the full prayer",
-      readLess: "Show less",
+      pray: "Pray",
       wordCount: "words",
       noResults: "No prayers match your search.",
       totalAuthors: (n) => `From ${n} prayerful souls`,
@@ -154,8 +154,7 @@ export default function PrayersPage() {
       clearAuthor: "Cancella",
       showing: (n, total) => `Mostrando ${n} di ${total} preghiere`,
       randomNote: "Un pugno di preghiere scelte a caso.",
-      readMore: "Leggi tutta la preghiera",
-      readLess: "Mostra meno",
+      pray: "Prega",
       wordCount: "parole",
       noResults: "Nessuna preghiera corrisponde alla ricerca.",
       totalAuthors: (n) => `Da ${n} anime in preghiera`,
@@ -208,14 +207,7 @@ export default function PrayersPage() {
   const sourceTotal = source.length;
   const shown = isAll || hasFilters ? source.slice(0, visibleCount) : source;
 
-  const toggleExpanded = (id) => {
-    setExpanded((prev) => {
-      const next = new Set(prev);
-      if (next.has(id)) next.delete(id);
-      else next.add(id);
-      return next;
-    });
-  };
+ 
 
   const handleShuffle = () => {
     setMode("random");
@@ -426,12 +418,9 @@ export default function PrayersPage() {
         ) : (
           <div key={hasFilters ? "filtered" : randomKey} className="prayers-grid">
             {shown.map((p) => {
-              const isExpanded = expanded.has(p._id);
-              const wc = wordCount(p.prayer);
-              const category = getLengthCategory(wc);
               const prayerText = language === "en" ? p.prayer : p.italianPrayer;
               const quoteText = language === "en" ? p.quote : p.italianQuote;
-              const needsToggle = wc > 60;
+
               return (
                 <Link
                   to={`/prayer/${p._id}`}
@@ -443,17 +432,6 @@ export default function PrayersPage() {
                     <CardPhoto photo={p.photo} name={p.author} />
                     <div className="author-info">
                       <h3 className="author-name">{p.author}</h3>
-                      <div className="card-badges">
-                        <span className={`tag-badge ${p.tag}`}>
-                          {getTagLabel(p.tag)}
-                        </span>
-                        <span className={`length-badge ${category}`}>
-                          {getLengthLabel(category)}
-                        </span>
-                        <span className="word-count">
-                          {wc} {t.wordCount}
-                        </span>
-                      </div>
                     </div>
                   </header>
 
@@ -465,35 +443,15 @@ export default function PrayersPage() {
                   )}
 
                   <div className="prayer-body">
-                    <p
-                      className={`prayer-text drop-cap ${
-                        isExpanded ? "" : "collapsed"
-                      }`}
-                    >
+                    <p className={`prayer-text drop-cap ${"collapsed"}`}>
                       {prayerText}
                     </p>
-                    {needsToggle && (
-                      <span
-                        className="read-more-btn"
-                        role="button"
-                        tabIndex={0}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          e.stopPropagation();
-                          toggleExpanded(p._id);
-                        }}
-                        onKeyDown={(e) => {
-                          if (e.key === "Enter" || e.key === " ") {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            toggleExpanded(p._id);
-                          }
-                        }}
-                      >
-                        {isExpanded ? t.readLess : t.readMore}
-                      </span>
-                    )}
                   </div>
+
+                  <span className="pray-cta" aria-hidden="true">
+                    {t.pray}
+                    <FaArrowRight className="pray-cta-arrow" />
+                  </span>
                 </Link>
               );
             })}

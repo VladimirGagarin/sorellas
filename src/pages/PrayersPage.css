@@ -430,6 +430,39 @@
   position: relative;
 }
 
+.pray-cta {
+  margin-top: 1.1rem;
+  align-self: flex-end;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.98rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--primary-green);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: gap 0.25s ease, color 0.25s ease;
+}
+
+.pray-cta-arrow {
+  font-size: 0.95rem;
+  transition: transform 0.25s ease;
+}
+
+.prayer-card:hover .pray-cta {
+  gap: 0.75rem;
+  color: var(--secondary-green);
+}
+
+.prayer-card:hover .pray-cta-arrow {
+  transform: translateX(3px);
+}
+
 .scroll-sentinel {
   height: 8px;
   visibility: hidden;
