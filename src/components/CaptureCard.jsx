@@ -19,6 +19,7 @@ export default function CaptureCard({
   shareText,
   buttonLabel,
   buttonClassName = "quotes-action share",
+  captureHiddenSelectors = [],
 }) {
   const { language } = useLanguage();
   const [snapShotCaptured, setSnapShotCaptured] = useState(null);
@@ -48,6 +49,13 @@ export default function CaptureCard({
         cacheBust: true,
         backgroundColor: isDark ? "#141a26" : "#fffdf6",
         pixelRatio: 2,
+        onclone: (_clonedDoc, node) => {
+          captureHiddenSelectors.forEach((selector) => {
+            node.querySelectorAll(selector).forEach((el) => {
+              el.style.display = "none";
+            });
+          });
+        },
       });
       setSnapShotCaptured(dataUrl);
     } catch {

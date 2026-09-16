@@ -120,6 +120,7 @@ ${language === "en" ? "— shared from Fiori Di Preghiera" : "— condiviso da F
             shareText={authorQuote || prayerText}
             buttonLabel={t.savePrayer}
             buttonClassName="share-btn"
+            captureHiddenSelectors={[".tag-badge", ".length-badge", ".word-count"]}
           />
           <button
             className={`share-btn ${copied ? "copied" : ""}`}
