@@ -6,7 +6,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useLanguage } from "../contexts/useLanguage.js";
-import { getAllPrayers, getQuotes } from "./Utils.js";
+import { getAllPoems, getAllPrayers, getQuotes } from "./Utils.js";
 import { CATEGORY_LABELS } from "../pages/QuotesPage.jsx";
 import flowers from "./Flower";
 import "./LoadingOverlay.css";
@@ -39,7 +39,6 @@ const PAGE_LABELS = {
   "/just-because": { en: "Just Because", it: "Solo Perché" },
   "/tender-presence": { en: "Tender Presence", it: "Presenza Tenera" },
   "/poems": { en: "Poems", it: "Poesie" },
-  "/readpoem": { en: "A Poem", it: "Una Poesia" },
   "/disclaimer": { en: "A Gentle Word", it: "Una Parola Gentile" },
 };
 
@@ -100,6 +99,17 @@ function getRouteWelcome(location, language) {
       }
     }
     return themeLabel;
+  }
+
+  // /readpoem?pId=10 → the poem's title in the current language
+  if (path === "/readpoem") {
+    const poems = getAllPoems();
+    const pId = Number.parseInt(params.get("pId"), 10);
+    if (Number.isInteger(pId) && pId >= 0 && pId < poems.length) {
+      const title = poems[pId].title && poems[pId].title[language];
+      if (title) return title;
+    }
+    return en ? "A Poem" : "Una Poesia";
   }
 
   const page = PAGE_LABELS[path];

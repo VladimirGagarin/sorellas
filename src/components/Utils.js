@@ -20386,324 +20386,635 @@ export function getPoems() {
         it: "DEO GRATIAS",
       },
     },
-    // 11. SR. ANICETA 
-{
-  title: {
-    en: "The Door That Love Leaves Open",
-    it: "La Porta che l'Amore Lascia Aperta",
-  },
+    // 11. SR. ANICETA
+    {
+      title: {
+        en: "The Door That Love Leaves Open",
+        it: "La Porta che l'Amore Lascia Aperta",
+      },
 
-  author: "Sr. Aniceta Kaare",
-  photo: "../assets/sr_aniceta.jpg",
+      author: "Sr. Aniceta Kaare",
+      photo: "../assets/sr_aniceta.jpg",
 
-  verses: {
-    verse1: {
-      en: [
-        "There is a door that love leaves wide,",
-        "so none who seek may stand outside;",
-        "the weary may enter, the lonely may stay,",
-        "and find a little light along the way.",
-      ],
-      it: [
-        "C'è una porta che l'amore lascia aperta,",
-        "così che nessuno che cerca resti fuori;",
-        "il stanco può entrare, il solo può restare,",
-        "e trovare un po' di luce lungo il cammino.",
-      ],
+      verses: {
+        verse1: {
+          en: [
+            "There is a door that love leaves wide,",
+            "so none who seek may stand outside;",
+            "the weary may enter, the lonely may stay,",
+            "and find a little light along the way.",
+          ],
+          it: [
+            "C'è una porta che l'amore lascia aperta,",
+            "così che nessuno che cerca resti fuori;",
+            "il stanco può entrare, il solo può restare,",
+            "e trovare un po' di luce lungo il cammino.",
+          ],
+        },
+
+        verse2: {
+          en: [
+            "No golden key is needed there,",
+            "only a heart that truly cares;",
+            "a welcome given, a burden shared,",
+            "*Ubi caritas* — love is there.",
+          ],
+          it: [
+            "Lì non serve alcuna chiave d'oro,",
+            "solo un cuore che sappia davvero amare;",
+            "un'accoglienza donata, un peso condiviso,",
+            "*Ubi caritas* — là c'è l'amore.",
+          ],
+        },
+
+        verse3: {
+          en: [
+            "And when the evening comes at last,",
+            "and all the days of earth are past,",
+            "may Heaven open its own door,",
+            "where love shall welcome us evermore.",
+          ],
+          it: [
+            "E quando infine arriva la sera,",
+            "e tutti i giorni della terra sono passati,",
+            "possa il Cielo aprire la sua porta,",
+            "dove l'amore ci accoglierà per sempre.",
+          ],
+        },
+      },
+
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
     },
 
-    verse2: {
-      en: [
-        "No golden key is needed there,",
-        "only a heart that truly cares;",
-        "a welcome given, a burden shared,",
-        "*Ubi caritas* — love is there.",
-      ],
-      it: [
-        "Lì non serve alcuna chiave d'oro,",
-        "solo un cuore che sappia davvero amare;",
-        "un'accoglienza donata, un peso condiviso,",
-        "*Ubi caritas* — là c'è l'amore.",
-      ],
+    // 12. SR. ANASTASIA NKUBITU
+    {
+      title: {
+        en: "The Smile That Plants a Garden",
+        it: "Il Sorriso che Pianta un Giardino",
+      },
+
+      author: "Sr. Anastasia Nkubitu",
+      photo: "../assets/sr_anastasia_nkubitu.jpg",
+
+      verses: {
+        verse1: {
+          en: [
+            "A smile may seem a little thing,",
+            "yet see the joy that it can bring;",
+            "one happy face, one moment bright,",
+            "can turn a cloudy day to light.",
+          ],
+          it: [
+            "Un sorriso può sembrare una piccola cosa,",
+            "eppure guarda la gioia che può portare;",
+            "un volto felice, un momento luminoso,",
+            "può trasformare un giorno nuvoloso in luce.",
+          ],
+        },
+
+        verse2: {
+          en: [
+            "A smile can fall like gentle rain,",
+            "upon a heart that knows some pain;",
+            "and where that little kindness stays,",
+            "new flowers rise in quiet ways.",
+          ],
+          it: [
+            "Un sorriso può cadere come una pioggia gentile,",
+            "su un cuore che conosce il dolore;",
+            "e dove quella piccola bontà rimane,",
+            "nuovi fiori nascono in silenzio.",
+          ],
+        },
+
+        verse3: {
+          en: [
+            "So smile, dear heart, and let it be",
+            "a little gift for all to see;",
+            "*Gaudium in Domino* — joy in the Lord,",
+            "and let thy joy become a cord.",
+          ],
+          it: [
+            "Sorridi dunque, caro cuore, e lascia che sia",
+            "un piccolo dono per tutti da vedere;",
+            "*Gaudium in Domino* — gioia nel Signore,",
+            "e lascia che la tua gioia ci unisca.",
+          ],
+        },
+      },
+
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
     },
 
-    verse3: {
-      en: [
-        "And when the evening comes at last,",
-        "and all the days of earth are past,",
-        "may Heaven open its own door,",
-        "where love shall welcome us evermore.",
-      ],
-      it: [
-        "E quando infine arriva la sera,",
-        "e tutti i giorni della terra sono passati,",
-        "possa il Cielo aprire la sua porta,",
-        "dove l'amore ci accoglierà per sempre.",
-      ],
-    },
-  },
+    // 13. SR. PAULINE
+    {
+      title: {
+        en: "When the Smallest Seed Has Hope",
+        it: "Quando Anche il Più Piccolo Seme Ha Speranza",
+      },
 
-  closer: {
-    en: "DEO GRATIAS",
-    it: "DEO GRATIAS",
-  },
-},
+      author: "Sr. Pauline",
+      photo: "../assets/sr_pauline.jpg",
 
+      verses: {
+        verse1: {
+          en: [
+            "A tiny seed beneath the ground",
+            "may look as though no life is found;",
+            "yet deep inside, where none can see,",
+            "it waits for what it soon shall be.",
+          ],
+          it: [
+            "Un piccolo seme sotto la terra",
+            "può sembrare privo di vita;",
+            "eppure nel profondo, dove nessuno vede,",
+            "attende ciò che presto diventerà.",
+          ],
+        },
 
-// 12. SR. ANASTASIA NKUBITU
-{
-  title: {
-    en: "The Smile That Plants a Garden",
-    it: "Il Sorriso che Pianta un Giardino",
-  },
+        verse2: {
+          en: [
+            "It waits for rain, it waits for sun,",
+            "it trusts the work that God has done;",
+            "and though the waiting may be long,",
+            "hope keeps quietly growing strong.",
+          ],
+          it: [
+            "Attende la pioggia, attende il sole,",
+            "confida nell'opera che Dio ha compiuto;",
+            "e anche se l'attesa può essere lunga,",
+            "la speranza cresce silenziosamente forte.",
+          ],
+        },
 
-  author: "Sr. Anastasia Nkubitu",
-  photo: "../assets/sr_anastasia_nkubitu.jpg",
+        verse3: {
+          en: [
+            "So let thy heart have hope each day,",
+            "when answers seem so far away;",
+            "*Spera in Deo* — hope in God,",
+            "for He can raise what sleeps beneath the sod.",
+          ],
+          it: [
+            "Lascia dunque che il tuo cuore speri ogni giorno,",
+            "quando le risposte sembrano lontane;",
+            "*Spera in Deo* — spera in Dio,",
+            "perché Egli può far rinascere ciò che dorme nella terra.",
+          ],
+        },
+      },
 
-  verses: {
-    verse1: {
-      en: [
-        "A smile may seem a little thing,",
-        "yet see the joy that it can bring;",
-        "one happy face, one moment bright,",
-        "can turn a cloudy day to light.",
-      ],
-      it: [
-        "Un sorriso può sembrare una piccola cosa,",
-        "eppure guarda la gioia che può portare;",
-        "un volto felice, un momento luminoso,",
-        "può trasformare un giorno nuvoloso in luce.",
-      ],
-    },
-
-    verse2: {
-      en: [
-        "A smile can fall like gentle rain,",
-        "upon a heart that knows some pain;",
-        "and where that little kindness stays,",
-        "new flowers rise in quiet ways.",
-      ],
-      it: [
-        "Un sorriso può cadere come una pioggia gentile,",
-        "su un cuore che conosce il dolore;",
-        "e dove quella piccola bontà rimane,",
-        "nuovi fiori nascono in silenzio.",
-      ],
-    },
-
-    verse3: {
-      en: [
-        "So smile, dear heart, and let it be",
-        "a little gift for all to see;",
-        "*Gaudium in Domino* — joy in the Lord,",
-        "and let thy joy become a cord.",
-      ],
-      it: [
-        "Sorridi dunque, caro cuore, e lascia che sia",
-        "un piccolo dono per tutti da vedere;",
-        "*Gaudium in Domino* — gioia nel Signore,",
-        "e lascia che la tua gioia ci unisca.",
-      ],
-    },
-  },
-
-  closer: {
-    en: "DEO GRATIAS",
-    it: "DEO GRATIAS",
-  },
-},
-
-
-// 13. SR. PAULINE
-{
-  title: {
-    en: "When the Smallest Seed Has Hope",
-    it: "Quando Anche il Più Piccolo Seme Ha Speranza",
-  },
-
-  author: "Sr. Pauline",
-  photo: "../assets/sr_pauline.jpg",
-
-  verses: {
-    verse1: {
-      en: [
-        "A tiny seed beneath the ground",
-        "may look as though no life is found;",
-        "yet deep inside, where none can see,",
-        "it waits for what it soon shall be.",
-      ],
-      it: [
-        "Un piccolo seme sotto la terra",
-        "può sembrare privo di vita;",
-        "eppure nel profondo, dove nessuno vede,",
-        "attende ciò che presto diventerà.",
-      ],
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
     },
 
-    verse2: {
-      en: [
-        "It waits for rain, it waits for sun,",
-        "it trusts the work that God has done;",
-        "and though the waiting may be long,",
-        "hope keeps quietly growing strong.",
-      ],
-      it: [
-        "Attende la pioggia, attende il sole,",
-        "confida nell'opera che Dio ha compiuto;",
-        "e anche se l'attesa può essere lunga,",
-        "la speranza cresce silenziosamente forte.",
-      ],
+    // 14. SR. BETH
+    {
+      title: {
+        en: "The Candle Beside the Window",
+        it: "La Candela Accanto alla Finestra",
+      },
+
+      author: "Sr. Beth",
+      photo: "../assets/sr_beth.jpg",
+
+      verses: {
+        verse1: {
+          en: [
+            "A candle by the window softly shines,",
+            "and draws no praise for what it does;",
+            "it simply waits through every night,",
+            "and gives the darkness gentle light.",
+          ],
+          it: [
+            "Una candela accanto alla finestra brilla dolcemente,",
+            "e non chiede lode per ciò che fa;",
+            "semplicemente attende durante la notte,",
+            "e dona alla oscurità una luce gentile.",
+          ],
+        },
+
+        verse2: {
+          en: [
+            "Perhaps a traveller far away",
+            "may see its glow and find the way;",
+            "perhaps a heart that has lost sight",
+            "may find new courage in its light.",
+          ],
+          it: [
+            "Forse un viandante lontano",
+            "può vedere il suo chiarore e trovare la via;",
+            "forse un cuore che ha perso la strada",
+            "può trovare nuovo coraggio nella sua luce.",
+          ],
+        },
+
+        verse3: {
+          en: [
+            "Be then a light, though small and mild,",
+            "for God can use the smallest smile;",
+            "*Lux in tenebris* — light in the night,",
+            "and one small flame may guide to right.",
+          ],
+          it: [
+            "Sii dunque una luce, anche piccola e dolce,",
+            "perché Dio può usare anche il più piccolo sorriso;",
+            "*Lux in tenebris* — luce nella notte,",
+            "e una piccola fiamma può guidare verso il bene.",
+          ],
+        },
+      },
+
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
     },
 
-    verse3: {
-      en: [
-        "So let thy heart have hope each day,",
-        "when answers seem so far away;",
-        "*Spera in Deo* — hope in God,",
-        "for He can raise what sleeps beneath the sod.",
-      ],
-      it: [
-        "Lascia dunque che il tuo cuore speri ogni giorno,",
-        "quando le risposte sembrano lontane;",
-        "*Spera in Deo* — spera in Dio,",
-        "perché Egli può far rinascere ciò che dorme nella terra.",
-      ],
-    },
-  },
+    // 15. SR. FRIDA MBURUGU
+    {
+      title: {
+        en: "The Hands That Mend What Is Broken",
+        it: "Le Mani che Riparano Ciò che è Spezzato",
+      },
 
-  closer: {
-    en: "DEO GRATIAS",
-    it: "DEO GRATIAS",
-  },
-},
+      author: "Sr. Frida Mburugu",
+      photo: "../assets/sr_fridah.jpg",
 
+      verses: {
+        verse1: {
+          en: [
+            "A broken thing may still be mended,",
+            "a wounded heart may still be tended;",
+            "a gentle hand can help it heal,",
+            "and teach the heart that love is real.",
+          ],
+          it: [
+            "Ciò che è rotto può ancora essere riparato,",
+            "un cuore ferito può ancora essere curato;",
+            "una mano gentile può aiutarlo a guarire,",
+            "e insegnare al cuore che l'amore è vero.",
+          ],
+        },
 
-// 14. SR. BETH
-{
-  title: {
-    en: "The Candle Beside the Window",
-    it: "La Candela Accanto alla Finestra",
-  },
+        verse2: {
+          en: [
+            "Not every wound will heal in haste,",
+            "some need time, some need grace;",
+            "but patient love will stay beside,",
+            "*Misericordia* — mercy is its guide.",
+          ],
+          it: [
+            "Non ogni ferita guarisce in fretta,",
+            "alcune hanno bisogno di tempo, altre di grazia;",
+            "ma l'amore paziente rimane accanto,",
+            "*Misericordia* — la misericordia è la sua guida.",
+          ],
+        },
 
-  author: "Sr. Beth",
-  photo: "../assets/sr_beth.jpg",
+        verse3: {
+          en: [
+            "And what was broken may bloom again,",
+            "after the storm, after the rain;",
+            "for God can make the wounded whole,",
+            "and place new flowers within the soul.",
+          ],
+          it: [
+            "E ciò che era spezzato può fiorire ancora,",
+            "dopo la tempesta, dopo la pioggia;",
+            "perché Dio può rendere intero ciò che è ferito,",
+            "e mettere nuovi fiori nell'anima.",
+          ],
+        },
+      },
 
-  verses: {
-    verse1: {
-      en: [
-        "A candle by the window softly shines,",
-        "and draws no praise for what it does;",
-        "it simply waits through every night,",
-        "and gives the darkness gentle light.",
-      ],
-      it: [
-        "Una candela accanto alla finestra brilla dolcemente,",
-        "e non chiede lode per ciò che fa;",
-        "semplicemente attende durante la notte,",
-        "e dona alla oscurità una luce gentile.",
-      ],
-    },
-
-    verse2: {
-      en: [
-        "Perhaps a traveller far away",
-        "may see its glow and find the way;",
-        "perhaps a heart that has lost sight",
-        "may find new courage in its light.",
-      ],
-      it: [
-        "Forse un viandante lontano",
-        "può vedere il suo chiarore e trovare la via;",
-        "forse un cuore che ha perso la strada",
-        "può trovare nuovo coraggio nella sua luce.",
-      ],
-    },
-
-    verse3: {
-      en: [
-        "Be then a light, though small and mild,",
-        "for God can use the smallest smile;",
-        "*Lux in tenebris* — light in the night,",
-        "and one small flame may guide to right.",
-      ],
-      it: [
-        "Sii dunque una luce, anche piccola e dolce,",
-        "perché Dio può usare anche il più piccolo sorriso;",
-        "*Lux in tenebris* — luce nella notte,",
-        "e una piccola fiamma può guidare verso il bene.",
-      ],
-    },
-  },
-
-  closer: {
-    en: "DEO GRATIAS",
-    it: "DEO GRATIAS",
-  },
-},
-
-
-// 15. SR. FRIDA MBURUGU
-{
-  title: {
-    en: "The Hands That Mend What Is Broken",
-    it: "Le Mani che Riparano Ciò che è Spezzato",
-  },
-
-  author: "Sr. Frida Mburugu",
-  photo: "../assets/sr_fridah.jpg",
-
-  verses: {
-    verse1: {
-      en: [
-        "A broken thing may still be mended,",
-        "a wounded heart may still be tended;",
-        "a gentle hand can help it heal,",
-        "and teach the heart that love is real.",
-      ],
-      it: [
-        "Ciò che è rotto può ancora essere riparato,",
-        "un cuore ferito può ancora essere curato;",
-        "una mano gentile può aiutarlo a guarire,",
-        "e insegnare al cuore che l'amore è vero.",
-      ],
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
     },
 
-    verse2: {
-      en: [
-        "Not every wound will heal in haste,",
-        "some need time, some need grace;",
-        "but patient love will stay beside,",
-        "*Misericordia* — mercy is its guide.",
-      ],
-      it: [
-        "Non ogni ferita guarisce in fretta,",
-        "alcune hanno bisogno di tempo, altre di grazia;",
-        "ma l'amore paziente rimane accanto,",
-        "*Misericordia* — la misericordia è la sua guida.",
-      ],
+    // 16. SR. MAUREEN
+    {
+      title: {
+        en: "The Song That Rises in the Morning",
+        it: "Il Canto che Sale al Mattino",
+      },
+
+      author: "Sr. Maureen",
+      photo: "../assets/sr_maureen.jpg",
+
+      verses: {
+        verse1: {
+          en: [
+            "When morning comes and birds begin to sing,",
+            "the heart remembers there is still a spring;",
+            "each new day is a gift from above,",
+            "another chance to walk in love.",
+          ],
+          it: [
+            "Quando arriva il mattino e gli uccelli iniziano a cantare,",
+            "il cuore ricorda che c'è ancora una primavera;",
+            "ogni nuovo giorno è un dono dall'alto,",
+            "un'altra occasione per camminare nell'amore.",
+          ],
+        },
+
+        verse2: {
+          en: [
+            "So let thy first song rise with the sun,",
+            "give thanks to God for what He has done;",
+            "whether the day brings joy or care,",
+            "*Laudate Dominum* — praise Him everywhere.",
+          ],
+          it: [
+            "Lascia dunque che il tuo primo canto salga con il sole,",
+            "ringrazia Dio per ciò che ha fatto;",
+            "sia che il giorno porti gioia o preoccupazione,",
+            "*Laudate Dominum* — lodalo ovunque.",
+          ],
+        },
+
+        verse3: {
+          en: [
+            "For every morning has a song to give,",
+            "a quiet reminder that we still live;",
+            "and when the evening closes the day,",
+            "may gratitude be the song we say.",
+          ],
+          it: [
+            "Perché ogni mattino ha un canto da donare,",
+            "un dolce ricordo che siamo ancora vivi;",
+            "e quando la sera chiude il giorno,",
+            "possa la gratitudine essere il nostro canto.",
+          ],
+        },
+      },
+
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
     },
 
-    verse3: {
-      en: [
-        "And what was broken may bloom again,",
-        "after the storm, after the rain;",
-        "for God can make the wounded whole,",
-        "and place new flowers within the soul.",
-      ],
-      it: [
-        "E ciò che era spezzato può fiorire ancora,",
-        "dopo la tempesta, dopo la pioggia;",
-        "perché Dio può rendere intero ciò che è ferito,",
-        "e mettere nuovi fiori nell'anima.",
-      ],
-    },
-  },
+    // 17. SR. DOROTHY
+    {
+      title: {
+        en: "The Bridge Between Two Hearts",
+        it: "Il Ponte tra Due Cuori",
+      },
 
-  closer: {
-    en: "DEO GRATIAS",
-    it: "DEO GRATIAS",
-  },
-},
+      author: "Sr. Dorothy",
+      photo: "../assets/sr_dorothy.jpg",
+
+      verses: {
+        verse1: {
+          en: [
+            "Sometimes two hearts stand far apart,",
+            "each carrying a silent hurt;",
+            "then one small word, one gentle start,",
+            "can build a bridge from heart to heart.",
+          ],
+          it: [
+            "A volte due cuori sono lontani,",
+            "ognuno porta una ferita silenziosa;",
+            "poi una piccola parola, un gesto gentile,",
+            "può costruire un ponte da cuore a cuore.",
+          ],
+        },
+
+        verse2: {
+          en: [
+            "A bridge is built with stones of care,",
+            "with patience, kindness, and a prayer;",
+            "where there was silence, let love speak,",
+            "*Pax Christi* — peace is what we seek.",
+          ],
+          it: [
+            "Un ponte si costruisce con pietre di cura,",
+            "con pazienza, bontà e preghiera;",
+            "dove c'era silenzio, lascia parlare l'amore,",
+            "*Pax Christi* — cerchiamo la pace di Cristo.",
+          ],
+        },
+
+        verse3: {
+          en: [
+            "And when two hearts can meet again,",
+            "the bridge has carried more than pain;",
+            "for every step that brings peace near,",
+            "makes God's own garden brighter here.",
+          ],
+          it: [
+            "E quando due cuori possono incontrarsi di nuovo,",
+            "il ponte ha portato via più del dolore;",
+            "perché ogni passo che avvicina la pace,",
+            "rende più luminoso il giardino di Dio.",
+          ],
+        },
+      },
+
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    // 18. SR. SOFIA
+    {
+      title: {
+        en: "The Star That Keeps Watch",
+        it: "La Stella che Veglia",
+      },
+
+      author: "Sr. Sofia",
+      photo: "../assets/sr_sofia.jpg",
+
+      verses: {
+        verse1: {
+          en: [
+            "When night arrives and daylight fades,",
+            "a little star appears above the shades;",
+            "it does not shout, it does not speak,",
+            "yet tired hearts know the hope they seek.",
+          ],
+          it: [
+            "Quando arriva la notte e la luce svanisce,",
+            "una piccola stella appare nel cielo oscuro;",
+            "non grida e non parla,",
+            "eppure i cuori stanchi trovano la speranza che cercano.",
+          ],
+        },
+
+        verse2: {
+          en: [
+            "It keeps its watch through all the night,",
+            "and quietly gives its little light;",
+            "so may our faith remain the same,",
+            "*Stella Maris* — guide us through the night.",
+          ],
+          it: [
+            "Veglia per tutta la notte,",
+            "e dona in silenzio la sua piccola luce;",
+            "così possa anche la nostra fede restare salda,",
+            "*Stella Maris* — guidaci attraverso la notte.",
+          ],
+        },
+
+        verse3: {
+          en: [
+            "And though the morning hides the star,",
+            "its light was never really far;",
+            "for hope can live beyond our sight,",
+            "and God keeps watch throughout the night.",
+          ],
+          it: [
+            "E anche quando il mattino nasconde la stella,",
+            "la sua luce non è mai stata lontana;",
+            "perché la speranza può vivere oltre ciò che vediamo,",
+            "e Dio veglia per tutta la notte.",
+          ],
+        },
+      },
+
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    // 19. SR. AGNES MUTHONI
+    {
+      title: {
+        en: "The Well That Never Runs Dry",
+        it: "Il Pozzo che Non si Asciuga Mai",
+      },
+
+      author: "Sr. Agnes Muthoni",
+      photo: "../assets/sr_agnes.jpg",
+
+      verses: {
+        verse1: {
+          en: [
+            "A thirsty traveller looks for a well,",
+            "where cool and gentle waters dwell;",
+            "one little drink can give new strength,",
+            "and help the weary walk again.",
+          ],
+          it: [
+            "Un viandante assetato cerca un pozzo,",
+            "dove scorre un'acqua fresca e gentile;",
+            "un piccolo sorso può dare nuova forza,",
+            "e aiutare lo stanco a camminare ancora.",
+          ],
+        },
+
+        verse2: {
+          en: [
+            "There is a well no eye can see,",
+            "yet its living water flows endlessly;",
+            "the thirsty heart may come and drink,",
+            "*Aqua vitae* — the water of life.",
+          ],
+          it: [
+            "C'è un pozzo che nessun occhio può vedere,",
+            "eppure la sua acqua viva scorre senza fine;",
+            "il cuore assetato può venire e bere,",
+            "*Aqua vitae* — l'acqua della vita.",
+          ],
+        },
+
+        verse3: {
+          en: [
+            "And when thy own cup has been filled,",
+            "share the water as God has willed;",
+            "for blessings are not meant to stay,",
+            "they grow when given away.",
+          ],
+          it: [
+            "E quando la tua coppa sarà piena,",
+            "condividi l'acqua come Dio vuole;",
+            "perché le benedizioni non sono fatte per restare ferme,",
+            "crescono quando vengono donate.",
+          ],
+        },
+      },
+
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    // 20. SR. MARY MWIKALI
+    {
+      title: {
+        en: "The Garden After the Rain",
+        it: "Il Giardino Dopo la Pioggia",
+      },
+
+      author: "Sr. Mary Mwikali",
+      photo: "../assets/sr_mary_mwikali.jpg",
+
+      verses: {
+        verse1: {
+          en: [
+            "After the rain, the garden wakes,",
+            "and every flower its colour takes;",
+            "the earth is fresh, the air is new,",
+            "and drops of silver shine with dew.",
+          ],
+          it: [
+            "Dopo la pioggia, il giardino si risveglia,",
+            "e ogni fiore mostra il suo colore;",
+            "la terra è fresca, l'aria è nuova,",
+            "e gocce d'argento brillano di rugiada.",
+          ],
+        },
+
+        verse2: {
+          en: [
+            "So may thy heart, when storms have passed,",
+            "find peace and breathe again at last;",
+            "for tears may fall, yet hope remains,",
+            "*Post nubila lux* — light follows rain.",
+          ],
+          it: [
+            "Così possa il tuo cuore, quando le tempeste sono passate,",
+            "trovare pace e respirare di nuovo;",
+            "perché le lacrime possono cadere, ma la speranza rimane,",
+            "*Post nubila lux* — dopo le nuvole viene la luce.",
+          ],
+        },
+
+        verse3: {
+          en: [
+            "And what seemed lost beneath the rain",
+            "may rise with beauty once again;",
+            "for God can turn the tears we shed",
+            "into new flowers where hope was dead.",
+          ],
+          it: [
+            "E ciò che sembrava perduto sotto la pioggia",
+            "può sorgere ancora con bellezza;",
+            "perché Dio può trasformare le nostre lacrime",
+            "in nuovi fiori dove la speranza era morta.",
+          ],
+        },
+      },
+
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
   ];
 
   return allPoems;
