@@ -1014,7 +1014,7 @@ export function getFamousPrayers() {
       photo: "../assets/pope_francis.jpg",
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       prayer:
         "Merciful Father, in moments of weakness, strengthen my spirit. Let me find solace in Your presence and courage to face each day with hope and love. May Your grace flow through me to others in need.",
       italianPrayer:
@@ -1514,6 +1514,28 @@ export function getFamousPrayers() {
       italianQuote:
         "Salve, Regina, Madre di misericordia, vita, dolcezza e speranza nostra.",
       photo: "../assets/mary.jpg",
+    },
+    {
+      author: "Sr.  Hannah",
+      prayer:
+        "Heavenly Father, in the rhythm of each ordinary day, let my heart learn Your quiet melodies of faithfulness and joy.",
+      italianPrayer:
+        "Padre Celeste, nel ritmo di ogni giorno ordinario, fa’ che il mio cuore impari le Tue silenziose melodie di fedeltà e gioia.",
+      quote: "A joyful heart is a garden where God's peace blooms in every season.",
+      italianQuote:
+        "Un cuore gioioso è un giardino dove la pace di Dio fiorisce in ogni stagione.",
+      photo: "../assets/sr_joyce_nkirote.jpg",
+    },
+    {
+      author: "Sr. Luisa Makena",
+      prayer:
+        "Gracious God, mould my hands to serve with tenderness and my spirit to wait upon Your providence in all things.",
+      italianPrayer:
+        "Dio misericordioso, plasma le mie mani per servire con tenerezza e il mio spirito per attendere la Tua provvidenza in ogni cosa.",
+      quote: "Trust placed in God's hands turns every worry into an act of surrender.",
+      italianQuote:
+        "La fiducia riposta nelle mani di Dio trasforma ogni preoccupazione in un atto di abbandono.",
+      photo: "../assets/sr_luisa_makena.jpg",
     },
   ];
 
@@ -2203,7 +2225,7 @@ export function getQuotes() {
       photo: "../assets/jane_murigi.jpg",
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       category: "Love",
       quote: "Love is the song of the heart that never fades.",
       italianQuote: "L'amore è la canzone del cuore che non svanisce mai.",
@@ -2521,7 +2543,7 @@ export function getQuotes() {
       photo: "../assets/jane_murigi.jpg",
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       category: "Joy",
       quote: "Joy is the song that rises from the depths of a grateful heart.",
       italianQuote:
@@ -2887,7 +2909,7 @@ export function getQuotes() {
       photo: "../assets/jane_murigi.jpg",
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       category: "Peace",
       quote: "In stillness, we discover the true depth of peace.",
       italianQuote: "Nella quiete scopriamo la vera profondità della pace.",
@@ -3233,7 +3255,7 @@ export function getQuotes() {
       photo: "../assets/jane_murigi.jpg",
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       category: "Patience",
       quote: "A heart trained in patience is a heart prepared for miracles.",
       italianQuote:
@@ -3485,7 +3507,7 @@ export function getQuotes() {
       photo: "../assets/jane_murigi.jpg",
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       category: "Kindness",
       quote:
         "Kindness is the gentle thread that binds humanity together in compassion.",
@@ -3907,7 +3929,7 @@ export function getQuotes() {
       photo: "../assets/jane_murigi.jpg",
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       category: "Goodness",
       quote: "Goodness is a quiet strength that builds a peaceful world.",
       italianQuote:
@@ -4254,7 +4276,7 @@ export function getQuotes() {
       photo: "../assets/jane_murigi.jpg",
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       category: "Faithfulness",
       quote: "To walk faithfully is to shine with God’s light in the world.",
       italianQuote:
@@ -4585,7 +4607,7 @@ export function getQuotes() {
       photo: "../assets/jane_murigi.jpg",
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       category: "Gentleness",
       quote: "Gentleness is the strength of God expressed through our actions.",
       italianQuote:
@@ -4918,7 +4940,7 @@ export function getQuotes() {
       photo: "../assets/jane_murigi.jpg",
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       category: "Self-control",
       quote:
         "Self-control allows us to be instruments of peace in a noisy world.",
@@ -5238,7 +5260,7 @@ export function getQuotes() {
       photo: "../assets/jane_murigi.jpg",
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       category: "Understanding",
       quote: "Understanding is the gentle touch of God in our daily lives.",
       italianQuote:
@@ -5572,7 +5594,7 @@ export function getQuotes() {
       photo: "../assets/jane_murigi.jpg",
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       category: "Counsel (Right Judgment)",
       quote: "In counsel, we find strength to choose goodness over fear.",
       italianQuote:
@@ -5929,7 +5951,7 @@ export function getQuotes() {
       photo: "../assets/jane_murigi.jpg",
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       category: "Fortitude (Courage)",
       quote: "Courage grows deeper when rooted in faith and love.",
       italianQuote:
@@ -6265,7 +6287,7 @@ export function getQuotes() {
       photo: "../assets/jane_murigi.jpg",
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       category: "Piety (Reverence)",
       quote: "Living reverently is a daily act of worship and gratitude.",
       italianQuote:
@@ -6599,7 +6621,7 @@ export function getQuotes() {
       photo: "../assets/jane_murigi.jpg",
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       category: "Fear of the Lord (Wonder and Awe)",
       quote: "In reverence of God, my soul finds strength and peace.",
       italianQuote: "In riverenza di Dio, la mia anima trova forza e pace.",
@@ -6922,7 +6944,7 @@ export function getQuotes() {
       photo: "../assets/jane_murigi.jpg",
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       category: "Trust",
       quote: "Trusting God fills my heart with unshakeable peace.",
       italianQuote:
@@ -7253,7 +7275,7 @@ export function getQuotes() {
       photo: "../assets/jane_murigi.jpg",
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       category: "Prayer and Meditation",
       quote: "Through prayer, I find peace beyond all understanding.",
       italianQuote:
@@ -7588,7 +7610,7 @@ export function getQuotes() {
       photo: "../assets/jane_murigi.jpg",
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       category: "Compassion",
       quote: "Compassion teaches me to be patient with others’ struggles.",
       italianQuote:
@@ -7916,7 +7938,7 @@ export function getQuotes() {
       photo: "../assets/jane_murigi.jpg",
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       category: "Hope and Perseverance",
       quote:
         "Perseverance is the courage to keep believing even when answers delay.",
@@ -8244,7 +8266,7 @@ export function getQuotes() {
       photo: "../assets/jane_murigi.jpg",
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       category: "Charity",
       quote: "Charity is the flower that grows in the garden of a kind heart.",
       italianQuote:
@@ -8563,7 +8585,7 @@ export function getQuotes() {
       photo: "../assets/jane_murigi.jpg",
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       category: "Forgiveness",
       quote: "Forgiveness is the seed that grows into lasting peace.",
       italianQuote: "Il perdono è il seme che cresce in una pace duratura.",
@@ -8921,7 +8943,7 @@ export function getQuotes() {
       photo: "../assets/jane_murigi.jpg",
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       category: "Wisdom",
       quote:
         "Wisdom shines brightest in the humility of knowing we always need God.",
@@ -9186,7 +9208,7 @@ export function getQuotes() {
       photo: "../assets/jane_murigi.jpg",
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       category: "Spiritual Growth",
       quote:
         "Spiritual growth is a pilgrimage of grace, unfolding in the small acts of each day.",
@@ -9601,7 +9623,7 @@ export function getQuotes() {
       photo: "../assets/jane_murigi.jpg",
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       category: "Humility",
       quote:
         "Every humble act of service is a step towards building God's kingdom.",
@@ -9959,7 +9981,7 @@ export function getQuotes() {
       photo: "../assets/jane_murigi.jpg",
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       category: "Gratitude",
       quote: "In gratitude, we discover the endless bounty of God’s love.",
       italianQuote:
@@ -10344,7 +10366,7 @@ export function getQuotes() {
       photo: "../assets/jane_murigi.jpg",
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       category: "Latin",
       quote: "Domine, dona nobis pacem.",
       italianQuote: "Signore, donaci la pace.",
@@ -12747,6 +12769,21 @@ export function getQuotes() {
       quote: "Gratia, pax, et amor corda nostra repleant.",
       italianQuote: "La grazia, la pace e l’amore riempiano i nostri cuori.",
       photo: "../assets/sr_agatha_mkunda.jpg",
+    },
+    {
+      author: "Sr.  Hannah",
+      category: "Joy",
+      quote: "Joy is the echo of God's smile within a heart that trusts.",
+      italianQuote: "La gioia è l’eco del sorriso di Dio in un cuore che confida.",
+      photo: "../assets/sr_joyce_nkirote.jpg",
+    },
+    {
+      author: "Sr. Luisa Makena",
+      category: "Trust",
+      quote: "Those who leave their weight in God's hands rise lighter than the morning.",
+      italianQuote:
+        "Chi affida a Dio il proprio peso si alza più leggero del mattino.",
+      photo: "../assets/sr_luisa_makena.jpg",
     },
   ];
 
@@ -18732,7 +18769,7 @@ export function justBecauseArray() {
       topic: { en: "Cottolengo", it: "Cottolengo" },
     },
     {
-      author: "Sr. Mary Mwikali",
+      author: "Sr. Mary Mwikali Matheka",
       sentiment: {
         en: "Within the shadow of His wounds, I find healing—because His love has no end, just because.",
         it: "Nell’ombra delle Sue ferite, trovo guarigione—perché il Suo amore non ha fine, solo perché.",
@@ -18988,7 +19025,7 @@ export function justBecauseArray() {
       topic: { en: "Virgin Mary", it: "Vergine Maria" },
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       sentiment: {
         en: "His joy is my song in the morning—every sorrow melts away, just because.",
         it: "La sua gioia è il mio canto del mattino—ogni dolore si scioglie, solo perché.",
@@ -19051,6 +19088,22 @@ export function justBecauseArray() {
       },
       topic: { en: "Jesus", it: "Gesù" },
     },
+    {
+      author: "Sr.  Hannah",
+      sentiment: {
+        en: "She sets my soul dancing even in the quiet; joy has no reason, just because.",
+        it: "Fa danzare la mia anima anche nel silenzio; la gioia non ha motivo, solo perché.",
+      },
+      topic: { en: "Joy", it: "Gioia" },
+    },
+    {
+      author: "Sr. Luisa Makena",
+      sentiment: {
+        en: "I am carried by a love that never lets go, even in abandonment, just because.",
+        it: "Sono portata da un amore che non mi lascia mai, anche nell’abbandono, solo perché.",
+      },
+      topic: { en: "Providence", it: "Provvidenza" },
+    },
   ];
 
   return becauseArr;
@@ -19079,7 +19132,6 @@ export const AUTHOR_PHOTOS = {
   "Sr. Dorothy": "../assets/sr_dorothy.jpg",
   "Sr. Sofia": "../assets/sr_sofia.jpg",
   "Sr. Agnes Muthoni": "../assets/sr_agnes.jpg",
-  "Sr. Mary Mwikali": "../assets/sr_mary_mwikali.jpg",
   "Sr. Mary Mwikali Matheka": "../assets/sr_mary_mwikali.jpg",
   "Sr. Jane Makanda": "../assets/jane_makanda.jpg",
   "Sr. Rose Kanathi": "../assets/rose_kanathi.jpg",
@@ -19105,13 +19157,15 @@ export const AUTHOR_PHOTOS = {
   "Sr. Salome Wavinya": "../assets/sr_salome.jpg",
   "Sr. Immaculate": "../assets/sr_immaculate.jpg",
   "Sr. Ann": "../assets/sr_ann.jpg",
-  "Sr. Joyce": "../assets/sr_joyce.jpg",
+  "Sr. Joyce Nkirote": "../assets/sr_joyce.jpg",
   "Sr. Winnie Lopez": "../assets/sr_winnie.jpg",
   "Sr. Joan": "../assets/sr_joan.jpg",
   "Sr. Gladys": "../assets/sr_gladys.png",
   "Sr. Teresia Gathoni": "../assets/sr_theresa.jpg",
   "Sr. Martha": "../assets/sr_martha_k.jpg",
   "Sr. Beatrice Kinoti": "../assets/sr_beatrice_kinoti.jpg",
+  "Sr.  Hannah": "../assets/sr_joyce_nkirote.jpg",
+  "Sr. Luisa Makena": "../assets/sr_luisa_makena.jpg",
   "Madre Nasi": "../assets/madre_nasi.jpg",
 };
 
@@ -19658,7 +19712,7 @@ export function getFavWords() {
       },
     },
     {
-      author: "Sr. Joyce",
+      author: "Sr. Joyce Nkirote",
       favWord: { en: "Joy", it: "Gioia" },
       reason: {
         en: "His joy is my song each new morning.",
@@ -19753,7 +19807,32 @@ export function getFavWords() {
         it: "La fede è il coraggio di camminare nell’ignoto mano nella mano con Dio.",
       },
     },
+    {
+      author: "Sr.  Hannah",
+      favWord: { en: "Joy", it: "Gioia" },
+      reason: {
+        en: "Joy is the fruit of a heart that rests in God no matter the storm.",
+        it: "La gioia è il frutto di un cuore che riposa in Dio qualunque sia la tempesta.",
+      },
+      quote: {
+        en: "Let joy be your garment in every season, for it belongs to those who hope.",
+        it: "Che la gioia sia la tua veste in ogni stagione, perché appartiene a chi spera.",
+      },
+    },
+    {
+      author: "Sr. Luisa Makena",
+      favWord: { en: "Abandonment", it: "Abbandono" },
+      reason: {
+        en: "Abandonment to providence is the peace of leaving every outcome in God's hands.",
+        it: "L’abbandono alla provvidenza è la pace di lasciare ogni esito nelle mani di Dio.",
+      },
+      quote: {
+        en: "To abandon all to God is to be carried by love itself.",
+        it: "Abbandonarsi a Dio significa essere portati dall’amore stesso.",
+      },
+    },
   ];
+
   return list;
 }
 
@@ -20960,7 +21039,7 @@ export function getPoems() {
         it: "Il Giardino Dopo la Pioggia",
       },
 
-      author: "Sr. Mary Mwikali",
+      author: "Sr. Mary Mwikali Matheka",
       photo: "../assets/sr_mary_mwikali.jpg",
 
       verses: {
