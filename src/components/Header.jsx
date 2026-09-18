@@ -23,6 +23,8 @@ import {
   FaHandSparkles,
   FaBookOpen,
   FaCalendarDay,
+  FaUsers,
+  FaHeart,
 } from "react-icons/fa";
 import { useLanguage } from "../contexts/useLanguage";
 import { useTheme } from "../contexts/theme.jsx";
@@ -76,6 +78,7 @@ export default function Header() {
       favouriteWords: "Favourite Words",
       justBecause: "Just Because",
       tenderPresence: "Tender Presence",
+      sisterDirectory: "Come and See",
       disclaimer: "A Gentle Note",
       disclaimerDesc: "For visitors, before you enter",
       currentLanguage: "Language",
@@ -107,6 +110,7 @@ export default function Header() {
       favouriteWords: "Parole Preferite",
       justBecause: "Solo Perché",
       tenderPresence: "Presenza Tenera",
+      sisterDirectory: "Vieni e Vedi",
       disclaimer: "Una Breve Nota",
       disclaimerDesc: "Per i visitatori, prima di entrare",
       settings: "Attrezzi da Giardino",
@@ -127,33 +131,33 @@ export default function Header() {
 
   const t = translations[language];
 
-  // Flower colors that adapt to theme
+  // Flower colors that adapt to theme (forest greens)
   const getFlowerColor = (flowerType) => {
     if (isDarkMode) {
       switch (flowerType) {
         case "rose":
-          return "#D9734A"; // Candle rose
+          return "#7FD19A"; // Bright leaf
         case "lily":
-          return "#D4A94C"; // Candle gold
+          return "#A8E0A0"; // Pale green
         case "oak":
-          return "#E0BE6A"; // Amber gold
+          return "#6FBF6B"; // Fresh green
         case "leaf":
-          return "#9CA86A"; // Muted sage
+          return "#8FCB86"; // Muted light green
         default:
-          return "#C8A45C"; // Warm sand
+          return "#7FCB78"; // Glow leaf
       }
     } else {
       switch (flowerType) {
         case "rose":
-          return "#A84B2A"; // Rosewood
+          return "#3F7A55"; // Pine teal
         case "lily":
-          return "#8C6D1F"; // Antique gold
+          return "#3E7A43"; // Leaf green
         case "oak":
-          return "#5D4037"; // Cathedral oak
+          return "#2F4A32"; // Mossy bark
         case "leaf":
-          return "#4A5D36"; // Liturgical olive
+          return "#4A7A44"; // Liturgical green
         default:
-          return "#8C6D1F"; // Antique gold
+          return "#3E7A43"; // Leaf green
       }
     }
   };
@@ -164,6 +168,12 @@ export default function Header() {
       label: t.home,
       link: "/home",
       color: getFlowerColor("leaf"), // Welcomes
+    },
+    {
+      icon: <FaInfoCircle />,
+      label: t.about,
+      link: "/about",
+      color: getFlowerColor("default"), // Warm sand
     },
     {
       icon: <FaSeedling />,
@@ -184,12 +194,6 @@ export default function Header() {
       color: getFlowerColor("rose"), // Devotion / love
     },
     {
-      icon: <FaInfoCircle />,
-      label: t.about,
-      link: "/about",
-      color: getFlowerColor("default"), // Warm sand
-    },
-    {
       icon: <FaChurch />,
       label: t.litanyOfMary,
       link: "/litany-mary",
@@ -205,25 +209,13 @@ export default function Header() {
       icon: <FaHammer />,
       label: t.litanyOfSaintJoseph,
       link: "/litany-joseph",
-      color: isDarkMode ? "#D97706" : "#6D4C41", // Carpenter earth tone
+      color: isDarkMode ? "#7FCB78" : "#3E5940", // Carpenter earth tone
     },
     {
       icon: <FaPrayingHands />,
       label: t.litanyOfCottolengo,
       link: "/litany-cottolengo",
       color: getFlowerColor("leaf"), // Charity / service
-    },
-    {
-      icon: <FaQuestionCircle />,
-      label: t.deepseekQuestions,
-      link: "/deepseek",
-      color: isDarkMode ? "#E0BE6A" : "#A85E1E", // Thought / inquiry
-    },
-    {
-      icon: <FaStar />,
-      label: t.favouriteWords,
-      link: "/favourite-words",
-      color: getFlowerColor("lily"), // Reflection / beauty
     },
     {
       icon: <FaQuoteRight />,
@@ -238,16 +230,34 @@ export default function Header() {
       color: getFlowerColor("rose"), // Poetry / grace
     },
     {
-      icon: <FaFeatherAlt />,
+      icon: <FaStar />,
+      label: t.favouriteWords,
+      link: "/favourite-words",
+      color: getFlowerColor("lily"), // Reflection / beauty
+    },
+    {
+      icon: <FaHeart />,
       label: t.justBecause,
       link: "/just-because",
-      color: getFlowerColor("rose"), // Grace / poetry
+      color: getFlowerColor("leaf"), // Grace / poetry
     },
     {
       icon: <FaHandSparkles />,
       label: t.tenderPresence,
       link: "/tender-presence",
-      color: isDarkMode ? "#E8C87A" : "#8C6D1F", // Warm gold
+      color: isDarkMode ? "#CEE9BC" : "#3E7A43", // Warm gold
+    },
+    {
+      icon: <FaQuestionCircle />,
+      label: t.deepseekQuestions,
+      link: "/deepseek",
+      color: isDarkMode ? "#A8E0A0" : "#4E8A52", // Thought / inquiry
+    },
+    {
+      icon: <FaUsers />,
+      label: t.sisterDirectory,
+      link: "/come-and-see",
+      color: getFlowerColor("lily"), // Directory / communion
     },
     {
       icon: <FaBookOpen />,
@@ -264,15 +274,17 @@ export default function Header() {
         <nav className="nav-container">
           {/* Left side - Logo */}
           <div className="nav-left">
+            <button
+              className="menu-toggle"
+              onClick={toggleDrawer}
+              aria-label={t.menu}
+            >
+              {isDrawerOpen ? <FaTimes /> : <FaBars />}
+            </button>
             <Link to="/" className="home-link">
               <div className="logo-container">
                 {!isSmallDevice && <FaSeedling className="logo-icon" />}
-                <div className="app-titles">
-                  <span className="app-name">{t.appName}</span>
-                  {!isSmallDevice && (
-                    <span className="app-subtitle">{t.subtitle}</span>
-                  )}
-                </div>
+                <span className="app-name">{t.appName}</span>
               </div>
             </Link>
           </div>
@@ -291,30 +303,36 @@ export default function Header() {
                   {isDarkMode ? <FaSun /> : <FaMoon />}
                 </button>
 
-                <button
-                  className="language-toggle"
-                  onClick={() =>
-                    changeLanguage(language === "en" ? "it" : "en")
-                  }
-                  aria-label={t.currentLanguage}
-                  title={`${t.currentLanguage}: ${languageNames[language]}`}
-                >
-                  <FaGlobe className="globe-icon" />
-                  <span className="language-code">
-                    {language.toUpperCase()}
+                <div className="lang-switch-wrap">
+                  <span
+                    className={`lang-switch-opt ${language === "en" ? "active" : ""}`}
+                  >
+                    EN
                   </span>
-                </button>
+                  <button
+                    className="lang-switch"
+                    onClick={() =>
+                      changeLanguage(language === "en" ? "it" : "en")
+                    }
+                    aria-label={t.currentLanguage}
+                    title={`${t.currentLanguage}: ${languageNames[language]}`}
+                    aria-checked={language === "it"}
+                    role="switch"
+                  >
+                    <span
+                      className={`lang-switch-knob ${
+                        language === "it" ? "on" : ""
+                      }`}
+                    />
+                  </button>
+                  <span
+                    className={`lang-switch-opt ${language === "it" ? "active" : ""}`}
+                  >
+                    IT
+                  </span>
+                </div>
               </>
             )}
-
-            {/* Menu Toggle */}
-            <button
-              className="menu-toggle"
-              onClick={toggleDrawer}
-              aria-label={t.menu}
-            >
-              {isDrawerOpen ? <FaTimes /> : <FaBars />}
-            </button>
           </div>
         </nav>
       </header>
@@ -331,10 +349,7 @@ export default function Header() {
         <div className="drawer-header">
           <div className="drawer-header-content">
             <FaSeedling className="drawer-header-icon" />
-            <div>
-              <h3>{t.menu}</h3>
-              <p className="drawer-subtitle">{t.welcome}</p>
-            </div>
+            <h3>{t.menu}</h3>
           </div>
           <button
             className="drawer-close"

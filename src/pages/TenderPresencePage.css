@@ -42,7 +42,7 @@
 }
 
 [data-theme="dark"] .tp-title {
-  background: linear-gradient(135deg, #E8C87A, #B98F35);
+  background: linear-gradient(135deg, #CEE9BC, #5EA85C);
   -webkit-background-clip: text;
   background-clip: text;
 }
@@ -112,7 +112,7 @@
 .tp-filter.active {
   background: var(--leaf-emerald);
   border-color: transparent;
-  color: #FFFDF6;
+  color: #F0F9EC;
   box-shadow: 0 8px 22px rgba(var(--primary-green-rgb), 0.3);
 }
 
@@ -190,8 +190,14 @@
   font-size: 5rem;
   line-height: 1;
   color: var(--leaf-emerald);
-  opacity: 0.12;
+  opacity: 0.22;
   pointer-events: none;
+}
+
+/* Ensure visible on light backgrounds */
+:root[data-theme="light"] .tp-card-mark {
+  color: #4A7A44;
+  opacity: 0.3;
 }
 
 .tp-card-top {
@@ -284,7 +290,7 @@
 [data-theme="dark"] .tp-topic {
   background: rgba(184, 143, 53, 0.15);
   border-color: rgba(184, 143, 53, 0.3);
-  color: #E8C87A;
+  color: #CEE9BC;
 }
 
 .tp-share {
@@ -313,7 +319,7 @@
 .tp-share.copied {
   background: var(--leaf-emerald);
   border-color: transparent;
-  color: #FFFDF6;
+  color: #F0F9EC;
 }
 
 [data-theme="dark"] .tp-share.copied {

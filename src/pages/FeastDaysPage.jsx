@@ -527,8 +527,6 @@ export default function FeastDaysPage() {
     feastsOf: language === "en" ? "Feasts of" : "Feste di",
     today: language === "en" ? "Today" : "Oggi",
     tomorrow: language === "en" ? "Tomorrow" : "Domani",
-    celebratedToday:
-      language === "en" ? "Celebrated today" : "Celebrata oggi",
     noFeastToday:
       language === "en"
         ? "No feast day is recorded for today."
@@ -762,9 +760,6 @@ export default function FeastDaysPage() {
                         <FaExternalLinkAlt />
                       </a>
                     </div>
-                    {isCurrentMonth && mmdd === todayStr.slice(5) && (
-                      <span className="feast-card-today">{t.celebratedToday}</span>
-                    )}
                   </div>
                 );
               })}

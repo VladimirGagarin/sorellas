@@ -76,26 +76,26 @@ export default function QuestionCard({
   const getCategoryColor = (cat) => {
     const lowerCat = cat.toLowerCase();
     if (lowerCat.includes("life") || lowerCat.includes("vita"))
-      return "#4A5D36"; // Liturgical olive
+      return "#4A7A44"; // Liturgical green
     if (lowerCat.includes("growth") || lowerCat.includes("crescita"))
-      return "#8C6D1F"; // Antique gold
+      return "#3E7A43"; // Leaf green
     if (lowerCat.includes("prayer") || lowerCat.includes("preghiera"))
-      return "#A84B2A"; // Rosewood
+      return "#3F7A55"; // Pine teal
     if (lowerCat.includes("faith") || lowerCat.includes("fede"))
-      return "#5D4037"; // Cathedral oak
+      return "#2F4A32"; // Mossy bark
     if (lowerCat.includes("joy") || lowerCat.includes("gioia"))
-      return "#D4A94C"; // Candle gold
+      return "#A8E0A0"; // Pale green
     if (lowerCat.includes("purpose") || lowerCat.includes("scopo"))
-      return "#A85E1E"; // Ember amber
+      return "#5E9B57"; // Fresh green
     if (lowerCat.includes("forgiveness") || lowerCat.includes("perdono"))
-      return "#8C7355"; // Taupe
+      return "#6E8869"; // Sage
     if (lowerCat.includes("service") || lowerCat.includes("servizio"))
-      return "#7A5C10"; // Deep bronze
+      return "#2C5C33"; // Deep forest
     if (lowerCat.includes("community") || lowerCat.includes("comunità"))
-      return "#C8A45C"; // Warm sand
+      return "#7FAE6E"; // Soft green
     if (lowerCat.includes("morality") || lowerCat.includes("moralità"))
-      return "#B98F35"; // Burnished gold
-    return "#8C6D1F"; // Antique gold
+      return "#5EA85C"; // Green
+    return "#3E7A43"; // Leaf green
   };
 
   const categoryColor = getCategoryColor(category);

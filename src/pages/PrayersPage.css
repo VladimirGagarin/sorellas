@@ -16,13 +16,13 @@
   text-align: center;
   margin-bottom: 2.5rem;
   padding: 3.5rem 1.5rem 2.75rem;
-  background: linear-gradient(135deg, #2B1D10, #17100A);
+  background: linear-gradient(135deg, #0C1E11, #071309);
   border-radius: 24px;
-  color: #F3E9D2;
+  color: #EDF6E6;
   position: relative;
   overflow: hidden;
   box-shadow: 0 12px 40px var(--shadow-color);
-  border: 1px solid rgba(212, 169, 76, 0.25);
+  border: 1px solid rgba(var(--primary-green-rgb), 0.25);
 }
 
 .prayers-hero::before {
@@ -33,8 +33,8 @@
   right: 0;
   bottom: 0;
   background:
-    radial-gradient(circle at 20% 20%, rgba(212, 169, 76, 0.28), transparent 55%),
-    radial-gradient(circle at 80% 80%, rgba(184, 90, 25, 0.22), transparent 55%);
+    radial-gradient(circle at 20% 20%, rgba(var(--primary-green-rgb), 0.28), transparent 55%),
+    radial-gradient(circle at 80% 80%, rgba(var(--primary-green-rgb), 0.22), transparent 55%);
   z-index: 0;
 }
 
@@ -59,7 +59,7 @@
   font-size: 0.8rem;
   letter-spacing: 0.35em;
   text-transform: uppercase;
-  color: #E0BE6A;
+  color: #A8E0A0;
   margin-bottom: 0.75rem;
 }
 
@@ -99,9 +99,9 @@
   gap: 0.5rem;
   padding: 0.4rem 1rem;
   border-radius: 999px;
-  background: rgba(224, 190, 106, 0.12);
-  border: 1px solid rgba(224, 190, 106, 0.3);
-  color: #E8C87A;
+  background: rgba(var(--primary-green-rgb), 0.12);
+  border: 1px solid rgba(var(--primary-green-rgb), 0.3);
+  color: #CEE9BC;
   font-size: 0.9rem;
 }
 
@@ -185,7 +185,7 @@
 
 .clear-btn:hover {
   background: var(--accent-purple);
-  color: #FFFDF6;
+  color: #F0F9EC;
 }
 
 .length-pills {
@@ -214,20 +214,11 @@
 }
 
 .length-pill.active {
-  color: #FFFDF6;
+  color: #F0F9EC;
   border-color: transparent;
 }
 
-.length-pill.active.short { background: var(--leaf-emerald); }
-.length-pill.active.medium { background: var(--primary-green); }
-.length-pill.active.long { background: var(--accent-purple); }
 .length-pill.active.all { background: var(--oak-brown); }
-
-.pill-hint {
-  font-size: 0.72rem;
-  font-weight: 400;
-  opacity: 0.85;
-}
 
 .controls-actions {
   display: flex;
@@ -244,7 +235,7 @@
   border: none;
   border-radius: 10px;
   font-weight: 600;
-  color: #FFFDF6;
+  color: #F0F9EC;
   background: var(--gradient-accent);
   box-shadow: 0 4px 14px rgba(120, 82, 20, 0.35);
   transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
@@ -329,7 +320,7 @@
   font-family: var(--font-display);
   font-size: 1.25rem;
   font-weight: 700;
-  color: #FFFDF6;
+  color: #F0F9EC;
   background: var(--gradient-primary);
   box-shadow: 0 4px 12px rgba(120, 82, 20, 0.35);
   border: 2px solid rgba(255, 253, 246, 0.35);
@@ -356,21 +347,6 @@
   gap: 0.45rem;
 }
 
-.length-badge {
-  display: inline-block;
-  padding: 0.2rem 0.7rem;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #FFFDF6;
-}
-
-.length-badge.short { background: var(--leaf-emerald); }
-.length-badge.medium { background: var(--primary-green); }
-.length-badge.long { background: var(--accent-purple); }
-
 .tag-badge {
   display: inline-block;
   padding: 0.2rem 0.7rem;
@@ -379,7 +355,7 @@
   font-weight: 700;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #FFFDF6;
+  color: #F0F9EC;
 }
 .tag-badge.catholic { background: var(--oak-brown); }
 .tag-badge.bible    { background: var(--leaf-emerald); }
@@ -388,11 +364,6 @@
 .tag-pill.active.catholic { background: var(--oak-brown); }
 .tag-pill.active.bible    { background: var(--leaf-emerald); }
 .tag-pill.active.personal { background: var(--rose-pink); }
-
-.word-count {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
 
 .prayer-quote {
   display: flex;
@@ -541,7 +512,7 @@
 
 .load-more-btn:hover {
   background: var(--primary-green);
-  color: #FFFDF6;
+  color: #F0F9EC;
 }
 
 /* ============ Responsive ============ */

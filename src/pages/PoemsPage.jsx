@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Header from "../components/Header.jsx";
 import { useLanguage } from "../contexts/useLanguage.js";
 import { getAllPoems, resolvePrayerPhoto } from "../components/Utils.js";
-import { FaFeatherAlt, FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import { FaFeatherAlt, FaQuoteLeft, FaQuoteRight, FaSearch, FaTimes } from "react-icons/fa";
 import { DEFAULT_SEO, SITE_IMAGE_URL, SITE_NAME, useSeo } from "../utils/seo.js";
 import "./PoemsPage.css";
 
@@ -50,6 +50,31 @@ export default function PoemsPage() {
   const { language } = useLanguage();
   const navigate = useNavigate();
   const poems = useMemo(() => getAllPoems(), []);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const shuffledPoems = useMemo(() => {
+    const entries = poems.map((poem, index) => ({ poem, index }));
+    for (let i = entries.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [entries[i], entries[j]] = [entries[j], entries[i]];
+    }
+    return entries;
+  }, [poems]);
+
+  const query = searchQuery.trim().toLowerCase();
+  const visiblePoems = useMemo(() => {
+    if (!query) return shuffledPoems;
+    return shuffledPoems.filter(({ poem }) => {
+      const author = poem.author.toLowerCase();
+      const titleEn = (poem.title.en || "").toLowerCase();
+      const titleIt = (poem.title.it || "").toLowerCase();
+      return (
+        author.includes(query) ||
+        titleEn.includes(query) ||
+        titleIt.includes(query)
+      );
+    });
+  }, [shuffledPoems, query]);
 
   const t = useMemo(
     () => ({
@@ -61,6 +86,15 @@ export default function PoemsPage() {
           : "Piccoli versi delle Sorelle — fiori di preghiera da portare con te.",
       poemsCount: language === "en" ? "poems" : "poesie",
       open: language === "en" ? "Read Poem" : "Leggi la Poesia",
+      searchPlaceholder:
+        language === "en"
+          ? "Search poems by title or author..."
+          : "Cerca poesie per titolo o autore...",
+      clearSearch: language === "en" ? "Clear search" : "Cancella la ricerca",
+      noResults:
+        language === "en"
+          ? "No poems match your search."
+          : "Nessuna poesia corrisponde alla ricerca.",
     }),
     [language]
   );
@@ -87,33 +121,72 @@ export default function PoemsPage() {
         <p className="poems-subtitle">{t.subtitle}</p>
         <div className="poems-hero-meta">
           <span>
-            <FaFeatherAlt /> {poems.length} {t.poemsCount}
+            <FaFeatherAlt />{" "}
+            {query
+              ? `${visiblePoems.length} / ${poems.length} ${t.poemsCount}`
+              : `${poems.length} ${t.poemsCount}`}
           </span>
         </div>
       </div>
 
-      <div className="poems-grid-container">
-        <div className="poems-grid">
-          {poems.map((poem, index) => (
+      <div className="poems-searchbar">
+        <div className="poems-searchbar-inner">
+          <FaSearch className="poems-search-icon" />
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder={t.searchPlaceholder}
+            className="poems-search-input"
+            aria-label={t.searchPlaceholder}
+          />
+          {searchQuery && (
             <button
-              key={index}
-              className="poems-card"
-              onClick={() => navigate(`/readpoem?pId=${index}`)}
-              aria-label={`${t.open}: ${poem.author}`}
+              className="poems-search-clear"
+              onClick={() => setSearchQuery("")}
+              aria-label={t.clearSearch}
             >
-              <div className="poems-card-avatar">
-                <PoemAuthorPhoto poem={poem} />
-              </div>
-              <span className="poems-card-author">{poem.author}</span>
-              <span className="poems-card-title">
-                <FaQuoteLeft className="poems-card-quote" />
-                {language === "en" ? poem.title.en : poem.title.it}
-                <FaQuoteRight className="poems-card-quote" />
-              </span>
-              <span className="poems-card-open">{t.open}</span>
+              <FaTimes />
             </button>
-          ))}
+          )}
         </div>
+      </div>
+
+      <div className="poems-grid-container">
+        {visiblePoems.length === 0 ? (
+          <div className="poems-no-results">
+            <FaFeatherAlt />
+            <p>{t.noResults}</p>
+            <button
+              className="poems-search-clear-btn"
+              onClick={() => setSearchQuery("")}
+            >
+              {t.clearSearch}
+            </button>
+          </div>
+        ) : (
+          <div className="poems-grid">
+            {visiblePoems.map(({ poem, index }) => (
+              <button
+                key={index}
+                className="poems-card"
+                onClick={() => navigate(`/readpoem?pId=${index}`)}
+                aria-label={`${t.open}: ${poem.author}`}
+              >
+                <div className="poems-card-avatar">
+                  <PoemAuthorPhoto poem={poem} />
+                </div>
+                <span className="poems-card-author">{poem.author}</span>
+                <span className="poems-card-title">
+                  <FaQuoteLeft className="poems-card-quote" />
+                  {language === "en" ? poem.title.en : poem.title.it}
+                  <FaQuoteRight className="poems-card-quote" />
+                </span>
+                <span className="poems-card-open">{t.open}</span>
+              </button>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

@@ -121,10 +121,21 @@ function getInitials(name) {
   return (words[0][0] + words[1][0]).toUpperCase();
 }
 
+// Fisher–Yates shuffle (same pattern as DeepSeekPage / PrayersPage).
+function shuffleArray(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
 export default function QuotesPage() {
   const { language } = useLanguage();
   const [searchParams, setSearchParams] = useSearchParams();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [menuTab, setMenuTab] = useState("quotes");
   const [copied, setCopied] = useState(false);
   const [photoUrl, setPhotoUrl] = useState(undefined);
   const activeItemRef = useRef(null);
@@ -138,6 +149,8 @@ export default function QuotesPage() {
   );
 
   // Group quotes by normalized category, preserving first-seen order.
+  // The theme list itself is shuffled once per visit so every theme gets a
+  // chance to appear on top of the grid.
   const themes = useMemo(() => {
     const order = [];
     const groups = {};
@@ -154,13 +167,25 @@ export default function QuotesPage() {
       }
       groups[key].push(q);
     });
-    return order.map((key) => ({
-      key,
-      label: labels[key],
-      count: groups[key].length,
-      quotes: groups[key],
-    }));
+    return shuffleArray(
+      order.map((key) => ({
+        key,
+        label: labels[key],
+        count: groups[key].length,
+        quotes: groups[key],
+      }))
+    );
   }, [quotes]);
+
+  // One shuffled quote order per theme. A fresh shuffle happens each time the
+  // user picks a theme, so the same theme never repeats the same pattern.
+  const [quoteOrder, setQuoteOrder] = useState(() => {
+    const map = {};
+    themes.forEach((t) => {
+      map[t.key] = shuffleArray(t.quotes);
+    });
+    return map;
+  });
 
   const themeParam = searchParams.get("theme");
   const itemParam = searchParams.has("item") ? Number(searchParams.get("item")) : NaN;
@@ -169,7 +194,9 @@ export default function QuotesPage() {
     themeParam && themeParam !== "0"
       ? themes.find((t) => t.key === themeParam)
       : null;
-  const themeQuotes = activeTheme ? activeTheme.quotes : [];
+  const themeQuotes = activeTheme
+    ? quoteOrder[activeTheme.key] || activeTheme.quotes
+    : [];
 
   let currentIndex = -1;
   if (activeTheme && themeQuotes.length) {
@@ -217,15 +244,19 @@ export default function QuotesPage() {
     themesHint: language === "en" ? "Choose a theme" : "Scegli un tema",
     backToThemes:
       language === "en" ? "All Themes" : "Tutti i Temi",
+    otherQuotes:
+      language === "en" ? "Others" : "Altre",
     allQuotes: language === "en" ? "Quotes in this theme" : "Citazioni in questo tema",
+    tabQuotes: language === "en" ? "Quotes" : "Citazioni",
+    tabThemes: language === "en" ? "Themes" : "Temi",
     current: language === "en" ? "Current" : "Corrente",
     total: language === "en" ? "Total" : "Totale",
     themesCount: language === "en" ? "themes" : "temi",
     themesMenu: language === "en" ? "Jump to a Theme" : "Vai a un Tema",
-    copyLink: language === "en" ? "Share Quote" : "Condividi",
+    copyLink: language === "en" ? "Share" : "Condividi",
     copied: language === "en" ? "Link Copied" : "Link Copiato",
-    listen: language === "en" ? "Save Photo" : "Salva Foto",
-    surprise: language === "en" ? "Surprise Me" : "Sorpresa",
+    listen: language === "en" ? "Save" : "Salva",
+    surprise: language === "en" ? "Surprise" : "Sorpresa",
     quoteBy: language === "en" ? "From the garden of" : "Dal giardino di",
 shareText:
       language === "en"
@@ -311,6 +342,11 @@ shareText:
   }, [isMenuOpen, currentIndex]);
 
   const goToTheme = (themeKey) => {
+    const target = themes.find((t) => t.key === themeKey);
+    setQuoteOrder((prev) => ({
+      ...prev,
+      [themeKey]: shuffleArray(target ? target.quotes : prev[themeKey] || []),
+    }));
     const next = new URLSearchParams(searchParams);
     next.set("theme", themeKey);
     next.delete("item");
@@ -454,62 +490,6 @@ shareText:
             <FaList /> {t.backToThemes}
           </button>
           <div className="quotes-top-actions">
-            {/* Mini menu — one quote per theme, scrollable */}
-            <div className="quotes-menu-wrap">
-              <button
-                className="quotes-menu-toggle"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setIsMenuOpen((open) => !open);
-                }}
-                aria-label={t.themesMenu}
-                aria-expanded={isMenuOpen}
-                title={t.themesMenu}
-              >
-                {isMenuOpen ? <FaTimes /> : <FaList />}
-              </button>
-
-              {isMenuOpen && (
-                <div className="quotes-menu" ref={quotesMenu}>
-                  <h3 className="quotes-menu-title">{t.themesMenu}</h3>
-                  <ul className="quotes-menu-list">
-                    {themes.map((theme) => {
-                      const Icon = THEME_ICONS[theme.key] || FaFeatherAlt;
-                      const first = theme.quotes[0];
-                      const snippet =
-                        language === "en" ? first.quote : first.italianQuote;
-                      const isActive = theme.key === activeTheme.key;
-                      return (
-                        <li key={theme.key}>
-                          <button
-                            ref={isActive ? activeItemRef : null}
-                            className={`quotes-menu-item ${isActive ? "active" : ""}`}
-                            onClick={() => goToTheme(theme.key)}
-                          >
-                            <span className="quotes-menu-icon">
-                              <Icon />
-                            </span>
-                            <span className="quotes-menu-meta">
-                              <span className="quotes-menu-name">
-                                {language === "en"
-                                  ? theme.label.en
-                                  : theme.label.it}
-                              </span>
-                              <span className="quotes-menu-snippet">
-                                “{snippet}”
-                              </span>
-                            </span>
-                            <span className="quotes-menu-count">
-                              {theme.count}
-                            </span>
-                          </button>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              )}
-            </div>
             <button
               className="quotes-shuffle"
               onClick={surprise}
@@ -525,6 +505,135 @@ shareText:
               {copied ? <FaTimes /> : <FaLink />}
               {copied ? t.copied : t.copyLink}
             </button>
+
+            {/* Mini menu — one quote per theme, scrollable (far end) */}
+            <div className="quotes-menu-wrap">
+              <button
+                className="quotes-menu-toggle"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsMenuOpen((open) => !open);
+                  if (!isMenuOpen) setMenuTab("quotes");
+                }}
+                aria-label={t.allQuotes}
+                aria-expanded={isMenuOpen}
+                title={t.allQuotes}
+              >
+                {isMenuOpen ? <FaTimes /> : <FaList />}
+                <span className="quotes-menu-toggle-label">{t.otherQuotes}</span>
+              </button>
+
+              {isMenuOpen && (
+                <div className="quotes-menu" ref={quotesMenu}>
+                  <div className="quotes-menu-tabs" role="tablist">
+                    <button
+                      role="tab"
+                      aria-selected={menuTab === "quotes"}
+                      className={`quotes-menu-tab ${menuTab === "quotes" ? "active" : ""}`}
+                      onClick={() => setMenuTab("quotes")}
+                    >
+                      {t.tabQuotes}
+                      <span className="quotes-menu-tab-count">
+                        {themeQuotes.length}
+                      </span>
+                    </button>
+                    <button
+                      role="tab"
+                      aria-selected={menuTab === "themes"}
+                      className={`quotes-menu-tab ${menuTab === "themes" ? "active" : ""}`}
+                      onClick={() => setMenuTab("themes")}
+                    >
+                      {t.tabThemes}
+                      <span className="quotes-menu-tab-count">
+                        {themes.length}
+                      </span>
+                    </button>
+                  </div>
+
+                  {menuTab === "quotes" ? (
+                    <>
+                      <h3 className="quotes-menu-title">
+                        {language === "en"
+                          ? activeTheme.label.en
+                          : activeTheme.label.it}
+                      </h3>
+                      <ul className="quotes-menu-list">
+                        {themeQuotes.map((q, idx) => {
+                          const snippet =
+                            language === "en" ? q.quote : q.italianQuote;
+                          const isActive = q._id === currentQuote._id;
+                          return (
+                            <li key={q._id}>
+                              <button
+                                ref={isActive ? activeItemRef : null}
+                                className={`quotes-menu-item ${isActive ? "active" : ""}`}
+                                onClick={() => goToQuote(idx)}
+                              >
+                                <span className="quotes-menu-icon">
+                                  {getInitials(q.author)}
+                                </span>
+                                <span className="quotes-menu-meta">
+                                  <span className="quotes-menu-name">
+                                    {q.author}
+                                  </span>
+                                  <span className="quotes-menu-snippet">
+                                    “{snippet}”
+                                  </span>
+                                </span>
+                                <span className="quotes-menu-count">
+                                  {idx + 1}
+                                </span>
+                              </button>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </>
+                  ) : (
+                    <>
+                      <h3 className="quotes-menu-title">{t.themesMenu}</h3>
+                      <ul className="quotes-menu-list">
+                        {themes.map((theme) => {
+                          const Icon = THEME_ICONS[theme.key] || FaFeatherAlt;
+                          const first = theme.quotes[0];
+                          const snippet =
+                            language === "en"
+                              ? first.quote
+                              : first.italianQuote;
+                          const isActive = theme.key === activeTheme.key;
+                          return (
+                            <li key={theme.key}>
+                              <button
+                                ref={isActive ? activeItemRef : null}
+                                className={`quotes-menu-item ${isActive ? "active" : ""}`}
+                                onClick={() => goToTheme(theme.key)}
+                              >
+                                <span className="quotes-menu-icon">
+                                  <Icon />
+                                </span>
+                                <span className="quotes-menu-meta">
+                                  <span className="quotes-menu-name">
+                                    {language === "en"
+                                      ? theme.label.en
+                                      : theme.label.it}
+                                  </span>
+                                  <span className="quotes-menu-snippet">
+                                    “{snippet}”
+                                  </span>
+                                </span>
+                                <span className="quotes-menu-count">
+                                  {theme.count}
+                                </span>
+                              </button>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </>
+                  )}
+                </div>
+              )}
+            </div>
           </div>
         </div>
 

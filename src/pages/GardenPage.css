@@ -45,7 +45,7 @@
   height: 50vw;
   bottom: -12%;
   right: -8%;
-  background: radial-gradient(circle, rgba(184, 90, 25, 0.32), transparent 70%);
+  background: radial-gradient(circle, rgba(var(--primary-green-rgb), 0.32), transparent 70%);
   animation: candleFloat 22s ease-in-out infinite reverse;
 }
 
@@ -236,7 +236,7 @@
   font-weight: 700;
   font-family: var(--font-display);
   letter-spacing: 0.03em;
-  background: linear-gradient(135deg, #B98F35, #7A5C10);
+  background: linear-gradient(135deg, #5EA85C, #2C5C33);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -246,10 +246,10 @@
 }
 
 [data-theme="dark"] .title-gradient {
-  background: linear-gradient(135deg, #E8C87A, #B98F35);
+  background: linear-gradient(135deg, #CEE9BC, #5EA85C);
   -webkit-background-clip: text;
   background-clip: text;
-  filter: drop-shadow(0 2px 16px rgba(212, 169, 76, 0.45));
+  filter: drop-shadow(0 2px 16px rgba(var(--primary-green-rgb), 0.45));
 }
 
 .hero-subtitle {
@@ -682,11 +682,11 @@
 }
 
 .time-section-glass.morning {
-  border-left: 6px solid #fbbf24;
+  border-left: 6px solid #7FCB78;
 }
 
 .time-section-glass.midday {
-  border-left: 6px solid #f59e0b;
+  border-left: 6px solid #5EA85C;
 }
 
 .time-section-glass.evening {

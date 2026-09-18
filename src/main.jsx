@@ -21,6 +21,7 @@ import FavoriteWordsPage from './pages/FavoriteWordsPage.jsx';
 import JustBecausePage from './pages/JustBecausePage.jsx';
 import TenderPresencePage from './pages/TenderPresencePage.jsx';
 import DisclaimerPage from './pages/DisclaimerPage.jsx';
+import SistersDirectoryPage from './pages/SistersDirectoryPage.jsx';
 import DisclaimerModal from './components/DisclaimerModal.jsx';
 import './index.css'
 import App from './App.jsx'
@@ -85,6 +86,10 @@ const router = createHashRouter([
     {
       path: "quotes",
       element: <QuotesPage />
+    },
+    {
+      path: "come-and-see",
+      element: <SistersDirectoryPage />
     },
     {
       path: "poems",

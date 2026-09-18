@@ -576,8 +576,10 @@
 }
 
 .feast-card.is-today {
-  border-color: var(--primary-green);
-  box-shadow: 0 0 0 3px rgba(var(--primary-green-rgb), 0.22);
+  border-color: var(--accent-purple);
+  border-width: 2px;
+  background: rgba(168, 94, 30, 0.08);
+  box-shadow: 0 0 0 3px rgba(168, 94, 30, 0.22);
 }
 
 .feast-card-date {
@@ -641,21 +643,6 @@
   border-color: transparent;
 }
 
-.feast-card-today {
-  position: absolute;
-  top: -10px;
-  right: 12px;
-  font-size: 0.68rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  color: #fff;
-  background: var(--gradient-primary);
-  border-radius: 999px;
-  padding: 4px 10px;
-  box-shadow: 0 4px 10px rgba(var(--primary-green-rgb), 0.4);
-}
-
 /* Fun fact corner */
 .fun-fact-corner {
   margin-bottom: 44px;
@@ -680,6 +667,27 @@
   );
 }
 
+/* Large screens: keep the did-you-know card squared (1:1) */
+@media (min-width: 721px) {
+  .fun-fact-card {
+    max-width: 520px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fun-fact-slide {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .fun-fact-text {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}
+
 .fun-fact-watermark {
   position: absolute;
   right: 18px;
@@ -690,11 +698,16 @@
   font-style: italic;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--accent-purple);
-  opacity: 0.75;
+  color: #4A7A44;
+  opacity: 0.85;
   white-space: nowrap;
   user-select: none;
   pointer-events: none;
+}
+
+[data-theme="dark"] .fun-fact-watermark {
+  color: var(--accent-purple);
+  opacity: 0.85;
 }
 
 .fun-fact-slide {

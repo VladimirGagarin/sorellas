@@ -148,7 +148,7 @@
   align-items: center;
   justify-content: center;
   font-size: 1.35rem;
-  color: #FFFDF6;
+  color: #F0F9EC;
   background: linear-gradient(135deg, var(--leaf-emerald), var(--primary-green));
   box-shadow: 0 6px 18px rgba(var(--primary-green-rgb), 0.35);
 }
@@ -260,23 +260,29 @@
 .quotes-share.copied {
   background: var(--leaf-emerald);
   border-color: transparent;
-  color: #FFFDF6;
+  color: #F0F9EC;
 }
 
 /* ============ Mini menu (list of quotes) ============ */
 .quotes-menu-toggle {
-  width: 42px;
   height: 42px;
+  padding: 0 0.9rem;
   border-radius: 10px;
   border: 1px solid var(--border-color);
   background: var(--card-bg);
   color: var(--leaf-emerald);
   font-size: 1rem;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 0.5rem;
   cursor: pointer;
   transition: all 0.25s ease;
+}
+
+.quotes-menu-toggle-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .quotes-menu-toggle:hover {
@@ -344,6 +350,69 @@
   font-family: var(--font-display);
 }
 
+.quotes-menu-tabs {
+  display: flex;
+  gap: 6px;
+  padding: 4px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  background: var(--glass-bg);
+  border: 1px solid var(--border-color);
+}
+
+.quotes-menu-tab {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  font-family: var(--font-body);
+}
+
+.quotes-menu-tab:hover {
+  color: var(--leaf-emerald);
+}
+
+.quotes-menu-tab.active {
+  background: linear-gradient(135deg, var(--leaf-emerald), var(--primary-green));
+  color: #F0F9EC;
+  box-shadow: 0 4px 12px rgba(var(--primary-green-rgb), 0.3);
+}
+
+[data-theme="dark"] .quotes-menu-tab.active {
+  background: linear-gradient(135deg, var(--accent-lavender), var(--primary-green));
+}
+
+.quotes-menu-tab-count {
+  min-width: 20px;
+  height: 18px;
+  padding: 0 6px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.68rem;
+  font-weight: 700;
+  background: var(--glass-bg);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+}
+
+.quotes-menu-tab.active .quotes-menu-tab-count {
+  background: rgba(255, 255, 255, 0.2);
+  color: #F0F9EC;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
 .quotes-menu-list {
   list-style: none;
   margin: 0;
@@ -375,7 +444,7 @@
 
 .quotes-menu-item.active {
   background: linear-gradient(135deg, var(--leaf-emerald), var(--primary-green));
-  color: #FFFDF6;
+  color: #F0F9EC;
   border-color: var(--leaf-emerald);
   box-shadow: 0 4px 14px rgba(var(--primary-green-rgb), 0.35);
 }
@@ -397,7 +466,7 @@
 
 .quotes-menu-item.active .quotes-menu-icon {
   background: rgba(255, 255, 255, 0.2);
-  color: #FFFDF6;
+  color: #F0F9EC;
   border-color: rgba(255, 255, 255, 0.4);
 }
 
@@ -418,7 +487,7 @@
 }
 
 .quotes-menu-item.active .quotes-menu-name {
-  color: #FFFDF6;
+  color: #F0F9EC;
 }
 
 .quotes-menu-snippet {
@@ -452,7 +521,7 @@
 
 .quotes-menu-item.active .quotes-menu-count {
   background: rgba(255, 255, 255, 0.2);
-  color: #FFFDF6;
+  color: #F0F9EC;
   border-color: rgba(255, 255, 255, 0.4);
 }
 
@@ -504,7 +573,7 @@
   font-family: var(--font-display);
   font-size: 1.9rem;
   font-weight: 700;
-  color: #FFFDF6;
+  color: #F0F9EC;
   background: linear-gradient(135deg, var(--leaf-emerald), var(--primary-green));
   border-color: rgba(255, 253, 246, 0.35);
 }
@@ -830,14 +899,15 @@
   letter-spacing: 0.34em;
   text-transform: uppercase;
   text-align: center;
-  color: #B98F35;
-  opacity: 0.5;
+  color: #4A7A44;
+  opacity: 0.85;
   margin: 0.3rem auto 0.9rem;
   user-select: none;
 }
 
 [data-theme="dark"] .card-watermark {
-  color: var(--accent-lavender, #B89AD9);
+  color: var(--accent-lavender, #A8E0A0);
+  opacity: 0.9;
 }
 
 .card-watermark::before,

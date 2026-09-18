@@ -16,6 +16,11 @@ function getInitials(name) {
   return (words[0][0] + words[1][0]).toUpperCase();
 }
 
+function formatPoemLine(line) {
+  const lower = line.toLowerCase();
+  return lower.charAt(0).toUpperCase() + lower.slice(1);
+}
+
 function PoemAuthorPhoto({ poem }) {
   const [photoUrl, setPhotoUrl] = useState(null);
   useEffect(() => {
@@ -191,7 +196,7 @@ export default function ReadPoemPage() {
                       lineIndex === 0 ? "first" : ""
                     }`}
                   >
-                    {line.toLowerCase()}
+                    {formatPoemLine(line)}
                   </p>
                 ))}
               </div>

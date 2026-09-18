@@ -19,8 +19,8 @@ export function ThemeProvider({ children }) {
       return savedTheme === "dark";
     }
 
-    // Check system preference
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    // Default to dark mode for everyone, regardless of system preference
+    return true;
   });
 
   useEffect(() => {

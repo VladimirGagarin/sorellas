@@ -1,4 +1,4 @@
-import HolyMaryImage from "../assets/litany/holy_mary.jpg";
+﻿import HolyMaryImage from "../assets/litany/holy_mary.jpg";
 import MotherOfGodImage from "../assets/litany/mother_of_god.jpg";
 import VirginOfVirgins from "../assets/litany/virgin_of_virgins.jpg";
 import MotherOfChrist from "../assets/litany/mother_of_christ.jpg";
@@ -52,7 +52,7 @@ import GraciouslyHearUs from "../assets/litany/graciously_hear_us.jpg";
 import HaveMercyOnUs from "../assets/litany/have_mercy_on_us.jpg";
 import PrayForUs from "../assets/litany/pray_for_us.jpg";
 import MadeWorthy from "../assets/litany/made_worthy.jpg";
-import JesusImage from "../assets/sacred_heart_card.jpg"
+import JesusImage from "../assets/sacred_heart_card.jpg";
 
 // Famous prayers by saints and spiritual figures
 export function getFamousPrayers() {
@@ -80,7 +80,7 @@ export function getFamousPrayers() {
       photo: "../assets/otunga.png",
     },
     {
-      author: "Sr Virginia Mwakiuna",
+      author: "Sr. Virginia Mwakiuna",
       prayer:
         "Lord Jesus, grant me the grace to be a humble servant, to bring light and comfort to those in need, and to always trust in Your Divine Providence. Guide my every step, that I may reflect Your love to all I meet. Amen.",
       italianPrayer:
@@ -90,7 +90,7 @@ export function getFamousPrayers() {
       photo: "../assets/sr_virginia_mwakiuna.jpg",
     },
     {
-      author: "Sr Agatha Mkunda",
+      author: "Sr. Agatha Mkunda",
       prayer:
         "Loving God, grant me a heart filled with compassion, patience, and peace. Help me to serve others with humility and to trust in Your loving guidance each day.",
       italianPrayer:
@@ -101,7 +101,7 @@ export function getFamousPrayers() {
       photo: "../assets/sr_agatha_mkunda.jpg",
     },
     {
-      author: "Sr Felicity Makena",
+      author: "Sr. Felicity Makena",
       prayer:
         "Lord, may my heart be filled with kindness, and my hands always ready to serve. Grant me the peace to trust Your ways and the courage to love without limits.",
       italianPrayer:
@@ -125,7 +125,7 @@ export function getFamousPrayers() {
       photo: "../assets/sr_mercy_kathure.jpg",
     },
     {
-      author: "Sr Margaret N. Kaleli",
+      author: "Sr. Margaret N. Kaleli",
       prayer:
         "Gracious God, fill my heart with Your peace and wisdom. Help me to love as You love, to serve with humility, and to walk each day in gratitude and hope.",
       italianPrayer:
@@ -137,7 +137,7 @@ export function getFamousPrayers() {
       photo: "../assets/sr_margaret_n_kaleli.jpg",
     },
     {
-      author: "Sr Hellen Murungi",
+      author: "Sr. Hellen Murungi",
       prayer:
         "Loving God, grant me a heart open to Your will, and fill my days with peace, gratitude, and gentle strength. Help me to see Your presence in every moment and to share Your love with all whom I meet.",
       italianPrayer:
@@ -738,7 +738,7 @@ export function getFamousPrayers() {
       photo: "../assets/giovanna.jpg",
     },
     {
-      author: "Sr Jiunisia Kaburi ",
+      author: "Sr. Jiunisia Kaburi ",
       prayer: `Heavenly Father,  
             Thank You for the gentle spirit of Lorem Ipsum,  
             A heart that listens, a soul that lifts.  
@@ -891,7 +891,7 @@ export function getFamousPrayers() {
       photo: "../assets/sr_maria_carrolla.jpg",
     },
     {
-      author: "Sr.Nancy",
+      author: "Sr. Nancy",
       prayer:
         "God of dawn and promise, light the skies of the weary soul. Where there is waiting, let hope arise like morning light. In the silence of uncertainty, plant seeds of trust that bloom in time. Let every heart know that even in darkness, the promise of joy is near. Strengthen the spirit to endure, to believe, and to begin again.",
       italianPrayer:
@@ -994,7 +994,7 @@ export function getFamousPrayers() {
       photo: "../assets/sr_ann.jpg",
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       prayer:
         "Heavenly Father, guide my steps in Your truth and mercy. Help me to persevere in faith, even when the road is hard. May Your peace fill my soul and inspire me to be a light for others.",
       italianPrayer:
@@ -1238,7 +1238,8 @@ export function getFamousPrayers() {
         "Our Father who art in heaven, hallowed be thy name. Thy kingdom come. Thy will be done on earth as it is in heaven. Give us this day our daily bread. And forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation, but deliver us from evil. Amen.",
       italianPrayer:
         "Padre nostro che sei nei cieli, sia santificato il tuo nome. Venga il tuo regno. Sia fatta la tua volontà, come in cielo così in terra. Dacci oggi il nostro pane quotidiano. E rimetti a noi i nostri debiti, come anche noi li rimettiamo ai nostri debitori. E non ci indurre in tentazione, ma liberaci dal male. Amen.",
-      quote: "“Give us this day our daily bread, and forgive us our trespasses.”",
+      quote:
+        "“Give us this day our daily bread, and forgive us our trespasses.”",
       italianQuote:
         "“Dacci oggi il nostro pane quotidiano, e rimetti a noi i nostri debiti.”",
     },
@@ -1368,7 +1369,8 @@ export function getFamousPrayers() {
       italianPrayer:
         "Il Signore ti benedica e ti protegga. Il Signore faccia risplendere su di te il suo volto e ti sia propizio. Il Signore volga su di te il suo volto e ti conceda pace.",
       quote: "“The Lord look upon you kindly and give you peace.”",
-      italianQuote: "“Il Signore volga su di te il suo volto e ti conceda pace.”",
+      italianQuote:
+        "“Il Signore volga su di te il suo volto e ti conceda pace.”",
     },
     {
       author: "Philippians 4:6–7 – A Prayer of Peace",
@@ -1387,7 +1389,8 @@ export function getFamousPrayers() {
         "This is what the Lord asks of you: only this, to act justly, to love tenderly, and to walk humbly with your God.",
       italianPrayer:
         "Questo è ciò che il Signore ti chiede: praticare la giustizia, amare con tenerezza e camminare umilmente con il tuo Dio.",
-      quote: "“To act justly, to love tenderly, and to walk humbly with your God.”",
+      quote:
+        "“To act justly, to love tenderly, and to walk humbly with your God.”",
       italianQuote:
         "“Praticare la giustizia, amare con tenerezza e camminare umilmente con il tuo Dio.”",
     },
@@ -1419,7 +1422,8 @@ export function getFamousPrayers() {
         "Rejoice always. Pray without ceasing. In all circumstances give thanks, for this is the will of God for you in Christ Jesus.",
       italianPrayer:
         "Siate sempre lieti, pregate ininterrottamente, in ogni cosa rendete grazie: questa è infatti la volontà di Dio in Cristo Gesù verso di voi.",
-      quote: "“Rejoice always; pray without ceasing; in all circumstances give thanks.”",
+      quote:
+        "“Rejoice always; pray without ceasing; in all circumstances give thanks.”",
       italianQuote:
         "“Siate sempre lieti, pregate ininterrottamente, in ogni cosa rendete grazie.”",
     },
@@ -1429,8 +1433,10 @@ export function getFamousPrayers() {
         "For the love of Christ constraineth us; because we thus judge, that if one died for all, then were all dead: And that he died for all, that they which live should not henceforth live unto themselves, but unto him which died for them, and rose again.",
       italianPrayer:
         "Infatti l'amore del Cristo ci spinge, perché siamo convinti che uno è morto per tutti, e quindi tutti sono morti. Ed egli è morto per tutti, perché quelli che vivono non vivano più per se stessi, ma per colui che è morto e risorto per loro.",
-      quote: "“For the love of Christ constraineth us...” – Caritas Christi urget nos",
-      italianQuote: "“L'amore del Cristo ci spinge...” – Caritas Christi urget nos",
+      quote:
+        "“For the love of Christ constraineth us...” – Caritas Christi urget nos",
+      italianQuote:
+        "“L'amore del Cristo ci spinge...” – Caritas Christi urget nos",
     },
     {
       author: "Sr. Gladys",
@@ -1438,8 +1444,7 @@ export function getFamousPrayers() {
         "Heavenly Father, let my hands be gentle and my heart open, that I may serve Your little ones with joy and never tire of loving. Teach me to find You in every face and to give as freely as I have received.",
       italianPrayer:
         "Padre Celeste, rendi le mie mani gentili e il mio cuore aperto, perché possa servire i Tuoi piccoli con gioia e non stancarmi mai di amare. Insegnami a trovarti in ogni volto e a donare con la stessa libertà con cui ho ricevuto.",
-      quote:
-        "A life of quiet service becomes a prayer that never ends.",
+      quote: "A life of quiet service becomes a prayer that never ends.",
       italianQuote:
         "Una vita di servizio silenzioso diventa una preghiera che non finisce mai.",
       photo: "../assets/sr_gladys.png",
@@ -1450,8 +1455,7 @@ export function getFamousPrayers() {
         "Lord Jesus, You walked among the poor and the forgotten with tenderness and strength. Help me to do the same — to see You in every face I meet, to carry Your light into the shadows, and to love without counting the cost. Amen.",
       italianPrayer:
         "Signore Gesù, hai camminato tra i poveri e i dimenticati con tenerezza e forza. Aiutami a fare lo stesso — a vederti in ogni volto che incontro, a portare la Tua luce nelle ombre e ad amare senza contare il prezzo. Amen.",
-      quote:
-        "Faith lived in kindness becomes a light for the whole world.",
+      quote: "Faith lived in kindness becomes a light for the whole world.",
       italianQuote:
         "La fede vissuta nella gentilezza diventa luce per tutto il mondo.",
       photo: "../assets/sr_theresa.jpg",
@@ -1473,8 +1477,7 @@ export function getFamousPrayers() {
         "Good Shepherd, You know each of Your sheep by name and never grow weary of seeking the lost. Keep my heart watchful and my hands ready to guide others safely home to You. Amen.",
       italianPrayer:
         "Buon Pastore, conosci per nome ciascuna delle Tue pecore e non ti stanchi mai di cercare le smarrite. Custodisci il mio cuore vigilante e le mie mani pronte a guidare gli altri al sicuro verso Te. Amen.",
-      quote:
-        "A shepherd's heart counts every soul and never abandons one.",
+      quote: "A shepherd's heart counts every soul and never abandons one.",
       italianQuote:
         "Un cuore di pastore conta ogni anima e non ne abbandona nessuna.",
       photo: "../assets/sr_beatrice_kinoti.jpg",
@@ -1521,7 +1524,8 @@ export function getFamousPrayers() {
         "Heavenly Father, in the rhythm of each ordinary day, let my heart learn Your quiet melodies of faithfulness and joy.",
       italianPrayer:
         "Padre Celeste, nel ritmo di ogni giorno ordinario, fa’ che il mio cuore impari le Tue silenziose melodie di fedeltà e gioia.",
-      quote: "A joyful heart is a garden where God's peace blooms in every season.",
+      quote:
+        "A joyful heart is a garden where God's peace blooms in every season.",
       italianQuote:
         "Un cuore gioioso è un giardino dove la pace di Dio fiorisce in ogni stagione.",
       photo: "../assets/sr_joyce_nkirote.jpg",
@@ -1532,10 +1536,23 @@ export function getFamousPrayers() {
         "Gracious God, mould my hands to serve with tenderness and my spirit to wait upon Your providence in all things.",
       italianPrayer:
         "Dio misericordioso, plasma le mie mani per servire con tenerezza e il mio spirito per attendere la Tua provvidenza in ogni cosa.",
-      quote: "Trust placed in God's hands turns every worry into an act of surrender.",
+      quote:
+        "Trust placed in God's hands turns every worry into an act of surrender.",
       italianQuote:
         "La fiducia riposta nelle mani di Dio trasforma ogni preoccupazione in un atto di abbandono.",
       photo: "../assets/sr_luisa_makena.jpg",
+    },
+    {
+      author: "Sr. Hannah",
+      prayer:
+        "Lord, use me as a mirror of Your love, that through me others may see their truest selves — and still know they are loved, just as You love me.",
+      italianPrayer:
+        "Signore, usa me come specchio del Tuo amore, affinché attraverso di me gli altri possano vedere il loro vero io — e sappiano comunque di essere amati, proprio come Tu ami me.",
+      quote:
+        "Sisters are the mirrors God uses to show us our truest selves — and still love us.",
+      italianQuote:
+        "Le sorelle sono gli specchi che Dio usa per mostrarci il nostro vero io — e amarci comunque.",
+      photo: "../assets/sr_hannah.jpg",
     },
   ];
 
@@ -1937,11 +1954,285 @@ export function getLitany() {
       alt: "That we may be made worthy",
     },
   ];
-
 }
 
 export function getQuotes() {
   const quotes = [
+    {
+      author: "Sr. Hannah",
+      category: "Hope and Perseverance",
+      quote:
+        "Hope is the small light kept burning in the window — even when no one seems to be coming home.",
+      italianQuote:
+        "La speranza è la piccola luce tenuta accesa alla finestra — anche quando sembra che nessuno stia tornando a casa.",
+      photo: "../assets/sr_hannah.jpg",
+    },
+    {
+      author: "Sr. Hannah",
+      category: "Charity",
+      quote:
+        "Charity is love that has stopped asking whether the other deserves it.",
+      italianQuote:
+        "La carità è l'amore che ha smesso di chiedersi se l'altro lo meriti.",
+      photo: "../assets/sr_hannah.jpg",
+    },
+    {
+      author: "Sr. Hannah",
+      category: "Forgiveness",
+      quote:
+        "Forgiveness is setting down a stone you had every right to throw.",
+      italianQuote:
+        "Il perdono è posare una pietra che avevi tutto il diritto di lanciare.",
+      photo: "../assets/sr_hannah.jpg",
+    },
+    {
+      author: "Sr. Hannah",
+      category: "Wisdom",
+      quote:
+        "Wisdom is knowing which battles to fight, which to pray through, and which to simply walk away from.",
+      italianQuote:
+        "La sapienza è sapere quali battaglie combattere, quali attraversare con la preghiera e da quali semplicemente allontanarsi.",
+      photo: "../assets/sr_hannah.jpg",
+    },
+    {
+      author: "Sr. Hannah",
+      category: "Latin",
+      quote:
+        "Ora et labora — pray and work — the oldest rhythm of a soul that refuses to stand still.",
+      italianQuote:
+        "Ora et labora — prega e lavora — il ritmo più antico di un'anima che rifiuta di restare ferma.",
+      photo: "../assets/sr_hannah.jpg",
+    },
+    {
+      author: "Sr. Agatha Mkunda",
+      category: "Gratitude",
+      quote:
+        "Every breath is a gift I did not earn — and so I breathe thank you with every breath.",
+      italianQuote:
+        "Ogni respiro è un dono che non ho meritato — e così respiro grazie con ogni respiro.",
+      photo: "../assets/sr_agatha_mkunda.jpg",
+    },
+    {
+      author: "Sr. Felicity Makena",
+      category: "Gratitude",
+      quote:
+        "The hands that bless are the hands that first remember they were blessed.",
+      italianQuote:
+        "Le mani che benedicono sono le mani che per prime ricordano di essere state benedette.",
+      photo: "../assets/sr_felicity_makena.jpg",
+    },
+    {
+      author: "Sr. Hellen Murungi",
+      category: "Gratitude",
+      quote:
+        "Counting blessings is the arithmetic of heaven — the sum only grows the more you count.",
+      italianQuote:
+        "Contare le benedizioni è l'aritmetica del cielo — la somma cresce solo più conti.",
+      photo: "../assets/sr_hellen_murungi.jpg",
+    },
+    {
+      author: "Sr. Jiunisia Kaburi",
+      category: "Gratitude",
+      quote: "A grateful heart turns even a straw mat into a throne of praise.",
+      italianQuote:
+        "Un cuore grato trasforma persino una stuoia di paglia in un trono di lode.",
+      photo: "../assets/sr_junisia.jpg",
+    },
+    {
+      author: "Sr. Margaret N. Kaleli",
+      category: "Gratitude",
+      quote:
+        "Say thank you before the miracle arrives — faith thanks in advance.",
+      italianQuote:
+        "Di' grazie prima che arrivi il miracolo — la fede ringrazia in anticipo.",
+      photo: "../assets/sr_margaret_n_kaleli.jpg",
+    },
+    {
+      author: "Sr. Virginia Mwakiuna",
+      category: "Gratitude",
+      quote:
+        "The soul that sings at dawn has already thanked God for the day it has not yet seen.",
+      italianQuote:
+        "L'anima che canta all'alba ha già ringraziato Dio per il giorno che non ha ancora visto.",
+      photo: "../assets/sr_virginia_mwakiuna.jpg",
+    },
+    {
+      author: "Sr. Benedicta",
+      category: "Gratitude",
+      quote:
+        "Gratitude is the only debt that grows smaller the more you pay it.",
+      italianQuote:
+        "La gratitudine è l'unico debito che diventa più piccolo più lo paghi.",
+      photo: "../assets/sr_benedicta.jpg",
+    },
+    {
+      author: "Sr. Beth",
+      category: "Gratitude",
+      quote: "Even the thorn gives thanks for the branch that holds it.",
+      italianQuote: "Anche la spina ringrazia il ramo che la sostiene.",
+      photo: "../assets/sr_beth.jpg",
+    },
+    {
+      author: "Sr. Dorcas",
+      category: "Gratitude",
+      quote: "A thank you spoken in secret is heard the loudest in heaven.",
+      italianQuote:
+        "Un grazie detto in segreto è quello che si sente più forte in cielo.",
+      photo: "../assets/sr_dorcas.jpg",
+    },
+    {
+      author: "Sr. Hannah",
+      category: "Gratitude",
+      quote:
+        "For the smallest mercies — the ones I never noticed — I thank You most of all.",
+      italianQuote:
+        "Per le più piccole misericordie — quelle che non ho mai notato — Ti ringrazio più di tutto.",
+      photo: "../assets/sr_hannah.jpg",
+    },
+    {
+      author: "Sr. Jerusha Nkatha",
+      category: "Gratitude",
+      quote:
+        "Gratitude is the fragrance the soul releases when it is crushed by grace.",
+      italianQuote:
+        "La gratitudine è il profumo che l'anima rilascia quando è schiacciata dalla grazia.",
+      photo: "../assets/sr_jerusha.jpg",
+    },
+    {
+      author: "Sr. Julian",
+      category: "Gratitude",
+      quote:
+        "Give thanks for the closed doors too — some of them were mercy in disguise.",
+      italianQuote:
+        "Ringrazia anche per le porte chiuse — alcune erano misericordia travestita.",
+      photo: "../assets/sr_julian.jpg",
+    },
+    {
+      author: "Sr. Loredana",
+      category: "Gratitude",
+      quote:
+        "The cup of thanksgiving is never empty — it refills the moment it is poured out.",
+      italianQuote:
+        "La coppa del ringraziamento non è mai vuota — si riempie nel momento in cui viene versata.",
+      photo: "../assets/sr_loredana.jpg",
+    },
+    {
+      author: "Sr. Lucy Wegoki",
+      category: "Gratitude",
+      quote:
+        "Gratitude turns what we have into enough — and enough into abundance.",
+      italianQuote:
+        "La gratitudine trasforma ciò che abbiamo in abbastanza — e l'abbastanza in abbondanza.",
+      photo: "../assets/sr_lucy_wegoki.jpg",
+    },
+    {
+      author: "Sr. Maria Carrolla",
+      category: "Gratitude",
+      quote:
+        "Give thanks in the storm — the anchor holds best when the waves are loudest.",
+      italianQuote:
+        "Rendi grazie nella tempesta — l'ancora tiene meglio quando le onde sono più forti.",
+      photo: "../assets/sr_maria_carrolla.jpg",
+    },
+    {
+      author: "Sr. Mercy Kathure",
+      category: "Gratitude",
+      quote:
+        "Mercy received becomes gratitude spoken — the heart cannot hold both and stay silent.",
+      italianQuote:
+        "La misericordia ricevuta diventa gratitudine pronunciata — il cuore non può tenerle entrambe e restare in silenzio.",
+      photo: "../assets/sr_mercy_kathure.jpg",
+    },
+    {
+      author: "Sr. Sofia",
+      category: "Gratitude",
+      quote:
+        "Thank God not only for the harvest, but for the sowing that felt like loss.",
+      italianQuote:
+        "Ringrazia Dio non solo per il raccolto, ma per la semina che sembrava una perdita.",
+      photo: "../assets/sr_sofia.jpg",
+    },
+    {
+      author: "Sr. Hannah",
+      category: "Kindness",
+      quote:
+        "Kindness is the quiet language God speaks when words are not enough.",
+      italianQuote:
+        "La gentilezza è il linguaggio silenzioso che Dio parla quando le parole non bastano.",
+      photo: "../assets/sr_hannah.jpg",
+    },
+    {
+      author: "Sr. Jerusha Nkatha",
+      category: "Kindness",
+      quote:
+        "Every small act of kindness is a seed of heaven planted in someone's today.",
+      italianQuote:
+        "Ogni piccolo gesto di gentilezza è un seme del cielo piantato nel oggi di qualcuno.",
+      photo: "../assets/sr_jerusha.jpg",
+    },
+    {
+      author: "Sr. Maria Carrolla",
+      category: "Kindness",
+      quote:
+        "Be kind — for every soul you meet is carrying a burden you cannot see.",
+      italianQuote:
+        "Sii gentile — perché ogni anima che incontri porta un peso che non puoi vedere.",
+      photo: "../assets/sr_maria_carrolla.jpg",
+    },
+    {
+      author: "Sr. Nancy",
+      category: "Kindness",
+      quote:
+        "Kindness costs nothing, yet it can change everything in a single moment.",
+      italianQuote:
+        "La gentilezza non costa nulla, eppure può cambiare tutto in un solo istante.",
+      photo: "../assets/sr_nancy.jpg",
+    },
+    {
+      author: "Sr. Maria Carrolla",
+      category: "Joy",
+      quote:
+        "Joy is not the absence of sorrow — it is the presence of God in the middle of it.",
+      italianQuote:
+        "La gioia non è l'assenza del dolore — è la presenza di Dio nel mezzo di esso.",
+      photo: "../assets/sr_maria_carrolla.jpg",
+    },
+    {
+      author: "Sr. Nancy",
+      category: "Joy",
+      quote:
+        "A heart that sings to the Lord is a heart that no trial can silence.",
+      italianQuote:
+        "Un cuore che canta al Signore è un cuore che nessuna prova può mettere a tacere.",
+      photo: "../assets/sr_nancy.jpg",
+    },
+    {
+      author: "Sr. Hannah",
+      category: "Love",
+      quote:
+        "To love is to see Christ in every face, especially the ones the world forgets.",
+      italianQuote:
+        "Amare è vedere Cristo in ogni volto, soprattutto in quelli che il mondo dimentica.",
+      photo: "../assets/sr_hannah.jpg",
+    },
+    {
+      author: "Sr. Maria Carrolla",
+      category: "Love",
+      quote:
+        "Love does not count the cost — it only counts the chances to give.",
+      italianQuote:
+        "L'amore non conta il costo — conta solo le occasioni di donare.",
+      photo: "../assets/sr_maria_carrolla.jpg",
+    },
+    {
+      author: "Sr. Nancy",
+      category: "Love",
+      quote:
+        "Where there is love, there is God — and where there is God, there is no room for fear.",
+      italianQuote:
+        "Dove c'è amore, c'è Dio — e dove c'è Dio, non c'è posto per la paura.",
+      photo: "../assets/sr_nancy.jpg",
+    },
     {
       author: "Sr. Mary Japheth",
       category: "Love",
@@ -2218,7 +2509,7 @@ export function getQuotes() {
       photo: "../assets/sr_ann.jpg",
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       category: "Love",
       quote: "Love is the bridge that brings hearts together.",
       italianQuote: "L'amore è il ponte che unisce i cuori.",
@@ -2535,7 +2826,7 @@ export function getQuotes() {
       photo: "../assets/sr_ann.jpg",
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       category: "Joy",
       quote: "Joy is the gentle river that carries us to God’s peace.",
       italianQuote:
@@ -2901,7 +3192,7 @@ export function getQuotes() {
       photo: "../assets/sr_ann.jpg",
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       category: "Peace",
       quote: "Let the peace of Christ calm your every worry.",
       italianQuote:
@@ -3247,7 +3538,7 @@ export function getQuotes() {
       photo: "../assets/sr_ann.jpg",
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       category: "Patience",
       quote: "Patience teaches us to trust in God’s perfect timing.",
       italianQuote:
@@ -3499,7 +3790,7 @@ export function getQuotes() {
       photo: "../assets/sr_ann.jpg",
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       category: "Kindness",
       quote: "Kindness is a prayer that lifts the burden of another’s heart.",
       italianQuote:
@@ -3921,7 +4212,7 @@ export function getQuotes() {
       photo: "../assets/sr_ann.jpg",
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       category: "Goodness",
       quote: "Through goodness, we become reflections of God’s mercy.",
       italianQuote:
@@ -4268,7 +4559,7 @@ export function getQuotes() {
       photo: "../assets/sr_ann.jpg",
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       category: "Faithfulness",
       quote: "In faithfulness, we discover the depth of God’s mercy and love.",
       italianQuote:
@@ -4599,7 +4890,7 @@ export function getQuotes() {
       photo: "../assets/sr_ann.jpg",
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       category: "Gentleness",
       quote: "A gentle heart can heal the deepest wounds of the soul.",
       italianQuote:
@@ -4932,7 +5223,7 @@ export function getQuotes() {
       photo: "../assets/sr_ann.jpg",
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       category: "Self-control",
       quote: "Self-control is the silent strength that shapes our destiny.",
       italianQuote:
@@ -5252,7 +5543,7 @@ export function getQuotes() {
       photo: "../assets/sr_ann.jpg",
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       category: "Understanding",
       quote: "When we understand, hearts are healed and minds enlightened.",
       italianQuote:
@@ -5586,7 +5877,7 @@ export function getQuotes() {
       photo: "../assets/sr_ann.jpg",
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       category: "Counsel (Right Judgment)",
       quote: "God’s counsel guides our steps toward peace and truth.",
       italianQuote:
@@ -5942,7 +6233,7 @@ export function getQuotes() {
       photo: "../assets/sr_ann.jpg",
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       category: "Fortitude (Courage)",
       quote:
         "May your heart be brave and your spirit resilient through God’s grace.",
@@ -6279,7 +6570,7 @@ export function getQuotes() {
       photo: "../assets/sr_ann.jpg",
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       category: "Piety (Reverence)",
       quote: "In piety, we find the path to deeper communion with God.",
       italianQuote:
@@ -6613,7 +6904,7 @@ export function getQuotes() {
       photo: "../assets/sr_ann.jpg",
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       category: "Fear of the Lord (Wonder and Awe)",
       quote: "Fear of the Lord fills me with awe and a longing for holiness.",
       italianQuote:
@@ -6936,7 +7227,7 @@ export function getQuotes() {
       photo: "../assets/sr_ann.jpg",
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       category: "Trust",
       quote: "In God’s trust, I find courage to face all challenges.",
       italianQuote:
@@ -7268,7 +7559,7 @@ export function getQuotes() {
       photo: "../assets/sr_ann.jpg",
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       category: "Prayer and Meditation",
       quote: "Meditation invites me into the stillness where God speaks.",
       italianQuote: "La meditazione mi invita nella quiete dove Dio parla.",
@@ -7602,7 +7893,7 @@ export function getQuotes() {
       photo: "../assets/sr_ann.jpg",
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       category: "Compassion",
       quote: "Through compassion, I learn to love the most vulnerable.",
       italianQuote:
@@ -7931,7 +8222,7 @@ export function getQuotes() {
       photo: "../assets/sr_ann.jpg",
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       category: "Hope and Perseverance",
       quote: "Hope strengthens me to trust in God’s timing.",
       italianQuote: "La speranza mi fortifica a fidarmi dei tempi di Dio.",
@@ -8259,7 +8550,7 @@ export function getQuotes() {
       photo: "../assets/sr_ann.jpg",
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       category: "Charity",
       quote: "Charity is the spark that lights the world with love.",
       italianQuote: "La carità è la scintilla che accende il mondo d'amore.",
@@ -8577,7 +8868,7 @@ export function getQuotes() {
       photo: "../assets/sr_ann.jpg",
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       category: "Forgiveness",
       quote: "Forgiveness heals wounds that words cannot reach.",
       italianQuote:
@@ -8934,7 +9225,7 @@ export function getQuotes() {
       photo: "../assets/sr_ann.jpg",
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       category: "Wisdom",
       quote:
         "The treasure of wisdom is found in faithful hearts open to God’s grace.",
@@ -9199,7 +9490,7 @@ export function getQuotes() {
       photo: "../assets/sr_ann.jpg",
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       category: "Spiritual Growth",
       quote:
         "May every step in spiritual growth be guided by love and sustained by faith.",
@@ -9614,7 +9905,7 @@ export function getQuotes() {
       photo: "../assets/sr_ann.jpg",
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       category: "Humility",
       quote:
         "Through humble service, we mirror the compassion of Christ to the world.",
@@ -9705,7 +9996,7 @@ export function getQuotes() {
       photo: "../assets/sr_angelica_kinya.jpg",
     },
     {
-      author: "Sr. Mary Carrolla",
+      author: "Sr. Maria Carrolla",
       category: "Humility",
       quote:
         "Let us embrace service with humility, seeking to build bridges of hope.",
@@ -9973,7 +10264,7 @@ export function getQuotes() {
       photo: "../assets/sr_ann.jpg",
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       category: "Gratitude",
       quote: "Gratitude is the quiet prayer that enriches every day.",
       italianQuote:
@@ -10359,7 +10650,7 @@ export function getQuotes() {
       photo: "../assets/sr_ann.jpg",
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       category: "Latin",
       quote: "Fides et spes.",
       italianQuote: "Fede e speranza.",
@@ -10389,14 +10680,14 @@ export function getQuotes() {
 
     //--------------------------------------------------------------------------------------------------------
     {
-      author: "Sr Virginia Mwakiuna",
+      author: "Sr. Virginia Mwakiuna",
       category: "Love",
       quote: "Love is the light that guides every journey of the heart.",
       italianQuote: "L'amore è la luce che guida ogni viaggio del cuore.",
       photo: "../assets/sr_virginia_mwakiuna.jpg",
     },
     {
-      author: "Sr Virginia Mwakiuna",
+      author: "Sr. Virginia Mwakiuna",
       category: "Joy",
       quote:
         "True joy springs from a grateful heart and a life lived for others.",
@@ -10405,7 +10696,7 @@ export function getQuotes() {
       photo: "../assets/sr_virginia_mwakiuna.jpg",
     },
     {
-      author: "Sr Virginia Mwakiuna",
+      author: "Sr. Virginia Mwakiuna",
       category: "Peace",
       quote:
         "Peace is found in trusting God’s plan, even in the midst of storms.",
@@ -10414,21 +10705,21 @@ export function getQuotes() {
       photo: "../assets/sr_virginia_mwakiuna.jpg",
     },
     {
-      author: "Sr Virginia Mwakiuna",
+      author: "Sr. Virginia Mwakiuna",
       category: "Patience",
       quote: "Patience is the silent strength that nurtures hope.",
       italianQuote: "La pazienza è la forza silenziosa che nutre la speranza.",
       photo: "../assets/sr_virginia_mwakiuna.jpg",
     },
     {
-      author: "Sr Virginia Mwakiuna",
+      author: "Sr. Virginia Mwakiuna",
       category: "Kindness",
       quote: "Small acts of kindness can change the world.",
       italianQuote: "I piccoli atti di gentilezza possono cambiare il mondo.",
       photo: "../assets/sr_virginia_mwakiuna.jpg",
     },
     {
-      author: "Sr Virginia Mwakiuna",
+      author: "Sr. Virginia Mwakiuna",
       category: "Goodness",
       quote: "Goodness is the quiet echo of God’s love in our actions.",
       italianQuote:
@@ -10436,7 +10727,7 @@ export function getQuotes() {
       photo: "../assets/sr_virginia_mwakiuna.jpg",
     },
     {
-      author: "Sr Virginia Mwakiuna",
+      author: "Sr. Virginia Mwakiuna",
       category: "Faithfulness",
       quote: "Faithfulness is remaining steadfast even when the road is long.",
       italianQuote:
@@ -10444,14 +10735,14 @@ export function getQuotes() {
       photo: "../assets/sr_virginia_mwakiuna.jpg",
     },
     {
-      author: "Sr Virginia Mwakiuna",
+      author: "Sr. Virginia Mwakiuna",
       category: "Gentleness",
       quote: "Gentleness is strength wrapped in humility and care.",
       italianQuote: "La mitezza è forza avvolta in umiltà e cura.",
       photo: "../assets/sr_virginia_mwakiuna.jpg",
     },
     {
-      author: "Sr Virginia Mwakiuna",
+      author: "Sr. Virginia Mwakiuna",
       category: "Self-control",
       quote: "Self-control is choosing what is right over what is easy.",
       italianQuote:
@@ -10459,14 +10750,14 @@ export function getQuotes() {
       photo: "../assets/sr_virginia_mwakiuna.jpg",
     },
     {
-      author: "Sr Virginia Mwakiuna",
+      author: "Sr. Virginia Mwakiuna",
       category: "Understanding",
       quote: "Understanding begins when we listen with our hearts.",
       italianQuote: "La comprensione inizia quando ascoltiamo con il cuore.",
       photo: "../assets/sr_virginia_mwakiuna.jpg",
     },
     {
-      author: "Sr Virginia Mwakiuna",
+      author: "Sr. Virginia Mwakiuna",
       category: "Counsel (Right Judgment)",
       quote:
         "Let wisdom guide your choices, and compassion shape your counsel.",
@@ -10475,7 +10766,7 @@ export function getQuotes() {
       photo: "../assets/sr_virginia_mwakiuna.jpg",
     },
     {
-      author: "Sr Virginia Mwakiuna",
+      author: "Sr. Virginia Mwakiuna",
       category: "Fortitude (Courage)",
       quote: "Courage is not the absence of fear, but faith in action.",
       italianQuote:
@@ -10483,7 +10774,7 @@ export function getQuotes() {
       photo: "../assets/sr_virginia_mwakiuna.jpg",
     },
     {
-      author: "Sr Virginia Mwakiuna",
+      author: "Sr. Virginia Mwakiuna",
       category: "Piety (Reverence)",
       quote: "Reverence is seeing the sacred in every moment and every person.",
       italianQuote:
@@ -10491,7 +10782,7 @@ export function getQuotes() {
       photo: "../assets/sr_virginia_mwakiuna.jpg",
     },
     {
-      author: "Sr Virginia Mwakiuna",
+      author: "Sr. Virginia Mwakiuna",
       category: "Fear of the Lord (Wonder and Awe)",
       quote:
         "To stand in awe before God is to embrace the mystery of His love.",
@@ -10500,7 +10791,7 @@ export function getQuotes() {
       photo: "../assets/sr_virginia_mwakiuna.jpg",
     },
     {
-      author: "Sr Virginia Mwakiuna",
+      author: "Sr. Virginia Mwakiuna",
       category: "Trust",
       quote: "Trust is surrendering each day into God’s loving hands.",
       italianQuote:
@@ -10508,7 +10799,7 @@ export function getQuotes() {
       photo: "../assets/sr_virginia_mwakiuna.jpg",
     },
     {
-      author: "Sr Virginia Mwakiuna",
+      author: "Sr. Virginia Mwakiuna",
       category: "Prayer and Meditation",
       quote:
         "In prayer, we find the strength to keep walking and the silence to hear God’s voice.",
@@ -10517,7 +10808,7 @@ export function getQuotes() {
       photo: "../assets/sr_virginia_mwakiuna.jpg",
     },
     {
-      author: "Sr Virginia Mwakiuna",
+      author: "Sr. Virginia Mwakiuna",
       category: "Compassion",
       quote:
         "Compassion is the bridge that connects our hearts to the suffering of others.",
@@ -10526,7 +10817,7 @@ export function getQuotes() {
       photo: "../assets/sr_virginia_mwakiuna.jpg",
     },
     {
-      author: "Sr Virginia Mwakiuna",
+      author: "Sr. Virginia Mwakiuna",
       category: "Hope and Perseverance",
       quote: "Hope lights the path; perseverance walks it to the end.",
       italianQuote:
@@ -10534,7 +10825,7 @@ export function getQuotes() {
       photo: "../assets/sr_virginia_mwakiuna.jpg",
     },
     {
-      author: "Sr Virginia Mwakiuna",
+      author: "Sr. Virginia Mwakiuna",
       category: "Charity",
       quote:
         "Charity is the love that inspires us to give without expecting in return.",
@@ -10543,14 +10834,14 @@ export function getQuotes() {
       photo: "../assets/sr_virginia_mwakiuna.jpg",
     },
     {
-      author: "Sr Virginia Mwakiuna",
+      author: "Sr. Virginia Mwakiuna",
       category: "Forgiveness",
       quote: "Forgiveness frees the soul and opens the door to peace.",
       italianQuote: "Il perdono libera l’anima e apre la porta alla pace.",
       photo: "../assets/sr_virginia_mwakiuna.jpg",
     },
     {
-      author: "Sr Virginia Mwakiuna",
+      author: "Sr. Virginia Mwakiuna",
       category: "Wisdom",
       quote: "Wisdom is the gentle whisper of God guiding our steps.",
       italianQuote:
@@ -10558,7 +10849,7 @@ export function getQuotes() {
       photo: "../assets/sr_virginia_mwakiuna.jpg",
     },
     {
-      author: "Sr Virginia Mwakiuna",
+      author: "Sr. Virginia Mwakiuna",
       category: "Spiritual Growth",
       quote:
         "Spiritual growth is a journey of becoming more like Christ every day.",
@@ -10567,7 +10858,7 @@ export function getQuotes() {
       photo: "../assets/sr_virginia_mwakiuna.jpg",
     },
     {
-      author: "Sr Virginia Mwakiuna",
+      author: "Sr. Virginia Mwakiuna",
       category: "Humility",
       quote: "Humility is recognizing our need for God in all things.",
       italianQuote:
@@ -10575,14 +10866,131 @@ export function getQuotes() {
       photo: "../assets/sr_virginia_mwakiuna.jpg",
     },
     {
-      author: "Sr Virginia Mwakiuna",
-      category: "Gratittude",
+      author: "Sr. Hannah",
+      category: "Patience",
+      quote:
+        "Patience is not waiting for God to hurry — it is learning to breathe at His pace.",
+      italianQuote:
+        "La pazienza non è aspettare che Dio si affretti — è imparare a respirare al Suo ritmo.",
+      photo: "../assets/sr_hannah.jpg",
+    },
+    {
+      author: "Sr. Hannah",
+      category: "Goodness",
+      quote:
+        "Goodness is holiness without an audience — done quietly, and for God alone.",
+      italianQuote:
+        "La bontà è santità senza pubblico — fatta in silenzio, e solo per Dio.",
+      photo: "../assets/sr_hannah.jpg",
+    },
+    {
+      author: "Sr. Hannah",
+      category: "Faithfulness",
+      quote:
+        "Faithfulness is the quiet vow repeated every morning when no one is watching.",
+      italianQuote:
+        "La fedeltà è il voto silenzioso ripetuto ogni mattina quando nessuno guarda.",
+      photo: "../assets/sr_hannah.jpg",
+    },
+    {
+      author: "Sr. Hannah",
+      category: "Gentleness",
+      quote:
+        "Gentleness is strength that has learned to carry rather than crush.",
+      italianQuote:
+        "La mitezza è la forza che ha imparato a portare invece di schiacciare.",
+      photo: "../assets/sr_hannah.jpg",
+    },
+    {
+      author: "Sr. Hannah",
+      category: "Self-control",
+      quote:
+        "Self-control is the hand that holds the door shut when the storm wants in.",
+      italianQuote:
+        "L'autocontrollo è la mano che tiene chiusa la porta quando la tempesta vuole entrare.",
+      photo: "../assets/sr_hannah.jpg",
+    },
+    {
+      author: "Sr. Hannah",
+      category: "Understanding",
+      quote:
+        "Understanding is listening long enough to hear the ache beneath the words.",
+      italianQuote:
+        "La comprensione è ascoltare abbastanza a lungo da sentire il dolore sotto le parole.",
+      photo: "../assets/sr_hannah.jpg",
+    },
+    {
+      author: "Sr. Hannah",
+      category: "Counsel (Right Judgment)",
+      quote:
+        "Right judgment is not knowing all the answers — it is knowing which question to ask next.",
+      italianQuote:
+        "Il retto giudizio non è conoscere tutte le risposte — è sapere quale domanda fare dopo.",
+      photo: "../assets/sr_hannah.jpg",
+    },
+    {
+      author: "Sr. Hannah",
+      category: "Fortitude (Courage)",
+      quote:
+        "Courage is not the absence of trembling — it is praying with trembling hands.",
+      italianQuote:
+        "Il coraggio non è l'assenza del tremore — è pregare con le mani che tremano.",
+      photo: "../assets/sr_hannah.jpg",
+    },
+    {
+      author: "Sr. Hannah",
+      category: "Piety (Reverence)",
+      quote:
+        "Reverence is the soul's instinct to remove its sandals — for the ground itself is holy.",
+      italianQuote:
+        "La pietà è l'istinto dell'anima di togliersi i sandali — perché il suolo stesso è santo.",
+      photo: "../assets/sr_hannah.jpg",
+    },
+    {
+      author: "Sr. Hannah",
+      category: "Fear of the Lord (Wonder and Awe)",
+      quote:
+        "Holy awe is the shiver of a heart that has glimpsed how small it is — and how loved.",
+      italianQuote:
+        "Il santo timore è il brivido di un cuore che ha intravisto quanto è piccolo — e quanto è amato.",
+      photo: "../assets/sr_hannah.jpg",
+    },
+    {
+      author: "Sr. Hannah",
+      category: "Trust",
+      quote:
+        "Trust is letting go of the map and holding only the hand of the One who made the road.",
+      italianQuote:
+        "La fiducia è lasciare andare la mappa e tenere solo la mano di Colui che ha fatto la strada.",
+      photo: "../assets/sr_hannah.jpg",
+    },
+    {
+      author: "Sr. Hannah",
+      category: "Prayer and Meditation",
+      quote:
+        "Prayer is not me speaking to God — it is me becoming quiet enough to hear Him speak.",
+      italianQuote:
+        "La preghiera non è io che parlo a Dio — è io che divento abbastanza silenziosa da sentirlo parlare.",
+      photo: "../assets/sr_hannah.jpg",
+    },
+    {
+      author: "Sr. Hannah",
+      category: "Compassion",
+      quote:
+        "Compassion is the heart that chooses to ache with another rather than look away.",
+      italianQuote:
+        "La compassione è il cuore che sceglie di soffrire con l'altro invece di voltarsi.",
+      photo: "../assets/sr_hannah.jpg",
+    },
+    {
+      author: "Sr. Virginia Mwakiuna",
+      category: "Gratitude",
       quote: "Gratitude transforms what we have into enough.",
       italianQuote: "La gratitudine trasforma ciò che abbiamo in abbastanza.",
       photo: "../assets/sr_virginia_mwakiuna.jpg",
     },
     {
-      author: "Sr Virginia Mwakiuna",
+      author: "Sr. Virginia Mwakiuna",
       category: "Latin",
       quote:
         "Sint tua facta loquuntur linguam amoris et cor tuum in laudem canat.",
@@ -10591,7 +10999,7 @@ export function getQuotes() {
       photo: "../assets/sr_virginia_mwakiuna.jpg",
     },
     {
-      author: "Sr Jiunisia Kaburi ",
+      author: "Sr. Jiunisia Kaburi ",
       category: "Love",
       quote:
         "Love is the gentle hand that lifts others and the warm embrace that heals every wound.",
@@ -10600,7 +11008,7 @@ export function getQuotes() {
       photo: "../assets/sr_junisia.jpg",
     },
     {
-      author: "Sr Jiunisia Kaburi ",
+      author: "Sr. Jiunisia Kaburi ",
       category: "Joy",
       quote: "Joy grows from a grateful heart and radiates to all around us.",
       italianQuote:
@@ -10608,7 +11016,7 @@ export function getQuotes() {
       photo: "../assets/sr_junisia.jpg",
     },
     {
-      author: "Sr Jiunisia Kaburi ",
+      author: "Sr. Jiunisia Kaburi ",
       category: "Peace",
       quote:
         "True peace is found when we trust God’s will and rest in His presence.",
@@ -10617,7 +11025,464 @@ export function getQuotes() {
       photo: "../assets/sr_junisia.jpg",
     },
     {
-      author: "Sr Jiunisia Kaburi ",
+      author: "Sr. Agatha Mkunda",
+      category: "Sisterly Love",
+      quote: "A sister is the hand God lends you when your own hands are full.",
+      italianQuote:
+        "Una sorella è la mano che Dio ti presta quando le tue sono piene.",
+      photo: "../assets/sr_agatha_mkunda.jpg",
+    },
+    {
+      author: "Sr. Felicity Makena",
+      category: "Sisterly Love",
+      quote:
+        "To love a sister is to learn the alphabet of heaven, one letter at a time.",
+      italianQuote:
+        "Amare una sorella è imparare l'alfabeto del cielo, una lettera alla volta.",
+      photo: "../assets/sr_felicity_makena.jpg",
+    },
+    {
+      author: "Sr. Hellen Murungi",
+      category: "Sisterly Love",
+      quote:
+        "A shared burden is halved; a shared joy is doubled — this is the math of sisters.",
+      italianQuote:
+        "Un peso condiviso si dimezza; una gioia condivisa si raddoppia — questa è la matematica delle sorelle.",
+      photo: "../assets/sr_hellen_murungi.jpg",
+    },
+    {
+      author: "Sr. Jiunisia Kaburi",
+      category: "Sisterly Love",
+      quote:
+        "Sisters are the threads God weaves into a single cloth — pull one, and the whole pattern holds.",
+      italianQuote:
+        "Le sorelle sono i fili che Dio intreccia in un unico tessuto — tira uno, e l'intero disegno tiene.",
+      photo: "../assets/sr_junisia.jpg",
+    },
+    {
+      author: "Sr. Joan",
+      category: "Sisterly Love",
+      quote: "A sister's silence is sometimes the loudest love she can give.",
+      italianQuote:
+        "Il silenzio di una sorella è a volte l'amore più forte che possa dare.",
+      photo: "../assets/sr_joan.jpg",
+    },
+    {
+      author: "Sr. Margaret N. Kaleli",
+      category: "Sisterly Love",
+      quote: "To walk beside a sister is holier than to walk ahead of her.",
+      italianQuote:
+        "Camminare accanto a una sorella è più santo che camminarle davanti.",
+      photo: "../assets/sr_margaret_n_kaleli.jpg",
+    },
+    {
+      author: "Sr. Virginia Mwakiuna",
+      category: "Sisterly Love",
+      quote:
+        "The warmth between sisters is the fire that keeps the cold world at bay.",
+      italianQuote:
+        "Il calore tra sorelle è il fuoco che tiene lontano il mondo freddo.",
+      photo: "../assets/sr_virginia_mwakiuna.jpg",
+    },
+    {
+      author: "Sr. Adriana",
+      category: "Sisterly Love",
+      quote:
+        "A sister's smile is a small window through which God peeks at us.",
+      italianQuote:
+        "Il sorriso di una sorella è una piccola finestra da cui Dio ci sbircia.",
+      photo: "../assets/sr_adriana.jpg",
+    },
+    {
+      author: "Sr. Agnes Muthoni",
+      category: "Sisterly Love",
+      quote:
+        "Love among sisters is not a feeling — it is a thousand small decisions made daily.",
+      italianQuote:
+        "L'amore tra sorelle non è un sentimento — è mille piccole decisioni prese ogni giorno.",
+      photo: "../assets/sr_agnes.jpg",
+    },
+    {
+      author: "Sr. Anastasia Nkubitu",
+      category: "Sisterly Love",
+      quote: "When a sister stumbles, the convent does not fall — it kneels.",
+      italianQuote:
+        "Quando una sorella inciampa, il convento non cade — si inginocchia.",
+      photo: "../assets/sr_anastasia_nkubitu.jpg",
+    },
+    {
+      author: "Sr. Andreina Stradiotto",
+      category: "Sisterly Love",
+      quote:
+        "Two sisters praying together build a bridge no distance can break.",
+      italianQuote:
+        "Due sorelle che pregano insieme costruiscono un ponte che nessuna distanza può spezzare.",
+      photo: "../assets/andreina_stradiotto.jpg",
+    },
+    {
+      author: "Sr. Angelica Kinya",
+      category: "Sisterly Love",
+      quote:
+        "The gentlest correction is the one spoken by a sister who first listened.",
+      italianQuote:
+        "La correzione più gentile è quella pronunciata da una sorella che prima ha ascoltato.",
+      photo: "../assets/sr_angelica_kinya.jpg",
+    },
+    {
+      author: "Sr. Aniceta Kaare",
+      category: "Sisterly Love",
+      quote:
+        "A sister's faithfulness is the quiet wall that keeps the house standing.",
+      italianQuote:
+        "La fedeltà di una sorella è il muro silenzioso che tiene in piedi la casa.",
+      photo: "../assets/sr_aniceta.jpg",
+    },
+    {
+      author: "Sr. Ann",
+      category: "Sisterly Love",
+      quote:
+        "Sisterly love is the Gospel written in ordinary handwriting — read by everyone who watches.",
+      italianQuote:
+        "L'amore fraterno è il Vangelo scritto con grafia ordinaria — letto da chiunque osservi.",
+      photo: "../assets/sr_ann.jpg",
+    },
+    {
+      author: "Sr. Beatrice Kinoti",
+      category: "Sisterly Love",
+      quote: "A sister who forgives quickly keeps the family fire burning.",
+      italianQuote:
+        "Una sorella che perdona in fretta mantiene acceso il fuoco della famiglia.",
+      photo: "../assets/sr_beatrice_kinoti.jpg",
+    },
+    {
+      author: "Sr. Benedicta",
+      category: "Sisterly Love",
+      quote:
+        "To carry a sister's cross for one mile is to carry Christ for two.",
+      italianQuote:
+        "Portare la croce di una sorella per un miglio è portare Cristo per due.",
+      photo: "../assets/sr_benedicta.jpg",
+    },
+    {
+      author: "Sr. Beth",
+      category: "Sisterly Love",
+      quote:
+        "Sisters do not compete for the sun — they stand tall together and share the light.",
+      italianQuote:
+        "Le sorelle non competono per il sole — stanno alte insieme e condividono la luce.",
+      photo: "../assets/sr_beth.jpg",
+    },
+    {
+      author: "Sr. Cecilia",
+      category: "Sisterly Love",
+      quote:
+        "A sister's song is lovelier when another sister hums the harmony.",
+      italianQuote:
+        "Il canto di una sorella è più bello quando un'altra sorella mormora l'armonia.",
+      photo: "../assets/sr_cecilia.jpg",
+    },
+    {
+      author: "Sr. Christine Musoga",
+      category: "Sisterly Love",
+      quote:
+        "The best gift a sister gives is her attention — full, unhurried, and without a phone.",
+      italianQuote:
+        "Il dono più bello che una sorella offre è la sua attenzione — piena, senza fretta e senza telefono.",
+      photo: "../assets/sr_christine_musoga.jpg",
+    },
+    {
+      author: "Sr. Consolata",
+      category: "Sisterly Love",
+      quote:
+        "A sister's presence is itself a prayer — sometimes the only one needed.",
+      italianQuote:
+        "La presenza di una sorella è già una preghiera — a volte l'unica necessaria.",
+      photo: "../assets/sr_consolata.jpg",
+    },
+    {
+      author: "Sr. Dorcas",
+      category: "Sisterly Love",
+      quote: "Sisters are the hands that mend what the day has torn.",
+      italianQuote:
+        "Le sorelle sono le mani che riparano ciò che la giornata ha strappato.",
+      photo: "../assets/sr_dorcas.jpg",
+    },
+    {
+      author: "Sr. Dorothy",
+      category: "Sisterly Love",
+      quote:
+        "The road to holiness is not walked alone — it is walked arm in arm.",
+      italianQuote:
+        "La strada verso la santità non si percorre da soli — si percorre a braccetto.",
+      photo: "../assets/sr_dorothy.jpg",
+    },
+    {
+      author: "Sr. Frida Mburugu",
+      category: "Sisterly Love",
+      quote: "A sister's loyalty is the safety net under every leap of faith.",
+      italianQuote:
+        "La lealtà di una sorella è la rete di sicurezza sotto ogni salto di fede.",
+      photo: "../assets/sr_fridah.jpg",
+    },
+    {
+      author: "Sr. Giovanna",
+      category: "Sisterly Love",
+      quote: "To live with a sister is to learn that love is spelled t-i-m-e.",
+      italianQuote:
+        "Vivere con una sorella è imparare che amore si scrive t-e-m-p-o.",
+      photo: "../assets/giovanna.jpg",
+    },
+    {
+      author: "Sr. Gladys",
+      category: "Sisterly Love",
+      quote:
+        "A sister's laughter is the sound of heaven leaking into the kitchen.",
+      italianQuote:
+        "La risata di una sorella è il suono del cielo che filtra in cucina.",
+      photo: "../assets/sr_gladys.png",
+    },
+    {
+      author: "Sr. Hannah",
+      category: "Sisterly Love",
+      quote:
+        "Sisters are the mirrors God uses to show us our truest selves — and still love us.",
+      italianQuote:
+        "Le sorelle sono gli specchi che Dio usa per mostrarci il nostro vero io — e amarci comunque.",
+      photo: "../assets/sr_hannah.jpg",
+    },
+    {
+      author: "Sr. Immaculate",
+      category: "Sisterly Love",
+      quote: "A sister's patience is a garden where trust slowly grows.",
+      italianQuote:
+        "La pazienza di una sorella è un giardino dove la fiducia cresce lentamente.",
+      photo: "../assets/sr_immaculate.jpg",
+    },
+    {
+      author: "Sr. Jane Murigi",
+      category: "Sisterly Love",
+      quote: "Sisterly love chooses the lower seat and the warmer welcome.",
+      italianQuote:
+        "L'amore fraterno sceglie il posto più basso e l'accoglienza più calorosa.",
+      photo: "../assets/jane_murigi.jpg",
+    },
+    {
+      author: "Sr. Jane Makanda",
+      category: "Sisterly Love",
+      quote: "A sister's counsel is a lantern lit by years of quiet prayer.",
+      italianQuote:
+        "Il consiglio di una sorella è una lanterna accesa da anni di preghiera silenziosa.",
+      photo: "../assets/jane_makanda.jpg",
+    },
+    {
+      author: "Sr. Jerusha Nkatha",
+      category: "Sisterly Love",
+      quote: "Sisters do not count favours — they count each other's joys.",
+      italianQuote:
+        "Le sorelle non contano i favori — contano le gioie l'una dell'altra.",
+      photo: "../assets/sr_jerusha.jpg",
+    },
+    {
+      author: "Sr. Julian",
+      category: "Sisterly Love",
+      quote:
+        "Where sisters forgive before sunset, no night is ever truly dark.",
+      italianQuote:
+        "Dove le sorelle perdonano prima del tramonto, nessuna notte è mai davvero buia.",
+      photo: "../assets/sr_julian.jpg",
+    },
+    {
+      author: "Sr. Loredana",
+      category: "Sisterly Love",
+      quote: "A sister's welcome is a doorway where strangers become family.",
+      italianQuote:
+        "L'accoglienza di una sorella è una porta dove gli estranei diventano famiglia.",
+      photo: "../assets/sr_loredana.jpg",
+    },
+    {
+      author: "Sr. Lucy Wegoki",
+      category: "Sisterly Love",
+      quote:
+        "Sisters are the steady pulse beneath the community's every heartbeat.",
+      italianQuote:
+        "Le sorelle sono il polso costante sotto ogni battito della comunità.",
+      photo: "../assets/sr_lucy_wegoki.jpg",
+    },
+    {
+      author: "Sr. Luisa Makena",
+      category: "Sisterly Love",
+      quote:
+        "To love a sister well is to become the person she already believes you are.",
+      italianQuote:
+        "Amare bene una sorella è diventare la persona che lei già crede che tu sia.",
+      photo: "../assets/sr_luisa_makena.jpg",
+    },
+    {
+      author: "Sr. Maria Carrolla",
+      category: "Sisterly Love",
+      quote:
+        "Sisters are God's answer to the question, 'Am I alone?' — a gentle, daily no.",
+      italianQuote:
+        "Le sorelle sono la risposta di Dio alla domanda 'Sono sola?' — un dolce no quotidiano.",
+      photo: "../assets/sr_maria_carrolla.jpg",
+    },
+    {
+      author: "Sr. Martha",
+      category: "Sisterly Love",
+      quote:
+        "A sister who serves unseen is still seen by every sister she serves.",
+      italianQuote:
+        "Una sorella che serve senza essere vista è vista da ogni sorella che serve.",
+      photo: "../assets/sr_martha_k.jpg",
+    },
+    {
+      author: "Sr. Mary Japheth",
+      category: "Sisterly Love",
+      quote:
+        "Sisterly love is the quiet yes that echoes through every ordinary morning.",
+      italianQuote:
+        "L'amore fraterno è il sì silenzioso che risuona in ogni mattina ordinaria.",
+      photo: "../assets/sr_mary_japheth.jpg",
+    },
+    {
+      author: "Sr. Mary Mwikali Matheka",
+      category: "Sisterly Love",
+      quote:
+        "A sister's embrace is where the day's dust is finally allowed to settle.",
+      italianQuote:
+        "L'abbraccio di una sorella è dove la polvere del giorno può finalmente posarsi.",
+      photo: "../assets/sr_mary_mwikali.jpg",
+    },
+    {
+      author: "Sr. Maureen",
+      category: "Sisterly Love",
+      quote: "Sisters are the music God composed for two voices and one heart.",
+      italianQuote:
+        "Le sorelle sono la musica che Dio ha composto per due voci e un solo cuore.",
+      photo: "../assets/sr_maureen.jpg",
+    },
+    {
+      author: "Sr. Mercy Kathure",
+      category: "Sisterly Love",
+      quote:
+        "To forgive a sister is to hand her the key to a door you both will walk through.",
+      italianQuote:
+        "Perdonare una sorella è consegnarle la chiave di una porta che attraverserete insieme.",
+      photo: "../assets/sr_mercy_kathure.jpg",
+    },
+    {
+      author: "Sr. Nancy",
+      category: "Sisterly Love",
+      quote:
+        "A sister's trust is a rare coin — spend it carefully, never counterfeit it.",
+      italianQuote:
+        "La fiducia di una sorella è una moneta rara — spendila con cura, non falsificarla mai.",
+      photo: "../assets/sr_nancy.jpg",
+    },
+    {
+      author: "Sr. Pauline",
+      category: "Sisterly Love",
+      quote:
+        "Sisters do not walk in lockstep — they walk in step with each other's pace.",
+      italianQuote:
+        "Le sorelle non camminano all'unisono — camminano al passo l'una dell'altra.",
+      photo: "../assets/sr_pauline.jpg",
+    },
+    {
+      author: "Sr. Priscilla Kanini",
+      category: "Sisterly Love",
+      quote: "A sister's quiet faithfulness is louder than a thousand sermons.",
+      italianQuote:
+        "La fedeltà silenziosa di una sorella è più forte di mille sermoni.",
+      photo: "../assets/sr_priscilla_kanini.jpg",
+    },
+    {
+      author: "Sr. Purity Nkatha",
+      category: "Sisterly Love",
+      quote:
+        "To love a sister purely is to want her holiness more than her company.",
+      italianQuote:
+        "Amare una sorella con purezza è desiderare la sua santità più della sua compagnia.",
+      photo: "../assets/sr_purity.jpg",
+    },
+    {
+      author: "Sr. Regina",
+      category: "Sisterly Love",
+      quote: "A sister's joy is not diminished when shared — it is crowned.",
+      italianQuote:
+        "La gioia di una sorella non diminuisce quando è condivisa — viene incoronata.",
+      photo: "../assets/sr_regina.jpg",
+    },
+    {
+      author: "Sr. Rose Kanathi",
+      category: "Sisterly Love",
+      quote:
+        "Sisters are the petals of one flower — separate, yet never truly apart.",
+      italianQuote:
+        "Le sorelle sono i petali di un solo fiore — separate, ma mai davvero divise.",
+      photo: "../assets/rose_kanathi.jpg",
+    },
+    {
+      author: "Sr. Sabina Murwana",
+      category: "Sisterly Love",
+      quote: "A sister's gentleness is a shelter the storm cannot enter.",
+      italianQuote:
+        "La dolcezza di una sorella è un rifugio in cui la tempesta non può entrare.",
+      photo: "../assets/sr_sabina_murwana.jpg",
+    },
+    {
+      author: "Sr. Salome Wavinya",
+      category: "Sisterly Love",
+      quote:
+        "Sisters are God's quiet reminder that holiness was never meant to be lonely.",
+      italianQuote:
+        "Le sorelle sono il dolce promemoria di Dio che la santità non è mai stata destinata alla solitudine.",
+      photo: "../assets/sr_salome.jpg",
+    },
+    {
+      author: "Sr. Sofia",
+      category: "Sisterly Love",
+      quote: "To love a sister is to choose her again every single morning.",
+      italianQuote:
+        "Amare una sorella è sceglierla di nuovo ogni singola mattina.",
+      photo: "../assets/sr_sofia.jpg",
+    },
+    {
+      author: "Sr. Susan Chokera",
+      category: "Sisterly Love",
+      quote: "A sister's courage makes the whole community braver.",
+      italianQuote:
+        "Il coraggio di una sorella rende tutta la comunità più coraggiosa.",
+      photo: "../assets/sr_susan_chokera.jpg",
+    },
+    {
+      author: "Sr. Susan Kanini",
+      category: "Sisterly Love",
+      quote:
+        "Sisters are the hands that fold another sister's laundry — and her worries.",
+      italianQuote:
+        "Le sorelle sono le mani che piegano il bucato di un'altra sorella — e le sue preoccupazioni.",
+      photo: "../assets/sr_susan_kanini.jpg",
+    },
+    {
+      author: "Sr. Teresia Gathoni",
+      category: "Sisterly Love",
+      quote:
+        "A sister who prays for you is doing work you will never see but always feel.",
+      italianQuote:
+        "Una sorella che prega per te fa un lavoro che non vedrai mai ma sentirai sempre.",
+      photo: "../assets/sr_theresa.jpg",
+    },
+    {
+      author: "Sr. Winnie Lopez",
+      category: "Sisterly Love",
+      quote: "To be loved by a sister is to be known — and still welcomed.",
+      italianQuote:
+        "Essere amata da una sorella è essere conosciuta — e comunque accolta.",
+      photo: "../assets/sr_winnie.jpg",
+    },
+    {
+      author: "Sr. Jiunisia Kaburi ",
       category: "Patience",
       quote:
         "Patience is waiting with hope, believing that God’s timing is always perfect.",
@@ -10626,7 +11491,7 @@ export function getQuotes() {
       photo: "../assets/sr_junisia.jpg",
     },
     {
-      author: "Sr Jiunisia Kaburi ",
+      author: "Sr. Jiunisia Kaburi ",
       category: "Kindness",
       quote:
         "Kindness is the language that everyone understands and no one forgets.",
@@ -10635,7 +11500,7 @@ export function getQuotes() {
       photo: "../assets/sr_junisia.jpg",
     },
     {
-      author: "Sr Jiunisia Kaburi ",
+      author: "Sr. Jiunisia Kaburi ",
       category: "Goodness",
       quote:
         "Goodness is choosing to do what is right, even when it is not easy.",
@@ -10644,7 +11509,7 @@ export function getQuotes() {
       photo: "../assets/sr_junisia.jpg",
     },
     {
-      author: "Sr Jiunisia Kaburi ",
+      author: "Sr. Jiunisia Kaburi ",
       category: "Faithfulness",
       quote:
         "Faithfulness is remaining true to our promises and to God’s call.",
@@ -10653,7 +11518,7 @@ export function getQuotes() {
       photo: "../assets/sr_junisia.jpg",
     },
     {
-      author: "Sr Jiunisia Kaburi ",
+      author: "Sr. Jiunisia Kaburi ",
       category: "Gentleness",
       quote:
         "Gentleness transforms the hardest heart and brings comfort to the weary.",
@@ -10662,7 +11527,7 @@ export function getQuotes() {
       photo: "../assets/sr_junisia.jpg",
     },
     {
-      author: "Sr Jiunisia Kaburi ",
+      author: "Sr. Jiunisia Kaburi ",
       category: "Self-control",
       quote:
         "Self-control is strength of the spirit guided by love and wisdom.",
@@ -10671,7 +11536,7 @@ export function getQuotes() {
       photo: "../assets/sr_junisia.jpg",
     },
     {
-      author: "Sr Jiunisia Kaburi ",
+      author: "Sr. Jiunisia Kaburi ",
       category: "Understanding",
       quote:
         "Understanding begins with listening and a willingness to see with the heart.",
@@ -10680,7 +11545,7 @@ export function getQuotes() {
       photo: "../assets/sr_junisia.jpg",
     },
     {
-      author: "Sr Jiunisia Kaburi ",
+      author: "Sr. Jiunisia Kaburi ",
       category: "Counsel (Right Judgment)",
       quote:
         "Let the Holy Spirit guide your words and decisions, so that your counsel brings light.",
@@ -10689,7 +11554,7 @@ export function getQuotes() {
       photo: "../assets/sr_junisia.jpg",
     },
     {
-      author: "Sr Jiunisia Kaburi ",
+      author: "Sr. Jiunisia Kaburi ",
       category: "Fortitude (Courage)",
       quote:
         "Courage is not the absence of fear, but the willingness to trust God in every trial.",
@@ -10698,7 +11563,7 @@ export function getQuotes() {
       photo: "../assets/sr_junisia.jpg",
     },
     {
-      author: "Sr Jiunisia Kaburi ",
+      author: "Sr. Jiunisia Kaburi ",
       category: "Piety (Reverence)",
       quote:
         "Reverence opens our eyes to God’s presence in simple things and daily moments.",
@@ -10707,7 +11572,7 @@ export function getQuotes() {
       photo: "../assets/sr_junisia.jpg",
     },
     {
-      author: "Sr Jiunisia Kaburi ",
+      author: "Sr. Jiunisia Kaburi ",
       category: "Fear of the Lord (Wonder and Awe)",
       quote:
         "To stand in awe before God is to recognize His greatness and our need for Him.",
@@ -10716,7 +11581,7 @@ export function getQuotes() {
       photo: "../assets/sr_junisia.jpg",
     },
     {
-      author: "Sr Jiunisia Kaburi ",
+      author: "Sr. Jiunisia Kaburi ",
       category: "Trust",
       quote:
         "Trust is surrendering to God’s plan, knowing He holds our future.",
@@ -10725,7 +11590,7 @@ export function getQuotes() {
       photo: "../assets/sr_junisia.jpg",
     },
     {
-      author: "Sr Jiunisia Kaburi ",
+      author: "Sr. Jiunisia Kaburi ",
       category: "Prayer and Meditation",
       quote:
         "In prayer, we find strength to face each day and peace to rest each night.",
@@ -10734,7 +11599,7 @@ export function getQuotes() {
       photo: "../assets/sr_junisia.jpg",
     },
     {
-      author: "Sr Jiunisia Kaburi ",
+      author: "Sr. Jiunisia Kaburi ",
       category: "Compassion",
       quote:
         "Compassion is seeing the pain of others and offering our hearts in response.",
@@ -10743,7 +11608,7 @@ export function getQuotes() {
       photo: "../assets/sr_junisia.jpg",
     },
     {
-      author: "Sr Jiunisia Kaburi ",
+      author: "Sr. Jiunisia Kaburi ",
       category: "Hope and Perseverance",
       quote:
         "Hope is the anchor of our soul; perseverance is the sail that keeps us moving.",
@@ -10752,7 +11617,7 @@ export function getQuotes() {
       photo: "../assets/sr_junisia.jpg",
     },
     {
-      author: "Sr Jiunisia Kaburi ",
+      author: "Sr. Jiunisia Kaburi ",
       category: "Charity",
       quote:
         "Charity is love in action, reaching out to those in need with a generous heart.",
@@ -10761,7 +11626,7 @@ export function getQuotes() {
       photo: "../assets/sr_junisia.jpg",
     },
     {
-      author: "Sr Jiunisia Kaburi ",
+      author: "Sr. Jiunisia Kaburi ",
       category: "Forgiveness",
       quote:
         "Forgiveness frees us from the burden of anger and opens the door to peace.",
@@ -10770,7 +11635,7 @@ export function getQuotes() {
       photo: "../assets/sr_junisia.jpg",
     },
     {
-      author: "Sr Jiunisia Kaburi ",
+      author: "Sr. Jiunisia Kaburi ",
       category: "Wisdom",
       quote:
         "Wisdom is seeing the world through God’s eyes and choosing His ways.",
@@ -10779,7 +11644,7 @@ export function getQuotes() {
       photo: "../assets/sr_junisia.jpg",
     },
     {
-      author: "Sr Jiunisia Kaburi ",
+      author: "Sr. Jiunisia Kaburi ",
       category: "Spiritual Growth",
       quote:
         "Spiritual growth is walking each day closer to God, learning from every step.",
@@ -10788,7 +11653,7 @@ export function getQuotes() {
       photo: "../assets/sr_junisia.jpg",
     },
     {
-      author: "Sr Jiunisia Kaburi ",
+      author: "Sr. Jiunisia Kaburi ",
       category: "Humility",
       quote:
         "Humility is knowing our strength comes from God and offering ourselves in service.",
@@ -10797,15 +11662,7 @@ export function getQuotes() {
       photo: "../assets/sr_junisia.jpg",
     },
     {
-      author: "Sr Jiunisia Kaburi ",
-      category: "Gratittude",
-      quote: "Gratitude turns every blessing into a song of praise.",
-      italianQuote:
-        "La gratitudine trasforma ogni benedizione in un canto di lode.",
-      photo: "../assets/sr_junisia.jpg",
-    },
-    {
-      author: "Sr Jiunisia Kaburi ",
+      author: "Sr. Jiunisia Kaburi ",
       category: "Latin",
       quote: "Let your heart be guided by love and your actions by faith.",
       italianQuote:
@@ -10814,7 +11671,7 @@ export function getQuotes() {
     },
 
     {
-      author: "Sr Hellen Murungi",
+      author: "Sr. Hellen Murungi",
       category: "Love",
       quote:
         "Love is the gentle light that brightens every corner of the heart.",
@@ -10823,7 +11680,7 @@ export function getQuotes() {
       photo: "../assets/sr_hellen_murungi.jpg",
     },
     {
-      author: "Sr Hellen Murungi",
+      author: "Sr. Hellen Murungi",
       category: "Joy",
       quote: "Joy is the melody that turns ordinary days into celebrations.",
       italianQuote:
@@ -10831,7 +11688,7 @@ export function getQuotes() {
       photo: "../assets/sr_hellen_murungi.jpg",
     },
     {
-      author: "Sr Hellen Murungi",
+      author: "Sr. Hellen Murungi",
       category: "Peace",
       quote: "Peace blooms when we trust God’s presence in every moment.",
       italianQuote:
@@ -10839,7 +11696,7 @@ export function getQuotes() {
       photo: "../assets/sr_hellen_murungi.jpg",
     },
     {
-      author: "Sr Hellen Murungi",
+      author: "Sr. Hellen Murungi",
       category: "Patience",
       quote: "Patience is the silent strength that gives hope time to blossom.",
       italianQuote:
@@ -10847,7 +11704,7 @@ export function getQuotes() {
       photo: "../assets/sr_hellen_murungi.jpg",
     },
     {
-      author: "Sr Hellen Murungi",
+      author: "Sr. Hellen Murungi",
       category: "Kindness",
       quote: "Kindness is a seed—plant it everywhere, and watch love grow.",
       italianQuote:
@@ -10855,7 +11712,7 @@ export function getQuotes() {
       photo: "../assets/sr_hellen_murungi.jpg",
     },
     {
-      author: "Sr Hellen Murungi",
+      author: "Sr. Hellen Murungi",
       category: "Goodness",
       quote:
         "Goodness is choosing to do what is right, even when it is unseen.",
@@ -10864,7 +11721,7 @@ export function getQuotes() {
       photo: "../assets/sr_hellen_murungi.jpg",
     },
     {
-      author: "Sr Hellen Murungi",
+      author: "Sr. Hellen Murungi",
       category: "Faithfulness",
       quote: "Faithfulness is the courage to stay true, whatever the season.",
       italianQuote:
@@ -10872,14 +11729,14 @@ export function getQuotes() {
       photo: "../assets/sr_hellen_murungi.jpg",
     },
     {
-      author: "Sr Hellen Murungi",
+      author: "Sr. Hellen Murungi",
       category: "Gentleness",
       quote: "Gentleness is the quiet touch that heals and uplifts.",
       italianQuote: "La mitezza è il tocco silenzioso che guarisce e solleva.",
       photo: "../assets/sr_hellen_murungi.jpg",
     },
     {
-      author: "Sr Hellen Murungi",
+      author: "Sr. Hellen Murungi",
       category: "Self-control",
       quote: "Self-control is wisdom guiding the heart and steadying the soul.",
       italianQuote:
@@ -10887,7 +11744,7 @@ export function getQuotes() {
       photo: "../assets/sr_hellen_murungi.jpg",
     },
     {
-      author: "Sr Hellen Murungi",
+      author: "Sr. Hellen Murungi",
       category: "Understanding",
       quote: "Understanding begins when we listen with humility and love.",
       italianQuote:
@@ -10895,7 +11752,7 @@ export function getQuotes() {
       photo: "../assets/sr_hellen_murungi.jpg",
     },
     {
-      author: "Sr Hellen Murungi",
+      author: "Sr. Hellen Murungi",
       category: "Counsel (Right Judgment)",
       quote:
         "Seek wisdom in prayer, and your counsel will bring light and peace.",
@@ -10904,7 +11761,7 @@ export function getQuotes() {
       photo: "../assets/sr_hellen_murungi.jpg",
     },
     {
-      author: "Sr Hellen Murungi",
+      author: "Sr. Hellen Murungi",
       category: "Fortitude (Courage)",
       quote:
         "Courage is not the absence of fear, but the strength to move forward with faith.",
@@ -10913,7 +11770,7 @@ export function getQuotes() {
       photo: "../assets/sr_hellen_murungi.jpg",
     },
     {
-      author: "Sr Hellen Murungi",
+      author: "Sr. Hellen Murungi",
       category: "Piety (Reverence)",
       quote:
         "Reverence is meeting God in the ordinary and honoring Him in all things.",
@@ -10922,7 +11779,7 @@ export function getQuotes() {
       photo: "../assets/sr_hellen_murungi.jpg",
     },
     {
-      author: "Sr Hellen Murungi",
+      author: "Sr. Hellen Murungi",
       category: "Fear of the Lord (Wonder and Awe)",
       quote:
         "To stand in awe of God is to embrace His mystery and love with open arms.",
@@ -10931,7 +11788,7 @@ export function getQuotes() {
       photo: "../assets/sr_hellen_murungi.jpg",
     },
     {
-      author: "Sr Hellen Murungi",
+      author: "Sr. Hellen Murungi",
       category: "Trust",
       quote:
         "Trust is resting in God’s promise, even when the path is unclear.",
@@ -10940,7 +11797,7 @@ export function getQuotes() {
       photo: "../assets/sr_hellen_murungi.jpg",
     },
     {
-      author: "Sr Hellen Murungi",
+      author: "Sr. Hellen Murungi",
       category: "Prayer and Meditation",
       quote: "In prayer, our hearts find peace and our spirits are renewed.",
       italianQuote:
@@ -10948,7 +11805,7 @@ export function getQuotes() {
       photo: "../assets/sr_hellen_murungi.jpg",
     },
     {
-      author: "Sr Hellen Murungi",
+      author: "Sr. Hellen Murungi",
       category: "Compassion",
       quote:
         "Compassion is the bridge that connects our hearts to the needs of others.",
@@ -10957,7 +11814,7 @@ export function getQuotes() {
       photo: "../assets/sr_hellen_murungi.jpg",
     },
     {
-      author: "Sr Hellen Murungi",
+      author: "Sr. Hellen Murungi",
       category: "Hope and Perseverance",
       quote: "Hope lights the way; perseverance carries us forward.",
       italianQuote:
@@ -10965,7 +11822,7 @@ export function getQuotes() {
       photo: "../assets/sr_hellen_murungi.jpg",
     },
     {
-      author: "Sr Hellen Murungi",
+      author: "Sr. Hellen Murungi",
       category: "Charity",
       quote:
         "Charity is giving with a joyful heart, expecting nothing in return.",
@@ -10974,7 +11831,7 @@ export function getQuotes() {
       photo: "../assets/sr_hellen_murungi.jpg",
     },
     {
-      author: "Sr Hellen Murungi",
+      author: "Sr. Hellen Murungi",
       category: "Forgiveness",
       quote:
         "Forgiveness is the key that sets us free from the chains of the past.",
@@ -10983,7 +11840,7 @@ export function getQuotes() {
       photo: "../assets/sr_hellen_murungi.jpg",
     },
     {
-      author: "Sr Hellen Murungi",
+      author: "Sr. Hellen Murungi",
       category: "Wisdom",
       quote: "Wisdom shines brightest when we seek God’s will above our own.",
       italianQuote:
@@ -10991,7 +11848,7 @@ export function getQuotes() {
       photo: "../assets/sr_hellen_murungi.jpg",
     },
     {
-      author: "Sr Hellen Murungi",
+      author: "Sr. Hellen Murungi",
       category: "Spiritual Growth",
       quote:
         "Spiritual growth is a journey of becoming more like Christ each day.",
@@ -11000,7 +11857,7 @@ export function getQuotes() {
       photo: "../assets/sr_hellen_murungi.jpg",
     },
     {
-      author: "Sr Hellen Murungi",
+      author: "Sr. Hellen Murungi",
       category: "Humility",
       quote:
         "Humility is knowing that every good thing comes from God’s loving hands.",
@@ -11009,15 +11866,7 @@ export function getQuotes() {
       photo: "../assets/sr_hellen_murungi.jpg",
     },
     {
-      author: "Sr Hellen Murungi",
-      category: "Gratittude",
-      quote: "Gratitude turns every ordinary moment into a blessing.",
-      italianQuote:
-        "La gratitudine trasforma ogni momento ordinario in una benedizione.",
-      photo: "../assets/sr_hellen_murungi.jpg",
-    },
-    {
-      author: "Sr Hellen Murungi",
+      author: "Sr. Hellen Murungi",
       category: "Latin",
       quote: "Corde tuo in fide canat et vita tua in amore floreat.",
       italianQuote:
@@ -11027,50 +11876,62 @@ export function getQuotes() {
     {
       author: "Sr. Teresia Gathoni",
       category: "Love",
-      quote: "Love carries us beyond what we see, to a place only faith can reach.",
-      italianQuote: "L'amore ci porta oltre ciò che vediamo, in un luogo solo la fede può raggiungere.",
+      quote:
+        "Love carries us beyond what we see, to a place only faith can reach.",
+      italianQuote:
+        "L'amore ci porta oltre ciò che vediamo, in un luogo solo la fede può raggiungere.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
       author: "Sr. Teresia Gathoni",
       category: "Joy",
-      quote: "Joy is a quiet grace that fills the spaces where gratitude lives.",
-      italianQuote: "La gioia è una grazia silenziosa che riempie gli spazi dove vive la gratitudine.",
+      quote:
+        "Joy is a quiet grace that fills the spaces where gratitude lives.",
+      italianQuote:
+        "La gioia è una grazia silenziosa che riempie gli spazi dove vive la gratitudine.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
       author: "Sr. Teresia Gathoni",
       category: "Peace",
       quote: "Peace is born when we stop striving and let God's mercy hold us.",
-      italianQuote: "La pace nasce quando smettiamo di lottare e lasciamo che la misericordia di Dio ci sostenga.",
+      italianQuote:
+        "La pace nasce quando smettiamo di lottare e lasciamo che la misericordia di Dio ci sostenga.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
       author: "Sr. Teresia Gathoni",
       category: "Patience",
-      quote: "Patience is the soul's way of trusting in a harvest not yet seen.",
-      italianQuote: "La pazienza è il modo dell'anima di fidarsi di un raccolto non ancora visto.",
+      quote:
+        "Patience is the soul's way of trusting in a harvest not yet seen.",
+      italianQuote:
+        "La pazienza è il modo dell'anima di fidarsi di un raccolto non ancora visto.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
       author: "Sr. Teresia Gathoni",
       category: "Kindness",
-      quote: "Kindness sees beyond appearances and finds the image of God in every face.",
-      italianQuote: "La gentilezza vede oltre le apparenze e trova l'immagine di Dio in ogni volto.",
+      quote:
+        "Kindness sees beyond appearances and finds the image of God in every face.",
+      italianQuote:
+        "La gentilezza vede oltre le apparenze e trova l'immagine di Dio in ogni volto.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
       author: "Sr. Teresia Gathoni",
       category: "Goodness",
       quote: "Goodness grows quietly in hearts that choose mercy every day.",
-      italianQuote: "La bontà cresce silenziosamente nei cuori che scelgono la misericordia ogni giorno.",
+      italianQuote:
+        "La bontà cresce silenziosamente nei cuori che scelgono la misericordia ogni giorno.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
       author: "Sr. Teresia Gathoni",
       category: "Faithfulness",
-      quote: "Faithfulness means showing up again and again, as God shows up for us.",
-      italianQuote: "La fedeltà significa presentarsi ancora e ancora, come Dio si presenta per noi.",
+      quote:
+        "Faithfulness means showing up again and again, as God shows up for us.",
+      italianQuote:
+        "La fedeltà significa presentarsi ancora e ancora, come Dio si presenta per noi.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
@@ -11083,316 +11944,379 @@ export function getQuotes() {
     {
       author: "Sr. Teresia Gathoni",
       category: "Self-control",
-      quote: "Self-control gives the Spirit room to guide our hands and tongues.",
-      italianQuote: "Il controllo di sé dà spazio allo Spirito per guidare le nostre mani e la nostra lingua.",
+      quote:
+        "Self-control gives the Spirit room to guide our hands and tongues.",
+      italianQuote:
+        "Il controllo di sé dà spazio allo Spirito per guidare le nostre mani e la nostra lingua.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
       author: "Sr. Teresia Gathoni",
       category: "Understanding",
-      quote: "Understanding comes when we see with compassion instead of judgment.",
-      italianQuote: "La comprensione arriva quando vediamo con compassione invece che con giudizio.",
+      quote:
+        "Understanding comes when we see with compassion instead of judgment.",
+      italianQuote:
+        "La comprensione arriva quando vediamo con compassione invece che con giudizio.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
       author: "Sr. Teresia Gathoni",
       category: "Counsel (Right Judgment)",
-      quote: "Right judgment asks for wisdom before words, and prayer before plans.",
-      italianQuote: "Il retto giudizio chiede saggezza prima delle parole e preghiera prima dei piani.",
+      quote:
+        "Right judgment asks for wisdom before words, and prayer before plans.",
+      italianQuote:
+        "Il retto giudizio chiede saggezza prima delle parole e preghiera prima dei piani.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
       author: "Sr. Teresia Gathoni",
       category: "Fortitude (Courage)",
-      quote: "Courage is walking forward with God when every step feels uncertain.",
-      italianQuote: "Il coraggio è camminare avanti con Dio quando ogni passo sembra incerto.",
+      quote:
+        "Courage is walking forward with God when every step feels uncertain.",
+      italianQuote:
+        "Il coraggio è camminare avanti con Dio quando ogni passo sembra incerto.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
       author: "Sr. Teresia Gathoni",
       category: "Piety (Reverence)",
-      quote: "Reverence holds the world gently, knowing it belongs to God alone.",
-      italianQuote: "La riverenza tiene il mondo con delicatezza, sapendo che appartiene solo a Dio.",
+      quote:
+        "Reverence holds the world gently, knowing it belongs to God alone.",
+      italianQuote:
+        "La riverenza tiene il mondo con delicatezza, sapendo che appartiene solo a Dio.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
       author: "Sr. Teresia Gathoni",
       category: "Fear of the Lord (Wonder and Awe)",
       quote: "Awe reminds us that God is always greater than we can imagine.",
-      italianQuote: "Lo stupore ci ricorda che Dio è sempre più grande di quanto possiamo immaginare.",
+      italianQuote:
+        "Lo stupore ci ricorda che Dio è sempre più grande di quanto possiamo immaginare.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
       author: "Sr. Teresia Gathoni",
       category: "Trust",
-      quote: "Trust places the weight of tomorrow into the hands that made today.",
-      italianQuote: "La fiducia affida il peso di domani nelle mani che hanno fatto oggi.",
+      quote:
+        "Trust places the weight of tomorrow into the hands that made today.",
+      italianQuote:
+        "La fiducia affida il peso di domani nelle mani che hanno fatto oggi.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
       author: "Sr. Teresia Gathoni",
       category: "Prayer and Meditation",
       quote: "Prayer is the doorway through which God enters the ordinary.",
-      italianQuote: "La preghiera è la porta attraverso cui Dio entra nell'ordinario.",
+      italianQuote:
+        "La preghiera è la porta attraverso cui Dio entra nell'ordinario.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
       author: "Sr. Teresia Gathoni",
       category: "Compassion",
       quote: "Compassion kneels beside the broken and refuses to leave.",
-      italianQuote: "La compassione si inginocchia accanto ai fratturati e si rifiuta di andarsene.",
+      italianQuote:
+        "La compassione si inginocchia accanto ai fratturati e si rifiuta di andarsene.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
       author: "Sr. Teresia Gathoni",
       category: "Hope and Perseverance",
-      quote: "Hope carries us when our legs grow weak and the road stretches on.",
-      italianQuote: "La speranza ci porta quando le nostre gambe si indeboliscono e la strada si allunga.",
+      quote:
+        "Hope carries us when our legs grow weak and the road stretches on.",
+      italianQuote:
+        "La speranza ci porta quando le nostre gambe si indeboliscono e la strada si allunga.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
       author: "Sr. Teresia Gathoni",
       category: "Charity",
       quote: "Charity multiplies what it gives and never counts the cost.",
-      italianQuote: "La carità moltiplica ciò che dona e non conta mai il prezzo.",
+      italianQuote:
+        "La carità moltiplica ciò che dona e non conta mai il prezzo.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
       author: "Sr. Teresia Gathoni",
       category: "Forgiveness",
       quote: "Forgiveness unlocks the heart and lets mercy rush in.",
-      italianQuote: "Il perdono sblocca il cuore e lascia che la misericordia vi entri.",
+      italianQuote:
+        "Il perdono sblocca il cuore e lascia che la misericordia vi entri.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
       author: "Sr. Teresia Gathoni",
       category: "Wisdom",
       quote: "Wisdom listens before it speaks and prays before it acts.",
-      italianQuote: "La saggezza ascolta prima di parlare e prega prima di agire.",
+      italianQuote:
+        "La saggezza ascolta prima di parlare e prega prima di agire.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
       author: "Sr. Teresia Gathoni",
       category: "Spiritual Growth",
-      quote: "Spiritual growth happens in the small, hidden moments of daily love.",
-      italianQuote: "La crescita spirituale avviene nei piccoli momenti nascosti dell'amore quotidiano.",
+      quote:
+        "Spiritual growth happens in the small, hidden moments of daily love.",
+      italianQuote:
+        "La crescita spirituale avviene nei piccoli momenti nascosti dell'amore quotidiano.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
       author: "Sr. Teresia Gathoni",
       category: "Humility",
-      quote: "Humility kneels low enough to wash the feet of those who least expect it.",
-      italianQuote: "L'umiltà si inginocchia abbastanza da lavare i piedi di coloro che meno se lo aspettano.",
+      quote:
+        "Humility kneels low enough to wash the feet of those who least expect it.",
+      italianQuote:
+        "L'umiltà si inginocchia abbastanza da lavare i piedi di coloro che meno se lo aspettano.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
       author: "Sr. Teresia Gathoni",
       category: "Gratitude",
-      quote: "Gratitude turns every small mercy into a window of God's presence.",
-      italianQuote: "La gratitudine trasforma ogni piccola misericordia in una finestra della presenza di Dio.",
+      quote:
+        "Gratitude turns every small mercy into a window of God's presence.",
+      italianQuote:
+        "La gratitudine trasforma ogni piccola misericordia in una finestra della presenza di Dio.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
       author: "Sr. Teresia Gathoni",
       category: "Latin",
-      quote: "In hoc signo vinces — in faith we conquer, not by force but by love.",
-      italianQuote: "In hoc signo vinces — nella fede vinceremo, non con la forza ma con l'amore.",
-      photo: "../assets/sr_theresa.jpg",
-    },
-    {
-      author: "Sr. Teresia Gathoni",
-      category: "Gratittude",
-      quote: "A grateful heart is a heart that has found its home in God.",
-      italianQuote: "Un cuore grato è un cuore che ha trovato la sua casa in Dio.",
+      quote:
+        "In hoc signo vinces — in faith we conquer, not by force but by love.",
+      italianQuote:
+        "In hoc signo vinces — nella fede vinceremo, non con la forza ma con l'amore.",
       photo: "../assets/sr_theresa.jpg",
     },
     {
       author: "Sr. Gladys",
       category: "Love",
-      quote: "Love is the quiet way we reflect the heart of God in every everyday kindness.",
-      italianQuote: "L'amore è il modo silenzioso in cui riflettiamo il cuore di Dio nella bontà di ogni giorno.",
+      quote:
+        "Love is the quiet way we reflect the heart of God in every everyday kindness.",
+      italianQuote:
+        "L'amore è il modo silenzioso in cui riflettiamo il cuore di Dio nella bontà di ogni giorno.",
       photo: "../assets/sr_gladys.png",
     },
     {
       author: "Sr. Gladys",
       category: "Joy",
-      quote: "Joy blooms in a grateful heart that has learned to count blessings instead of burdens.",
-      italianQuote: "La gioia sboccia in un cuore grato che ha imparato a contare le benedizioni invece dei pesi.",
+      quote:
+        "Joy blooms in a grateful heart that has learned to count blessings instead of burdens.",
+      italianQuote:
+        "La gioia sboccia in un cuore grato che ha imparato a contare le benedizioni invece dei pesi.",
       photo: "../assets/sr_gladys.png",
     },
     {
       author: "Sr. Gladys",
       category: "Peace",
-      quote: "Peace grows where we place our worries into hands wiser than our own.",
-      italianQuote: "La pace cresce dove affidiamo le nostre preoccupazioni a mani più sagge delle nostre.",
+      quote:
+        "Peace grows where we place our worries into hands wiser than our own.",
+      italianQuote:
+        "La pace cresce dove affidiamo le nostre preoccupazioni a mani più sagge delle nostre.",
       photo: "../assets/sr_gladys.png",
     },
     {
       author: "Sr. Gladys",
       category: "Patience",
-      quote: "Patience waits with an open heart, trusting that God's timing is always loving.",
-      italianQuote: "La pazienza attende con cuore aperto, fidandosi che il tempo di Dio è sempre amore.",
+      quote:
+        "Patience waits with an open heart, trusting that God's timing is always loving.",
+      italianQuote:
+        "La pazienza attende con cuore aperto, fidandosi che il tempo di Dio è sempre amore.",
       photo: "../assets/sr_gladys.png",
     },
     {
       author: "Sr. Gladys",
       category: "Kindness",
-      quote: "Kindness is a small seed that grows forests of hope in unlikely soil.",
-      italianQuote: "La gentilezza è un piccolo seme che fa crescere foreste di speranza in un terreno impensabile.",
+      quote:
+        "Kindness is a small seed that grows forests of hope in unlikely soil.",
+      italianQuote:
+        "La gentilezza è un piccolo seme che fa crescere foreste di speranza in un terreno impensabile.",
       photo: "../assets/sr_gladys.png",
     },
     {
       author: "Sr. Gladys",
       category: "Goodness",
-      quote: "Goodness becomes visible when we let God's love shine through ordinary actions.",
-      italianQuote: "La bontà si fa visibile quando lasciamo che l'amore di Dio brilli attraverso le azioni di ogni giorno.",
+      quote:
+        "Goodness becomes visible when we let God's love shine through ordinary actions.",
+      italianQuote:
+        "La bontà si fa visibile quando lasciamo che l'amore di Dio brilli attraverso le azioni di ogni giorno.",
       photo: "../assets/sr_gladys.png",
     },
     {
       author: "Sr. Gladys",
       category: "Faithfulness",
-      quote: "Faithfulness is keeping our promises steady, even when the road grows weary.",
-      italianQuote: "La fedeltà è mantenere le promesse con costanza, anche quando la strada si fa stanca.",
+      quote:
+        "Faithfulness is keeping our promises steady, even when the road grows weary.",
+      italianQuote:
+        "La fedeltà è mantenere le promesse con costanza, anche quando la strada si fa stanca.",
       photo: "../assets/sr_gladys.png",
     },
     {
       author: "Sr. Gladys",
       category: "Gentleness",
-      quote: "Gentleness softens every word and makes space for wounded hearts to heal.",
-      italianQuote: "La mitezza addolcisce ogni parola e crea spazio perché i cuori feriti guariscano.",
+      quote:
+        "Gentleness softens every word and makes space for wounded hearts to heal.",
+      italianQuote:
+        "La mitezza addolcisce ogni parola e crea spazio perché i cuori feriti guariscano.",
       photo: "../assets/sr_gladys.png",
     },
     {
       author: "Sr. Gladys",
       category: "Self-control",
-      quote: "Self-control is the quiet strength that lets grace lead instead of impulse.",
-      italianQuote: "Il controllo di sé è la forza silenziosa che lascia guidare la grazia invece dell'impulso.",
+      quote:
+        "Self-control is the quiet strength that lets grace lead instead of impulse.",
+      italianQuote:
+        "Il controllo di sé è la forza silenziosa che lascia guidare la grazia invece dell'impulso.",
       photo: "../assets/sr_gladys.png",
     },
     {
       author: "Sr. Gladys",
       category: "Understanding",
-      quote: "Understanding begins when we listen with the heart as much as the ears.",
-      italianQuote: "La comprensione inizia quando ascoltiamo con il cuore quanto con le orecchie.",
+      quote:
+        "Understanding begins when we listen with the heart as much as the ears.",
+      italianQuote:
+        "La comprensione inizia quando ascoltiamo con il cuore quanto con le orecchie.",
       photo: "../assets/sr_gladys.png",
     },
     {
       author: "Sr. Gladys",
       category: "Counsel (Right Judgment)",
-      quote: "Counsel is the gift of seeing clearly what the heart truly needs.",
-      italianQuote: "Il consiglio è il dono di vedere con chiarezza ciò di cui il cuore ha davvero bisogno.",
+      quote:
+        "Counsel is the gift of seeing clearly what the heart truly needs.",
+      italianQuote:
+        "Il consiglio è il dono di vedere con chiarezza ciò di cui il cuore ha davvero bisogno.",
       photo: "../assets/sr_gladys.png",
     },
     {
       author: "Sr. Gladys",
       category: "Fortitude (Courage)",
-      quote: "Fortitude finds its courage not in our own strength but in God's promises.",
-      italianQuote: "La fortezza trova il suo coraggio non nella nostra forza, ma nelle promesse di Dio.",
+      quote:
+        "Fortitude finds its courage not in our own strength but in God's promises.",
+      italianQuote:
+        "La fortezza trova il suo coraggio non nella nostra forza, ma nelle promesse di Dio.",
       photo: "../assets/sr_gladys.png",
     },
     {
       author: "Sr. Gladys",
       category: "Piety (Reverence)",
-      quote: "Piety keeps our gaze fixed on the sacred, even in the busiest of days.",
-      italianQuote: "La pietà tiene il nostro sguardo fisso sul sacro, anche nei giorni più pieni.",
+      quote:
+        "Piety keeps our gaze fixed on the sacred, even in the busiest of days.",
+      italianQuote:
+        "La pietà tiene il nostro sguardo fisso sul sacro, anche nei giorni più pieni.",
       photo: "../assets/sr_gladys.png",
     },
     {
       author: "Sr. Gladys",
       category: "Fear of the Lord (Wonder and Awe)",
       quote: "Wonder and awe make our hearts small enough to let God be great.",
-      italianQuote: "Lo stupore e il timore rendono il nostro cuore abbastanza piccolo da lasciare che Dio sia grande.",
+      italianQuote:
+        "Lo stupore e il timore rendono il nostro cuore abbastanza piccolo da lasciare che Dio sia grande.",
       photo: "../assets/sr_gladys.png",
     },
     {
       author: "Sr. Gladys",
       category: "Trust",
-      quote: "Trust is letting God write the story while we simply walk with Him.",
-      italianQuote: "La fiducia è lasciare che Dio scriva la storia mentre noi semplicemente camminiamo con Lui.",
+      quote:
+        "Trust is letting God write the story while we simply walk with Him.",
+      italianQuote:
+        "La fiducia è lasciare che Dio scriva la storia mentre noi semplicemente camminiamo con Lui.",
       photo: "../assets/sr_gladys.png",
     },
     {
       author: "Sr. Gladys",
       category: "Prayer and Meditation",
-      quote: "In prayer we speak; in meditation we listen and find our way home.",
-      italianQuote: "Nella preghiera parliamo; nella meditazione ascoltiamo e troviamo la strada di casa.",
+      quote:
+        "In prayer we speak; in meditation we listen and find our way home.",
+      italianQuote:
+        "Nella preghiera parliamo; nella meditazione ascoltiamo e troviamo la strada di casa.",
       photo: "../assets/sr_gladys.png",
     },
     {
       author: "Sr. Gladys",
       category: "Compassion",
-      quote: "Compassion is love that lowers itself to walk beside another's pain.",
-      italianQuote: "La compassione è amore che si abbassa per camminare accanto al dolore altrui.",
+      quote:
+        "Compassion is love that lowers itself to walk beside another's pain.",
+      italianQuote:
+        "La compassione è amore che si abbassa per camminare accanto al dolore altrui.",
       photo: "../assets/sr_gladys.png",
     },
     {
       author: "Sr. Gladys",
       category: "Hope and Perseverance",
-      quote: "Hope perseveres when it remembers that dawn always follows the longest night.",
-      italianQuote: "La speranza persevera quando ricorda che l'alba segue sempre la notte più lunga.",
+      quote:
+        "Hope perseveres when it remembers that dawn always follows the longest night.",
+      italianQuote:
+        "La speranza persevera quando ricorda che l'alba segue sempre la notte più lunga.",
       photo: "../assets/sr_gladys.png",
     },
     {
       author: "Sr. Gladys",
       category: "Charity",
-      quote: "Charity gives without counting and receives back more than it gave.",
-      italianQuote: "La carità dona senza contare e riceve più di quanto abbia dato.",
+      quote:
+        "Charity gives without counting and receives back more than it gave.",
+      italianQuote:
+        "La carità dona senza contare e riceve più di quanto abbia dato.",
       photo: "../assets/sr_gladys.png",
     },
     {
       author: "Sr. Gladys",
       category: "Forgiveness",
-      quote: "Forgiveness loosens the chains of the past and sets the future free.",
-      italianQuote: "Il perdono allenta le catene del passato e libera il futuro.",
+      quote:
+        "Forgiveness loosens the chains of the past and sets the future free.",
+      italianQuote:
+        "Il perdono allenta le catene del passato e libera il futuro.",
       photo: "../assets/sr_gladys.png",
     },
     {
       author: "Sr. Gladys",
       category: "Wisdom",
-      quote: "Wisdom is knowing that the deepest truths are often the simplest.",
-      italianQuote: "La saggezza è sapere che le verità più profonde sono spesso le più semplici.",
+      quote:
+        "Wisdom is knowing that the deepest truths are often the simplest.",
+      italianQuote:
+        "La saggezza è sapere che le verità più profonde sono spesso le più semplici.",
       photo: "../assets/sr_gladys.png",
     },
     {
       author: "Sr. Gladys",
       category: "Spiritual Growth",
       quote: "Spiritual growth is becoming more like the love that made us.",
-      italianQuote: "La crescita spirituale è diventare sempre più simili all'amore che ci ha creati.",
+      italianQuote:
+        "La crescita spirituale è diventare sempre più simili all'amore che ci ha creati.",
       photo: "../assets/sr_gladys.png",
     },
     {
       author: "Sr. Gladys",
       category: "Humility",
-      quote: "Humility makes room for grace to enter where pride would close the door.",
-      italianQuote: "L'umiltà apre spazio alla grazia dove l'orgoglio chiuderebbe la porta.",
+      quote:
+        "Humility makes room for grace to enter where pride would close the door.",
+      italianQuote:
+        "L'umiltà apre spazio alla grazia dove l'orgoglio chiuderebbe la porta.",
       photo: "../assets/sr_gladys.png",
     },
     {
       author: "Sr. Gladys",
       category: "Gratitude",
-      quote: "Gratitude turns what we have into enough, and enough into abundance.",
-      italianQuote: "La gratitudine trasforma ciò che abbiamo in abbastanza, e l'abbastanza in abbondanza.",
+      quote:
+        "Gratitude turns what we have into enough, and enough into abundance.",
+      italianQuote:
+        "La gratitudine trasforma ciò che abbiamo in abbastanza, e l'abbastanza in abbondanza.",
       photo: "../assets/sr_gladys.png",
     },
     {
       author: "Sr. Gladys",
       category: "Latin",
-      quote: "Caritas Christi urget nos — the love of Christ urges us onward, and we respond with open hands.",
-      italianQuote: "Caritas Christi urget nos — l'amore di Cristo ci spinge avanti, e noi rispondiamo a mani aperte.",
-      photo: "../assets/sr_gladys.png",
-    },
-    {
-      author: "Sr. Gladys",
-      category: "Gratittude",
-      quote: "Gratitude is the song the soul sings when it remembers every blessing.",
-      italianQuote: "La gratitudine è il canto che l'anima innalza quando ricorda ogni benedizione.",
+      quote:
+        "Caritas Christi urget nos — the love of Christ urges us onward, and we respond with open hands.",
+      italianQuote:
+        "Caritas Christi urget nos — l'amore di Cristo ci spinge avanti, e noi rispondiamo a mani aperte.",
       photo: "../assets/sr_gladys.png",
     },
     {
       author: "Sr. Martha",
       category: "Love",
       quote: "Love finds its voice in the quietest acts of service.",
-      italianQuote: "L'amore trova la sua voce negli atti di servizio più silenziosi.",
+      italianQuote:
+        "L'amore trova la sua voce negli atti di servizio più silenziosi.",
       photo: "../assets/sr_martha_k.jpg",
     },
     {
@@ -11405,8 +12329,10 @@ export function getQuotes() {
     {
       author: "Sr. Martha",
       category: "Peace",
-      quote: "Peace settles like a blessing when we welcome one another as family.",
-      italianQuote: "La pace si posa come una benedizione quando ci accogliamo gli uni gli altri come famiglia.",
+      quote:
+        "Peace settles like a blessing when we welcome one another as family.",
+      italianQuote:
+        "La pace si posa come una benedizione quando ci accogliamo gli uni gli altri come famiglia.",
       photo: "../assets/sr_martha_k.jpg",
     },
     {
@@ -11420,7 +12346,8 @@ export function getQuotes() {
       author: "Sr. Martha",
       category: "Kindness",
       quote: "Kindness makes the unfamiliar feel like home.",
-      italianQuote: "La gentilezza fa sentire come a casa ciò che è sconosciuto.",
+      italianQuote:
+        "La gentilezza fa sentire come a casa ciò che è sconosciuto.",
       photo: "../assets/sr_martha_k.jpg",
     },
     {
@@ -11434,21 +12361,24 @@ export function getQuotes() {
       author: "Sr. Martha",
       category: "Faithfulness",
       quote: "Faithfulness keeps love alive long after excitement fades.",
-      italianQuote: "La fedeltà mantiene vivo l'amore molto tempo dopo che l'entusiasmo svanisce.",
+      italianQuote:
+        "La fedeltà mantiene vivo l'amore molto tempo dopo che l'entusiasmo svanisce.",
       photo: "../assets/sr_martha_k.jpg",
     },
     {
       author: "Sr. Martha",
       category: "Gentleness",
       quote: "Gentleness steadies the hands that hold another's burden.",
-      italianQuote: "La mitezza rende ferme le mani che reggono il peso di un altro.",
+      italianQuote:
+        "La mitezza rende ferme le mani che reggono il peso di un altro.",
       photo: "../assets/sr_martha_k.jpg",
     },
     {
       author: "Sr. Martha",
       category: "Self-control",
       quote: "Self-control keeps the door of the heart open to the Spirit.",
-      italianQuote: "Il controllo di sé tiene aperta la porta del cuore allo Spirito.",
+      italianQuote:
+        "Il controllo di sé tiene aperta la porta del cuore allo Spirito.",
       photo: "../assets/sr_martha_k.jpg",
     },
     {
@@ -11462,28 +12392,32 @@ export function getQuotes() {
       author: "Sr. Martha",
       category: "Counsel (Right Judgment)",
       quote: "Right judgment is wisdom seasoned by compassion.",
-      italianQuote: "Il retto giudizio è saggezza stagionata dalla compassione.",
+      italianQuote:
+        "Il retto giudizio è saggezza stagionata dalla compassione.",
       photo: "../assets/sr_martha_k.jpg",
     },
     {
       author: "Sr. Martha",
       category: "Fortitude (Courage)",
       quote: "Courage begins when we step forward for another's sake.",
-      italianQuote: "Il coraggio comincia quando facciamo un passo avanti per amore di un altro.",
+      italianQuote:
+        "Il coraggio comincia quando facciamo un passo avanti per amore di un altro.",
       photo: "../assets/sr_martha_k.jpg",
     },
     {
       author: "Sr. Martha",
       category: "Piety (Reverence)",
       quote: "Reverence bows low before the sacredness of every life.",
-      italianQuote: "La riverenza si inchina davanti alla sacralità di ogni vita.",
+      italianQuote:
+        "La riverenza si inchina davanti alla sacralità di ogni vita.",
       photo: "../assets/sr_martha_k.jpg",
     },
     {
       author: "Sr. Martha",
       category: "Fear of the Lord (Wonder and Awe)",
       quote: "Awe keeps our hearts small enough for God to fill.",
-      italianQuote: "Lo stupore mantiene i nostri cuori abbastanza piccoli perché Dio li possa riempire.",
+      italianQuote:
+        "Lo stupore mantiene i nostri cuori abbastanza piccoli perché Dio li possa riempire.",
       photo: "../assets/sr_martha_k.jpg",
     },
     {
@@ -11497,14 +12431,16 @@ export function getQuotes() {
       author: "Sr. Martha",
       category: "Prayer and Meditation",
       quote: "Prayer anchors the soul when the day grows busy.",
-      italianQuote: "La preghiera ancora l'anima quando la giornata si fa frenetica.",
+      italianQuote:
+        "La preghiera ancora l'anima quando la giornata si fa frenetica.",
       photo: "../assets/sr_martha_k.jpg",
     },
     {
       author: "Sr. Martha",
       category: "Compassion",
       quote: "Compassion is love that sits beside another's pain.",
-      italianQuote: "La compassione è l'amore che siede accanto al dolore di un altro.",
+      italianQuote:
+        "La compassione è l'amore che siede accanto al dolore di un altro.",
       photo: "../assets/sr_martha_k.jpg",
     },
     {
@@ -11532,14 +12468,17 @@ export function getQuotes() {
       author: "Sr. Martha",
       category: "Wisdom",
       quote: "Wisdom is learned at the feet of daily life, not in comfort.",
-      italianQuote: "La saggezza si impara ai piedi della vita quotidiana, non nel comfort.",
+      italianQuote:
+        "La saggezza si impara ai piedi della vita quotidiana, non nel comfort.",
       photo: "../assets/sr_martha_k.jpg",
     },
     {
       author: "Sr. Martha",
       category: "Spiritual Growth",
-      quote: "Spiritual growth asks for small steps of love, repeated faithfully.",
-      italianQuote: "La crescita spirituale chiede piccoli passi d'amore, ripetuti fedelmente.",
+      quote:
+        "Spiritual growth asks for small steps of love, repeated faithfully.",
+      italianQuote:
+        "La crescita spirituale chiede piccoli passi d'amore, ripetuti fedelmente.",
       photo: "../assets/sr_martha_k.jpg",
     },
     {
@@ -11553,28 +12492,24 @@ export function getQuotes() {
       author: "Sr. Martha",
       category: "Gratitude",
       quote: "Gratitude turns a simple table into a feast.",
-      italianQuote: "La gratitudine trasforma una tavola semplice in una festa.",
+      italianQuote:
+        "La gratitudine trasforma una tavola semplice in una festa.",
       photo: "../assets/sr_martha_k.jpg",
     },
     {
       author: "Sr. Martha",
       category: "Latin",
       quote: "Servite Domino cum laetitia — serve the Lord with gladness.",
-      italianQuote: "Servite Domino cum laetitia — servite il Signore con gioia.",
-      photo: "../assets/sr_martha_k.jpg",
-    },
-    {
-      author: "Sr. Martha",
-      category: "Gratittude",
-      quote: "A thankful heart never goes hungry.",
-      italianQuote: "Un cuore grato non ha mai fame.",
+      italianQuote:
+        "Servite Domino cum laetitia — servite il Signore con gioia.",
       photo: "../assets/sr_martha_k.jpg",
     },
     {
       author: "Sr. Beatrice Kinoti",
       category: "Love",
       quote: "Love keeps watch through the long night until morning comes.",
-      italianQuote: "L'amore veglia per tutta la lunga notte finché arriva il mattino.",
+      italianQuote:
+        "L'amore veglia per tutta la lunga notte finché arriva il mattino.",
       photo: "../assets/sr_beatrice_kinoti.jpg",
     },
     {
@@ -11588,14 +12523,16 @@ export function getQuotes() {
       author: "Sr. Beatrice Kinoti",
       category: "Peace",
       quote: "Peace shelters those who trust in God's protection.",
-      italianQuote: "La pace protegge coloro che confidano nella protezione di Dio.",
+      italianQuote:
+        "La pace protegge coloro che confidano nella protezione di Dio.",
       photo: "../assets/sr_beatrice_kinoti.jpg",
     },
     {
       author: "Sr. Beatrice Kinoti",
       category: "Patience",
       quote: "Patience is the guard that never leaves the post.",
-      italianQuote: "La pazienza è la sentinella che non abbandona mai il suo posto.",
+      italianQuote:
+        "La pazienza è la sentinella che non abbandona mai il suo posto.",
       photo: "../assets/sr_beatrice_kinoti.jpg",
     },
     {
@@ -11616,7 +12553,8 @@ export function getQuotes() {
       author: "Sr. Beatrice Kinoti",
       category: "Faithfulness",
       quote: "Faithfulness keeps its promise when no one is watching.",
-      italianQuote: "La fedeltà mantiene la sua promessa quando nessuno guarda.",
+      italianQuote:
+        "La fedeltà mantiene la sua promessa quando nessuno guarda.",
       photo: "../assets/sr_beatrice_kinoti.jpg",
     },
     {
@@ -11630,7 +12568,8 @@ export function getQuotes() {
       author: "Sr. Beatrice Kinoti",
       category: "Self-control",
       quote: "Self-control steadies the will against every storm.",
-      italianQuote: "Il controllo di sé rende salda la volontà contro ogni tempesta.",
+      italianQuote:
+        "Il controllo di sé rende salda la volontà contro ogni tempesta.",
       photo: "../assets/sr_beatrice_kinoti.jpg",
     },
     {
@@ -11651,7 +12590,8 @@ export function getQuotes() {
       author: "Sr. Beatrice Kinoti",
       category: "Fortitude (Courage)",
       quote: "Fortitude stands firm when everything tempts us to flee.",
-      italianQuote: "La fortezza rimane salda quando tutto ci tenta di fuggire.",
+      italianQuote:
+        "La fortezza rimane salda quando tutto ci tenta di fuggire.",
       photo: "../assets/sr_beatrice_kinoti.jpg",
     },
     {
@@ -11665,35 +12605,40 @@ export function getQuotes() {
       author: "Sr. Beatrice Kinoti",
       category: "Fear of the Lord (Wonder and Awe)",
       quote: "Wonder keeps us small enough to be amazed.",
-      italianQuote: "Lo stupore ci mantiene abbastanza piccoli da rimanere stupiti.",
+      italianQuote:
+        "Lo stupore ci mantiene abbastanza piccoli da rimanere stupiti.",
       photo: "../assets/sr_beatrice_kinoti.jpg",
     },
     {
       author: "Sr. Beatrice Kinoti",
       category: "Trust",
       quote: "Trust knows the Shepherd never loses one of His own.",
-      italianQuote: "La fiducia sa che il Pastore non perde mai nessuna delle Sue pecore.",
+      italianQuote:
+        "La fiducia sa che il Pastore non perde mai nessuna delle Sue pecore.",
       photo: "../assets/sr_beatrice_kinoti.jpg",
     },
     {
       author: "Sr. Beatrice Kinoti",
       category: "Prayer and Meditation",
       quote: "Prayer is the watchman's lamp that never goes out.",
-      italianQuote: "La preghiera è la lampada della sentinella che non si spegne mai.",
+      italianQuote:
+        "La preghiera è la lampada della sentinella che non si spegne mai.",
       photo: "../assets/sr_beatrice_kinoti.jpg",
     },
     {
       author: "Sr. Beatrice Kinoti",
       category: "Compassion",
       quote: "Compassion reaches down to lift those who have fallen.",
-      italianQuote: "La compassione si abbassa per sollevare coloro che sono caduti.",
+      italianQuote:
+        "La compassione si abbassa per sollevare coloro che sono caduti.",
       photo: "../assets/sr_beatrice_kinoti.jpg",
     },
     {
       author: "Sr. Beatrice Kinoti",
       category: "Hope and Perseverance",
       quote: "Perseverance walks the whole road, not just its beginning.",
-      italianQuote: "La perseveranza percorre tutta la strada, non solo il suo inizio.",
+      italianQuote:
+        "La perseveranza percorre tutta la strada, non solo il suo inizio.",
       photo: "../assets/sr_beatrice_kinoti.jpg",
     },
     {
@@ -11721,7 +12666,8 @@ export function getQuotes() {
       author: "Sr. Beatrice Kinoti",
       category: "Spiritual Growth",
       quote: "Spiritual growth is the slow unfolding of a soul in God's sun.",
-      italianQuote: "La crescita spirituale è il lento dispiegarsi di un'anima al sole di Dio.",
+      italianQuote:
+        "La crescita spirituale è il lento dispiegarsi di un'anima al sole di Dio.",
       photo: "../assets/sr_beatrice_kinoti.jpg",
     },
     {
@@ -11741,36 +12687,35 @@ export function getQuotes() {
     {
       author: "Sr. Beatrice Kinoti",
       category: "Latin",
-      quote: "Dominus pascit me, nihil mihi deerit — The Lord is my shepherd, I shall not want.",
-      italianQuote: "Dominus pascit me, nihil mihi deerit — Il Signore è il mio pastore, non manco di nulla.",
-      photo: "../assets/sr_beatrice_kinoti.jpg",
-    },
-    {
-      author: "Sr. Beatrice Kinoti",
-      category: "Gratittude",
-      quote: "A grateful heart walks safely in the dark, for it knows the way.",
-      italianQuote: "Un cuore grato cammina al sicuro nel buio, perché conosce la via.",
+      quote:
+        "Dominus pascit me, nihil mihi deerit — The Lord is my shepherd, I shall not want.",
+      italianQuote:
+        "Dominus pascit me, nihil mihi deerit — Il Signore è il mio pastore, non manco di nulla.",
       photo: "../assets/sr_beatrice_kinoti.jpg",
     },
     {
       author: "Madre Nasi",
       category: "Love",
-      quote: "To love everyone, to love as God loves — this is the whole of the Christian life.",
-      italianQuote: "Amare tutti, amare come ama Dio — questa è tutta la vita cristiana.",
+      quote:
+        "To love everyone, to love as God loves — this is the whole of the Christian life.",
+      italianQuote:
+        "Amare tutti, amare come ama Dio — questa è tutta la vita cristiana.",
       photo: "../assets/madre_nasi.jpg",
     },
     {
       author: "Madre Nasi",
       category: "Joy",
       quote: "Joy is giving the Good News to those who have never heard it.",
-      italianQuote: "La gioia è portare la Buona Notizia a chi non l'ha mai ascoltata.",
+      italianQuote:
+        "La gioia è portare la Buona Notizia a chi non l'ha mai ascoltata.",
       photo: "../assets/madre_nasi.jpg",
     },
     {
       author: "Madre Nasi",
       category: "Peace",
       quote: "Mercy is the peace that God plants in the heart of the world.",
-      italianQuote: "La misericordia è la pace che Dio pianta nel cuore del mondo.",
+      italianQuote:
+        "La misericordia è la pace che Dio pianta nel cuore del mondo.",
       photo: "../assets/madre_nasi.jpg",
     },
     {
@@ -11783,8 +12728,10 @@ export function getQuotes() {
     {
       author: "Madre Nasi",
       category: "Kindness",
-      quote: "A gentle word can open a heart that years of preaching could not reach.",
-      italianQuote: "Una parola gentile può aprire un cuore che anni di predicazione non avevano raggiunto.",
+      quote:
+        "A gentle word can open a heart that years of preaching could not reach.",
+      italianQuote:
+        "Una parola gentile può aprire un cuore che anni di predicazione non avevano raggiunto.",
       photo: "../assets/madre_nasi.jpg",
     },
     {
@@ -11797,8 +12744,10 @@ export function getQuotes() {
     {
       author: "Madre Nasi",
       category: "Faithfulness",
-      quote: "Faithfulness loves in the same place again and again, until love becomes home.",
-      italianQuote: "La fedeltà ama nello stesso luogo ancora e ancora, finché l'amore diventa casa.",
+      quote:
+        "Faithfulness loves in the same place again and again, until love becomes home.",
+      italianQuote:
+        "La fedeltà ama nello stesso luogo ancora e ancora, finché l'amore diventa casa.",
       photo: "../assets/madre_nasi.jpg",
     },
     {
@@ -11812,63 +12761,74 @@ export function getQuotes() {
       author: "Madre Nasi",
       category: "Self-control",
       quote: "Self-control keeps the heart free to follow only Christ.",
-      italianQuote: "Il controllo di sé tiene libero il cuore per seguire solo Cristo.",
+      italianQuote:
+        "Il controllo di sé tiene libero il cuore per seguire solo Cristo.",
       photo: "../assets/madre_nasi.jpg",
     },
     {
       author: "Madre Nasi",
       category: "Understanding",
       quote: "Understanding nurses the soul before it even asks for help.",
-      italianQuote: "La comprensione cura l'anima prima ancora che chieda aiuto.",
+      italianQuote:
+        "La comprensione cura l'anima prima ancora che chieda aiuto.",
       photo: "../assets/madre_nasi.jpg",
     },
     {
       author: "Madre Nasi",
       category: "Counsel (Right Judgment)",
       quote: "Right judgment is mercy that has learned how to act.",
-      italianQuote: "Il retto giudizio è misericordia che ha imparato ad agire.",
+      italianQuote:
+        "Il retto giudizio è misericordia che ha imparato ad agire.",
       photo: "../assets/madre_nasi.jpg",
     },
     {
       author: "Madre Nasi",
       category: "Fortitude (Courage)",
       quote: "Courage kneels beside the dying and speaks of heaven.",
-      italianQuote: "Il coraggio si inginocchia accanto ai moribondi e parla del cielo.",
+      italianQuote:
+        "Il coraggio si inginocchia accanto ai moribondi e parla del cielo.",
       photo: "../assets/madre_nasi.jpg",
     },
     {
       author: "Madre Nasi",
       category: "Piety (Reverence)",
-      quote: "Reverence touches every sick body as if it were the Body of Christ.",
-      italianQuote: "La riverenza tocca ogni corpo malato come se fosse il Corpo di Cristo.",
+      quote:
+        "Reverence touches every sick body as if it were the Body of Christ.",
+      italianQuote:
+        "La riverenza tocca ogni corpo malato come se fosse il Corpo di Cristo.",
       photo: "../assets/madre_nasi.jpg",
     },
     {
       author: "Madre Nasi",
       category: "Fear of the Lord (Wonder and Awe)",
       quote: "Awe is the soul remembering how great God's mercy is.",
-      italianQuote: "Lo stupore è l'anima che ricorda quanto è grande la misericordia di Dio.",
+      italianQuote:
+        "Lo stupore è l'anima che ricorda quanto è grande la misericordia di Dio.",
       photo: "../assets/madre_nasi.jpg",
     },
     {
       author: "Madre Nasi",
       category: "Trust",
       quote: "Trust abandons itself entirely, because mercy never fails.",
-      italianQuote: "La fiducia si abbandona completamente, perché la misericordia non viene mai meno.",
+      italianQuote:
+        "La fiducia si abbandona completamente, perché la misericordia non viene mai meno.",
       photo: "../assets/madre_nasi.jpg",
     },
     {
       author: "Madre Nasi",
       category: "Prayer and Meditation",
-      quote: "The missionary prays for those who do not yet know they are loved.",
-      italianQuote: "Il missionario prega per coloro che non sanno ancora di essere amati.",
+      quote:
+        "The missionary prays for those who do not yet know they are loved.",
+      italianQuote:
+        "Il missionario prega per coloro che non sanno ancora di essere amati.",
       photo: "../assets/madre_nasi.jpg",
     },
     {
       author: "Madre Nasi",
       category: "Compassion",
       quote: "Compassion is mercy on its knees beside a hospital bed.",
-      italianQuote: "La compassione è la misericordia in ginocchio accanto a un letto d'ospedale.",
+      italianQuote:
+        "La compassione è la misericordia in ginocchio accanto a un letto d'ospedale.",
       photo: "../assets/madre_nasi.jpg",
     },
     {
@@ -11881,15 +12841,19 @@ export function getQuotes() {
     {
       author: "Madre Nasi",
       category: "Charity",
-      quote: "Charity is a heart consumed with love, offering itself as a living host.",
-      italianQuote: "La carità è un cuore consumato dall'amore, che si offre come ostia viva.",
+      quote:
+        "Charity is a heart consumed with love, offering itself as a living host.",
+      italianQuote:
+        "La carità è un cuore consumato dall'amore, che si offre come ostia viva.",
       photo: "../assets/madre_nasi.jpg",
     },
     {
       author: "Madre Nasi",
       category: "Forgiveness",
-      quote: "Forgiveness is the mercy we extend because we were first forgiven.",
-      italianQuote: "Il perdono è la misericordia che doniamo perché per primi siamo stati perdonati.",
+      quote:
+        "Forgiveness is the mercy we extend because we were first forgiven.",
+      italianQuote:
+        "Il perdono è la misericordia che doniamo perché per primi siamo stati perdonati.",
       photo: "../assets/madre_nasi.jpg",
     },
     {
@@ -11902,15 +12866,18 @@ export function getQuotes() {
     {
       author: "Madre Nasi",
       category: "Spiritual Growth",
-      quote: "Spiritual growth unfolds in the quiet service of the sick and the forgotten.",
-      italianQuote: "La crescita spirituale si dispiega nel servizio silenzioso di malati e dimenticati.",
+      quote:
+        "Spiritual growth unfolds in the quiet service of the sick and the forgotten.",
+      italianQuote:
+        "La crescita spirituale si dispiega nel servizio silenzioso di malati e dimenticati.",
       photo: "../assets/madre_nasi.jpg",
     },
     {
       author: "Madre Nasi",
       category: "Humility",
       quote: "Humility does the greatest works and asks nothing in return.",
-      italianQuote: "L'umiltà compie le opere più grandi e non chiede nulla in cambio.",
+      italianQuote:
+        "L'umiltà compie le opere più grandi e non chiede nulla in cambio.",
       photo: "../assets/madre_nasi.jpg",
     },
     {
@@ -11925,13 +12892,6 @@ export function getQuotes() {
       category: "Latin",
       quote: "Nyaatha — mater misericordiae — ora pro nobis.",
       italianQuote: "Nyaatha — madre di misericordia — prega per noi.",
-      photo: "../assets/madre_nasi.jpg",
-    },
-    {
-      author: "Madre Nasi",
-      category: "Gratittude",
-      quote: "A grateful heart nurses joy back to health.",
-      italianQuote: "Un cuore grato può guarire la gioia.",
       photo: "../assets/madre_nasi.jpg",
     },
     {
@@ -12137,15 +13097,6 @@ export function getQuotes() {
     },
     {
       author: "Sr. Mercy Kathure",
-      category: "Gratittude",
-      quote:
-        "Gratitude is seeing God’s blessings in every moment, big and small.",
-      italianQuote:
-        "La gratitudine è vedere le benedizioni di Dio in ogni momento, grande o piccolo.",
-      photo: "../assets/sr_mercy_kathure.jpg",
-    },
-    {
-      author: "Sr. Mercy Kathure",
       category: "Latin",
       quote: "Fides, spes, et caritas semper cor nostrum illuminent.",
       italianQuote:
@@ -12154,7 +13105,7 @@ export function getQuotes() {
     },
 
     {
-      author: "Sr Margaret N. Kaleli",
+      author: "Sr. Margaret N. Kaleli",
       category: "Love",
       quote:
         "Love is the gentle force that unites hearts and transforms the world.",
@@ -12163,7 +13114,7 @@ export function getQuotes() {
       photo: "../assets/sr_margaret_n_kaleli.jpg",
     },
     {
-      author: "Sr Margaret N. Kaleli",
+      author: "Sr. Margaret N. Kaleli",
       category: "Joy",
       quote: "Joy is found in every moment we share kindness and gratitude.",
       italianQuote:
@@ -12171,7 +13122,7 @@ export function getQuotes() {
       photo: "../assets/sr_margaret_n_kaleli.jpg",
     },
     {
-      author: "Sr Margaret N. Kaleli",
+      author: "Sr. Margaret N. Kaleli",
       category: "Peace",
       quote: "Peace is the quiet assurance that God walks with us always.",
       italianQuote:
@@ -12179,7 +13130,7 @@ export function getQuotes() {
       photo: "../assets/sr_margaret_n_kaleli.jpg",
     },
     {
-      author: "Sr Margaret N. Kaleli",
+      author: "Sr. Margaret N. Kaleli",
       category: "Patience",
       quote:
         "Patience is the art of waiting with hope and trusting in God’s timing.",
@@ -12188,7 +13139,7 @@ export function getQuotes() {
       photo: "../assets/sr_margaret_n_kaleli.jpg",
     },
     {
-      author: "Sr Margaret N. Kaleli",
+      author: "Sr. Margaret N. Kaleli",
       category: "Kindness",
       quote: "Kindness is the simple act that leaves a lasting mark of love.",
       italianQuote:
@@ -12196,7 +13147,7 @@ export function getQuotes() {
       photo: "../assets/sr_margaret_n_kaleli.jpg",
     },
     {
-      author: "Sr Margaret N. Kaleli",
+      author: "Sr. Margaret N. Kaleli",
       category: "Goodness",
       quote:
         "Goodness flourishes when we choose what is right over what is easy.",
@@ -12205,7 +13156,7 @@ export function getQuotes() {
       photo: "../assets/sr_margaret_n_kaleli.jpg",
     },
     {
-      author: "Sr Margaret N. Kaleli",
+      author: "Sr. Margaret N. Kaleli",
       category: "Faithfulness",
       quote:
         "Faithfulness is the steady hand that holds on to hope through every storm.",
@@ -12214,7 +13165,7 @@ export function getQuotes() {
       photo: "../assets/sr_margaret_n_kaleli.jpg",
     },
     {
-      author: "Sr Margaret N. Kaleli",
+      author: "Sr. Margaret N. Kaleli",
       category: "Gentleness",
       quote: "Gentleness is the language of the soul that heals and uplifts.",
       italianQuote:
@@ -12222,7 +13173,7 @@ export function getQuotes() {
       photo: "../assets/sr_margaret_n_kaleli.jpg",
     },
     {
-      author: "Sr Margaret N. Kaleli",
+      author: "Sr. Margaret N. Kaleli",
       category: "Self-control",
       quote: "Self-control is the strength to remain calm when emotions arise.",
       italianQuote:
@@ -12230,7 +13181,7 @@ export function getQuotes() {
       photo: "../assets/sr_margaret_n_kaleli.jpg",
     },
     {
-      author: "Sr Margaret N. Kaleli",
+      author: "Sr. Margaret N. Kaleli",
       category: "Understanding",
       quote:
         "Understanding is the gift to see with the heart as well as the mind.",
@@ -12239,7 +13190,7 @@ export function getQuotes() {
       photo: "../assets/sr_margaret_n_kaleli.jpg",
     },
     {
-      author: "Sr Margaret N. Kaleli",
+      author: "Sr. Margaret N. Kaleli",
       category: "Counsel (Right Judgment)",
       quote: "Good counsel lights the path and brings clarity to our choices.",
       italianQuote:
@@ -12247,7 +13198,7 @@ export function getQuotes() {
       photo: "../assets/sr_margaret_n_kaleli.jpg",
     },
     {
-      author: "Sr Margaret N. Kaleli",
+      author: "Sr. Margaret N. Kaleli",
       category: "Fortitude (Courage)",
       quote: "Courage is standing firm in faith even when the journey is hard.",
       italianQuote:
@@ -12255,7 +13206,7 @@ export function getQuotes() {
       photo: "../assets/sr_margaret_n_kaleli.jpg",
     },
     {
-      author: "Sr Margaret N. Kaleli",
+      author: "Sr. Margaret N. Kaleli",
       category: "Piety (Reverence)",
       quote: "Reverence is honoring God in our words, actions, and thoughts.",
       italianQuote:
@@ -12263,7 +13214,7 @@ export function getQuotes() {
       photo: "../assets/sr_margaret_n_kaleli.jpg",
     },
     {
-      author: "Sr Margaret N. Kaleli",
+      author: "Sr. Margaret N. Kaleli",
       category: "Fear of the Lord (Wonder and Awe)",
       quote: "To stand in awe of the Lord is to see beauty in every creation.",
       italianQuote:
@@ -12271,7 +13222,7 @@ export function getQuotes() {
       photo: "../assets/sr_margaret_n_kaleli.jpg",
     },
     {
-      author: "Sr Margaret N. Kaleli",
+      author: "Sr. Margaret N. Kaleli",
       category: "Trust",
       quote:
         "Trust is the quiet confidence that God is always working for our good.",
@@ -12280,7 +13231,7 @@ export function getQuotes() {
       photo: "../assets/sr_margaret_n_kaleli.jpg",
     },
     {
-      author: "Sr Margaret N. Kaleli",
+      author: "Sr. Margaret N. Kaleli",
       category: "Prayer and Meditation",
       quote:
         "Prayer opens our hearts to God, and meditation lets us hear His voice.",
@@ -12289,7 +13240,7 @@ export function getQuotes() {
       photo: "../assets/sr_margaret_n_kaleli.jpg",
     },
     {
-      author: "Sr Margaret N. Kaleli",
+      author: "Sr. Margaret N. Kaleli",
       category: "Compassion",
       quote:
         "Compassion is the gentle embrace that brings hope to the suffering.",
@@ -12298,7 +13249,7 @@ export function getQuotes() {
       photo: "../assets/sr_margaret_n_kaleli.jpg",
     },
     {
-      author: "Sr Margaret N. Kaleli",
+      author: "Sr. Margaret N. Kaleli",
       category: "Hope and Perseverance",
       quote: "Hope gives us reason to persevere when the road is long.",
       italianQuote:
@@ -12306,7 +13257,7 @@ export function getQuotes() {
       photo: "../assets/sr_margaret_n_kaleli.jpg",
     },
     {
-      author: "Sr Margaret N. Kaleli",
+      author: "Sr. Margaret N. Kaleli",
       category: "Charity",
       quote: "Charity is the living expression of God’s unconditional love.",
       italianQuote:
@@ -12314,14 +13265,14 @@ export function getQuotes() {
       photo: "../assets/sr_margaret_n_kaleli.jpg",
     },
     {
-      author: "Sr Margaret N. Kaleli",
+      author: "Sr. Margaret N. Kaleli",
       category: "Forgiveness",
       quote: "Forgiveness is the gift that sets our hearts free.",
       italianQuote: "Il perdono è il dono che rende liberi i nostri cuori.",
       photo: "../assets/sr_margaret_n_kaleli.jpg",
     },
     {
-      author: "Sr Margaret N. Kaleli",
+      author: "Sr. Margaret N. Kaleli",
       category: "Wisdom",
       quote: "Wisdom leads us to choose peace, love, and truth every day.",
       italianQuote:
@@ -12329,7 +13280,7 @@ export function getQuotes() {
       photo: "../assets/sr_margaret_n_kaleli.jpg",
     },
     {
-      author: "Sr Margaret N. Kaleli",
+      author: "Sr. Margaret N. Kaleli",
       category: "Spiritual Growth",
       quote: "Spiritual growth is the daily journey of coming closer to God.",
       italianQuote:
@@ -12337,7 +13288,7 @@ export function getQuotes() {
       photo: "../assets/sr_margaret_n_kaleli.jpg",
     },
     {
-      author: "Sr Margaret N. Kaleli",
+      author: "Sr. Margaret N. Kaleli",
       category: "Humility",
       quote:
         "Humility is the gentle strength that seeks to serve before being served.",
@@ -12346,29 +13297,21 @@ export function getQuotes() {
       photo: "../assets/sr_margaret_n_kaleli.jpg",
     },
     {
-      author: "Sr Margaret N. Kaleli",
-      category: "Gratittude",
-      quote: "Gratitude fills our days with light and our hearts with peace.",
-      italianQuote:
-        "La gratitudine riempie i nostri giorni di luce e i nostri cuori di pace.",
-      photo: "../assets/sr_margaret_n_kaleli.jpg",
-    },
-    {
-      author: "Sr Margaret N. Kaleli",
+      author: "Sr. Margaret N. Kaleli",
       category: "Latin",
       quote: "Caritas et pax cor nostrum semper regnant.",
       italianQuote: "La carità e la pace regnino sempre nei nostri cuori.",
       photo: "../assets/sr_margaret_n_kaleli.jpg",
     },
     {
-      author: "Sr Felicity Makena",
+      author: "Sr. Felicity Makena",
       category: "Love",
       quote: "Love is the golden thread that weaves hearts together in unity.",
       italianQuote: "L’amore è il filo d’oro che unisce i cuori nell’unità.",
       photo: "../assets/sr_felicity_makena.jpg",
     },
     {
-      author: "Sr Felicity Makena",
+      author: "Sr. Felicity Makena",
       category: "Joy",
       quote:
         "Joy is the sparkle that brightens every day, even in the smallest blessings.",
@@ -12377,7 +13320,7 @@ export function getQuotes() {
       photo: "../assets/sr_felicity_makena.jpg",
     },
     {
-      author: "Sr Felicity Makena",
+      author: "Sr. Felicity Makena",
       category: "Peace",
       quote: "Peace is the gentle river that calms the storms within us.",
       italianQuote:
@@ -12385,7 +13328,7 @@ export function getQuotes() {
       photo: "../assets/sr_felicity_makena.jpg",
     },
     {
-      author: "Sr Felicity Makena",
+      author: "Sr. Felicity Makena",
       category: "Patience",
       quote:
         "Patience is waiting with a trusting heart, knowing every season has its beauty.",
@@ -12394,7 +13337,7 @@ export function getQuotes() {
       photo: "../assets/sr_felicity_makena.jpg",
     },
     {
-      author: "Sr Felicity Makena",
+      author: "Sr. Felicity Makena",
       category: "Kindness",
       quote:
         "Kindness is the gentle touch that brings healing to wounded hearts.",
@@ -12403,7 +13346,7 @@ export function getQuotes() {
       photo: "../assets/sr_felicity_makena.jpg",
     },
     {
-      author: "Sr Felicity Makena",
+      author: "Sr. Felicity Makena",
       category: "Goodness",
       quote:
         "Goodness is a light that shines brightest in acts of quiet service.",
@@ -12412,7 +13355,7 @@ export function getQuotes() {
       photo: "../assets/sr_felicity_makena.jpg",
     },
     {
-      author: "Sr Felicity Makena",
+      author: "Sr. Felicity Makena",
       category: "Faithfulness",
       quote:
         "Faithfulness is standing firm in hope, loyal through every trial.",
@@ -12421,7 +13364,7 @@ export function getQuotes() {
       photo: "../assets/sr_felicity_makena.jpg",
     },
     {
-      author: "Sr Felicity Makena",
+      author: "Sr. Felicity Makena",
       category: "Gentleness",
       quote: "Gentleness is the quiet strength that comforts and lifts others.",
       italianQuote:
@@ -12429,7 +13372,7 @@ export function getQuotes() {
       photo: "../assets/sr_felicity_makena.jpg",
     },
     {
-      author: "Sr Felicity Makena",
+      author: "Sr. Felicity Makena",
       category: "Self-control",
       quote:
         "Self-control is choosing peace over impulse, and love over anger.",
@@ -12438,7 +13381,7 @@ export function getQuotes() {
       photo: "../assets/sr_felicity_makena.jpg",
     },
     {
-      author: "Sr Felicity Makena",
+      author: "Sr. Felicity Makena",
       category: "Understanding",
       quote:
         "Understanding grows when we listen deeply and embrace others with compassion.",
@@ -12447,7 +13390,7 @@ export function getQuotes() {
       photo: "../assets/sr_felicity_makena.jpg",
     },
     {
-      author: "Sr Felicity Makena",
+      author: "Sr. Felicity Makena",
       category: "Counsel (Right Judgment)",
       quote:
         "Good counsel guides us gently, helping us walk the path of truth.",
@@ -12456,7 +13399,7 @@ export function getQuotes() {
       photo: "../assets/sr_felicity_makena.jpg",
     },
     {
-      author: "Sr Felicity Makena",
+      author: "Sr. Felicity Makena",
       category: "Fortitude (Courage)",
       quote: "True courage is trusting in God even when the journey is hard.",
       italianQuote:
@@ -12464,7 +13407,7 @@ export function getQuotes() {
       photo: "../assets/sr_felicity_makena.jpg",
     },
     {
-      author: "Sr Felicity Makena",
+      author: "Sr. Felicity Makena",
       category: "Piety (Reverence)",
       quote: "Reverence is honoring God in the beauty of everyday life.",
       italianQuote:
@@ -12472,7 +13415,7 @@ export function getQuotes() {
       photo: "../assets/sr_felicity_makena.jpg",
     },
     {
-      author: "Sr Felicity Makena",
+      author: "Sr. Felicity Makena",
       category: "Fear of the Lord (Wonder and Awe)",
       quote: "To stand in awe is to see God’s wonder in all creation.",
       italianQuote:
@@ -12480,7 +13423,7 @@ export function getQuotes() {
       photo: "../assets/sr_felicity_makena.jpg",
     },
     {
-      author: "Sr Felicity Makena",
+      author: "Sr. Felicity Makena",
       category: "Trust",
       quote: "Trust is surrendering to God’s love with a peaceful heart.",
       italianQuote:
@@ -12488,7 +13431,7 @@ export function getQuotes() {
       photo: "../assets/sr_felicity_makena.jpg",
     },
     {
-      author: "Sr Felicity Makena",
+      author: "Sr. Felicity Makena",
       category: "Prayer and Meditation",
       quote: "In prayer and silence, we discover the whispers of God’s heart.",
       italianQuote:
@@ -12496,7 +13439,7 @@ export function getQuotes() {
       photo: "../assets/sr_felicity_makena.jpg",
     },
     {
-      author: "Sr Felicity Makena",
+      author: "Sr. Felicity Makena",
       category: "Compassion",
       quote:
         "Compassion is the bridge that brings light into the lives of others.",
@@ -12505,7 +13448,7 @@ export function getQuotes() {
       photo: "../assets/sr_felicity_makena.jpg",
     },
     {
-      author: "Sr Felicity Makena",
+      author: "Sr. Felicity Makena",
       category: "Hope and Perseverance",
       quote: "Hope inspires us to persevere, trusting in God’s promises.",
       italianQuote:
@@ -12513,7 +13456,7 @@ export function getQuotes() {
       photo: "../assets/sr_felicity_makena.jpg",
     },
     {
-      author: "Sr Felicity Makena",
+      author: "Sr. Felicity Makena",
       category: "Charity",
       quote: "Charity is love in action, shining in every selfless gift.",
       italianQuote:
@@ -12521,7 +13464,7 @@ export function getQuotes() {
       photo: "../assets/sr_felicity_makena.jpg",
     },
     {
-      author: "Sr Felicity Makena",
+      author: "Sr. Felicity Makena",
       category: "Forgiveness",
       quote: "Forgiveness frees the heart, making space for healing and peace.",
       italianQuote:
@@ -12529,7 +13472,7 @@ export function getQuotes() {
       photo: "../assets/sr_felicity_makena.jpg",
     },
     {
-      author: "Sr Felicity Makena",
+      author: "Sr. Felicity Makena",
       category: "Wisdom",
       quote: "Wisdom is the light that guides us to live with grace and truth.",
       italianQuote:
@@ -12537,7 +13480,7 @@ export function getQuotes() {
       photo: "../assets/sr_felicity_makena.jpg",
     },
     {
-      author: "Sr Felicity Makena",
+      author: "Sr. Felicity Makena",
       category: "Spiritual Growth",
       quote:
         "Spiritual growth is a journey of deepening love and faith each day.",
@@ -12546,30 +13489,21 @@ export function getQuotes() {
       photo: "../assets/sr_felicity_makena.jpg",
     },
     {
-      author: "Sr Felicity Makena",
+      author: "Sr. Felicity Makena",
       category: "Humility",
       quote: "Humility is the quiet foundation for all true greatness.",
       italianQuote: "L’umiltà è la base silenziosa di ogni vera grandezza.",
       photo: "../assets/sr_felicity_makena.jpg",
     },
     {
-      author: "Sr Felicity Makena",
-      category: "Gratittude",
-      quote:
-        "Gratitude awakens us to the goodness that surrounds us every day.",
-      italianQuote:
-        "La gratitudine ci risveglia al bene che ci circonda ogni giorno.",
-      photo: "../assets/sr_felicity_makena.jpg",
-    },
-    {
-      author: "Sr Felicity Makena",
+      author: "Sr. Felicity Makena",
       category: "Latin",
       quote: "Caritas, pax, et spes corda nostra illuminent.",
       italianQuote: "Carità, pace e speranza illuminino i nostri cuori.",
       photo: "../assets/sr_felicity_makena.jpg",
     },
     {
-      author: "Sr Agatha Mkunda",
+      author: "Sr. Agatha Mkunda",
       category: "Love",
       quote:
         "Love is the true foundation that gives meaning to every act and word.",
@@ -12578,7 +13512,7 @@ export function getQuotes() {
       photo: "../assets/sr_agatha_mkunda.jpg",
     },
     {
-      author: "Sr Agatha Mkunda",
+      author: "Sr. Agatha Mkunda",
       category: "Joy",
       quote:
         "Joy blossoms in hearts that are open to God’s grace and goodness.",
@@ -12587,7 +13521,7 @@ export function getQuotes() {
       photo: "../assets/sr_agatha_mkunda.jpg",
     },
     {
-      author: "Sr Agatha Mkunda",
+      author: "Sr. Agatha Mkunda",
       category: "Peace",
       quote: "Peace is the gentle whisper of God’s love in our souls.",
       italianQuote:
@@ -12595,7 +13529,7 @@ export function getQuotes() {
       photo: "../assets/sr_agatha_mkunda.jpg",
     },
     {
-      author: "Sr Agatha Mkunda",
+      author: "Sr. Agatha Mkunda",
       category: "Patience",
       quote: "Patience is a quiet strength that trusts in God’s perfect time.",
       italianQuote:
@@ -12603,7 +13537,7 @@ export function getQuotes() {
       photo: "../assets/sr_agatha_mkunda.jpg",
     },
     {
-      author: "Sr Agatha Mkunda",
+      author: "Sr. Agatha Mkunda",
       category: "Kindness",
       quote: "Kindness is the gentle act that sows seeds of hope in the world.",
       italianQuote:
@@ -12611,14 +13545,14 @@ export function getQuotes() {
       photo: "../assets/sr_agatha_mkunda.jpg",
     },
     {
-      author: "Sr Agatha Mkunda",
+      author: "Sr. Agatha Mkunda",
       category: "Goodness",
       quote: "Goodness is found in the simple acts of service and love.",
       italianQuote: "La bontà si trova nei semplici atti di servizio e amore.",
       photo: "../assets/sr_agatha_mkunda.jpg",
     },
     {
-      author: "Sr Agatha Mkunda",
+      author: "Sr. Agatha Mkunda",
       category: "Faithfulness",
       quote:
         "Faithfulness is walking with God each day, no matter how small the step.",
@@ -12627,7 +13561,7 @@ export function getQuotes() {
       photo: "../assets/sr_agatha_mkunda.jpg",
     },
     {
-      author: "Sr Agatha Mkunda",
+      author: "Sr. Agatha Mkunda",
       category: "Gentleness",
       quote: "Gentleness is the touch of God’s mercy in our daily lives.",
       italianQuote:
@@ -12635,7 +13569,7 @@ export function getQuotes() {
       photo: "../assets/sr_agatha_mkunda.jpg",
     },
     {
-      author: "Sr Agatha Mkunda",
+      author: "Sr. Agatha Mkunda",
       category: "Self-control",
       quote: "Self-control is choosing love and peace over impulsive actions.",
       italianQuote:
@@ -12643,7 +13577,7 @@ export function getQuotes() {
       photo: "../assets/sr_agatha_mkunda.jpg",
     },
     {
-      author: "Sr Agatha Mkunda",
+      author: "Sr. Agatha Mkunda",
       category: "Understanding",
       quote:
         "Understanding grows when we listen with open hearts and open minds.",
@@ -12652,7 +13586,7 @@ export function getQuotes() {
       photo: "../assets/sr_agatha_mkunda.jpg",
     },
     {
-      author: "Sr Agatha Mkunda",
+      author: "Sr. Agatha Mkunda",
       category: "Counsel (Right Judgment)",
       quote: "Right judgment is the wisdom to choose goodness over comfort.",
       italianQuote:
@@ -12660,7 +13594,7 @@ export function getQuotes() {
       photo: "../assets/sr_agatha_mkunda.jpg",
     },
     {
-      author: "Sr Agatha Mkunda",
+      author: "Sr. Agatha Mkunda",
       category: "Fortitude (Courage)",
       quote:
         "Courage is the faith to step forward, even when the way is unclear.",
@@ -12669,7 +13603,7 @@ export function getQuotes() {
       photo: "../assets/sr_agatha_mkunda.jpg",
     },
     {
-      author: "Sr Agatha Mkunda",
+      author: "Sr. Agatha Mkunda",
       category: "Piety (Reverence)",
       quote: "Reverence is honoring God in all things, big and small.",
       italianQuote:
@@ -12677,7 +13611,7 @@ export function getQuotes() {
       photo: "../assets/sr_agatha_mkunda.jpg",
     },
     {
-      author: "Sr Agatha Mkunda",
+      author: "Sr. Agatha Mkunda",
       category: "Fear of the Lord (Wonder and Awe)",
       quote: "Wonder and awe open our eyes to the beauty of God’s presence.",
       italianQuote:
@@ -12685,7 +13619,7 @@ export function getQuotes() {
       photo: "../assets/sr_agatha_mkunda.jpg",
     },
     {
-      author: "Sr Agatha Mkunda",
+      author: "Sr. Agatha Mkunda",
       category: "Trust",
       quote: "Trust is surrendering our worries and resting in God’s love.",
       italianQuote:
@@ -12693,7 +13627,7 @@ export function getQuotes() {
       photo: "../assets/sr_agatha_mkunda.jpg",
     },
     {
-      author: "Sr Agatha Mkunda",
+      author: "Sr. Agatha Mkunda",
       category: "Prayer and Meditation",
       quote: "Prayer is the door that opens our hearts to God’s peace.",
       italianQuote:
@@ -12701,7 +13635,7 @@ export function getQuotes() {
       photo: "../assets/sr_agatha_mkunda.jpg",
     },
     {
-      author: "Sr Agatha Mkunda",
+      author: "Sr. Agatha Mkunda",
       category: "Compassion",
       quote: "Compassion is the heart’s response to the suffering of others.",
       italianQuote:
@@ -12709,7 +13643,7 @@ export function getQuotes() {
       photo: "../assets/sr_agatha_mkunda.jpg",
     },
     {
-      author: "Sr Agatha Mkunda",
+      author: "Sr. Agatha Mkunda",
       category: "Hope and Perseverance",
       quote: "Hope and perseverance carry us forward when strength is failing.",
       italianQuote:
@@ -12717,21 +13651,21 @@ export function getQuotes() {
       photo: "../assets/sr_agatha_mkunda.jpg",
     },
     {
-      author: "Sr Agatha Mkunda",
+      author: "Sr. Agatha Mkunda",
       category: "Charity",
       quote: "Charity is the gift of self in service to others.",
       italianQuote: "La carità è il dono di sé nel servizio agli altri.",
       photo: "../assets/sr_agatha_mkunda.jpg",
     },
     {
-      author: "Sr Agatha Mkunda",
+      author: "Sr. Agatha Mkunda",
       category: "Forgiveness",
       quote: "Forgiveness is the pathway to freedom and healing.",
       italianQuote: "Il perdono è la via verso la libertà e la guarigione.",
       photo: "../assets/sr_agatha_mkunda.jpg",
     },
     {
-      author: "Sr Agatha Mkunda",
+      author: "Sr. Agatha Mkunda",
       category: "Wisdom",
       quote: "Wisdom is seeing the world through the eyes of God’s love.",
       italianQuote:
@@ -12739,7 +13673,7 @@ export function getQuotes() {
       photo: "../assets/sr_agatha_mkunda.jpg",
     },
     {
-      author: "Sr Agatha Mkunda",
+      author: "Sr. Agatha Mkunda",
       category: "Spiritual Growth",
       quote:
         "Spiritual growth is the journey of becoming more like Christ each day.",
@@ -12748,7 +13682,7 @@ export function getQuotes() {
       photo: "../assets/sr_agatha_mkunda.jpg",
     },
     {
-      author: "Sr Agatha Mkunda",
+      author: "Sr. Agatha Mkunda",
       category: "Humility",
       quote: "Humility is recognizing our need for God and for one another.",
       italianQuote:
@@ -12756,15 +13690,7 @@ export function getQuotes() {
       photo: "../assets/sr_agatha_mkunda.jpg",
     },
     {
-      author: "Sr Agatha Mkunda",
-      category: "Gratittude",
-      quote: "Gratitude turns ordinary moments into extraordinary blessings.",
-      italianQuote:
-        "La gratitudine trasforma i momenti ordinari in benedizioni straordinarie.",
-      photo: "../assets/sr_agatha_mkunda.jpg",
-    },
-    {
-      author: "Sr Agatha Mkunda",
+      author: "Sr. Agatha Mkunda",
       category: "Latin",
       quote: "Gratia, pax, et amor corda nostra repleant.",
       italianQuote: "La grazia, la pace e l’amore riempiano i nostri cuori.",
@@ -12774,16 +13700,364 @@ export function getQuotes() {
       author: "Sr.  Hannah",
       category: "Joy",
       quote: "Joy is the echo of God's smile within a heart that trusts.",
-      italianQuote: "La gioia è l’eco del sorriso di Dio in un cuore che confida.",
+      italianQuote:
+        "La gioia è l’eco del sorriso di Dio in un cuore che confida.",
       photo: "../assets/sr_joyce_nkirote.jpg",
     },
     {
       author: "Sr. Luisa Makena",
       category: "Trust",
-      quote: "Those who leave their weight in God's hands rise lighter than the morning.",
+      quote:
+        "Those who leave their weight in God's hands rise lighter than the morning.",
       italianQuote:
         "Chi affida a Dio il proprio peso si alza più leggero del mattino.",
       photo: "../assets/sr_luisa_makena.jpg",
+    },
+    {
+      author: "Sr. Luisa Makena",
+      category: "Love",
+      quote: "Love is the quiet gift that gives without counting the cost.",
+      italianQuote:
+        "L'amore è il dono silenzioso che si dona senza contare il costo.",
+      photo: "../assets/sr_luisa_makena.jpg",
+    },
+    {
+      author: "Sr. Luisa Makena",
+      category: "Joy",
+      quote:
+        "Joy is the morning light that breaks through every night of worry.",
+      italianQuote:
+        "La gioia è la luce del mattino che squarcia ogni notte di preoccupazione.",
+      photo: "../assets/sr_luisa_makena.jpg",
+    },
+    {
+      author: "Sr. Luisa Makena",
+      category: "Peace",
+      quote: "Peace settles where the heart has learned to rest in providence.",
+      italianQuote:
+        "La pace dimora dove il cuore ha imparato a riposare nella provvidenza.",
+      photo: "../assets/sr_luisa_makena.jpg",
+    },
+    {
+      author: "Sr. Hannah",
+      category: "Peace",
+      quote:
+        "Peace is not the absence of struggle but the quiet confidence that God walks with us.",
+      italianQuote:
+        "La pace non è l'assenza di lotta ma la quieta fiducia che Dio cammina con noi.",
+      photo: "../assets/sr_hannah.jpg",
+    },
+    {
+      author: "Sr. Maria Carrolla",
+      category: "Peace",
+      quote: "A heart at peace becomes a home where troubled hearts find rest.",
+      italianQuote:
+        "Un cuore in pace diventa una casa dove i cuori afflitti trovano riposo.",
+      photo: "../assets/sr_maria_carrolla.jpg",
+    },
+    {
+      author: "Sr. Hannah",
+      category: "Spiritual Growth",
+      quote:
+        "We grow in God not by leaps, but by faithful steps taken in the dark.",
+      italianQuote:
+        "Cresciamo in Dio non con salti, ma con passi fedeli compiuti nel buio.",
+      photo: "../assets/sr_hannah.jpg",
+    },
+    {
+      author: "Sr. Sofia",
+      category: "Spiritual Growth",
+      quote:
+        "Every prayer, even the smallest whisper, waters the soul and makes it bloom.",
+      italianQuote:
+        "Ogni preghiera, anche il più piccolo sussurro, irriga l'anima e la fa fiorire.",
+      photo: "../assets/sr_sofia.jpg",
+    },
+    {
+      author: "Sr. Nancy",
+      category: "Peace",
+      quote:
+        "Peace grows in the garden of a life that trusts God's loving plan.",
+      italianQuote:
+        "La pace cresce nel giardino di una vita che si fida del piano d'amore di Dio.",
+      photo: "../assets/sr_nancy.jpg",
+    },
+    {
+      author: "Sr. Luisa Makena",
+      category: "Patience",
+      quote: "Patience is trusting that God's quiet timing is always perfect.",
+      italianQuote:
+        "La pazienza è fidarsi che il tempo silenzioso di Dio è sempre perfetto.",
+      photo: "../assets/sr_luisa_makena.jpg",
+    },
+    {
+      author: "Sr. Luisa Makena",
+      category: "Kindness",
+      quote: "Kindness is the tender hand of God reaching out through ours.",
+      italianQuote:
+        "La gentilezza è la mano tenera di Dio che si tende attraverso la nostra.",
+      photo: "../assets/sr_luisa_makena.jpg",
+    },
+    {
+      author: "Sr. Maria Carrolla",
+      category: "Kindness",
+      quote:
+        "A gentle hand extended in kindness becomes God's own embrace reaching out.",
+      italianQuote:
+        "Una mano gentile tesa nella bontà diventa l'abbraccio stesso di Dio che si protende.",
+      photo: "../assets/sr_maria_carrolla.jpg",
+    },
+    {
+      author: "Sr. Adriana",
+      category: "Humility",
+      quote:
+        "The ground receives every seed without complaint — let my heart be that ground for God.",
+      italianQuote:
+        "Il terreno accoglie ogni seme senza lamentarsi — sia il mio cuore quel terreno per Dio.",
+      photo: "../assets/sr_adriana.jpg",
+    },
+    {
+      author: "Sr. Andreina Stradiotto",
+      category: "Humility",
+      quote: "A branch that bends low is the one most laden with fruit.",
+      italianQuote:
+        "Il ramo che si piega in basso è quello più carico di frutti.",
+      photo: "../assets/andreina_stradiotto.jpg",
+    },
+    {
+      author: "Sr. Consolata",
+      category: "Humility",
+      quote:
+        "To serve unnoticed is to walk in the footsteps of the One who washed feet.",
+      italianQuote:
+        "Servire senza essere notati è camminare sulle orme di Colui che lavò i piedi.",
+      photo: "../assets/sr_consolata.jpg",
+    },
+    {
+      author: "Sr. Giovanna",
+      category: "Humility",
+      quote:
+        "The empty vessel is the one God can fill; the full one has no room for grace.",
+      italianQuote:
+        "Il vaso vuoto è quello che Dio può riempire; il pieno non ha spazio per la grazia.",
+      photo: "../assets/giovanna.jpg",
+    },
+    {
+      author: "Sr. Hannah",
+      category: "Humility",
+      quote:
+        "I am only a pencil in the Lord's hand — the writing is entirely His.",
+      italianQuote:
+        "Sono solo una matita nella mano del Signore — la scrittura è interamente Sua.",
+      photo: "../assets/sr_hannah.jpg",
+    },
+    {
+      author: "Sr. Jane Makanda",
+      category: "Humility",
+      quote:
+        "The tallest tree in the forest is the first to feel the wind — greatness is a burden, not a crown.",
+      italianQuote:
+        "L'albero più alto del bosco è il primo a sentire il vento — la grandezza è un peso, non una corona.",
+      photo: "../assets/jane_makanda.jpg",
+    },
+    {
+      author: "Sr. Purity Nkatha",
+      category: "Humility",
+      quote:
+        "A heart that kneels often rarely stumbles — humility is the safest posture of the soul.",
+      italianQuote:
+        "Un cuore che si inginocchia spesso raramente inciampa — l'umiltà è la postura più sicura dell'anima.",
+      photo: "../assets/sr_purity.jpg",
+    },
+    {
+      author: "Sr. Rose Kanathi",
+      category: "Humility",
+      quote:
+        "The candle burns itself to give light — so must we disappear so that Christ may be seen.",
+      italianQuote:
+        "La candela si consuma per dare luce — così dobbiamo sparire perché Cristo sia visto.",
+      photo: "../assets/rose_kanathi.jpg",
+    },
+    {
+      author: "Sr. Sabina Murwana",
+      category: "Humility",
+      quote:
+        "Dust remembers it was dust — and that memory keeps the soul close to God.",
+      italianQuote:
+        "La polvere ricorda di essere polvere — e quella memoria tiene l'anima vicina a Dio.",
+      photo: "../assets/sr_sabina_murwana.jpg",
+    },
+    {
+      author: "Sr. Sofia",
+      category: "Humility",
+      quote:
+        "The hidden root feeds the visible flower — let me be the root, unseen and faithful.",
+      italianQuote:
+        "La radice nascosta nutre il fiore visibile — lascia che io sia la radice, invisibile e fedele.",
+      photo: "../assets/sr_sofia.jpg",
+    },
+    {
+      author: "Sr. Luisa Makena",
+      category: "Goodness",
+      quote:
+        "Goodness grows where a heart quietly chooses God again and again.",
+      italianQuote:
+        "La bontà cresce dove un cuore sceglie Dio ancora e ancora in silenzio.",
+      photo: "../assets/sr_luisa_makena.jpg",
+    },
+    {
+      author: "Sr. Luisa Makena",
+      category: "Faithfulness",
+      quote:
+        "Faithfulness is the steady flame that no wind of worry can extinguish.",
+      italianQuote:
+        "La fedeltà è la fiamma costante che nessun vento di preoccupazione può spegnere.",
+      photo: "../assets/sr_luisa_makena.jpg",
+    },
+    {
+      author: "Sr. Luisa Makena",
+      category: "Gentleness",
+      quote: "Gentleness is strength that has surrendered itself to love.",
+      italianQuote: "La mitezza è una forza che si è abbandonata all'amore.",
+      photo: "../assets/sr_luisa_makena.jpg",
+    },
+    {
+      author: "Sr. Luisa Makena",
+      category: "Self-control",
+      quote: "Self-control is the freedom of a spirit anchored in God.",
+      italicQuote:
+        "Il dominio di sé è la libertà di uno spirito ancorato in Dio.",
+      photo: "../assets/sr_luisa_makena.jpg",
+    },
+    {
+      author: "Sr. Luisa Makena",
+      category: "Understanding",
+      quote: "Understanding is born when we look with the heart's quiet eyes.",
+      italianQuote:
+        "La comprensione nasce quando guardiamo con gli occhi silenziosi del cuore.",
+      photo: "../assets/sr_luisa_makena.jpg",
+    },
+    {
+      author: "Sr. Luisa Makena",
+      category: "Counsel (Right Judgment)",
+      quote:
+        "Right judgment is listening for God's voice before we speak our own.",
+      italianQuote:
+        "Il giusto giudizio è ascoltare la voce di Dio prima di dire la nostra.",
+      photo: "../assets/sr_luisa_makena.jpg",
+    },
+    {
+      author: "Sr. Luisa Makena",
+      category: "Fortitude (Courage)",
+      quote: "Courage is love standing firm when the road grows steep.",
+      italianQuote:
+        "Il coraggio è l'amore che resta saldo quando la strada si fa ripida.",
+      photo: "../assets/sr_luisa_makena.jpg",
+    },
+    {
+      author: "Sr. Luisa Makena",
+      category: "Piety (Reverence)",
+      quote: "Reverence is the soul bowing low before the mystery of God.",
+      italianQuote:
+        "La riverenza è l'anima che si inchina davanti al mistero di Dio.",
+      photo: "../assets/sr_luisa_makena.jpg",
+    },
+    {
+      author: "Sr. Luisa Makena",
+      category: "Fear of the Lord (Wonder and Awe)",
+      quote: "Wonder is the heart's humility before the greatness of God.",
+      italianQuote:
+        "La meraviglia è l'umiltà del cuore davanti alla grandezza di Dio.",
+      photo: "../assets/sr_luisa_makena.jpg",
+    },
+    {
+      author: "Sr. Luisa Makena",
+      category: "Forgiveness",
+      quote: "Forgiveness opens the door through which peace returns home.",
+      italianQuote:
+        "Il perdono apre la porta attraverso cui la pace torna a casa.",
+      photo: "../assets/sr_luisa_makena.jpg",
+    },
+    {
+      author: "Sr. Luisa Makena",
+      category: "Compassion",
+      quote: "Compassion is God's mercy made gentle and near through us.",
+      italianQuote:
+        "La compassione è la misericordia di Dio resa vicina e tenera attraverso di noi.",
+      photo: "../assets/sr_luisa_makena.jpg",
+    },
+    {
+      author: "Sr. Luisa Makena",
+      category: "Hope and Perseverance",
+      quote: "Hope is the anchor that holds the heart steady in every storm.",
+      italianQuote:
+        "La speranza è l'ancora che tiene saldo il cuore in ogni tempesta.",
+      photo: "../assets/sr_luisa_makena.jpg",
+    },
+    {
+      author: "Sr. Luisa Makena",
+      category: "Gratitude",
+      quote: "Gratitude turns the ordinary day into a constant hymn of praise.",
+      italianQuote:
+        "La gratitudine trasforma il giorno ordinario in un continuo inno di lode.",
+      photo: "../assets/sr_luisa_makena.jpg",
+    },
+    {
+      author: "Sr. Luisa Makena",
+      category: "Humility",
+      quote:
+        "Humility is the spacious heart that makes room for God and neighbor.",
+      italianQuote:
+        "L'umiltà è il cuore ampio che fa spazio a Dio e al prossimo.",
+      photo: "../assets/sr_luisa_makena.jpg",
+    },
+    {
+      author: "Sr. Luisa Makena",
+      category: "Wisdom",
+      quote: "Wisdom is seeing every moment through the eyes of trust.",
+      italianQuote:
+        "La saggezza è vedere ogni istante con gli occhi della fiducia.",
+      photo: "../assets/sr_luisa_makena.jpg",
+    },
+    {
+      author: "Sr. Luisa Makena",
+      category: "Spiritual Growth",
+      quote: "Spiritual growth is the slow unfolding of a soul held by God.",
+      italianQuote:
+        "La crescita spirituale è il lento dischiudersi di un'anima sostenuta da Dio.",
+      photo: "../assets/sr_luisa_makena.jpg",
+    },
+    {
+      author: "Sr. Luisa Makena",
+      category: "Prayer and Meditation",
+      quote: "Prayer is breathing the stillness in which God speaks softly.",
+      italianQuote:
+        "La preghiera è respirare il silenzio in cui Dio parla dolcemente.",
+      photo: "../assets/sr_luisa_makena.jpg",
+    },
+    {
+      author: "Sr. Luisa Makena",
+      category: "Charity",
+      quote: "Charity is love that has learned to serve without being asked.",
+      italianQuote:
+        "La carità è un amore che ha imparato a servire senza essere chiesto.",
+      photo: "../assets/sr_luisa_makena.jpg",
+    },
+    {
+      author: "Sr. Luisa Makena",
+      category: "Latin",
+      quote: "Abandonamur in manus Dei et cor nostrum quiescit in pace.",
+      italianQuote:
+        "Ci abbandoniamo nelle mani di Dio e il nostro cuore riposa in pace.",
+      photo: "../assets/sr_luisa_makena.jpg",
+    },
+    {
+      author: "Sr. Joyce Nkirote",
+      category: "Sisterly Love",
+      quote: "A sister's love is a small reflection of God's boundless care.",
+      italianQuote:
+        "L'amore di una sorella è un piccolo riflesso dell'immenso amore di Dio.",
+      photo: "../assets/sr_joyce_nkirote.jpg",
     },
   ];
 
@@ -13711,7 +14985,8 @@ export function getCatholicPrayers() {
 
 const SCRIPTURE_AUTHOR_RE =
   /^(Psalm|Numbers|Philippians|Micah|Ephesians|1 Thessalonians|2 Corinthians) \d+/i;
-const SCRIPTURE_REF_RE = /\b(Luke|Matthew|John|Mark|Corinthians|Thessalonians) \d+/i;
+const SCRIPTURE_REF_RE =
+  /\b(Luke|Matthew|John|Mark|Corinthians|Thessalonians) \d+/i;
 
 function getPrayerTagForAuthor(author) {
   const a = (author || "").toLowerCase();
@@ -14183,10 +15458,30 @@ export function getJosephLitany() {
 
 export function getCottolengoLitany() {
   return [
-    { en: "Lord, have mercy.", it: "Signore, pietà.", response_en: "Christ, have mercy.", response_it: "Cristo, pietà." },
-    { en: "Christ, have mercy.", it: "Cristo, pietà.", response_en: "Lord, have mercy.", response_it: "Signore, pietà." },
-    { en: "Christ, hear us.", it: "Cristo, ascoltaci.", response_en: "Christ, graciously hear us.", response_it: "Cristo, esaudiscici." },
-    { en: "Christ, graciously hear us.", it: "Cristo, esaudiscici.", response_en: "Have mercy on us.", response_it: "Abbi pietà di noi." },
+    {
+      en: "Lord, have mercy.",
+      it: "Signore, pietà.",
+      response_en: "Christ, have mercy.",
+      response_it: "Cristo, pietà.",
+    },
+    {
+      en: "Christ, have mercy.",
+      it: "Cristo, pietà.",
+      response_en: "Lord, have mercy.",
+      response_it: "Signore, pietà.",
+    },
+    {
+      en: "Christ, hear us.",
+      it: "Cristo, ascoltaci.",
+      response_en: "Christ, graciously hear us.",
+      response_it: "Cristo, esaudiscici.",
+    },
+    {
+      en: "Christ, graciously hear us.",
+      it: "Cristo, esaudiscici.",
+      response_en: "Have mercy on us.",
+      response_it: "Abbi pietà di noi.",
+    },
     {
       en: "God, the Father of Heaven, have mercy on us.",
       it: "Dio, Padre del cielo, abbi pietà di noi.",
@@ -14969,228 +16264,13 @@ export function getSaintsLitany() {
 }
 
 export const saintFeastDays = [
-  { en: "Saint Joseph", it: "San Giuseppe", date: "2025-03-19" },
-  { en: "Saint Peter", it: "San Pietro", date: "2025-06-29" },
-  { en: "Saint Paul", it: "San Paolo", date: "2025-06-29" },
+  // ═══════════════════════════════════════════════════════════════════
+  // JANUARY
+  // ═══════════════════════════════════════════════════════════════════
   {
-    en: "Saint Francis of Assisi",
-    it: "San Francesco d'Assisi",
-    date: "2025-10-04",
-  },
-  {
-    en: "Saint Anthony of Padua",
-    it: "Sant'Antonio di Padova",
-    date: "2025-06-13",
-  },
-  {
-    en: "Saint Teresa of Avila",
-    it: "Santa Teresa d'Avila",
-    date: "2025-10-15",
-  },
-  { en: "Saint John Paul II", it: "San Giovanni Paolo II", date: "2025-10-22" },
-  {
-    en: "Saint Therese of Lisieux",
-    it: "Santa Teresa di Lisieux",
-    date: "2025-10-01",
-  },
-  { en: "Saint Augustine", it: "Sant'Agostino", date: "2025-08-28" },
-  { en: "Saint Benedict", it: "San Benedetto", date: "2025-07-11" },
-  {
-    en: "Saint Clare of Assisi",
-    it: "Santa Chiara d'Assisi",
-    date: "2025-08-11",
-  },
-  { en: "Saint Dominic", it: "San Domenico", date: "2025-08-08" },
-  {
-    en: "Saint Ignatius of Loyola",
-    it: "Sant'Ignazio di Loyola",
-    date: "2025-07-31",
-  },
-  {
-    en: "Saint Catherine of Siena",
-    it: "Santa Caterina da Siena",
-    date: "2025-04-29",
-  },
-  { en: "Saint Patrick", it: "San Patrizio", date: "2025-03-17" },
-  { en: "Saint Andrew", it: "Sant'Andrea", date: "2025-11-30" },
-  { en: "Saint Luke", it: "San Luca", date: "2025-10-18" },
-  { en: "Saint Mark", it: "San Marco", date: "2025-04-25" },
-  { en: "Saint Matthew", it: "San Matteo", date: "2025-09-21" },
-  { en: "Saint Thomas", it: "San Tommaso", date: "2025-07-03" },
-  { en: "Saint Bartholomew", it: "San Bartolomeo", date: "2025-08-24" },
-  {
-    en: "Saint James the Greater",
-    it: "San Giacomo il Maggiore",
-    date: "2025-07-25",
-  },
-  { en: "Saint Philip", it: "San Filippo", date: "2025-05-03" },
-  { en: "Saint Simon", it: "San Simone", date: "2025-10-28" },
-  { en: "Saint Jude Thaddeus", it: "San Giuda Taddeo", date: "2025-10-28" },
-  { en: "Saint Matthias", it: "San Mattia", date: "2025-05-14" },
-  { en: "Saint Barnabas", it: "San Barnaba", date: "2025-06-11" },
-  { en: "Saint Stephen", it: "Santo Stefano", date: "2025-12-26" },
-  { en: "Saint Lawrence", it: "San Lorenzo", date: "2025-08-10" },
-  { en: "Saint Vincent", it: "San Vincenzo", date: "2025-01-22" },
-  { en: "Saint Sebastian", it: "San Sebastiano", date: "2025-01-20" },
-  {
-    en: "Saint Cosmas and Damian",
-    it: "Santi Cosma e Damiano",
-    date: "2025-09-26",
-  },
-  {
-    en: "Saint John the Baptist",
-    it: "San Giovanni Battista",
-    date: "2025-06-24",
-  },
-  {
-    en: "Saint Michael the Archangel",
-    it: "San Michele Arcangelo",
-    date: "2025-09-29",
-  },
-  {
-    en: "Saint Gabriel the Archangel",
-    it: "San Gabriele Arcangelo",
-    date: "2025-09-29",
-  },
-  {
-    en: "Saint Raphael the Archangel",
-    it: "San Raffaele Arcangelo",
-    date: "2025-09-29",
-  },
-  { en: "Saint Anne", it: "Sant'Anna", date: "2025-07-26" },
-  { en: "Saint Joachim", it: "San Gioacchino", date: "2025-07-26" },
-  {
-    en: "Saint Martin of Tours",
-    it: "San Martino di Tours",
-    date: "2025-11-11",
-  },
-  { en: "Saint Nicholas", it: "San Nicola", date: "2025-12-06" },
-  { en: "Saint Valentine", it: "San Valentino", date: "2025-02-14" },
-  { en: "Saint Jerome", it: "San Girolamo", date: "2025-09-30" },
-  { en: "Saint Ambrose", it: "Sant'Ambrogio", date: "2025-12-07" },
-  {
-    en: "Saint Gregory the Great",
-    it: "San Gregorio Magno",
-    date: "2025-09-03",
-  },
-  {
-    en: "Saint Teresa of Calcutta",
-    it: "Santa Teresa di Calcutta",
-    date: "2025-09-05",
-  },
-  { en: "Saint Padre Pio", it: "San Pio da Pietrelcina", date: "2025-09-23" },
-  { en: "Saint John Bosco", it: "San Giovanni Bosco", date: "2025-01-31" },
-  { en: "Saint Joan of Arc", it: "Santa Giovanna d'Arco", date: "2025-05-30" },
-  {
-    en: "Saint Bernadette Soubirous",
-    it: "Santa Bernadette Soubirous",
-    date: "2025-04-16",
-  },
-  {
-    en: "Saint Maximilian Kolbe",
-    it: "San Massimiliano Kolbe",
-    date: "2025-08-14",
-  },
-  { en: "Saint Edith Stein", it: "Santa Edith Stein", date: "2025-08-09" },
-  { en: "Saint Aloysius Gonzaga", it: "San Luigi Gonzaga", date: "2025-06-21" },
-  {
-    en: "Saint Vincent de Paul",
-    it: "San Vincenzo de' Paoli",
-    date: "2025-09-27",
-  },
-  {
-    en: "Saint John Vianney",
-    it: "San Giovanni Maria Vianney",
-    date: "2025-08-04",
-  },
-  {
-    en: "Saint Elizabeth Ann Seton",
-    it: "Santa Elisabetta Anna Seton",
-    date: "2025-01-04",
-  },
-  {
-    en: "Saint Kateri Tekakwitha",
-    it: "Santa Kateri Tekakwitha",
-    date: "2025-07-14",
-  },
-  { en: "Saint Maria Goretti", it: "Santa Maria Goretti", date: "2025-07-06" },
-  {
-    en: "Saint Catherine Labouré",
-    it: "Santa Caterina Labouré",
-    date: "2025-11-28",
-  },
-  {
-    en: "Saint Faustina Kowalska",
-    it: "Santa Faustina Kowalska",
-    date: "2025-10-05",
-  },
-  {
-    en: "Saint Paul Miki and Companions",
-    it: "San Paolo Miki e Compagni",
-    date: "2025-02-06",
-  },
-  {
-    en: "Saint Charles Borromeo",
-    it: "San Carlo Borromeo",
-    date: "2025-11-04",
-  },
-  {
-    en: "Saint Ignatius of Antioch",
-    it: "Sant'Ignazio di Antiochia",
-    date: "2025-10-17",
-  },
-  { en: "Saint Polycarp", it: "San Policarpo", date: "2025-02-23" },
-  { en: "Saint Justin Martyr", it: "San Giustino Martire", date: "2025-06-01" },
-  { en: "Saint Monica", it: "Santa Monica", date: "2025-08-27" },
-  {
-    en: "Saint Perpetua and Felicity",
-    it: "Sante Perpetua e Felicita",
-    date: "2025-03-07",
-  },
-  { en: "Saint Cecilia", it: "Santa Cecilia", date: "2025-11-22" },
-  { en: "Saint Lucy", it: "Santa Lucia", date: "2025-12-13" },
-  { en: "Saint Agnes", it: "Sant'Agnese", date: "2025-01-21" },
-  {
-    en: "Saint Clare of Montefalco",
-    it: "Santa Chiara da Montefalco",
-    date: "2025-08-17",
-  },
-  { en: "Saint Rose of Lima", it: "Santa Rosa da Lima", date: "2025-08-23" },
-  {
-    en: "Saint Margaret Mary Alacoque",
-    it: "Santa Margherita Maria Alacoque",
-    date: "2025-10-16",
-  },
-  {
-    en: "Saint John of the Cross",
-    it: "San Giovanni della Croce",
-    date: "2025-12-14",
-  },
-  {
-    en: "Saint Teresa Benedicta of the Cross",
-    it: "Santa Teresa Benedetta della Croce",
-    date: "2025-08-09",
-  },
-  {
-    en: "Saint Louis de Montfort",
-    it: "San Luigi Maria Grignion de Montfort",
-    date: "2025-04-28",
-  },
-  {
-    en: "Saint Alphonsus Liguori",
-    it: "Sant'Alfonso Maria de' Liguori",
-    date: "2025-08-01",
-  },
-  { en: "Saint Bonaventure", it: "San Bonaventura", date: "2025-07-15" },
-  {
-    en: "Saint Hildegard of Bingen",
-    it: "Santa Ildegarda di Bingen",
-    date: "2025-09-17",
-  },
-  {
-    en: "Saint John Chrysostom",
-    it: "San Giovanni Crisostomo",
-    date: "2025-09-13",
+    en: "Solemnity of Mary, Mother of God",
+    it: "Solennità di Maria, Madre di Dio",
+    date: "2025-01-01",
   },
   { en: "Saint Basil the Great", it: "San Basilio Magno", date: "2025-01-02" },
   {
@@ -15198,223 +16278,10 @@ export const saintFeastDays = [
     it: "San Gregorio Nazianzeno",
     date: "2025-01-02",
   },
-  { en: "Saint Athanasius", it: "Sant'Atanasio", date: "2025-05-02" },
-  { en: "Saint Ephrem", it: "Sant'Efrem", date: "2025-06-09" },
   {
-    en: "Saint Cyril of Alexandria",
-    it: "San Cirillo di Alessandria",
-    date: "2025-06-27",
-  },
-  {
-    en: "Saint John Damascene",
-    it: "San Giovanni Damasceno",
-    date: "2025-12-04",
-  },
-  { en: "Saint Anselm", it: "Sant'Anselmo", date: "2025-04-21" },
-  {
-    en: "Saint Thomas Aquinas",
-    it: "San Tommaso d'Aquino",
-    date: "2025-01-28",
-  },
-  {
-    en: "Saint Albert the Great",
-    it: "Sant'Alberto Magno",
-    date: "2025-11-15",
-  },
-  { en: "Saint Blaise", it: "San Biagio", date: "2025-02-03" },
-  { en: "Saint Scholastica", it: "Santa Scolastica", date: "2025-02-10" },
-  {
-    en: "Saint Polycarp of Smyrna",
-    it: "San Policarpo di Smirne",
-    date: "2025-02-23",
-  },
-  { en: "Saint Casimir", it: "San Casimiro", date: "2025-03-04" },
-  {
-    en: "Saint Cyril of Jerusalem",
-    it: "San Cirillo di Gerusalemme",
-    date: "2025-03-18",
-  },
-  {
-    en: "Saint Turibius of Mogrovejo",
-    it: "San Turibio de Mogrovejo",
-    date: "2025-03-23",
-  },
-  {
-    en: "Saint Isidore of Seville",
-    it: "Sant'Isidoro di Siviglia",
-    date: "2025-04-04",
-  },
-  {
-    en: "Saint Vincent Ferrer",
-    it: "San Vincenzo Ferreri",
-    date: "2025-04-05",
-  },
-  { en: "Saint Stanislaus", it: "San Stanislao", date: "2025-04-11" },
-  { en: "Saint George", it: "San Giorgio", date: "2025-04-23" },
-  {
-    en: "Saint Fidelis of Sigmaringen",
-    it: "San Fedele di Sigmaringen",
-    date: "2025-04-24",
-  },
-  { en: "Saint Pius V", it: "San Pio V", date: "2025-04-30" },
-  {
-    en: "Saint Athanasius of Alexandria",
-    it: "Sant'Atanasio di Alessandria",
-    date: "2025-05-02",
-  },
-  {
-    en: "Saint Damien of Molokai",
-    it: "San Damiano de Veuster",
-    date: "2025-05-10",
-  },
-  { en: "Saint John I", it: "San Giovanni I", date: "2025-05-18" },
-  {
-    en: "Saint Bede the Venerable",
-    it: "San Beda il Venerabile",
-    date: "2025-05-25",
-  },
-  { en: "Saint Boniface", it: "San Bonifacio", date: "2025-06-05" },
-  { en: "Saint Norbert", it: "San Norberto", date: "2025-06-06" },
-  {
-    en: "Saint Ephrem the Syrian",
-    it: "Sant'Efrem il Siro",
-    date: "2025-06-09",
-  },
-  { en: "Saint Romuald", it: "San Romualdo", date: "2025-06-19" },
-  { en: "Saint Aloysius Gonzaga", it: "San Luigi Gonzaga", date: "2025-06-21" },
-  { en: "Saint Irenaeus", it: "Sant'Ireneo", date: "2025-06-28" },
-  { en: "Saint Maria Goretti", it: "Santa Maria Goretti", date: "2025-07-06" },
-  { en: "Saint Henry", it: "San Enrico", date: "2025-07-13" },
-  {
-    en: "Saint Camillus de Lellis",
-    it: "San Camillo de Lellis",
-    date: "2025-07-14",
-  },
-  {
-    en: "Saint Bridget of Sweden",
-    it: "Santa Brigida di Svezia",
-    date: "2025-07-23",
-  },
-  {
-    en: "Saint Ignatius of Loyola",
-    it: "Sant'Ignazio di Loyola",
-    date: "2025-07-31",
-  },
-  {
-    en: "Saint Alphonsus Liguori",
-    it: "Sant'Alfonso Maria de' Liguori",
-    date: "2025-08-01",
-  },
-  {
-    en: "Saint John Vianney",
-    it: "San Giovanni Maria Vianney",
-    date: "2025-08-04",
-  },
-  { en: "Saint Dominic", it: "San Domenico", date: "2025-08-08" },
-  {
-    en: "Saint Clare of Assisi",
-    it: "Santa Chiara d'Assisi",
-    date: "2025-08-11",
-  },
-  {
-    en: "Saint Maximilian Kolbe",
-    it: "San Massimiliano Kolbe",
-    date: "2025-08-14",
-  },
-  {
-    en: "Saint Bernard of Clairvaux",
-    it: "San Bernardo di Chiaravalle",
-    date: "2025-08-20",
-  },
-  { en: "Saint Rose of Lima", it: "Santa Rosa da Lima", date: "2025-08-23" },
-  { en: "Saint Monica", it: "Santa Monica", date: "2025-08-27" },
-  {
-    en: "Saint Gregory the Great",
-    it: "San Gregorio Magno",
-    date: "2025-09-03",
-  },
-  { en: "Saint Peter Claver", it: "San Pietro Claver", date: "2025-09-09" },
-  {
-    en: "Saint Robert Bellarmine",
-    it: "San Roberto Bellarmino",
-    date: "2025-09-17",
-  },
-  { en: "Saint Januarius", it: "San Gennaro", date: "2025-09-19" },
-  {
-    en: "Saint Vincent de Paul",
-    it: "San Vincenzo de' Paoli",
-    date: "2025-09-27",
-  },
-  {
-    en: "Saint Therese of Lisieux",
-    it: "Santa Teresa di Lisieux",
-    date: "2025-10-01",
-  },
-  {
-    en: "Saint Francis Borgia",
-    it: "San Francesco Borgia",
-    date: "2025-10-10",
-  },
-  {
-    en: "Saint Teresa of Avila",
-    it: "Santa Teresa d'Avila",
-    date: "2025-10-15",
-  },
-  { en: "Saint Hedwig", it: "Santa Edvige", date: "2025-10-16" },
-  {
-    en: "Saint Margaret Mary Alacoque",
-    it: "Santa Margherita Maria Alacoque",
-    date: "2025-10-16",
-  },
-  {
-    en: "Saint John of Capistrano",
-    it: "San Giovanni da Capestrano",
-    date: "2025-10-23",
-  },
-  {
-    en: "Saint Simon and Saint Jude",
-    it: "San Simone e San Giuda",
-    date: "2025-10-28",
-  },
-  {
-    en: "Saint Martin de Porres",
-    it: "San Martino de Porres",
-    date: "2025-11-03",
-  },
-  {
-    en: "Saint Charles Borromeo",
-    it: "San Carlo Borromeo",
-    date: "2025-11-04",
-  },
-  { en: "Saint Leo the Great", it: "San Leone Magno", date: "2025-11-10" },
-  {
-    en: "Saint Albert the Great",
-    it: "Sant'Alberto Magno",
-    date: "2025-11-15",
-  },
-  { en: "Saint Cecilia", it: "Santa Cecilia", date: "2025-11-22" },
-  { en: "Saint Andrew", it: "Sant'Andrea", date: "2025-11-30" },
-  { en: "Saint Ambrose", it: "Sant'Ambrogio", date: "2025-12-07" },
-  { en: "Saint Lucy", it: "Santa Lucia", date: "2025-12-13" },
-  {
-    en: "Saint John of the Cross",
-    it: "San Giovanni della Croce",
-    date: "2025-12-14",
-  },
-  { en: "Saint Peter Canisius", it: "San Pietro Canisio", date: "2025-12-21" },
-  { en: "Saint Stephen", it: "Santo Stefano", date: "2025-12-26" },
-  {
-    en: "Saint John the Apostle",
-    it: "San Giovanni Apostolo",
-    date: "2025-12-27",
-  },
-  { en: "Holy Innocents", it: "Santi Innocenti", date: "2025-12-28" },
-  { en: "Saint Sylvester I", it: "San Silvestro I", date: "2025-12-31" },
-  { en: "Saint Basil the Great", it: "San Basilio Magno", date: "2025-01-02" },
-  {
-    en: "Saint Gregory Nazianzen",
-    it: "San Gregorio Nazianzeno",
-    date: "2025-01-02",
+    en: "Most Holy Name of Jesus",
+    it: "Santissimo Nome di Gesù",
+    date: "2025-01-03",
   },
   {
     en: "Saint Elizabeth Ann Seton",
@@ -15422,11 +16289,17 @@ export const saintFeastDays = [
     date: "2025-01-04",
   },
   { en: "Saint John Neumann", it: "San Giovanni Neumann", date: "2025-01-05" },
+  { en: "Epiphany", it: "Epifania", date: "2025-01-06" },
   { en: "Saint Andre Bessette", it: "San Andrea Bessette", date: "2025-01-06" },
   {
     en: "Saint Raymond of Penyafort",
     it: "San Raimondo di Peñafort",
     date: "2025-01-07",
+  },
+  {
+    en: "Baptism of the Lord",
+    it: "Battesimo del Signore",
+    date: "2025-01-12",
   },
   {
     en: "Saint Hilary of Poitiers",
@@ -15438,11 +16311,18 @@ export const saintFeastDays = [
     it: "Sant'Antonio Abate",
     date: "2025-01-17",
   },
+  { en: "Saint Sebastian", it: "San Sebastiano", date: "2025-01-20" },
   { en: "Saint Agnes", it: "Sant'Agnese", date: "2025-01-21" },
+  { en: "Saint Vincent", it: "San Vincenzo", date: "2025-01-22" },
   {
     en: "Saint Francis de Sales",
     it: "San Francesco di Sales",
     date: "2025-01-24",
+  },
+  {
+    en: "Conversion of Saint Paul",
+    it: "Conversione di San Paolo",
+    date: "2025-01-25",
   },
   {
     en: "Saint Timothy and Saint Titus",
@@ -15456,6 +16336,15 @@ export const saintFeastDays = [
     date: "2025-01-28",
   },
   { en: "Saint John Bosco", it: "San Giovanni Bosco", date: "2025-01-31" },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // FEBRUARY
+  // ═══════════════════════════════════════════════════════════════════
+  {
+    en: "Presentation of the Lord (Candlemas)",
+    it: "Presentazione del Signore (Candelora)",
+    date: "2025-02-02",
+  },
   { en: "Saint Blaise", it: "San Biagio", date: "2025-02-03" },
   { en: "Saint Ansgar", it: "Sant'Ansgario", date: "2025-02-03" },
   { en: "Saint Agatha", it: "Sant'Agata", date: "2025-02-05" },
@@ -15485,14 +16374,35 @@ export const saintFeastDays = [
     it: "San Cirillo e San Metodio",
     date: "2025-02-14",
   },
+  { en: "Saint Valentine", it: "San Valentino", date: "2025-02-14" },
+  {
+    en: "Seven Holy Founders of the Servite Order",
+    it: "Santi Sette Fondatori dei Servi di Maria",
+    date: "2025-02-17",
+  },
   { en: "Saint Peter Damian", it: "San Pier Damiani", date: "2025-02-21" },
+  {
+    en: "Chair of Saint Peter",
+    it: "Cattedra di San Pietro",
+    date: "2025-02-22",
+  },
   { en: "Saint Polycarp", it: "San Policarpo", date: "2025-02-23" },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // MARCH
+  // ═══════════════════════════════════════════════════════════════════
   {
     en: "Saint Katharine Drexel",
     it: "Santa Caterina Drexel",
     date: "2025-03-03",
   },
   { en: "Saint Casimir", it: "San Casimiro", date: "2025-03-04" },
+  { en: "Ash Wednesday", it: "Mercoledì delle Ceneri", date: "2025-03-05" },
+  {
+    en: "Saint Perpetua and Felicity",
+    it: "Sante Perpetua e Felicita",
+    date: "2025-03-07",
+  },
   { en: "Saint John of God", it: "San Giovanni di Dio", date: "2025-03-08" },
   {
     en: "Saint Frances of Rome",
@@ -15506,27 +16416,25 @@ export const saintFeastDays = [
     date: "2025-03-18",
   },
   {
-    en: "Saint Josephine Bakhita",
-    it: "Santa Giuseppina Bakhita",
-    date: "2025-02-08",
-  },
-  {
-    en: "Saint Polycarp of Smyrna",
-    it: "San Policarpo di Smirne",
-    date: "2025-02-23",
-  },
-  { en: "Saint Casimir", it: "San Casimiro", date: "2025-03-04" },
-  { en: "Saint John of God", it: "San Giovanni di Dio", date: "2025-03-08" },
-  {
-    en: "Saint Frances of Rome",
-    it: "Santa Francesca Romana",
-    date: "2025-03-09",
+    en: "Saint Joseph, Spouse of Mary",
+    it: "San Giuseppe, Sposo di Maria",
+    date: "2025-03-19",
   },
   {
     en: "Saint Turibius of Mogrovejo",
     it: "San Turibio de Mogrovejo",
     date: "2025-03-23",
   },
+  { en: "Saint Oscar Romero", it: "San Oscar Romero", date: "2025-03-24" },
+  {
+    en: "Feast of the Annunciation",
+    it: "Festa dell'Annunciazione",
+    date: "2025-03-25",
+  },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // APRIL
+  // ═══════════════════════════════════════════════════════════════════
   {
     en: "Saint Isidore of Seville",
     it: "Sant'Isidoro di Siviglia",
@@ -15538,177 +16446,22 @@ export const saintFeastDays = [
     date: "2025-04-05",
   },
   { en: "Saint Stanislaus", it: "San Stanislao", date: "2025-04-11" },
+  { en: "Palm Sunday", it: "Domenica delle Palme", date: "2025-04-13" },
+  { en: "Holy Thursday", it: "Giovedì Santo", date: "2025-04-17" },
+  { en: "Good Friday", it: "Venerdì Santo", date: "2025-04-18" },
+  { en: "Holy Saturday", it: "Sabato Santo", date: "2025-04-19" },
+  { en: "Easter Sunday", it: "Domenica di Pasqua", date: "2025-04-20" },
+  { en: "Saint Anselm", it: "Sant'Anselmo", date: "2025-04-21" },
   { en: "Saint George", it: "San Giorgio", date: "2025-04-23" },
   {
     en: "Saint Fidelis of Sigmaringen",
     it: "San Fedele di Sigmaringen",
     date: "2025-04-24",
   },
-  { en: "Saint Pius V", it: "San Pio V", date: "2025-04-30" },
   {
-    en: "Saint Athanasius of Alexandria",
-    it: "Sant'Atanasio di Alessandria",
-    date: "2025-05-02",
-  },
-  {
-    en: "Saint Damien of Molokai",
-    it: "San Damiano de Veuster",
-    date: "2025-05-10",
-  },
-  { en: "Saint John I", it: "San Giovanni I", date: "2025-05-18" },
-  {
-    en: "Saint Bede the Venerable",
-    it: "San Beda il Venerabile",
-    date: "2025-05-25",
-  },
-  { en: "Saint Boniface", it: "San Bonifacio", date: "2025-06-05" },
-  { en: "Saint Norbert", it: "San Norberto", date: "2025-06-06" },
-  {
-    en: "Saint Ephrem the Syrian",
-    it: "Sant'Efrem il Siro",
-    date: "2025-06-09",
-  },
-  { en: "Saint Romuald", it: "San Romualdo", date: "2025-06-19" },
-  { en: "Saint Aloysius Gonzaga", it: "San Luigi Gonzaga", date: "2025-06-21" },
-  { en: "Saint Irenaeus", it: "Sant'Ireneo", date: "2025-06-28" },
-  { en: "Saint Maria Goretti", it: "Santa Maria Goretti", date: "2025-07-06" },
-  { en: "Saint Henry", it: "San Enrico", date: "2025-07-13" },
-  {
-    en: "Saint Camillus de Lellis",
-    it: "San Camillo de Lellis",
-    date: "2025-07-14",
-  },
-  {
-    en: "Saint Bridget of Sweden",
-    it: "Santa Brigida di Svezia",
-    date: "2025-07-23",
-  },
-  {
-    en: "Saint Ignatius of Loyola",
-    it: "Sant'Ignazio di Loyola",
-    date: "2025-07-31",
-  },
-  {
-    en: "Saint Alphonsus Liguori",
-    it: "Sant'Alfonso Maria de' Liguori",
-    date: "2025-08-01",
-  },
-  {
-    en: "Saint John Vianney",
-    it: "San Giovanni Maria Vianney",
-    date: "2025-08-04",
-  },
-  {
-    en: "Saint Joseph Benedict Cottolengo",
-    it: "San Giuseppe Benedetto Cottolengo",
-    date: "2025-04-30",
-  },
-  {
-    en: "Saint John Henry Newman",
-    it: "San Giovanni Enrico Newman",
-    date: "2025-10-09",
-  },
-  { en: "Saint Oscar Romero", it: "San Oscar Romero", date: "2025-03-24" },
-  { en: "Saint Edith Stein", it: "Santa Edith Stein", date: "2025-08-09" },
-  { en: "Saint Lorenzo Ruiz", it: "San Lorenzo Ruiz", date: "2025-09-28" },
-  { en: "Saint John Paul II", it: "San Giovanni Paolo II", date: "2025-10-22" },
-  {
-    en: "Saint Teresa of Calcutta",
-    it: "Santa Teresa di Calcutta",
-    date: "2025-09-05",
-  },
-  { en: "Saint Padre Pio", it: "San Pio da Pietrelcina", date: "2025-09-23" },
-  { en: "Saint John Bosco", it: "San Giovanni Bosco", date: "2025-01-31" },
-  { en: "Saint Joan of Arc", it: "Santa Giovanna d'Arco", date: "2025-05-30" },
-  {
-    en: "Saint Bernadette Soubirous",
-    it: "Santa Bernadette Soubirous",
-    date: "2025-04-16",
-  },
-  {
-    en: "Saint Maximilian Kolbe",
-    it: "San Massimiliano Kolbe",
-    date: "2025-08-14",
-  },
-  { en: "Saint Edith Stein", it: "Santa Edith Stein", date: "2025-08-09" },
-  { en: "Saint Aloysius Gonzaga", it: "San Luigi Gonzaga", date: "2025-06-21" },
-  {
-    en: "Saint Vincent de Paul",
-    it: "San Vincenzo de' Paoli",
-    date: "2025-09-27",
-  },
-  {
-    en: "Saint John Vianney",
-    it: "San Giovanni Maria Vianney",
-    date: "2025-08-04",
-  },
-  {
-    en: "Saint Elizabeth Ann Seton",
-    it: "Santa Elisabetta Anna Seton",
-    date: "2025-01-04",
-  },
-  {
-    en: "Saint Kateri Tekakwitha",
-    it: "Santa Kateri Tekakwitha",
-    date: "2025-07-14",
-  },
-  { en: "Saint Maria Goretti", it: "Santa Maria Goretti", date: "2025-07-06" },
-  {
-    en: "Saint Catherine Labouré",
-    it: "Santa Caterina Labouré",
-    date: "2025-11-28",
-  },
-  {
-    en: "Saint Faustina Kowalska",
-    it: "Santa Faustina Kowalska",
-    date: "2025-10-05",
-  },
-  {
-    en: "Saint Paul Miki and Companions",
-    it: "San Paolo Miki e Compagni",
-    date: "2025-02-06",
-  },
-  {
-    en: "Saint Charles Borromeo",
-    it: "San Carlo Borromeo",
-    date: "2025-11-04",
-  },
-  {
-    en: "Saint Ignatius of Antioch",
-    it: "Sant'Ignazio di Antiochia",
-    date: "2025-10-17",
-  },
-  { en: "Saint Polycarp", it: "San Policarpo", date: "2025-02-23" },
-  { en: "Saint Justin Martyr", it: "San Giustino Martire", date: "2025-06-01" },
-  { en: "Saint Monica", it: "Santa Monica", date: "2025-08-27" },
-  {
-    en: "Saint Perpetua and Felicity",
-    it: "Sante Perpetua e Felicita",
-    date: "2025-03-07",
-  },
-  { en: "Saint Cecilia", it: "Santa Cecilia", date: "2025-11-22" },
-  { en: "Saint Lucy", it: "Santa Lucia", date: "2025-12-13" },
-  { en: "Saint Agnes", it: "Sant'Agnese", date: "2025-01-21" },
-  {
-    en: "Saint Clare of Montefalco",
-    it: "Santa Chiara da Montefalco",
-    date: "2025-08-17",
-  },
-  { en: "Saint Rose of Lima", it: "Santa Rosa da Lima", date: "2025-08-23" },
-  {
-    en: "Saint Margaret Mary Alacoque",
-    it: "Santa Margherita Maria Alacoque",
-    date: "2025-10-16",
-  },
-  {
-    en: "Saint John of the Cross",
-    it: "San Giovanni della Croce",
-    date: "2025-12-14",
-  },
-  {
-    en: "Saint Teresa Benedicta of the Cross",
-    it: "Santa Teresa Benedetta della Croce",
-    date: "2025-08-09",
+    en: "Saint Mark the Evangelist",
+    it: "San Marco Evangelista",
+    date: "2025-04-25",
   },
   {
     en: "Saint Louis de Montfort",
@@ -15716,118 +16469,142 @@ export const saintFeastDays = [
     date: "2025-04-28",
   },
   {
-    en: "Saint Alphonsus Liguori",
-    it: "Sant'Alfonso Maria de' Liguori",
-    date: "2025-08-01",
-  },
-  { en: "Saint Bonaventure", it: "San Bonaventura", date: "2025-07-15" },
-  {
-    en: "Saint Hildegard of Bingen",
-    it: "Santa Ildegarda di Bingen",
-    date: "2025-09-17",
-  },
-  {
-    en: "Saint John Chrysostom",
-    it: "San Giovanni Crisostomo",
-    date: "2025-09-13",
-  },
-  { en: "Saint Basil the Great", it: "San Basilio Magno", date: "2025-01-02" },
-  {
-    en: "Saint Gregory Nazianzen",
-    it: "San Gregorio Nazianzeno",
-    date: "2025-01-02",
-  },
-  { en: "Saint Athanasius", it: "Sant'Atanasio", date: "2025-05-02" },
-  { en: "Saint Ephrem", it: "Sant'Efrem", date: "2025-06-09" },
-  {
-    en: "Saint Cyril of Alexandria",
-    it: "San Cirillo di Alessandria",
-    date: "2025-06-27",
-  },
-  {
-    en: "Saint John Damascene",
-    it: "San Giovanni Damasceno",
-    date: "2025-12-04",
-  },
-  { en: "Saint Anselm", it: "Sant'Anselmo", date: "2025-04-21" },
-  {
-    en: "Saint Thomas Aquinas",
-    it: "San Tommaso d'Aquino",
-    date: "2025-01-28",
-  },
-  {
-    en: "Saint Albert the Great",
-    it: "Sant'Alberto Magno",
-    date: "2025-11-15",
-  },
-  { en: "Saint Blaise", it: "San Biagio", date: "2025-02-03" },
-  { en: "Saint Scholastica", it: "Santa Scolastica", date: "2025-02-10" },
-  {
-    en: "Saint Polycarp of Smyrna",
-    it: "San Policarpo di Smirne",
-    date: "2025-02-23",
-  },
-  { en: "Saint Casimir", it: "San Casimiro", date: "2025-03-04" },
-  {
-    en: "Saint Cyril of Jerusalem",
-    it: "San Cirillo di Gerusalemme",
-    date: "2025-03-18",
-  },
-  {
-    en: "Saint Turibius of Mogrovejo",
-    it: "San Turibio de Mogrovejo",
-    date: "2025-03-23",
-  },
-  {
-    en: "Saint Isidore of Seville",
-    it: "Sant'Isidoro di Siviglia",
-    date: "2025-04-04",
-  },
-  {
-    en: "Saint Vincent Ferrer",
-    it: "San Vincenzo Ferreri",
-    date: "2025-04-05",
-  },
-  { en: "Saint Stanislaus", it: "San Stanislao", date: "2025-04-11" },
-  { en: "Saint George", it: "San Giorgio", date: "2025-04-23" },
-  {
-    en: "Saint Fidelis of Sigmaringen",
-    it: "San Fedele di Sigmaringen",
-    date: "2025-04-24",
+    en: "Saint Catherine of Siena",
+    it: "Santa Caterina da Siena",
+    date: "2025-04-29",
   },
   { en: "Saint Pius V", it: "San Pio V", date: "2025-04-30" },
   {
-    en: "Saint Athanasius of Alexandria",
-    it: "Sant'Atanasio di Alessandria",
-    date: "2025-05-02",
+    en: "Saint Joseph Benedict Cottolengo",
+    it: "San Giuseppe Benedetto Cottolengo",
+    date: "2025-04-30",
+  },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // MAY
+  // ═══════════════════════════════════════════════════════════════════
+  {
+    en: "Saint Joseph the Worker",
+    it: "San Giuseppe Lavoratore",
+    date: "2025-05-01",
+  },
+  { en: "Saint Athanasius", it: "Sant'Atanasio", date: "2025-05-02" },
+  {
+    en: "Saint Philip and Saint James",
+    it: "San Filippo e San Giacomo",
+    date: "2025-05-03",
   },
   {
     en: "Saint Damien of Molokai",
     it: "San Damiano de Veuster",
     date: "2025-05-10",
   },
+  { en: "Saint Matthias", it: "San Mattia", date: "2025-05-14" },
   { en: "Saint John I", it: "San Giovanni I", date: "2025-05-18" },
+  {
+    en: "Saint Bernardine of Siena",
+    it: "San Bernardino da Siena",
+    date: "2025-05-20",
+  },
+  {
+    en: "Saint Rita of Cascia",
+    it: "Santa Rita da Cascia",
+    date: "2025-05-22",
+  },
   {
     en: "Saint Bede the Venerable",
     it: "San Beda il Venerabile",
     date: "2025-05-25",
   },
+  { en: "Saint Philip Neri", it: "San Filippo Neri", date: "2025-05-26" },
+  {
+    en: "Saint Augustine of Canterbury",
+    it: "Sant'Agostino di Canterbury",
+    date: "2025-05-27",
+  },
+  {
+    en: "Ascension of the Lord",
+    it: "Ascensione del Signore",
+    date: "2025-05-29",
+  },
+  { en: "Visitation of Mary", it: "Visitazione di Maria", date: "2025-05-31" },
+  { en: "Saint Joan of Arc", it: "Santa Giovanna d'Arco", date: "2025-05-30" },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // JUNE
+  // ═══════════════════════════════════════════════════════════════════
+  { en: "Saint Justin Martyr", it: "San Giustino Martire", date: "2025-06-01" },
+  {
+    en: "Saint Charles Lwanga and Companions",
+    it: "San Carlo Lwanga e Compagni",
+    date: "2025-06-03",
+  },
   { en: "Saint Boniface", it: "San Bonifacio", date: "2025-06-05" },
   { en: "Saint Norbert", it: "San Norberto", date: "2025-06-06" },
+  { en: "Pentecost", it: "Pentecoste", date: "2025-06-08" },
+  { en: "Saint Ephrem", it: "Sant'Efrem", date: "2025-06-09" },
+  { en: "Saint Barnabas", it: "San Barnaba", date: "2025-06-11" },
   {
-    en: "Saint Ephrem the Syrian",
-    it: "Sant'Efrem il Siro",
-    date: "2025-06-09",
+    en: "Saint Anthony of Padua",
+    it: "Sant'Antonio di Padova",
+    date: "2025-06-13",
   },
+  { en: "Corpus Christi", it: "Corpus Domini", date: "2025-06-19" },
   { en: "Saint Romuald", it: "San Romualdo", date: "2025-06-19" },
   { en: "Saint Aloysius Gonzaga", it: "San Luigi Gonzaga", date: "2025-06-21" },
+  {
+    en: "Saint John the Baptist (Birth)",
+    it: "Natività di San Giovanni Battista",
+    date: "2025-06-24",
+  },
+  {
+    en: "Saint Cyril of Alexandria",
+    it: "San Cirillo di Alessandria",
+    date: "2025-06-27",
+  },
+  {
+    en: "Feast of the Sacred Heart",
+    it: "Festa del Sacro Cuore",
+    date: "2025-06-27",
+  },
   { en: "Saint Irenaeus", it: "Sant'Ireneo", date: "2025-06-28" },
+  {
+    en: "Saint Peter and Saint Paul",
+    it: "Santi Pietro e Paolo",
+    date: "2025-06-29",
+  },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // JULY
+  // ═══════════════════════════════════════════════════════════════════
+  {
+    en: "Saint Thomas the Apostle",
+    it: "San Tommaso Apostolo",
+    date: "2025-07-03",
+  },
+  {
+    en: "Saint Elizabeth of Portugal",
+    it: "Santa Elisabetta del Portogallo",
+    date: "2025-07-04",
+  },
   { en: "Saint Maria Goretti", it: "Santa Maria Goretti", date: "2025-07-06" },
+  { en: "Saint Benedict", it: "San Benedetto", date: "2025-07-11" },
   { en: "Saint Henry", it: "San Enrico", date: "2025-07-13" },
+  {
+    en: "Saint Kateri Tekakwitha",
+    it: "Santa Kateri Tekakwitha",
+    date: "2025-07-14",
+  },
   {
     en: "Saint Camillus de Lellis",
     it: "San Camillo de Lellis",
     date: "2025-07-14",
+  },
+  { en: "Saint Bonaventure", it: "San Bonaventura", date: "2025-07-15" },
+  {
+    en: "Our Lady of Mount Carmel",
+    it: "Nostra Signora del Monte Carmelo",
+    date: "2025-07-16",
   },
   {
     en: "Saint Bridget of Sweden",
@@ -15835,59 +16612,187 @@ export const saintFeastDays = [
     date: "2025-07-23",
   },
   {
+    en: "Saint James the Greater",
+    it: "San Giacomo il Maggiore",
+    date: "2025-07-25",
+  },
+  {
+    en: "Saint Anne and Saint Joachim",
+    it: "Sant'Anna e San Gioacchino",
+    date: "2025-07-26",
+  },
+  {
+    en: "Saint Martha, Mary and Lazarus",
+    it: "Sante Marta, Maria e Lazzaro",
+    date: "2025-07-29",
+  },
+  {
     en: "Saint Ignatius of Loyola",
     it: "Sant'Ignazio di Loyola",
     date: "2025-07-31",
   },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // AUGUST
+  // ═══════════════════════════════════════════════════════════════════
   {
     en: "Saint Alphonsus Liguori",
     it: "Sant'Alfonso Maria de' Liguori",
     date: "2025-08-01",
   },
   {
+    en: "Saint Eusebius of Vercelli",
+    it: "Sant'Eusebio di Vercelli",
+    date: "2025-08-02",
+  },
+  {
     en: "Saint John Vianney",
     it: "San Giovanni Maria Vianney",
     date: "2025-08-04",
   },
+  {
+    en: "Transfiguration of the Lord",
+    it: "Trasfigurazione del Signore",
+    date: "2025-08-06",
+  },
   { en: "Saint Dominic", it: "San Domenico", date: "2025-08-08" },
+  {
+    en: "Saint Teresa Benedicta of the Cross (Edith Stein)",
+    it: "Santa Teresa Benedetta della Croce (Edith Stein)",
+    date: "2025-08-09",
+  },
+  { en: "Saint Lawrence", it: "San Lorenzo", date: "2025-08-10" },
   {
     en: "Saint Clare of Assisi",
     it: "Santa Chiara d'Assisi",
     date: "2025-08-11",
   },
   {
+    en: "Saint Jane Frances de Chantal",
+    it: "Santa Giovanna Francesca de Chantal",
+    date: "2025-08-12",
+  },
+  {
     en: "Saint Maximilian Kolbe",
     it: "San Massimiliano Kolbe",
     date: "2025-08-14",
+  },
+  { en: "Assumption of Mary", it: "Assunzione di Maria", date: "2025-08-15" },
+  {
+    en: "Saint Clare of Montefalco",
+    it: "Santa Chiara da Montefalco",
+    date: "2025-08-17",
   },
   {
     en: "Saint Bernard of Clairvaux",
     it: "San Bernardo di Chiaravalle",
     date: "2025-08-20",
   },
+  { en: "Queenship of Mary", it: "Regalità di Maria", date: "2025-08-22" },
   { en: "Saint Rose of Lima", it: "Santa Rosa da Lima", date: "2025-08-23" },
+  { en: "Saint Bartholomew", it: "San Bartolomeo", date: "2025-08-24" },
   { en: "Saint Monica", it: "Santa Monica", date: "2025-08-27" },
+  { en: "Saint Augustine", it: "Sant'Agostino", date: "2025-08-28" },
+  {
+    en: "Passion of Saint John the Baptist",
+    it: "Martirio di San Giovanni Battista",
+    date: "2025-08-29",
+  },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // SEPTEMBER
+  // ═══════════════════════════════════════════════════════════════════
   {
     en: "Saint Gregory the Great",
     it: "San Gregorio Magno",
     date: "2025-09-03",
   },
+  {
+    en: "Saint Teresa of Calcutta",
+    it: "Santa Teresa di Calcutta",
+    date: "2025-09-05",
+  },
+  { en: "Nativity of Mary", it: "Natività di Maria", date: "2025-09-08" },
   { en: "Saint Peter Claver", it: "San Pietro Claver", date: "2025-09-09" },
+  {
+    en: "Most Holy Name of Mary",
+    it: "Santissimo Nome di Maria",
+    date: "2025-09-12",
+  },
+  {
+    en: "Saint John Chrysostom",
+    it: "San Giovanni Crisostomo",
+    date: "2025-09-13",
+  },
+  {
+    en: "Exaltation of the Holy Cross",
+    it: "Esaltazione della Santa Croce",
+    date: "2025-09-14",
+  },
+  {
+    en: "Our Lady of Sorrows",
+    it: "Nostra Signora dei Dolori",
+    date: "2025-09-15",
+  },
+  {
+    en: "Saint Hildegard of Bingen",
+    it: "Santa Ildegarda di Bingen",
+    date: "2025-09-17",
+  },
   {
     en: "Saint Robert Bellarmine",
     it: "San Roberto Bellarmino",
     date: "2025-09-17",
   },
   { en: "Saint Januarius", it: "San Gennaro", date: "2025-09-19" },
+  { en: "Saint Matthew", it: "San Matteo", date: "2025-09-21" },
+  { en: "Saint Padre Pio", it: "San Pio da Pietrelcina", date: "2025-09-23" },
+  {
+    en: "Saint Cosmas and Damian",
+    it: "Santi Cosma e Damiano",
+    date: "2025-09-26",
+  },
   {
     en: "Saint Vincent de Paul",
     it: "San Vincenzo de' Paoli",
     date: "2025-09-27",
   },
+  { en: "Saint Lorenzo Ruiz", it: "San Lorenzo Ruiz", date: "2025-09-28" },
+  {
+    en: "Saints Michael, Gabriel and Raphael (Archangels)",
+    it: "Santi Michele, Gabriele e Raffaele (Arcangeli)",
+    date: "2025-09-29",
+  },
+  { en: "Saint Jerome", it: "San Girolamo", date: "2025-09-30" },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // OCTOBER
+  // ═══════════════════════════════════════════════════════════════════
   {
     en: "Saint Therese of Lisieux",
     it: "Santa Teresa di Lisieux",
     date: "2025-10-01",
+  },
+  { en: "Guardian Angels", it: "Santi Angeli Custodi", date: "2025-10-02" },
+  {
+    en: "Saint Francis of Assisi",
+    it: "San Francesco d'Assisi",
+    date: "2025-10-04",
+  },
+  {
+    en: "Saint Faustina Kowalska",
+    it: "Santa Faustina Kowalska",
+    date: "2025-10-05",
+  },
+  {
+    en: "Our Lady of the Rosary",
+    it: "Nostra Signora del Rosario",
+    date: "2025-10-07",
+  },
+  {
+    en: "Saint John Henry Newman",
+    it: "San Giovanni Enrico Newman",
+    date: "2025-10-09",
   },
   {
     en: "Saint Francis Borgia",
@@ -15906,6 +16811,17 @@ export const saintFeastDays = [
     date: "2025-10-16",
   },
   {
+    en: "Saint Ignatius of Antioch",
+    it: "Sant'Ignazio di Antiochia",
+    date: "2025-10-17",
+  },
+  {
+    en: "Saint Luke the Evangelist",
+    it: "San Luca Evangelista",
+    date: "2025-10-18",
+  },
+  { en: "Saint John Paul II", it: "San Giovanni Paolo II", date: "2025-10-22" },
+  {
     en: "Saint John of Capistrano",
     it: "San Giovanni da Capestrano",
     date: "2025-10-23",
@@ -15914,6 +16830,17 @@ export const saintFeastDays = [
     en: "Saint Simon and Saint Jude",
     it: "San Simone e San Giuda",
     date: "2025-10-28",
+  },
+  { en: "Madre Nasi", it: "Madre Nasi", date: "2025-10-31" },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // NOVEMBER
+  // ═══════════════════════════════════════════════════════════════════
+  { en: "All Saints' Day", it: "Ognissanti", date: "2025-11-01" },
+  {
+    en: "All Souls' Day",
+    it: "Commemorazione dei Defunti",
+    date: "2025-11-02",
   },
   {
     en: "Saint Martin de Porres",
@@ -15927,13 +16854,74 @@ export const saintFeastDays = [
   },
   { en: "Saint Leo the Great", it: "San Leone Magno", date: "2025-11-10" },
   {
+    en: "Saint Martin of Tours",
+    it: "San Martino di Tours",
+    date: "2025-11-11",
+  },
+  { en: "Saint Josaphat", it: "San Giosafat", date: "2025-11-12" },
+  {
     en: "Saint Albert the Great",
     it: "Sant'Alberto Magno",
     date: "2025-11-15",
   },
+  {
+    en: "Saint Elizabeth of Hungary",
+    it: "Sant'Elisabetta d'Ungheria",
+    date: "2025-11-17",
+  },
+  {
+    en: "Presentation of Mary",
+    it: "Presentazione di Maria",
+    date: "2025-11-21",
+  },
   { en: "Saint Cecilia", it: "Santa Cecilia", date: "2025-11-22" },
+  {
+    en: "Feast of Christ the King",
+    it: "Festa di Cristo Re",
+    date: "2025-11-23",
+  },
+  {
+    en: "Saint Catherine Labouré",
+    it: "Santa Caterina Labouré",
+    date: "2025-11-28",
+  },
   { en: "Saint Andrew", it: "Sant'Andrea", date: "2025-11-30" },
+  {
+    en: "Advent (First Sunday)",
+    it: "Avvento (Prima Domenica)",
+    date: "2025-11-30",
+  },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // DECEMBER
+  // ═══════════════════════════════════════════════════════════════════
+  {
+    en: "Saint Francis Xavier",
+    it: "San Francesco Saverio",
+    date: "2025-12-03",
+  },
+  {
+    en: "Saint John Damascene",
+    it: "San Giovanni Damasceno",
+    date: "2025-12-04",
+  },
+  { en: "Saint Nicholas", it: "San Nicola", date: "2025-12-06" },
   { en: "Saint Ambrose", it: "Sant'Ambrogio", date: "2025-12-07" },
+  {
+    en: "Immaculate Conception",
+    it: "Immacolata Concezione",
+    date: "2025-12-08",
+  },
+  {
+    en: "Our Lady of Loreto",
+    it: "Nostra Signora di Loreto",
+    date: "2025-12-10",
+  },
+  {
+    en: "Our Lady of Guadalupe",
+    it: "Nostra Signora di Guadalupe",
+    date: "2025-12-12",
+  },
   { en: "Saint Lucy", it: "Santa Lucia", date: "2025-12-13" },
   {
     en: "Saint John of the Cross",
@@ -15941,6 +16929,7 @@ export const saintFeastDays = [
     date: "2025-12-14",
   },
   { en: "Saint Peter Canisius", it: "San Pietro Canisio", date: "2025-12-21" },
+  { en: "Christmas", it: "Natale", date: "2025-12-25" },
   { en: "Saint Stephen", it: "Santo Stefano", date: "2025-12-26" },
   {
     en: "Saint John the Apostle",
@@ -15948,102 +16937,25 @@ export const saintFeastDays = [
     date: "2025-12-27",
   },
   { en: "Holy Innocents", it: "Santi Innocenti", date: "2025-12-28" },
+  { en: "Holy Family", it: "Sacra Famiglia", date: "2025-12-29" },
   { en: "Saint Sylvester I", it: "San Silvestro I", date: "2025-12-31" },
-  { en: "Christmas", it: "Natale", date: "2025-12-25" },
-  { en: "Easter", it: "Pasqua", date: "2025-04-20" },
-  {
-    en: "Advent (First Sunday)",
-    it: "Avvento (Prima Domenica)",
-    date: "2025-11-30",
-  },
-  { en: "Palm Sunday", it: "Domenica delle Palme", date: "2025-04-13" },
-  { en: "Holy Thursday", it: "Giovedì Santo", date: "2025-04-17" },
-  { en: "Good Friday", it: "Venerdì Santo", date: "2025-04-18" },
-  { en: "Holy Saturday", it: "Sabato Santo", date: "2025-04-19" },
-  { en: "Pentecost", it: "Pentecoste", date: "2025-06-08" },
-  { en: "Ascension", it: "Ascensione", date: "2025-05-29" },
-  { en: "All Saints' Day", it: "Ognissanti", date: "2025-11-01" },
-  {
-    en: "Immaculate Conception",
-    it: "Immacolata Concezione",
-    date: "2025-12-08",
-  },
-  { en: "Epiphany", it: "Epifania", date: "2025-01-06" },
-  { en: "Corpus Christi", it: "Corpus Domini", date: "2025-06-19" },
-  {
-    en: "Solemnity of Mary, Mother of God",
-    it: "Solennità di Maria, Madre di Dio",
-    date: "2025-01-01",
-  },
-  {
-    en: "Feast of the Sacred Heart",
-    it: "Festa del Sacro Cuore",
-    date: "2025-06-27",
-  },
-  {
-    en: "Feast of Christ the King",
-    it: "Festa di Cristo Re",
-    date: "2025-11-23",
-  },
-  { en: "Ash Wednesday", it: "Mercoledì delle Ceneri", date: "2025-03-05" },
-  {
-    en: "Feast of the Annunciation",
-    it: "Festa dell'Annunciazione",
-    date: "2025-03-25",
-  },
-  { en: "Saint Maria Goretti", it: "Santa Maria Goretti", date: "2025-07-06" },
-  {
-    en: "Saint Teresa of Calcutta",
-    it: "Santa Teresa di Calcutta",
-    date: "2025-09-05",
-  },
-  { en: "Saint Padre Pio", it: "San Pio da Pietrelcina", date: "2025-09-23" },
-  { en: "Saint John Paul II", it: "San Giovanni Paolo II", date: "2025-10-22" },
-  { en: "Saint Edith Stein", it: "Santa Edith Stein", date: "2025-08-09" },
-  { en: "Saint Oscar Romero", it: "San Oscar Romero", date: "2025-03-24" },
-  {
-    en: "Saint John Henry Newman",
-    it: "San Giovanni Enrico Newman",
-    date: "2025-10-09",
-  },
-  { en: "Saint Lorenzo Ruiz", it: "San Lorenzo Ruiz", date: "2025-09-28" },
-  {
-    en: "Saint Damien of Molokai",
-    it: "San Damiano de Veuster",
-    date: "2025-05-10",
-  },
-  {
-    en: "Saint Kateri Tekakwitha",
-    it: "Santa Kateri Tekakwitha",
-    date: "2025-07-14",
-  },
-  { en: "Saint Maria Goretti", it: "Santa Maria Goretti", date: "2025-07-06" },
-  {
-    en: "Saint Faustina Kowalska",
-    it: "Santa Faustina Kowalska",
-    date: "2025-10-05",
-  },
-  {
-    en: "Saint Maximilian Kolbe",
-    it: "San Massimiliano Kolbe",
-    date: "2025-08-14",
-  },
-  {
-    en: "Saint Charles Lwanga and Companions",
-    it: "San Carlo Lwanga e Compagni",
-    date: "2025-06-03",
-  },
-  {
-    en: "Saint Ignatius of Loyola",
-    it: "Sant'Ignazio di Loyola",
-    date: "2025-07-31",
-  },
-  {
-    en: "Saint Francis Xavier",
-    it: "San Francesco Saverio",
-    date: "2025-12-03",
-  },
-];
+
+  // Extra saints you could optionally add:
+{ en: "Saint Paul VI", it: "San Paolo VI", date: "2025-05-29" },
+{ en: "Saint John XXIII", it: "San Giovanni XXIII", date: "2025-10-11" },
+{ en: "Saint Gregory of Narek", it: "San Gregorio di Narek", date: "2025-02-27" },
+{ en: "Saint Hildegard (alternative feast)", it: "Santa Ildegarda", date: "2025-09-17" },
+{ en: "Saint Faustina (alternative feast)", it: "Santa Faustina", date: "2025-10-05" },
+{ en: "Saint Josephine Bakhita (South Sudan)", it: "Santa Giuseppina Bakhita (Sudan del Sud)", date: "2025-02-08" },
+{ en: "Our Lady, Undoer of Knots", it: "Nostra Signora che scioglie i nodi", date: "2025-09-28" },
+{ en: "Saint Charbel Makhlouf", it: "San Charbel Makhlouf", date: "2025-07-24" },
+{ en: "Saint Rita (alternative)", it: "Santa Rita (alternativa)", date: "2025-05-22" },
+{ en: "Saint Gianna Beretta Molla", it: "Santa Gianna Beretta Molla", date: "2025-04-28" },
+
+].map((feast) => ({
+  ...feast,
+  date: feast.date.replace(/^2025-/, `${new Date().getFullYear()}-`),
+}));
 
 // utils/dateUtils.js
 export const formatDate = (date) => {
@@ -16089,14 +17001,16 @@ export function getAllFeastsForYear(year = new Date().getFullYear()) {
 export function getFeastsOnDate(date) {
   const mmdd = formatDate(date).slice(5);
   return getAllFeastsForYear(date.getFullYear()).filter(
-    (feast) => feast.date.slice(5) === mmdd
+    (feast) => feast.date.slice(5) === mmdd,
   );
 }
 
 export function getFeastsForMonth(year, month) {
   // month: 0-11
   const mm = String(month + 1).padStart(2, "0");
-  return getAllFeastsForYear(year).filter((feast) => feast.date.slice(5, 7) === mm);
+  return getAllFeastsForYear(year).filter(
+    (feast) => feast.date.slice(5, 7) === mm,
+  );
 }
 
 export function getWikipediaUrl(name, language = "en") {
@@ -19017,7 +19931,7 @@ export function justBecauseArray() {
       topic: { en: "Jesus", it: "Gesù" },
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       sentiment: {
         en: "She teaches my heart to forgive—mercy flows through her, just because.",
         it: "Insegna al mio cuore a perdonare—la misericordia scorre attraverso di lei, solo perché.",
@@ -19167,6 +20081,7 @@ export const AUTHOR_PHOTOS = {
   "Sr.  Hannah": "../assets/sr_joyce_nkirote.jpg",
   "Sr. Luisa Makena": "../assets/sr_luisa_makena.jpg",
   "Madre Nasi": "../assets/madre_nasi.jpg",
+  "Sr. Jane Murigi" : "../assets/jane_murigi.jpg"
 };
 
 export function getFavWords() {
@@ -19700,7 +20615,7 @@ export function getFavWords() {
       },
     },
     {
-      author: "Sr. Jane Kanini",
+      author: "Sr. Jane Murigi",
       favWord: { en: "Forgive", it: "Perdonare" },
       reason: {
         en: "Mercy flows through every act of forgiveness.",
@@ -19838,6 +20753,290 @@ export function getFavWords() {
 
 export function getPoems() {
   const allPoems = [
+    {
+      title: {
+        en: "The Song Hidden in the Silence",
+        it: "Il Canto Nascosto nel Silenzio",
+      },
+      author: "Sr. Martha",
+      photo: AUTHOR_PHOTOS["Sr. Martha"],
+      verses: {
+        verse1: {
+          en: [
+            "Before the singer lifts her voice,",
+            "There is a silence that can rejoice;",
+            "Within that stillness, notes await,",
+            "As though the music knows its fate.",
+          ],
+          it: [
+            "Prima che la cantante alzi la voce,",
+            "Vi è un silenzio che sa gioire;",
+            "Dentro quel silenzio, le note attendono,",
+            "Come se la musica conoscesse il suo destino.",
+          ],
+        },
+        verse2: {
+          en: [
+            "A melody may rise and fall,",
+            "Yet silence quietly holds it all;",
+            "So too the soul may learn to hear,",
+            "The voice of God when none is near.",
+          ],
+          it: [
+            "Una melodia può salire e scendere,",
+            "Eppure il silenzio custodisce tutto;",
+            "Così l'anima può imparare ad ascoltare,",
+            "La voce di Dio quando nessuno è vicino.",
+          ],
+        },
+        verse3: {
+          en: [
+            "Thy life became a living song,",
+            "Not every note was bright or strong;",
+            "Deus in silentio, softly sung,",
+            "The deepest praise needs not a tongue.",
+          ],
+          it: [
+            "La tua vita divenne un canto vivente,",
+            "Non ogni nota era luminosa o forte;",
+            "Deus in silentio, cantato dolcemente,",
+            "La lode più profonda non ha bisogno di parole.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    {
+      title: {
+        en: "The Canvas Was Already There",
+        it: "La Tela Era Già Là",
+      },
+      author: "Sr. Beatrice Kinoti",
+      photo: AUTHOR_PHOTOS["Sr. Beatrice Kinoti"],
+      verses: {
+        verse1: {
+          en: [
+            "The painter brings no sky to birth,",
+            "The colours already dwell in earth;",
+            "She only gathers what is there,",
+            "And shows the beauty hidden everywhere.",
+          ],
+          it: [
+            "Il pittore non crea il cielo dal nulla,",
+            "I colori abitano già nella terra;",
+            "Raccoglie soltanto ciò che esiste,",
+            "E mostra la bellezza nascosta ovunque.",
+          ],
+        },
+        verse2: {
+          en: [
+            "The morning paints the hills with gold,",
+            "The evening tells a tale untold;",
+            "Each face, each tree, each drop of rain,",
+            "Becomes a stroke no hand can claim.",
+          ],
+          it: [
+            "Il mattino dipinge le colline d'oro,",
+            "La sera racconta una storia mai detta;",
+            "Ogni volto, ogni albero, ogni goccia di pioggia,",
+            "Diventa un tratto che nessuna mano può possedere.",
+          ],
+        },
+        verse3: {
+          en: [
+            "Thy life revealed what love could be,",
+            "A living canvas for the eye to see;",
+            "Imago Dei, written in grace,",
+            "The Divine may shine through every face.",
+          ],
+          it: [
+            "La tua vita rivelò ciò che l'amore può essere,",
+            "Una tela vivente per gli occhi che sanno vedere;",
+            "Imago Dei, scritto nella grazia,",
+            "Il Divino può brillare attraverso ogni volto.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    {
+      title: {
+        en: "The Moment That Refused to Die",
+        it: "L'Istante che Rifiutò di Morire",
+      },
+      author: "Sr. Hannah",
+      photo: AUTHOR_PHOTOS["Sr. Hannah"],
+      verses: {
+        verse1: {
+          en: [
+            "A camera catches passing light,",
+            "One fleeting second, gone from sight;",
+            "The moment seems to disappear,",
+            "Yet suddenly it lingereth here.",
+          ],
+          it: [
+            "Una macchina fotografica cattura la luce che passa,",
+            "Un secondo fuggevole, già lontano;",
+            "Il momento sembra scomparire,",
+            "Eppure improvvisamente rimane qui.",
+          ],
+        },
+        verse2: {
+          en: [
+            "A smile, a hand, a child's bright face,",
+            "A quiet room, a remembered place;",
+            "Time may carry the years away,",
+            "But one small image makes them stay.",
+          ],
+          it: [
+            "Un sorriso, una mano, il volto luminoso di un bambino,",
+            "Una stanza quieta, un luogo ricordato;",
+            "Il tempo può portare via gli anni,",
+            "Ma una piccola immagine li fa rimanere.",
+          ],
+        },
+        verse3: {
+          en: [
+            "Perhaps the soul is such a frame,",
+            "Holding what time cannot reclaim;",
+            "Memento vivere, remember life,",
+            "For every fleeting moment bears the Infinite.",
+          ],
+          it: [
+            "Forse l'anima è come una fotografia,",
+            "Che custodisce ciò che il tempo non può riprendere;",
+            "Memento vivere, ricorda la vita,",
+            "Perché ogni istante fuggevole porta l'Infinito.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    {
+      title: {
+        en: "The Angel Hidden in the Stone",
+        it: "L'Angelo Nascosto nella Pietra",
+      },
+      author: "Sr. Luisa Makena",
+      photo: AUTHOR_PHOTOS["Sr. Luisa Makena"],
+      verses: {
+        verse1: {
+          en: [
+            "The sculptor sees what stone conceals,",
+            "And slowly frees what time reveals;",
+            "With every stroke, the form appears,",
+            "As though it waited through the years.",
+          ],
+          it: [
+            "Lo scultore vede ciò che la pietra nasconde,",
+            "E lentamente libera ciò che il tempo rivela;",
+            "Ad ogni colpo la forma appare,",
+            "Come se avesse atteso per anni.",
+          ],
+        },
+        verse2: {
+          en: [
+            "Perhaps our souls are fashioned so,",
+            "With hidden beauty still to show;",
+            "The hand of God may shape through pain,",
+            "Removing what we need not retain.",
+          ],
+          it: [
+            "Forse anche le nostre anime sono così,",
+            "Con una bellezza nascosta ancora da mostrare;",
+            "La mano di Dio può formarci attraverso il dolore,",
+            "Togliendo ciò che non dobbiamo conservare.",
+          ],
+        },
+        verse3: {
+          en: [
+            "Thy patient life became a sign,",
+            "That grace can work through every line;",
+            "Ora et confide, trust the hand,",
+            "The hidden form shall come to stand.",
+          ],
+          it: [
+            "La tua vita paziente divenne un segno,",
+            "Che la grazia può operare in ogni tratto;",
+            "Ora et confide, confida nella mano,",
+            "La forma nascosta arriverà alla luce.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    {
+      title: {
+        en: "When the Body Becomes a Prayer",
+        it: "Quando il Corpo Diventa Preghiera",
+      },
+      author: "Madre Nasi",
+      photo: AUTHOR_PHOTOS["Madre Nasi"],
+      verses: {
+        verse1: {
+          en: [
+            "A dancer speaketh without speech,",
+            "With every step, the heart may reach;",
+            "A lifted hand, a turning face,",
+            "Can make the body sing of grace.",
+          ],
+          it: [
+            "Una danzatrice parla senza parole,",
+            "Con ogni passo il cuore può arrivare lontano;",
+            "Una mano sollevata, un volto che si volge,",
+            "Possono far cantare il corpo della grazia.",
+          ],
+        },
+        verse2: {
+          en: [
+            "There is a rhythm in the sea,",
+            "A rhythm in the leaf and tree;",
+            "The stars keep time across the night,",
+            "And all creation moves in light.",
+          ],
+          it: [
+            "Vi è un ritmo nel mare,",
+            "Un ritmo nella foglia e nell'albero;",
+            "Le stelle tengono il tempo nella notte,",
+            "E tutta la creazione si muove nella luce.",
+          ],
+        },
+        verse3: {
+          en: [
+            "Thy life moved gently with that beat,",
+            "Through every labour, every street;",
+            "Laudate Dominum, let all things sing,",
+            "For life itself is offering.",
+          ],
+          it: [
+            "La tua vita si muoveva dolcemente con quel ritmo,",
+            "Attraverso ogni lavoro, ogni strada;",
+            "Laudate Dominum, cantino tutte le cose,",
+            "Perché la vita stessa è un'offerta.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
     // 1. SR. MARY JAPHETH
     {
       title: {
@@ -21693,6 +22892,1200 @@ export function getPoems() {
         it: "DEO GRATIAS",
       },
     },
+    {
+      title: {
+        en: "The Lamp Passed from Hand to Hand",
+        it: "La Lampada Passata di Mano in Mano",
+      },
+      author: "Sr. Susan Kanini",
+      photo: AUTHOR_PHOTOS["Sr. Susan Kanini"],
+      verses: {
+        verse1: {
+          en: [
+            "One lamp may light another flame,",
+            "And lose no brightness by the same;",
+            "Thus love may pass from heart to heart,",
+            "And still remain what it did start.",
+          ],
+          it: [
+            "Una lampada può accenderne un'altra,",
+            "Senza perdere la propria luce;",
+            "Così l'amore passa di cuore in cuore,",
+            "E rimane ciò che era all'inizio.",
+          ],
+        },
+        verse2: {
+          en: [
+            "Thy light was never thine alone,",
+            "For many hearts its warmth have known;",
+            "A kindly word, a faithful deed,",
+            "May shine for souls in time of need.",
+          ],
+          it: [
+            "La tua luce non fu mai soltanto tua,",
+            "Perché molti cuori ne conobbero il calore;",
+            "Una parola gentile, un gesto fedele,",
+            "Può brillare per chi è nel bisogno.",
+          ],
+        },
+        verse3: {
+          en: [
+            "And if one little flame still burns,",
+            "The gift of love to others turns;",
+            "Fiat lux, let the light remain,",
+            "Till every darkness bloometh again.",
+          ],
+          it: [
+            "E se una piccola fiamma ancora arde,",
+            "Il dono dell'amore continua verso gli altri;",
+            "Fiat lux, lascia che la luce rimanga,",
+            "Finché ogni tenebra torni a fiorire.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    {
+      title: {
+        en: "The Quiet Room Where Mercy Speaks",
+        it: "La Stanza Silenziosa dove Parla la Misericordia",
+      },
+      author: "Sr. Cecilia",
+      photo: AUTHOR_PHOTOS["Sr. Cecilia"],
+      verses: {
+        verse1: {
+          en: [
+            "There are some words that need no sound,",
+            "For mercy speaks where hearts are found;",
+            "A quiet presence, calm and near,",
+            "Can tell a soul, thou matterest here.",
+          ],
+          it: [
+            "Vi sono parole che non hanno bisogno di voce,",
+            "Perché la misericordia parla nei cuori;",
+            "Una presenza quieta, calma e vicina,",
+            "Può dire a un'anima: tu sei importante qui.",
+          ],
+        },
+        verse2: {
+          en: [
+            "Thy silence was not emptiness,",
+            "But room enough for tenderness;",
+            "Thou didst not always need to say,",
+            "What love had already found a way.",
+          ],
+          it: [
+            "Il tuo silenzio non era vuoto,",
+            "Ma spazio per la tenerezza;",
+            "Non avevi sempre bisogno di dire,",
+            "Ciò che l'amore aveva già trovato il modo di esprimere.",
+          ],
+        },
+        verse3: {
+          en: [
+            "Where gentle mercy takes her place,",
+            "The smallest room becomes a grace;",
+            "Ubi caritas, fear grows still,",
+            "And love fulfils the Father's will.",
+          ],
+          it: [
+            "Dove la dolce misericordia trova posto,",
+            "Anche la stanza più piccola diventa grazia;",
+            "Ubi caritas, la paura si acquieta,",
+            "E l'amore compie la volontà del Padre.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    {
+      title: {
+        en: "The Footprints That Became a Path",
+        it: "Le Orme che Divennero un Sentiero",
+      },
+      author: "Sr. Lucy Wegoki",
+      photo: AUTHOR_PHOTOS["Sr. Lucy Wegoki"],
+      verses: {
+        verse1: {
+          en: [
+            "One footprint leaves a mark behind,",
+            "Then comes another, close aligned;",
+            "No single step appears so grand,",
+            "Yet paths are born where footsteps stand.",
+          ],
+          it: [
+            "Un'orma lascia un segno dietro di sé,",
+            "Poi ne viene un'altra, accanto;",
+            "Nessun passo sembra così grande,",
+            "Eppure i sentieri nascono dalle orme.",
+          ],
+        },
+        verse2: {
+          en: [
+            "Thy days were measured not by fame,",
+            "But by the lives that knew thy name;",
+            "Each little deed, each faithful mile,",
+            "Became a path for one more smile.",
+          ],
+          it: [
+            "I tuoi giorni non furono misurati dalla fama,",
+            "Ma dalle vite che conobbero il tuo nome;",
+            "Ogni piccolo gesto, ogni passo fedele,",
+            "Divenne un sentiero per un altro sorriso.",
+          ],
+        },
+        verse3: {
+          en: [
+            "So walk, O soul, though roads be long,",
+            "For even small steps may belong;",
+            "Pax et lux, let peace lead thee,",
+            "Toward where thy final home shall be.",
+          ],
+          it: [
+            "Cammina, o anima, anche se la strada è lunga,",
+            "Perché anche piccoli passi hanno il loro valore;",
+            "Pax et lux, lascia che la pace ti guidi,",
+            "Verso quella che sarà la tua casa eterna.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    {
+      title: {
+        en: "The Key That Opened a Kindly Door",
+        it: "La Chiave che Aprì una Porta Buona",
+      },
+      author: "Sr. Angelica Kinya",
+      photo: AUTHOR_PHOTOS["Sr. Angelica Kinya"],
+      verses: {
+        verse1: {
+          en: [
+            "A little key may seem so slight,",
+            "Yet turn it once and doors grow wide;",
+            "What seemed a wall becomes a way,",
+            "And hope walks in with morning's day.",
+          ],
+          it: [
+            "Una piccola chiave può sembrare così fragile,",
+            "Eppure basta girarla perché le porte si aprano;",
+            "Ciò che sembrava un muro diventa una via,",
+            "E la speranza entra con la luce del mattino.",
+          ],
+        },
+        verse2: {
+          en: [
+            "Thy kindness was a key unseen,",
+            "Opening hearts where walls had been;",
+            "For those who feared they had no place,",
+            "Thou gavest room, and time, and grace.",
+          ],
+          it: [
+            "La tua bontà era una chiave invisibile,",
+            "Che apriva cuori dove prima vi erano muri;",
+            "A chi temeva di non avere un posto,",
+            "Donavi spazio, tempo e grazia.",
+          ],
+        },
+        verse3: {
+          en: [
+            "O may we learn thy gentle art,",
+            "To find the lock within a heart;",
+            "Ama et servi, let love be true,",
+            "And open doors as thou didst do.",
+          ],
+          it: [
+            "O possiamo imparare la tua dolce arte,",
+            "Di trovare la serratura dentro un cuore;",
+            "Ama et servi, fa' che l'amore sia vero,",
+            "E apri le porte come facesti tu.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    {
+      title: {
+        en: "The Clock That Teaches the Heart to Wait",
+        it: "L'Orologio che Insegna al Cuore ad Attendere",
+      },
+      author: "Sr. Julian",
+      photo: AUTHOR_PHOTOS["Sr. Julian"],
+      verses: {
+        verse1: {
+          en: [
+            "The clock moves on with patient hands,",
+            "And never hurries God's commands;",
+            "Each hour arrives, then slips away,",
+            "Yet grace is given for each day.",
+          ],
+          it: [
+            "L'orologio cammina con mani pazienti,",
+            "E non affretta i disegni di Dio;",
+            "Ogni ora arriva, poi passa via,",
+            "Eppure ogni giorno riceve la sua grazia.",
+          ],
+        },
+        verse2: {
+          en: [
+            "Thy waiting was not time gone waste,",
+            "But fruit that ripened at its pace;",
+            "Some prayers bloom before our eyes,",
+            "While others wait beyond the skies.",
+          ],
+          it: [
+            "La tua attesa non fu tempo sprecato,",
+            "Ma frutto maturato al suo ritmo;",
+            "Alcune preghiere fioriscono davanti ai nostri occhi,",
+            "Altre attendono oltre i cieli.",
+          ],
+        },
+        verse3: {
+          en: [
+            "So teach our hearts to wait and trust,",
+            "When dreams seem buried in the dust;",
+            "Spera in Deo, and calmly see,",
+            "What God prepares in mystery.",
+          ],
+          it: [
+            "Insegna dunque ai nostri cuori ad attendere e fidarsi,",
+            "Quando i sogni sembrano sepolti nella polvere;",
+            "Spera in Deo, e guarda con calma,",
+            "Ciò che Dio prepara nel mistero.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    {
+      title: {
+        en: "The Garden That Speaks Without Words",
+        it: "Il Giardino che Parla Senza Parole",
+      },
+      author: "Sr. Maria Carrolla",
+      photo: AUTHOR_PHOTOS["Sr. Maria Carrolla"],
+      verses: {
+        verse1: {
+          en: [
+            "A garden needeth not a voice,",
+            "Its colours make the heart rejoice;",
+            "A thousand blossoms softly say,",
+            "That love hath found another way.",
+          ],
+          it: [
+            "Un giardino non ha bisogno di voce,",
+            "I suoi colori fanno gioire il cuore;",
+            "Mille fiori dicono dolcemente,",
+            "Che l'amore ha trovato un'altra via.",
+          ],
+        },
+        verse2: {
+          en: [
+            "Thy life was like that quiet ground,",
+            "Where little gifts grew all around;",
+            "Some saw the flowers, some passed by,",
+            "Yet God beheld each bloom nearby.",
+          ],
+          it: [
+            "La tua vita era come quella terra quieta,",
+            "Dove piccoli doni crescevano tutt'intorno;",
+            "Alcuni videro i fiori, altri passarono oltre,",
+            "Ma Dio vide ogni fiore da vicino.",
+          ],
+        },
+        verse3: {
+          en: [
+            "O let our lives speak thus anew,",
+            "With deeds of kindness, pure and true;",
+            "Deus caritas est, let this be known,",
+            "Love speaks most clearly when it is shown.",
+          ],
+          it: [
+            "O lascia che anche le nostre vite parlino così,",
+            "Con gesti di bontà, puri e sinceri;",
+            "Deus caritas est, sia questo conosciuto,",
+            "L'amore parla più chiaramente quando viene mostrato.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    {
+      title: {
+        en: "When the Cherry Blossoms Return",
+        it: "Quando Ritornano i Fiori di Ciliegio",
+      },
+      author: "Sr. Nancy",
+      photo: AUTHOR_PHOTOS["Sr. Nancy"],
+      verses: {
+        verse1: {
+          en: [
+            "The cherry blossoms do not stay,",
+            "They bloom, then gently drift away;",
+            "Yet when the branches stand bare,",
+            "They leave a promise hidden there.",
+          ],
+          it: [
+            "I fiori di ciliegio non rimangono,",
+            "Fioriscono, poi dolcemente volano via;",
+            "E quando i rami restano spogli,",
+            "Lasciano nascosta una promessa.",
+          ],
+        },
+        verse2: {
+          en: [
+            "Their petals fall like little prayers,",
+            "Softly upon the waiting earth;",
+            "What seemeth lost is not forgot,",
+            "For spring remembers every spot.",
+          ],
+          it: [
+            "I loro petali cadono come piccole preghiere,",
+            "Dolcemente sulla terra che attende;",
+            "Ciò che sembra perduto non è dimenticato,",
+            "Perché la primavera ricorda ogni luogo.",
+          ],
+        },
+        verse3: {
+          en: [
+            "So when our hearts must say farewell,",
+            "Let hope within us softly dwell;",
+            "Post nubila lux, after the rain,",
+            "The blossoms shall return again.",
+          ],
+          it: [
+            "Così, quando i nostri cuori devono dire addio,",
+            "Lasciamo che la speranza dimori dolcemente in noi;",
+            "Post nubila lux, dopo la pioggia viene la luce,",
+            "E i fiori torneranno ancora.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    {
+      title: {
+        en: "The Path Where the Roses Lean",
+        it: "Il Sentiero dove si Chinano le Rose",
+      },
+      author: "Sr. Loredana",
+      photo: AUTHOR_PHOTOS["Sr. Loredana"],
+      verses: {
+        verse1: {
+          en: [
+            "Along the path the roses grow,",
+            "Some high above, some bending low;",
+            "The tallest flower needeth not",
+            "To make the smallest less than what.",
+          ],
+          it: [
+            "Lungo il sentiero crescono le rose,",
+            "Alcune alte, altre piegate in basso;",
+            "Il fiore più alto non ha bisogno",
+            "Di rendere il più piccolo meno prezioso.",
+          ],
+        },
+        verse2: {
+          en: [
+            "Thy heart knew well the gentle art,",
+            "Of making room for every part;",
+            "Thou didst not ask the weak to climb,",
+            "But walked beside them, step by time.",
+          ],
+          it: [
+            "Il tuo cuore conosceva bene la dolce arte,",
+            "Di fare spazio ad ogni persona;",
+            "Non chiedevi al debole di salire da solo,",
+            "Ma camminavi accanto a lui, passo dopo passo.",
+          ],
+        },
+        verse3: {
+          en: [
+            "Where roses bow, the garden grows,",
+            "For love is known by how it stoops;",
+            "Humilitas, the ancient way,",
+            "Turns little acts to light each day.",
+          ],
+          it: [
+            "Dove le rose si chinano, il giardino cresce,",
+            "Perché l'amore si riconosce da come si china;",
+            "Humilitas, l'antica via,",
+            "Trasforma i piccoli gesti in luce quotidiana.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    {
+      title: {
+        en: "The Hands That Know the Weight of Hope",
+        it: "Le Mani che Conoscono il Peso della Speranza",
+      },
+      author: "Sr. Jerusha Nkatha",
+      photo: AUTHOR_PHOTOS["Sr. Jerusha Nkatha"],
+      verses: {
+        verse1: {
+          en: [
+            "Hope is not always light to hold,",
+            "Sometimes it weighs more than gold;",
+            "It rests within tired hands at night,",
+            "Yet still it waits for morning light.",
+          ],
+          it: [
+            "La speranza non è sempre leggera da portare,",
+            "A volte pesa più dell'oro;",
+            "Riposa nelle mani stanche della notte,",
+            "Eppure attende ancora la luce del mattino.",
+          ],
+        },
+        verse2: {
+          en: [
+            "Thy hands knew work, thy hands knew care,",
+            "Thy hands made room for another's prayer;",
+            "When strength was small and roads were long,",
+            "Thy faith still carried hope along.",
+          ],
+          it: [
+            "Le tue mani conoscevano il lavoro e la cura,",
+            "Le tue mani facevano spazio alla preghiera altrui;",
+            "Quando la forza era poca e la strada lunga,",
+            "La tua fede portava ancora la speranza.",
+          ],
+        },
+        verse3: {
+          en: [
+            "O hands that served, O heart that gave,",
+            "Thy quiet labour became brave;",
+            "Ora et labora, let this be true,",
+            "That faithful hands make hope anew.",
+          ],
+          it: [
+            "O mani che servivano, o cuore che donava,",
+            "Il tuo lavoro silenzioso divenne coraggio;",
+            "Ora et labora, sia questo vero,",
+            "Le mani fedeli fanno rinascere la speranza.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    {
+      title: {
+        en: "The Door That Opens Before We Knock",
+        it: "La Porta che si Apre Prima che Noi Bussiamo",
+      },
+      author: "Sr. Benedicta",
+      photo: AUTHOR_PHOTOS["Sr. Benedicta"],
+      verses: {
+        verse1: {
+          en: [
+            "Some doors are opened by a key,",
+            "Some by a hand that waits to see;",
+            "But there are doors love openeth wide,",
+            "Before a weary soul hath cried.",
+          ],
+          it: [
+            "Alcune porte si aprono con una chiave,",
+            "Altre con una mano che attende;",
+            "Ma vi sono porte che l'amore apre larghe,",
+            "Prima ancora che un'anima stanca possa chiedere.",
+          ],
+        },
+        verse2: {
+          en: [
+            "Thy welcome was a door unbarred,",
+            "A place where no heart stood on guard;",
+            "The stranger came, the lonely stayed,",
+            "And fear grew smaller in the shade.",
+          ],
+          it: [
+            "La tua accoglienza era una porta senza chiusura,",
+            "Un luogo dove nessun cuore doveva difendersi;",
+            "Lo straniero entrava, il solo rimaneva,",
+            "E la paura diventava più piccola.",
+          ],
+        },
+        verse3: {
+          en: [
+            "May we become such doors of grace,",
+            "Where every soul may find a place;",
+            "Fiat voluntas Tua, let love lead,",
+            "And give before another's need.",
+          ],
+          it: [
+            "Possiamo diventare tali porte di grazia,",
+            "Dove ogni anima possa trovare un posto;",
+            "Fiat voluntas Tua, lascia che l'amore guidi,",
+            "E doni prima ancora del bisogno altrui.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    {
+      title: {
+        en: "The Queen Who Wore No Crown",
+        it: "La Regina che Non Portava Corona",
+      },
+      author: "Sr. Regina",
+      photo: AUTHOR_PHOTOS["Sr. Regina"],
+      verses: {
+        verse1: {
+          en: [
+            "No golden crown adorned thy head,",
+            "No royal robe thy footsteps led;",
+            "Yet love can make a queen of one",
+            "Who serves beneath the Father's sun.",
+          ],
+          it: [
+            "Nessuna corona d'oro adornava il tuo capo,",
+            "Nessun manto regale guidava i tuoi passi;",
+            "Eppure l'amore può fare regina",
+            "Colei che serve sotto il sole del Padre.",
+          ],
+        },
+        verse2: {
+          en: [
+            "Thy kingdom was a listening heart,",
+            "Where lonely souls could make a start;",
+            "Thou gavest more than words could say,",
+            "And made another's burden light.",
+          ],
+          it: [
+            "Il tuo regno era un cuore che ascoltava,",
+            "Dove le anime sole potevano ricominciare;",
+            "Donavi più di quanto le parole potessero dire,",
+            "E rendevi più leggero il peso degli altri.",
+          ],
+        },
+        verse3: {
+          en: [
+            "O true nobility of grace,",
+            "Is found not in a higher place;",
+            "Servire Deo, the crown is love,",
+            "And heaven keeps the names thereof.",
+          ],
+          it: [
+            "O vera nobiltà della grazia,",
+            "Non si trova in un luogo più alto;",
+            "Servire Deo, la corona è l'amore,",
+            "E il cielo conserva quei nomi.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    {
+      title: {
+        en: "The Umbrella Beneath the Storm",
+        it: "L'Ombrello Sotto la Tempesta",
+      },
+      author: "Sr. Dorcas",
+      photo: AUTHOR_PHOTOS["Sr. Dorcas"],
+      verses: {
+        verse1: {
+          en: [
+            "When rain came down and skies grew grey,",
+            "A little shelter marked the way;",
+            "It could not stop the storm above,",
+            "But kept one heart beneath its love.",
+          ],
+          it: [
+            "Quando scendeva la pioggia e il cielo diventava grigio,",
+            "Un piccolo riparo indicava la via;",
+            "Non poteva fermare la tempesta,",
+            "Ma custodiva un cuore sotto il suo amore.",
+          ],
+        },
+        verse2: {
+          en: [
+            "Thy kindness was that humble shade,",
+            "A shelter quietly made;",
+            "Thou couldst not mend the whole world's pain,",
+            "But stood beside one soul in rain.",
+          ],
+          it: [
+            "La tua bontà era quella umile ombra,",
+            "Un riparo costruito silenziosamente;",
+            "Non potevi guarire tutto il dolore del mondo,",
+            "Ma restavi accanto a un'anima sotto la pioggia.",
+          ],
+        },
+        verse3: {
+          en: [
+            "And sometimes this is love's great art:",
+            "To simply stand beside a heart;",
+            "Misericordia, gentle and true,",
+            "Lets another know they are not alone.",
+          ],
+          it: [
+            "E talvolta questa è la grande arte dell'amore:",
+            "Semplicemente restare accanto a un cuore;",
+            "Misericordia, dolce e sincera,",
+            "Fa sapere all'altro che non è solo.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    {
+      title: {
+        en: "The Salt That Gave the Bread Its Taste",
+        it: "Il Sale che Diede Sapore al Pane",
+      },
+      author: "Sr. Salome Wavinya",
+      photo: AUTHOR_PHOTOS["Sr. Salome Wavinya"],
+      verses: {
+        verse1: {
+          en: [
+            "A grain of salt is small and plain,",
+            "Yet changes bread with little strain;",
+            "It hideth not to make its mark,",
+            "But gives its gift within the dark.",
+          ],
+          it: [
+            "Un granello di sale è piccolo e semplice,",
+            "Eppure cambia il sapore del pane;",
+            "Non si nasconde per lasciare il suo segno,",
+            "Ma offre il suo dono anche nell'invisibile.",
+          ],
+        },
+        verse2: {
+          en: [
+            "Thy goodness was not made for show,",
+            "It entered quietly where needs would grow;",
+            "A little kindness, faithfully given,",
+            "Can change the flavour of another's heaven.",
+          ],
+          it: [
+            "La tua bontà non era fatta per apparire,",
+            "Entrava silenziosamente dove crescevano i bisogni;",
+            "Una piccola gentilezza, donata con fedeltà,",
+            "Può cambiare il sapore del cielo di un altro.",
+          ],
+        },
+        verse3: {
+          en: [
+            "O may we learn the salt's old way,",
+            "To bless the world without display;",
+            "Ubi caritas, love hath worth,",
+            "When quietly it seasons earth.",
+          ],
+          it: [
+            "O possiamo imparare l'antica via del sale,",
+            "Di benedire il mondo senza apparire;",
+            "Ubi caritas, l'amore ha valore,",
+            "Quando silenziosamente dà sapore alla terra.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    {
+      title: {
+        en: "The Mirror That Refused to Keep the Light",
+        it: "Lo Specchio che Non Tratteneva la Luce",
+      },
+      author: "Sr. Immaculate",
+      photo: AUTHOR_PHOTOS["Sr. Immaculate"],
+      verses: {
+        verse1: {
+          en: [
+            "A mirror keeps no light its own,",
+            "It simply gives back what is shown;",
+            "The sun may touch its silver face,",
+            "And send that brightness into space.",
+          ],
+          it: [
+            "Uno specchio non trattiene la luce per sé,",
+            "Restituisce semplicemente ciò che riceve;",
+            "Il sole può toccare il suo volto d'argento,",
+            "E quella luce si diffonde lontano.",
+          ],
+        },
+        verse2: {
+          en: [
+            "So may a heart that walks with God",
+            "Reflect the grace on every road;",
+            "Thy goodness never cried, look here,",
+            "It simply made God's light appear.",
+          ],
+          it: [
+            "Così un cuore che cammina con Dio",
+            "Può riflettere la grazia su ogni strada;",
+            "La tua bontà non gridava: guardate qui,",
+            "Semplicemente lasciava apparire la luce di Dio.",
+          ],
+        },
+        verse3: {
+          en: [
+            "O pure heart, receive the flame,",
+            "Then give the glory to His name;",
+            "Soli Deo gloria, let it be,",
+            "That what shines through us comes from Thee.",
+          ],
+          it: [
+            "O cuore puro, ricevi la fiamma,",
+            "Poi dona la gloria al Suo nome;",
+            "Soli Deo gloria, così sia,",
+            "Ciò che brilla in noi viene da Te.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    {
+      title: {
+        en: "The Letter Never Sent",
+        it: "La Lettera Mai Spedita",
+      },
+      author: "Sr. Ann",
+      photo: AUTHOR_PHOTOS["Sr. Ann"],
+      verses: {
+        verse1: {
+          en: [
+            "There are words we never find,",
+            "Yet love hath written them in mind;",
+            "A letter folded, sealed with care,",
+            "May hold a heart's unspoken prayer.",
+          ],
+          it: [
+            "Ci sono parole che non troviamo mai,",
+            "Eppure l'amore le ha scritte nella mente;",
+            "Una lettera piegata e chiusa con cura,",
+            "Può contenere la preghiera inespressa di un cuore.",
+          ],
+        },
+        verse2: {
+          en: [
+            "Thy life became a living page,",
+            "Where kindness answered grief and age;",
+            "No ink was needed for the part",
+            "That love had written on the heart.",
+          ],
+          it: [
+            "La tua vita divenne una pagina vivente,",
+            "Dove la bontà rispondeva al dolore e al tempo;",
+            "Non serviva inchiostro per la parte",
+            "Che l'amore aveva scritto nel cuore.",
+          ],
+        },
+        verse3: {
+          en: [
+            "And should our final words remain,",
+            "Like letters waiting in the rain,",
+            "Fiat voluntas Tua, let love say",
+            "What human tongues could not convey.",
+          ],
+          it: [
+            "E se le nostre ultime parole rimarranno,",
+            "Come lettere che attendono sotto la pioggia,",
+            "Fiat voluntas Tua, lasciamo che l'amore dica",
+            "Ciò che le lingue umane non seppero esprimere.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+    {
+      title: {
+        en: "I Have Done What Was Mine to Do",
+        it: "Ho Fatto Ciò che Dovevo Fare",
+      },
+      author: "Sr. Joyce Nkirote",
+      photo: AUTHOR_PHOTOS["Sr. Joyce Nkirote"],
+      verses: {
+        verse1: {
+          en: [
+            "A day may end without applause,",
+            "A life may pass without a pause;",
+            "Yet every task, though small it be,",
+            "May hold a hidden dignity.",
+          ],
+          it: [
+            "Un giorno può finire senza applausi,",
+            "Una vita può passare senza clamore;",
+            "Eppure ogni compito, anche piccolo,",
+            "Può custodire una dignità nascosta.",
+          ],
+        },
+        verse2: {
+          en: [
+            "Thy hands did what the hour required,",
+            "Thy heart gave more when strength expired;",
+            "Thou didst not seek a greater part,",
+            "But gave God fully what thou art.",
+          ],
+          it: [
+            "Le tue mani fecero ciò che l'ora chiedeva,",
+            "Il tuo cuore donava anche quando la forza mancava;",
+            "Non cercavi una parte più grande,",
+            "Ma donavi pienamente a Dio ciò che eri.",
+          ],
+        },
+        verse3: {
+          en: [
+            "When evening comes, may we say too,",
+            "I gave the best I had to do;",
+            "Soli Deo, let this remain,",
+            "A faithful life was not in vain.",
+          ],
+          it: [
+            "Quando verrà la sera, possiamo dire anche noi,",
+            "Ho dato il meglio di ciò che dovevo fare;",
+            "Soli Deo, rimanga questo,",
+            "Una vita fedele non fu vissuta invano.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    {
+      title: {
+        en: "I Love Him",
+        it: "Io Lo Amo",
+      },
+      author: "Sr. Winnie Lopez",
+      photo: AUTHOR_PHOTOS["Sr. Winnie Lopez"],
+      verses: {
+        verse1: {
+          en: [
+            "When words grow few and strength grows thin,",
+            "Love needs no argument within;",
+            "A heart may whisper through the night,",
+            "And still be filled with holy light.",
+          ],
+          it: [
+            "Quando le parole diminuiscono e la forza si affievolisce,",
+            "L'amore non ha bisogno di spiegazioni;",
+            "Un cuore può sussurrare nella notte,",
+            "Ed essere ancora pieno di luce santa.",
+          ],
+        },
+        verse2: {
+          en: [
+            "Thy prayer was not a grand display,",
+            "But love that stayed from day to day;",
+            "Through joy and sorrow, calm and strife,",
+            "Love was the language of thy life.",
+          ],
+          it: [
+            "La tua preghiera non era una grande esibizione,",
+            "Ma un amore rimasto giorno dopo giorno;",
+            "Nella gioia e nel dolore, nella pace e nella prova,",
+            "L'amore era la lingua della tua vita.",
+          ],
+        },
+        verse3: {
+          en: [
+            "And when the soul hath naught to prove,",
+            "Let one small sentence speak of love;",
+            "I love Him still, let this be known,",
+            "The heart hath found its truest home.",
+          ],
+          it: [
+            "E quando l'anima non ha più nulla da dimostrare,",
+            "Lascia che una semplice frase parli d'amore;",
+            "Io Lo amo ancora, sia questo conosciuto,",
+            "Il cuore ha trovato la sua vera casa.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    {
+      title: {
+        en: "My God, I Love You",
+        it: "Mio Dio, Ti Amo",
+      },
+      author: "Sr. Joan",
+      photo: AUTHOR_PHOTOS["Sr. Joan"],
+      verses: {
+        verse1: {
+          en: [
+            "The final word need not be long,",
+            "Nor wrapped in some elaborate song;",
+            "A simple love, sincerely said,",
+            "May light the path where feet have tread.",
+          ],
+          it: [
+            "L'ultima parola non deve essere lunga,",
+            "Né avvolta in un canto elaborato;",
+            "Un semplice amore, detto sinceramente,",
+            "Può illuminare il cammino percorso.",
+          ],
+        },
+        verse2: {
+          en: [
+            "Thy days were filled with little things,",
+            "With hidden gifts that service brings;",
+            "Yet through them all one truth remained,",
+            "That love is never truly spent.",
+          ],
+          it: [
+            "I tuoi giorni erano pieni di piccole cose,",
+            "Di doni nascosti che il servizio porta con sé;",
+            "Eppure attraverso tutto rimase una verità:",
+            "L'amore non si esaurisce mai davvero.",
+          ],
+        },
+        verse3: {
+          en: [
+            "So let our hearts, when days are through,",
+            "Still turn toward the One we knew;",
+            "My God, I love You, soft and clear,",
+            "And let that love outlive our fear.",
+          ],
+          it: [
+            "Così, quando i nostri giorni saranno compiuti,",
+            "I nostri cuori si volgano ancora verso Colui che conosciamo;",
+            "Mio Dio, Ti amo, con dolcezza e chiarezza,",
+            "E lascia che quell'amore viva oltre la nostra paura.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    {
+      title: {
+        en: "Into Thy Hands",
+        it: "Nelle Tue Mani",
+      },
+      author: "Sr. Gladys",
+      photo: AUTHOR_PHOTOS["Sr. Gladys"],
+      verses: {
+        verse1: {
+          en: [
+            "There comes a time to cease our grasp,",
+            "To loosen every earthly clasp;",
+            "The heart that trusted through the years",
+            "Can place its burdens, hopes and fears.",
+          ],
+          it: [
+            "Viene un tempo per lasciare la presa,",
+            "Per sciogliere ogni legame terreno;",
+            "Il cuore che ha confidato negli anni",
+            "Può deporre i suoi pesi, speranze e paure.",
+          ],
+        },
+        verse2: {
+          en: [
+            "Thy hands had carried many loads,",
+            "Along uncertain, winding roads;",
+            "Yet faith taught thee, when strength was gone,",
+            "That God could carry thee alone.",
+          ],
+          it: [
+            "Le tue mani avevano portato molti pesi,",
+            "Lungo strade incerte e tortuose;",
+            "Eppure la fede ti insegnò, quando la forza mancava,",
+            "Che Dio poteva portarti da solo.",
+          ],
+        },
+        verse3: {
+          en: [
+            "Into Thy hands, O Lord, we rest,",
+            "The things we love, the things we cannot mend;",
+            "In manus Tuas, let us be,",
+            "Held by the God who set us free.",
+          ],
+          it: [
+            "Nelle Tue mani, o Signore, riposiamo,",
+            "Le cose che amiamo, quelle che non possiamo guarire;",
+            "In manus Tuas, così possiamo essere,",
+            "Custoditi dal Dio che ci ha resi liberi.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+
+    {
+      title: {
+        en: "I Would Not Wish to Suffer Less",
+        it: "Non Vorrei Soffrire di Meno",
+      },
+      author: "Sr. Teresia Gathoni",
+      photo: AUTHOR_PHOTOS["Sr. Teresia Gathoni"],
+      verses: {
+        verse1: {
+          en: [
+            "Some roads are gentle, some are steep,",
+            "Some wounds are carried where none see;",
+            "Yet love may walk through every trial,",
+            "And make the longest road worthwhile.",
+          ],
+          it: [
+            "Alcune strade sono dolci, altre ripide,",
+            "Alcune ferite sono portate dove nessuno le vede;",
+            "Eppure l'amore può camminare attraverso ogni prova,",
+            "E rendere preziosa anche la strada più lunga.",
+          ],
+        },
+        verse2: {
+          en: [
+            "Thy courage was not born of ease,",
+            "Nor found in days without their tears;",
+            "It grew where faith refused to flee,",
+            "And suffering bowed before charity.",
+          ],
+          it: [
+            "Il tuo coraggio non nacque dalla facilità,",
+            "Né da giorni privi di lacrime;",
+            "Crebbe là dove la fede rifiutò di fuggire,",
+            "E la sofferenza si inchinò davanti alla carità.",
+          ],
+        },
+        verse3: {
+          en: [
+            "O teach us not to waste our pain,",
+            "But let it fall like healing rain;",
+            "Fiat voluntas Tua, through all,",
+            "Let love arise when shadows fall.",
+          ],
+          it: [
+            "O insegnaci a non sprecare il nostro dolore,",
+            "Ma lascia che cada come pioggia che guarisce;",
+            "Fiat voluntas Tua, attraverso tutto,",
+            "Lascia che l'amore sorga quando cadono le ombre.",
+          ],
+        },
+      },
+      closer: {
+        en: "DEO GRATIAS",
+        it: "DEO GRATIAS",
+      },
+    },
+    {
+  title: {
+    en: "The Word That Became a Light",
+    it: "La Parola che Divenne Luce"
+  },
+  author: "Sr. Jane Murigi",
+  photo: AUTHOR_PHOTOS["Sr. Jane Murigi"],
+  verses: {
+    verse1: {
+      en: [
+        "A word may seem a little thing,",
+        "Yet words can make the spirit sing;",
+        "A gentle phrase, a truth once said,",
+        "May walk with us when years have fled."
+      ],
+      it: [
+        "Una parola può sembrare una piccola cosa,",
+        "Eppure le parole possono far cantare lo spirito;",
+        "Una frase gentile, una verità pronunciata,",
+        "Può camminare con noi quando gli anni sono passati."
+      ]
+    },
+    verse2: {
+      en: [
+        "The written word can cross the years,",
+        "And speak beyond our joys and tears;",
+        "What hand hath written, heart may keep,",
+        "Like seeds beneath the soil asleep."
+      ],
+      it: [
+        "La parola scritta può attraversare gli anni,",
+        "E parlare oltre le nostre gioie e lacrime;",
+        "Ciò che una mano ha scritto, il cuore può custodire,",
+        "Come semi addormentati sotto la terra."
+      ]
+    },
+    verse3: {
+      en: [
+        "Thy life became a living page,",
+        "Where love spoke softly through each age;",
+        "Verbum vitae, let truth remain,",
+        "A little light against the rain."
+      ],
+      it: [
+        "La tua vita divenne una pagina vivente,",
+        "Dove l'amore parlava dolcemente attraverso gli anni;",
+        "Verbum vitae, rimanga la verità,",
+        "Una piccola luce contro la pioggia."
+      ]
+    }
+  },
+  closer: {
+    en: "DEO GRATIAS",
+    it: "DEO GRATIAS"
+  }
+},
   ];
 
   return allPoems;
@@ -21704,10 +24097,645 @@ export function getAllPoems() {
 
 export function sisterhood() {
   const wordsFromSisters = [
-    {message:{en:"", it:""}, advice: {en:"", it:""}, sister:"Sr. Mary Japheth"}
-  ]
+    {
+      sister: "Sr. Mary Japheth",
+      photo: AUTHOR_PHOTOS["Sr. Mary Japheth"],
+      message: {
+        en: "Do not wait until you feel worthy to follow Christ — He does not call the worthy, He makes them worthy along the way.",
+        it: "Non aspettare di sentirti degna per seguire Cristo — Egli non chiama i degni, li rende degni lungo il cammino.",
+      },
+      advice: {
+        en: "If the thought of religious life keeps returning to your heart, stop asking 'Am I good enough?' and start asking 'Is He calling me?' The first question is fear; the second is faith.",
+        it: "Se il pensiero della vita religiosa continua a tornare nel tuo cuore, smetti di chiedere 'Sono abbastanza brava?' e inizia a chiedere 'Mi sta chiamando?' La prima domanda è paura; la seconda è fede.",
+      },
+    },
+    {
+      sister: "Sr. Virginia Mwakiuna",
+      photo: AUTHOR_PHOTOS["Sr. Virginia Mwakiuna"],
+      message: {
+        en: "Sisterhood is not the loss of your dreams — it is the discovery of dreams you never knew God had placed inside you.",
+        it: "La vita religiosa non è la perdita dei tuoi sogni — è la scoperta di sogni che non sapevi che Dio avesse posto dentro di te.",
+      },
+      advice: {
+        en: "You will not lose yourself in this life. You will finally meet yourself — the version God dreamed of before you were born.",
+        it: "Non perderai te stessa in questa vita. Incontrerai finalmente te stessa — la versione che Dio sognava prima che tu nascessi.",
+      },
+    },
+    {
+      sister: "Sr. Mercy Kathure",
+      photo: AUTHOR_PHOTOS["Sr. Mercy Kathure"],
+      message: {
+        en: "The world will tell you that you are giving up a life. The truth is you are being given a life — one that no salary can buy and no applause can match.",
+        it: "Il mondo ti dirà che stai rinunciando a una vita. La verità è che ti viene data una vita — che nessuno stipendio può comprare e nessun applauso può eguagliare.",
+      },
+      advice: {
+        en: "If you are afraid of what people will say, remember: they are not the ones who will wake up in your heart at 3 a.m. Let the One who does, be the One you follow.",
+        it: "Se hai paura di ciò che diranno gli altri, ricorda: non sono loro che si sveglieranno nel tuo cuore alle 3 del mattino. Lascia che Colui che lo fa, sia Colui che segui.",
+      },
+    },
+    {
+      sister: "Sr. Agatha Mkunda",
+      photo: AUTHOR_PHOTOS["Sr. Agatha Mkunda"],
+      message: {
+        en: "A vocation is not a cage. It is a door — and every door opens into a room larger than the one you were standing in.",
+        it: "Una vocazione non è una gabbia. È una porta — e ogni porta si apre su una stanza più grande di quella in cui ti trovavi.",
+      },
+      advice: {
+        en: "Don't decide with fear. Decide with silence. Spend a week with no music, no scrolling, no noise — and see what your soul reaches for.",
+        it: "Non decidere con la paura. Decidi con il silenzio. Passa una settimana senza musica, senza scroll, senza rumore — e guarda cosa cerca la tua anima.",
+      },
+    },
+    {
+      sister: "Sr. Felicity Makena",
+      photo: AUTHOR_PHOTOS["Sr. Felicity Makena"],
+      message: {
+        en: "There is a joy in this life that cannot be explained to anyone who has not tasted it — but oh, once you taste it, nothing else satisfies.",
+        it: "C'è una gioia in questa vita che non può essere spiegata a chi non l'ha assaporata — ma una volta assaporata, nulla altro soddisfa.",
+      },
+      advice: {
+        en: "Talk to a sister. Not to a priest, not to a friend — a sister. Ask her the honest question you are afraid to ask. She will not be scandalized.",
+        it: "Parla con una suora. Non con un prete, non con un'amica — una suora. Falle la domanda onesta che hai paura di fare. Non si scandalizzerà.",
+      },
+    },
+    {
+      sister: "Sr. Margaret N. Kaleli",
+      photo: AUTHOR_PHOTOS["Sr. Margaret N. Kaleli"],
+      message: {
+        en: "You were not made to be ordinary. If God is nudging you toward this path, He is not asking you to shrink — He is asking you to expand.",
+        it: "Non sei stata fatta per essere ordinaria. Se Dio ti sta spingendo verso questa strada, non ti sta chiedendo di rimpicciolirti — ti sta chiedendo di espanderti.",
+      },
+      advice: {
+        en: "Fear is normal. Even Mary was troubled at the angel's greeting. But she said yes anyway — and that yes changed the world.",
+        it: "La paura è normale. Anche Maria fu turbata al saluto dell'angelo. Ma disse comunque sì — e quel sì cambiò il mondo.",
+      },
+    },
+    {
+      sister: "Sr. Hellen Murungi",
+      photo: AUTHOR_PHOTOS["Sr. Hellen Murungi"],
+      message: {
+        en: "The convent is not a hiding place for the timid — it is a battlefield for the brave, and the weapons are prayer, silence, and love.",
+        it: "Il convento non è un nascondiglio per i timidi — è un campo di battaglia per i coraggiosi, e le armi sono la preghiera, il silenzio e l'amore.",
+      },
+      advice: {
+        en: "Don't romanticize it and don't demonize it. Come and see. That was Jesus' first invitation to His disciples — and it still works.",
+        it: "Non romanticizzarla e non demonizzarla. Vieni e vedi. Questo fu il primo invito di Gesù ai suoi discepoli — e funziona ancora.",
+      },
+    },
+    {
+      sister: "Sr. Purity Nkatha",
+      photo: AUTHOR_PHOTOS["Sr. Purity Nkatha"],
+      message: {
+        en: "Purity is not the absence of desire — it is desire pointed in one direction. And that direction is the One who made your heart.",
+        it: "La purezza non è l'assenza del desiderio — è il desiderio puntato in una sola direzione. E quella direzione è Colui che ha fatto il tuo cuore.",
+      },
+      advice: {
+        en: "You are not giving up love. You are giving up lesser loves for the greatest one. Every sister will tell you — it is not a loss. It is an exchange.",
+        it: "Non stai rinunciando all'amore. Stai rinunciando ad amori minori per il più grande. Ogni suora te lo dirà — non è una perdita. È uno scambio.",
+      },
+    },
+    {
+      sister: "Sr. Mary Mwikali Matheka",
+      photo: AUTHOR_PHOTOS["Sr. Mary Mwikali Matheka"],
+      message: {
+        en: "If you feel drawn to this life, do not dismiss it as a phase. God does not play games with hearts. When He whispers, He means it.",
+        it: "Se ti senti attratta da questa vita, non liquidarla come una fase. Dio non gioca con i cuori. Quando sussurra, fa sul serio.",
+      },
+      advice: {
+        en: "Give yourself permission to be uncertain. Certainty is not required to say yes. Only willingness is.",
+        it: "Datti il permesso di essere incerta. La certezza non è richiesta per dire sì. Solo la disponibilità lo è.",
+      },
+    },
+    {
+      sister: "Sr. Christine Musoga",
+      photo: AUTHOR_PHOTOS["Sr. Christine Musoga"],
+      message: {
+        en: "You do not have to be perfect to say yes. You only have to be willing. God does the rest — and He has never once failed a willing heart.",
+        it: "Non devi essere perfetta per dire sì. Devi solo essere disponibile. Dio fa il resto — e non ha mai deluso un cuore disponibile.",
+      },
+      advice: {
+        en: "Start where you are. Pray one Hail Mary tonight and ask Mary to show you what God wants. She always answers — just not always in words.",
+        it: "Inizia dove sei. Prega un'Ave Maria stasera e chiedi a Maria di mostrarti cosa vuole Dio. Risponde sempre — non sempre a parole.",
+      },
+    },
+    {
+      sister: "Sr. Sofia",
+      photo: AUTHOR_PHOTOS["Sr. Sofia"],
+      message: {
+        en: "God does not shout His call — He whispers it, and then waits. The question is not whether He is speaking, but whether you are still enough to hear.",
+        it: "Dio non grida la Sua chiamata — la sussurra, e poi aspetta. La domanda non è se Egli stia parlando, ma se tu sei abbastanza ferma per ascoltare.",
+      },
+      advice: {
+        en: "Silence is not empty. It is full of Him. Give God fifteen minutes a day with no phone, no music, no words — and watch what He does with that space.",
+        it: "Il silenzio non è vuoto. È pieno di Lui. Concedi a Dio quindici minuti al giorno senza telefono, senza musica, senza parole — e guarda cosa fa con quello spazio.",
+      },
+    },
+    {
+      sister: "Sr. Nancy",
+      photo: AUTHOR_PHOTOS["Sr. Nancy"],
+      message: {
+        en: "You are not choosing a life of less. You are choosing a life of more — more love, more prayer, more purpose than the world can ever offer.",
+        it: "Non stai scegliendo una vita di meno. Stai scegliendo una vita di più — più amore, più preghiera, più scopo di quanto il mondo possa mai offrire.",
+      },
+      advice: {
+        en: "Write down the three moments in your life when you felt most alive. Then ask: were they moments of comfort, or moments of giving? Your vocation is hidden in that answer.",
+        it: "Scrivi i tre momenti della tua vita in cui ti sei sentita più viva. Poi chiedi: erano momenti di comfort o di dono? La tua vocazione è nascosta in quella risposta.",
+      },
+    },
+    {
+      sister: "Sr. Maria Carrolla",
+      photo: AUTHOR_PHOTOS["Sr. Maria Carrolla"],
+      message: {
+        en: "A heart that says yes to God is never wasted — not one prayer, not one tear, not one silent offering goes unnoticed by Him.",
+        it: "Un cuore che dice sì a Dio non è mai sprecato — nessuna preghiera, nessuna lacrima, nessuna offerta silenziosa passa inosservata ai Suoi occhi.",
+      },
+      advice: {
+        en: "Talk to your mother, your aunt, your grandmother. Often the seed of a vocation was planted by a woman who prayed for you before you were born.",
+        it: "Parla con tua madre, tua zia, tua nonna. Spesso il seme di una vocazione è stato piantato da una donna che ha pregato per te prima che tu nascessi.",
+      },
+    },
+    {
+      sister: "Sr. Luisa Makena",
+      photo: AUTHOR_PHOTOS["Sr. Luisa Makena"],
+      message: {
+        en: "Do not be afraid of your own desire for holiness. That desire is not pride — it is God stirring awake in you.",
+        it: "Non aver paura del tuo desiderio di santità. Quel desiderio non è orgoglio — è Dio che si sveglia in te.",
+      },
+      advice: {
+        en: "If you are waiting for a sign in the sky, you will wait forever. The sign is already here — it is the persistent pull in your heart that will not go away.",
+        it: "Se aspetti un segno nel cielo, aspetterai per sempre. Il segno è già qui — è il richiamo persistente nel tuo cuore che non se ne va.",
+      },
+    },
+    {
+      sister: "Sr. Jane Murigi",
+      photo: AUTHOR_PHOTOS["Sr. Jane Murigi"],
+      message: {
+        en: "Sisterhood is not a life without family. It is a life with a larger family — one that spans continents, generations, and every tongue.",
+        it: "La vita religiosa non è una vita senza famiglia. È una vita con una famiglia più grande — che abbraccia continenti, generazioni e ogni lingua.",
+      },
+      advice: {
+        en: "If your family opposes your vocation, love them more, not less. In time, they will see what you have become — and their resistance will become blessing.",
+        it: "Se la tua famiglia si oppone alla tua vocazione, amali di più, non di meno. Col tempo vedranno ciò che sei diventata — e la loro resistenza diventerà benedizione.",
+      },
+    },
+    {
+      sister: "Sr. Teresia Gathoni",
+      photo: AUTHOR_PHOTOS["Sr. Teresia Gathoni"],
+      message: {
+        en: "Every sister you meet was once a girl with questions, doubts, and fear — and she said yes anyway. So can you.",
+        it: "Ogni suora che incontri era una volta una ragazza con domande, dubbi e paure — e ha detto comunque sì. Anche tu puoi.",
+      },
+      advice: {
+        en: "Visit a convent for one weekend. Not to decide, just to see. Sometimes the heart recognizes its home the moment it walks through the door.",
+        it: "Visita un convento per un fine settimana. Non per decidere, solo per vedere. A volte il cuore riconosce la sua casa nel momento in cui varca la porta.",
+      },
+    },
+    {
+      sister: "Sr. Beatrice Kinoti",
+      photo: AUTHOR_PHOTOS["Sr. Beatrice Kinoti"],
+      message: {
+        en: "You were not created to chase the world's applause. You were created to give God's love to people who may never thank you.",
+        it: "Non sei stata creata per inseguire l'applauso del mondo. Sei stata creata per dare l'amore di Dio a persone che forse non ti ringrazieranno mai.",
+      },
+      advice: {
+        en: "Ask yourself: when I am old, what will I wish I had done with my life? If the answer is 'loved more' — sisterhood is calling you by name.",
+        it: "Chiediti: quando sarò vecchia, cosa vorrò aver fatto della mia vita? Se la risposta è 'amare di più' — la vita religiosa ti sta chiamando per nome.",
+      },
+    },
+    {
+      sister: "Sr. Anastasia Nkubitu",
+      photo: AUTHOR_PHOTOS["Sr. Anastasia Nkubitu"],
+      message: {
+        en: "Obedience is not the death of freedom — it is freedom handed over to Someone wiser than you.",
+        it: "L'obbedienza non è la morte della libertà — è la libertà affidata a Qualcuno più saggio di te.",
+      },
+      advice: {
+        en: "You will not become a robot in this life. You will become a daughter — and every daughter is freer than any orphan the world calls independent.",
+        it: "Non diventerai un robot in questa vita. Diventerai una figlia — e ogni figlia è più libera di qualsiasi orfana che il mondo chiami indipendente.",
+      },
+    },
+    {
+      sister: "Sr. Aniceta Kaare",
+      photo: AUTHOR_PHOTOS["Sr. Aniceta Kaare"],
+      message: {
+        en: "Every vocation is a hidden seed. You will not see the fruit today — but God sees it already, and He is not disappointed.",
+        it: "Ogni vocazione è un seme nascosto. Non vedrai il frutto oggi — ma Dio lo vede già, e non è deluso.",
+      },
+      advice: {
+        en: "Do not compare your journey with anyone else's. Some say yes at 18, some at 40. God is never late — He is always right on time.",
+        it: "Non confrontare il tuo cammino con quello di nessun altro. Alcune dicono sì a 18 anni, altre a 40. Dio non è mai in ritardo — è sempre perfettamente puntuale.",
+      },
+    },
+    {
+      sister: "Sr. Cecilia",
+      photo: AUTHOR_PHOTOS["Sr. Cecilia"],
+      message: {
+        en: "Sing. Even if you cannot sing. Heaven does not judge the voice — it judges the heart behind it.",
+        it: "Canta. Anche se non sai cantare. Il cielo non giudica la voce — giudica il cuore dietro di essa.",
+      },
+      advice: {
+        en: "Gratitude is the doorway to vocation. Start every morning with three thank-yous — and you will find God speaking more clearly by the end of the week.",
+        it: "La gratitudine è la porta della vocazione. Inizia ogni mattina con tre grazie — e troverai Dio che parla più chiaramente entro la fine della settimana.",
+      },
+    },
+    {
+      sister: "Sr. Regina",
+      photo: AUTHOR_PHOTOS["Sr. Regina"],
+      message: {
+        en: "A queen who kneels before God is more powerful than a thousand who bow before the world.",
+        it: "Una regina che si inginocchia davanti a Dio è più potente di mille che si inchinano davanti al mondo.",
+      },
+      advice: {
+        en: "Your dignity is not in what you wear or where you sit. It is in Whose you are. Every sister wears a crown no one can see.",
+        it: "La tua dignità non è in ciò che indossi o dove siedi. È in Chi appartieni. Ogni suora porta una corona che nessuno può vedere.",
+      },
+    },
+    {
+      sister: "Sr. Gladys",
+      photo: AUTHOR_PHOTOS["Sr. Gladys"],
+      message: {
+        en: "Holiness is not made of grand gestures — it is made of a thousand tiny yeses no one will ever notice.",
+        it: "La santità non è fatta di grandi gesti — è fatta di mille piccoli sì che nessuno noterà mai.",
+      },
+      advice: {
+        en: "Try this for one week: do one hidden act of love every day and tell no one. That is the training ground of every vocation.",
+        it: "Prova questo per una settimana: compi un atto d'amore nascosto ogni giorno e non dirlo a nessuno. Questo è il campo di allenamento di ogni vocazione.",
+      },
+    },
+    {
+      sister: "Sr. Joan",
+      photo: AUTHOR_PHOTOS["Sr. Joan"],
+      message: {
+        en: "The heart of a sister is not spared from sorrow — it is given a greater capacity to carry it.",
+        it: "Il cuore di una suora non è risparmiato dal dolore — gli è data una capacità più grande di portarlo.",
+      },
+      advice: {
+        en: "Do not run from your own tears. They are not weakness — they are the water God uses to grow compassion in you.",
+        it: "Non fuggire dalle tue lacrime. Non sono debolezza — sono l'acqua che Dio usa per far crescere la compassione in te.",
+      },
+    },
+    {
+      sister: "Sr. Julian",
+      photo: AUTHOR_PHOTOS["Sr. Julian"],
+      message: {
+        en: "God does not call the strong. He strengthens the called. Your weakness is not an obstacle — it is the very place He will use.",
+        it: "Dio non chiama i forti. Rafforza i chiamati. La tua debolezza non è un ostacolo — è proprio il luogo che Egli userà.",
+      },
+      advice: {
+        en: "Tell God honestly what you are afraid of. Not the polite version — the real one. He has heard worse, and He has never walked away.",
+        it: "Di' a Dio onestamente di cosa hai paura. Non la versione educata — quella vera. Ne ha sentite di peggiori, e non se n'è mai andato.",
+      },
+    },
+    {
+      sister: "Sr. Immaculate",
+      photo: AUTHOR_PHOTOS["Sr. Immaculate"],
+      message: {
+        en: "A life given fully to God is never a life half-lived — it is the only life that is lived whole.",
+        it: "Una vita donata interamente a Dio non è mai una vita vissuta a metà — è l'unica vita vissuta intera.",
+      },
+      advice: {
+        en: "Ask yourself: what am I holding back from God? That one thing is the key to your peace — and the door to your vocation.",
+        it: "Chiediti: cosa sto trattenendo da Dio? Quella sola cosa è la chiave della tua pace — e la porta della tua vocazione.",
+      },
+    },
+    {
+      sister: "Sr. Ann",
+      photo: AUTHOR_PHOTOS["Sr. Ann"],
+      message: {
+        en: "Mary did not understand everything the angel said — she simply said yes. Understanding often comes *after* obedience, not before.",
+        it: "Maria non capì tutto ciò che l'angelo disse — disse semplicemente sì. La comprensione spesso arriva *dopo* l'obbedienza, non prima.",
+      },
+      advice: {
+        en: "You will never have all the answers before you take the step. Take the step — the answers will catch up with you on the road.",
+        it: "Non avrai mai tutte le risposte prima di fare il passo. Fai il passo — le risposte ti raggiungeranno lungo la strada.",
+      },
+    },
+    {
+      sister: "Sr. Dorothy",
+      photo: AUTHOR_PHOTOS["Sr. Dorothy"],
+      message: {
+        en: "The mission field is not always a foreign land. Sometimes it is the kitchen, the classroom, the hospital ward, the room next door.",
+        it: "Il campo di missione non è sempre una terra straniera. A volte è la cucina, l'aula, il reparto d'ospedale, la stanza accanto.",
+      },
+      advice: {
+        en: "Do not wait to be sent to Africa to be a missionary. Be one today, where you are — with the person God has placed in front of you.",
+        it: "Non aspettare di essere mandata in Africa per essere missionaria. Sii una missionaria oggi, dove sei — con la persona che Dio ha messo davanti a te.",
+      },
+    },
+    {
+      sister: "Sr. Martha",
+      photo: AUTHOR_PHOTOS["Sr. Martha"],
+      message: {
+        en: "Do not despise the small tasks. In the convent, the one who folds the laundry with love is as holy as the one who preaches to thousands.",
+        it: "Non disprezzare i piccoli compiti. In convento, chi piega il bucato con amore è santa quanto chi predica a migliaia.",
+      },
+      advice: {
+        en: "Practice doing your chores as if Jesus were watching — because He is. Every dish washed in love is a prayer.",
+        it: "Esercitati a fare le tue faccende come se Gesù stesse guardando — perché lo sta facendo. Ogni piatto lavato con amore è una preghiera.",
+      },
+    },
+    {
+      sister: "Sr. Salome Wavinya",
+      photo: AUTHOR_PHOTOS["Sr. Salome Wavinya"],
+      message: {
+        en: "The desert is not a punishment — it is a place where God strips away everything that is not Him, so that only love remains.",
+        it: "Il deserto non è una punizione — è un luogo dove Dio toglie tutto ciò che non è Lui, così che rimanga solo l'amore.",
+      },
+      advice: {
+        en: "If you feel dry in prayer, do not run away. Stay. The desert is where God speaks most clearly — but only to those who do not flee.",
+        it: "Se ti senti arida nella preghiera, non scappare. Resta. Il deserto è dove Dio parla più chiaramente — ma solo a chi non fugge.",
+      },
+    },
+    {
+      sister: "Sr. Winnie Lopez",
+      photo: AUTHOR_PHOTOS["Sr. Winnie Lopez"],
+      message: {
+        en: "Community life is not the absence of friction — it is the daily miracle of love renewed despite it.",
+        it: "La vita comunitaria non è l'assenza di attrito — è il miracolo quotidiano dell'amore rinnovato nonostante esso.",
+      },
+      advice: {
+        en: "You will not love every sister at first sight. But if you stay faithful, you will love them at last sight — and that is the greater miracle.",
+        it: "Non amerai ogni sorella a prima vista. Ma se rimani fedele, le amerai all'ultima vista — e questo è il miracolo più grande.",
+      },
+    },
+    {
+      sister: "Sr. Adriana",
+      photo: AUTHOR_PHOTOS["Sr. Adriana"],
+      message: {
+        en: "You do not have to become a saint overnight. You only have to become one step closer today than you were yesterday.",
+        it: "Non devi diventare santa in una notte. Devi solo fare un passo più vicino oggi di quanto lo fossi ieri.",
+      },
+      advice: {
+        en: "The road to sisterhood is not a sprint — it is a walk with Jesus. And He never asks you to walk faster than your own heartbeat.",
+        it: "La strada verso la vita religiosa non è uno sprint — è una camminata con Gesù. E Lui non ti chiede mai di camminare più veloce del tuo battito.",
+      },
+    },
+    {
+      sister: "Sr. Agnes Muthoni",
+      photo: AUTHOR_PHOTOS["Sr. Agnes Muthoni"],
+      message: {
+        en: "You are not too young, too ordinary, or too late. God has called farmers, fishermen, tax collectors, and teenagers — He has never once called a 'perfect' person.",
+        it: "Non sei troppo giovane, troppo ordinaria o troppo in ritardo. Dio ha chiamato contadini, pescatori, esattori e adolescenti — non ha mai chiamato una persona 'perfetta'.",
+      },
+      advice: {
+        en: "If you are a novice, treasure this time. Formation is not a delay — it is the slow, patient sculpting of a soul God intends to use greatly.",
+        it: "Se sei una novizia, custodisci questo tempo. La formazione non è un ritardo — è la lenta e paziente scultura di un'anima che Dio intende usare grandemente.",
+      },
+    },
+    {
+      sister: "Sr. Andreina Stradiotto",
+      photo: AUTHOR_PHOTOS["Sr. Andreina Stradiotto"],
+      message: {
+        en: "Perseverance is not stubbornness. It is the quiet courage of a heart that refuses to give up on the God who never gave up on her.",
+        it: "La perseveranza non è testardaggine. È il coraggio silenzioso di un cuore che rifiuta di arrendersi al Dio che non si è mai arreso a lei.",
+      },
+      advice: {
+        en: "On the days you want to quit — and there will be days — remember the first day you said yes. That yes was real. It still is. Rest, then keep walking.",
+        it: "Nei giorni in cui vuoi mollare — e ci saranno — ricorda il primo giorno in cui hai detto sì. Quel sì era vero. Lo è ancora. Riposa, poi continua a camminare.",
+      },
+    },
+    {
+      sister: "Sr. Angelica Kinya",
+      photo: AUTHOR_PHOTOS["Sr. Angelica Kinya"],
+      message: {
+        en: "The journey to sisterhood is measured not in years, but in yeses. And even the smallest yes moves you forward.",
+        it: "Il cammino verso la vita religiosa si misura non in anni, ma in sì. E anche il più piccolo sì ti fa andare avanti.",
+      },
+      advice: {
+        en: "You do not have to see the whole staircase. Just take the next step — and trust that the One who called you will light the one after that.",
+        it: "Non devi vedere tutta la scala. Fai solo il prossimo passo — e confida che Colui che ti ha chiamata illuminerà quello dopo.",
+      },
+    },
+    {
+      sister: "Sr. Benedicta",
+      photo: AUTHOR_PHOTOS["Sr. Benedicta"],
+      message: {
+        en: "God does not call the finished. He calls the becoming. Every novice is proof that grace prefers unfinished hearts.",
+        it: "Dio non chiama i finiti. Chiama i divenire. Ogni novizia è la prova che la grazia preferisce i cuori incompiuti.",
+      },
+      advice: {
+        en: "You will not feel ready — and you are not supposed to. Readiness is not a prerequisite for saying yes. Willingness is.",
+        it: "Non ti sentirai pronta — e non è previsto che tu lo sia. La prontezza non è un prerequisito per dire sì. La disponibilità lo è.",
+      },
+    },
+    {
+      sister: "Sr. Beth",
+      photo: AUTHOR_PHOTOS["Sr. Beth"],
+      message: {
+        en: "Do not measure your progress against the sister next to you. Compare yourself only to the girl you were when you first said yes.",
+        it: "Non misurare i tuoi progressi con la sorella accanto a te. Confrontati solo con la ragazza che eri quando hai detto sì per la prima volta.",
+      },
+      advice: {
+        en: "Formation years feel long, but they are the shortest years of a long, fruitful life. Stay faithful in the small things, and the big things will take care of themselves.",
+        it: "Gli anni di formazione sembrano lunghi, ma sono gli anni più brevi di una vita lunga e feconda. Resta fedele nelle piccole cose, e le grandi si prenderanno cura di sé.",
+      },
+    },
+    {
+      sister: "Sr. Consolata",
+      photo: AUTHOR_PHOTOS["Sr. Consolata"],
+      message: {
+        en: "Every sister you admire was once exactly where you are now — uncertain, hopeful, and learning to trust. She did not skip the journey. She walked it.",
+        it: "Ogni suora che ammiri è stata esattamente dove sei tu ora — incerta, speranzosa e impegnata a imparare a fidarsi. Non ha saltato il cammino. L'ha percorso.",
+      },
+      advice: {
+        en: "Ask a sister who has been in vows for 30 years how she made it. You will hear one word again and again: faithfulness. Not perfection — faithfulness.",
+        it: "Chiedi a una suora che ha emesso i voti da 30 anni come ce l'ha fatta. Sentirai una parola ripetersi: fedeltà. Non perfezione — fedeltà.",
+      },
+    },
+    {
+      sister: "Sr. Dorcas",
+      photo: AUTHOR_PHOTOS["Sr. Dorcas"],
+      message: {
+        en: "You are not running out of time. God's timing is not your deadline. He began a good work in you, and He will finish it.",
+        it: "Non ti stai esaurendo il tempo. I tempi di Dio non sono le tue scadenze. Ha iniziato un'opera buona in te, e la porterà a termine.",
+      },
+      advice: {
+        en: "When you feel behind, remember: St. Augustine was 32. St. Teresa of Ávila was 40. St. Rita was 36. God is never in a hurry — and He is never too late.",
+        it: "Quando ti senti indietro, ricorda: Sant'Agostino aveva 32 anni. Santa Teresa d'Avila 40. Santa Rita 36. Dio non ha mai fretta — e non è mai troppo tardi.",
+      },
+    },
+    {
+      sister: "Sr. Frida Mburugu",
+      photo: AUTHOR_PHOTOS["Sr. Frida Mburugu"],
+      message: {
+        en: "The first years are not a test you can fail — they are a garden you are learning to tend. Some seeds grow slowly. That does not mean they are dead.",
+        it: "I primi anni non sono un esame che puoi fallire — sono un giardino che stai imparando a coltivare. Alcuni semi crescono lentamente. Questo non significa che siano morti.",
+      },
+      advice: {
+        en: "Be patient with yourself. God is. If He can wait 30 years for a soul to ripen, you can wait a few more months for your own heart to settle.",
+        it: "Sii paziente con te stessa. Dio lo è. Se può aspettare 30 anni perché un'anima maturi, tu puoi aspettare qualche mese in più perché il tuo cuore si acquieti.",
+      },
+    },
+    {
+      sister: "Sr. Giovanna",
+      photo: AUTHOR_PHOTOS["Sr. Giovanna"],
+      message: {
+        en: "The journey may feel long, but the One who called you walks it with you — and He never once lets go of your hand.",
+        it: "Il cammino può sembrare lungo, ma Colui che ti ha chiamata lo percorre con te — e non lascia mai la tua mano.",
+      },
+      advice: {
+        en: "Write down a date: today. Write next to it: 'I said yes again.' The journey is not one great yes at the start — it is a thousand small yeses repeated, one day at a time.",
+        it: "Scrivi una data: oggi. Accanto scrivi: 'Ho detto sì di nuovo.' Il cammino non è un grande sì all'inizio — è mille piccoli sì ripetuti, un giorno alla volta.",
+      },
+    },
+    {
+      sister: "Sr. Jerusha Nkatha",
+      photo: AUTHOR_PHOTOS["Sr. Jerusha Nkatha"],
+      message: {
+        en: "Prayer is not a duty you owe God — it is a conversation He is always waiting to have with you.",
+        it: "La preghiera non è un dovere che devi a Dio — è una conversazione che Egli è sempre in attesa di avere con te.",
+      },
+      advice: {
+        en: "If you want to stay close to God, talk to Him like a friend — not like a stranger reciting a formula. He already knows your voice; let Him hear it often.",
+        it: "Se vuoi restare vicina a Dio, parlagli come a un amico — non come a un estraneo che recita una formula. Conosce già la tua voce; lascia che la senta spesso.",
+      },
+    },
+    {
+      sister: "Sr. Jiunisia Kaburi",
+      photo: AUTHOR_PHOTOS["Sr. Jiunisia Kaburi"],
+      message: {
+        en: "The soul that prays is like a lamp that never runs out of oil — because the One who fills it never sleeps.",
+        it: "L'anima che prega è come una lampada che non esaurisce mai l'olio — perché Colui che la riempie non dorme mai.",
+      },
+      advice: {
+        en: "Do not wait to feel like praying before you pray. Faithfulness in prayer is what produces the feeling — not the other way around.",
+        it: "Non aspettare di sentire il desiderio di pregare prima di pregare. È la fedeltà nella preghiera che produce il sentimento — non il contrario.",
+      },
+    },
+    {
+      sister: "Sr. Loredana",
+      photo: AUTHOR_PHOTOS["Sr. Loredana"],
+      message: {
+        en: "A sister who prays is never alone — even in the darkest night, she is held by a Hand she cannot see but has learned to trust.",
+        it: "Una suora che prega non è mai sola — anche nella notte più buia, è tenuta da una Mano che non vede ma ha imparato a fidarsi.",
+      },
+      advice: {
+        en: "Build one small habit of prayer — five minutes each morning before you touch your phone. That single habit will hold you for a lifetime.",
+        it: "Costruisci una piccola abitudine di preghiera — cinque minuti ogni mattina prima di toccare il telefono. Quella singola abitudine ti sosterrà per tutta la vita.",
+      },
+    },
+    {
+      sister: "Sr. Lucy Wegoki",
+      photo: AUTHOR_PHOTOS["Sr. Lucy Wegoki"],
+      message: {
+        en: "God is not far away. He is closer to you than your own breath — you simply have not yet learned to notice Him.",
+        it: "Dio non è lontano. È più vicino a te del tuo stesso respiro — semplicemente non hai ancora imparato a notarlo.",
+      },
+      advice: {
+        en: "Practice the presence of God: every hour, pause for ten seconds and whisper, 'I am with You.' Do it for a month and you will never feel far from Him again.",
+        it: "Esercita la presenza di Dio: ogni ora, fermati dieci secondi e sussurra: 'Sono con Te.' Fallo per un mese e non ti sentirai mai più lontana da Lui.",
+      },
+    },
+    {
+      sister: "Sr. Maureen",
+      photo: AUTHOR_PHOTOS["Sr. Maureen"],
+      message: {
+        en: "The closer you draw to God, the more you realize He was never the one who moved.",
+        it: "Più ti avvicini a Dio, più ti rendi conto che non è mai stato Lui a spostarsi.",
+      },
+      advice: {
+        en: "If you feel distant from God, do not panic — simply turn around. He has been standing right behind you the whole time, waiting for you to look.",
+        it: "Se ti senti lontana da Dio, non agitarti — girati e basta. È stato proprio dietro di te per tutto il tempo, in attesa che tu ti voltassi.",
+      },
+    },
+    {
+      sister: "Sr. Pauline",
+      photo: AUTHOR_PHOTOS["Sr. Pauline"],
+      message: {
+        en: "Prayer does not change God's mind — it changes yours. And that is often the greater miracle.",
+        it: "La preghiera non cambia la mente di Dio — cambia la tua. E spesso quello è il miracolo più grande.",
+      },
+      advice: {
+        en: "When you pray, do not come to God with a list. Come with an open heart. Let Him speak first — and learn to be silent long enough to hear Him.",
+        it: "Quando preghi, non venire a Dio con una lista. Vieni con il cuore aperto. Lascia che parli per primo — e impara a tacere abbastanza a lungo da sentirlo.",
+      },
+    },
+    {
+      sister: "Sr. Priscilla Kanini",
+      photo: AUTHOR_PHOTOS["Sr. Priscilla Kanini"],
+      message: {
+        en: "A prayerful sister is a powerful sister. The world is changed more by what happens in the chapel than by what happens in the streets.",
+        it: "Una suora che prega è una suora potente. Il mondo è cambiato più da ciò che accade nella cappella che da ciò che accade nelle strade.",
+      },
+      advice: {
+        en: "Before you try to change anyone else — your family, your community, your country — spend an hour before the Blessed Sacrament. That hour will do more than a hundred arguments.",
+        it: "Prima di cercare di cambiare chiunque altro — la tua famiglia, la tua comunità, il tuo paese — trascorri un'ora davanti al Santissimo Sacramento. Quell'ora farà più di cento discussioni.",
+      },
+    },
+    {
+      sister: "Sr. Rose Kanathi",
+      photo: AUTHOR_PHOTOS["Sr. Rose Kanathi"],
+      message: {
+        en: "The Rosary is not a repetition of words — it is a repetition of love. And love, repeated, becomes a stronghold no darkness can enter.",
+        it: "Il Rosario non è una ripetizione di parole — è una ripetizione d'amore. E l'amore, ripetuto, diventa una fortezza in cui nessuna tenebra può entrare.",
+      },
+      advice: {
+        en: "If you do not know how to pray, take up the Rosary. Hold it in your pocket. Touch it when you are anxious, tempted, or tired. Mary will do the rest.",
+        it: "Se non sai come pregare, prendi il Rosario. Tienilo in tasca. Tocalo quando sei ansiosa, tentata o stanca. Maria farà il resto.",
+      },
+    },
+    {
+      sister: "Sr. Sabina Murwana",
+      photo: AUTHOR_PHOTOS["Sr. Sabina Murwana"],
+      message: {
+        en: "A soul that stays close to God becomes a shelter for others — because what you carry within, others feel around you.",
+        it: "Un'anima che resta vicina a Dio diventa un rifugio per gli altri — perché ciò che porti dentro, gli altri lo sentono attorno a te.",
+      },
+      advice: {
+        en: "Guard your inner life fiercely. What you feed in private — in prayer, in silence, in Scripture — will show in public. Feed the right things.",
+        it: "Custodisci gelosamente la tua vita interiore. Ciò che nutri in privato — nella preghiera, nel silenzio, nella Scrittura — si manifesterà in pubblico. Nutri le cose giuste.",
+      },
+    },
+    {
+      sister: "Sr. Susan Chokera",
+      photo: AUTHOR_PHOTOS["Sr. Susan Chokera"],
+      message: {
+        en: "Do not let the noise of the world drown the whisper of God. Turn off the noise — and you will find He has been speaking all along.",
+        it: "Non lasciare che il rumore del mondo soffochi il sussurro di Dio. Spegni il rumore — e scoprirai che ha parlato per tutto il tempo.",
+      },
+      advice: {
+        en: "Try one day a week without social media. Fill that silence with Scripture, with prayer, with the Rosary. You will be surprised how loud God's voice becomes.",
+        it: "Prova un giorno a settimana senza social media. Riempi quel silenzio con la Scrittura, con la preghiera, con il Rosario. Sarai sorpresa di quanto diventi forte la voce di Dio.",
+      },
+    },
+    {
+      sister: "Sr. Susan Kanini",
+      photo: AUTHOR_PHOTOS["Sr. Susan Kanini"],
+      message: {
+        en: "Holiness is not the reward of prayer — it is the fruit of prayer. Pray, and holiness will come looking for you.",
+        it: "La santità non è la ricompensa della preghiera — è il frutto della preghiera. Prega, e la santità verrà a cercarti.",
+      },
+      advice: {
+        en: "Do not aim for holiness directly. Aim for faithfulness in prayer — and holiness will ambush you on the way.",
+        it: "Non puntare direttamente alla santità. Punta alla fedeltà nella preghiera — e la santità ti tenderà un'imboscata lungo la strada.",
+      },
+    },
+    {
+      sister: "Sr. Hannah",
+      photo: AUTHOR_PHOTOS["Sr. Hannah"],
+      message: {
+        en: "The secret of every faithful sister is not discipline, not talent, not strength — it is a heart that returns to God every single time it wanders.",
+        it: "Il segreto di ogni suora fedele non è la disciplina, non il talento, non la forza — è un cuore che ritorna a Dio ogni singola volta che si allontana.",
+      },
+      advice: {
+        en: "You will wander. You will get distracted in prayer. You will forget God for hours. That is not failure — that is being human. What matters is that you keep coming back. He is always there when you do.",
+        it: "Ti allontanerai. Ti distrarrai nella preghiera. Dimenticherai Dio per ore. Questo non è fallimento — è essere umani. Ciò che conta è che continui a tornare. Lui è sempre lì quando lo fai.",
+      },
+    },
+    {
+      sister: "Madre Nasi",
+      photo: AUTHOR_PHOTOS["Madre Nasi"],
+      message: {
+        en: "I have been a sister for many years, and I can tell you this with my whole heart: the closer you stay to God, the shorter the journey feels — and the sweeter the arrival.",
+        it: "Sono suora da molti anni, e posso dirtelo con tutto il cuore: più resti vicina a Dio, più breve sembra il cammino — e più dolce l'arrivo.",
+      },
+      advice: {
+        en: "Pray every day, even when you do not feel like it. Stay close to the Eucharist. Love Our Lady. And when you fall, get up and keep walking. The God who called you will not let you go — ever.",
+        it: "Prega ogni giorno, anche quando non ne hai voglia. Resta vicina all'Eucaristia. Ama la Madonna. E quando cadi, alzati e continua a camminare. Il Dio che ti ha chiamata non ti lascerà andare — mai.",
+      },
+    },
+  ];
 
-  return wordsFromSisters
+  return wordsFromSisters;
 }
 
 // ---------------------------------------------------------------------------

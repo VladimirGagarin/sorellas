@@ -19,7 +19,6 @@ import {
   FaPrayingHands,
   FaChevronDown,
   FaChurch,
-  FaWikipediaW,
   FaExternalLinkAlt,
   FaCalendarDay,
 } from "react-icons/fa";
@@ -75,7 +74,7 @@ export default function HomeScreenPage() {
 
   useEffect(() => {
     if (feastsToday.length === 0) return () => {};
-    const colors = ["#8C6D1F", "#A84B2A", "#4A5D36", "#D4A94C", "#C8A45C"];
+    const colors = ["#3E7A43", "#3F7A55", "#4A7A44", "#A8E0A0", "#7FAE6E"];
     confetti({ particleCount: 120, spread: 90, origin: { y: 0.6 }, colors });
     const end = Date.now() + 1800;
     const interval = setInterval(() => {
@@ -313,28 +312,20 @@ export default function HomeScreenPage() {
                   <p className="feast-today-honours">{t.feastHonours}</p>
                   <div className="feast-today-names">
                     {feastsToday.map((feast, i) => (
-                      <span
-                        key={`${feast.en}-${i}`}
-                        className="feast-today-name"
-                      >
-                        {language === "en" ? feast.en : feast.it}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="feast-today-actions">
-                    {feastsToday.map((feast, i) => (
                       <a
-                        key={`wiki-${feast.en}-${i}`}
+                        key={`${feast.en}-${i}`}
                         href={getWikipediaUrl(feast.en, language)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="feast-today-btn ghost"
+                        className="feast-today-name"
+                        title={t.wikiInfo}
                       >
-                        <FaWikipediaW />
-                        {t.wikiInfo}
-                        <FaExternalLinkAlt />
+                        {language === "en" ? feast.en : feast.it}
+                        <FaExternalLinkAlt className="feast-today-name-icon" />
                       </a>
                     ))}
+                  </div>
+                  <div className="feast-today-actions">
                     <Link to="/feasts" className="feast-today-btn primary">
                       <FaCalendarDay /> {t.viewCalendar} <FaArrowRight />
                     </Link>

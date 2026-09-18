@@ -1,0 +1,433 @@
+/* =========================================================================
+   SistersDirectoryPage.css — "Come and See" testimonial walk
+   Garden-themed, warm, enchanting — each sister joins the path one by one.
+   ========================================================================= */
+
+.sd-page {
+  min-height: 100vh;
+  background: var(--gradient-bg);
+  color: var(--text-primary);
+  position: relative;
+  overflow-x: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* ============ Hero ============ */
+.sd-hero {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 5.5rem 1rem 1.75rem;
+  text-align: center;
+  position: relative;
+}
+
+.sd-eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--leaf-emerald);
+}
+
+.sd-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0.7rem 0 0.5rem;
+  background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="dark"] .sd-title {
+  background: linear-gradient(135deg, var(--text-primary), var(--accent-lavender));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sd-subtitle {
+  margin: 0 auto;
+  max-width: 640px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.sd-hero-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.4rem;
+}
+
+.sd-hero-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  box-shadow: var(--glass-shadow);
+}
+
+.sd-hero-meta svg {
+  color: var(--leaf-emerald);
+}
+
+.sd-verse {
+  margin: 1.5rem 0 0;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  color: var(--accent-purple);
+  font-style: italic;
+}
+
+[data-theme="dark"] .sd-verse {
+  color: var(--accent-lavender);
+}
+
+/* ============ Walking path ============ */
+.sd-walk {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.sd-sister {
+  position: relative;
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+  background: var(--card-bg);
+  box-shadow: 0 14px 38px var(--shadow-color);
+  overflow: hidden;
+}
+
+/* ---------- Save header (all screens, outside the card) ---------- */
+.sd-save-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  background: color-mix(in srgb, var(--card-bg) 90%, var(--leaf-emerald));
+}
+
+.sd-save-caption {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.sd-save-caption svg {
+  color: var(--leaf-emerald);
+}
+
+.sd-save-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(var(--primary-green-rgb), 0.5);
+  background: var(--card-bg);
+  color: var(--leaf-emerald);
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  box-shadow: 0 4px 14px var(--shadow-color);
+  transition: all 0.2s ease;
+}
+
+.sd-save-btn:hover {
+  border-color: var(--leaf-emerald);
+  box-shadow: 0 6px 18px rgba(var(--primary-green-rgb), 0.25);
+}
+
+.sd-save-btn:active {
+  transform: scale(0.97);
+}
+
+/* ---------- Card ---------- */
+.sd-card {
+  position: relative;
+  background: var(--card-bg);
+  padding: 1.9rem 2rem 1.6rem;
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  overflow: hidden;
+}
+
+.sd-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Decorative gold line across the top of each card */
+.sd-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--leaf-emerald),
+    var(--primary-green),
+    var(--accent-purple),
+    transparent
+  );
+  opacity: 0.7;
+}
+
+/* Soft radial glow in the corner */
+.sd-card::after {
+  content: "";
+  position: absolute;
+  top: -70px;
+  right: -70px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(var(--primary-green-rgb), 0.14),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.sd-card-mark {
+  display: block;
+  text-align: right;
+  margin-top: 1.1rem;
+  font-family: var(--font-display);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #4A7A44;
+  opacity: 0.9;
+}
+
+[data-theme="dark"] .sd-card-mark {
+  color: var(--text-muted);
+  opacity: 0.9;
+}
+
+/* ---------- Card top: photo + name ---------- */
+.sd-card-top {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  margin-bottom: 1.25rem;
+}
+
+.sd-avatar-wrap {
+  flex-shrink: 0;
+}
+
+.sd-avatar-img {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(var(--primary-green-rgb), 0.55);
+  box-shadow: 0 10px 26px var(--shadow-color);
+  background: var(--gradient-bg);
+  display: block;
+}
+
+.sd-avatar-monogram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #F0F9EC;
+  background: linear-gradient(135deg, var(--leaf-emerald), var(--primary-green));
+  border-color: rgba(255, 253, 246, 0.35);
+}
+
+.sd-card-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.28rem;
+  min-width: 0;
+}
+
+.sd-order {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  color: var(--accent-purple);
+  opacity: 0.85;
+}
+
+[data-theme="dark"] .sd-order {
+  color: var(--accent-lavender);
+}
+
+.sd-name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+}
+
+.sd-grace {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--leaf-emerald);
+}
+
+.sd-grace svg {
+  font-size: 0.8rem;
+}
+
+/* ---------- Message ---------- */
+.sd-message {
+  position: relative;
+  margin: 0 0 1.1rem;
+}
+
+.sd-message p {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.28rem;
+  font-style: italic;
+  line-height: 1.65;
+  color: var(--text-primary);
+}
+
+.sd-quote-mark {
+  color: var(--leaf-emerald);
+  font-size: 1.05rem;
+  opacity: 0.55;
+  margin-right: 0.4rem;
+}
+
+.sd-quote-mark.close {
+  margin-left: 0.4rem;
+  margin-right: 0;
+}
+
+/* ---------- Advice ---------- */
+.sd-advice {
+  border-left: 3px solid var(--accent-purple);
+  background: color-mix(in srgb, var(--card-bg) 88%, var(--accent-purple));
+  border-radius: 0 16px 16px 0;
+  padding: 0.9rem 1.15rem;
+}
+
+[data-theme="dark"] .sd-advice {
+  background: color-mix(in srgb, var(--card-bg) 92%, var(--accent-lavender));
+}
+
+.sd-advice-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-purple);
+  margin-bottom: 0.35rem;
+}
+
+[data-theme="dark"] .sd-advice-label {
+  color: var(--accent-lavender);
+}
+
+.sd-advice p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* ============ Watermark bottom right ============ */
+.sd-watermark {
+  position: fixed;
+  bottom: 1rem;
+  right: 1.25rem;
+  font-family: var(--font-display);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #4A7A44;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 300;
+  user-select: none;
+}
+
+[data-theme="dark"] .sd-watermark {
+  color: var(--text-muted);
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .sd-watermark {
+    opacity: 0.8;
+    font-size: 0.6rem;
+  }
+
+  [data-theme="dark"] .sd-watermark {
+    opacity: 0.9;
+  }
+}
+
+/* ============ Responsive ============ */
+@media (max-width: 768px) {
+  .sd-hero {
+    padding-top: 4.5rem;
+  }
+
+  .sd-card {
+    padding: 1.5rem 1.25rem 1.3rem;
+  }
+
+  .sd-avatar-img {
+    width: 76px;
+    height: 76px;
+  }
+
+  .sd-name {
+    font-size: 1.1rem;
+  }
+
+  .sd-message p {
+    font-size: 1.12rem;
+  }
+}

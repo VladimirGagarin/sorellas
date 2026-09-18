@@ -47,7 +47,7 @@ export default function CaptureCard({
     try {
       const dataUrl = await toPng(cardRef.current, {
         cacheBust: true,
-        backgroundColor: isDark ? "#141a26" : "#fffdf6",
+        backgroundColor: isDark ? "#0A1A0F" : "#FAFDF7",
         pixelRatio: 2,
         onclone: (_clonedDoc, node) => {
           captureHiddenSelectors.forEach((selector) => {

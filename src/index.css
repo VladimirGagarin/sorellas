@@ -8,122 +8,155 @@
   --font-display: 'Cinzel', Georgia, 'Times New Roman', serif;
   --font-body: 'EB Garamond', Georgia, 'Times New Roman', serif;
 
-  /* Light theme — candle-lit parchment */
-  --primary-green: #8C6D1F;      /* Antique gold (primary accent) */
-  --primary-green-rgb: 140, 109, 31;
-  --secondary-green: #7A5C10;    /* Deep bronze */
-  --accent-purple: #A85E1E;      /* Ember amber */
-  --rose-pink: #A84B2A;          /* Rosewood */
-  --lily-purple: #8C6D1F;        /* Gold */
-  --oak-brown: #5D4037;          /* Cathedral oak */
-  --leaf-emerald: #4A5D36;       /* Liturgical olive */
+  /* Light theme — soft fading greens */
+  --primary-green: #3E7A43;      /* Leaf green (primary accent) */
+  --primary-green-rgb: 62, 122, 67;
+  --secondary-green: #2C5C33;    /* Deep forest */
+  --accent-purple: #4E8A52;      /* Fresh green accent */
+  --rose-pink: #3F7A55;          /* Pine teal */
+  --lily-purple: #3E7A43;        /* Green */
+  --oak-brown: #2F4A32;          /* Mossy bark */
+  --leaf-emerald: #4A7A44;       /* Liturgical green */
 
   /* Text */
-  --text-primary: #3B2A1A;       /* Deep walnut ink */
-  --text-secondary: #5B4632;     /* Umber */
-  --text-muted: #8C7355;         /* Taupe */
+  --text-primary: #1F3320;       /* Deep green ink */
+  --text-secondary: #3E5940;     /* Fern */
+  --text-muted: #6E8869;         /* Sage */
 
   /* Backgrounds */
-  --bg-color: #F5EEDC;           /* Parchment */
-  --bg-secondary: #EDE0C8;       /* Aged parchment */
-  --bg-card: #FBF6EA;            /* Ivory */
-  --card-bg: #FBF6EA;            /* Ivory */
+  --bg-color: #EEF6E9;           /* Pale spring green */
+  --bg-secondary: #E3F0DB;       /* Soft green wash */
+  --bg-card: #FAFDF7;            /* Green-tinted ivory */
+  --card-bg: #FAFDF7;
 
   /* UI */
-  --border-color: #DCC9A4;       /* Parchment border */
-  --shadow-color: rgba(96, 66, 24, 0.14);
-  --overlay-color: rgba(40, 26, 12, 0.55);
+  --border-color: #CFE1C6;       /* Pale leaf border */
+  --shadow-color: rgba(20, 55, 30, 0.16);
+  --overlay-color: rgba(20, 40, 24, 0.55);
 
   /* Header & Drawer */
-  --header-bg: rgba(251, 246, 234, 0.92);
-  --drawer-bg: rgba(251, 246, 234, 0.97);
-  --hover-bg: rgba(168, 116, 30, 0.08);
+  --header-bg: rgba(250, 253, 247, 0.92);
+  --drawer-bg: rgba(250, 253, 247, 0.97);
+  --hover-bg: rgba(62, 122, 67, 0.08);
 
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #A8842F, #6E5214);
-  --gradient-secondary: linear-gradient(135deg, #B0411B, #7A2E12);
-  --gradient-accent: linear-gradient(135deg, #C9A24B, #7A5C10);
-  --gradient-header: linear-gradient(135deg, #FFFDF6, #EDE0C8);
-  --gradient-drawer: linear-gradient(135deg, #FFFDF6, #E9D9B8);
-  --gradient-bg: linear-gradient(135deg, #F3EAD6, #F5EEDC);
+  --gradient-primary: linear-gradient(135deg, #4E8A52, #2C5C33);
+  --gradient-secondary: linear-gradient(135deg, #3F7A55, #24513A);
+  --gradient-accent: linear-gradient(135deg, #6FB06B, #3E7A43);
+  --gradient-header: linear-gradient(135deg, #FBFDF9, #E3F0DB);
+  --gradient-drawer: linear-gradient(135deg, #FBFDF9, #DCEBD2);
+  --gradient-bg: linear-gradient(135deg, #EFF7EA, #E1EFD9);
 
-  /* Glass morphism (warm lens) */
-  --glass-bg: rgba(255, 252, 242, 0.4);
-  --glass-border: rgba(146, 106, 42, 0.14);
-  --glass-shadow: 0 8px 32px rgba(74, 48, 16, 0.12);
+  /* Glass morphism (soft green lens) */
+  --glass-bg: rgba(250, 253, 247, 0.4);
+  --glass-border: rgba(62, 122, 67, 0.14);
+  --glass-shadow: 0 18px 44px -10px rgba(20, 55, 30, 0.22), 0 6px 14px rgba(20, 55, 30, 0.1);
   --glass-blur: blur(12px);
-  --glass-gradient: linear-gradient(135deg, rgba(255, 251, 238, 0.55), rgba(255, 251, 238, 0.18));
-  --glass-highlight: rgba(255, 238, 196, 0.55);
+  --glass-gradient: linear-gradient(135deg, rgba(250, 253, 247, 0.55), rgba(250, 253, 247, 0.18));
+  --glass-highlight: rgba(200, 235, 190, 0.55);
 
   /* Identity accents */
-  --soft-blue: #6E7384;
-  --warm-orange: #A85E22;
-  --soft-pink: #B0705A;
-  --deep-purple: #6E5224;
+  --soft-blue: #4F8A78;
+  --warm-orange: #5E9B57;
+  --soft-pink: #7FAE6E;
+  --deep-purple: #3A6B45;
+}
+
+/* Modern raised-card shadows for all cards in light mode */
+:root[data-theme="light"] .glass,
+:root[data-theme="light"] .glass-card,
+:root[data-theme="light"] .hero-glass,
+:root[data-theme="light"] .featured-glass,
+:root[data-theme="light"] .filter-glass,
+:root[data-theme="light"] .cta-glass,
+:root[data-theme="light"] .feast-card,
+:root[data-theme="light"] .feast-calendar-card,
+:root[data-theme="light"] .fun-fact-card,
+:root[data-theme="light"] .flower-card,
+:root[data-theme="light"] .fw-card,
+:root[data-theme="light"] .jb-card,
+:root[data-theme="light"] .tp-card,
+:root[data-theme="light"] .sd-card,
+:root[data-theme="light"] .quotes-card,
+:root[data-theme="light"] .quotes-theme-card,
+:root[data-theme="light"] .prayer-card,
+:root[data-theme="light"] .question-card,
+:root[data-theme="light"] .litany-card,
+:root[data-theme="light"] .readpoem-card,
+:root[data-theme="light"] .poems-card,
+:root[data-theme="light"] .article-card,
+:root[data-theme="light"] .inspiration-card,
+:root[data-theme="light"] .disclaimer-card,
+:root[data-theme="light"] .disclaimer-confirm-card,
+:root[data-theme="light"] .time-section-glass,
+:root[data-theme="light"] .empty-state-glass {
+  box-shadow:
+    0 18px 44px -12px rgba(20, 55, 30, 0.24),
+    0 6px 16px -4px rgba(20, 55, 30, 0.12);
 }
 
 [data-theme="dark"] {
-  /* Dark theme — midnight chapel by candlelight */
-  --primary-green: #D4A94C;      /* Candle gold (primary accent) */
-  --primary-green-rgb: 212, 169, 76;
-  --secondary-green: #B98F35;
-  --accent-purple: #C87D2C;      /* Warm amber */
-  --rose-pink: #D9734A;          /* Candle rose */
-  --lily-purple: #D4A94C;
-  --oak-brown: #B98F35;
-  --leaf-emerald: #9CA86A;       /* Muted sage */
+  /* Dark theme — deep forest gradient greens */
+  --primary-green: #7FCB78;      /* Glow leaf (primary accent) */
+  --primary-green-rgb: 127, 203, 120;
+  --secondary-green: #5EA85C;
+  --accent-purple: #6FBF6B;      /* Fresh green */
+  --rose-pink: #7FD19A;          /* Bright leaf */
+  --lily-purple: #7FCB78;
+  --oak-brown: #5EA85C;
+  --leaf-emerald: #8FCB86;       /* Muted light green */
 
-  /* Aliased liturgical-violet names now resolve to warm golds */
-  --primary-purple: #D4A94C;
-  --secondary-purple: #C0871F;
-  --accent-lavender: #E8C87A;
-  --mystic-indigo: #2A1B10;
-  --midnight-blue: #170F09;
-  --lily-lavender: #D4A94C;
-  --oak-amber: #E0BE6A;
+  /* Aliased names now resolve to greens */
+  --primary-purple: #7FCB78;
+  --secondary-purple: #5EA85C;
+  --accent-lavender: #A8E0A0;
+  --mystic-indigo: #0C2012;
+  --midnight-blue: #071309;
+  --lily-lavender: #7FCB78;
+  --oak-amber: #A8E0A0;
 
   /* Text */
-  --text-primary: #F3E9D2;       /* Warm candle cream */
-  --text-secondary: #D3C3A5;
-  --text-muted: #A08A63;
+  --text-primary: #E6F3E0;       /* Pale green cream */
+  --text-secondary: #BCD4B6;
+  --text-muted: #7E9A7A;
 
   /* Backgrounds */
-  --bg-color: #1C140E;           /* Deep umber-black */
-  --bg-secondary: #251B11;
-  --bg-card: #2A2118;
-  --card-bg: #2A2118;
+  --bg-color: #0A1A0F;           /* Deep forest black */
+  --bg-secondary: #0F2415;
+  --bg-card: #13311C;
+  --card-bg: #13311C;
 
   /* UI */
-  --border-color: #40301E;
+  --border-color: #23482C;
   --shadow-color: rgba(0, 0, 0, 0.5);
   --overlay-color: rgba(0, 0, 0, 0.72);
 
   /* Header & Drawer */
-  --header-bg: rgba(26, 18, 12, 0.9);
-  --drawer-bg: rgba(30, 21, 14, 0.98);
-  --hover-bg: rgba(212, 169, 76, 0.12);
+  --header-bg: rgba(9, 22, 13, 0.9);
+  --drawer-bg: rgba(12, 28, 17, 0.98);
+  --hover-bg: rgba(127, 203, 120, 0.12);
 
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #B98F35, #7A5610);
-  --gradient-secondary: linear-gradient(135deg, #B94A1B, #6E2E10);
-  --gradient-accent: linear-gradient(135deg, #E0BE6A, #8A5C10);
-  --gradient-header: linear-gradient(135deg, #241909, #170F09);
-  --gradient-drawer: linear-gradient(135deg, #2A1B0C, #1C140E);
-  --gradient-bg: linear-gradient(135deg, #171006, #1C140E);
+  --gradient-primary: linear-gradient(135deg, #5EA85C, #2C5C33);
+  --gradient-secondary: linear-gradient(135deg, #3F8A5E, #1E4A33);
+  --gradient-accent: linear-gradient(135deg, #A8E0A0, #4E8A52);
+  --gradient-header: linear-gradient(135deg, #0D2213, #071309);
+  --gradient-drawer: linear-gradient(135deg, #0F2415, #0A1A0F);
+  --gradient-bg: linear-gradient(135deg, #071309, #0F2415);
 
-  /* Glass morphism (candle lens) */
-  --glass-bg: rgba(42, 32, 24, 0.42);
-  --glass-border: rgba(224, 190, 106, 0.14);
+  /* Glass morphism (forest lens) */
+  --glass-bg: rgba(19, 49, 28, 0.42);
+  --glass-border: rgba(168, 224, 160, 0.14);
   --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   --glass-blur: blur(14px);
-  --glass-gradient: linear-gradient(135deg, rgba(224, 190, 106, 0.08), rgba(224, 190, 106, 0.03));
-  --glass-highlight: rgba(224, 190, 106, 0.2);
+  --glass-gradient: linear-gradient(135deg, rgba(168, 224, 160, 0.08), rgba(168, 224, 160, 0.03));
+  --glass-highlight: rgba(168, 224, 160, 0.2);
 
   /* Identity accents */
-  --soft-blue: #8C93A8;
-  --warm-orange: #D0782E;
-  --soft-pink: #D08A6E;
-  --deep-purple: #C9A24B;
+  --soft-blue: #8FBFB0;
+  --warm-orange: #6FBF6B;
+  --soft-pink: #9FD48F;
+  --deep-purple: #A8E0A0;
 }
 
 /* ============================================================
@@ -146,7 +179,9 @@ body {
   line-height: 1.7;
   color: var(--text-primary);
   background-color: var(--bg-color);
-  transition: background-color 0.5s ease, color 0.5s ease;
+  background-image: var(--gradient-bg);
+  background-attachment: fixed;
+  transition: background-color 0.5s ease, color 0.5s ease, background-image 0.5s ease;
 }
 
 /* ============================================================
@@ -263,9 +298,9 @@ button { cursor: pointer; }
 .text-right { text-align: right; }
 
 .text-primary { color: var(--primary-green); }
-.text-success { color: #2D6A2E; }
+.text-success { color: var(--leaf-emerald); }
 .text-danger { color: #A8362A; }
-.text-warning { color: #B98F35; }
+.text-warning { color: var(--primary-green); }
 .text-muted { color: var(--text-muted); }
 
 .font-bold { font-weight: 700; }
@@ -284,8 +319,8 @@ button { cursor: pointer; }
    ============================================================ */
 ::-webkit-scrollbar { width: 9px; }
 ::-webkit-scrollbar-track { background: var(--bg-secondary); }
-::-webkit-scrollbar-thumb { background: #B98F35; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: #8A6D1F; }
+::-webkit-scrollbar-thumb { background: var(--primary-green); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--secondary-green); }
 
 /* ============================================================
    11. SELECTION
@@ -320,25 +355,25 @@ button { cursor: pointer; }
 }
 
 .btn-primary {
-  background-color: #8C6D1F;
+  background-color: var(--primary-green);
   color: white;
 }
 
-.btn-primary:hover { background-color: #6E5214; }
+.btn-primary:hover { background-color: var(--secondary-green); }
 
 .btn-secondary {
-  background-color: #5D4037;
+  background-color: var(--oak-brown);
   color: white;
 }
 
 .btn-outline {
   background-color: transparent;
-  border: 1px solid #8C6D1F;
-  color: #8C6D1F;
+  border: 1px solid var(--primary-green);
+  color: var(--primary-green);
 }
 
 .btn-outline:hover {
-  background-color: #8C6D1F;
+  background-color: var(--primary-green);
   color: white;
 }
 

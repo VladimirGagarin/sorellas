@@ -16,18 +16,6 @@ import "./PrayersPage.css";
 
 const RANDOM_COUNT = 6;
 const PAGE_SIZE = 24;
-const SHORT_MAX = 40;
-const MEDIUM_MAX = 90;
-
-function wordCount(text) {
-  return (text || "").trim().split(/\s+/).filter(Boolean).length;
-}
-
-function getLengthCategory(count) {
-  if (count < SHORT_MAX) return "short";
-  if (count <= MEDIUM_MAX) return "medium";
-  return "long";
-}
 
 function shuffleArray(arr) {
   const a = [...arr];
@@ -89,7 +77,6 @@ function CardPhoto({ photo, name }) {
 export default function PrayersPage() {
   const { language } = useLanguage();
   const [authorQuery, setAuthorQuery] = useState("");
-  const [lengthFilter, setLengthFilter] = useState("all");
   const [tagFilter, setTagFilter] = useState("all");
   const [randomKey, setRandomKey] = useState(0);
   const [mode, setMode] = useState("all");
@@ -103,31 +90,23 @@ export default function PrayersPage() {
       title: "Garden of Prayers",
       subtitle:
         "Prayers gathered from saints, shepherds of the Church, and humble servants of God.",
-      author: "By Author",
+      author: "By Author ",
       authorPlaceholder: "Search an author...",
       origin: "By Origin",
       tagCatholic: "Catholic",
       tagBible: "Bible",
       tagPersonal: "Personal",
-      length: "By Length",
       all: "All",
-      short: "Short",
-      medium: "Medium",
-      long: "Long",
-      shortHint: "under 40 words",
-      mediumHint: "40–90 words",
-      longHint: "over 90 words",
-      random: "Surprise Me",
+      random: "Surprise",
       showAll: "All Prayers",
       reset: "Reset",
       clearAuthor: "Clear",
       showing: (n, total) => `Showing ${n} of ${total} prayers`,
       randomNote: "A handful of prayers chosen at random.",
       pray: "Pray",
-      wordCount: "words",
       noResults: "No prayers match your search.",
       totalAuthors: (n) => `From ${n} prayerful souls`,
-      emptyAuthorSearch: "Pick an author or length to explore the whole garden.",
+      emptyAuthorSearch: "Pick an author to explore the whole garden.",
     };
     const it = {
       eyebrow: "Parole Sacre",
@@ -140,14 +119,7 @@ export default function PrayersPage() {
       tagCatholic: "Cattolica",
       tagBible: "Biblica",
       tagPersonal: "Personale",
-      length: "Per Lunghezza",
       all: "Tutte",
-      short: "Brevi",
-      medium: "Medie",
-      long: "Lunghe",
-      shortHint: "meno di 40 parole",
-      mediumHint: "40–90 parole",
-      longHint: "oltre 90 parole",
       random: "Sorpresa",
       showAll: "Tutte le Preghiere",
       reset: "Azzera",
@@ -155,11 +127,9 @@ export default function PrayersPage() {
       showing: (n, total) => `Mostrando ${n} di ${total} preghiere`,
       randomNote: "Un pugno di preghiere scelte a caso.",
       pray: "Prega",
-      wordCount: "parole",
       noResults: "Nessuna preghiera corrisponde alla ricerca.",
       totalAuthors: (n) => `Da ${n} anime in preghiera`,
-      emptyAuthorSearch:
-        "Scegli un autore o una lunghezza per esplorare l'intero giardino.",
+      emptyAuthorSearch: "Scegli un autore per esplorare l'intero giardino.",
     };
     return language === "en" ? en : it;
   }, [language]);
@@ -182,19 +152,16 @@ export default function PrayersPage() {
     [allPrayers]
   );
 
-  const hasFilters = authorQuery.trim() !== "" || lengthFilter !== "all" || tagFilter !== "all";
+  const hasFilters = authorQuery.trim() !== "" || tagFilter !== "all";
 
   const filtered = useMemo(() => {
     const q = authorQuery.trim().toLowerCase();
     return allPrayers.filter((p) => {
       const authorMatch = !q || p.author.toLowerCase().includes(q);
-      const lengthMatch =
-        lengthFilter === "all" ||
-        getLengthCategory(wordCount(p.prayer)) === lengthFilter;
       const tagMatch = tagFilter === "all" || p.tag === tagFilter;
-      return authorMatch && lengthMatch && tagMatch;
+      return authorMatch && tagMatch;
     });
-  }, [allPrayers, authorQuery, lengthFilter, tagFilter]);
+  }, [allPrayers, authorQuery, tagFilter]);
 
   const randomPrayers = useMemo(
     () => shuffleArray(allPrayers).slice(0, RANDOM_COUNT),
@@ -240,15 +207,9 @@ export default function PrayersPage() {
 
   const handleReset = () => {
     setAuthorQuery("");
-    setLengthFilter("all");
     setTagFilter("all");
     setVisibleCount(PAGE_SIZE);
     setShuffledAll(shuffleArray(allPrayers));
-  };
-
-  const changeLength = (value) => {
-    setLengthFilter(value);
-    setVisibleCount(PAGE_SIZE);
   };
 
   const changeTag = (value) => {
@@ -259,25 +220,6 @@ export default function PrayersPage() {
   const changeAuthor = (value) => {
     setAuthorQuery(value);
     setVisibleCount(PAGE_SIZE);
-  };
-
-  const getLengthLabel = (category) => {
-    const labels = { short: t.short, medium: t.medium, long: t.long };
-    return labels[category];
-  };
-
-  const getLengthHint = (category) => {
-    const hints = { short: t.shortHint, medium: t.mediumHint, long: t.longHint };
-    return hints[category];
-  };
-
-  const getTagLabel = (tag) => {
-    const labels = {
-      catholic: t.tagCatholic,
-      bible: t.tagBible,
-      personal: t.tagPersonal,
-    };
-    return labels[tag] || tag;
   };
 
   return (
@@ -329,28 +271,6 @@ export default function PrayersPage() {
                     <FaTimes />
                   </button>
                 )}
-              </div>
-            </div>
-
-            <div className="control-group">
-              <span className="control-label">{t.length}</span>
-              <div className="length-pills">
-                {["all", "short", "medium", "long"].map((value) => (
-                  <button
-                    key={value}
-                    className={`length-pill ${
-                      lengthFilter === value ? "active" : ""
-                    } ${value}`}
-                    onClick={() => changeLength(value)}
-                  >
-                    {value === "all" ? t.all : getLengthLabel(value)}
-                    {value !== "all" && (
-                      <small className="pill-hint">
-                        {getLengthHint(value)}
-                      </small>
-                    )}
-                  </button>
-                ))}
               </div>
             </div>
 

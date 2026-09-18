@@ -56,7 +56,7 @@
 .share-btn.copied {
   background: var(--leaf-emerald);
   border-color: transparent;
-  color: #FFFDF6;
+  color: #F0F9EC;
 }
 
 .prayer-top-actions {
@@ -141,7 +141,7 @@
   font-family: var(--font-display);
   font-size: 2.2rem;
   font-weight: 700;
-  color: #FFFDF6;
+  color: #F0F9EC;
   background: var(--gradient-primary);
   border-color: rgba(255, 253, 246, 0.35);
 }
@@ -179,7 +179,7 @@
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #FFFDF6;
+  color: #F0F9EC;
 }
 
 .length-badge.short { background: var(--leaf-emerald); }
@@ -194,7 +194,7 @@
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #FFFDF6;
+  color: #F0F9EC;
 }
 .tag-badge.catholic { background: var(--oak-brown); }
 .tag-badge.bible    { background: var(--leaf-emerald); }
@@ -269,14 +269,15 @@
   letter-spacing: 0.34em;
   text-transform: uppercase;
   text-align: center;
-  color: #B98F35;
-  opacity: 0.5;
+  color: #4A7A44;
+  opacity: 0.85;
   margin: 1.5rem auto 0;
   user-select: none;
 }
 
 [data-theme="dark"] .card-watermark {
-  color: var(--accent-lavender, #B89AD9);
+  color: var(--accent-lavender, #A8E0A0);
+  opacity: 0.9;
 }
 
 .card-watermark::before,
@@ -349,7 +350,7 @@
   padding: 0.7rem 1.4rem;
   border-radius: 10px;
   background: var(--gradient-accent);
-  color: #FFFDF6;
+  color: #F0F9EC;
   font-weight: 600;
   box-shadow: 0 4px 14px rgba(120, 82, 20, 0.35);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -358,7 +359,7 @@
 .prayer-back-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(120, 82, 20, 0.45);
-  color: #FFFDF6;
+  color: #F0F9EC;
   text-decoration: none;
 }
 

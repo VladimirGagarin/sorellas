@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Sisters Of Saint Joseph Cottolengo" />
-    <meta name="theme-color" content="#17100A" />
+    <meta name="theme-color" content="#0A1A0F" />
     <link rel="canonical" href="https://vladimirgagarin.github.io/sorellas/" />
 
     <meta
@@ -59,6 +59,14 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // Set theme before first paint to prevent flash of light mode
+      (function () {
+        var savedTheme = localStorage.getItem("theme");
+        var useDark = savedTheme ? savedTheme === "dark" : true;
+        document.documentElement.setAttribute("data-theme", useDark ? "dark" : "light");
+      })();
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
