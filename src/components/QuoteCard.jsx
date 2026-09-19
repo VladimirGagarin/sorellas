@@ -8,7 +8,6 @@ import {
   FaLink,
   FaQuoteLeft,
   FaQuoteRight,
-  FaRandom,
 } from "react-icons/fa";
 import CaptureCard from "./CaptureCard.jsx";
 import "../pages/QuotesPage.css";
@@ -104,22 +103,10 @@ export default function QuoteCard() {
     []
   );
 
-  const [quote, setQuote] = useState(() => {
+  const [quote] = useState(() => {
     const idx = Math.floor(Math.random() * quotes.length);
     return quotes[idx];
   });
-
-  const shuffleQuote = () => {
-    let next = quote;
-    if (quotes.length > 1) {
-      do {
-        const idx = Math.floor(Math.random() * quotes.length);
-        next = quotes[idx];
-      } while (next._id === quote._id);
-    }
-    setQuote(next);
-    setCopied(false);
-  };
 
   const category = CATEGORY_LABELS[quote.category] || {
     en: quote.category,
@@ -131,7 +118,6 @@ export default function QuoteCard() {
     language === "en" ? quote.italianQuote : quote.quote;
 
   const t = {
-    newQuote: language === "en" ? "New Quote" : "Nuova Citazione",
     moreQuotes: language === "en" ? "See More Quotes" : "Altre Citazioni",
     copyLink: language === "en" ? "Share Quote" : "Condividi",
     copied: language === "en" ? "Link Copied" : "Link Copiato",
@@ -209,9 +195,6 @@ export default function QuoteCard() {
         />
         <button className="quotes-action share" onClick={handleShare}>
           <FaLink /> {copied ? t.copied : t.copyLink}
-        </button>
-        <button className="quotes-action share" onClick={shuffleQuote}>
-          <FaRandom /> {t.newQuote}
         </button>
       </div>
     </>

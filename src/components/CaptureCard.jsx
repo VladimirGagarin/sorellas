@@ -42,6 +42,22 @@ export default function CaptureCard({
 
   const capture = async () => {
     if (!cardRef?.current) return;
+
+    // Center the card in the viewport before snapping it.
+    await new Promise((resolve) => {
+      cardRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+
+      let settled = false;
+      const finish = () => {
+        if (settled) return;
+        settled = true;
+        window.removeEventListener("scrollend", finish);
+        resolve();
+      };
+      window.addEventListener("scrollend", finish);
+      setTimeout(finish, 600);
+    });
+
     const isDark =
       document.documentElement.getAttribute("data-theme") === "dark";
     try {

@@ -76,7 +76,7 @@ export default function DisclaimerPage() {
       return;
     }
     try {
-      sessionStorage.setItem(ACK_KEY, "true");
+      localStorage.setItem(ACK_KEY, String(Date.now()));
     } catch {
       /* storage unavailable — just proceed */
     }

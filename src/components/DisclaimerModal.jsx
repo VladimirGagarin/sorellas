@@ -25,7 +25,10 @@ export default function DisclaimerModal() {
   const [mode, setMode] = useState(() => {
     let acked = false;
     try {
-      acked = sessionStorage.getItem(ACK_KEY) === "true";
+      const lastSeen = Number(localStorage.getItem(ACK_KEY));
+      if (Number.isFinite(lastSeen)) {
+        acked = Date.now() - lastSeen < 3 * 24 * 60 * 60 * 1000;
+      }
     } catch {
       /* storage unavailable — treat as new visitor */
     }
@@ -66,7 +69,7 @@ export default function DisclaimerModal() {
       return;
     }
     try {
-      sessionStorage.setItem(ACK_KEY, "true");
+      localStorage.setItem(ACK_KEY, String(Date.now()));
     } catch {
       /* storage unavailable — just proceed */
     }

@@ -657,8 +657,8 @@
 .fun-fact-card {
   position: relative;
   border: 1px solid rgba(var(--primary-green-rgb), 0.35);
-  padding: 28px 32px 46px;
-  max-width: 75%;
+  padding: 32px 36px 54px;
+  max-width: 620px;
   margin: 0 auto;
   background: linear-gradient(
     135deg,
@@ -667,24 +667,24 @@
   );
 }
 
-/* Large screens: keep the did-you-know card squared (1:1) */
+/* Large screens: keep the card wide enough for the fact text,
+   but let its height size to the content so captures fit perfectly */
 @media (min-width: 721px) {
   .fun-fact-card {
-    max-width: 520px;
-    aspect-ratio: 1 / 1;
+    max-width: 620px;
     display: flex;
     flex-direction: column;
   }
 
   .fun-fact-slide {
     flex: 1;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
   }
 
   .fun-fact-text {
-    text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
   }
 }
 

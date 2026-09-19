@@ -1,24 +1,150 @@
 // components/PrayerOverlay.jsx
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
   FaTimes,
-  FaHeart,
-  FaBookmark,
   FaShareAlt,
-  FaVolumeUp,
-  FaPrint,
-  FaCopy,
   FaSeedling,
   FaClock,
+  FaSave,
 } from "react-icons/fa";
 import "./PrayerOverlay.css";
+
+const WATERMARK = "Aeternum Floreamus";
+
+/* Load an image and resolve once it is fully decoded */
+const loadImage = (src) =>
+  new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => resolve(img);
+    img.onerror = () => reject(new Error("image load failed"));
+    img.src = src;
+  });
+
+/* Wrap a string into lines that fit a given canvas width */
+const wrapCanvasText = (ctx, text, maxWidth) => {
+  const words = String(text).split(/\s+/);
+  const lines = [];
+  let current = "";
+
+  for (const word of words) {
+    const candidate = current ? `${current} ${word}` : word;
+    if (ctx.measureText(candidate).width > maxWidth && current) {
+      lines.push(current);
+      current = word;
+    } else {
+      current = candidate;
+    }
+  }
+  if (current) lines.push(current);
+  return lines;
+};
+
+const canvasToBlob = (canvas) =>
+  new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
+
+/*
+ * Build an art canvas: flower photo dimly behind, prayer text on top,
+ * finished with the "Aeternum Floreamus" watermark.
+ */
+const buildFlowerCardCanvas = async (flower, lang) => {
+  const img = await loadImage(flower.image);
+
+  const W = 1080;
+  const H = 1350;
+  const canvas = document.createElement("canvas");
+  canvas.width = W;
+  canvas.height = H;
+  const ctx = canvas.getContext("2d");
+
+  /* Cover-fit the flower image */
+  const scale = Math.max(W / img.naturalWidth, H / img.naturalHeight);
+  const dw = img.naturalWidth * scale;
+  const dh = img.naturalHeight * scale;
+  ctx.drawImage(img, (W - dw) / 2, (H - dh) / 2, dw, dh);
+
+  /* Dim overlay so the prayer reads clearly */
+  const dim = ctx.createLinearGradient(0, 0, 0, H);
+  dim.addColorStop(0, "rgba(7, 14, 9, 0.58)");
+  dim.addColorStop(0.45, "rgba(7, 14, 9, 0.48)");
+  dim.addColorStop(1, "rgba(7, 14, 9, 0.88)");
+  ctx.fillStyle = dim;
+  ctx.fillRect(0, 0, W, H);
+
+  ctx.textAlign = "center";
+  ctx.textBaseline = "alphabetic";
+
+  /* Ornament */
+  ctx.fillStyle = "rgba(168, 224, 160, 0.95)";
+  ctx.font = "30px Georgia, serif";
+  ctx.fillText("❁", W / 2, 130);
+
+  /* Eyebrow */
+  const eyebrow = lang === "en" ? "Sacred Flowers" : "Fiori Sacri";
+  ctx.fillStyle = "rgba(188, 212, 182, 0.95)";
+  ctx.font = "22px Georgia, serif";
+  if ("letterSpacing" in ctx) ctx.letterSpacing = "8px";
+  ctx.fillText(eyebrow.toUpperCase(), W / 2, 196);
+  if ("letterSpacing" in ctx) ctx.letterSpacing = "0px";
+
+  /* Flower name */
+  ctx.fillStyle = "#f3f0e6";
+  ctx.font = "700 64px Georgia, 'Times New Roman', serif";
+  ctx.shadowColor = "rgba(0, 0, 0, 0.6)";
+  ctx.shadowBlur = 16;
+  ctx.fillText(flower.name[lang], W / 2, 320);
+  ctx.shadowBlur = 0;
+
+  /* Day time */
+  ctx.fillStyle = "rgba(243, 233, 210, 0.85)";
+  ctx.font = "24px Georgia, serif";
+  ctx.fillText(
+    flower.DayTime[lang] +
+      "  ·  " +
+      (lang === "en" ? "Prayer of the day" : "Preghiera del giorno"),
+    W / 2,
+    382,
+  );
+
+  /* Divider */
+  ctx.fillStyle = "rgba(168, 224, 160, 0.65)";
+  ctx.fillRect(W / 2 - 100, 430, 200, 2);
+
+  /* Prayer text — shrink to fit if very long */
+  const startY = 522;
+  const maxY = H - 150;
+  let fontPx = 36;
+  while (fontPx > 22) {
+    ctx.font = `italic ${fontPx}px Georgia, serif`;
+    const lines = wrapCanvasText(ctx, flower.prayer[lang], 780);
+    const total = startY + lines.length * fontPx * 1.55;
+    if (total <= maxY) break;
+    fontPx -= 2;
+  }
+  ctx.fillStyle = "#f3f0e6";
+  const lines = wrapCanvasText(ctx, flower.prayer[lang], 780);
+  let y = startY;
+  for (const line of lines) {
+    ctx.fillText(line, W / 2, y);
+    y += fontPx * 1.55;
+  }
+
+  /* Watermark */
+  ctx.fillStyle = "rgba(243, 233, 210, 0.42)";
+  ctx.font = "24px Georgia, serif";
+  if ("letterSpacing" in ctx) ctx.letterSpacing = "10px";
+  ctx.fillText(WATERMARK, W / 2, H - 84);
+
+  return canvas;
+};
 
 export default function PrayerOverlay({ flowers, language }) {
   const navigate = useNavigate();
   const location = useLocation();
   const [prayerData, setPrayerData] = useState(null);
   const [isClosing, setIsClosing] = useState(false);
+  const [copied, setCopied] = useState(false);
+  const [capturing, setCapturing] = useState(false);
 
   // Parse the pray query parameter
   useEffect(() => {
@@ -31,6 +157,7 @@ export default function PrayerOverlay({ flowers, language }) {
       setTimeout(() => {
         setPrayerData(null);
         setIsClosing(false);
+        setCopied(false);
       }, 300);
       return;
     }
@@ -48,6 +175,7 @@ export default function PrayerOverlay({ flowers, language }) {
     } else {
       setPrayerData(null);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.search, flowers, language]);
 
   // Close the overlay
@@ -75,6 +203,7 @@ export default function PrayerOverlay({ flowers, language }) {
 
     window.addEventListener("keydown", handleEscape);
     return () => window.removeEventListener("keydown", handleEscape);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [prayerData]);
 
   if (!prayerData) return null;
@@ -82,36 +211,106 @@ export default function PrayerOverlay({ flowers, language }) {
   const { flower, language: overlayLanguage } = prayerData;
   const actualLanguage = overlayLanguage || language;
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(flower.prayer[actualLanguage]);
-    // You can add a toast notification here
-    alert("Prayer copied to clipboard!");
+  const t = {
+    prayer: actualLanguage === "en" ? "A Prayer" : "Una Preghiera",
+    copy: actualLanguage === "en" ? "Copy" : "Copia",
+    copied: actualLanguage === "en" ? "Copied" : "Copiato",
+    print: actualLanguage === "en" ? "Print" : "Stampa",
+    share: actualLanguage === "en" ? "Share" : "Condividi",
+    save: actualLanguage === "en" ? "Save Image" : "Salva Immagine",
+    preparing: actualLanguage === "en" ? "Saving…" : "Salvo…",
+    close: actualLanguage === "en" ? "Close prayer" : "Chiudi la preghiera",
+    symbolism: actualLanguage === "en" ? "Meaning" : "Significato",
+    shareImg:
+      actualLanguage === "en"
+        ? "Sharing the artwork with the watermark"
+        : "Condivisione dell'immagine con la filigrana",
+  };
+
+  const slugify = (value) =>
+    String(value)
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/gi, "_")
+      .replace(/^_+|_+$/g, "");
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(flower.prayer[actualLanguage]);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      alert(actualLanguage === "en" ? "Could not copy" : "Impossibile copiare");
+    }
   };
 
   const handlePrint = () => {
     window.print();
   };
 
-  const handleSpeak = () => {
-    if ("speechSynthesis" in window) {
-      const utterance = new SpeechSynthesisUtterance(
-        flower.prayer[actualLanguage],
-      );
-      utterance.lang = actualLanguage === "en" ? "en-US" : "it-IT";
-      utterance.rate = 0.9;
-      speechSynthesis.speak(utterance);
+  // Share the watermarked artwork when supported, fallback to text share
+  const handleShare = async () => {
+    let blob = null;
+    try {
+      const canvas = await buildFlowerCardCanvas(flower, actualLanguage);
+      blob = await canvasToBlob(canvas);
+    } catch {
+      blob = null;
     }
+
+    if (blob) {
+      const file = new File(
+        [blob],
+        `${slugify(flower.name[actualLanguage])}_prayer.png`,
+        { type: "image/png" },
+      );
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        try {
+          await navigator.share({
+            files: [file],
+            title: `${flower.name[actualLanguage]} · ${t.shareImg}`,
+          });
+          return;
+        } catch {
+          // user dismissed the share sheet
+        }
+      }
+    }
+
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: `${flower.name[actualLanguage]} - Spiritual Garden`,
+          text: flower.prayer[actualLanguage],
+        });
+        return;
+      } catch {
+        // user dismissed the share sheet
+      }
+    }
+    handleCopy();
   };
 
-  const handleShare = () => {
-    if (navigator.share) {
-      navigator.share({
-        title: `${flower.name[actualLanguage]} - Spiritual Garden`,
-        text: `${flower.prayer[actualLanguage].substring(0, 100)}...`,
-        url: window.location.href,
-      });
-    } else {
-      handleCopy();
+  // Save the watermarked artwork as an image
+  const handleSaveImage = async () => {
+    if (capturing) return;
+    setCapturing(true);
+    try {
+      const canvas = await buildFlowerCardCanvas(flower, actualLanguage);
+      const blob = await canvasToBlob(canvas);
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `${slugify(flower.name[actualLanguage])}_prayer.png`;
+      link.click();
+      setTimeout(() => URL.revokeObjectURL(url), 3000);
+    } catch {
+      alert(
+        actualLanguage === "en"
+          ? "Could not generate the image"
+          : "Impossibile generare l'immagine",
+      );
+    } finally {
+      setCapturing(false);
     }
   };
 
@@ -127,6 +326,7 @@ export default function PrayerOverlay({ flowers, language }) {
               <FaSeedling />
             </div>
             <div className="prayer-title-section">
+              <span className="prayer-eyebrow">{t.prayer}</span>
               <h2 className="prayer-flower-name">
                 {flower.name[actualLanguage]}
               </h2>
@@ -134,16 +334,14 @@ export default function PrayerOverlay({ flowers, language }) {
                 <span className="flower-daytime">
                   <FaClock /> {flower.DayTime[actualLanguage]}
                 </span>
-                <span className="flower-symbolism">
-                  {flower.description[actualLanguage]}
-                </span>
               </div>
             </div>
           </div>
           <button
             className="close-prayer-btn"
             onClick={closeOverlay}
-            aria-label="Close prayer"
+            aria-label={t.close}
+            title={t.close}
           >
             <FaTimes />
           </button>
@@ -151,137 +349,50 @@ export default function PrayerOverlay({ flowers, language }) {
 
         {/* Modal Content */}
         <div className="prayer-modal-content">
+          {/* Prayer Text */}
           <div className="prayer-text-container">
-            <div className="prayer-text-header">
-              <h3 className="prayer-text-title">
-                {actualLanguage === "en" ? "Prayer" : "Preghiera"}
-              </h3>
-              <div className="prayer-actions">
-                <button
-                  className="prayer-action-btn"
-                  onClick={handleSpeak}
-                  title={
-                    actualLanguage === "en"
-                      ? "Listen to prayer"
-                      : "Ascolta la preghiera"
-                  }
-                >
-                  <FaVolumeUp />
-                </button>
-                <button
-                  className="prayer-action-btn"
-                  onClick={handleCopy}
-                  title={
-                    actualLanguage === "en"
-                      ? "Copy prayer"
-                      : "Copia la preghiera"
-                  }
-                >
-                  <FaCopy />
-                </button>
-                <button
-                  className="prayer-action-btn"
-                  onClick={handlePrint}
-                  title={
-                    actualLanguage === "en"
-                      ? "Print prayer"
-                      : "Stampa la preghiera"
-                  }
-                >
-                  <FaPrint />
-                </button>
-                <button
-                  className="prayer-action-btn"
-                  onClick={handleShare}
-                  title={
-                    actualLanguage === "en"
-                      ? "Share prayer"
-                      : "Condividi la preghiera"
-                  }
-                >
-                  <FaShareAlt />
-                </button>
-              </div>
-            </div>
-
             <div className="prayer-text-body">
               <p className="prayer-text">{flower.prayer[actualLanguage]}</p>
+            </div>
+
+            <div className="prayer-symbolism">
+              <span className="prayer-symbolism-label">{t.symbolism}</span>
+              {flower.description[actualLanguage]}
             </div>
           </div>
 
           {/* Flower Image */}
-          <div className="prayer-flower-image">
+          <div className="prayer-flower-column">
             <div className="image-container">
-              <div className="flower-image-placeholder">
-                <img className="placeholder-icon-large" src={flower.image} alt={flower.name[actualLanguage]} loading="lazy" />
-               
-              </div>
+              <img
+                className="prayer-flower-img"
+                src={flower.image}
+                alt={flower.name[actualLanguage]}
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
 
-        {/* Modal Footer */}
-        <div className="prayer-modal-footer">
-          <div className="prayer-stats">
-            <div className="prayer-stat">
-              <span className="stat-label">
-                {actualLanguage === "en" ? "Words" : "Parole"}
-              </span>
-              <span className="stat-value">
-                {flower.prayer[actualLanguage].split(" ").length}
-              </span>
-            </div>
-            <div className="prayer-stat">
-              <span className="stat-label">
-                {actualLanguage === "en" ? "Language" : "Lingua"}
-              </span>
-              <span className="stat-value">
-                {actualLanguage === "en" ? "English" : "Italiano"}
-              </span>
-            </div>
-            <div className="prayer-stat">
-              <span className="stat-label">
-                {actualLanguage === "en" ? "Time" : "Tempo"}
-              </span>
-              <span className="stat-value">
-                {Math.ceil(
-                  flower.prayer[actualLanguage].split(" ").length / 150,
-                )}{" "}
-                min
-              </span>
-            </div>
-          </div>
-
-          <div className="prayer-footer-actions">
-            <button
-              className="btn-save-prayer"
-              onClick={() => {
-                // Save to favorites logic
-                alert(
-                  actualLanguage === "en"
-                    ? "Saved to favorites!"
-                    : "Salvato nei preferiti!",
-                );
-              }}
-            >
-              <FaHeart />{" "}
-              {actualLanguage === "en" ? "Save Prayer" : "Salva Preghiera"}
-            </button>
-            <button
-              className="btn-bookmark-prayer"
-              onClick={() => {
-                // Bookmark logic
-                alert(
-                  actualLanguage === "en"
-                    ? "Bookmarked!"
-                    : "Aggiunto ai segnalibri!",
-                );
-              }}
-            >
-              <FaBookmark />{" "}
-              {actualLanguage === "en" ? "Bookmark" : "Segnalibro"}
-            </button>
-          </div>
+        {/* Modal Footer — grouped action menu */}
+        <div className="prayer-menu">
+          <button
+            className="prayer-menu-btn"
+            onClick={handleShare}
+            title={t.share}
+          >
+            <FaShareAlt />
+            <span>{t.share}</span>
+          </button>
+          <button
+            className="prayer-menu-btn primary"
+            onClick={handleSaveImage}
+            title={t.save}
+            disabled={capturing}
+          >
+            <FaSave />
+            <span>{capturing ? t.preparing : t.save}</span>
+          </button>
         </div>
       </div>
     </div>

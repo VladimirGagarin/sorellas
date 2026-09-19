@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header.jsx";
 import QuoteCard from "../components/QuoteCard.jsx";
+import flowers from "../components/Flower";
 import { useLanguage } from "../contexts/useLanguage.js";
 import {
   getQuotes,
@@ -17,7 +18,6 @@ import {
   FaHeart,
   FaArrowRight,
   FaPrayingHands,
-  FaChevronDown,
   FaChurch,
   FaExternalLinkAlt,
   FaCalendarDay,
@@ -49,11 +49,48 @@ function Reveal({ children, delay = 0, className = "" }) {
   return (
     <div
       ref={ref}
-      className={`landing-reveal ${visible ? "in-view" : ""} ${className}`}
+      className={`home-reveal ${visible ? "in-view" : ""} ${className}`}
       style={{ "--d": `${delay}ms` }}
     >
       {children}
     </div>
+  );
+}
+
+function CountUp({ end, suffix = "", duration = 900 }) {
+  const [value, setValue] = useState(0);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return undefined;
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const start = performance.now();
+            const tick = (now) => {
+              const progress = Math.min((now - start) / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              setValue(Math.round(end * eased));
+              if (progress < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [end, duration]);
+
+  return (
+    <span ref={ref} className="home-stat-num">
+      {value}
+      {suffix}
+    </span>
   );
 }
 
@@ -63,11 +100,24 @@ export default function HomeScreenPage() {
   const quotes = useMemo(() => getQuotes(), []);
   const prayers = useMemo(() => getAllPrayers(), []);
 
+  const themeCount = new Set(
+    quotes.map((q) => (q.category === "Gratittude" ? "Gratitude" : q.category))
+  ).size;
+
   // random prayer of the day
   const [prayerOfDay] = useState(() => {
     const idx = Math.floor(Math.random() * prayers.length);
     return prayers[idx];
   });
+
+  // random featured quote & flower for the CTA cards
+  const [featQuote] = useState(
+    () => quotes[Math.floor(Math.random() * quotes.length)]
+  );
+
+  const [featFlower] = useState(
+    () => flowers[Math.floor(Math.random() * flowers.length)]
+  );
 
   // feasts celebrated today (MM-DD match across present year)
   const feastsToday = useMemo(() => getFeastsOnDate(new Date()), []);
@@ -92,23 +142,25 @@ export default function HomeScreenPage() {
   }, [feastsToday.length]);
 
   const t = {
-    eyebrow: language === "en" ? "Fiori Di Preghiera" : "Fiori Di Preghiera",
+    eyebrow: "Fiori Di Preghiera",
     welcome:
       language === "en"
         ? "Welcome to Your Spiritual Garden"
         : "Benvenuto nel Tuo Giardino Spirituale",
     subtitle:
       language === "en"
-        ? "Where prayers bloom like eternal flowers and wisdom grows in the garden of the soul."
-        : "Dove le preghiere sbocciano come fiori eterni e la saggezza cresce nel giardino dell'anima.",
+        ? "Catholic Prayers, Marian Devotions, Inspirational Quotes, and Spiritual Reflections in English & Italian"
+        : "Preghiere Cattoliche, Devozioni Mariane, Citazioni Ispirative e Riflessioni Spirituali in Inglese e in Italiano.",
     beginJourney:
       language === "en" ? "Begin Your Journey" : "Inizia il Tuo Viaggio",
     visitGarden:
       language === "en"
         ? "Visit the Flower Garden"
         : "Visita il Giardino dei Fiori",
-    scrollDown:
-      language === "en" ? "Scroll to wander" : "Scorri per esplorare",
+    statQuotes: language === "en" ? "Quotes" : "Citazioni",
+    statFlowers: language === "en" ? "Flowers" : "Fiori",
+    statPrayers: language === "en" ? "Prayers" : "Preghiere",
+    statThemes: language === "en" ? "Themes" : "Temi",
     quoteOfDay:
       language === "en" ? "Quote of the Day" : "Citazione del Giorno",
     quoteOfDayHint:
@@ -121,6 +173,21 @@ export default function HomeScreenPage() {
       language === "en"
         ? "A sacred prayer for your reflection"
         : "Una preghiera sacra per la tua riflessione",
+    explorePrayers:
+      language === "en"
+        ? "Explore All Prayers"
+        : "Esplora Tutte le Preghiere",
+    flowerOfToday:
+      language === "en" ? "Flower for Today" : "Fiore per Oggi",
+    flowerOfTodayHint:
+      language === "en"
+        ? "A flower chosen for your day"
+        : "Un fiore scelto per la tua giornata",
+    flowerMeaning: language === "en" ? "Symbolizes" : "Simbolo di",
+    visitFlower:
+      language === "en"
+        ? "Visit the Garden"
+        : "Visita il Giardino",
     feastEyebrow:
       language === "en" ? "Celebrated Today" : "Celebrato Oggi",
     buonaFesta:
@@ -130,16 +197,19 @@ export default function HomeScreenPage() {
         ? "The Church honours today:"
         : "La Chiesa onora oggi:",
     viewCalendar:
-      language === "en" ? "View Feast Calendar" : "Vedi Calendario delle Feste",
-    wikiInfo:
-      language === "en" ? "Wikipedia" : "Wikipedia",
-    newPrayer:
-      language === "en" ? "Another Prayer" : "Un'Altra Preghiera",
-    explorePrayers:
       language === "en"
-        ? "Explore All Prayers"
-        : "Esplora Tutte le Preghiere",
+        ? "View Feast Calendar"
+        : "Vedi Calendario delle Feste",
+    wikiInfo: "Wikipedia",
     explore: language === "en" ? "Explore" : "Esplora",
+    exploreTitle:
+      language === "en"
+        ? "Explore the Garden"
+        : "Esplora il Giardino",
+    exploreHint:
+      language === "en"
+        ? "Wander through every path of this spiritual garden"
+        : "Vagabonda per ogni sentiero di questo giardino spirituale",
     footerBlessing:
       language === "en"
         ? "May your garden grow in grace."
@@ -168,42 +238,20 @@ export default function HomeScreenPage() {
     },
   };
 
-  const ctaCards = [
-    {
-      key: "garden",
-      link: "/garden",
-      icon: <FaSeedling />,
-      title: t.cta.garden,
-      desc: t.cta.gardenDesc,
-    },
-    {
-      key: "prayers",
-      link: "/prayers",
-      icon: <FaBookOpen />,
-      title: t.cta.prayers,
-      desc: t.cta.prayersDesc,
-    },
-    {
-      key: "quotes",
-      link: "/quotes",
-      icon: <FaQuoteRight />,
-      title: t.cta.quotes,
-      desc: t.cta.quotesDesc,
-    },
-    {
-      key: "about",
-      link: "/about",
-      icon: <FaHeart />,
-      title: t.cta.about,
-      desc: t.cta.aboutDesc,
-    },
-  ];
-
   const ornament = (
-    <div className="landing-ornament" aria-hidden="true">
+    <div className="home-ornament" aria-hidden="true">
       <span className="ornament-line" />
       <span className="ornament-fleur">❁</span>
       <span className="ornament-line" />
+    </div>
+  );
+
+  const sectionHead = (eyebrow, title, hint) => (
+    <div className="home-section-head">
+      {ornament}
+      <span className="home-section-eyebrow">{eyebrow}</span>
+      {title && <h2 className="home-section-title">{title}</h2>}
+      <p className="home-section-hint">{hint}</p>
     </div>
   );
 
@@ -211,96 +259,55 @@ export default function HomeScreenPage() {
     <div className="home-screen">
       <Header />
 
-      <div className="home-content landing">
-        {/* Welcome hero */}
-        <section className="hero-section landing-hero">
-          <div className="hero-glass landing-hero-glass">
-            <div className="hero-content landing-hero-content">
-              <div className="hero-text">
-                <Reveal>
-                  <span className="landing-eyebrow">✦ {t.eyebrow} ✦</span>
-                  <h1 className="title-gradient">{t.welcome}</h1>
-                  <p className="hero-subtitle">{t.subtitle}</p>
-                </Reveal>
+      <main className="home-main">
+        {/* ===== Hero ===== */}
+        <section className="home-hero">
+          <div className="home-hero-inner">
+            <Reveal>
+              <span className="home-eyebrow">✦ {t.eyebrow} ✦</span>
+              <h1 className="home-title">{t.welcome}</h1>
+              <p className="home-subtitle">{t.subtitle}</p>
+            </Reveal>
 
-                <Reveal delay={140}>
-                  <div className="landing-hero-actions">
-                    <Link
-                      to="/quotes"
-                      className="landing-cta-btn primary"
-                    >
-                      <FaQuoteRight /> {t.beginJourney}
-                      <FaArrowRight />
-                    </Link>
-                    <Link
-                      to="/garden"
-                      className="landing-cta-btn ghost"
-                    >
-                      <FaSeedling /> {t.visitGarden}
-                    </Link>
-                  </div>
-                </Reveal>
+            <Reveal delay={130}>
+              <div className="home-hero-actions">
+                <Link to="/prayers" className="home-btn primary">
+                  <FaPrayingHands /> {t.beginJourney} <FaArrowRight />
+                </Link>
+                <Link to="/garden" className="home-btn ghost">
+                  <FaSeedling /> {t.visitGarden}
+                </Link>
+              </div>
+            </Reveal>
 
-                <Reveal delay={280}>
-                  <div className="hero-stats">
-                    <div className="stat">
-                      <span className="stat-number">{quotes.length}</span>
-                      <span className="stat-label">
-                        {language === "en" ? "Quotes" : "Citazioni"}
-                      </span>
-                    </div>
-                    <div className="stat">
-                      <span className="stat-number">{prayers.length}</span>
-                      <span className="stat-label">
-                        {language === "en" ? "Prayers" : "Preghiere"}
-                      </span>
-                    </div>
-                    <div className="stat">
-                      <span className="stat-number">
-                        {new Set(
-                          quotes.map((q) =>
-                            q.category === "Gratittude"
-                              ? "Gratitude"
-                              : q.category
-                          )
-                        ).size}
-                      </span>
-                      <span className="stat-label">
-                        {language === "en" ? "Themes" : "Temi"}
-                      </span>
-                    </div>
-                  </div>
-                </Reveal>
+            <Reveal delay={240}>
+              <div className="home-hero-stats">
+                <div className="home-stat">
+                  <CountUp end={quotes.length} suffix="+" />
+                  <span className="home-stat-label">{t.statQuotes}</span>
+                </div>
+                <div className="home-stat">
+                  <CountUp end={flowers.length} suffix="+" />
+                  <span className="home-stat-label">{t.statFlowers}</span>
+                </div>
+                <div className="home-stat">
+                  <CountUp end={prayers.length} suffix="+" />
+                  <span className="home-stat-label">{t.statPrayers}</span>
+                </div>
+                <div className="home-stat">
+                  <CountUp end={themeCount} suffix="+" />
+                  <span className="home-stat-label">{t.statThemes}</span>
+                </div>
               </div>
-              <div className="hero-illustration landing-hero-illustration">
-                <Reveal delay={200} className="landing-illustration">
-                  <div className="landing-orb-glow" />
-                  <div className="floating-flowers">
-                    <div className="flower float-1">🌹</div>
-                    <div className="flower float-2">🌼</div>
-                    <div className="flower float-3">🌺</div>
-                    <div className="flower float-4">🌸</div>
-                  </div>
-                  <span className="sparkle sparkle-1">✦</span>
-                  <span className="sparkle sparkle-2">✦</span>
-                  <span className="sparkle sparkle-3">✦</span>
-                </Reveal>
-              </div>
-            </div>
-            <div className="landing-scroll-wrap">
-              <div className="landing-scroll-chip">
-                <span>{t.scrollDown}</span>
-                <FaChevronDown />
-              </div>
-            </div>
+            </Reveal>
           </div>
         </section>
 
-        {/* Feast of the day */}
+        {/* ===== Feast of the day ===== */}
         {feastsToday.length > 0 && (
-          <section className="landing-section">
+          <section className="home-section">
             <Reveal>
-              <div className="feast-today-hero glass">
+              <div className="feast-today-hero">
                 <div className="feast-today-brand">
                   <FaChurch />
                 </div>
@@ -336,95 +343,150 @@ export default function HomeScreenPage() {
           </section>
         )}
 
-        {/* Quote of the day */}
-        <section className="landing-section">
-          <Reveal>
-            <div className="landing-section-header">
-              {ornament}
-              <FaQuoteRight className="section-icon" />
-              <h2 className="landing-section-title">{t.quoteOfDay}</h2>
-              <p className="landing-section-hint">{t.quoteOfDayHint}</p>
-            </div>
-          </Reveal>
-          <Reveal delay={140}>
-            <div className="landing-quote">
+        {/* ===== Quote & Prayer of the day ===== */}
+        <section className="home-section">
+          <div className="home-grid-2">
+            <Reveal className="home-col">
+              <div className="home-section-head">
+                {ornament}
+                <span className="home-section-eyebrow">{t.quoteOfDay}</span>
+                <p className="home-section-hint">{t.quoteOfDayHint}</p>
+              </div>
               <QuoteCard />
-            </div>
-            <div className="landing-section-cta">
-              <Link to="/quotes" className="landing-link-btn">
-                {t.explore} {t.cta.quotes} <FaArrowRight />
-              </Link>
-            </div>
-          </Reveal>
+            </Reveal>
+
+            <Reveal delay={130} className="home-col">
+              <div className="home-section-head">
+                {ornament}
+                <span className="home-section-eyebrow">{t.prayerOfDay}</span>
+                <p className="home-section-hint">{t.prayerOfDayHint}</p>
+              </div>
+              <div className="home-prayer-card" key={prayerOfDay.author}>
+                  <span className="home-prayer-title">
+                    {language === "it" && prayerOfDay.italianAuthor
+                      ? prayerOfDay.italianAuthor
+                      : prayerOfDay.author}
+                  </span>
+                  <p className="home-prayer-text">
+                    {language === "en"
+                      ? prayerOfDay.prayer
+                      : prayerOfDay.italianPrayer}
+                  </p>
+                  <span className="home-prayer-origin">
+                    {language === "en"
+                      ? prayerOfDay.quote
+                      : prayerOfDay.italianQuote}
+                  </span>
+                  <Link to="/prayers" className="home-card-btn">
+                    <FaBookOpen /> {t.explorePrayers} <FaArrowRight />
+                  </Link>
+              </div>
+            </Reveal>
+          </div>
         </section>
 
-        {/* Prayer of the day */}
-        <section className="landing-section">
+        {/* ===== Flower of the day ===== */}
+        <section className="home-section">
           <Reveal>
-            <div className="landing-section-header">
-              {ornament}
-              <FaPrayingHands className="section-icon" />
-              <h2 className="landing-section-title">{t.prayerOfDay}</h2>
-              <p className="landing-section-hint">{t.prayerOfDayHint}</p>
-            </div>
+            {sectionHead(t.flowerOfToday, null, t.flowerOfTodayHint)}
           </Reveal>
-          <Reveal delay={140}>
-            <div className="landing-prayer glass" key={prayerOfDay.author}>
-              <div className="landing-prayer-title">
-                {language === "it" && prayerOfDay.italianAuthor
-                  ? prayerOfDay.italianAuthor
-                  : prayerOfDay.author}
-              </div>
-              <p className="landing-prayer-text">
-                {language === "en" ? prayerOfDay.prayer : prayerOfDay.italianPrayer}
-              </p>
-              <div className="landing-prayer-foot">
-                <span className="landing-prayer-origin">
-                  {language === "en" ? prayerOfDay.quote : prayerOfDay.italianQuote}
+          <Reveal delay={130}>
+            <Link to="/garden" className="flower-feature">
+              <img
+                src={featFlower.image}
+                alt={featFlower.name[language]}
+                className="flower-feature-img"
+              />
+              <div className="flower-feature-body">
+                <span className="flower-feature-tag">{t.flowerMeaning}</span>
+                <span className="flower-feature-name">
+                  {featFlower.name[language]}
                 </span>
+                <p className="flower-feature-desc">
+                  {featFlower.description[language].replace(
+                    /^(Symbol of|Symbolizes|Represents|Un fiore di|Simbolo di|Rappresenta)\s*/i,
+                    ""
+                  )}
+                </p>
               </div>
-              <Link
-                to="/prayers"
-                className="landing-link-btn landing-prayer-new"
-              >
-                <FaBookOpen /> {t.explorePrayers}
-                <FaArrowRight />
+              <span className="flower-feature-btn">
+                {t.visitFlower} <FaArrowRight />
+              </span>
+            </Link>
+          </Reveal>
+        </section>
+
+        {/* ===== Explore the garden ===== */}
+        <section className="home-section">
+          <Reveal>{sectionHead(t.exploreTitle, null, t.exploreHint)}</Reveal>
+          <Reveal delay={120}>
+            <div className="home-cards">
+              <Link to="/garden" className="home-card">
+                <span className="home-card-icon">
+                  <FaSeedling />
+                </span>
+                <h3 className="home-card-title">{t.cta.garden}</h3>
+                <p className="home-card-desc">{t.cta.gardenDesc}</p>
+                <span className="home-card-note">
+                  {featFlower.name[language]}
+                </span>
+                <span className="home-card-btn">
+                  {t.explore} <FaArrowRight />
+                </span>
+              </Link>
+
+              <Link to="/prayers" className="home-card">
+                <span className="home-card-icon">
+                  <FaPrayingHands />
+                </span>
+                <h3 className="home-card-title">{t.cta.prayers}</h3>
+                <p className="home-card-desc">{t.cta.prayersDesc}</p>
+                <span className="home-card-note">
+                  {language === "en"
+                    ? prayerOfDay.prayer
+                    : prayerOfDay.italianPrayer}
+                </span>
+                <span className="home-card-btn">
+                  {t.explore} <FaArrowRight />
+                </span>
+              </Link>
+
+              <Link to="/quotes" className="home-card">
+                <span className="home-card-icon">
+                  <FaQuoteRight />
+                </span>
+                <h3 className="home-card-title">{t.cta.quotes}</h3>
+                <p className="home-card-desc">{t.cta.quotesDesc}</p>
+                <span className="home-card-note">
+                  {language === "en"
+                    ? featQuote.quote
+                    : featQuote.italianQuote}
+                </span>
+                <span className="home-card-btn">
+                  {t.explore} <FaArrowRight />
+                </span>
+              </Link>
+
+              <Link to="/about" className="home-card">
+                <span className="home-card-icon">
+                  <FaHeart />
+                </span>
+                <h3 className="home-card-title">{t.cta.about}</h3>
+                <p className="home-card-desc">{t.cta.aboutDesc}</p>
+                <span className="home-card-btn">
+                  {t.explore} <FaArrowRight />
+                </span>
               </Link>
             </div>
           </Reveal>
         </section>
 
-        {/* CTA cards */}
-        <section className="landing-section">
-          <Reveal>
-            <div className="cta-cards">
-              {ctaCards.map((card, idx) => (
-                <Link
-                  key={card.key}
-                  to={card.link}
-                  className="cta-card glass"
-                >
-                  <span className="cta-card-num">
-                    {String(idx + 1).padStart(2, "0")}
-                  </span>
-                  <span className="cta-card-icon">{card.icon}</span>
-                  <span className="cta-card-title">{card.title}</span>
-                  <span className="cta-card-desc">{card.desc}</span>
-                  <span className="cta-card-arrow">
-                    <FaArrowRight />
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </Reveal>
-        </section>
-
-        {/* Footer flourish */}
-        <footer className="landing-footer">
+        {/* ===== Footer flourish ===== */}
+        <footer className="home-footer">
           {ornament}
           <p>{t.footerBlessing}</p>
         </footer>
-      </div>
+      </main>
     </div>
   );
 }
