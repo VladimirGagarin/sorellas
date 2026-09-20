@@ -152,6 +152,86 @@
   color: var(--accent-lavender);
 }
 
+/* ============ About the sisters ============ */
+.sd-about {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1rem 0.5rem;
+}
+
+.sd-about-lead {
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 2.6vw, 1.25rem);
+  font-style: italic;
+  line-height: 1.75;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.sd-about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.sd-about-block {
+  position: relative;
+  padding: 1.5rem 1.5rem 1.4rem;
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  background: var(--card-bg);
+  box-shadow: 0 10px 26px var(--shadow-color);
+  overflow: hidden;
+}
+
+.sd-about-block::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--leaf-emerald),
+    var(--accent-purple),
+    transparent
+  );
+  opacity: 0.6;
+}
+
+.sd-about-icon {
+  color: var(--leaf-emerald);
+  font-size: 1.15rem;
+  margin-bottom: 0.6rem;
+}
+
+.sd-about-title {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  letter-spacing: 0.03em;
+  color: var(--text-primary);
+}
+
+.sd-about-body {
+  margin: 0;
+  font-size: 0.97rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+/* ---------- Walk heading ---------- */
+.sd-walk-title {
+  margin: 0 0 1.75rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: var(--text-primary);
+}
+
 /* ============ Walking path ============ */
 .sd-walk {
   max-width: 720px;
@@ -224,6 +304,35 @@
   transform: scale(0.97);
 }
 
+/* ---------- Tilt wrapper (parallax depth) ---------- */
+.sd-tilt {
+  position: relative;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+}
+
+.sd-glare {
+  position: absolute;
+  inset: 0;
+  border-radius: 30px;
+  z-index: 5;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at var(--gx, 50%) var(--gy, 30%),
+    rgba(255, 255, 255, 0.1),
+    transparent 55%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease, background 0.3s ease;
+}
+
+.sd-sister:hover .sd-glare {
+  opacity: 1;
+}
+
 /* ---------- Card ---------- */
 .sd-card {
   position: relative;
@@ -232,7 +341,7 @@
   opacity: 0;
   transform: translateY(22px);
   transition: opacity 0.7s ease, transform 0.7s ease;
-  overflow: hidden;
+  transform-style: preserve-3d;
 }
 
 .sd-card.visible {
@@ -285,6 +394,7 @@
   text-transform: uppercase;
   color: #4A7A44;
   opacity: 0.9;
+  transform: translateZ(54px);
 }
 
 [data-theme="dark"] .sd-card-mark {
@@ -298,6 +408,7 @@
   align-items: center;
   gap: 1.1rem;
   margin-bottom: 1.25rem;
+  transform: translateZ(44px);
 }
 
 .sd-avatar-wrap {
@@ -374,6 +485,7 @@
 .sd-message {
   position: relative;
   margin: 0 0 1.1rem;
+  transform: translateZ(32px);
 }
 
 .sd-message p {
@@ -403,6 +515,7 @@
   background: color-mix(in srgb, var(--card-bg) 88%, var(--accent-purple));
   border-radius: 0 16px 16px 0;
   padding: 0.9rem 1.15rem;
+  transform: translateZ(24px);
 }
 
 [data-theme="dark"] .sd-advice {

@@ -1528,7 +1528,7 @@ export function getFamousPrayers() {
         "A joyful heart is a garden where God's peace blooms in every season.",
       italianQuote:
         "Un cuore gioioso è un giardino dove la pace di Dio fiorisce in ogni stagione.",
-      photo: "../assets/sr_joyce_nkirote.jpg",
+      photo: "../assets/sr_hannah.jpg",
     },
     {
       author: "Sr. Luisa Makena",
@@ -13702,7 +13702,7 @@ export function getQuotes() {
       quote: "Joy is the echo of God's smile within a heart that trusts.",
       italianQuote:
         "La gioia è l’eco del sorriso di Dio in un cuore che confida.",
-      photo: "../assets/sr_joyce_nkirote.jpg",
+      photo: "../assets/sr_hannah.jpg",
     },
     {
       author: "Sr. Luisa Makena",
@@ -20078,7 +20078,8 @@ export const AUTHOR_PHOTOS = {
   "Sr. Teresia Gathoni": "../assets/sr_theresa.jpg",
   "Sr. Martha": "../assets/sr_martha_k.jpg",
   "Sr. Beatrice Kinoti": "../assets/sr_beatrice_kinoti.jpg",
-  "Sr.  Hannah": "../assets/sr_joyce_nkirote.jpg",
+  "Sr.  Hannah": "../assets/sr_hannah.jpg",
+  "Sr. Hannah": "../assets/sr_hannah.jpg",
   "Sr. Luisa Makena": "../assets/sr_luisa_makena.jpg",
   "Madre Nasi": "../assets/madre_nasi.jpg",
   "Sr. Jane Murigi" : "../assets/jane_murigi.jpg"
