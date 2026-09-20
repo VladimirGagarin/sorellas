@@ -74,17 +74,20 @@ const buildFlowerCardCanvas = async (flower, lang) => {
   ctx.textAlign = "center";
   ctx.textBaseline = "alphabetic";
 
+  /* Vertical centre — the bold watermark lives here so trimming never cuts it */
+  const watermarkY = H / 2;
+
   /* Ornament */
   ctx.fillStyle = "rgba(168, 224, 160, 0.95)";
   ctx.font = "30px Georgia, serif";
-  ctx.fillText("❁", W / 2, 130);
+  ctx.fillText("❁", W / 2, 226);
 
   /* Eyebrow */
   const eyebrow = lang === "en" ? "Sacred Flowers" : "Fiori Sacri";
   ctx.fillStyle = "rgba(188, 212, 182, 0.95)";
   ctx.font = "22px Georgia, serif";
   if ("letterSpacing" in ctx) ctx.letterSpacing = "8px";
-  ctx.fillText(eyebrow.toUpperCase(), W / 2, 196);
+  ctx.fillText(eyebrow.toUpperCase(), W / 2, 302);
   if ("letterSpacing" in ctx) ctx.letterSpacing = "0px";
 
   /* Flower name */
@@ -92,7 +95,7 @@ const buildFlowerCardCanvas = async (flower, lang) => {
   ctx.font = "700 64px Georgia, 'Times New Roman', serif";
   ctx.shadowColor = "rgba(0, 0, 0, 0.6)";
   ctx.shadowBlur = 16;
-  ctx.fillText(flower.name[lang], W / 2, 320);
+  ctx.fillText(flower.name[lang], W / 2, 422);
   ctx.shadowBlur = 0;
 
   /* Day time */
@@ -103,37 +106,40 @@ const buildFlowerCardCanvas = async (flower, lang) => {
       "  ·  " +
       (lang === "en" ? "Prayer of the day" : "Preghiera del giorno"),
     W / 2,
-    382,
+    488,
   );
 
   /* Divider */
   ctx.fillStyle = "rgba(168, 224, 160, 0.65)";
-  ctx.fillRect(W / 2 - 100, 430, 200, 2);
+  ctx.fillRect(W / 2 - 100, 538, 200, 2);
 
-  /* Prayer text — shrink to fit if very long */
-  const startY = 522;
-  const maxY = H - 150;
+  /* Bold, centred watermark */
+  ctx.fillStyle = "rgba(243, 233, 210, 0.85)";
+  ctx.font = "700 40px Georgia, serif";
+  if ("letterSpacing" in ctx) ctx.letterSpacing = "12px";
+  ctx.fillText(WATERMARK, W / 2, watermarkY);
+  if ("letterSpacing" in ctx) ctx.letterSpacing = "0px";
+
+  /* Prayer text — shrink to fit, centred in the lower half */
+  const textTop = watermarkY + 110;
+  const textBottom = H - 110;
   let fontPx = 36;
-  while (fontPx > 22) {
+  while (fontPx > 20) {
     ctx.font = `italic ${fontPx}px Georgia, serif`;
     const lines = wrapCanvasText(ctx, flower.prayer[lang], 780);
-    const total = startY + lines.length * fontPx * 1.55;
-    if (total <= maxY) break;
+    const block = lines.length * fontPx * 1.55;
+    if (block <= textBottom - textTop) break;
     fontPx -= 2;
   }
   ctx.fillStyle = "#f3f0e6";
   const lines = wrapCanvasText(ctx, flower.prayer[lang], 780);
+  const startY =
+    textTop + (textBottom - textTop - lines.length * fontPx * 1.55) / 2;
   let y = startY;
   for (const line of lines) {
     ctx.fillText(line, W / 2, y);
     y += fontPx * 1.55;
   }
-
-  /* Watermark */
-  ctx.fillStyle = "rgba(243, 233, 210, 0.42)";
-  ctx.font = "24px Georgia, serif";
-  if ("letterSpacing" in ctx) ctx.letterSpacing = "10px";
-  ctx.fillText(WATERMARK, W / 2, H - 84);
 
   return canvas;
 };

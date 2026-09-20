@@ -530,7 +530,14 @@
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--text-primary);
+  text-decoration: none;
   margin-bottom: 0.3rem;
+  transition: color 0.2s ease;
+}
+
+.flower-feature-name:hover {
+  color: var(--leaf-emerald);
+  text-decoration: underline;
 }
 
 .flower-feature-desc {
@@ -552,6 +559,7 @@
   font-size: 0.92rem;
   font-weight: 700;
   white-space: nowrap;
+  text-decoration: none;
 }
 
 @media (max-width: 640px) {

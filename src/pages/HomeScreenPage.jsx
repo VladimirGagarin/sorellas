@@ -391,7 +391,7 @@ export default function HomeScreenPage() {
             {sectionHead(t.flowerOfToday, null, t.flowerOfTodayHint)}
           </Reveal>
           <Reveal delay={130}>
-            <Link to="/garden" className="flower-feature">
+            <div className="flower-feature">
               <img
                 src={featFlower.image}
                 alt={featFlower.name[language]}
@@ -399,9 +399,12 @@ export default function HomeScreenPage() {
               />
               <div className="flower-feature-body">
                 <span className="flower-feature-tag">{t.flowerMeaning}</span>
-                <span className="flower-feature-name">
+                <Link
+                  to={`/garden?pray=${featFlower.id}_${language}_${featFlower.name[language]}`}
+                  className="flower-feature-name"
+                >
                   {featFlower.name[language]}
-                </span>
+                </Link>
                 <p className="flower-feature-desc">
                   {featFlower.description[language].replace(
                     /^(Symbol of|Symbolizes|Represents|Un fiore di|Simbolo di|Rappresenta)\s*/i,
@@ -409,10 +412,10 @@ export default function HomeScreenPage() {
                   )}
                 </p>
               </div>
-              <span className="flower-feature-btn">
+              <Link to="/garden/" className="flower-feature-btn">
                 {t.visitFlower} <FaArrowRight />
-              </span>
-            </Link>
+              </Link>
+            </div>
           </Reveal>
         </section>
 

@@ -1,8 +1,7 @@
 // FeastDaysPage.jsx
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header.jsx";
-import CaptureCard from "../components/CaptureCard.jsx";
 import {
   FaChevronLeft,
   FaChevronRight,
@@ -16,6 +15,7 @@ import {
   FaExternalLinkAlt,
   FaGift,
   FaLightbulb,
+  FaSave,
 } from "react-icons/fa";
 import { useLanguage } from "../contexts/useLanguage.js";
 import {
@@ -442,6 +442,127 @@ const FUN_FACTS = [
   },
 ];
 
+/* Wrap a string into lines that fit a given canvas width */
+const wrapCanvasText = (ctx, text, maxWidth) => {
+  const words = String(text).split(/\s+/);
+  const lines = [];
+  let current = "";
+
+  for (const word of words) {
+    const candidate = current ? `${current} ${word}` : word;
+    if (ctx.measureText(candidate).width > maxWidth && current) {
+      lines.push(current);
+      current = word;
+    } else {
+      current = candidate;
+    }
+  }
+  if (current) lines.push(current);
+  return lines;
+};
+
+const canvasToBlob = (canvas) =>
+  new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
+
+/*
+ * Build an art canvas for the fun fact card: deep green
+ * background, headline, counter and the fact text itself,
+ * finished with the "Aeternum Floreamus" watermark.
+ */
+const buildFunFactCanvas = (fact, lang, index, total) => {
+  const W = 1080;
+  const H = 1350;
+  const canvas = document.createElement("canvas");
+  canvas.width = W;
+  canvas.height = H;
+  const ctx = canvas.getContext("2d");
+
+  /* Background */
+  const bg = ctx.createLinearGradient(0, 0, 0, H);
+  bg.addColorStop(0, "#0A1A0F");
+  bg.addColorStop(0.5, "#12301C");
+  bg.addColorStop(1, "#0A1A0F");
+  ctx.fillStyle = bg;
+  ctx.fillRect(0, 0, W, H);
+
+  /* Soft inner frame */
+  ctx.strokeStyle = "rgba(168, 224, 160, 0.35)";
+  ctx.lineWidth = 3;
+  ctx.strokeRect(30, 30, W - 60, H - 60);
+
+  ctx.textAlign = "center";
+  ctx.textBaseline = "alphabetic";
+
+  /* Vertical centre — the bold watermark lives here so trimming never cuts it */
+  const watermarkY = H / 2;
+
+  /* Ornament */
+  ctx.fillStyle = "rgba(168, 224, 160, 0.95)";
+  ctx.font = "30px Georgia, serif";
+  ctx.fillText("❁", W / 2, 232);
+
+  /* Eyebrow */
+  const eyebrow = lang === "en" ? "Sacred Calendar" : "Calendario Sacro";
+  ctx.fillStyle = "rgba(188, 212, 182, 0.95)";
+  ctx.font = "22px Georgia, serif";
+  if ("letterSpacing" in ctx) ctx.letterSpacing = "8px";
+  ctx.fillText(eyebrow.toUpperCase(), W / 2, 308);
+  if ("letterSpacing" in ctx) ctx.letterSpacing = "0px";
+
+  /* Headline */
+  const title = lang === "en" ? "Did You Know?" : "Lo Sapevi?";
+  ctx.fillStyle = "#f3f0e6";
+  ctx.font = "700 60px Georgia, 'Times New Roman', serif";
+  ctx.shadowColor = "rgba(0, 0, 0, 0.6)";
+  ctx.shadowBlur = 16;
+  ctx.fillText(title, W / 2, 412);
+  ctx.shadowBlur = 0;
+
+  /* Counter */
+  const counter =
+    lang === "en"
+      ? `Did You Know ${index} / ${total}`
+      : `Lo Sapevi ${index} / ${total}`;
+  ctx.fillStyle = "rgba(243, 233, 210, 0.85)";
+  ctx.font = "24px Georgia, serif";
+  ctx.fillText(counter, W / 2, 482);
+
+  /* Divider */
+  ctx.fillStyle = "rgba(168, 224, 160, 0.65)";
+  ctx.fillRect(W / 2 - 100, 532, 200, 2);
+
+  /* Bold, centred watermark */
+  ctx.fillStyle = "rgba(243, 233, 210, 0.85)";
+  ctx.font = "700 40px Georgia, serif";
+  if ("letterSpacing" in ctx) ctx.letterSpacing = "12px";
+  ctx.fillText("Aeternum Floreamus", W / 2, watermarkY);
+  if ("letterSpacing" in ctx) ctx.letterSpacing = "0px";
+
+  /* Fact text — shrink to fit, centred in the lower half */
+  const text = lang === "en" ? fact.en : fact.it;
+  const textTop = watermarkY + 110;
+  const textBottom = H - 110;
+  let fontPx = 42;
+  while (fontPx > 22) {
+    ctx.font = `italic ${fontPx}px Georgia, serif`;
+    const lines = wrapCanvasText(ctx, text, 780);
+    const block = lines.length * fontPx * 1.5;
+    if (block <= textBottom - textTop) break;
+    fontPx -= 2;
+  }
+  ctx.fillStyle = "#f3f0e6";
+  const lines = wrapCanvasText(ctx, text, 780);
+  const startY =
+    textTop + (textBottom - textTop - lines.length * fontPx * 1.5) / 2;
+  let y = startY;
+  for (const line of lines) {
+    ctx.fillText(line, W / 2, y);
+    y += fontPx * 1.5;
+  }
+
+  return canvas;
+};
+
 function buildMonthCells(year, month, feasts) {
   const firstDow = new Date(year, month, 1).getDay();
   const daysInMonth = new Date(year, month + 1, 0).getDate();
@@ -497,7 +618,7 @@ export default function FeastDaysPage() {
   const [overlay, setOverlay] = useState(null);
   const [factIndex, setFactIndex] = useState(0);
   const [factDir, setFactDir] = useState(1);
-  const factCardRef = useRef(null);
+  const [capturing, setCapturing] = useState(false);
 
   const todayFeasts = getFeastsOnDate(today);
   const tomorrowFeasts = getFeastsOnDate(tomorrow);
@@ -561,6 +682,34 @@ export default function FeastDaysPage() {
   const gotoFact = (dir) => {
     setFactDir(dir);
     setFactIndex((i) => (i + dir + FUN_FACTS.length) % FUN_FACTS.length);
+  };
+
+  const handleSaveImage = async () => {
+    if (capturing) return;
+    setCapturing(true);
+    try {
+      const canvas = buildFunFactCanvas(
+        FUN_FACTS[factIndex],
+        language,
+        factIndex + 1,
+        FUN_FACTS.length
+      );
+      const blob = await canvasToBlob(canvas);
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `did-you-know-${factIndex + 1}.png`;
+      link.click();
+      setTimeout(() => URL.revokeObjectURL(url), 3000);
+    } catch {
+      alert(
+        language === "en"
+          ? "Could not generate the image"
+          : "Impossibile generare l'immagine"
+      );
+    } finally {
+      setCapturing(false);
+    }
   };
 
   const openOverlay = (dateStr, feasts) => {
@@ -775,7 +924,7 @@ export default function FeastDaysPage() {
               <p className="fun-fact-subtitle">{t.funFactSubtitle}</p>
             </div>
           </div>
-          <div className="fun-fact-card glass" ref={factCardRef}>
+          <div className="fun-fact-card glass">
             <div className="fun-fact-head">
               <FaLightbulb className="fun-fact-bulb" />
               <span className="fun-fact-counter">
@@ -813,20 +962,20 @@ export default function FeastDaysPage() {
             >
               <FaChevronRight />
             </button>
-            <CaptureCard
-              cardRef={factCardRef}
-              title={t.funFactTitle}
-              subtitle={t.funFactCount(factIndex + 1, FUN_FACTS.length)}
-              fileName={`did-you-know-${factIndex + 1}`}
-              shareUrl={() => window.location.href}
-              shareText={
-                language === "en"
-                  ? FUN_FACTS[factIndex].en
-                  : FUN_FACTS[factIndex].it
-              }
-              buttonLabel={t.funFactSave}
-              buttonClassName="fun-fact-copy"
-            />
+            <button
+              className="fun-fact-copy"
+              onClick={handleSaveImage}
+              disabled={capturing}
+              title={t.funFactSave}
+              aria-label={t.funFactSave}
+            >
+              <FaSave />
+              {capturing
+                ? language === "en"
+                  ? "Saving…"
+                  : "Salvo…"
+                : t.funFactSave}
+            </button>
           </div>
         </section>
 
