@@ -150,12 +150,12 @@ export default function SistersDirectoryPage() {
           : "Vieni e Vedi",
       title:
         language === "en"
-          ? "Whispers of a Calling"
-          : "Sussurri di una Chiamata",
-      subtitle: (n) =>
+          ? "Want to become like us?"
+          : "Vuoi diventare come noi?",
+      subtitle:
         language === "en"
-          ? `${n} sister${n === 1 ? "" : "s"}, one gentle answer to the question in your heart. Listen with silence — then decide with peace.`
-          : `${n} suor${n === 1 ? "a" : "e"}, una risposta gentile alla domanda nel tuo cuore. Ascolta in silenzio — poi decidi in pace.`,
+          ? `Every sister once paused before her yes. Let their gentle stories stir the quiet dream in your own heart — listen, and imagine the life that could be yours.`
+          : `Ogni suora, un giorno, ha esitato davanti al suo sì. Lascia che le loro storie gentili accendano il sogno nel tuo cuore — ascolta e immagina la vita che potrebbe essere tua.`,
       count:
         language === "en"
           ? "sisters sharing their hearts"
@@ -173,6 +173,10 @@ export default function SistersDirectoryPage() {
         language === "en"
           ? "“Come and see.” — John 1:39"
           : "«Veni e vedere.» — Giovanni 1:39",
+      endingQuote:
+        language === "en"
+          ? "The Love of Christ Impels Us to Do the Will of God"
+          : "La carità di Cristo ci spinge a fare la volontà di Dio",
     }),
     [language]
   );
@@ -180,7 +184,7 @@ export default function SistersDirectoryPage() {
   useSeo({
     title: `Come and See ✦ ${SITE_NAME}`,
     description:
-      "Whispers of a calling — the Sisters of Saint Joseph Cottolengo open their hearts to young women wondering about religious life.",
+      "Want to become like us? The Sisters of Saint Joseph Cottolengo open their hearts to young women wondering about religious life — listen, dream, and discover the life that could be yours.",
     image: SITE_IMAGE_URL,
   });
 
@@ -208,7 +212,7 @@ export default function SistersDirectoryPage() {
       <section className="sd-hero">
         <span className="sd-eyebrow">{t.eyebrow}</span>
         <h1 className="sd-title">{t.title}</h1>
-        <p className="sd-subtitle">{t.subtitle(sisters.length)}</p>
+        <p className="sd-subtitle">{t.subtitle}</p>
         <div className="sd-hero-meta">
           <span>
             <FaFeatherAlt /> {sisters.length} {t.count}
@@ -227,6 +231,14 @@ export default function SistersDirectoryPage() {
             t={t}
           />
         ))}
+      </section>
+
+      {/* Ending — the sisterhood's own farewell */}
+      <section className="sd-ending">
+        <span className="sd-ending-ornament" aria-hidden="true">
+          ✦ ❁ ✦
+        </span>
+        <p className="sd-ending-quote">{t.endingQuote}</p>
       </section>
 
       {/* Watermark — bottom right, outside the cards */}

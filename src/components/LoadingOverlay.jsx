@@ -114,6 +114,13 @@ function getRouteWelcome(location, language) {
     return en ? "A Poem" : "Una Poesia";
   }
 
+  // /come-and-see → the sisterhood's own motto
+  if (path === "/come-and-see") {
+    return en
+      ? "The Love of Christ Impels Us to Do the Will of God"
+      : "La carità di Cristo ci spinge a fare la volontà di Dio";
+  }
+
   const page = PAGE_LABELS[path];
   if (page) return page[language];
 
