@@ -437,7 +437,7 @@ export default function MusicPlayerPage() {
                     monogramClassName="mp-disc-photo mp-photo-monogram"
                   />
                 </div>
-                <span className="mp-disc-pin" aria-hidden="true" />
+                {<span className="mp-disc-pin" aria-hidden="true" />}
               </div>
             </div>
 
@@ -452,7 +452,7 @@ export default function MusicPlayerPage() {
               <h2 className="mp-now-name">
                 {current ? trackName(current, language) : t.queueTitle}
               </h2>
-              {current && current.kind === "song" && (
+              
                 <div className="mp-controls">
                 <button
                   type="button"
@@ -477,7 +477,7 @@ export default function MusicPlayerPage() {
                   <FaShareAlt /> {language==="en" ? "Share" : "Condividi"}
                 </button>
                 </div>
-              )}
+              
 
               {/* Progress */}
               <div className="mp-progress">
