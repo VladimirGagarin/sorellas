@@ -9,6 +9,7 @@ import {
   getAllPrayers,
   getFeastsOnDate,
   getWikipediaUrl,
+  getSistersAudioUrl,
 } from "../components/Utils.js";
 import confetti from "canvas-confetti";
 import {
@@ -21,6 +22,7 @@ import {
   FaChurch,
   FaExternalLinkAlt,
   FaCalendarDay,
+  FaMusic,
 } from "react-icons/fa";
 import "./HomeScreen.css";
 
@@ -122,6 +124,11 @@ export default function HomeScreenPage() {
   // feasts celebrated today (MM-DD match across present year)
   const feastsToday = useMemo(() => getFeastsOnDate(new Date()), []);
 
+  // sisters whose recording is ready to play
+  const [songCount] = useState(
+    () => getSistersAudioUrl().filter((sister) => sister.hasAudio).length
+  );
+
   useEffect(() => {
     if (feastsToday.length === 0) return () => {};
     const colors = ["#3E7A43", "#3F7A55", "#4A7A44", "#A8E0A0", "#7FAE6E"];
@@ -145,8 +152,8 @@ export default function HomeScreenPage() {
     eyebrow: "Fiori Di Preghiera",
     welcome:
       language === "en"
-        ? "Welcome to Your Spiritual Garden"
-        : "Benvenuto nel Tuo Giardino Spirituale",
+        ? "Fiori Di Preghiera"
+        : "Fiori Di Preghiera",
     subtitle:
       language === "en"
         ? "Catholic Prayers, Marian Devotions, Inspirational Quotes, and Spiritual Reflections in English & Italian"
@@ -235,6 +242,11 @@ export default function HomeScreenPage() {
         language === "en"
           ? "The story behind this garden"
           : "La storia dietro questo giardino",
+      songs: language === "en" ? "Songs of the Sisters" : "Canti delle Suore",
+      songsDesc:
+        language === "en"
+          ? `${songCount} ${songCount === 1 ? "voice" : "voices"} waiting to be played`
+          : `${songCount} ${songCount === 1 ? "voce" : "voci"} da ascoltare`,
     },
   };
 
@@ -476,6 +488,17 @@ export default function HomeScreenPage() {
                 </span>
                 <h3 className="home-card-title">{t.cta.about}</h3>
                 <p className="home-card-desc">{t.cta.aboutDesc}</p>
+                <span className="home-card-btn">
+                  {t.explore} <FaArrowRight />
+                </span>
+              </Link>
+
+              <Link to="/thankyou/" className="home-card">
+                <span className="home-card-icon">
+                  <FaMusic />
+                </span>
+                <h3 className="home-card-title">{t.cta.songs}</h3>
+                <p className="home-card-desc">{t.cta.songsDesc}</p>
                 <span className="home-card-btn">
                   {t.explore} <FaArrowRight />
                 </span>

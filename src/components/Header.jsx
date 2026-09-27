@@ -25,6 +25,7 @@ import {
   FaCalendarDay,
   FaUsers,
   FaHeart,
+  FaMusic,
 } from "react-icons/fa";
 import { useLanguage } from "../contexts/useLanguage";
 import { useTheme } from "../contexts/theme.jsx";
@@ -79,6 +80,7 @@ export default function Header() {
       justBecause: "Just Because",
       tenderPresence: "Tender Presence",
       sisterDirectory: "Come and See",
+      sisterSongs: "Songs of the Sisters",
       disclaimer: "A Gentle Note",
       disclaimerDesc: "For visitors, before you enter",
       currentLanguage: "Language",
@@ -111,6 +113,7 @@ export default function Header() {
       justBecause: "Solo Perché",
       tenderPresence: "Presenza Tenera",
       sisterDirectory: "Vieni e Vedi",
+      sisterSongs: "Canti delle Suore",
       disclaimer: "Una Breve Nota",
       disclaimerDesc: "Per i visitatori, prima di entrare",
       settings: "Attrezzi da Giardino",
@@ -258,6 +261,12 @@ export default function Header() {
       label: t.sisterDirectory,
       link: "/come-and-see",
       color: getFlowerColor("lily"), // Directory / communion
+    },
+    {
+      icon: <FaMusic />,
+      label: t.sisterSongs,
+      link: "/thankyou/",
+      color: getFlowerColor("rose"), // Song / devotion
     },
     {
       icon: <FaBookOpen />,

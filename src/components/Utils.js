@@ -24750,3 +24750,101 @@ export function resolvePrayerPhoto(photoPath) {
   const loader = prayerPhotoModules[photoPath];
   return loader || null;
 }
+
+// ---------------------------------------------------------------------------
+// Sister recordings — every sister paired with her song (null when silent)
+// ---------------------------------------------------------------------------
+
+// The portrait used for anyone who arrives without one, and the artwork for
+// the congregation's own songs. Swap this one line to change it everywhere.
+export const DEFAULT_PHOTO = "../assets/sisters.jpg";
+
+// Songs of the congregation itself — a file each, no single sister behind them.
+const SPECIAL_SONGS = [
+  {
+    id: "welcome",
+    names: { en: "We Say Thank You", it: "Diciamo Grazie" },
+  },
+  {
+    id: "home",
+    names: { en: "Thank You Sisters", it: "Grazie Sorelle" },
+  },
+];
+
+const sisterAudioModules = import.meta.glob(
+  "../assets/audios/*.{mp3,m4a,ogg,wav,aac,flac}",
+  { eager: true, query: "?url", import: "default" }
+);
+
+// "Sr. Giovanna" -> "giovanna" · "Sr. Mary Mwikali Matheka" -> "mary_mwikali_matheka"
+function sisterAudioSlug(name) {
+  return String(name || "")
+    .toLowerCase()
+    .replace(/\b(sr|suor|sor|madre|ma|fr|miss)\.?\s+/g, "")
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_+|_+$/g, "");
+}
+
+// Recording files live in src/assets/audios as <slug>.mp3 — index them by slug
+// so "sr_giovanna.mp3" and "giovanna.mp3" both land on Sr. Giovanna.
+const sisterAudioIndex = (() => {
+  const index = {};
+  for (const [path, url] of Object.entries(sisterAudioModules)) {
+    if (!url) continue;
+    const file = (path.split("/").pop() || "").replace(/\.[^.]+$/, "");
+    const keys = new Set([file.toLowerCase(), sisterAudioSlug(file)]);
+    for (const key of keys) {
+      if (key && !index[key]) index[key] = url;
+    }
+  }
+  return index;
+})();
+
+// A stable, shareable address for one song:
+//   https://site/thankyou/giovanna/
+// Ids are slugs rather than random UUIDs on purpose — a link handed to
+// someone else has to still resolve after the app is rebuilt.
+export const SISTER_SONGS_ROUTE = "/thankyou/";
+
+export function getSisterSongUrl(id) {
+  const path = id ? `${SISTER_SONGS_ROUTE}${encodeURIComponent(id)}/` : SISTER_SONGS_ROUTE;
+  if (typeof window === "undefined") return `#${path}`;
+  const { origin, pathname } = window.location;
+  return `${origin}${pathname}#${path}`;
+}
+
+// Every sister in the sisterhood, each with her photo and her audio URL.
+// audioUrl is null when no recording has been added yet, so the UI can
+// disable her entry instead of pretending a track exists.
+export function getSistersAudioUrl() {
+  const sisters = sisterhood().map((entry, order) => {
+    const sister = entry.sister;
+    const slug = sisterAudioSlug(sister);
+    const id = slug || `sister-${order}`;
+    return {
+      id,
+      kind: "sister",
+      names: { en: sister, it: sister },
+      photo: entry.photo || AUTHOR_PHOTOS[sister] || null,
+      message: entry.message || null,
+      audioUrl: sisterAudioIndex[slug] || null,
+      hasAudio: Boolean(sisterAudioIndex[slug]),
+      sisterSongUrl: getSisterSongUrl(id),
+    };
+  });
+
+  // The congregation's own songs, before the sisters: they belong to everyone,
+  // so they carry the default portrait rather than a single face.
+  const songs = SPECIAL_SONGS.map((song) => ({
+    id: song.id,
+    kind: "song",
+    names: song.names,
+    photo: DEFAULT_PHOTO,
+    message: null,
+    audioUrl: sisterAudioIndex[song.id] || null,
+    hasAudio: Boolean(sisterAudioIndex[song.id]),
+    sisterSongUrl: getSisterSongUrl(song.id),
+  }));
+
+  return [...songs, ...sisters];
+}

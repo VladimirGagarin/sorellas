@@ -22,6 +22,7 @@ import JustBecausePage from './pages/JustBecausePage.jsx';
 import TenderPresencePage from './pages/TenderPresencePage.jsx';
 import DisclaimerPage from './pages/DisclaimerPage.jsx';
 import SistersDirectoryPage from './pages/SistersDirectoryPage.jsx';
+import MusicPlayerPage from './pages/MusicPlayerPage.jsx';
 import DisclaimerModal from './components/DisclaimerModal.jsx';
 import './index.css'
 import App from './App.jsx'
@@ -90,6 +91,15 @@ const router = createHashRouter([
     {
       path: "come-and-see",
       element: <SistersDirectoryPage />
+    },
+    {
+      path: "thankyou",
+      element: <MusicPlayerPage />
+    },
+    {
+      // One shared song per address: /thankyou/giovanna/
+      path: "thankyou/:songId",
+      element: <MusicPlayerPage />
     },
     {
       path: "poems",

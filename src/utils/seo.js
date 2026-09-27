@@ -28,6 +28,20 @@ function setMeta(attr, key, value) {
   el.setAttribute("content", value);
 }
 
+// Search engines are told which address is the real one. Pages that have no
+// address of their own leave no trace rather than claiming the homepage.
+function setCanonical(url) {
+  const el = document.head.querySelector('link[rel="canonical"]');
+  if (!url) {
+    if (el) el.remove();
+    return;
+  }
+  const link = el || document.createElement("link");
+  link.setAttribute("rel", "canonical");
+  link.setAttribute("href", url);
+  if (!el) document.head.appendChild(link);
+}
+
 export function applySeo(seo) {
   const meta = { ...DEFAULT_SEO, ...seo };
   const absUrl = (u) => new URL(u, window.location.href).href;
@@ -49,6 +63,10 @@ export function useSeo(seo) {
   const { title, description, url, image } = seo || {};
   useEffect(() => {
     applySeo({ title, description, url, image });
-    return () => applySeo(DEFAULT_SEO);
+    setCanonical(url ? new URL(url, window.location.href).href : null);
+    return () => {
+      applySeo(DEFAULT_SEO);
+      setCanonical(null);
+    };
   }, [title, description, url, image]);
 }

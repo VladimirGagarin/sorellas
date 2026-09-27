@@ -1,11 +1,12 @@
 // pages/SistersDirectoryPage.jsx
 // "Come and See" — an inspiring garden walk with the Sisters, for young
 // hearts wondering whether the Lord is calling them to this life.
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { useLanguage } from "../contexts/useLanguage.js";
-import { sisterhood, resolvePrayerPhoto } from "../components/Utils.js";
+import { sisterhood } from "../components/Utils.js";
 import CaptureCard from "../components/CaptureCard.jsx";
 import Header from "../components/Header.jsx";
+import SisterPhoto from "../components/SisterPhoto.jsx";
 import {
   FaChurch,
   FaFeatherAlt,
@@ -19,16 +20,6 @@ import {
 import { SITE_IMAGE_URL, useSeo } from "../utils/seo.js";
 import "./SistersDirectoryPage.css";
 
-function getInitials(name) {
-  const words = String(name || "")
-    .trim()
-    .split(/\s+/)
-    .filter(Boolean);
-  if (words.length === 0) return "☩";
-  if (words.length === 1) return words[0].slice(0, 2).toUpperCase();
-  return (words[0][0] + words[1][0]).toUpperCase();
-}
-
 function toSentenceCase(text) {
   return String(text || "")
     .toLowerCase()
@@ -36,35 +27,14 @@ function toSentenceCase(text) {
 }
 
 function SisterAvatar({ sister }) {
-  const [photoUrl, setPhotoUrl] = useState(null);
-  useEffect(() => {
-    let active = true;
-    const loader = sister.photo ? resolvePrayerPhoto(sister.photo) : null;
-    if (loader) {
-      loader()
-        .then((mod) => {
-          if (active) setPhotoUrl(mod.default || mod);
-        })
-        .catch(() => {
-          if (active) setPhotoUrl(null);
-        });
-    } else {
-      setPhotoUrl(null);
-    }
-    return () => {
-      active = false;
-    };
-  }, [sister]);
-
   return (
     <span className="sd-avatar-wrap">
-      {photoUrl ? (
-        <img className="sd-avatar-img" src={photoUrl} alt={sister.sister} />
-      ) : (
-        <span className="sd-avatar-img sd-avatar-monogram">
-          {getInitials(sister.sister)}
-        </span>
-      )}
+      <SisterPhoto
+        photo={sister.photo}
+        name={sister.sister}
+        className="sd-avatar-img"
+        monogramClassName="sd-avatar-monogram"
+      />
     </span>
   );
 }

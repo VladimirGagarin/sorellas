@@ -1,0 +1,983 @@
+/* =========================================================================
+   MusicPlayerPage.css — "Songs of the Sisters"
+   A spinning record on the left, the roll of voices on the right. One
+   layout for the big screen, one for the palm of a hand.
+   ========================================================================= */
+
+.mp-page {
+  min-height: 100vh;
+  background: var(--gradient-bg);
+  color: var(--text-primary);
+  position: relative;
+  overflow-x: hidden;
+  padding-bottom: 3rem;
+}
+
+/* ============ Hero ============ */
+.mp-hero {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 5.5rem 1.25rem 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.mp-hero::before {
+  content: "";
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 460px;
+  height: 460px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(var(--primary-green-rgb), 0.2),
+    rgba(var(--accent-purple), 0.06) 45%,
+    transparent 70%
+  );
+  filter: blur(16px);
+  pointer-events: none;
+  animation: mpBreath 7s ease-in-out infinite;
+}
+
+[data-theme="dark"] .mp-hero::before {
+  background: radial-gradient(
+    circle,
+    rgba(var(--accent-lavender), 0.18),
+    rgba(var(--primary-green-rgb), 0.05) 45%,
+    transparent 70%
+  );
+}
+
+@keyframes mpBreath {
+  0%,
+  100% {
+    opacity: 0.7;
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.07);
+  }
+}
+
+.mp-eyebrow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--leaf-emerald);
+  animation: mpRise 0.9s ease both;
+}
+
+.mp-eyebrow svg {
+  font-size: 0.85rem;
+}
+
+.mp-title {
+  position: relative;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5.2vw, 3.1rem);
+  margin: 0.6rem 0 0.6rem;
+  background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: mpRise 1.05s 0.08s ease both;
+}
+
+[data-theme="dark"] .mp-title {
+  background: linear-gradient(135deg, var(--text-primary), var(--accent-lavender));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@keyframes mpRise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mp-subtitle {
+  position: relative;
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 1.04rem;
+  line-height: 1.75;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.mp-hero-meta {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1.4rem;
+}
+
+.mp-hero-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  box-shadow: var(--glass-shadow);
+}
+
+.mp-hero-meta svg {
+  color: var(--leaf-emerald);
+}
+
+.mp-verse {
+  position: relative;
+  margin: 1.5rem 0 0;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  color: var(--accent-purple);
+  font-style: italic;
+}
+
+[data-theme="dark"] .mp-verse {
+  color: var(--accent-lavender);
+}
+
+/* ============ Stage — voices left, deck right ============ */
+.mp-stage {
+  max-width: 1180px;
+  margin: 2.5rem auto 0;
+  padding: 0 1.25rem;
+  display: grid;
+  grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+  grid-template-areas: "queue deck";
+  gap: 2rem;
+  align-items: start;
+}
+
+.mp-queue-col {
+  grid-area: queue;
+}
+
+.mp-player-col {
+  grid-area: deck;
+  position: sticky;
+  top: 5.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ============ The deck ============ */
+.mp-deck {
+  position: relative;
+  padding: 1.75rem 1.4rem 1.5rem;
+  border-radius: 28px;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-gradient), var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
+  text-align: center;
+  overflow: hidden;
+}
+
+.mp-deck::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at 50% -10%,
+    rgba(var(--primary-green-rgb), 0.16),
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.mp-deck-ornament {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--leaf-emerald);
+  opacity: 0.7;
+  margin-bottom: 0.4rem;
+}
+
+/* ---- The record ---- */
+.mp-disc-stage {
+  position: relative;
+  width: min(268px, 72vw);
+  margin: 0 auto 1.4rem;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+}
+
+.mp-disc-halo {
+  position: absolute;
+  inset: -14%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(var(--primary-green-rgb), 0.28),
+    transparent 66%
+  );
+  filter: blur(18px);
+  opacity: 0.5;
+  transition: opacity 0.6s ease;
+}
+
+.mp-disc-stage.spinning .mp-disc-halo {
+  opacity: 1;
+  animation: mpPulse 3.4s ease-in-out infinite;
+}
+
+@keyframes mpPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.07);
+  }
+}
+
+/* Progress ring — fills as the song plays */
+.mp-disc-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  padding: 6px;
+  background: conic-gradient(
+    from -90deg,
+    var(--primary-green) 0deg,
+    var(--leaf-emerald) var(--progress),
+    rgba(var(--primary-green-rgb), 0.14) var(--progress),
+    rgba(var(--primary-green-rgb), 0.14) 360deg
+  );
+  -webkit-mask: radial-gradient(
+    circle,
+    transparent calc(50% - 4px),
+    #000 calc(50% - 3px)
+  );
+  mask: radial-gradient(
+    circle,
+    transparent calc(50% - 4px),
+    #000 calc(50% - 3px)
+  );
+  transition: background 0.25s linear;
+}
+
+.mp-disc {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(
+    circle at 50% 50%,
+    #26382a 0%,
+    #16241a 46%,
+    #0b1410 100%
+  );
+  box-shadow:
+    0 26px 60px -18px rgba(0, 0, 0, 0.65),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  animation: mpSpin 9s linear infinite;
+  animation-play-state: paused;
+}
+
+.mp-disc-stage.spinning .mp-disc {
+  animation-play-state: running;
+}
+
+[data-theme="light"] .mp-disc {
+  background: radial-gradient(
+    circle at 50% 50%,
+    #3d5140 0%,
+    #22301f 52%,
+    #121c14 100%
+  );
+}
+
+@keyframes mpSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.mp-disc-grooves {
+  position: absolute;
+  inset: 4%;
+  border-radius: 50%;
+  background: repeating-radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.055) 0 1px,
+    transparent 1px 7px
+  );
+  pointer-events: none;
+}
+
+.mp-disc-face {
+  position: relative;
+  width: 62%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(var(--primary-green-rgb), 0.5);
+  box-shadow: 0 0 34px rgba(var(--primary-green-rgb), 0.3);
+}
+
+.mp-disc-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mp-disc-pin {
+  position: absolute;
+  width: 13%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #eef7e9, #8aa98a 60%, #4d644f);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Shared monogram fallback */
+.mp-photo-monogram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #f2fbf0;
+  background: linear-gradient(135deg, var(--leaf-emerald), var(--primary-green));
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.28);
+}
+
+.mp-disc-photo.mp-photo-monogram {
+  font-size: 1.9rem;
+}
+
+/* ---- Title + progress ---- */
+.mp-now-label {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--leaf-emerald);
+}
+
+.mp-now-name {
+  margin: 0.35rem 0 1.1rem;
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+/* A song of the congregation's own, rather than one sister's voice */
+.mp-now-tag {
+  display: inline-block;
+  margin: -0.75rem 0 1rem;
+  padding: 0.22rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.mp-now-name + .mp-progress {
+  margin-top: 0;
+}
+
+.mp-progress {
+  margin-bottom: 0.9rem;
+}
+
+.mp-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-green) 0%,
+    var(--leaf-emerald) var(--fill, 0%),
+    rgba(var(--primary-green-rgb), 0.16) var(--fill, 0%),
+    rgba(var(--primary-green-rgb), 0.16) 100%
+  );
+  cursor: pointer;
+  outline: none;
+}
+
+.mp-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 3px solid var(--primary-green);
+  box-shadow: 0 3px 10px var(--shadow-color);
+  transition: transform 0.15s ease;
+}
+
+.mp-range::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border: 3px solid var(--primary-green);
+  border-radius: 50%;
+  background: var(--bg-card);
+  box-shadow: 0 3px 10px var(--shadow-color);
+}
+
+.mp-range:hover::-webkit-slider-thumb,
+.mp-range:focus-visible::-webkit-slider-thumb {
+  transform: scale(1.18);
+}
+
+.mp-range:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.mp-range:focus-visible {
+  box-shadow: 0 0 0 3px rgba(var(--primary-green-rgb), 0.3);
+}
+
+.mp-times {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.45rem;
+  font-size: 0.76rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+}
+
+/* ---- Transport ---- */
+.mp-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.1rem;
+  width: 100%;
+  padding: 0% 1.2rem;
+
+}
+
+.mp-btn {
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  transition: transform 0.16s ease, background 0.2s ease, color 0.2s ease,
+    box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.mp-btn.ghost {
+  width: 42px;
+  height: 42px;
+  font-size: 0.98rem;
+    border-radius: 50%;
+}
+.mp-btn.ghosts {
+  max-width: 100%;
+  height: 48px;
+  font-size: 0.98rem;
+  border-radius:8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+  gap: 0.5rem;
+
+}
+.mp-btn.primary {
+  width: 66px;
+  height: 66px;
+  font-size: 1.5rem;
+  color: #f4fbf1;
+  border: none;
+  background: var(--gradient-primary);
+  box-shadow: 0 14px 30px -10px rgba(var(--primary-green-rgb), 0.7);
+  border-radius: 50%;
+}
+
+.mp-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  color: var(--primary-green);
+  border-color: var(--primary-green);
+}
+
+.mp-btn.primary:hover:not(:disabled) {
+  color: #f4fbf1;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 18px 36px -10px rgba(var(--primary-green-rgb), 0.85);
+}
+
+.mp-btn:active:not(:disabled) {
+  transform: translateY(0) scale(0.96);
+}
+
+.mp-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.mp-btn:focus-visible {
+  outline: 2px solid var(--primary-green);
+  outline-offset: 3px;
+}
+
+.mp-play-icon {
+  transform: translateX(1px);
+}
+
+.mp-spinner {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2.5px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #f4fbf1;
+  animation: mpSpin 0.9s linear infinite;
+}
+
+/* ---- Loop & share ---- */
+.mp-btn.on {
+  color: var(--primary-green);
+  border-color: var(--primary-green);
+  background: rgba(var(--primary-green-rgb), 0.12);
+  box-shadow: 0 0 0 3px rgba(var(--primary-green-rgb), 0.14);
+}
+
+/* Only speaks up when the link has been copied — the address itself stays in
+   the URL bar, where it belongs, rather than printed under the player. */
+.mp-share-note {
+  display: block;
+  margin: -0.55rem auto 1.1rem;
+  font-size: 0.78rem;
+  color: var(--primary-green);
+  font-weight: 600;
+}
+
+.mp-share-note:empty {
+  display: none;
+}
+
+/* ---- Link out ---- */
+.mp-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: var(--glass-bg);
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: transform 0.16s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.mp-link:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary-green);
+  color: var(--primary-green);
+  text-decoration: none;
+}
+
+.mp-link svg {
+  color: var(--rose-pink);
+}
+
+/* ============ The queue ============ */
+.mp-queue-col {
+  padding: 1.5rem 1.25rem 1.25rem;
+  border-radius: 26px;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-gradient), var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
+}
+
+.mp-queue-head {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.mp-queue-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  color: #f2fbf0;
+  background: var(--gradient-accent);
+  box-shadow: 0 8px 20px -8px rgba(var(--primary-green-rgb), 0.7);
+}
+
+.mp-queue-title {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.mp-queue-hint {
+  margin: 0.15rem 0 0;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.mp-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 0.7rem;
+}
+
+/* On the big screen the roll of voices scrolls on its own, so the deck on the
+   right can stand still beside it. */
+.mp-queue-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-green) transparent;
+}
+
+.mp-queue-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.mp-queue-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.mp-queue-scroll::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(var(--primary-green-rgb), 0.45);
+}
+
+.mp-queue-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-green);
+}
+
+@media (min-width: 901px) {
+  .mp-queue-scroll {
+    max-height: calc(100vh - 10.5rem);
+    overflow-y: auto;
+    padding-right: 0.4rem;
+    margin-right: -0.4rem;
+  }
+}
+
+.mp-list li {
+  margin: 0;
+  display: flex;
+}
+
+.mp-track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+  padding: 0.6rem 0.75rem 0.6rem 0.6rem;
+  text-align: left;
+  border-radius: 18px;
+  border: 1px solid transparent;
+  background: var(--hover-bg);
+  color: var(--text-primary);
+  transition: transform 0.18s ease, border-color 0.2s ease,
+    background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mp-track:hover:not(:disabled) {
+  transform: translateY(-3px);
+  border-color: var(--primary-green);
+  background: var(--bg-card);
+  box-shadow: 0 14px 28px -14px var(--shadow-color);
+}
+
+.mp-track:focus-visible {
+  outline: 2px solid var(--primary-green);
+  outline-offset: 2px;
+}
+
+.mp-track.current {
+  border-color: var(--primary-green);
+  background: var(--bg-card);
+  box-shadow: 0 0 0 1px rgba(var(--primary-green-rgb), 0.35),
+    0 16px 32px -16px rgba(var(--primary-green-rgb), 0.7);
+}
+
+.mp-track.locked {
+  cursor: not-allowed;
+  opacity: 0.5;
+  filter: grayscale(0.85);
+}
+
+.mp-track-photo {
+  position: relative;
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+}
+
+.mp-track-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border-color);
+}
+
+.mp-track-photo .mp-photo-monogram {
+  font-size: 0.95rem;
+}
+
+.mp-track-play {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 0.95rem;
+  color: #f4fbf1;
+  background: rgba(12, 28, 17, 0.62);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  opacity: 0;
+  transform: scale(0.82);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.mp-track:hover:not(:disabled) .mp-track-play,
+.mp-track.current .mp-track-play {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.mp-track-body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.mp-track-name {
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  line-height: 1.3;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mp-track-state {
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mp-track.current .mp-track-state {
+  color: var(--primary-green);
+  font-weight: 600;
+}
+
+.mp-track.locked .mp-track-state {
+  font-style: italic;
+}
+
+.mp-empty {
+  margin: 1.5rem 0;
+  padding: 1.5rem 1.1rem;
+  border-radius: 18px;
+  border: 1px dashed var(--border-color);
+  text-align: center;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.mp-more {
+  display: block;
+  width: 100%;
+  margin-top: 0.9rem;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: transparent;
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.mp-more:hover {
+  border-color: var(--primary-green);
+  color: var(--primary-green);
+  background: var(--hover-bg);
+}
+
+/* ============ Footer ============ */
+.mp-footer {
+  margin-top: 3rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-family: var(--font-display);
+  letter-spacing: 0.24em;
+  font-size: 0.78rem;
+}
+
+.mp-footer span {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--leaf-emerald);
+  opacity: 0.75;
+}
+
+/* =========================================================================
+   Small screens — the deck rises to the top, the voices flow beneath it
+   ========================================================================= */
+@media (max-width: 900px) {
+  .mp-stage {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "deck"
+      "queue";
+    gap: 1.4rem;
+    margin-top: 1.8rem;
+  }
+
+  .mp-player-col {
+    position: static;
+  }
+
+  .mp-disc-stage {
+    width: min(232px, 62vw);
+  }
+}
+
+@media (max-width: 640px) {
+  .mp-hero {
+    padding: 4.5rem 1rem 1rem;
+  }
+
+  .mp-subtitle {
+    font-size: 0.96rem;
+    line-height: 1.7;
+  }
+
+  .mp-deck {
+    padding: 1.4rem 1rem 1.2rem;
+    border-radius: 24px;
+  }
+
+  .mp-disc-stage {
+    width: min(206px, 58vw);
+    margin-bottom: 1.1rem;
+  }
+
+  .mp-btn.ghost {
+    width: 38px;
+    height: 38px;
+    font-size: 0.9rem;
+  }
+
+  .mp-btn.primary {
+    width: 58px;
+    height: 58px;
+    font-size: 1.3rem;
+  }
+
+  .mp-controls {
+    gap: 0.35rem;
+  }
+
+  .mp-queue-col {
+    padding: 1.2rem 0.9rem 1rem;
+    border-radius: 22px;
+  }
+
+  .mp-list {
+    grid-template-columns: 1fr;
+  }
+
+  .mp-track {
+    padding: 0.55rem 0.7rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .mp-controls {
+    gap: 0.2rem;
+  }
+
+  .mp-btn.ghost {
+    width: 34px;
+    height: 34px;
+    font-size: 0.82rem;
+  }
+
+  .mp-btn.primary {
+    width: 52px;
+    height: 52px;
+    font-size: 1.15rem;
+  }
+}
+
+/* Readers who ask for stillness get stillness, not a spinning record. */
+@media (prefers-reduced-motion: reduce) {
+  .mp-disc,
+  .mp-disc-stage.spinning .mp-disc {
+    animation: none;
+  }
+
+  .mp-disc-halo,
+  .mp-hero::before,
+  .mp-spinner {
+    animation: none;
+  }
+
+  .mp-track,
+  .mp-btn,
+  .mp-link {
+    transition: none;
+  }
+}

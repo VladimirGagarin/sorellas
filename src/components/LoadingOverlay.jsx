@@ -6,7 +6,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useLanguage } from "../contexts/useLanguage.js";
-import { getAllPoems, getAllPrayers, getQuotes } from "./Utils.js";
+import { getAllPoems, getAllPrayers, getQuotes, getSistersAudioUrl } from "./Utils.js";
 import { CATEGORY_LABELS } from "../pages/QuotesPage.jsx";
 import flowers from "./Flower";
 import "./LoadingOverlay.css";
@@ -121,10 +121,35 @@ function getRouteWelcome(location, language) {
       : "La carità di Cristo ci spinge a fare la volontà di Dio";
   }
 
+  // /thankyou/giovanna → that sister's name · /thankyou → the roll of voices
+  if (path === "/thankyou" || path.startsWith("/thankyou/")) {
+    const songId = decodeURIComponent(
+      path.replace(/^\/thankyou\/?/, "").replace(/\/+$/, "")
+    );
+    if (songId) {
+      const track = getSistersAudioUrl().find((item) => item.id === songId);
+      const name = track && (track.names?.[language] || track.names?.en);
+      if (name) return name;
+      return en ? "A Song of the Sisters" : "Un canto delle suore";
+    }
+    return "DEO GRATIAS";
+  }
+
   const page = PAGE_LABELS[path];
   if (page) return page[language];
 
   return en ? "WELCOME" : "BENVENUTI";
+}
+
+// Which address counts as "a new page" for the veil. The song's own id changes
+// as the visitor moves through the roll, and that must not flash the loading
+// screen over the player they are already using.
+function routeSignature(location) {
+  const path = location.pathname;
+  if (path === "/thankyou" || path.startsWith("/thankyou/")) {
+    return "/thankyou";
+  }
+  return location.key;
 }
 
 export default function LoadingOverlay() {
@@ -135,7 +160,9 @@ export default function LoadingOverlay() {
   const [mode, setMode] = useState("intro");
 
   // Every navigation (or first mount) restarts the veil; any previous cycle
-  // is cancelled so a single timer always hides the overlay.
+  // is cancelled so a single timer always hides the overlay. Moving from one
+  // song to the next is not a new page, so it is left out of the signature.
+  const signature = routeSignature(location);
   useEffect(() => {
     const heading = !introPlayed;
     introPlayed = true;
@@ -147,7 +174,7 @@ export default function LoadingOverlay() {
       heading ? FULL_TOTAL_MS : NAV_TOTAL_MS
     );
     return () => clearTimeout(timer);
-  }, [location.key]);
+  }, [signature]);
 
   // Word cycling only runs during the full intro cycle.
   useEffect(() => {
