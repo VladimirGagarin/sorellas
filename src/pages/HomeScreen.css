@@ -564,7 +564,9 @@
 
 @media (max-width: 640px) {
   .flower-feature {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
     padding: 1.4rem;
   }
 
@@ -573,8 +575,18 @@
     height: 72px;
   }
 
+  .flower-feature-body {
+    width: 100%;
+  }
+
+  .flower-feature-name {
+    font-size: 1.3rem;
+  }
+
   .flower-feature-btn {
-    margin-left: auto;
+    margin-left: 0;
+    align-self: stretch;
+    justify-content: center;
   }
 }
 
@@ -677,6 +689,240 @@
 }
 
 /* ========================================================================
+   Song of the moment — footer music card
+   ======================================================================== */
+.home-song-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.home-song {
+  width: 100%;
+  max-width: 560px;
+  padding: 1.4rem 1.6rem 1.2rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+.home-song-head {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.home-song-art {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  color: #fff;
+  background: var(--gradient-primary);
+  box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+.home-song-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.home-song-eyebrow {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--leaf-emerald);
+  margin-bottom: 0.3rem;
+}
+
+.home-song-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2.6vw, 1.45rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* ---- Play / pause ---- */
+.home-song-play {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  color: #f4fbf1;
+  background: var(--gradient-primary);
+  box-shadow: 0 10px 22px -8px rgba(var(--primary-green-rgb), 0.75);
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.home-song-play:hover:not(:disabled) {
+  transform: scale(1.06);
+  box-shadow: 0 14px 28px -10px rgba(var(--primary-green-rgb), 0.85);
+}
+
+.home-song-play:active:not(:disabled) {
+  transform: scale(0.96);
+}
+
+.home-song-play:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.home-song-play:focus-visible {
+  outline: 2px solid var(--primary-green);
+  outline-offset: 3px;
+}
+
+.home-song-play-icon {
+  transform: translateX(2px);
+}
+
+.home-song-spinner {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2.5px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #f4fbf1;
+  animation: homeSongSpin 0.9s linear infinite;
+}
+
+@keyframes homeSongSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.home-song-desc {
+  margin: 0.9rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* ---- Progress ---- */
+.home-song-progress {
+  margin-top: 0.9rem;
+}
+
+.home-song-range {
+  -webkit-appearance: none;
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 7px;
+  margin: 0;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-green) 0%,
+    var(--leaf-emerald) var(--fill, 0%),
+    rgba(var(--primary-green-rgb), 0.16) var(--fill, 0%),
+    rgba(var(--primary-green-rgb), 0.16) 100%
+  );
+  cursor: pointer;
+  outline: none;
+}
+
+.home-song-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 3px solid var(--primary-green);
+  box-shadow: 0 3px 10px var(--shadow-color);
+  transition: transform 0.15s ease;
+}
+
+.home-song-range::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border: 3px solid var(--primary-green);
+  border-radius: 50%;
+  background: var(--bg-card);
+  box-shadow: 0 3px 10px var(--shadow-color);
+}
+
+.home-song-range:hover::-webkit-slider-thumb,
+.home-song-range:focus-visible::-webkit-slider-thumb {
+  transform: scale(1.18);
+}
+
+.home-song-range:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.home-song-range:focus-visible {
+  box-shadow: 0 0 0 3px rgba(var(--primary-green-rgb), 0.3);
+}
+
+.home-song-times {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.4rem;
+  font-size: 0.74rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+}
+
+.home-song-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  max-width: 560px;
+  padding: 0.9rem 1.8rem;
+  border-radius: 999px;
+  background: var(--gradient-primary);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.home-song-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px var(--shadow-color);
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .home-song {
+    padding: 1.2rem 1.15rem 1rem;
+  }
+
+  .home-song-art,
+  .home-song-play {
+    width: 46px;
+    height: 46px;
+  }
+
+  .home-song-desc {
+    font-size: 0.95rem;
+  }
+}
+
+/* ========================================================================
    Footer
    ======================================================================== */
 .home-footer {
@@ -722,8 +968,18 @@
   .home-stat,
   .home-card,
   .flower-feature,
+  .home-song,
+  .home-song-btn,
+  .home-song-play,
   .feast-today-hero {
     animation: none !important;
     transition: none !important;
+  }
+
+  /* A spinner that never turns is worse than no spinner at all — a plain ring
+     still says "loading" without asking the eye to follow it. */
+  .home-song-spinner {
+    animation: none !important;
+    border-top-color: transparent;
   }
 }

@@ -3,7 +3,7 @@
 // the right. Tap a sister's portrait to hear her song; portraits still waiting
 // for a recording (or whose file failed to load) stay quiet and unpressable.
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Header from "../components/Header.jsx";
 import SisterPhoto from "../components/SisterPhoto.jsx";
 import { getSisterSongUrl, getSistersAudioUrl } from "../components/Utils.js";
@@ -13,7 +13,6 @@ import {
   FaAngleLeft,
   FaAngleRight,
   FaCheck,
-  FaHeart,
   FaInfinity,
   FaListUl,
   FaMusic,
@@ -100,12 +99,15 @@ export default function MusicPlayerPage() {
       : -1;
     return found >= 0 ? found : 0;
   });
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  // One source of truth for what the deck is doing. As two independent booleans
+  // these could both be true at once, which is why "loading" used to surface as
+  // "now singing": the readout asked isPlaying || isLoading.
+  const [playback, setPlayback] = useState("idle");
+  const isPlaying = playback === "playing";
+  const isLoading = playback === "loading";
   const [isLooping, setIsLooping] = useState(false);
   const [elapsed, setElapsed] = useState(0);
   const [duration, setDuration] = useState(0);
-  const [showAll, setShowAll] = useState(false);
   const [isShared, setIsShared] = useState(false);
 
   const current =
@@ -124,6 +126,7 @@ export default function MusicPlayerPage() {
           : "Ogni voce della sorellanza è un canto. Scegli un ritratto a sinistra e lascialo suonare — quelle che attendono ancora una registrazione restano in silenzio.",
       nowPlaying: language === "en" ? "Now singing" : "Ora canta",
       pausedLabel: language === "en" ? "Paused" : "In pausa",
+      loadingLabel: language === "en" ? "Loading" : "Caricamento",
       silence: language === "en" ? "Silence" : "Silenzio",
       queueTitle: "DEO GRATIAS",
       queueHint:
@@ -155,16 +158,10 @@ export default function MusicPlayerPage() {
         language === "en"
           ? "No recordings have been added yet — come back soon and the garden will be full of song."
           : "Non è ancora stato aggiunto nessun brano — torna presto e il giardino sarà pieno di canto.",
-      showAll: language === "en" ? "Show all sisters" : "Mostra tutte",
-      showLess: language === "en" ? "Show fewer" : "Mostra meno",
       verse:
         language === "en"
           ? "“Aeternum Floreamus — Let us bloom forever”"
           : "«Aeternum Floreamus — Fioriamo per sempre»",
-      meetSisters:
-        language === "en"
-          ? "Meet the sisters behind every song"
-          : "Incontra le suore dietro ogni canto",
     }),
     [language],
   );
@@ -183,6 +180,16 @@ export default function MusicPlayerPage() {
     image: SITE_IMAGE_URL,
   });
 
+  // Audio events also fire for the metadata-only fetch on page load, and a seek
+  // can stall the element while it is paused. Neither is something a visitor
+  // would call "loading", so both are filtered out before the state changes.
+  const markLoading = useCallback(() => {
+    const el = audioRef.current;
+    if (!hasPressedPlay.current) return;
+    if (el && el.paused) return;
+    setPlayback("loading");
+  }, []);
+
   // Choosing a new song resets the readout here, at the moment of the choice,
   // and writes the song's own address into the URL so it can be shared or
   // bookmarked. The back button is left alone — this is a replace, not a push.
@@ -190,7 +197,7 @@ export default function MusicPlayerPage() {
     setIndex(nextIndex);
     setElapsed(0);
     setDuration(0);
-    setIsLoading(true);
+    setPlayback("loading");
   }, []);
 
   // Keep the address in step with the deck — without it, the song on the turntable
@@ -214,32 +221,28 @@ export default function MusicPlayerPage() {
     if (!el || !current) return;
     if (el.paused) {
       hasPressedPlay.current = true;
-      setIsLoading(true);
+      setPlayback("loading");
       const attempt = el.play();
       if (attempt && typeof attempt.catch === "function") {
-        attempt.catch(() => {
-          setIsPlaying(false);
-          setIsLoading(false);
-        });
+        attempt.catch(() => setPlayback("idle"));
       }
     } else {
       el.pause();
+      setPlayback("paused");
     }
   }, [current]);
 
   // When the chosen sister changes, swap the source and — only if the visitor
-  // already pressed play — start her song.
+  // already pressed play — start her song. A keyed element is mounted fresh
+  // with its src already in place, which loads on its own; calling load() here
+  // as well would start a second fetch of the same recording.
   useEffect(() => {
     const el = audioRef.current;
     if (!el || !current) return;
-    el.load();
     if (!hasPressedPlay.current) return;
     const attempt = el.play();
     if (attempt && typeof attempt.catch === "function") {
-      attempt.catch(() => {
-        setIsPlaying(false);
-        setIsLoading(false);
-      });
+      attempt.catch(() => setPlayback("idle"));
     }
   }, [currentId, current]);
 
@@ -294,13 +297,10 @@ export default function MusicPlayerPage() {
     hasPressedPlay.current = true;
     el.currentTime = 0;
     setElapsed(0);
-    setIsLoading(true);
+    setPlayback("loading");
     const attempt = el.play();
     if (attempt && typeof attempt.catch === "function") {
-      attempt.catch(() => {
-        setIsPlaying(false);
-        setIsLoading(false);
-      });
+      attempt.catch(() => setPlayback("idle"));
     }
   };
 
@@ -318,17 +318,20 @@ export default function MusicPlayerPage() {
     if (!current) return;
     const url = current.sisterSongUrl;
     const name = trackName(current, language);
-    try {
-      if (navigator.share) {
+    if (navigator.share) {
+      try {
         await navigator.share({
           title: name,
           text: `${name} — ${t.queueTitle}`,
           url,
         });
         return;
+      } catch (error) {
+        // Closing the share sheet is a choice, not a failure — falling through
+        // here would copy the link behind their back and claim it was shared.
+        if (error && error.name === "AbortError") return;
+        // Anything else means the browser refused, so try the clipboard below.
       }
-    } catch {
-      // The visitor dismissed the share sheet, or the browser refused it.
     }
     try {
       await navigator.clipboard.writeText(url);
@@ -343,29 +346,36 @@ export default function MusicPlayerPage() {
   const lockedSisters = allSisters.filter(
     (track) => track.kind === "sister" && !track.hasAudio,
   );
-  const visibleSisters = showAll
-    ? allSisters
-    : [
-        ...allSisters.filter((track) => track.hasAudio),
-        ...lockedSisters.slice(0, 12),
-      ];
 
   return (
     <div className="mp-page">
       <Header />
 
-      {/* One element drives every control; the state lives above it. */}
+      {/* Keyed by the song it is playing, so choosing another sister builds a
+          fresh element instead of re-pointing this one at a new file. Media
+          events belong to the element that raised them, so the previous song
+          can no longer report a position into the new song's progress bar. */}
       <audio
+        key={currentId || "no-song"}
         ref={audioRef}
         src={current ? current.audioUrl : undefined}
         preload="metadata"
-        onCanPlay={() => setIsLoading(false)}
-        onPlaying={() => {
-          setIsPlaying(true);
-          setIsLoading(false);
-        }}
-        onPause={() => setIsPlaying(false)}
-        onWaiting={() => setIsLoading(true)}
+        // Waiting for audio: a fresh source, a stall, a re-buffer after a seek,
+        // or the moment play() is called but no sound is flowing yet. Progress
+        // and suspend are deliberately absent — progress fires while a playing
+        // song keeps receiving data, and suspend usually means fully buffered.
+        onLoadStart={markLoading}
+        onStalled={markLoading}
+        onWaiting={markLoading}
+        onSeeking={markLoading}
+        // Audio is actually moving. `playing` — not canplay — is the honest
+        // signal: canplay only means the browser is ready, not that it started.
+        onPlaying={() => setPlayback("playing")}
+        // Paused by the visitor, so the readout falls back to paused rather than
+        // to silence. A pause raised while loading keeps the loading state.
+        onPause={() =>
+          setPlayback((prev) => (prev === "playing" ? "paused" : prev))
+        }
         onTimeUpdate={(event) =>
           setElapsed(event.currentTarget.currentTime || 0)
         }
@@ -374,7 +384,6 @@ export default function MusicPlayerPage() {
           setDuration(Number.isFinite(value) ? value : 0);
         }}
         onEnded={() => {
-          setIsPlaying(false);
           setElapsed(0);
           // With loop on, the song simply begins again; otherwise the deck
           // moves on, wrapping round to the first voice.
@@ -383,8 +392,7 @@ export default function MusicPlayerPage() {
           else replay();
         }}
         onError={() => {
-          setIsPlaying(false);
-          setIsLoading(false);
+          setPlayback("idle");
           setElapsed(0);
           setDuration(0);
           if (currentId) {
@@ -415,10 +423,6 @@ export default function MusicPlayerPage() {
       <section className="mp-stage">
         <div className="mp-player-col">
           <div className="mp-deck">
-            <span className="mp-deck-ornament" aria-hidden="true">
-              ❁
-            </span>
-
             <div
               className={`mp-disc-stage ${isPlaying ? "spinning" : ""} ${
                 isLoading ? "loading" : ""
@@ -437,17 +441,20 @@ export default function MusicPlayerPage() {
                     monogramClassName="mp-disc-photo mp-photo-monogram"
                   />
                 </div>
-                {<span className="mp-disc-pin" aria-hidden="true" />}
               </div>
             </div>
 
             <div className="mp-now">
-              <span className="mp-now-label">
-                {isPlaying || isLoading
-                  ? t.nowPlaying
-                  : elapsed > 0
-                    ? t.pausedLabel
-                    : t.silence}
+              {/* Announced politely, so a screen reader hears the change from
+                  silence to singing, or from singing to waiting. */}
+              <span className="mp-now-label" role="status" aria-live="polite">
+                {playback === "loading"
+                  ? t.loadingLabel
+                  : playback === "playing"
+                    ? t.nowPlaying
+                    : playback === "paused"
+                      ? t.pausedLabel
+                      : t.silence}
               </span>
               <h2 className="mp-now-name">
                 {current ? trackName(current, language) : t.queueTitle}
@@ -551,9 +558,7 @@ export default function MusicPlayerPage() {
             </div>
           </div>
 
-          <Link to="/come-and-see" className="mp-link">
-            <FaHeart /> {t.meetSisters}
-          </Link>
+          <p className="mp-credit">An Aeternum Floreamus Production</p>
         </div>
 
         <div className="mp-queue-col">
@@ -572,7 +577,7 @@ export default function MusicPlayerPage() {
           ) : (
             <div className="mp-queue-scroll">
               <ul className="mp-list">
-                {visibleSisters.map((track) => {
+                {allSisters.map((track) => {
                   const name = trackName(track, language);
                   const isCurrent = Boolean(current && track.id === current.id);
                   const isLocked = !track.hasAudio || broken.has(track.id);
@@ -629,16 +634,6 @@ export default function MusicPlayerPage() {
                 })}
               </ul>
             </div>
-          )}
-
-          {allSisters.length > visibleSisters.length && (
-            <button
-              type="button"
-              className="mp-more"
-              onClick={() => setShowAll((prev) => !prev)}
-            >
-              {showAll ? t.showLess : `${t.showAll} (${allSisters.length})`}
-            </button>
           )}
         </div>
       </section>

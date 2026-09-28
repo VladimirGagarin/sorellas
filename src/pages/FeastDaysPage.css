@@ -660,6 +660,11 @@
   padding: 32px 36px 54px;
   max-width: 620px;
   margin: 0 auto;
+  /* A floor, not a fixed height: short facts still centre in the space, and
+     a long one grows the card rather than being cut off. */
+  min-height: 22vh;
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(
     135deg,
     rgba(var(--primary-green-rgb), 0.12),
@@ -667,21 +672,8 @@
   );
 }
 
-/* Large screens: keep the card wide enough for the fact text,
-   but let its height size to the content so captures fit perfectly */
+/* Large screens: the fact text sits a size up. */
 @media (min-width: 721px) {
-  .fun-fact-card {
-    max-width: 620px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .fun-fact-slide {
-    flex: 1;
-    align-items: flex-start;
-    justify-content: center;
-  }
-
   .fun-fact-text {
     font-size: 1.3rem;
     line-height: 1.5;
@@ -714,7 +706,9 @@
   display: flex;
   gap: 16px;
   align-items: flex-start;
-  min-height: 110px;
+  min-height: 170px;
+  flex: 1;
+  justify-content: center;
 }
 
 .fun-fact-slide.slide-in-right {
@@ -939,7 +933,7 @@
     margin: 0;
   }
   .fun-fact-slide {
-    min-height: auto;
+    min-height: 170px;
     flex-direction: column;
     gap: 10px;
   }

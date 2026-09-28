@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header.jsx";
 import QuoteCard from "../components/QuoteCard.jsx";
@@ -23,8 +23,17 @@ import {
   FaExternalLinkAlt,
   FaCalendarDay,
   FaMusic,
+  FaPlay,
+  FaPause,
 } from "react-icons/fa";
 import "./HomeScreen.css";
+
+function formatTime(seconds) {
+  if (!Number.isFinite(seconds) || seconds < 0) return "0:00";
+  const mins = Math.floor(seconds / 60);
+  const secs = Math.floor(seconds % 60);
+  return `${mins}:${String(secs).padStart(2, "0")}`;
+}
 
 function Reveal({ children, delay = 0, className = "" }) {
   const ref = useRef(null);
@@ -129,6 +138,65 @@ export default function HomeScreenPage() {
     () => getSistersAudioUrl().filter((sister) => sister.hasAudio).length
   );
 
+  // ---- the featured song, with a small deck of its own in the footer ----
+  // The congregation's "Thank You Sisters" track, resolved through the same
+  // index the full player uses, so the file is found by its name and not
+  // hard-coded here.
+  const homeSong = useMemo(
+    () => getSistersAudioUrl().find((track) => track.id === "home") || null,
+    []
+  );
+
+  const songAudioRef = useRef(null);
+  const [isSongPlaying, setIsSongPlaying] = useState(false);
+  const [isSongLoading, setIsSongLoading] = useState(false);
+  const [songElapsed, setSongElapsed] = useState(0);
+  const [songDuration, setSongDuration] = useState(0);
+  const [songFailed, setSongFailed] = useState(false);
+
+  const songProgress = songDuration > 0 ? Math.min(songElapsed / songDuration, 1) : 0;
+  const isSongSilent = !homeSong || songFailed;
+
+  const toggleSong = useCallback(() => {
+    const el = songAudioRef.current;
+    if (!el || !homeSong) return;
+    if (el.paused) {
+      setIsSongLoading(true);
+      const attempt = el.play();
+      // The browser may refuse to start without a real gesture; leave the
+      // button showing "play" rather than spinning forever.
+      if (attempt && typeof attempt.catch === "function") {
+        attempt.catch(() => {
+          setIsSongPlaying(false);
+          setIsSongLoading(false);
+        });
+      }
+    } else {
+      el.pause();
+    }
+  }, [homeSong]);
+
+  const seekSong = useCallback(
+    (value) => {
+      const el = songAudioRef.current;
+      if (!el || !Number.isFinite(songDuration) || songDuration <= 0) return;
+      const next = Math.min(Math.max(value, 0), 1) * songDuration;
+      el.currentTime = next;
+      setSongElapsed(next);
+    },
+    [songDuration]
+  );
+
+  // Leaving the page should not leave the song playing behind it. The node is
+  // captured here rather than read from the ref, because React detaches refs
+  // before a passive cleanup runs.
+  useEffect(() => {
+    const el = songAudioRef.current;
+    return () => {
+      el?.pause();
+    };
+  }, []);
+
   useEffect(() => {
     if (feastsToday.length === 0) return () => {};
     const colors = ["#3E7A43", "#3F7A55", "#4A7A44", "#A8E0A0", "#7FAE6E"];
@@ -217,6 +285,23 @@ export default function HomeScreenPage() {
       language === "en"
         ? "Wander through every path of this spiritual garden"
         : "Vagabonda per ogni sentiero di questo giardino spirituale",
+    songEyebrow:
+      language === "en" ? "A Song for You" : "Una Canzone per Te",
+    songTitle:
+      language === "en" ? "Thank You Sisters" : "Grazie Sorelle",
+    songDesc:
+      language === "en"
+        ? "The sisters sing their thanks for every gift that reaches them."
+        : "Le suore cantano il loro grazie per ogni dono che arriva loro.",
+    songCta:
+      language === "en" ? "Hear the Thank You Songs" : "Ascolta i Canti di Grazie",
+    songPlay: language === "en" ? "Play" : "Riproduci",
+    songPause: language === "en" ? "Pause" : "Pausa",
+    songSeek: language === "en" ? "Song progress" : "Avanzamento del brano",
+    songSilent:
+      language === "en"
+        ? "This recording is not available right now"
+        : "Questa registrazione non è disponibile in questo momento",
     footerBlessing:
       language === "en"
         ? "May your garden grow in grace."
@@ -503,6 +588,109 @@ export default function HomeScreenPage() {
                   {t.explore} <FaArrowRight />
                 </span>
               </Link>
+            </div>
+          </Reveal>
+        </section>
+
+        {/* ===== Song of the moment ===== */}
+        <section className="home-section">
+          <Reveal>
+            <div className="home-song-wrap">
+              {/* One element drives the play button and the range below it. */}
+              <audio
+                ref={songAudioRef}
+                src={homeSong ? homeSong.audioUrl : undefined}
+                preload="metadata"
+                onCanPlay={() => setIsSongLoading(false)}
+                onPlaying={() => {
+                  setIsSongPlaying(true);
+                  setIsSongLoading(false);
+                }}
+                onPause={() => setIsSongPlaying(false)}
+                onWaiting={() => setIsSongLoading(true)}
+                onTimeUpdate={(event) =>
+                  setSongElapsed(event.currentTarget.currentTime || 0)
+                }
+                onLoadedMetadata={(event) => {
+                  const value = event.currentTarget.duration;
+                  setSongDuration(Number.isFinite(value) ? value : 0);
+                }}
+                onEnded={() => {
+                  setIsSongPlaying(false);
+                  setSongElapsed(0);
+                }}
+                onError={() => {
+                  setIsSongPlaying(false);
+                  setIsSongLoading(false);
+                  setSongElapsed(0);
+                  setSongDuration(0);
+                  setSongFailed(true);
+                }}
+              />
+
+              <div className="home-song">
+                <div className="home-song-head">
+                  <span className="home-song-art" aria-hidden="true">
+                    <FaMusic />
+                  </span>
+                  <div className="home-song-meta">
+                    <span className="home-song-eyebrow">
+                      ✦ {t.songEyebrow} ✦
+                    </span>
+                    <h3 className="home-song-title">{t.songTitle}</h3>
+                  </div>
+                  <button
+                    type="button"
+                    className="home-song-play"
+                    onClick={toggleSong}
+                    disabled={isSongSilent}
+                    aria-label={isSongPlaying ? t.songPause : t.songPlay}
+                    aria-pressed={isSongPlaying}
+                    title={isSongPlaying ? t.songPause : t.songPlay}
+                  >
+                    {isSongSilent ? (
+                      <FaMusic />
+                    ) : isSongLoading ? (
+                      <span className="home-song-spinner" aria-hidden="true" />
+                    ) : isSongPlaying ? (
+                      <FaPause />
+                    ) : (
+                      <FaPlay className="home-song-play-icon" />
+                    )}
+                  </button>
+                </div>
+
+                <p className="home-song-desc">
+                  {isSongSilent ? t.songSilent : t.songDesc}
+                </p>
+
+                <div className="home-song-progress">
+                  <input
+                    type="range"
+                    className="home-song-range"
+                    min="0"
+                    max="1000"
+                    step="1"
+                    value={Math.round(songProgress * 1000)}
+                    onChange={(event) =>
+                      seekSong(Number(event.target.value) / 1000)
+                    }
+                    disabled={isSongSilent || songDuration <= 0}
+                    aria-label={t.songSeek}
+                    style={{ "--fill": `${songProgress * 100}%` }}
+                  />
+                  <div className="home-song-times">
+                    <span>{formatTime(songElapsed)}</span>
+                    <span>{formatTime(songDuration)}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="home-song-actions">
+                <Link to="/thankyou/" className="home-song-btn">
+                  <FaMusic /> {t.songCta} <FaArrowRight />
+                </Link>
+              </div>
             </div>
           </Reveal>
         </section>

@@ -189,7 +189,7 @@
 /* ============ The deck ============ */
 .mp-deck {
   position: relative;
-  padding: 1.75rem 1.4rem 1.5rem;
+  padding: 1.4rem 1.2rem 1.2rem;
   border-radius: 28px;
   border: 1px solid var(--glass-border);
   background: var(--glass-gradient), var(--glass-bg);
@@ -213,19 +213,11 @@
   pointer-events: none;
 }
 
-.mp-deck-ornament {
-  display: block;
-  font-size: 1.1rem;
-  color: var(--leaf-emerald);
-  opacity: 0.7;
-  margin-bottom: 0.4rem;
-}
-
 /* ---- The record ---- */
 .mp-disc-stage {
   position: relative;
-  width: min(268px, 72vw);
-  margin: 0 auto 1.4rem;
+  width: min(228px, 64vw);
+  margin: 0 auto 1.1rem;
   aspect-ratio: 1;
   display: grid;
   place-items: center;
@@ -354,15 +346,6 @@
   display: block;
 }
 
-.mp-disc-pin {
-  position: absolute;
-  width: 13%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, #eef7e9, #8aa98a 60%, #4d644f);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-}
-
 /* Shared monogram fallback */
 .mp-photo-monogram {
   display: flex;
@@ -391,8 +374,8 @@
 }
 
 .mp-now-name {
-  margin: 0.35rem 0 1.1rem;
-  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  margin: 0.3rem 0 0.8rem;
+  font-size: clamp(1.25rem, 2.6vw, 1.55rem);
   line-height: 1.2;
   color: var(--text-primary);
 }
@@ -591,31 +574,15 @@
   display: none;
 }
 
-/* ---- Link out ---- */
-.mp-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.7rem 1.1rem;
-  border-radius: 999px;
-  border: 1px solid var(--border-color);
-  background: var(--glass-bg);
-  font-size: 0.86rem;
-  color: var(--text-secondary);
-  text-decoration: none;
-  transition: transform 0.16s ease, border-color 0.2s ease, color 0.2s ease;
-}
-
-.mp-link:hover {
-  transform: translateY(-2px);
-  border-color: var(--primary-green);
-  color: var(--primary-green);
-  text-decoration: none;
-}
-
-.mp-link svg {
-  color: var(--rose-pink);
+/* ---- Production credit ---- */
+.mp-credit {
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
 }
 
 /* ============ The queue ============ */
@@ -671,11 +638,33 @@
   gap: 0.7rem;
 }
 
-/* On the big screen the roll of voices scrolls on its own, so the deck on the
-   right can stand still beside it. */
+/* The roll of voices scrolls on its own so the whole stage fits the screen.
+   Every sister is listed — scrolling the list is the way to reach the rest, so
+   no "show more" button is needed. */
 .mp-queue-scroll {
   scrollbar-width: thin;
   scrollbar-color: var(--primary-green) transparent;
+  max-height: min(62vh, 34rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 0.4rem;
+  margin-right: -0.4rem;
+  /* A soft edge at each end, so it reads as a list with more above and below —
+     the custom scrollbar is not enough of a cue on touch devices. */
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    #000 0.9rem,
+    #000 calc(100% - 0.9rem),
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    #000 0.9rem,
+    #000 calc(100% - 0.9rem),
+    transparent 100%
+  );
 }
 
 .mp-queue-scroll::-webkit-scrollbar {
@@ -697,10 +686,7 @@
 
 @media (min-width: 901px) {
   .mp-queue-scroll {
-    max-height: calc(100vh - 10.5rem);
-    overflow-y: auto;
-    padding-right: 0.4rem;
-    margin-right: -0.4rem;
+    max-height: calc(100vh - 12rem);
   }
 }
 
@@ -836,25 +822,6 @@
   color: var(--text-muted);
 }
 
-.mp-more {
-  display: block;
-  width: 100%;
-  margin-top: 0.9rem;
-  padding: 0.65rem 1rem;
-  border-radius: 999px;
-  border: 1px solid var(--border-color);
-  background: transparent;
-  font-size: 0.84rem;
-  color: var(--text-secondary);
-  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
-}
-
-.mp-more:hover {
-  border-color: var(--primary-green);
-  color: var(--primary-green);
-  background: var(--hover-bg);
-}
-
 /* ============ Footer ============ */
 .mp-footer {
   margin-top: 3rem;
@@ -890,7 +857,7 @@
   }
 
   .mp-disc-stage {
-    width: min(232px, 62vw);
+    width: min(200px, 54vw);
   }
 }
 
@@ -905,13 +872,13 @@
   }
 
   .mp-deck {
-    padding: 1.4rem 1rem 1.2rem;
+    padding: 1.1rem 0.85rem 0.95rem;
     border-radius: 24px;
   }
 
   .mp-disc-stage {
-    width: min(206px, 58vw);
-    margin-bottom: 1.1rem;
+    width: min(172px, 48vw);
+    margin-bottom: 0.8rem;
   }
 
   .mp-btn.ghost {
@@ -937,10 +904,23 @@
 
   .mp-list {
     grid-template-columns: 1fr;
+    gap: 0.5rem;
   }
 
   .mp-track {
-    padding: 0.55rem 0.7rem;
+    padding: 0.5rem 0.6rem;
+    gap: 0.65rem;
+  }
+
+  .mp-track-photo {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* On a phone the deck already takes the fold, so the list gets a share of what
+     is left and scrolls inside itself rather than running the page for 50 rows. */
+  .mp-queue-scroll {
+    max-height: 52vh;
   }
 }
 
@@ -976,8 +956,7 @@
   }
 
   .mp-track,
-  .mp-btn,
-  .mp-link {
+  .mp-btn {
     transition: none;
   }
 }
