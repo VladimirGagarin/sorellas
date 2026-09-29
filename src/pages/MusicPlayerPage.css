@@ -213,6 +213,131 @@
   pointer-events: none;
 }
 
+/* ---- Portrait mode — her photograph becomes the deck ----
+   The record steps aside rather than sitting on top of the face, and a scrim
+   goes under the lettering so it stays readable over any photograph. */
+.mp-deck-portrait {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.mp-deck-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+  animation: mpPortraitIn 0.6s ease both;
+}
+
+.mp-deck.portrait {
+  background: var(--bg-secondary);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+/* The scrim sits between the photograph and everything else. */
+.mp-deck.portrait::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(8, 16, 11, 0.32) 0%,
+    rgba(8, 16, 11, 0.58) 45%,
+    rgba(8, 16, 11, 0.82) 100%
+  );
+  pointer-events: none;
+}
+
+/* Whatever is not the photograph reads on top of the scrim. */
+.mp-deck.portrait > *:not(.mp-deck-portrait) {
+  position: relative;
+  z-index: 2;
+}
+
+/* No record while her portrait fills the deck — the two would hide each other.
+   Hidden, not removed: the turntable keeps its box, so the deck stays exactly
+   as tall in both views and nothing below it moves. */
+.mp-deck.portrait .mp-disc-stage {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@keyframes mpPortraitIn {
+  from {
+    opacity: 0;
+    transform: scale(1.06);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Lettering over a photograph is set in light ink whichever theme is set,
+   since a dark photograph can sit under either one. */
+.mp-deck.portrait .mp-now-label {
+  color: #d6ebcb;
+}
+
+.mp-deck.portrait .mp-now-name {
+  color: #f4fbf1;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
+}
+
+.mp-deck.portrait .mp-times {
+  color: rgba(233, 246, 227, 0.78);
+}
+
+.mp-deck.portrait .mp-share-note {
+  color: #dff0d6;
+}
+
+.mp-deck.portrait .mp-range {
+  background: linear-gradient(
+    90deg,
+    #f4fbf1 0%,
+    #d6ebcb var(--fill, 0%),
+    rgba(255, 255, 255, 0.28) var(--fill, 0%),
+    rgba(255, 255, 255, 0.28) 100%
+  );
+}
+
+.mp-deck.portrait .mp-range::-webkit-slider-thumb {
+  background: #f4fbf1;
+  border-color: #d6ebcb;
+}
+
+.mp-deck.portrait .mp-range::-moz-range-thumb {
+  background: #f4fbf1;
+  border-color: #d6ebcb;
+}
+
+.mp-deck.portrait .mp-btn.ghost,
+.mp-deck.portrait .mp-btn.ghosts {
+  color: #eaf6e4;
+  background: rgba(8, 20, 12, 0.5);
+  border-color: rgba(233, 246, 227, 0.3);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.mp-deck.portrait .mp-btn.ghost:hover:not(:disabled),
+.mp-deck.portrait .mp-btn.ghosts:hover:not(:disabled),
+.mp-deck.portrait .mp-btn.on {
+  color: #fff;
+  border-color: #d8ecc9;
+  background: rgba(216, 236, 201, 0.2);
+}
+
+.mp-deck.portrait .mp-btn.primary {
+  box-shadow: 0 14px 30px -10px rgba(0, 0, 0, 0.8);
+}
+
 /* ---- The record ---- */
 .mp-disc-stage {
   position: relative;
@@ -854,6 +979,9 @@
 
   .mp-player-col {
     position: static;
+    /* Choosing a sister scrolls the deck back into view; leave room so the
+       fixed header does not settle on top of the record. */
+    scroll-margin-top: 86px;
   }
 
   .mp-disc-stage {
@@ -942,6 +1070,186 @@
   }
 }
 
+/* =========================================================================
+   "Would you like to hear it?" — shown only when the browser refused to
+   start a shared song on its own. Asks once, then gets out of the way.
+   ========================================================================= */
+.mp-autoplay-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(6, 12, 8, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  animation: mpAutoplayFade 0.25s ease forwards;
+}
+
+.mp-autoplay-modal {
+  position: relative;
+  width: min(430px, 100%);
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  text-align: center;
+  padding: 34px 30px 26px;
+  background: var(--card-bg);
+  border: 1px solid rgba(var(--primary-green-rgb), 0.42);
+  border-radius: 22px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+  animation: mpAutoplayIn 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.mp-autoplay-disc {
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  color: var(--primary-green);
+  background: rgba(var(--primary-green-rgb), 0.08);
+  border: 1px solid rgba(var(--primary-green-rgb), 0.5);
+  box-shadow: 0 0 0 5px rgba(var(--primary-green-rgb), 0.07);
+}
+
+.mp-autoplay-eyebrow {
+  margin: 0 0 12px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--text-muted);
+}
+
+.mp-autoplay-question {
+  margin: 0 0 6px;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+
+.mp-autoplay-song {
+  margin: 0 0 16px;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--primary-green);
+}
+
+.mp-autoplay-text {
+  margin: 0 auto 26px;
+  max-width: 320px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.mp-autoplay-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.mp-autoplay-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 13px 24px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.mp-autoplay-btn.primary {
+  color: #fff;
+  background: linear-gradient(
+    135deg,
+    var(--primary-green),
+    var(--secondary-green)
+  );
+  box-shadow: 0 10px 26px rgba(var(--primary-green-rgb), 0.4);
+}
+
+.mp-autoplay-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(var(--primary-green-rgb), 0.5);
+}
+
+.mp-autoplay-btn.ghost {
+  background: transparent;
+  border-color: var(--border-color);
+  color: var(--text-secondary);
+}
+
+.mp-autoplay-btn.ghost:hover {
+  border-color: var(--primary-green);
+  color: var(--primary-green);
+  transform: translateY(-2px);
+}
+
+.mp-autoplay-footnote {
+  margin: 20px 0 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.62rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(var(--primary-green-rgb), 0.5);
+}
+
+@keyframes mpAutoplayFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes mpAutoplayIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 480px) {
+  .mp-autoplay-modal {
+    padding: 28px 20px 22px;
+    border-radius: 20px;
+  }
+
+  .mp-autoplay-question {
+    font-size: 1.3rem;
+  }
+
+  .mp-autoplay-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .mp-autoplay-btn {
+    width: 100%;
+  }
+}
+
 /* Readers who ask for stillness get stillness, not a spinning record. */
 @media (prefers-reduced-motion: reduce) {
   .mp-disc,
@@ -951,12 +1259,16 @@
 
   .mp-disc-halo,
   .mp-hero::before,
-  .mp-spinner {
+  .mp-spinner,
+  .mp-deck-portrait-img,
+  .mp-autoplay-overlay,
+  .mp-autoplay-modal {
     animation: none;
   }
 
   .mp-track,
-  .mp-btn {
+  .mp-btn,
+  .mp-autoplay-btn {
     transition: none;
   }
 }

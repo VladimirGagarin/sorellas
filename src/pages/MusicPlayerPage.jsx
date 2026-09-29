@@ -13,11 +13,13 @@ import {
   FaAngleLeft,
   FaAngleRight,
   FaCheck,
+  FaImage,
   FaInfinity,
   FaListUl,
   FaMusic,
   FaPause,
   FaPlay,
+  FaRecordVinyl,
   FaRedo,
   FaSeedling,
   FaShareAlt,
@@ -68,6 +70,7 @@ export default function MusicPlayerPage() {
   const { songId } = useParams();
   const navigate = useNavigate();
   const audioRef = useRef(null);
+  const deckRef = useRef(null);
   const hasPressedPlay = useRef(false);
   const sharedTimer = useRef(null);
 
@@ -101,14 +104,27 @@ export default function MusicPlayerPage() {
   });
   // One source of truth for what the deck is doing. As two independent booleans
   // these could both be true at once, which is why "loading" used to surface as
-  // "now singing": the readout asked isPlaying || isLoading.
-  const [playback, setPlayback] = useState("idle");
+  // "now singing": the readout asked isPlaying || isLoading. A shared link
+  // arrives mid-gesture, so it opens on "loading" rather than on silence.
+  const [playback, setPlayback] = useState(() =>
+    songId && playable.some((track) => track.id === songId) ? "loading" : "idle",
+  );
   const isPlaying = playback === "playing";
   const isLoading = playback === "loading";
   const [isLooping, setIsLooping] = useState(false);
+  // Two ways to look at the same sister: the record on its turntable, or her
+  // portrait filling the deck. The two are never both wanted at once — a disc
+  // in front of a face hides the face — so this chooses which one is present.
+  const [portraitMode, setPortraitMode] = useState(false);
   const [elapsed, setElapsed] = useState(0);
   const [duration, setDuration] = useState(0);
   const [isShared, setIsShared] = useState(false);
+  // A shared link arrives with its song already in hand. The page tries to
+  // start it as it opens, and a browser that refuses (autoplay needs a gesture
+  // of the visitor's own) turns that refusal into a question rather than an
+  // error — this holds the song id waiting for an answer, or null.
+  const [autoplayPrompt, setAutoplayPrompt] = useState(null);
+  const autoplayAsked = useRef(false);
 
   const current =
     playable.length > 0 ? playable[index % playable.length] : null;
@@ -162,6 +178,21 @@ export default function MusicPlayerPage() {
         language === "en"
           ? "“Aeternum Floreamus — Let us bloom forever”"
           : "«Aeternum Floreamus — Fioriamo per sempre»",
+      autoplayEyebrow:
+        language === "en"
+          ? "A song was sent to you"
+          : "Un canto è stato dedicato a te",
+      autoplayQuestion:
+        language === "en" ? "Would you like to hear it?" : "Vuoi ascoltarlo?",
+      autoplayText:
+        language === "en"
+          ? "Your browser waits for a tap before it lets the music begin."
+          : "Il tuo browser attende un tocco prima di far partire la musica.",
+      autoplayPlay: language === "en" ? "Play the song" : "Riproduci il canto",
+      autoplayLater: language === "en" ? "Not now" : "Non ora",
+      showPortrait:
+        language === "en" ? "Her portrait" : "Il suo ritratto",
+      showRecord: language === "en" ? "The record" : "Il disco",
     }),
     [language],
   );
@@ -246,6 +277,38 @@ export default function MusicPlayerPage() {
     }
   }, [currentId, current]);
 
+  // Opening a shared link means "here is a song for you" — so ask the deck to
+  // play it straight away. Only once: the URL is rewritten as the visitor moves
+  // between songs, and each of those is an ordinary choice, not an autoplay.
+  useEffect(() => {
+    const el = audioRef.current;
+    if (!songId || !current || autoplayAsked.current || !el) return;
+    autoplayAsked.current = true;
+    hasPressedPlay.current = true;
+    const attempt = el.play();
+    if (attempt && typeof attempt.catch === "function") {
+      attempt.catch((error) => {
+        // Refused for want of a gesture: nothing has played, so nothing needs
+        // rewinding — only the deck's claim that it is loading.
+        hasPressedPlay.current = false;
+        setPlayback("idle");
+        if (error && error.name === "NotAllowedError") {
+          setAutoplayPrompt(current.id);
+        }
+      });
+    }
+  }, [songId, current]);
+
+  // Escape is the same answer as "not now", so a keyboard is never trapped here.
+  useEffect(() => {
+    if (!autoplayPrompt) return undefined;
+    const onKey = (event) => {
+      if (event.key === "Escape") setAutoplayPrompt(null);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [autoplayPrompt]);
+
   useEffect(() => {
     return () => {
       if (sharedTimer.current) clearTimeout(sharedTimer.current);
@@ -289,7 +352,32 @@ export default function MusicPlayerPage() {
     if (next < 0) return;
     hasPressedPlay.current = true;
     selectIndex(next);
+    // On a phone the deck sits above the list, so choosing a sister would play
+    // her song somewhere off the fold. Walk the page back up to the turntable.
+    // Wider screens show the deck beside the list, so there is nothing to do.
+    const deck = deckRef.current;
+    if (deck && window.matchMedia("(max-width: 900px)").matches) {
+      deck.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
+
+  // The tap on "play the song" is the gesture the browser was waiting for, so
+  // this call is allowed through and needs no second question.
+  const acceptAutoplay = () => {
+    setAutoplayPrompt(null);
+    const el = audioRef.current;
+    if (!el || !current) return;
+    hasPressedPlay.current = true;
+    setPlayback("loading");
+    const attempt = el.play();
+    if (attempt && typeof attempt.catch === "function") {
+      attempt.catch(() => setPlayback("idle"));
+    }
+  };
+
+  // "Not now" leaves the song chosen and silent — the visitor can still press
+  // play on the deck whenever they are ready.
+  const declineAutoplay = () => setAutoplayPrompt(null);
 
   const replay = () => {
     const el = audioRef.current;
@@ -421,8 +509,21 @@ export default function MusicPlayerPage() {
 
       {/* The roll of voices on the left, the deck standing watch on the right */}
       <section className="mp-stage">
-        <div className="mp-player-col">
-          <div className="mp-deck">
+        <div className="mp-player-col" ref={deckRef}>
+          <div className={`mp-deck ${portraitMode ? "portrait" : ""}`}>
+            {/* Her portrait as the deck's own backdrop. It replaces the record
+                rather than sitting behind it — the disc would cover it. */}
+            {portraitMode && (
+              <div className="mp-deck-portrait" aria-hidden="true">
+                <SisterPhoto
+                  photo={current ? current.photo : null}
+                  name={current ? trackName(current, language) : ""}
+                  className="mp-deck-portrait-img"
+                  monogramClassName="mp-deck-portrait-img mp-photo-monogram"
+                />
+              </div>
+            )}
+
             <div
               className={`mp-disc-stage ${isPlaying ? "spinning" : ""} ${
                 isLoading ? "loading" : ""
@@ -482,6 +583,19 @@ export default function MusicPlayerPage() {
                   title={t.share}
                 >
                   <FaShareAlt /> {language==="en" ? "Share" : "Condividi"}
+                </button>
+
+                {/* The record and her portrait are two views of one deck: this
+                    trades one for the other, never showing both. */}
+                <button
+                  type="button"
+                  className={`mp-btn ghosts ${portraitMode ? "on" : ""}`}
+                  onClick={() => setPortraitMode((prev) => !prev)}
+                  aria-pressed={portraitMode}
+                  aria-label={portraitMode ? t.showRecord : t.showPortrait}
+                  title={portraitMode ? t.showRecord : t.showPortrait}
+                >
+                  {portraitMode ? <FaRecordVinyl /> : <FaImage />} {portraitMode ? t.showRecord : t.showPortrait}
                 </button>
                 </div>
               
@@ -642,6 +756,64 @@ export default function MusicPlayerPage() {
         <span aria-hidden="true">✦ ❁ ✦</span>
         <p>Aeternum Floreamus</p>
       </footer>
+
+      {/* Asked only when the browser turned down the autoplay. The song stays
+          chosen either way — declining is silence, not a different song. */}
+      {autoplayPrompt && (
+        <div
+          className="mp-autoplay-overlay"
+          role="presentation"
+          onClick={declineAutoplay}
+        >
+          <div
+            className="mp-autoplay-modal"
+            role="alertdialog"
+            aria-modal="true"
+            aria-labelledby="mp-autoplay-question"
+            aria-describedby="mp-autoplay-text"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="mp-autoplay-disc" aria-hidden="true">
+              <FaMusic />
+            </div>
+
+            <p className="mp-autoplay-eyebrow">{t.autoplayEyebrow}</p>
+
+            <h2 className="mp-autoplay-question" id="mp-autoplay-question">
+              {t.autoplayQuestion}
+            </h2>
+
+            <p className="mp-autoplay-song">
+              {current ? trackName(current, language) : ""}
+            </p>
+
+            <p className="mp-autoplay-text" id="mp-autoplay-text">
+              {t.autoplayText}
+            </p>
+
+            <div className="mp-autoplay-actions">
+              <button
+                type="button"
+                className="mp-autoplay-btn ghost"
+                onClick={declineAutoplay}
+              >
+                {t.autoplayLater}
+              </button>
+              <button
+                type="button"
+                className="mp-autoplay-btn primary"
+                onClick={acceptAutoplay}
+                autoFocus
+              >
+                <FaPlay className="mp-play-icon" />
+                {t.autoplayPlay}
+              </button>
+            </div>
+
+            <p className="mp-autoplay-footnote">Aeternum Floreamus</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

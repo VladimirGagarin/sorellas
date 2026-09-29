@@ -1,67 +1,260 @@
-/* components/DisclaimerModal.css — centered confirmation overlay */
+/* components/DisclaimerModal.css — a quiet note: bottom drawer on phones,
+   bottom-right card on larger screens. Never blocks the page. */
 
-.disclaimer-modal-overlay {
+.disclaimer-panel {
   position: fixed;
-  inset: 0;
-  z-index: 9999;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  color: var(--text-primary);
+  background: var(--card-bg);
+  border: 1px solid rgba(var(--primary-green-rgb), 0.42);
+  box-shadow: 0 24px 55px var(--shadow-color);
+  animation: disclaimerPanelIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ---------- Large screens: bottom-right card ---------- */
+@media (min-width: 769px) {
+  .disclaimer-panel {
+    right: 22px;
+    bottom: 22px;
+    width: min(370px, calc(100vw - 44px));
+    max-height: min(72vh, 620px);
+    border-radius: 20px;
+  }
+}
+
+/* ---------- Small screens: drawer from below ---------- */
+@media (max-width: 768px) {
+  .disclaimer-panel {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-height: 82vh;
+    border-radius: 22px 22px 0 0;
+    border-bottom: none;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    animation-name: disclaimerDrawerIn;
+  }
+}
+
+.disclaimer-panel-handle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .disclaimer-panel-handle {
+    display: block;
+    width: 100%;
+    padding: 10px 0 6px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .disclaimer-panel-handle::before {
+    content: "";
+    display: block;
+    width: 44px;
+    height: 4px;
+    margin: 0 auto;
+    border-radius: 999px;
+    background: rgba(var(--primary-green-rgb), 0.35);
+  }
+}
+
+.disclaimer-panel-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 54px 14px 20px;
+  border-bottom: 1px solid rgba(var(--primary-green-rgb), 0.22);
+}
+
+@media (max-width: 768px) {
+  .disclaimer-panel-header {
+    padding: 6px 52px 14px 20px;
+  }
+}
+
+.disclaimer-panel-seal {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  background: rgba(10, 14, 10, 0.65);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  animation: disclaimerOverlay 0.3s ease forwards;
+  font-size: 1rem;
+  color: var(--primary-green);
+  background: rgba(var(--primary-green-rgb), 0.08);
+  border: 1px solid rgba(var(--primary-green-rgb), 0.45);
 }
 
-.disclaimer-modal-card {
-  width: min(560px, 100%);
-  max-height: calc(100vh - 40px);
+.disclaimer-panel-eyebrow {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  line-height: 1.4;
+  color: var(--text-muted);
+}
+
+.disclaimer-panel-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 0.8rem;
+  color: var(--primary-green);
+  background: rgba(var(--primary-green-rgb), 0.12);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .disclaimer-panel-close {
+    top: 10px;
+    right: 14px;
+  }
+}
+
+.disclaimer-panel-close:hover {
+  background: var(--primary-green);
+  color: var(--bg-card);
+}
+
+.disclaimer-panel-body {
+  flex: 1;
+  min-height: 0;
   overflow-y: auto;
-  animation: disclaimerModalIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  padding: 6px 20px;
 }
 
-.disclaimer-confirm-card {
-  width: min(440px, 100%);
-  animation: disclaimerModalIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+.disclaimer-panel-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.disclaimer-confirm-text {
-  margin: 0 auto 28px;
-  max-width: 340px;
-  font-size: 1.22rem;
+.disclaimer-panel-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(var(--primary-green-rgb), 0.14);
+}
+
+.disclaimer-panel-line:last-child {
+  border-bottom: none;
+}
+
+.disclaimer-panel-numeral {
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.7;
+  letter-spacing: 0.08em;
+  color: rgba(var(--primary-green-rgb), 0.45);
+  user-select: none;
+}
+
+.disclaimer-panel-text {
+  margin: 0;
+  font-size: 0.95rem;
   font-weight: 600;
   line-height: 1.5;
   color: var(--text-primary);
 }
 
-.disclaimer-modal-card .disclaimer-btn.primary.red {
+.disclaimer-panel-footer {
+  padding: 14px 20px 16px;
+  border-top: 1px solid rgba(var(--primary-green-rgb), 0.22);
+  text-align: center;
+}
+
+.disclaimer-panel .disclaimer-btn.primary {
+  width: 100%;
+  padding: 12px 22px;
+  font-size: 0.95rem;
   color: #fff;
-  background: linear-gradient(135deg, #c0392b, #8e2b1c);
-  box-shadow: 0 10px 26px rgba(192, 57, 43, 0.45);
+  background: linear-gradient(
+    135deg,
+    var(--primary-green),
+    var(--secondary-green)
+  );
+  box-shadow: 0 10px 26px rgba(var(--primary-green-rgb), 0.4);
 }
 
-.disclaimer-modal-card .disclaimer-btn.primary.red:hover {
+.disclaimer-panel .disclaimer-btn.primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 32px rgba(192, 57, 43, 0.55);
+  box-shadow: 0 14px 32px rgba(var(--primary-green-rgb), 0.5);
 }
 
-@keyframes disclaimerOverlay {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.disclaimer-panel-footnote {
+  margin: 10px 0 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.62rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(var(--primary-green-rgb), 0.5);
 }
 
-@keyframes disclaimerModalIn {
+@keyframes disclaimerPanelIn {
   from {
     opacity: 0;
-    transform: translateY(18px) scale(0.96);
+    transform: translateY(18px) scale(0.97);
   }
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes disclaimerDrawerIn {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .disclaimer-panel {
+    max-height: 78vh;
+  }
+
+  .disclaimer-panel-body {
+    padding: 4px 16px;
+  }
+
+  .disclaimer-panel-text {
+    font-size: 0.9rem;
+  }
+
+  .disclaimer-panel-footer {
+    padding: 12px 16px 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .disclaimer-panel {
+    animation: none;
   }
 }
