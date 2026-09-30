@@ -8,7 +8,7 @@ import {
   resolvePrayerPhoto,
 } from "../components/Utils.js";
 import { useSeo } from "../utils/seo.js";
-import { FaShareAlt, FaTimes, FaHeart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
 import "./TenderPresencePage.css";
 
 const PERSONA_LABELS = {
@@ -79,7 +79,6 @@ export default function TenderPresencePage() {
       ),
     [groups]
   );
-  const [copiedId, setCopiedId] = useState(null);
   const [filter, setFilter] = useState("all");
 
   useSeo({
@@ -109,25 +108,6 @@ export default function TenderPresencePage() {
         : "Il sacro, teneramente vicino — sguardi poetici di cielo nelle figure che ci amano.",
     count: language === "en" ? "glimpses" : "sguardi",
     all: language === "en" ? "All" : "Tutti",
-    share: language === "en" ? "Share this glimpse" : "Condividi questo sguardo",
-    copied: language === "en" ? "Copied" : "Copiato",
-  };
-
-  const shareEntry = async (entry, index) => {
-    const text = [`“${entry[language]}”`, `— ${entry.persona}`]
-      .filter(Boolean)
-      .join("\n");
-    try {
-      if (navigator.share) {
-        await navigator.share({ title: t.title, text });
-        return;
-      }
-      await navigator.clipboard.writeText(text);
-      setCopiedId(index);
-      setTimeout(() => setCopiedId((cur) => (cur === index ? null : cur)), 2000);
-    } catch {
-      /* user cancelled or clipboard unavailable */
-    }
   };
 
   return (
@@ -199,15 +179,6 @@ export default function TenderPresencePage() {
                     <span className="tp-topic">{t.title}</span>
                   </span>
                 </span>
-                <button
-                  className={`tp-share ${copiedId === index ? "copied" : ""}`}
-                  onClick={() => shareEntry(entry, index)}
-                  aria-label={t.share}
-                  title={t.share}
-                >
-                  {copiedId === index ? <FaTimes /> : <FaShareAlt />}
-                  {copiedId === index ? t.copied : ""}
-                </button>
               </div>
               <p className="tp-sentiment">“{entry[language]}”</p>
               <span className="tp-item-index">

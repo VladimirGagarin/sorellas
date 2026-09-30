@@ -293,39 +293,6 @@
   color: #CEE9BC;
 }
 
-.tp-share {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.45rem 0.8rem;
-  border-radius: 999px;
-  border: 1px solid var(--border-color);
-  background: var(--glass-bg);
-  color: var(--text-secondary);
-  font-size: 0.8rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  flex-shrink: 0;
-}
-
-.tp-share:hover {
-  border-color: var(--leaf-emerald);
-  color: var(--leaf-emerald);
-  transform: translateY(-1px);
-  box-shadow: 0 8px 22px rgba(var(--primary-green-rgb), 0.25);
-}
-
-.tp-share.copied {
-  background: var(--leaf-emerald);
-  border-color: transparent;
-  color: #F0F9EC;
-}
-
-[data-theme="dark"] .tp-share.copied {
-  background: var(--accent-lavender);
-}
-
 .tp-sentiment {
   font-size: 1.15rem;
   font-style: italic;

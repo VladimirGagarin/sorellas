@@ -158,6 +158,14 @@
   }
 }
 
+/* Wrapper keeps the capture zone (the card) and its actions outside it. */
+.jb-card-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  min-width: 0;
+}
+
 .jb-card {
   display: flex;
   flex-direction: column;
@@ -165,13 +173,48 @@
   padding: 1.5rem 1.5rem 1.6rem;
   border-radius: 20px;
   min-height: 240px;
+  flex: 1 1 auto;
+  position: relative;
   transition: all 0.28s ease;
 }
 
-.jb-card:hover {
+.jb-card-wrap:hover .jb-card {
   transform: translateY(-5px);
   box-shadow: 0 16px 40px rgba(var(--primary-green-rgb), 0.25),
     0 0 0 1px var(--leaf-emerald);
+}
+
+/* Actions row — deliberately outside the captured area. */
+.jb-card-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.jb-capture-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: var(--glass-bg);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.jb-capture-btn:hover {
+  border-color: var(--leaf-emerald);
+  color: var(--leaf-emerald);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(var(--primary-green-rgb), 0.25);
 }
 
 .jb-card-mark {
@@ -327,15 +370,134 @@
   z-index: 1;
 }
 
-.jb-item-index {
+/* Motto — always visible, far right on the same line as the card number. */
+.jb-capture-watermark {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.68rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--leaf-emerald);
+  opacity: 0.8;
+  user-select: none;
+  white-space: nowrap;
+  margin-left: auto;
+}
+
+/* Number on the left, motto pushed to the far right of the same row. */
+.jb-card-foot {
   margin-top: auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.jb-item-index {
   font-family: var(--font-display);
   font-size: 0.75rem;
   letter-spacing: 0.22em;
   color: var(--text-muted);
   opacity: 0.6;
+}
+
+/* ===== Deep-link overlay ===== */
+/* Sits below .capture-overlay (z-index 9999) so the snapshot preview that
+   CaptureCard opens still lands on top of this panel. */
+.jb-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(10, 26, 15, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: jb-overlay-fade 0.25s ease;
+}
+
+.jb-overlay-panel {
   position: relative;
-  z-index: 1;
+  width: min(460px, 92vw);
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.4rem;
+  border-radius: 22px;
+  background: var(--gradient-bg, #fafdf7);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.jb-overlay-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.jb-overlay-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--leaf-emerald);
+}
+
+.jb-overlay-close {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background: var(--glass-bg);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.jb-overlay-close:hover {
+  border-color: var(--leaf-emerald);
+  color: var(--leaf-emerald);
+  transform: rotate(90deg);
+}
+
+/* The card inside the overlay keeps its own height instead of stretching. */
+.jb-overlay-body .jb-card {
+  min-height: 0;
+  flex: 0 0 auto;
+  box-shadow: none;
+}
+
+.jb-overlay-body .jb-card-wrap:hover .jb-card {
+  transform: none;
+  box-shadow: none;
+}
+
+.jb-overlay-tools {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+@keyframes jb-overlay-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* ===== Responsive ===== */
