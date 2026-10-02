@@ -115,7 +115,9 @@ export default function MusicPlayerPage() {
   // Two ways to look at the same sister: the record on its turntable, or her
   // portrait filling the deck. The two are never both wanted at once — a disc
   // in front of a face hides the face — so this chooses which one is present.
-  const [portraitMode, setPortraitMode] = useState(false);
+  // Her photo opens the deck, since the song belongs to her; the record is the
+  // view asked for by name.
+  const [portraitMode, setPortraitMode] = useState(true);
   const [elapsed, setElapsed] = useState(0);
   const [duration, setDuration] = useState(0);
   const [isShared, setIsShared] = useState(false);
@@ -191,7 +193,7 @@ export default function MusicPlayerPage() {
       autoplayPlay: language === "en" ? "Play the song" : "Riproduci il canto",
       autoplayLater: language === "en" ? "Not now" : "Non ora",
       showPortrait:
-        language === "en" ? "Her portrait" : "Il suo ritratto",
+        language === "en" ? "Song photo" : "La foto del canto",
       showRecord: language === "en" ? "The record" : "Il disco",
     }),
     [language],
